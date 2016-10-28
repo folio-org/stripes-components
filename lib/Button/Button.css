@@ -1,0 +1,88 @@
+@import '../variables.css';
+
+.button{
+    padding: 5px 8px;
+    text-align: center;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #555;
+    border-radius: 6px;
+    transition: all .25s ease;
+    background-color: transparent;
+    border: transparent;
+    margin-bottom: var(--controlMarginBottom);
+    max-height: var(--controlHeight);
+    overflow: hidden;
+    white-space: nowrap;
+    font-size:.9rem;
+    &.primary{
+      background-color: var(--primary);
+      border: 1px solid var(--primary);
+      color: #fff;
+      &:hover{
+          background-color: color(var(--primary) shade(8%));
+      }
+      &.hollow{
+        background-color: transparent;
+        color: var(--primary);
+        &:hover{
+          background-color: color(var(--primary) shade(8%));
+          color: #fff;
+        }
+      }
+    }
+    &.secondary{
+      background-color: var(--secondary);
+      border: 1px solid var(--secondary);
+      color: #fff;
+      &:hover{
+          background-color: color(var(--secondary) shade(8%));
+      }
+      &.hollow{
+        background-color: transparent;
+        color: var(--secondary);
+        &:hover{
+          background-color: color(var(--secondary) shade(8%));
+          color: #fff;
+        }
+      }
+    }
+    &.error{
+      background-color: var(--error);
+      border: 1px solid var(--error);
+      color: #fff;
+      &.hollow{
+        background-color: transparent;
+        color: var(--error);
+        &:hover{
+          background-color: color(var(--error) shade(8%));
+          color: #fff;
+        }
+      }
+    }
+    
+    &.transparent{
+      background-color: transparent;
+      border: 1px solid transparent;
+    }
+    &.bottomMargin0{
+      margin-bottom: 0;
+    }
+    &.fullWidth{
+      width: 100%;
+    }
+    &.fieldControl{
+      background-color: transparent;
+      margin-bottom: 0;
+      height: var(--controlHeight);
+      padding:0;
+    }
+    
+}
+
+@media(--small){
+  .button{
+    height: var(--controlHeightSmall);
+    max-height: var(--controlHeightSmall);
+  }
+}

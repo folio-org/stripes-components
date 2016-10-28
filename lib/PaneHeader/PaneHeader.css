@@ -1,0 +1,14 @@
+.paneHeader{
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+  min-height: 44px;
+  position: relative;
+}
+
+.paneTitle{
+  font-weight: bold;
+}

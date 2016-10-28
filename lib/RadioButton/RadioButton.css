@@ -1,0 +1,23 @@
+@import '../variables.css';
+
+.root{
+  &.inline{
+    display: inline;
+  }
+  & + .root{
+    margin: 0 6px;
+  }
+}
+
+.label{
+  margin: 0 4px;
+  cursor: pointer;
+  
+  &.error{
+    color: #900;
+  }
+}
+
+.input{
+  margin-bottom: var(--controlMarginBottom);
+}

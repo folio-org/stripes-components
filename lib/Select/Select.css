@@ -1,0 +1,20 @@
+@import '../variables.css';
+
+.root{
+  &.fullWidth{
+    width: 100%;
+  }
+}
+
+.selectControl{
+  height: var(--controlHeight);
+  margin-bottom: var(--controlMarginBottom);
+  &.fullWidth{
+    width: 100%;
+  }
+  
+  &.error{
+    border-color: #900;
+  }
+}
+

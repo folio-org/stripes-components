@@ -1,0 +1,9 @@
+.keyValueLabel{   
+  display: block;
+  font-size: .8em;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: Uppercase;
+  color: #666;
+}
+

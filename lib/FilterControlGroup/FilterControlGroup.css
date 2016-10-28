@@ -1,0 +1,18 @@
+.filterList{
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+.listTopLabel{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: Uppercase;
+  color: #666;
+}
+
+.listItem{
+  display: flex;
+}
+

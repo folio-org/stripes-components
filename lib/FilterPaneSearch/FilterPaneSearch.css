@@ -1,0 +1,31 @@
+.headerSearchContainer{
+  width: 100%; 
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+}
+
+.headerSearchInput{
+  width: 100%; 
+  border: none;
+  padding: 8px;
+  margin-bottom: 0;
+}
+
+.clearIcon{
+  fill: #999;
+  transition: all .25s ease;
+}
+
+.headerSearchClearButton{
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  &:hover{
+    & .clearIcon{
+      fill: #666;
+    }
+  }
+}

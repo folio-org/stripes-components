@@ -1,0 +1,14 @@
+.root{
+  margin: 0 4px;
+}
+
+button .root{
+  float: left;
+}
+
+[dir='rtl']{
+  & button .root{
+    float: right;
+  }
+}
+
