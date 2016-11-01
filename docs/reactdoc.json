@@ -1,0 +1,320 @@
+{
+  "lib\\Button\\Button.js": {
+    "description": "",
+    "methods": [
+      {
+        "name": "getStyle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "buttonStyle": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'primary'",
+          "computed": false
+        }
+      },
+      "type": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'button'",
+          "computed": false
+        }
+      }
+    }
+  },
+  "lib\\Checkbox\\Checkbox.js": {
+    "description": "",
+    "methods": [
+      {
+        "name": "getLabelStyle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "getRootStyle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ]
+  },
+  "lib\\FilterControlGroup\\FilterControlGroup.js": {
+    "description": "",
+    "methods": []
+  },
+  "lib\\FilterPane\\FilterPane.js": {
+    "description": "",
+    "methods": [
+      {
+        "name": "updateFilters",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "updateSearchTerm",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ]
+  },
+  "lib\\FilterPaneSearch\\FilterPaneSearch.js": {
+    "description": "",
+    "methods": []
+  },
+  "lib\\Icon\\Icon.js": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "icon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "\"18px\"",
+          "computed": false
+        }
+      },
+      "height": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "\"18px\"",
+          "computed": false
+        }
+      }
+    }
+  },
+  "lib\\KeyValue\\KeyValue.js": {
+    "description": "",
+    "methods": []
+  },
+  "lib\\MultiColumnList\\MultiColumnList.js": {
+    "description": "",
+    "methods": [
+      {
+        "name": "getTableStyle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "contentData": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "object"
+          }
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      }
+    }
+  },
+  "lib\\Pane\\Pane.js": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "defaultWidth": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "lib\\PaneHeader\\PaneHeader.js": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "firstMenu": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": ""
+      },
+      "lastMenu": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": ""
+      },
+      "paneTitle": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "element"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "lib\\PaneMenu\\PaneMenu.js": {
+    "description": "",
+    "methods": []
+  },
+  "lib\\Paneset\\Paneset.js": {
+    "description": "",
+    "methods": []
+  },
+  "lib\\RadioButton\\RadioButton.js": {
+    "description": "",
+    "methods": [
+      {
+        "name": "getLabelStyle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "getRootStyle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ]
+  },
+  "lib\\Select\\Select.js": {
+    "description": "",
+    "methods": [
+      {
+        "name": "getRootClass",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "getSelectClass",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "dataOptions": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "object"
+          }
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "lib\\TextField\\TextField.js": {
+    "description": "",
+    "methods": [
+      {
+        "name": "getRootStyle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "getInputStyle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "type": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "\"text\"",
+          "computed": false
+        }
+      },
+      "rounded": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "endControl": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": ""
+      },
+      "startControl": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@folio-sample-modules/uikit",
+        "scope": "@folio-sample-modules",
+        "escapedName": "@folio-sample-modules%2fuikit",
+        "name": "@folio-sample-modules/uikit",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Projects\\FOLIO\\stripes_project\\stripes-core"
+    ]
+  ],
+  "_location": "/@folio-sample-modules/uikit",
+  "_nodeVersion": "6.9.1",
+  "_npmUser": {
+    "name": "john",
+    "email": "jcoburn@ebsco.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@folio-sample-modules/uikit",
+    "scope": "@folio-sample-modules",
+    "escapedName": "@folio-sample-modules%2fuikit",
+    "name": "@folio-sample-modules/uikit",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://repository.folio.org/repository/npm-folio/@folio-sample-modules/uikit/-/uikit-0.0.1-test.tgz",
+  "_shasum": "09ce9ad6e2d6229efb0c8c84f5a508f54ae45ef2",
+  "_shrinkwrap": null,
+  "_spec": "@folio-sample-modules/uikit",
+  "_where": "C:\\Projects\\FOLIO\\stripes_project\\stripes-core",
+  "bugs": {
+    "url": "https://github.com/folio-org/stripes-experiments/issues"
+  },
+  "dependencies": {},
+  "description": "A shallow example of stripes-components ui widgets.",
+  "devDependencies": {},
+  "dist": {
+    "shasum": "09ce9ad6e2d6229efb0c8c84f5a508f54ae45ef2",
+    "tarball": "https://repository.folio.org/repository/npm-folio/@folio-sample-modules/uikit/-/uikit-0.0.2-test.tgz"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "homepage": "https://github.com/folio-org/stripes-experiments#readme",
+  "license": "Apache-2.0",
+  "main": "Users.js",
+  "maintainers": [
+    {
+      "name": "John",
+      "email": "jcoburn@ebsco.com"
+    }
+  ],
+  "name": "@folio-sample-modules/uikit",
+  "optionalDependencies": {},
+  "publishConfig": {
+    "registry": "https://repository.folio.org/repository/npm-folio/"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/folio-org/stripes-components.git"
+  },
+  "scripts": {},
+  "stripes": {
+    "type": "app",
+    "displayName": "Users",
+    "route": "/users"
+  },
+  "version": "0.0.1-test"
+}

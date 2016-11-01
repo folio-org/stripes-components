@@ -1,0 +1,18 @@
+{
+  "name": "@folio/stripes-components",
+  "version": "0.0.1-test",
+  "description": "Component library for building Stripes applications.",
+  "license": "Apache-2.0",
+  "repository": "folio-org/stripes-components",
+  "publishConfig": {
+    "registry": "https://repository.folio.org/repository/npm-folio/"
+  },
+  "scripts": {
+    "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json "
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
