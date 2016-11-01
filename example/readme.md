@@ -5,7 +5,7 @@
 An Entry for uikit should be created in `webpack.config.cli.js`
 example: 
 
-if uikit directory is placed at `node_modules/@folio-sample-modules`
+if uikit directory is placed in `node_modules/@folio-sample-modules/`
 ```js
 const path = require('path');
 const webpack = require('webpack');
