@@ -3,7 +3,8 @@
 `uikit` directory should be placed where FOLIO modules are accessed. 
 
 An Entry for uikit should be created in `webpack.config.cli.js`
-example: 
+
+### Example: 
 
 if uikit directory is placed in `node_modules/@folio-sample-modules/`
 ```js
