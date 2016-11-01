@@ -17,10 +17,7 @@ import Select from '@folio/stripes-components/lib/Select'
 
 class Users extends React.Component{
   constructor(props){
-    super(props)
-    this.state = {
-      patrons:"true"
-    };
+    super(props);
   }
   
   static manifest = { 
@@ -76,7 +73,7 @@ class Users extends React.Component{
                 <br/>
                 <Row>
                 <Col xs={3}>
-                  <h3 className="marginTopHalf">{this.state.patrons}</h3>        
+                  <h3 className="marginTopHalf">Fines</h3>        
                 </Col>
                 <Col xs={4} sm={3}>
                     <TextField 
