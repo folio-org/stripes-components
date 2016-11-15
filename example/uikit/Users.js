@@ -13,11 +13,19 @@ import {Row, Col} from 'react-bootstrap'
 import TextField from '@folio/stripes-components/lib/TextField'
 import Checkbox from '@folio/stripes-components/lib/Checkbox'
 import FilterPane from '@folio/stripes-components/lib/FilterPane'
+import FilterPaneSearch from '@folio/stripes-components/lib/FilterPaneSearch'
+import FilterControlGroup from '@folio/stripes-components/lib/FilterControlGroup'
 import Select from '@folio/stripes-components/lib/Select'
 
 class Users extends React.Component{
   constructor(props){
     super(props);
+    this.state={
+      //Search/Filter state...
+      patronFilter: true,
+      employeeFilter: false,
+      searchTerm: ''
+    };
   }
   
   static manifest = { 
@@ -34,16 +42,64 @@ class Users extends React.Component{
     //this.props.mutator.detail.replace({fineHistory: fineHistory});
   }
 
+  //search Handlers...
+  onChangeFilter(e){
+    let stateObj = {};
+    stateObj[e.target.id] = !this.state[e.target.id];
+    this.setState(stateObj);
+  }
+  
+  onChangeSearch(e){
+    let term = e.target.value;
+    this.setState({searchTerm:term});
+  }
+  
+  onClearSearch(field){
+    field.value = '';
+    this.setState({searchTerm:''});
+  }
+  //end search Handlers
+
   render(){
     const resultMenu = <PaneMenu><button><Icon icon="bookmark"/></button></PaneMenu>
     const fineHistory = [{"Due Date": "11/12/2014", "Amount":"34.23", "Status":"Unpaid"}];
     
+    /*searchHeader is a 'custom pane header'*/
+    const searchHeader = <FilterPaneSearch id="SearchField" onChange={this.onChangeSearch.bind(this)} onClearSearch={this.onClearSearch.bind(this)} />
+    
     return(
             <Paneset>
-              <FilterPane/>
+              {/*Filter Pane */}
+              <Pane defaultWidth="16%" header={searchHeader}>
+                <FilterControlGroup label="Filters">
+                  <Checkbox 
+                    id="patronFilter" 
+                    label="Patrons" 
+                    checked={this.state.patronFilter} 
+                    onChange={this.onChangeFilter.bind(this)}
+                    marginBottom0 
+                    hover 
+                    fullWidth 
+                  />
+                  <Checkbox 
+                    id="employeeFilter" 
+                    label="Employees" 
+                    checked={this.state.employeeFilter} 
+                    onChange={this.onChangeFilter.bind(this)}
+                    marginBottom0 hover fullWidth 
+                  />
+                </FilterControlGroup>
+                <FilterControlGroup label="Actions">
+                  <Button fullWidth>Add User</Button>
+                </FilterControlGroup>
+              </Pane>
+              
+              {/*Results Pane*/}
               <Pane defaultWidth="fit-content" paneTitle="Results" lastMenu={resultMenu}>
                      <MultiColumnList contentData={this.props.data.searchResults}/>
               </Pane>
+              
+              {/*Details Pane*/}
               <Pane defaultWidth="fill">
                 <Row>
                   <Col xs={8} >
