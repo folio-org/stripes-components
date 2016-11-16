@@ -52,11 +52,6 @@ class Users extends React.Component{
     let term = e.target.value;
     this.setState({searchTerm:term});
   }
-  
-  onClearSearch(field){
-    field.value = '';
-    this.setState({searchTerm:''});
-  }
   //end search Handlers
 
   render(){
@@ -64,7 +59,7 @@ class Users extends React.Component{
     const fineHistory = [{"Due Date": "11/12/2014", "Amount":"34.23", "Status":"Unpaid"}];
     
     /*searchHeader is a 'custom pane header'*/
-    const searchHeader = <FilterPaneSearch id="SearchField" onChange={this.onChangeSearch.bind(this)} onClearSearch={this.onClearSearch.bind(this)} />
+    const searchHeader = <FilterPaneSearch id="SearchField" onChange={this.onChangeSearch.bind(this)} />
     
     return(
             <Paneset>
