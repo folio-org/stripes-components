@@ -3,9 +3,9 @@
 .root{
   &.inline{
     display: inline;
-  }
-  & + .root{
-    margin: 0 6px;
+    & + .root{
+        margin: 0 6px;
+    }
   }
 }
 
