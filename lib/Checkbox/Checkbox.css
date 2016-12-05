@@ -25,6 +25,12 @@
       background-color: #efefef;
     }
   }
+  &.inline{
+      display: inline;
+      & .checkboxInput{
+          margin-bottom: 4px;
+      }
+  }
 }
 
 input[type='checkbox'].checkboxInput{

@@ -9,10 +9,12 @@
   }
 }
 
-.label{
-  margin: 0 4px;
+.checkboxLabel{
+  font-weight: bold;
   cursor: pointer;
-  
+  flex-grow: 2;
+  padding: 6px 2px;
+  margin: 0 4px;
   &.error{
     color: #900;
   }
