@@ -15,6 +15,9 @@ import Checkbox from '@folio/stripes-components/lib/Checkbox'
 import FilterPaneSearch from '@folio/stripes-components/lib/FilterPaneSearch'
 import FilterControlGroup from '@folio/stripes-components/lib/FilterControlGroup'
 import Select from '@folio/stripes-components/lib/Select'
+import Layer from '@folio/stripes-components/lib/Layer'
+
+import UserForm from './UserForm';
 
 class Users extends React.Component{
   constructor(props){
@@ -23,8 +26,14 @@ class Users extends React.Component{
       //Search/Filter state...
       patronFilter: true,
       employeeFilter: false,
-      searchTerm: ''
+      searchTerm: '',
+      addUserMode: false
     };
+    
+    this.onClickAddNewUser = this.onClickAddNewUser.bind(this);
+    this.onClickCloseNewUser = this.onClickCloseNewUser.bind(this);
+    this.onChangeFilter = this.onChangeFilter.bind(this);
+    this.onChangeSearch = this.onChangeSearch.bind(this);
   }
   
   static manifest = { 
@@ -54,6 +63,21 @@ class Users extends React.Component{
   }
   //end search Handlers
 
+  //AddUser Handlers
+  onClickAddNewUser(){
+    console.log('add Clicked')
+    this.setState({
+      addUserMode: true
+    });
+  }
+  
+  onClickCloseNewUser(){
+    this.setState({
+      addUserMode: false
+    });
+  }  
+  //end AddUser Handlers
+  
   render(){
     const resultMenu = <PaneMenu><button><Icon icon="bookmark"/></button></PaneMenu>
     const fineHistory = [{"Due Date": "11/12/2014", "Amount":"34.23", "Status":"Unpaid"}];
@@ -84,7 +108,7 @@ class Users extends React.Component{
                   />
                 </FilterControlGroup>
                 <FilterControlGroup label="Actions">
-                  <Button fullWidth>Add User</Button>
+                  <Button fullWidth onClick={this.onClickAddNewUser}>Add User</Button>
                 </FilterControlGroup>
               </Pane>
               
@@ -131,6 +155,7 @@ class Users extends React.Component{
                       endControl={<Button buttonStyle="fieldControl"><Icon icon='clearX'/></Button>}
                       startControl={<Icon icon='search'/>}
                       placeholder="Search"
+                      fullWidth
                       />
                       
                 </Col>
@@ -140,7 +165,11 @@ class Users extends React.Component{
                 </Row>
                 <MultiColumnList fullWidth contentData={fineHistory} />
               </Pane>
+              <Layer isOpen={this.state.addUserMode} label="Add New User Dialog">
+                <UserForm onCancel={this.onClickCloseNewUser} />
+              </Layer>
             </Paneset>
+           
             )
   }
     

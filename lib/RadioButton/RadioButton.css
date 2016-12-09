@@ -1,25 +1,34 @@
 @import '../variables.css';
 
 .root{
+  display: flex;
+  align-items: center;
+  transition: all .2s ease;
+  margin-bottom: var(--controlMarginBottom);
   &.inline{
     display: inline;
     & + .root{
         margin: 0 6px;
     }
   }
+  &.marginBottom0{
+    margin-bottom: 0;
+  }
 }
 
-.checkboxLabel{
-  font-weight: bold;
+.radioLabel{
   cursor: pointer;
   flex-grow: 2;
-  padding: 6px 2px;
+  padding: 4px 2px;
   margin: 0 4px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--labelColor);
   &.error{
     color: #900;
   }
 }
 
 .input{
-  margin-bottom: var(--controlMarginBottom);
+  margin-bottom: 2px;
 }

@@ -77,20 +77,7 @@
       height: var(--controlHeight);
       padding:0;
     }
-    &[disabled]{
-        background-color: #ccc;
-        border-color: #ccc;
-        color: #888;
-        &:hover{
-            background-color: #ccc;
-            border-color: #ccc;
-            color: #888;
-            cursor: initial;
-        }
-    }
-    &:not(.fullWidth)+ .button{
-        margin: 0 4px;
-    }
+    
 }
 
 @media(--small){

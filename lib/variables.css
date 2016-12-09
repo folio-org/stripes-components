@@ -3,9 +3,11 @@
   --primary: #106c9e;
   --secondary: #999;
   --error: #900;
+  --warn: #e27c3e;
+  --labelColor: #333;
   --controlMarginBottom: 8px;
   --controlHeight: 28px;
-  --br: 6px;
+  --radius: 6px;
   --inputBorderColor: #acacac;
   
   --controlHeightSmall: 44px;

@@ -1,0 +1,39 @@
+@import '../variables.css';
+
+.groupRoot{
+  margin-bottom: var(--controlMarginBottom); 
+}
+
+.groupLabel{   
+  display: block;
+  font-size: .8em;
+  font-weight: bold;
+  text-transform: Uppercase;
+  color: var(--labelColor);
+  &.required:after{
+    content: '(required)';
+    margin: 0 4px;
+    color: #999;
+  }
+}
+
+.groupFeedback{
+  padding: 0 .4rem; 
+  font-size: .8rem;
+  &:last-child{
+    margin-bottom: var(--controlMarginBottom);
+  }
+}
+
+.groupError{
+  composes: groupFeedback;
+  color: #900;
+  font-weight: 700
+}
+
+.groupWarning{
+  composes: groupFeedback;
+  color: #e27c3e;
+  font-weight: 700;     
+}
+

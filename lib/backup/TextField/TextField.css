@@ -7,38 +7,22 @@
   }
 }
 
-.textFieldLabel{   
-  display: block;
-  font-size: .8em;
-  font-weight: bold;
-  margin-bottom: 4px;
-  text-transform: Uppercase;
-  color: var(--labelColor);
-  &.required:after{
-    content: '(required)';
-    margin: 0 4px;
-    color: #666;
-  }
-}
-
 .textField{
   height: var(--controlHeight);
   min-height: var(--controlHeight);
   margin-bottom: var(--controlMarginBottom);
   padding: 4px;
+  width: 100%;
   border: 1px solid var(--inputBorderColor);
   &.textFieldFull{
     width: 100%;
   }
   
   &.rounded{
-    border-radius: var(--radius);
+    border-radius: var(--br);
   }
 
-  &.textFieldHasFeedback{
-    margin-bottom: .4rem;
-  }
-  &.textFieldHasError{
+  &.textFieldError{
     border-color: #900;
   }
   &.hasEndControl{
@@ -47,26 +31,6 @@
   &.hasStartControl{
     padding-left: var(--controlHeight);
   }
-}
-
-.textFieldFeedback{
-  padding: 0 .4rem;
-  font-size: .8rem;
-  &:last-child{
-      margin-bottom: var(--controlMarginBottom);
-    }
-}
-
-.textfieldError{
-  composes: textFieldFeedback;
-  color: #900;
-  font-weight: bold;
-}
-
-.textfieldWarning{
-  composes: textFieldFeedback;
-  color: #e27c3e;
-  font-weight: bold;
 }
 
 .endControl{

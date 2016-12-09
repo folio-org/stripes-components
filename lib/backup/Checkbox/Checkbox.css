@@ -1,9 +1,17 @@
 @import '../variables.css';
 
+.checkboxLabel{
+  font-weight: bold;
+  cursor: pointer;
+  flex-grow: 2;
+  padding: 6px 2px;
+  margin: 0 6px;
+}
+
 .root{
   display: flex;
   align-items: center;
-  transition: background-color .2s ease;
+  transition: all .2s ease;
   margin-bottom: var(--controlMarginBottom);
   &.rootFullWidth{
     width: 100%;
@@ -23,22 +31,6 @@
           margin-bottom: 4px;
       }
   }
-  &.checkboxHasFeedback{
-    margin-bottom: 0;
-  }
-}
-
-.checkboxLabel{
-  cursor: pointer;
-  flex-grow: 2;
-  padding: 4px 2px;
-  margin: 0 4px;
-  font-size: .8rem;
-  font-weight: 600;
-  color: var(--labelColor);
-  &.error{
-    color: #900;
-  }
 }
 
 input[type='checkbox'].checkboxInput{
@@ -47,16 +39,4 @@ input[type='checkbox'].checkboxInput{
   & + .checkboxLabel{
     margin-left: 0;
   }
-}
-
-.checkboxFeedback{
-  display:block;
-  padding: 0 .4rem;
-  margin-bottom: var(--controlMarginBottom); 
-}
-
-.checkboxWarning{
-  composes: checkboxFeedback;
-  color: #e27c3e;
-  font-weight: 700;
 }
