@@ -1,0 +1,16 @@
+
+.root{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  & li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dcdcdc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+}
+

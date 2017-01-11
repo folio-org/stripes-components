@@ -36,6 +36,10 @@
     border-radius: var(--radius);
   }
 
+  &.noBorder{
+    border-width: 0;
+  } 
+  
   &.textFieldHasFeedback{
     margin-bottom: .4rem;
   }
@@ -91,5 +95,8 @@
 @media (--small){
   .textField{
     height: var(--controlHeightSmall);
+  }
+  .startControl{
+    margin-top: 10px;
   }
 }
