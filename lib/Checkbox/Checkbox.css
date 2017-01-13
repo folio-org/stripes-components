@@ -26,6 +26,9 @@
   &.checkboxHasFeedback{
     margin-bottom: 0;
   }
+  &.hovered{
+    background-color: #efefef;
+  }
 }
 
 .checkboxLabel{
@@ -46,6 +49,29 @@ input[type='checkbox'].checkboxInput{
   margin: 0 6px;
   & + .checkboxLabel{
     margin-left: 0;
+  }
+  &.hidden{
+    clip:rect(0,0,0,0);
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  } 
+}
+
+.iconContainer{
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  border: 1px dotted transparent;
+  &:after{
+    content: '\200B';
+    position: absolute;
   }
 }
 
