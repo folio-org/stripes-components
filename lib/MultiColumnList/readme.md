@@ -13,7 +13,7 @@ const catalogResults = [
 
 You can also:
   - Specify which properties(columns) to render, as well as the order in which they render
-  - Specify propertiess of the data to be passed to the handlers of row clicks.
+  - Specify properties of the data to be passed to the handlers of row clicks.
   - Specify a formatter object to control exactly how the data is rendered.
 
 ### Formatter
