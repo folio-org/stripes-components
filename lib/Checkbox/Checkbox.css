@@ -34,7 +34,7 @@
 .checkboxLabel{
   cursor: pointer;
   flex-grow: 2;
-  padding: 4px 2px;
+  padding: 7px 2px;
   margin: 0 4px;
   font-size: .8rem;
   font-weight: 600;
@@ -46,7 +46,7 @@
 
 input[type='checkbox'].checkboxInput{
   vertical-align: middle;
-  margin: 0 6px;
+  margin: 0 9px;
   & + .checkboxLabel{
     margin-left: 0;
   }
