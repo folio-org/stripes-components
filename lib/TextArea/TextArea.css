@@ -1,0 +1,68 @@
+@import '../variables.css';
+
+.root{
+  position: relative;
+  max-width: 100%;
+  &.rootFull{
+    width: 100%;
+  }
+}
+
+.textAreaLabel{   
+  display: block;
+  font-size: .8em;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: Uppercase;
+  color: var(--labelColor);
+  &.required:after{
+    content: '(required)';
+    margin: 0 4px;
+    color: #666;
+  }
+}
+
+.textArea{
+  min-height: var(--controlHeight);
+  margin-bottom: var(--controlMarginBottom);
+  padding: 4px;
+  border: 1px solid var(--inputBorderColor);
+  &.textAreaFull{
+    width: 100%;
+  }
+  
+  &.rounded{
+    border-radius: var(--radius);
+  }
+
+  &.noBorder{
+    border-width: 0;
+  } 
+  
+  &.textAreaHasFeedback{
+    margin-bottom: .4rem;
+  }
+  &.textAreaHasError{
+    border-color: #900;
+  }
+}
+
+.textAreaFeedback{
+  padding: 0 .4rem;
+  font-size: .8rem;
+  &:last-child{
+      margin-bottom: var(--controlMarginBottom);
+    }
+}
+
+.textAreaError{
+  composes: textAreaFeedback;
+  color: #900;
+  font-weight: bold;
+}
+
+.textfieldWarning{
+  composes: textAreaFeedback;
+  color: #e27c3e;
+  font-weight: bold;
+}
