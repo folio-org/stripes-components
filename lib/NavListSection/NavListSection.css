@@ -1,0 +1,42 @@
+@import '../variables.css';
+
+.listTopLabel{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: Uppercase;
+  color: #666;
+}
+
+.listItem{
+  display: flex;
+}
+
+.listRoot{
+  & a{
+    display: block;
+    font-weight: bold;
+    font-size: .8rem;
+    padding: 5px 8px;
+    color: var(--labelColor, #333);
+    border-radius: var(--radius, 6px);
+    transition: all .25s ease;
+    margin-bottom: 1px;
+    &.active{
+      background-color: var(--primary, #106c9e);
+      color: #fff;
+      text-decoration: none;
+      &:hover{
+        background-color: color(var(--primary, #106c9e) shade(8%));
+        text-decoration: none;
+      }
+      &:active{
+        text-decoration: none;
+      }
+    }
+    &:hover{
+      background-color: #efefef;
+      text-decoration: none;
+    }
+  }
+}
