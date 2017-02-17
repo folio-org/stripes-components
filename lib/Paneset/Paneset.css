@@ -12,6 +12,9 @@
     position: relative;
     flex-grow: 2;
   }
+  &.static{
+    position: static;
+  }
 }
 
 @media (--small){

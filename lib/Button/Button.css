@@ -47,7 +47,7 @@
         }
       }
     }
-    &.error{
+    &.error, &.negative{
       background-color: var(--error);
       border: 1px solid var(--error);
       color: #fff;
@@ -60,7 +60,9 @@
         }
       }
     }
-    
+    &.noRadius{
+      border-radius: 0; 
+    }
     &.transparent{
       background-color: transparent;
       border: 1px solid transparent;
@@ -90,6 +92,15 @@
     }
     &:not(.fullWidth)+ .button{
         margin: 0 4px;
+    }
+    
+    &.mega{
+      width: 100%;
+      max-height: 16rem;
+      height: 16rem;
+      color: #fff;
+      font-size: 2rem;
+      border-radius: 0;
     }
 }
 
