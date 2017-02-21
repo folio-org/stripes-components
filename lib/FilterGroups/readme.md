@@ -50,6 +50,15 @@ declaratively specifies a set of filter groups, which is then uses in
 several different contexts to drive different but related pieces of
 code.
 
+In order to make it easy to use without needing to make a lot of
+decisions, this library is opinionated about state representation,
+both within the React component that uses it an in the user-interface
+URL.
+
+XXX Some thought is still required regarding whether it could usefully
+be more or less opinionated than it presently is.
+
+
 ### Filter configuration
 
 The filter configuration is an array containing an ordered list of
@@ -137,15 +146,37 @@ parameter in the URL:
 
 ## The `<FilterGroups>` component
 
-
-
+This component renders the full set of filter groups, with headings.
 
 ### Properties
 
 The following properties are supported:
 
-* `contentData` (array of object): the list of objects to be displayed.
-* XXX
+* `config` -- the configuration structure described above, which
+  specifies which groups and filters to render.
+* `filters` -- an objects whose keys are the full names of filters
+  that are selected (i.e. the `filters` part of the component state).
+* `onChangeFilter` -- a function that is invoked when one of the
+  filters is clicked.
+
+The change-filter handler function is the most awkward part of this
+API. It must update the component state to represent the change in the
+clicked filter's setting -- which is easy; but it must also transition
+to a new URL that incorporates the modified filter state, and there is
+no general way to do that without knowing about the component's other
+state (e.g. query, sort-order).
+
+So the function will always look _something_ like this:
+
+	onChangeFilter(e) {
+	  const filters = Object.assign({}, this.state.filters);
+	  filters[e.target.name] = e.target.checked;
+	  this.setState({ filters });
+	  this.transitionToUrlReflectingFilters(filters);
+	}
+
+But the implementation of `transitionToUrlReflectingFilters` will vary
+between applications.
 
 
 ## The `filters2cql` function
