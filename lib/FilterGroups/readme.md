@@ -52,7 +52,7 @@ code.
 
 In order to make it easy to use without needing to make a lot of
 decisions, this library is opinionated about state representation,
-both within the React component that uses it an in the user-interface
+both within the React component that uses it and in the user-interface
 URL.
 
 XXX Some thought is still required regarding whether it could usefully
@@ -99,9 +99,9 @@ Library`.
 
 The FilterGroup utilities use a single member of the component's
 state, `filters`. Its value represents which filters are presently
-selected. It is represented as an object whose keys the full names of
+selected. It is represented as an object whose keys are the full names of
 filters, and whose values are booleans. (Since a value of `false` has
-the same meaining as the key not being present, usually all values are
+the same meaning as the key not being present, usually all values are
 `true`.) For example:
 
 	filters: {
@@ -199,12 +199,12 @@ manifest](https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#th
 The interpretation of the filters is as follows:
 
 * Filter groups for which no item is selected play no role at all.
-* The contraints of _all_ filter groups for which at least one item is
+* The constraints of _all_ filter groups for which at least one item is
   selected must be satisfied.
 * Each filter group is satisfied by records that have _any_ of the
   values specified in the filter.
 
-In short, records are found if they _any_ of the values for _all_ of
+In short, records are found if they match _any_ of the values for _all_ of
 the non-empty groups.
 
 
