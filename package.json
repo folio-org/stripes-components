@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "0.0.1-test",
+  "version": "0.0.2-test",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
