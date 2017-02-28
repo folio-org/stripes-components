@@ -11,10 +11,15 @@
     background-color: transparent;
     border: transparent;
     margin-bottom: var(--controlMarginBottom);
+    margin-left: 2px;
+    margin-right: 2px;
     max-height: var(--controlHeight);
     overflow: hidden;
     white-space: nowrap;
     font-size:.9rem;
+    &:first-child{
+      margin-left: 0;
+    }
     &.primary{
       background-color: var(--primary);
       border: 1px solid var(--primary);
@@ -35,15 +40,27 @@
       background-color: var(--secondary);
       border: 1px solid var(--secondary);
       color: #fff;
+      & :global .stripes__icon{
+            fill: #fff;
+      }
       &:hover{
           background-color: color(var(--secondary) shade(8%));
+          & :global .stripes__icon{
+            fill: #fff;
+          }
       }
       &.hollow{
         background-color: transparent;
         color: var(--secondary);
+        & :global .stripes__icon{
+          fill: var(--secondary);
+        }
         &:hover{
           background-color: color(var(--secondary) shade(8%));
           color: #fff;
+          & :global .stripes__icon{
+            fill: #fff;
+          }
         }
       }
     }
@@ -102,6 +119,14 @@
       font-size: 2rem;
       border-radius: 0;
     }
+}
+
+[dir='rtl']{
+  &.button{
+    &:first-child{
+      margin-right: 0;
+    }
+  }
 }
 
 @media(--small){
