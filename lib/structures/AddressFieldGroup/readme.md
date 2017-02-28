@@ -3,7 +3,7 @@
 
 import 
 ```js
-import AddressList from '@folio/stripes-components/lib/structures/AddressList';
+import AddressList from '@folio/stripes-components/lib/structures/AddressFieldGroup/AddressList';
 ```
 
 set some data...
