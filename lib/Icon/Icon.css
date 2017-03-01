@@ -2,6 +2,10 @@
   margin: 0 4px;
 }
 
+:global .stripes__icon{
+  fill: #999;
+}
+
 button .root{
   float: left;
 }

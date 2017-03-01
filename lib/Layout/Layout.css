@@ -1,0 +1,39 @@
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.centered{
+    margin: auto;
+}
+
+.textCentered{
+    text-align: center;
+}
+
+.textRight{
+    text-align: right;
+}
+
+.flex{
+  display: flex;
+  &.centerContent{
+    justify-content:center;
+  }
+}
+
+.indent{
+  padding-left:.4rem;
+  padding-right: .4rem;
+}
+
+.marginTopHalf{
+  margin-top: .5rem;
+}
+
+.marginTop1{
+  margin-top: .1rem;
+}
