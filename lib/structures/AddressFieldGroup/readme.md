@@ -49,7 +49,7 @@ onUpdate | callback for saving record... should accept address object... | | yes
 onDelete | callback for deleting record... should accept id or unique identifier... | | yes
 addresses | Array of address objects with properties such as id, country, addressLine1, addressLine2, city, stateRegion, zipCode.... | | yes
 uniqueField | in case the unique identifier is something besides 'id' | `'id'`
-sectionLabel | Displays a custom <h2> tag at top of listing. | `'Address'`
+sectionLabel | Displays a custom 'h2' html tag at top of listing. | `'Address'`
 showAll | boolean for default to show all addresses or only show primary (defaults to false(primary Only));  Toggleable by the 'show more addresses (#)' button below the list...(appears if more than 1 address is stored) | `false` |
 labelMap | object to match field names with custom labels for UI rendering. | `{addressLine1: 'Address Line 1', addressLine2: 'Address Line 2', stateRegion: 'State/Province/Region', zipCode: 'Zip/Postal Code'}`
 visibleFields | fields from Address objects to render to the body of the display/form. Also specifies the order of fields. Header field is not included | `[ 'country', 'addressLine1', 'addressLine2', 'city', 'stateRegion', 'zipCode' ]`
