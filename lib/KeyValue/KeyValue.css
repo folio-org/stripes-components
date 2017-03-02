@@ -1,9 +1,18 @@
-.keyValueLabel{   
+@import '../variables.css';
+
+.kvLabel{   
   display: block;
   font-size: .8em;
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: 0;
   text-transform: Uppercase;
-  color: #666;
+  color: var(--labelColor, #333);
 }
 
+.kvValue{
+  
+}
+
+.kvRoot{
+  margin-bottom: var(--controlMarginBottom);
+}

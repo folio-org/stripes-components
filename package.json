@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -30,5 +30,7 @@
     "eslint-import-resolver-webpack": "0.7.1",
     "webpack": "1.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^15.3.2"
+  }
 }
