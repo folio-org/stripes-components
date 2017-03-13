@@ -14,9 +14,9 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 label | string | visible field label | | false
 format | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false
-id | string | id for date field - used in the "id" attribute of the text input | |
-locale | string | locale for datepicker to use to display calendar. e.g. "de" will display calendar using the German locale | "en" | 
-useFocus | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | 
+id | string | id for date field - used in the "id" attribute of the text input | | false
+locale | string | locale for datepicker to use to display calendar. e.g. "de" will display calendar using the German locale | "en" | false
+useFocus | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
 disabled | bool | if true, field will be disabled for focus or entry. | false | false
 value | string | date to be displayed in the textfield. In forms, this is supplied by the initialValues prop supplied to the form | "" | false
 onChange | func | Event handler to handle updates to the datefield text. | | false
