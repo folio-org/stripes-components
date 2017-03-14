@@ -2,7 +2,7 @@
 
 This `util` area contains utility functions, whereas `../lib` contains utility components.
 
-# this.transitionToParams(params)
+## this.transitionToParams(params)
 
 Must be invoked with `this` bound to a React component that is beneath a React Router match, so that `this.props.location` and `this.context.router` are both defined.
 
