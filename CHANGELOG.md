@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 0.1.0 (Tue Mar 14 17:00:57 GMT 2017)
+
+* Add the utility function `makePathFunction` and [its documentation](util/README.md).
+
 ## 0.0.4 (Mon Mar 13 13:20:20 GMT 2017)
 
 * Added Datepicker Component.
