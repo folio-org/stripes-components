@@ -8,7 +8,7 @@ function transitionToParams(params) {
     url += `?${keys.map(key => `${key}=${encodeURIComponent(allParams[key])}`).join('&')}`;
   }
 
-  this.context.router.transitionTo(url);
+  this.props.history.push(url);
 }
 
 export default transitionToParams;
