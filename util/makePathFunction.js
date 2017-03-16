@@ -4,7 +4,7 @@ function makePathFunction(basePath, findAll, queryTemplate, sortMap, filterConfi
   return (queryParams, _pathComponents, _resourceValues, logger) => {
     const { query, filters, sort } = queryParams || {};
 
-    let cql = !query ? undefined : queryTemplate.replace(/\${query}/g, query);
+    let cql = !query ? undefined : queryTemplate.replace(/\$QUERY/g, query);
     const filterCql = filters2cql(filterConfig, filters);
     if (filterCql) {
       if (cql) {
