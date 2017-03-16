@@ -1,14 +1,11 @@
 @import '../variables.css';
 
 .root{
-  position: relative;
-  max-width: 100%;
-  &.rootFull{
+    position: relative;
     width: 100%;
-  }
 }
 
-.textFieldLabel{   
+.label{
   display: block;
   font-size: .8em;
   font-weight: bold;
@@ -22,36 +19,67 @@
   }
 }
 
-.textField{
+.inputGroup{
+    position: relative;
+}
+
+.startControls{
+    pointer-events: none;
+    height: var(--controlHeight, 100%);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.endControls{
+    pointer-events: none;
+    height: var(--controlHeight, 100%);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+
+.controlGroup{
+    pointer-events: all;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.input{
   height: var(--controlHeight);
   min-height: var(--controlHeight);
   margin-bottom: var(--controlMarginBottom);
   padding: 4px;
   border: 1px solid var(--inputBorderColor);
-  &.textFieldFull{
-    width: 100%;
-  }
-  
+  width: 100%;
   &.rounded{
     border-radius: var(--radius);
   }
 
   &.noBorder{
     border-width: 0;
-  } 
+  }
   
   &.textFieldHasFeedback{
     margin-bottom: .4rem;
   }
-  &.textFieldHasError{
+  &.textFieldError{
     border-color: #900;
   }
-  &.hasEndControl{
-    padding-right: var(--controlHeight);
+  &.textFieldValid{
+    border-color: #0A751E;
   }
-  &.hasStartControl{
-    padding-left: var(--controlHeight);
-  }
+  &::-ms-clear {
+    display: none;
+    }
 }
 
 .textFieldFeedback{
@@ -74,29 +102,11 @@
   font-weight: bold;
 }
 
-.endControl{
-  position: absolute;
-  height: var(--controlHeight);
-  top: 0px;
-  right: 0;
-  display: flex;
-  align-items: center;
-}
-
-.startControl{
-  position: absolute;
-  height: var(--controlHeight);
-  top: 0px;
-  left: 0;
-  display: flex;
-  align-items: center;
-}
-
 @media (--small){
-  .textField{
+  .input{
     height: var(--controlHeightSmall);
   }
-  .startControl{
-    margin-top: 10px;
+  .startControls, .endControls{
+      height: var(--controlHeightSmall, 100%);
   }
 }

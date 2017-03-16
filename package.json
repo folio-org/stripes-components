@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "0.0.3",
+  "version": "0.2.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "lint": "eslint lib || true" 
+    "lint": "eslint lib || true"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -31,6 +31,11 @@
     "webpack": "1.11.0"
   },
   "dependencies": {
-    "react": "^15.3.2"
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "moment-range": "^3.0.3",
+    "react": "^15.3.2",
+    "react-overlays": "^0.6.12"
   }
 }
