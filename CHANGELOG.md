@@ -1,5 +1,14 @@
 # Change history for stripes-components
 
+## 0.2.0 (Thu 16 Mar 14:55:09 GMT 2017)
+
+* Add the `<IfPermission>` component, which renders its children only if the specified permission is present.
+* Change substitution syntax in the `queryTemplate` parameter of the `makePathFunction` utility function from `${query}` to `$QUERY`. The former misleading resembled ES6 string-template notations, but that's not really what was happening here.
+
+## 0.1.0 (Tue Mar 14 17:00:57 GMT 2017)
+
+* Add the utility function `makePathFunction` and [its documentation](util/README.md).
+
 ## 0.0.4 (Mon Mar 13 13:20:20 GMT 2017)
 
 * Added Datepicker Component.
