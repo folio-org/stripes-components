@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 0.3.0 (Fri 17 Mar 12:44:39 GMT 2017)
+
+* `transitionToParams` now parses the location's search-string if it doesn't come read-parsed into a query object. This is the case with react-router v4.0. This enhancement fixes STRIPES-258.
+
 ## 0.2.0 (Thu 16 Mar 14:55:09 GMT 2017)
 
 * Add the `<IfPermission>` component, which renders its children only if the specified permission is present.
