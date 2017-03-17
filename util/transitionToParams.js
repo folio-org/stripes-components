@@ -1,6 +1,12 @@
+import queryString from 'query-string';
+
 function transitionToParams(params) {
   const location = this.props.location;
-  const allParams = Object.assign({}, location.query, params);
+  let query = location.query;
+  if (query == undefined)
+    query = queryString.parse(location.search);
+
+  const allParams = Object.assign({}, query, params);
   const keys = Object.keys(allParams);
 
   let url = location.pathname;
@@ -8,7 +14,7 @@ function transitionToParams(params) {
     url += `?${keys.map(key => `${key}=${encodeURIComponent(allParams[key])}`).join('&')}`;
   }
 
-  this.context.router.transitionTo(url);
+  this.props.history.push(url);
 }
 
 export default transitionToParams;
