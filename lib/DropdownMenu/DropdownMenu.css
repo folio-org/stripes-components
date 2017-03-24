@@ -1,3 +1,5 @@
+@import "../variables.css";
+
 .DropdownMenu{
     position: absolute;
     top: 100%;
@@ -5,7 +7,7 @@
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
+    min-width: 20vw;
     padding: 5px;
     margin: 2px 0 0;
     font-size: 14px;
@@ -22,3 +24,14 @@
     }
 }
 
+@media(--medium){
+  .DropdownMenu{
+    min-width: 40vw;
+  }
+}
+
+@media(--small){
+  .DropdownMenu{
+    min-width: 90vw;
+  }
+}

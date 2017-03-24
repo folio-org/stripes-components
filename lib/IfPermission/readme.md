@@ -15,5 +15,5 @@ Yields the child elements only if the permission named in the `perm `prop is pre
 The following properties are supported:
 
 * `perm`: a short string containing the name of the permission that is required.
-* `currentPerms`: the set of permissions against which `perm` is checks, expressed as an object whose keys are permission names and whose values are corresponding human-readable strings.
+* `currentPerms`: the set of permissions against which `perm` is checked, expressed as an object whose keys are permission names and whose values are corresponding human-readable strings.
 
