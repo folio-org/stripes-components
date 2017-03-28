@@ -1,9 +1,15 @@
 # Change history for stripes-components
 
+## [0.5.0](https://github.com/folio-org/stripes-components/tree/v0.5.0) (2017-03-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.4.0...v0.5.0)
+
+* Add `<EditableList>` component.
+* Add clear-field button to the `<TextField>` component.
+
 ## [0.4.0](https://github.com/folio-org/stripes-components/tree/v0.4.0) (2017-03-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.3.0...v0.4.0)
 
-* The `<IfPermission>` now uses the stripes-core v0.4.0 API for permission-checking, and the stripes-core peer-dependency has been made explicit.
+* The `<IfPermission>` component now uses the stripes-core v0.4.0 API for permission-checking, and the stripes-core peer-dependency has been made explicit.
 
 ## [0.3.0](https://github.com/folio-org/stripes-components/tree/v0.3.0) (2017-03-17)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.2.0...v0.3.0)
