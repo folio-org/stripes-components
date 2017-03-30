@@ -5,6 +5,8 @@
 
 * Add `<EditableList>` component.
 * Add clear-field button to the `<TextField>` component.
+* Add `columnMapping` prop to `<MultiColumnList>`
+* `<MultiColumnList>` `onHeaderClick` callback is passed "name" and "alias" for the column in case `columnMapping` prop is supplied.
 
 ## [0.4.0](https://github.com/folio-org/stripes-components/tree/v0.4.0) (2017-03-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.3.0...v0.4.0)
