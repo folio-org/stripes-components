@@ -26,7 +26,7 @@ The following properties are supported:
 * `formatter` (object mapping names to functions): see separate section
 * `selectedRow` (object): Applies 'selected' class to the table row matching the property in the object - E.g. {id: '1224'}.
 * `sortedColumn` (string): Used to apply styling to the appropriate column.
-* `sortOrder` (string): 'ascending' or 'decending' direction.
+* `sortOrder` (string): 'ascending' or 'descending' direction.
 * `onRowClick` (function): callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display).
 * `onHeaderClick` (func[event, headerMetadata]): callback function invoked when one of the cells in the header is clicked (typically to choose a sort-order). By default, headerMetadata includes the column's data name as well as its alias, in case a object is supplied to the columnMapping prop.
 * `columnMapping` (object) Maps rendered column labels to the data fields for the onHeaderClick prop. 
