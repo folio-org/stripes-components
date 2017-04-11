@@ -10,11 +10,14 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 A library of React components and utility functions for Stripes.
 
 ## Links to documentation of specific components and utilities
-
 * [`<MultiColumnList>`](lib/MultiColumnList/readme.md)
 * [`<FilterGroups>`](lib/FilterGroups/readme.md)
 * [`<IfPermission>`](lib/IfPermission/readme.md)
 * [`<Datepicker>`](lib/Datepicker/readme.md)
+* [`<Paneset>`](lib/Paneset/readme.md)
+* [`<Pane>`](lib/Pane/readme.md)
+* [`<Layer>`](lib/Layer/readme.md)
+* [`<Modal>`](lib/Modal/readme.md)
 * [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup/readme.md)
 * [Utility functions](util/README.md)
 * ... many others to follow.
