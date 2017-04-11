@@ -1,11 +1,9 @@
 # Change history for stripes-components
 
-## [0.7.0](https://github.com/folio-org/stripes-components/tree/v0.7.0) (2017-04-10)
-[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.6.0...v0.7.0)
-* Add `<Modal>` component.
-
-## [0.6.0](https://github.com/folio-org/stripes-components/tree/v0.6.0) (2017-03-28)
+## [0.6.0](https://github.com/folio-org/stripes-components/tree/v0.6.0) (IN PROGRESS)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.5.0...v0.6.0)
+
+* Add `<Modal>` component.
 * Add `dismissible` and `onClose` props to `<Pane>`
 * Use `requestAnimationFrame` to improve rendering performance of `<Textfield>`
 * Added 'browser' and 'node' environments to eslint configuration.
