@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-##[0.6.1](https://github.com/folio-org/stripes-components/tree/v0.6.1) (IN PROGRESS)
+## [0.6.1](https://github.com/folio-org/stripes-components/tree/v0.6.1) (IN PROGRESS)
 * Added `fluidContentWidth` prop to `<Pane>` component. This suppresses `<Pane>` wrapping its content in a div with static minimum width.
 * Added `defaultWidth` prop to `<Paneset>` in case paneset needs a specified width. Defaults to `'fill'`
 
