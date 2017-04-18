@@ -22,6 +22,6 @@ let showLayer = true;
 ### Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-isOpen | bool | Optional prop to controls rendering of the layer's child components within a div with role "dialog" (A full-module modal). | |
+isOpen | bool | Optional prop to control rendering of the layer's child components within a div with role "dialog" (A full-module modal). | |
 container | node | DOM element or component where the rendered elements should reside. Appends content to the root of the ascendant `Paneset` by default. | | 
 
