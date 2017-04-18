@@ -1,5 +1,19 @@
 # Change history for stripes-components
 
+## [0.6.1](https://github.com/folio-org/stripes-components/tree/v0.6.1) (2017-04-14)
+* Added `fluidContentWidth` prop to `<Pane>` component. This suppresses `<Pane>` wrapping its content in a div with static minimum width.
+* Added `defaultWidth` prop to `<Paneset>` in case paneset needs a specified width. Defaults to `'fill'`
+
+## [0.6.0](https://github.com/folio-org/stripes-components/tree/v0.6.0) (2017-04-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.5.0...v0.6.0)
+
+* Added `<Modal>` component. [docs](lib/Modal/readme.md)
+* Added `dismissible` and `onClose` props to `<Pane>`. `dismissible` can be used to render a dismiss '&times;' button, with a corresponding handler supplied in `onClose` that will be triggered when the pane is dismissed. The module should use this handler to clean up any state or logic that triggered the pane's rendering. [docs](lib/Pane/readme.md)
+* `<Layer>` renders its contents to the root of the containing `<Paneset>`. [docs](lib/Layer/readme.md)
+* Prop `isRoot` added to `<Paneset>` - this should be used for full-width panesets added in new `<Layer>` components to ensure that the descendent `<Panes>` are tracked and sized appropriately. [docs](lib/Paneset/readme.md)
+* Use `requestAnimationFrame` to improve rendering performance of `<Textfield>`
+* Added 'browser' and 'node' environments to eslint configuration so that it will accept calls to browser functions such as `requestAnimationFrame`.
+
 ## [0.5.0](https://github.com/folio-org/stripes-components/tree/v0.5.0) (2017-03-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.4.0...v0.5.0)
 

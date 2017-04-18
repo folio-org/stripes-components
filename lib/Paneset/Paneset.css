@@ -8,6 +8,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  will-change: transform;
   & .paneset, &.nested{
     position: relative;
     flex-grow: 2;
