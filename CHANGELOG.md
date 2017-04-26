@@ -1,5 +1,8 @@
 # Change history for stripes-components
 
+## pending
+* Add `makeQueryFunction` util to replace `makePathFunction` which will be removed in a subsequent release.
+
 ## [0.6.1](https://github.com/folio-org/stripes-components/tree/v0.6.1) (2017-04-14)
 * Added `fluidContentWidth` prop to `<Pane>` component. This suppresses `<Pane>` wrapping its content in a div with static minimum width.
 * Added `defaultWidth` prop to `<Paneset>` in case paneset needs a specified width. Defaults to `'fill'`
