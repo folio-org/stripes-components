@@ -19,6 +19,7 @@ A library of React components and utility functions for Stripes.
 * [`<Layer>`](lib/Layer/readme.md)
 * [`<Modal>`](lib/Modal/readme.md)
 * [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup/readme.md)
+* [`<Settings>`](lib/Settings/readme.md)
 * [Utility functions](util/README.md)
 * ... many others to follow.
 
