@@ -19,6 +19,7 @@ A library of React components and utility functions for Stripes.
 * [`<Layer>`](lib/Layer/readme.md)
 * [`<Modal>`](lib/Modal/readme.md)
 * [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup/readme.md)
+* [`<Settings>`](lib/Settings/readme.md)
 * [Utility functions](util/README.md)
 * ... many others to follow.
 
@@ -29,5 +30,8 @@ See also:
 ## Additional information
 
 See [stripes-core](https://github.com/folio-org/stripes-core).
+
+See project [STRIPES](https://issues.folio.org/browse/STRIPES)
+at the [FOLIO issue tracker](http://dev.folio.org/community/guide-issues).
 
 Other FOLIO Developer documentation is at [dev.folio.org](http://dev.folio.org/)

@@ -28,6 +28,27 @@ http://localhost:3000/users?filters=active.Active&sort=Water&query=Email
 ```
 The `filters` query parameter is unaffected (since it was not included in the parameters passed in), the old `sort` value `Name` is replaced by the new value `Email`, and the new parameter `query` is added with the value `water`.
 
+## makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig)
+
+Makes and returns a function, suitable to be used as the `query` param of a stripes-connect resource configuration. The function is itself configured by four parameters, which will vary depending on the module that is using it. It is generally used as follows:
+```
+static manifest = Object.freeze({
+  items: {
+    type: 'okapi',
+    records: 'items',
+    path: 'item-storage/items',
+    params: {
+      query: makeQueryFunction(
+        'materialType=*',
+        'materialType="${query}" or barcode="${query}*" or title="${query}*"',
+        { 'Material Type': 'materialType' },
+        filterConfig
+      ),
+    },
+    staticFallback: { params: {} },
+  },
+});
+```
 
 ## makePathFunction(basePath, findAll, queryTemplate, sortMap, filterConfig)
 
