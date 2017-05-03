@@ -2,6 +2,7 @@
 
 ## pending
 * Add `makeQueryFunction` util to replace `makePathFunction` which will be removed in a subsequent release.
+* Add `<Settings>` component to render top-level settings pages for Stripes modules.
 
 ## [0.6.1](https://github.com/folio-org/stripes-components/tree/v0.6.1) (2017-04-14)
 * Added `fluidContentWidth` prop to `<Pane>` component. This suppresses `<Pane>` wrapping its content in a div with static minimum width.
