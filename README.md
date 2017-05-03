@@ -30,4 +30,7 @@ See also:
 
 See [stripes-core](https://github.com/folio-org/stripes-core).
 
+See project [STRIPES](https://issues.folio.org/browse/STRIPES)
+at the [FOLIO issue tracker](http://dev.folio.org/community/guide-issues).
+
 Other FOLIO Developer documentation is at [dev.folio.org](http://dev.folio.org/)
