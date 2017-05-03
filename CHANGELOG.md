@@ -1,10 +1,12 @@
 # Change history for stripes-components
 
-## pending
+## [0.7.0](https://github.com/folio-org/stripes-components/tree/v0.7.0) (2017-05-03)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.6.1...v0.7.0)
 * Add `makeQueryFunction` util to replace `makePathFunction` which will be removed in a subsequent release.
 * Add `<Settings>` component to render top-level settings pages for Stripes modules.
 
 ## [0.6.1](https://github.com/folio-org/stripes-components/tree/v0.6.1) (2017-04-14)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.6.0...v0.6.1)
 * Added `fluidContentWidth` prop to `<Pane>` component. This suppresses `<Pane>` wrapping its content in a div with static minimum width.
 * Added `defaultWidth` prop to `<Paneset>` in case paneset needs a specified width. Defaults to `'fill'`
 
