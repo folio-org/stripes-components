@@ -139,7 +139,7 @@ class Users extends React.Component{
                     </Row>
                   </Col>
                   <Col xs={4} >
-                    <img className="floatEnd" src="http://placehold.it/175x175"/>
+                    <img className="floatEnd" src="https://placehold.it/175x175"/>
                   </Col>
                 </Row>
                 <br/>
