@@ -4,6 +4,7 @@
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.7.0...v0.8.0)
 
 * Add the `<Pluggable>` component. Implements Stipes plugins (STRIPES-379).
+* Fix a couple of minor JS-console warnings.
 
 ## [0.7.0](https://github.com/folio-org/stripes-components/tree/v0.7.0) (2017-05-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.6.1...v0.7.0)
