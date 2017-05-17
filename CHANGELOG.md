@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [0.8.0](https://github.com/folio-org/stripes-components/tree/v0.8.0) (2017-05-17)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.7.0...v0.8.0)
+
+* Add the <Pluggable> component. Implements Stipes plugins (STRIPES-379).
+
 ## [0.7.0](https://github.com/folio-org/stripes-components/tree/v0.7.0) (2017-05-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.6.1...v0.7.0)
 * Add `makeQueryFunction` util to replace `makePathFunction` which will be removed in a subsequent release.
