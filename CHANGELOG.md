@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## IN PROGRESS 0.9.0
+
+* `<Settings>` component now passes the `label` part of the settings object down into the component.
+
 ## [0.8.0](https://github.com/folio-org/stripes-components/tree/v0.8.0) (2017-05-17)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.7.0...v0.8.0)
 
