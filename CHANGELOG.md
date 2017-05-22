@@ -1,7 +1,9 @@
 # Change history for stripes-components
 
-## IN PROGRESS 0.9.0
+## [0.9.0](https://github.com/folio-org/stripes-components/tree/v0.9.0) (2017-05-22)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.8.0...v0.9.0)
 
+* `<Pluggable>` component now honours the plugin preferences provided in the Stripes object. These are available from stripes-core v1.6.0, and the peer-dependency is updated accordingly.
 * `<Settings>` component now passes the `label` part of the settings object down into the component.
 
 ## [0.8.0](https://github.com/folio-org/stripes-components/tree/v0.8.0) (2017-05-17)
