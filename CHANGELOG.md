@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## In progress
+
+* `<Settings>` component now sorts settings pages by label. Implements STRIPES-358.
+
 ## [0.9.0](https://github.com/folio-org/stripes-components/tree/v0.9.0) (2017-05-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.8.0...v0.9.0)
 
