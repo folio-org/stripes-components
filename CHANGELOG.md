@@ -1,5 +1,17 @@
 # Change history for stripes-components
 
+## [0.9.0](https://github.com/folio-org/stripes-components/tree/v0.9.0) (2017-05-22)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.8.0...v0.9.0)
+
+* `<Pluggable>` component now honours the plugin preferences provided in the Stripes object. These are available from stripes-core v1.6.0, and the peer-dependency is updated accordingly.
+* `<Settings>` component now passes the `label` part of the settings object down into the component.
+
+## [0.8.0](https://github.com/folio-org/stripes-components/tree/v0.8.0) (2017-05-17)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.7.0...v0.8.0)
+
+* Add the `<Pluggable>` component. Implements Stripes plugins (STRIPES-379).
+* Fix a couple of minor JS-console warnings.
+
 ## [0.7.0](https://github.com/folio-org/stripes-components/tree/v0.7.0) (2017-05-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.6.1...v0.7.0)
 * Add `makeQueryFunction` util to replace `makePathFunction` which will be removed in a subsequent release.
