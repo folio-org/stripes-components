@@ -39,6 +39,6 @@
     "react-overlays": "^0.6.12"
   },
   "peerDependencies": {
-    "stripes-core": "^1.6.0"
+    "stripes-core": "^1.7.0"
   }
 }
