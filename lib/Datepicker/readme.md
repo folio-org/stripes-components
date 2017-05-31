@@ -14,6 +14,7 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 label | string | visible field label | | false
 dateFormat | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false
+backendDateStandard | string | parses to/from ISO 8601 standard by default before committing value. | "ISO 8601" | false 
 id | string | id for date field - used in the "id" attribute of the text input | | false
 locale | string | locale for datepicker to use to display calendar. e.g. "de" will display calendar using the German locale | "en" | false
 useFocus | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
