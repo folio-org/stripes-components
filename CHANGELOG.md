@@ -1,5 +1,8 @@
 # Change history for stripes-components
 
+## In-Progress
+* `<Datepicker>` - fix issue with date navigation when date is null.
+
 ## [0.10.0](https://github.com/folio-org/stripes-components/tree/v0.10.0) (2017-06-01)
 * `<Settings>` component now sorts settings pages by label. Implements STRIPES-358.
 * `<TextField>` hides clear "&#10005;" when `readOnly` prop is true.
