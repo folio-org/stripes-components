@@ -1,7 +1,6 @@
 # Change history for stripes-components
 
-## In progress
-
+## [0.10.0](https://github.com/folio-org/stripes-components/tree/v0.10.0) (2017-06-01)
 * `<Settings>` component now sorts settings pages by label. Implements STRIPES-358.
 * `<TextField>` hides clear "&#10005;" when `readOnly` prop is true.
 * `<Datepicker>` changed 'format' prop to 'DateFormat' for better cooperation with redux-form `<Field>` component.
