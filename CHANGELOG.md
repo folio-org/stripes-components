@@ -1,7 +1,7 @@
 # Change history for stripes-components
 
 ## In-Progress
-* `<Datepicker>` - fix issue with date navigation when date is null.
+* `<Datepicker>` - fix multiple issues with date navigation and focus management. (STRIPES-398)
 
 ## [0.10.0](https://github.com/folio-org/stripes-components/tree/v0.10.0) (2017-06-01)
 * `<Settings>` component now sorts settings pages by label. Implements STRIPES-358.
