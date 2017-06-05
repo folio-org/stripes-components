@@ -1,9 +1,29 @@
 # HotKeys
-Used to add keyboard shortcuts to FOLIO modules or even sub-sections of modules.
+ Add keyboard shortcuts to FOLIO modules or even sub-sections of modules.
 
 ## Usage
+#### Method 1: JSX component
 
-#### High-Order Component
+
+```js
+import { Hotkeys } from '@folio/stripes-components/lib/HotKeys';
+//..
+const keys = { 
+  'delete' : ['delete','backspace'],
+};
+
+const handlers = {
+  'delete': this.doDelete
+};
+
+<Hotkeys keymap={keys} handlers={handlers}>
+  <Modal dismissible closeOnBackgroundClick open label="example">
+    <button onClick={this.handleClose}>Close modal</button>
+  </Modal>
+</Hotkeys>
+```
+
+#### Method 2: High-Order Component
 Components can be wrapped to give them the necessary props/functionality to respond to keyboard shortcuts.
 
 ```js
@@ -30,27 +50,6 @@ const handlers = {
 <MyComponent keyMap={keys} handlers={handlers} />
 ```
 
-
-#### JSX component
-
-
-```js
-import { Hotkeys } from '@folio/stripes-components/lib/HotKeys';
-//..
-const keys = { 
-  'delete' : ['delete','backspace'],
-};
-
-const handlers = {
-  'delete': this.doDelete
-};
-
-<Hotkeys keymap={keys} handlers={handlers}>
-  <Modal dismissible closeOnBackgroundClick open label="example">
-    <button onClick={this.handleClose}>Close modal</button>
-  </Modal>
-</Hotkeys>
-```
 
 ### Props
 Name | type | description | default | required
