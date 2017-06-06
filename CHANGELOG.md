@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## In-Progress
+## [0.10.1](https://github.com/folio-org/stripes-components/tree/v0.10.1) (2017-06-05)
 * `<Datepicker>` - fix multiple issues with date navigation and focus management. (STRIPES-398)
 
 ## [0.10.0](https://github.com/folio-org/stripes-components/tree/v0.10.0) (2017-06-01)
