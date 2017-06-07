@@ -1,8 +1,10 @@
 # Change history for stripes-components
 
+## In-Progress
+* `<HotKeys>` component allow for applying shortcut key combinations to modules or sub-sections of modules.
+
 ## [0.10.1](https://github.com/folio-org/stripes-components/tree/v0.10.1) (2017-06-05)
 * `<Datepicker>` - fix multiple issues with date navigation and focus management. (STRIPES-398)
-* `<HotKeys>` component and HOC allow for applying shortcut key combinations to modules or sub-sections of modules.
 
 ## [0.10.0](https://github.com/folio-org/stripes-components/tree/v0.10.0) (2017-06-01)
 * `<Settings>` component now sorts settings pages by label. Implements STRIPES-358.
