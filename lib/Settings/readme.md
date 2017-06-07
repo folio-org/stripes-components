@@ -23,7 +23,6 @@ export default props => <Settings {...props} pages={pages} />;
 
 The following properties are supported:
 
-* `stripes`: the Stripes object _must_ be passed through from the caller.
 * `pages`: the list of sub-pages to be linked from the settings page. Each member of the list is an object with the following members:
   * `route`: the route, relative to that of the settings page, on which the sub-page should be found.
   * `label`: the human-readable label that, when clicked on, links to the specified route.

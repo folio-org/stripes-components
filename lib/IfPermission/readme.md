@@ -5,15 +5,13 @@ Yields the child elements only if the permission named in the `perm `prop is pre
 ## Usage
 
 ```
-<IfPermission {...this.props} perm="users.edit">
+<IfPermission perm="users.edit">
   <button onClick={this.onClickEditUser}>Edit</button>
 </IfPermission>
 ```
 
 ## Properties
 
-The following properties are supported:
+A single property is supported:
 
 * `perm`: a short string containing the name of the permission that is required.
-* `currentPerms`: the set of permissions against which `perm` is checked, expressed as an object whose keys are permission names and whose values are corresponding human-readable strings.
-

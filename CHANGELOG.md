@@ -1,11 +1,18 @@
 # Change history for stripes-components
 
-## In progress
+## In-Progress
+* `<HotKeys>` component allow for applying shortcut key combinations to modules or sub-sections of modules.
 
+## [0.10.1](https://github.com/folio-org/stripes-components/tree/v0.10.1) (2017-06-05)
+* `<Datepicker>` - fix multiple issues with date navigation and focus management. (STRIPES-398)
+
+## [0.10.0](https://github.com/folio-org/stripes-components/tree/v0.10.0) (2017-06-01)
 * `<Settings>` component now sorts settings pages by label. Implements STRIPES-358.
 * `<TextField>` hides clear "&#10005;" when `readOnly` prop is true.
 * `<Datepicker>` changed 'format' prop to 'DateFormat' for better cooperation with redux-form `<Field>` component.
 * `<Datepicker>` hides clear and calendar controls, disables functionality when `readOnly` prop is true.
+* Update stripes-core dependency to 1.7.0, so we get the Stripes object on the context.
+* `<IfPermission>`, `<Pluggable>` and `<Settings>` now all take the Stripes object from the React context rather then expecting it to be passed in as a prop. Fixes STRIPES-395.
 
 ## [0.9.0](https://github.com/folio-org/stripes-components/tree/v0.9.0) (2017-05-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.8.0...v0.9.0)

@@ -28,8 +28,9 @@
         height: 38px;
     }
     
-    & .day{
-        display: block;
+    & .dayButton{
+        appearance: none;
+        background: none;
         color: #333;
         text-decoration: none;
         text-align: center;
@@ -45,16 +46,16 @@
             color: #999;
         }
         &.today{
-          background-color: color(#106c9e tint(80%));
+          background: color(#106c9e tint(80%));
         }
         &.excluded{
           color: #999 !important;
-          background-color: #dedede;
+          background: #dedede;
           pointer: default;
           pointer-events: none;
         }
         &.selected{
-            background-color: #106c9e !important;
+            background: #106c9e !important;
             color: #fff;
             transition: all .2s;
             &:hover{
@@ -82,13 +83,16 @@
 .nav{
     display: block;
     text-decoration: none;
+    appearance: none;
+    background: none;
+    border: 0;
     text-align: center;
     color: #333;
     border-radius: 4px;
     margin-bottom: 4px;
     padding: 4px 0;
     &:hover{
-        background-color: #eee;
+        background: #eee;
     }
 }
 
