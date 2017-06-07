@@ -1,7 +1,8 @@
 # Change history for stripes-components
 
-## In-Progress
+## [0.11.0](https://github.com/folio-org/stripes-components/tree/v0.11.0) (2017-06-07)
 * `<HotKeys>` component allow for applying shortcut key combinations to modules or sub-sections of modules.
+*  Layout Grid - using [react-flexbox-grid](https://roylee0704.github.io/react-flexbox-grid/) to replace the float-based grid from react-bootstrap. [docs](lib/LayoutGrid/readme.md)
 
 ## [0.10.1](https://github.com/folio-org/stripes-components/tree/v0.10.1) (2017-06-05)
 * `<Datepicker>` - fix multiple issues with date navigation and focus management. (STRIPES-398)
