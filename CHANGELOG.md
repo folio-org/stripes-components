@@ -1,7 +1,6 @@
 # Change history for stripes-components
 
-## IN PROGRESS
-
+## [0.11.1](https://github.com/folio-org/stripes-components/tree/v0.11.1) (2017-06-07)
 * Add `mousetrap` to dependencies, since this is needed by the modified version of react-hotkeys that was provided in v0.11.0.
 
 ## [0.11.0](https://github.com/folio-org/stripes-components/tree/v0.11.0) (2017-06-07)
