@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## IN PROGRESS
+
+* Add `mousetrap` to dependencies, since this is needed by the modified version of react-hotkeys that was provided in v0.11.0.
+
 ## [0.11.0](https://github.com/folio-org/stripes-components/tree/v0.11.0) (2017-06-07)
 * `<HotKeys>` component allow for applying shortcut key combinations to modules or sub-sections of modules.
 *  Layout Grid - using [react-flexbox-grid](https://roylee0704.github.io/react-flexbox-grid/) to replace the float-based grid from react-bootstrap. [docs](lib/LayoutGrid/readme.md)
