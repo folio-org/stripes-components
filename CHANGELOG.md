@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## IN PROGRESS
+## [0.11.2](https://github.com/folio-org/stripes-components/tree/v0.11.2) (2017-06-08)
 * Add `create-react-class` to dependencies, since this is needed by the modified version of react-hotkeys that was provided in v0.11.0.
 
 ## [0.11.1](https://github.com/folio-org/stripes-components/tree/0.11.1) (2017-06-07)
