@@ -22,7 +22,7 @@ For large lists of data the boolean prop `virtualize` can be turned on to effici
 For efficiency, virtualization of list items requires a static `height` value (not percentage-based). If you're unsure how large the list's containing element will be, you can set the `autosize` prop to true - this will make the grid dynamically fill the space that it has, automatically using the resulting static width and height. This is ideal for the content of results panes.
 
 ### keyboard controls
-The containing div of the list is focusable. By default, the list's rows are tab-able. If tabbing among the list items, the <kbd>`</kbd> (above <kbd>Tab</kbd>) will get you back out, and <kbd>shift</kbd>+<kbd>`</kbd> will skip to the next focusable element **after** the list. 
+The containing div of the list is focusable. By default, the list's rows are tab-able. If tabbing among the list items, the <kbd> `` ` `` </kbd> (above <kbd>Tab</kbd>) will get you back out, and <kbd>shift</kbd>+<kbd> `` ` `` </kbd> will skip to the next focusable element **after** the list. 
 
 ### horizontal scroll
 At the time of this writing, the list will scroll its content horizontally if there isn't enough horizontal room to display all of the columns. This is likely to change in the near future.
