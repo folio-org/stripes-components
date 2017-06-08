@@ -1,5 +1,8 @@
 # Change history for stripes-components
 
+## IN PROGRESS
+* `<Pane>` will not automatically set a minimum width to its content's wrapping div, opting for fluid width as a default. 
+
 ## [0.11.2](https://github.com/folio-org/stripes-components/tree/v0.11.2) (2017-06-08)
 * Add `create-react-class` to dependencies, since this is needed by the modified version of react-hotkeys that was provided in v0.11.0.
 
