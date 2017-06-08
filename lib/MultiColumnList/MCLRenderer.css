@@ -1,0 +1,99 @@
+.heightSpacer{
+  position: relative;
+}
+
+.rowContainer{
+  position: absolute;
+  min-width: 100%;
+}
+
+.row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  
+  &.selected{
+    color: #fff;
+    background-color: color(#106c9e shade(8%));
+    & .cell{
+      color: #efefef;
+      background-color: #106c9e;
+    }
+  }
+  &:hover{
+    background-color: #dedede;
+    cursor: pointer;
+    &.selected{
+      color: #fff;
+      background-color: color(#106c9e shade(8%));
+      &.cell{
+        color: #fff;
+        background-color: color(#106c9e shade(8%));
+      }
+    }
+  }
+}
+
+.headerRow{
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  &.hScroll{
+    overflow: auto;
+  }
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  flex-shrink:0;
+  flex-grow:0;
+  padding: 6px;
+  font-size: .7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  &.sorted{
+    text-decoration: underline;
+  }
+}
+
+.cell{
+  display: flex;
+  align-items: center;
+  flex-shrink:0;
+  flex-grow:0;
+  padding: 6px;
+}
+
+.scrollable{
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.contentLoadingRow{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  padding: 0 20px;
+  bottom: 18px;
+  pointer-events: none;
+}
+
+.contentLoading{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 25px;
+  width: 45px;
+  padding: 4px 6px 0 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.emptyMessage{
+  width: 100%;
+  color: #444;
+}

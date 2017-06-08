@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
 ## IN PROGRESS
+* `<MultiColumnList>` supports infinite-scroll functionality via the `virtualize` prop. This comes with a few other updates to the API such as the `autosize` prop and `onNeedMoreData`. See [docs](lib/MultiColumnList/readme.md)
+* `<MultiColumnList>` has 'fixed' column headers that will remain visible when the body of the list is scrolled.
 * `<Pane>` will not automatically set a minimum width to its content's wrapping div, opting for fluid width as a default. 
 
 ## [0.11.2](https://github.com/folio-org/stripes-components/tree/v0.11.2) (2017-06-08)
