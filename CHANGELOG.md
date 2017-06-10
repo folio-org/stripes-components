@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 0.13.0 IN PROGRESS
+## [0.13.0](https://github.com/folio-org/stripes-components/tree/v0.13.0) (2017-06-09)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.12.0...v0.13.0)
+
 * Top <Settings> link is highlighted by default. Fixes the last part of STRIPES-357.
 * Add the `<IfInterface>` component, which renders its children only if the specified server-side interface is available at a compatible version.
 
