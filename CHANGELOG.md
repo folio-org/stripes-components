@@ -2,6 +2,7 @@
 
 ## 0.13.0 IN PROGRESS
 * Top <Settings> link is highlighted by default. Fixes the last part of STRIPES-357.
+* Add the `<IfInterface>` component, which renders its children only if the specified server-side interface is available at a compatible version.
 
 ## [0.12.0](https://github.com/folio-org/stripes-components/tree/v0.12.0) (2017-06-08)
 * `<MultiColumnList>` supports infinite-scroll functionality via the `virtualize` prop. This comes with a few other updates to the API such as the `autosize` prop and `onNeedMoreData`. See [docs](lib/MultiColumnList/readme.md)
