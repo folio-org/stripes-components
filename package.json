@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -44,6 +44,6 @@
     "react-overlays": "^0.6.12"
   },
   "peerDependencies": {
-    "stripes-core": "^1.7.0"
+    "stripes-core": "^1.10.0"
   }
 }

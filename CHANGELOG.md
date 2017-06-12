@@ -1,5 +1,6 @@
 # Change history for stripes-components
 
+
 ## In Progress
 * `<MultiColumnList>` index of rows exposed to `formatter` functions.
 * `<MultiColumnList>` bug fix for component not updating when supplied new value for `visibleColumns` prop.
@@ -11,25 +12,37 @@
 * Add the `<IfInterface>` component, which renders its children only if the specified server-side interface is available at a compatible version.
 
 ## [0.12.0](https://github.com/folio-org/stripes-components/tree/v0.12.0) (2017-06-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.11.2...v0.12.0)
+
 * `<MultiColumnList>` supports infinite-scroll functionality via the `virtualize` prop. This comes with a few other updates to the API such as the `autosize` prop and `onNeedMoreData`. See [docs](lib/MultiColumnList/readme.md)
 * `<MultiColumnList>` has 'fixed' column headers that will remain visible when the body of the list is scrolled.
 * `<Pane>` will not automatically set a minimum width to its content's wrapping div, opting for fluid width as a default. 
 
 ## [0.11.2](https://github.com/folio-org/stripes-components/tree/v0.11.2) (2017-06-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.11.1...v0.11.2)
+
 * Add `create-react-class` to dependencies, since this is needed by the modified version of react-hotkeys that was provided in v0.11.0.
 
 ## [0.11.1](https://github.com/folio-org/stripes-components/tree/0.11.1) (2017-06-07)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.11.0...v0.11.1)
+
 * Add `mousetrap` to dependencies, since this is needed by the modified version of react-hotkeys that was provided in v0.11.0.
 
 ## [0.11.0](https://github.com/folio-org/stripes-components/tree/v0.11.0) (2017-06-07)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.10.1...v0.11.0)
+
 * `<HotKeys>` component allow for applying shortcut key combinations to modules or sub-sections of modules.
 *  Layout Grid - using [react-flexbox-grid](https://roylee0704.github.io/react-flexbox-grid/) to replace the float-based grid from react-bootstrap. [docs](lib/LayoutGrid/readme.md)
 * `<Select`> component will now correctly display a placeholder value if there is one.
 
 ## [0.10.1](https://github.com/folio-org/stripes-components/tree/v0.10.1) (2017-06-05)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.10.0...v0.10.1)
+
 * `<Datepicker>` - fix multiple issues with date navigation and focus management. (STRIPES-398)
 
 ## [0.10.0](https://github.com/folio-org/stripes-components/tree/v0.10.0) (2017-06-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.9.0...v0.10.0)
+
 * `<Settings>` component now sorts settings pages by label. Implements STRIPES-358.
 * `<TextField>` hides clear "&#10005;" when `readOnly` prop is true.
 * `<Datepicker>` changed 'format' prop to 'DateFormat' for better cooperation with redux-form `<Field>` component.
@@ -51,11 +64,13 @@
 
 ## [0.7.0](https://github.com/folio-org/stripes-components/tree/v0.7.0) (2017-05-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.6.1...v0.7.0)
+
 * Add `makeQueryFunction` util to replace `makePathFunction` which will be removed in a subsequent release.
 * Add `<Settings>` component to render top-level settings pages for Stripes modules.
 
 ## [0.6.1](https://github.com/folio-org/stripes-components/tree/v0.6.1) (2017-04-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.6.0...v0.6.1)
+
 * Added `fluidContentWidth` prop to `<Pane>` component. This suppresses `<Pane>` wrapping its content in a div with static minimum width.
 * Added `defaultWidth` prop to `<Paneset>` in case paneset needs a specified width. Defaults to `'fill'`
 
