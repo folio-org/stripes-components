@@ -2,6 +2,7 @@
 
 
 ## In Progress
+* `<Datepicker>` uses `locale` prop to set default presentational date format.
 * `<MultiColumnList>` index of rows exposed to `formatter` functions.
 * `<MultiColumnList>` bug fix for component not updating when supplied new value for `visibleColumns` prop.
 
