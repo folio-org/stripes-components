@@ -5,6 +5,7 @@
 * `<Datepicker>` uses `locale` prop to set default presentational date format.
 * `<MultiColumnList>` index of rows exposed to `formatter` functions.
 * `<MultiColumnList>` bug fix for component not updating when supplied new value for `visibleColumns` prop.
+* makeQueryFunction supports reverse sorting ('-' prefixing sort-field). Part of UIU-81.
 
 ## [0.13.0](https://github.com/folio-org/stripes-components/tree/v0.13.0) (2017-06-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.12.0...v0.13.0)
