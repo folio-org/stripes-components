@@ -1,7 +1,8 @@
 # Change history for stripes-components
 
+## [0.14.0](https://github.com/folio-org/stripes-components/tree/v0.14.0) (2017-06-13)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.13.0...v0.14.0)
 
-## In Progress
 * `<Datepicker>` uses `locale` prop to set default presentational date format.
 * `<MultiColumnList>` index of rows exposed to `formatter` functions.
 * `<MultiColumnList>` bug fix for component not updating when supplied new value for `visibleColumns` prop.
