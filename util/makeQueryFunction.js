@@ -1,8 +1,8 @@
-import { filters2cql } from '@folio/stripes-components/lib/FilterGroups';
+import { filters2cql } from '../lib/FilterGroups';
 
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig) {
   return (queryParams, _pathComponents, _resourceValues, logger) => {
-    const { query, filters, sort } = queryParams || {};
+    const { query, filters } = queryParams || {};
 
     let cql = !query ? undefined : queryTemplate.replace(/\$QUERY/g, query);
     const filterCql = filters2cql(filterConfig, filters);
@@ -14,8 +14,17 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig) {
       }
     }
 
+    let { sort } = queryParams || {};
     if (sort) {
-      const sortIndex = sortMap[sort] || sort;
+      let reverse = false;
+      if (sort.startsWith('-')) {
+        sort = sort.substr(1);
+        reverse = true;
+      }
+      let sortIndex = sortMap[sort] || sort;
+      if (reverse) {
+        sortIndex = sortIndex.replace(' ', '/sort.descending ') + '/sort.descending';
+      }
       if (cql === undefined) cql = findAll;
       cql += ` sortby ${sortIndex}`;
     }
