@@ -16,17 +16,21 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig) {
 
     let { sort } = queryParams || {};
     if (sort) {
-      let reverse = false;
-      if (sort.startsWith('-')) {
-        sort = sort.substr(1);
-        reverse = true;
-      }
-      let sortIndex = sortMap[sort] || sort;
-      if (reverse) {
-        sortIndex = sortIndex.replace(' ', '/sort.descending ') + '/sort.descending';
-      }
+      const sortIndexes = sort.split(',').map((sort1) => {
+        let reverse = false;
+        if (sort1.startsWith('-')) {
+          sort1 = sort1.substr(1);
+          reverse = true;
+        }
+        let sortIndex = sortMap[sort1] || sort1;
+        if (reverse) {
+          sortIndex = sortIndex.replace(' ', '/sort.descending ') + '/sort.descending';
+        }
+        return sortIndex;
+      });
+
       if (cql === undefined) cql = findAll;
-      cql += ` sortby ${sortIndex}`;
+      cql += ` sortby ${sortIndexes.join(' ')}`;
     }
 
     logger.log('mquery', `query='${query}' filters='${filters}' sort='${sort}' -> ${cql}`);
