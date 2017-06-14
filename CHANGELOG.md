@@ -2,6 +2,7 @@
 
 ## 0.15.0 IN PROGRESS
 * In `makeQueryFunction`, the `sort` parameter is now a comma-separated list of criteria. Towards UIU-83.
+* `<Datepicker>` pulls locale from stripes object.
 
 ## [0.14.0](https://github.com/folio-org/stripes-components/tree/v0.14.0) (2017-06-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.13.0...v0.14.0)
