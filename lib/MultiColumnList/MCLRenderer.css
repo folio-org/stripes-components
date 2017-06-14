@@ -57,6 +57,12 @@
   &.sorted{
     text-decoration: underline;
   }
+  &.ascending::after {
+    content: "↑";
+  }
+  &.descending::after {
+    content: "↓";
+  }
 }
 
 .cell{
