@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 0.15.0 IN PROGRESS
+## [0.15.0](https://github.com/folio-org/stripes-components/tree/v0.15.0) (2017-06-14)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.14.0...v0.15.0)
+
 * In `makeQueryFunction`, the `sort` parameter is now a comma-separated list of criteria. Towards UIU-83.
 * `<Datepicker>` pulls locale from stripes object.
 
