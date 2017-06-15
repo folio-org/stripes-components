@@ -1,5 +1,8 @@
 # Change history for stripes-components
 
+## 0.16.0 In Progress
+* `<Settings>` pulls `paneTitle` from `props` instead of hard-coding it.
+
 ## [0.15.0](https://github.com/folio-org/stripes-components/tree/v0.15.0) (2017-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.14.0...v0.15.0)
 
@@ -28,7 +31,7 @@
 
 * `<MultiColumnList>` supports infinite-scroll functionality via the `virtualize` prop. This comes with a few other updates to the API such as the `autosize` prop and `onNeedMoreData`. See [docs](lib/MultiColumnList/readme.md)
 * `<MultiColumnList>` has 'fixed' column headers that will remain visible when the body of the list is scrolled.
-* `<Pane>` will not automatically set a minimum width to its content's wrapping div, opting for fluid width as a default. 
+* `<Pane>` will not automatically set a minimum width to its content's wrapping div, opting for fluid width as a default.
 
 ## [0.11.2](https://github.com/folio-org/stripes-components/tree/v0.11.2) (2017-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.11.1...v0.11.2)
@@ -146,4 +149,3 @@
 * First version to have a documented change-log. Each subsequent version will
   describe its salient differences from the previous one.
 * Includes the FilterGroups library.
-
