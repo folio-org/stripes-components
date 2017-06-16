@@ -44,7 +44,17 @@
   &.fullWidth{
     width: 100%;
   }
-  
+  &.marginBottom0{
+    margin-bottom: 0;
+  }
+
+
+  &.placeholder{
+    color: #888;
+    & option{
+      color: #444;
+    }
+  }
   &.error{
     border-color: #900;
   }

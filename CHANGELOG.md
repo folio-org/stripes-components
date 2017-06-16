@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
 ## 0.16.0 In Progress
+* `<Select>` uses `classnames` library to apply its styling.
+* renove 'selected' attribute from `<Select>`'s placeholder option. (STRIPES-422)
 * `<Settings>` pulls `paneTitle` from `props` instead of hard-coding it.
 
 ## [0.15.0](https://github.com/folio-org/stripes-components/tree/v0.15.0) (2017-06-14)
