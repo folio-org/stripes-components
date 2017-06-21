@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 0.16.0 In Progress
+* `<SRStatus>` component added as accessibility component. [docs](lib/SRStatus/readme.md)
 * `<Datepicker>` bugfix for manually entering date. (LIBAPP-219)
 * `<Select>` uses `classnames` library to apply its styling.
 * Remove 'selected' attribute from `<Select>`'s placeholder option. (STRIPES-422)
