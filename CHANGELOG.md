@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 0.16.0 In Progress
+* `<Datepicker>` bugfix for manually entering date. (LIBAPP-219)
 * `<Select>` uses `classnames` library to apply its styling.
 * Remove 'selected' attribute from `<Select>`'s placeholder option. (STRIPES-422)
 * `<Settings>` pulls `paneTitle` from `props` instead of hard-coding it.
