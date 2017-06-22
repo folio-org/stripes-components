@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 0.16.0 In Progress
+## [0.16.0](https://github.com/folio-org/stripes-components/tree/v0.16.0) (2017-06-21)
 * `<SRStatus>` component added for accessibility support. [docs](lib/SRStatus/readme.md)
 * `<Datepicker>` bugfix for manually entering date. (LIBAPP-219)
 * `<Select>` uses `classnames` library to apply its styling.
