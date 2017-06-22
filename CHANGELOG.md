@@ -1,5 +1,8 @@
 # Change history for stripes-components
 
+## 0.17.0 In Progress
+* Added `<EmbeddedAddressForm>` and `<AddressEditList>` component to `<AddressFieldGroup>` to support nesting within forms.
+
 ## [0.16.0](https://github.com/folio-org/stripes-components/tree/v0.16.0) (2017-06-21)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.15.0...v0.16.0)
 * `<SRStatus>` component added for accessibility support. [docs](lib/SRStatus/readme.md)
