@@ -1,5 +1,8 @@
 # Change history for stripes-components
 
+## 1.1.0 In-Progress
+* Added timestamp to the state of `HotKeys` so that it will refresh its broadcasted context.
+
 ## 1.0.0
 * Added `<EmbeddedAddressForm>` and `<AddressEditList>` component to `<AddressFieldGroup>` to support nesting within forms.
 
