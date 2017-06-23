@@ -14,8 +14,10 @@
     "react/jsx-filename-extension":"off",
     "import/extensions": [ 1, "never" ],
     "no-console": "off",
+    "max-len": "off",
     "react/forbid-prop-types": [ 1, { 'forbid' : [ 'any', 'array' ] } ],
     "no-unused-vars": [ 1, { argsIgnorePattern: "^_" } ],
-    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"]
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "no-param-reassign": [2, { "props": false }]
   }
 }
