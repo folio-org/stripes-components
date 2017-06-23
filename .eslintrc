@@ -18,6 +18,7 @@
     "react/forbid-prop-types": [ 1, { 'forbid' : [ 'any', 'array' ] } ],
     "no-unused-vars": [ 1, { argsIgnorePattern: "^_" } ],
     "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
-    "no-param-reassign": [2, { "props": false }]
+    "no-param-reassign": [2, { "props": false }],
+    "no-underscore-dangle": "off"
   }
 }
