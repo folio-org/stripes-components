@@ -3,11 +3,14 @@
 ## 1.1.0 In-Progress
 * Added timestamp to the state of `HotKeys` so that it will refresh its broadcasted context.
 
-## 1.0.0
+## [1.0.0](https://github.com/folio-org/stripes-components/tree/v1.0.0) (2017-06-22)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.16.0...v1.0.0)
+
 * Added `<EmbeddedAddressForm>` and `<AddressEditList>` component to `<AddressFieldGroup>` to support nesting within forms.
 
 ## [0.16.0](https://github.com/folio-org/stripes-components/tree/v0.16.0) (2017-06-21)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.15.0...v0.16.0)
+
 * `<SRStatus>` component added for accessibility support. [docs](lib/SRStatus/readme.md)
 * `<Datepicker>` bugfix for manually entering date. (LIBAPP-219)
 * `<Select>` uses `classnames` library to apply its styling.
