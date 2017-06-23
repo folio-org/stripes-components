@@ -1,0 +1,56 @@
+.root{
+  margin-bottom: 1rem;
+}
+
+.legend {
+  display: block;
+  width: 100%;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333;
+  border: 0;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+}
+
+.subLegend{
+  composes: legend;
+  font-size: 18px;
+  line-height: 21px;
+  color: #777;
+}
+
+.addressSlab{
+  padding: 4px;
+  &:nth-of-type(odd){
+    background-color: #f5f5f5;
+  }
+}
+
+.indent{
+  padding: 0 6px;
+}
+
+.removeAddress{
+  padding: 0;
+  text-align: center;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #555;
+  border-radius: 6px;
+  transition: all .25s ease;
+  background-color: transparent;
+  border: 1px solid transparent;
+  width: auto;
+  height: auto;
+  margin: 0;
+  & :global .stripes__icon{
+    fill: #aaa;
+    transition: fill .25s ease;
+  }
+  &:hover{
+    & :global .stripes__icon{
+      fill: color(#900 blend(#aaa 50%));
+    }
+  }
+}
