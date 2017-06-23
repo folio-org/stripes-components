@@ -37,7 +37,17 @@
   padding: 7px 2px;
   margin: 0 4px;
   font-size: .8rem;
-  font-weight: 600;
+  font-weight: bold;
+  color: var(--labelColor);
+  &.error{
+    color: #900;
+  }
+}
+
+.formLabel{
+  composes: checkboxLabel;
+  font-weight: bold;
+  text-transform: Uppercase;
   color: var(--labelColor);
   &.error{
     color: #900;

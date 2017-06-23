@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
 ## 1.1.0 In-Progress
+* labelStyle option `formLabel` added to <Checkbox>
+* styling prop `marginBottom0` supported on <Select>
 * Remove focus border outline from `<MultiColumnList>`
 * Fix issue with `<Datepicker>` not rendering updated date values. (STRPCOMP-6)
 * Added timestamp to the state of `HotKeys` so that it will refresh its broadcasted context.
