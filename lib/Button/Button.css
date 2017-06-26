@@ -71,9 +71,15 @@
       &.hollow{
         background-color: transparent;
         color: var(--error);
+        & :global .stripes__icon{
+          fill: var(--error);
+        }
         &:hover{
           background-color: color(var(--error) shade(8%));
           color: #fff;
+          & :global .stripes__icon{
+            fill: #fff;
+          }
         }
       }
     }

@@ -1,6 +1,10 @@
 # Change history for stripes-components
 
 ## 1.1.0 In-Progress
+* `<Icon>` [documentation](lib/Icon/readme.md) 
+* `<Icon>` can be centered using the `center` prop.
+* `<Icon>` includes a trashbin icon. 
+* `<Icon>` updated to use `classnames` library. 
 * Style initialization of `<Pane>` moved to the constructor. (STRPCOMP-2)
 * `<Datepicker>` uses momentjs strict mode to avoid deprecation warnings.
 * `labelStyle` option `formLabel` added to <Checkbox>

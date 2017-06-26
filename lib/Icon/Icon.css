@@ -8,6 +8,13 @@
 
 button .root{
   float: left;
+  &.center{
+    float: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 [dir='rtl']{
