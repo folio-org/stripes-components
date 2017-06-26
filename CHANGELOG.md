@@ -8,7 +8,7 @@
 * Style initialization of `<Pane>` moved to the constructor. (STRPCOMP-2)
 * `<Datepicker>` uses momentjs strict mode to avoid deprecation warnings.
 * `labelStyle` option `formLabel` added to <Checkbox>
-* Styling prop `marginBottom0` supported on <Select>
+* Styling prop `marginBottom0` supported on `<Select>`
 * Remove focus border outline from `<MultiColumnList>`
 * Fix issue with `<Datepicker>` not rendering updated date values. (STRPCOMP-6)
 * Added timestamp to the state of `HotKeys` so that it will refresh its broadcasted context.
