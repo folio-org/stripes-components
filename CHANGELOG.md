@@ -9,6 +9,7 @@
 * Fix issue with `<Datepicker>` not rendering updated date values. (STRPCOMP-6)
 * Added timestamp to the state of `HotKeys` so that it will refresh its broadcasted context.
 * Fixed couple minor issues in `<AddressFieldGroup>`. (STRPCOMP-4)
+* react-hotkeys fix: when hot-key bindings are modified the new bindings take effect immediately. Fixes STRPCOMP-5.
 
 ## [1.0.0](https://github.com/folio-org/stripes-components/tree/v1.0.0) (2017-06-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.16.0...v1.0.0)
