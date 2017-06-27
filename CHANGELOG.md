@@ -1,10 +1,10 @@
 # Change history for stripes-components
 
 ## [1.1.0](https://github.com/folio-org/stripes-components/tree/v1.1.0) (2017-06-26)
-* `<Icon>` [documentation](lib/Icon/readme.md) 
+* `<Icon>` [documentation](lib/Icon/readme.md)
 * `<Icon>` can be centered using the `center` prop.
-* `<Icon>` includes a trashbin icon. 
-* `<Icon>` updated to use `classnames` library. 
+* `<Icon>` includes a trashbin icon.
+* `<Icon>` updated to use `classnames` library.
 * Style initialization of `<Pane>` moved to the constructor. (STRPCOMP-2)
 * `<Datepicker>` uses momentjs strict mode to avoid deprecation warnings.
 * `labelStyle` option `formLabel` added to <Checkbox>
