@@ -9,7 +9,7 @@
 * `<Icon>` updated to use `classnames` library.
 * Style initialization of `<Pane>` moved to the constructor. (STRPCOMP-2)
 * `<Datepicker>` uses momentjs strict mode to avoid deprecation warnings.
-* `labelStyle` option `formLabel` added to <Checkbox>
+* `labelStyle` option `formLabel` added to `<Checkbox>`
 * Styling prop `marginBottom0` supported on `<Select>`
 * Remove focus border outline from `<MultiColumnList>`
 * Fix issue with `<Datepicker>` not rendering updated date values. (STRPCOMP-6)
@@ -51,7 +51,7 @@
 ## [0.13.0](https://github.com/folio-org/stripes-components/tree/v0.13.0) (2017-06-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.12.0...v0.13.0)
 
-* Top <Settings> link is highlighted by default. Fixes the last part of STRIPES-357.
+* Top `<Settings>` link is highlighted by default. Fixes the last part of STRIPES-357.
 * Add the `<IfInterface>` component, which renders its children only if the specified server-side interface is available at a compatible version.
 
 ## [0.12.0](https://github.com/folio-org/stripes-components/tree/v0.12.0) (2017-06-08)
