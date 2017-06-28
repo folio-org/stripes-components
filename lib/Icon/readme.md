@@ -14,6 +14,7 @@ center | bool | If true, horizontally centers the icon within its container | |
 
 ### Icon List
 A list of possible values for the `icon` prop.
+
 | setting | SVG | CSS
 | --- | --- | ---
 | "bookmark" | &#10003; |
