@@ -98,7 +98,7 @@
     }
     &.fieldControl{
       background-color: transparent;
-      margin-bottom: 0;
+      margin: 0;
       height: var(--controlHeight);
       padding:0;
     }
@@ -113,7 +113,7 @@
             cursor: initial;
         }
     }
-    &:not(.fullWidth)+ .button{
+    &:not(.fullWidth, .fieldControl)+ .button{
         margin: 0 4px;
     }
     
