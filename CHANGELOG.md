@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
 ## [1.1.0](https://github.com/folio-org/stripes-components/tree/v1.1.0) (2017-06-26)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.0.0...v1.1.0)
+
 * `<Icon>` [documentation](lib/Icon/readme.md)
 * `<Icon>` can be centered using the `center` prop.
 * `<Icon>` includes a trashbin icon.
