@@ -13,6 +13,7 @@ A library of React components and utility functions for Stripes.
 * [`<MultiColumnList>`](lib/MultiColumnList/readme.md)
 * [`<FilterGroups>`](lib/FilterGroups/readme.md)
 * [`<HotKeys>`](lib/HotKeys/readme.md)
+* [`<Icon>`](lib/Icon/readme.md)
 * [`<IfInterface>`](lib/IfInterface/readme.md)
 * [`<IfPermission>`](lib/IfPermission/readme.md)
 * [`<Datepicker>`](lib/Datepicker/readme.md)
@@ -23,6 +24,7 @@ A library of React components and utility functions for Stripes.
 * [`<Modal>`](lib/Modal/readme.md)
 * [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup/readme.md)
 * [`<Settings>`](lib/Settings/readme.md)
+* [`<SRStatus>`](lib/SRStatus/readme.md)
 * [Utility functions](util/README.md)
 * ... many others to follow.
 
