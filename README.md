@@ -28,6 +28,10 @@ A library of React components and utility functions for Stripes.
 * [Utility functions](util/README.md)
 * ... many others to follow.
 
+## Additional Documentation
+* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
+* [CSS for stripes-components development](docs/CSSinStripes.md)
+
 See also:
 * [Change-log](CHANGELOG.md)
 * [The example-directory README](example/readme.md) (outdated)

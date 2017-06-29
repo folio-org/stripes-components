@@ -1,7 +1,7 @@
 # Change history for stripes-components
 
 ## 1.2.0 IN PROGRESS
-
+* Added documentation for [handling CSS](docs/CSSinStripes.md) and [module layout components](docs/UIModuleLayout.md). [FOLIO-682](https://issues.folio.org/browse/FOLIO-682)
 * <EditableList> accepts optional "nameKey" argument. Enables UIU-48.
 * Cured shifting of field buttons on form field validation.
 * Keep primary address field name consistent. STRPCOMP-4.
