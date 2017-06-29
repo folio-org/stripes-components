@@ -1,7 +1,10 @@
 # Change history for stripes-components
 
-## 1.2.0 In Progress
+## 1.2.0 IN PROGRESS
+
+* <EditableList> accepts optional "nameKey" argument. Enables UIU-48.
 * Cured shifting of field buttons on form field validation.
+* Keep primary address field name consistent. STRPCOMP-4.
 
 ## [1.1.0](https://github.com/folio-org/stripes-components/tree/v1.1.0) (2017-06-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.0.0...v1.1.0)
