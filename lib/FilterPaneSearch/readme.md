@@ -20,7 +20,8 @@ const searchHeader = (
 ## Properties
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-id | string | String to be supplied to the text input's "id" attribute. | |
+searchFieldId | string | String to be supplied to the text input's "id" attribute. | |
+clearSearchId | string | String to be supplied to the clear button's "id" attribute. | |
 onChange | func | Event handler for when the text of the input changes. | |
 onClear | bool | Event handler for when the 'clear' button of the searchfield is clicked.| |
 value | string | value for the text input. | |
