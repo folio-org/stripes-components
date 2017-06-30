@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 1.2.0 IN PROGRESS
+* Bold chevron icons added to `<Icon>` component
 * Add `<FocusLink>` component. Part of STRPCOMP-7. [docs](lib/FocusLink/readme.md)
 * `<MultiColumnList>` now passes columns, columnWidths, and cell aria-labels to rowFormatter so that they can be used in custom row templates. Fixes STRPCOMP-11
 * `<MultiColumnList>` `columnWidths` prop is now functional. Fixes STRPCOMP-12. [docs](lib/MultiColumnList/readme.md)

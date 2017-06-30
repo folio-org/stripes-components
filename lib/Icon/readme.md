@@ -31,6 +31,8 @@ A list of possible values for the `icon` prop.
 | "left-arrow" | &#10003; |
 | "left-double-chevron" | &#10003; |
 | "right-double-chevron" | &#10003; |
+| "left-double-chevron-bold" | &#10003; |
+| "right-double-chevron-bold" | &#10003; |
 | "calendar" | &#10003; |
 | "closeX" | &#10003; |
 | "spinner-ellipsis" | | &#10003;
