@@ -1,0 +1,15 @@
+.showOnFocus{
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    max-height: 1px;
+    max-width: 1px;
+    overflow: hidden;
+    transition: max-height .2s, max-width .2s;
+    &:focus{
+      position: static;
+      max-height: none;
+      max-width: none;
+      clip: auto;
+      overflow: visible;
+    }
+}
