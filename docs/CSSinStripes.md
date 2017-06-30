@@ -1,10 +1,10 @@
 # CSS and Styling within Stripes-Components
-The goal of built-in styles applied via component props is to take the concern of aesthetics and css syntax away from module developers - empowering them to develop beautiful modules will very little effort outside of their logical code.
+The goal of built-in styles applied via component props is to take the concern of aesthetics and css syntax away from module developers - empowering them to develop beautiful modules with very little effort outside of their logical code.
 Stripes components have built-in styles using [CSS-modules](https://github.com/css-modules/css-modules/blob/master/README.md). This provides scoping of CSS classes for stripes components and leaves the namespace open for the styles of new components.
 We also make use of [PostCSS](https://github.com/postcss/postcss) and a few of its plug-ins to allow use of modern and upcoming css syntax.
 
 ## Conventions
-* Rely primarily on class seletors. Avoid using ID and tagname selectors to assign styles.
+* Rely primarily on class selectors. Avoid using ID and tagname selectors to assign styles.
 * Minimize use of `!important`. Use it only when there are no other overrides available.
 * For class-naming, camelCase is recommended.
 * Meaningful classnames that relate either to the rules provided or the role of elements being styled should be employed.
@@ -48,7 +48,7 @@ We use PostCSS to allow CSS to be written using an easy syntax that meets the up
 }
 ```
 #### Color Manipulation
-You can see a list of available color functions [here](https://github.com/postcss/postcss-color-function/blob/master/README.md#list-of-color-adjuster)
+You can see a list of available [color functions](https://github.com/postcss/postcss-color-function/blob/master/README.md#list-of-color-adjuster), e.g.
 ```
 .darkerBG{
     background-color: color(#fff shade(8%))
@@ -66,7 +66,8 @@ You can see a list of available color functions [here](https://github.com/postcs
     background-color: var(--primary, #106c9e;);
 }
 ```
-For consistency, a shared set of established CSS variables/values exists [here](../lib/variables.css). It is subject to change.
+For consistency, there is a [shared set](../lib/variables.css) of established CSS variables/values.
+It is subject to change.
 
 ### Bootstrap deprecation
 Currently there are a low number of components that still make use of Bootstrap classes. We are currently working to remove Bootstrap.css and React-Bootstrap from our dependencies. That said, Bootstrap class names *should not* be used if your component needs custom styling.

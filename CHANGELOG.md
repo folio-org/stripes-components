@@ -3,10 +3,11 @@
 ## 1.2.0 IN PROGRESS
 * <MultiColumnList> now passes columns, columnWidths, and cell aria-labels to rowFormatter so that they can be used in custom row templates.
 * <MultiColumnList> columnWidths prop is now functional. [docs](lib/MultiColumnList/readme.md)
-* Added documentation for [handling CSS](docs/CSSinStripes.md) and [module layout components](docs/UIModuleLayout.md). [FOLIO-682](https://issues.folio.org/browse/FOLIO-682)
-* <EditableList> accepts optional "nameKey" argument. Enables UIU-48.
+* Added documentation for [handling CSS](docs/CSSinStripes.md) and [module layout components](docs/UIModuleLayout.md). Fixes STRPCOMP-10.
 * Cured shifting of field buttons on form field validation.
 * Keep primary address field name consistent. STRPCOMP-4.
+* `<EditableList>` accepts optional `nameKey` argument. Needed for STRPCOMP-8.
+* New component, `<AuthorityList>`, provides the underlying functionality for authority-list settings pages. Fixes STRPCOMP-8.
 
 ## [1.1.0](https://github.com/folio-org/stripes-components/tree/v1.1.0) (2017-06-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.0.0...v1.1.0)
