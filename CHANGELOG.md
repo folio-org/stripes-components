@@ -1,8 +1,8 @@
 # Change history for stripes-components
 
 ## 1.2.0 IN PROGRESS
-* <MultiColumnList> now passes columns, columnWidths, and cell aria-labels to rowFormatter so that they can be used in custom row templates.
-* <MultiColumnList> columnWidths prop is now functional. [docs](lib/MultiColumnList/readme.md)
+* `<MultiColumnList>` now passes columns, columnWidths, and cell aria-labels to rowFormatter so that they can be used in custom row templates. Fixes STRPCOMP-11
+* `<MultiColumnList>` `columnWidths` prop is now functional. Fixes STRPCOMP-12. [docs](lib/MultiColumnList/readme.md)
 * Added documentation for [handling CSS](docs/CSSinStripes.md) and [module layout components](docs/UIModuleLayout.md). Fixes STRPCOMP-10.
 * Cured shifting of field buttons on form field validation.
 * Keep primary address field name consistent. STRPCOMP-4.
