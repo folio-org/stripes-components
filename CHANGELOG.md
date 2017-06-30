@@ -1,7 +1,9 @@
 # Change history for stripes-components
 
-## 1.2.0 IN PROGRESS
-* Bold chevron icons added to `<Icon>` component
+## [1.2.0](https://github.com/folio-org/stripes-components/tree/v1.2.0) (2017-06-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.1.0...v1.2.0)
+
+* Bold chevron icons added to `<Icon>` component.
 * Integrate `<FocusLink>` into `<FilterPaneSearch>` component. Part of STRPCOMP-7.
 * Add `<FocusLink>` component. Part of STRPCOMP-7. [docs](lib/FocusLink/readme.md)
 * `<MultiColumnList>` now passes columns, columnWidths, and cell aria-labels to rowFormatter so that they can be used in custom row templates. Fixes STRPCOMP-11
