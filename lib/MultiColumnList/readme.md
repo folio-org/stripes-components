@@ -45,7 +45,7 @@ The following properties are supported:
 * `onRowClick` (function): callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display).
 * `onHeaderClick` (func[event, headerMetadata]): callback function invoked when one of the cells in the header is clicked (typically to choose a sort-order). By default, headerMetadata includes the column's data name as well as its alias, in case a object is supplied to the columnMapping prop.
 * `columnMapping` (object) Maps rendered column labels to the data fields for the onHeaderClick prop. 
-* `columnWidths` (object) Set custom column widths - E.g. {email: '40%'}.
+* `columnWidths` (object) Set custom column widths - E.g. {email: '40%'}. Component will automatically measure any columns that are unspecified.
 * `selectedClass` (string): override class for the default style applied to selected rows.
 * `sortedClass` (string): override class for the default style applied to headers of sorted columns.
 * `isEmptyMessage` (string): Message to display when the supplied contentData array is empty.
