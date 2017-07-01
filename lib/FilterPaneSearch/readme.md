@@ -1,5 +1,5 @@
 # FilterPaneSearch
-A pre-built component that can be used to replace that can be supplied to `<Pane>`'s `header` prop. It will replace the default header with a search text input - complete with icons, clear and an included [`<FocusLink>`](,,/FocusLink/readme.md) for keyboard navigation to skip to the results list.
+A pre-built component that can be used to replace that can be supplied to `<Pane>`'s `header` prop. It will replace the default header with a search text input - complete with icons, clear and an included [`<FocusLink>`](../FocusLink/readme.md) for keyboard navigation to skip to the results list.
 
 ## Usage
 ```
