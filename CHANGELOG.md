@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 1.2.1 IN PROGRESS
+
+* Keep `primaryAddress` field name consistent across `<AddressFieldGroup>` components.
+
 ## [1.2.0](https://github.com/folio-org/stripes-components/tree/v1.2.0) (2017-06-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.1.0...v1.2.0)
 
