@@ -4,6 +4,7 @@
 
 * Keep `primaryAddress` field name consistent across `<AddressFieldGroup>` components.
 * `<Pluggable>` recognises the special value `@@` for "no plugin". Fixes STRPCOMP-15.
+* In `<AuthorityList>`, use `label` as pane-title, not `<h3>`. Part of STRPCOMP-1.
 
 ## [1.2.0](https://github.com/folio-org/stripes-components/tree/v1.2.0) (2017-06-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.1.0...v1.2.0)
