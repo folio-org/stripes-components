@@ -1,6 +1,6 @@
 # IfInterface
 
-Yields the child elements, only if the interface named in the `name` prop is present for the current session. If the `version` prop is also provided, then the interface is required to be available in a version that is compatible with the specified version: the same major version, and the same or higher minor version.
+Yields the child elements only if the interface named in the `name` prop is present for the current session. If the `version` prop is also provided, then the interface is required to be available in a version that is compatible with the specified version: the same major version, and the same or higher minor version.
 
 ## Usage
 
