@@ -3,6 +3,7 @@
 .pane{
     border-right: 1px solid #ccc;
     height: 100%;
+    max-height: calc(100vh - 44px);
     display: flex;
     flex-direction: column;
     /*transition: all .25s ease-in-out; */
