@@ -34,7 +34,6 @@ A library of React components and utility functions for Stripes.
 
 See also:
 * [Change-log](CHANGELOG.md)
-* [The example-directory README](example/readme.md) (outdated)
 
 ## Additional information
 

@@ -1,7 +1,8 @@
 # Change history for stripes-components
 
 ## 1.3.0 IN PROGRESS
-
+* Remove alert from `<FocusLink>`.
+* Removed 'Example' directory.
 * Keep `primaryAddress` field name consistent across `<AddressFieldGroup>` components.
 * `<Pluggable>` recognises the special value `@@` for "no plugin". Fixes STRPCOMP-15.
 * In `<AuthorityList>`, use `label` as pane-title, not `<h3>`. Part of STRPCOMP-1.
