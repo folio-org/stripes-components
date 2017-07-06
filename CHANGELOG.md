@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 1.3.0 IN PROGRESS
+## [1.3.0](https://github.com/folio-org/stripes-components/tree/v1.3.0) (2017-07-06)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.2.0...v1.3.0)
+
 * `<MultiColumnList>` supports block anchors in custom rowFormatter.
 * `react-overlays` dependency version updated to 0.7.0.
 * Add "height" prop and a max-height property(CSS) to `<Pane>`. Fixes STRPCOMP-16.
