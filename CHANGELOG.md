@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
 ## 1.3.0 IN PROGRESS
+* `react-overlays` dependency version updated to 0.7.0.
+* Add "height" prop and a max-height property(CSS) to `<Pane>`. Fixes STRPCOMP-16.
 * Remove alert from `<FocusLink>`.
 * Removed 'Example' directory.
 * Keep `primaryAddress` field name consistent across `<AddressFieldGroup>` components.
