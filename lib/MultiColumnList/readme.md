@@ -86,11 +86,11 @@ catalogResults = [
       ];
 ```
 
-A formatter object can be used to render the author.firstName and author.lastName properties concatenated inside the corresponding table cell. Each property of the formatter object contains a function that returns a jsx element to be rendered:
+A formatter object can be used to render the author.firstName and author.lastName properties concatenated inside the corresponding table cell. Each property of the formatter object contains a function that returns a string or JSX element to be rendered:
 
 ```js
 const resultsFormatter = {
-      author: item => <td key={item.id}>{item.author.firstName} {item.author.lastName}</td>,
+      author: item => `${item.author.firstName} ${item.author.lastName}`,
     };
     
 <MultiColumnList
@@ -100,3 +100,42 @@ const resultsFormatter = {
 />   
 ```
 
+### Formatting Rows
+It's possible to modify the rendered mark-up of rows using the `rowFormatter` prop. If one of these is needed, the best place to start is a fork of [defaultRowFormatter](lib/MultiColumnList/defaultRowFormatter.js).
+Here's an example that wraps rows in anchor tags instead of the default div:  
+```js
+// utility function to fill anchor's href attribute...
+getRowURL(rowData){
+  return `url/with/${rowData.info}`;
+}
+
+// custom row formatter function
+anchoredRowFormatter(
+    { rowIndex,
+      rowClass,
+      rowData,
+      cells,
+      rowProps,
+      labelStrings,
+    }
+  ){
+    return (
+      <a 
+        href={this.getRowURL(rowData)} key={`row-${rowIndex}`}
+        aria-label={labelStrings.join('...')}
+        role="listitem"
+        className={rowClass} 
+        {...rowProps}
+      >
+        {cells}
+      </a>
+    );
+  }
+    
+// andthe JSX...
+
+<MultiColumnList
+  // ...other props
+  rowFormatter={this.anchoredRowFormatter}
+/>   
+```

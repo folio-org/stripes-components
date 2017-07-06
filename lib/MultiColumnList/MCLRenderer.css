@@ -5,6 +5,17 @@
 .rowContainer{
   position: absolute;
   min-width: 100%;
+  /* first descendants all display: block for height measurment */
+  &> *{
+    display: block;
+  }
+  /* keep block anchors from styling the entire row */
+  &> a{
+    color: #333;
+    &:hover, &:active, &:visited, &:focus{
+      text-decoration: none;
+    }
+  }
 }
 
 .row{
