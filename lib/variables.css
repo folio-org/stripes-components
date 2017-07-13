@@ -1,5 +1,6 @@
 :root{
-  --bg: #fff;
+  --bg: #fcfcfc;
+  --bgHover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
   --primary: #106c9e;
   --secondary: #999;
   --error: #900;
@@ -11,6 +12,7 @@
   --inputBorderColor: #acacac;
   
   --controlHeightSmall: 44px;
+  --controlHeightTouch: var(--controlHeightSmall);
 }
 
 

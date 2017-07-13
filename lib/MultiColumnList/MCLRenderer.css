@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .heightSpacer{
   position: relative;
 }
@@ -25,21 +27,22 @@
   
   &.selected{
     color: #fff;
-    background-color: color(#106c9e shade(8%));
+    background-color: color(var(--primary) shade(8%));
     & .cell{
       color: #efefef;
-      background-color: #106c9e;
+      background-color: var(--primary);
     }
   }
-  &:hover{
-    background-color: #dedede;
+  &:hover, &:focus{
+    outline: none;
+    background-color: var(--bgHover);
     cursor: pointer;
     &.selected{
       color: #fff;
-      background-color: color(#106c9e shade(8%));
+      background-color: color(var(--primary) shade(8%));
       &.cell{
         color: #fff;
-        background-color: color(#106c9e shade(8%));
+        background-color: color(var(--primary) shade(8%));
       }
     }
   }
@@ -117,8 +120,15 @@
   color: #444;
 }
 
+@keyframes example {
+    from {background-color: var(--bgHover)}
+    to {background-color: var(--bg)}
+}
+
 .mclContainer{
   &:focus{
     outline: none;
+    animation-name: example;
+    animation-duration: 2s;
   }
 }
