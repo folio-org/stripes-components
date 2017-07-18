@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 1.3.1 (IN PROGRESS)
+
+* Change adddress button label. Fixes UIU-138
+
 ## [1.3.0](https://github.com/folio-org/stripes-components/tree/v1.3.0) (2017-07-06)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.2.0...v1.3.0)
 
