@@ -1,5 +1,14 @@
 @import '../variables.css';
 
+a.button{
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
 .button{
     padding: 5px 8px;
     text-align: center;
@@ -19,6 +28,9 @@
     font-size:.9rem;
     &:first-child{
       margin-left: 0;
+    }
+    &:hover{
+      text-decoration: none;
     }
     &.primary{
       background-color: var(--primary);
@@ -83,6 +95,33 @@
         }
       }
     }
+    &.hover{
+      background-color: transparent;
+      border: 1px solid transparent;
+      &:hover{
+        background-color: var(--bgHover);
+      }
+    }
+    &.paneHeaderButton{
+      background-color: transparent;
+      border: 1px solid transparent;
+      margin: 0;
+      max-height: var(--controlHeightTouch);
+      height: var(--controlHeightTouch);
+      border-radius: 0;
+      padding: 8px;
+      &:hover{
+        background-color: var(--bgHover);
+      }
+      &.primary{
+        background-color: var(--primary);
+        border: 1px solid var(--primary);
+        color: #fff;
+        &:hover{
+            background-color: color(var(--primary) shade(8%));
+        }
+      }
+    }
     &.noRadius{
       border-radius: 0; 
     }
@@ -90,7 +129,7 @@
       background-color: transparent;
       border: 1px solid transparent;
     }
-    &.bottomMargin0{
+    &.bottomMargin0, &.marginBottom0{
       margin-bottom: 0;
     }
     &.fullWidth{

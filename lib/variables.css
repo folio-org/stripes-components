@@ -10,7 +10,7 @@
   --controlHeight: 28px;
   --radius: 6px;
   --inputBorderColor: #acacac;
-  --gutter: 8px;
+  --gutter: .8em;
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
 }
