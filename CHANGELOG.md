@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 1.3.1 (IN PROGRESS)
+## 1.4.0 (IN PROGRESS)
 
 * Change adddress button label. Fixes UIU-138
 * Remove hardwired keyMap from `<MultiColumnList>`: use the one inherited from stripes-core. Part of STRIPES-359.
