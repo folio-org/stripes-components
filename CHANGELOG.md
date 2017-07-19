@@ -1,8 +1,10 @@
 # Change history for stripes-components
 
 ## 1.4.0 (IN PROGRESS)
-
-* Change adddress button label. Fixes UIU-138
+* <Button> will render anchor if passed an href attribute. Completes STCOM-24
+* PaneMenu buttons take up height of Pane Header.
+* <MultiColumnList> focus of row follows row selection via bound keyboard navigation. Fixes STCOM-25 and 27.
+* Change address button label. Fixes UIU-138
 * Remove hardwired keyMap from `<MultiColumnList>`: use the one inherited from stripes-core. Part of STRIPES-359.
 * Lint: clean up whitespace complaints. Part of STCOM-21.
 * Lint: clean up semicolon complaints. Part of STCOM-21.
