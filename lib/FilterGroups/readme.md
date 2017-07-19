@@ -122,7 +122,7 @@ list of the full names of all selected filters. For example:
 
 ## The `initialFilterState` function
 
-This function takes as its parameters the figure configuration
+This function takes as its parameters the filter configuration
 structure and a comma-separated string of filters' full names, such as
 `'item.DVDs,item.Microfilm,location.Main Library'`. It returns an
 object whose keys are the full names and whose values are all the
