@@ -15,7 +15,7 @@
     "node": ">=6.0.0"
   },
   "stripes": {
-    "actionNames": ["selectFirstOrCurrentRow", "unfocusRow", "focusBeyond"]
+    "actionNames": ["selectPreviousRow", "selectNextRow", "selectFirstOrCurrentRow", "unfocusRow", "focusBeyond"]
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
