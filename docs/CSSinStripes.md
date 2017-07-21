@@ -10,7 +10,7 @@ We also make use of [PostCSS](https://github.com/postcss/postcss) and a few of i
 * Choose meaningful classnames that relate to the role of elements being styled, not to how they will appear -- i.e. prefer `errorMessage` over `boldRed`.
 * Primary aesthetic styles should use a separate .css file - limit usage of inline styles to keep styling concerns separate from component source.
 * Rely on layout components [`<LayoutGrid>`](../lib/LayoutGrid) and `<Layout>` for page/module layout needs rather than using custom styles to do so.
-* The `classnames` [library](https://github.com/JedWatson/classnames) can be used to dynamically assign css classes based on props. It is preferred over other methods.
+* [The `classnames` library](https://github.com/JedWatson/classnames) can be used to dynamically assign css classes based on props. It is preferred over other methods.
 * Stylesheets should contain styles for only a single component.
 * Primary component .css files should carry the same file name as their corresponding component's .js file.
 
