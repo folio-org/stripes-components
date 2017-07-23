@@ -1,9 +1,18 @@
 # Change history for stripes-components
 
-## 1.3.1 (IN PROGRESS)
-
-* Change adddress button label. Fixes UIU-138
+## 1.4.0 (IN PROGRESS)
+* `<Button>` will render anchor if passed an href attribute. Completes STCOM-24
+* PaneMenu buttons take up height of Pane Header.
+* `<MultiColumnList>` focus of row follows row selection via bound keyboard navigation. Fixes STCOM-25 and 27.
+* Change address button label. Fixes UIU-138
 * Remove hardwired keyMap from `<MultiColumnList>`: use the one inherited from stripes-core. Part of STRIPES-359.
+* Lint: clean up whitespace complaints. Part of STCOM-21.
+* Lint: clean up semicolon complaints. Part of STCOM-21.
+* Lint: clean up comma complaints. Part of STCOM-21.
+* Lint: clean up import complaints. Part of STCOM-21.
+* Lint: clean up arrow function complaints. Part of STCOM-21.
+* Import `PropTypes` from `prop-types` instead of `React`. Part of STRIPES-427.
+* Use configurable key-mappings to navigate search results. Fixes STCOM-28.
 
 ## [1.3.0](https://github.com/folio-org/stripes-components/tree/v1.3.0) (2017-07-06)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.2.0...v1.3.0)
@@ -122,7 +131,7 @@
 * `<Datepicker>` changed 'format' prop to 'DateFormat' for better cooperation with redux-form `<Field>` component.
 * `<Datepicker>` hides clear and calendar controls, disables functionality when `readOnly` prop is true.
 * Update stripes-core dependency to 1.7.0, so we get the Stripes object on the context.
-* `<IfPermission>`, `<Pluggable>` and `<Settings>` now all take the Stripes object from the React context rather then expecting it to be passed in as a prop. Fixes STRIPES-395.
+* `<IfPermission>`, `<Pluggable>` and `<Settings>` now all take the Stripes object from the React context rather than expecting it to be passed in as a prop. Fixes STRIPES-395.
 
 ## [0.9.0](https://github.com/folio-org/stripes-components/tree/v0.9.0) (2017-05-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v0.8.0...v0.9.0)
