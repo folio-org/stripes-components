@@ -1,3 +1,9 @@
+/*  Returns next focusable DOM element
+*   Params: 
+*     currentElement - (object) DOM element - starting element for search. Will return next focused element AFTER this element.
+*     containing - (bool) Default: true. Will return the next focusable item within the current element.
+*/
+
 import contains from 'dom-helpers/query/contains';
 export default function getNextFocusable(currentElement, containing = true) {
   //add all elements we want to include in our selection
