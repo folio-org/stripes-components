@@ -13,6 +13,7 @@
 * Lint: clean up arrow function complaints. Part of STCOM-21.
 * Import `PropTypes` from `prop-types` instead of `React`. Part of STRIPES-427.
 * Use configurable key-mappings to navigate search results. Fixes STCOM-28.
+* `<FilterPaneSearch>` accepts optional new `placeholder` prop to specify placeholder text. Fixes STCOM-32.
 
 ## [1.3.0](https://github.com/folio-org/stripes-components/tree/v1.3.0) (2017-07-06)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.2.0...v1.3.0)
