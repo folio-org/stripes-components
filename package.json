@@ -40,6 +40,7 @@
     "webpack": "1.11.0"
   },
   "dependencies": {
+    "@folio/stripes-form": "^0.8.0",
     "classnames": "^2.2.5",
     "create-react-class": "^15.5.3",
     "dom-helpers": "^3.2.1",
