@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 1.4.0 (IN PROGRESS)
+* Added dependency to `stripes-react-hotkeys` - broke HotKeys code out to its own npm repo. (@folio/stripes-react-hotkeys.)
 * `<Button>` will render anchor if passed an href attribute. Completes STCOM-24
 * PaneMenu buttons take up height of Pane Header.
 * `<MultiColumnList>` focus of row follows row selection via bound keyboard navigation. Fixes STCOM-25 and 27.
