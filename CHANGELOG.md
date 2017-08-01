@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 1.4.0 (IN PROGRESS)
+## [1.4.0](https://github.com/folio-org/stripes-components/tree/v1.4.0) (2017-08-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.3.0...v1.4.0)
+
 * Added dependency to `stripes-react-hotkeys` - broke HotKeys code out to its own npm repo. (@folio/stripes-react-hotkeys.)
 * `<Button>` will render anchor if passed an href attribute. Completes STCOM-24
 * PaneMenu buttons take up height of Pane Header.
