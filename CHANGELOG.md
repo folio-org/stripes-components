@@ -2,7 +2,8 @@
 
 ## 1.5.0 (IN PROGRESS)
 
-Fix currently selected item in Settings. Fixes STCOM-37.
+* Fix currently selected item in Settings. Fixes STCOM-37.
+* Add support for unsaved changes notification to <AddressEdit> Component. Fixes STCOM-35.
 
 ## [1.4.0](https://github.com/folio-org/stripes-components/tree/v1.4.0) (2017-08-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.3.0...v1.4.0)
