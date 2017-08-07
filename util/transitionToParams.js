@@ -3,7 +3,7 @@ import queryString from 'query-string';
 function transitionToParams(params) {
   const location = this.props.location;
   let query = location.query;
-  if (query == undefined)
+  if (query === undefined)
     query = queryString.parse(location.search);
 
   const allParams = Object.assign({}, query, params);
