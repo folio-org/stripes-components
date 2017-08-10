@@ -1,0 +1,22 @@
+@import "../../variables.css";
+
+.notesList {
+  max-height: 88%;
+  overflow: auto;
+  margin-bottom: .5rem;
+  padding-bottom: .5rem;
+}
+
+.noteWell {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: color(var(--bgHover) tint(40%));
+  padding: 8px;
+  &.editing {
+    padding-bottom: 0;
+  }
+}
+
+.byLine {
+  font-weight: bold;
+}

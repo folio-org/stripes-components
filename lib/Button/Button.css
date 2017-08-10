@@ -26,6 +26,12 @@ a.button{
     overflow: hidden;
     white-space: nowrap;
     font-size:.9rem;
+    &.slim{
+      padding: 5px 2px;
+    }
+    &.block{
+      display: block;
+    }
     &:first-child{
       margin-left: 0;
     }
@@ -132,6 +138,7 @@ a.button{
       background-color: transparent;
       border: 1px solid transparent;
     }
+    
     &.bottomMargin0, &.marginBottom0{
       margin-bottom: 0;
     }

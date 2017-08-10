@@ -1,7 +1,10 @@
 # Change history for stripes-components
 
 ## 1.5.0 (IN PROGRESS)
-
+* `<Notes>` component added. Part of STCOM-30. 
+* `minWidth` prop added to `<DropdownMenu>`.
+* 'slim' class added to Button.css.
+* New icons added to <Icon> ('down-caret', 'up-caret').
 * Fix currently selected item in Settings. Fixes STCOM-37.
 * Add support for unsaved changes notification to `<AddressEdit>`. Fixes STCOM-35.
 
