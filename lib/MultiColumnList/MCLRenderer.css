@@ -87,6 +87,9 @@
   flex-grow:0;
   padding: 6px;
   overflow: hidden;
+  &.showOverflow {
+    overflow: visible;
+  }
 }
 
 .scrollable{
