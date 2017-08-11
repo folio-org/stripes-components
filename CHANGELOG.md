@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 1.5.0 (IN PROGRESS)
+
 * `<Notes>` component added. Part of STCOM-30.
 * `minWidth` prop added to `<DropdownMenu>`.
 * 'slim' class added to Button.css.
@@ -8,6 +9,7 @@
 * Fix currently selected item in Settings. Fixes STCOM-37.
 * Add support for unsaved changes notification to `<AddressEdit>`. Fixes STCOM-35.
 * Add boolean prop to control validation rendering for `<TextField>`. Fixes STCOM-39.
+* Avoid "Unknown prop `validationEnabled` on `<input>` tag" warning. Fixes STCOM-42.
 
 ## [1.4.0](https://github.com/folio-org/stripes-components/tree/v1.4.0) (2017-08-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.3.0...v1.4.0)
