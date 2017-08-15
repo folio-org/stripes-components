@@ -10,7 +10,8 @@
 * Add boolean prop to control validation rendering for `<TextField>`. Fixes STCOM-39.
 * Avoid "Unknown prop `validationEnabled` on `<input>` tag" warning. Fixes STCOM-42.
 * MultiColumnList doesn't issue console warnings when displaying React elements. Fixes STCOM-36.
-* MultiColumnList will allow overflow to be visible if requested. Fixes UIU-128. 
+* MultiColumnList cells show overflow if requested. Refs UIU-128.
+* MultiColumnList wrapper elements show overflow. Refs UIU-128.
 * `<TabButton>` component added. Part of UIU-128. 
 
 ## [1.4.0](https://github.com/folio-org/stripes-components/tree/v1.4.0) (2017-08-01)

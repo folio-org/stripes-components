@@ -24,7 +24,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  
+
   &.selected{
     color: #fff;
     background-color: color(var(--primary) shade(8%));
@@ -94,7 +94,7 @@
 
 .scrollable{
   position: relative;
-  overflow: auto;
+  overflow: visible;
   width: 100%;
 }
 
