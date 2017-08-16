@@ -20,7 +20,7 @@
   cursor: pointer;
   flex-grow: 2;
   padding: 4px 2px;
-  margin: 0 4px;
+  margin: 0 4px 0 0;
   font-size: .8rem;
   font-weight: 600;
   color: var(--labelColor);
@@ -29,6 +29,7 @@
   }
 }
 
-.input{
+input[type=radio].input{
+  margin: 0 9px;
   margin-bottom: 2px;
 }
