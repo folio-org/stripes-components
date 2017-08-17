@@ -12,6 +12,7 @@
 * MultiColumnList doesn't issue console warnings when displaying React elements. Fixes STCOM-36.
 * MultiColumnList will allow overflow to be visible if requested. Fixes UIU-128.
 * `<TabButton>` component added. Part of UIU-128.
+* Change add button label to 'Add new' for `<EditableList>` and `<AuthorityList>`. Fixes UIU-157.
 
 ## [1.4.0](https://github.com/folio-org/stripes-components/tree/v1.4.0) (2017-08-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.3.0...v1.4.0)
