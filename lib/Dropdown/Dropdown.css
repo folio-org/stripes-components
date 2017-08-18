@@ -1,12 +1,3 @@
-.btnGroup {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .show {
 	display: block;
-}
-.dropdown, .dropup {
-   position: relative;
 }
