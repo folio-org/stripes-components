@@ -5,8 +5,8 @@
 }
 
 .show {
-	/*display: block;*/
+	display: block;
 }
 .dropdown, .dropup {
-  /* position: relative;*/
+   position: relative;
 }
