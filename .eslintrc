@@ -1,7 +1,7 @@
 {
-  parser: "babel-eslint",
+  "parser": "babel-eslint",
   "extends": "airbnb",
-  settings: {
+  "settings": {
     'import/resolver': {
       webpack: {}
     },
@@ -12,6 +12,8 @@
   },
   "rules": {
     "react/jsx-filename-extension":"off",
+    "react/require-default-props": "off",
+    "react/no-array-index-key": "off", 
     "import/extensions": [ 1, "never" ],
     "no-console": "off",
     "max-len": "off",
