@@ -5,29 +5,37 @@
 * [Basic Usage](#basic-usage)
 * [Advanced Usage](#advanced-usage)
 
-##Overview
+## Overview
+
 Hey ,I was told we have a new component what is it about?
+
 **-Yeah ,we have our own DropDown component now (a toggleable, contextual overlays for displaying lists of links and more).**
 
 Cool.I'm using the react bootstrap .Is this a replacement for that?
+
 **-Yes,Exactly.But u may need to update some props along with pulling in the new stripes components version**
 
 Oh,Props change.How big are the changes?
+
 **-Here is the [basic usage](#basic-usage) example and [props](#props) that are availble.We have two ways of usign the the dropdown now.**
 
 Umm two ways what for?
+
 **-Yes , so that styling on the parent div doesn't crop the drowpdown menu and u go like what just happened .As an example overflow:hidden on panes are causing that issue.**
 
 Ohhk WOW!! what is the solution you came up with?
+
 **-Tether!!**
 
 Tether wha-now ?
-**-It is a pretty cool library .Its A client-side library to make absolutely positioned elements attach to elements in the page efficiently.And we have react supported modules called [React-tether](https://github.com/souporserious/react-tether) which is what we used. [Here is an example for that](#advanced-usage).**
+
+**-[Tether](http://tether.io/) is a pretty cool library .Its A client-side library to make absolutely positioned elements attach to elements in the page efficiently.And we have react supported modules called [React-tether](https://github.com/souporserious/react-tether) which is what we used. [Here is an example for that](#advanced-usage).**
 
 Ahh cool thank you I will try those implementation out.Thanks for the breif discussion.
+
 **-You are welcome .Let us know if you find any bugs.**
 
-##Props
+## Props
 
 | **Name**        | **Type**           | **Default**  | **Description**
 | ------------- |:-------------:| -----:|------------:|
@@ -40,7 +48,7 @@ Ahh cool thank you I will try those implementation out.Thanks for the breif disc
 | disabled | bool      |   |                                        |
 | pullRight | bool      |   |                                        |
 
-##Basic Usage
+## Basic Usage
 ```js 
   render() {
      const permissionsDD = (
@@ -52,10 +60,7 @@ Ahh cool thank you I will try those implementation out.Thanks for the breif disc
     );
     return (
       <Pane defaultWidth="fill" fluidContentWidth paneTitle='Hosting'>
-            <div style={{height:'200px'}}>
-                {/*<Col xs={12}>
-            <this.connectedHostView {...this.props} />
-           </Col>*/}
+          <div style={{height:'200px'}}>
            <Col id ="test" className="example">
             <button>another button</button>
             <Dropdown group style={{ float: 'right' }}  pullRight id="AddPermissionDropdown" open={this.state.open} onToggle={this.onToggleAddPermDD}>
@@ -67,13 +72,13 @@ Ahh cool thank you I will try those implementation out.Thanks for the breif disc
                 >{permissionsDD}</DropdownMenu>
               </Dropdown>
             </Col>
-              </div>
+          </div>
          </Pane>
     );
   }
 ```
 
-##Advanced Usage
+## Advanced Usage
 
 ```js 
 render() {
@@ -107,6 +112,6 @@ render() {
   }
 ```
 
-##Improtant Notes
+## Improtant Notes
 **--Need to make sure we add data-role attribute for the child components like the toggle button and DropDownMenu.
 For reference see the examples**
