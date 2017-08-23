@@ -2,8 +2,8 @@
   "parser": "babel-eslint",
   "extends": "airbnb",
   "settings": {
-    'import/resolver': {
-      webpack: {}
+    "import/resolver": {
+      "webpack": {}
     },
   },
   "env": {
@@ -13,7 +13,7 @@
   "rules": {
     "react/jsx-filename-extension":"off",
     "react/require-default-props": "off",
-    "react/no-array-index-key": "off", 
+    "react/no-array-index-key": "off",
     "import/extensions": [ 1, "never" ],
     "no-console": "off",
     "max-len": "off",
@@ -21,6 +21,13 @@
     "no-unused-vars": [ 1, { argsIgnorePattern: "^_" } ],
     "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
     "no-param-reassign": [2, { "props": false }],
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "jsx-a11y/no-noninteractive-tabindex": [
+      "error",
+      {
+        tags: [],
+        roles: ['tabpanel', 'dialog'],
+      },
+    ]
   }
 }
