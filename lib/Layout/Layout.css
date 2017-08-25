@@ -20,9 +20,17 @@
 
 .flex{
   display: flex;
+  align-items: center;
   &.centerContent{
     justify-content:center;
   }
+  &.justified{
+    justify-content: space-between;
+  }
+}
+
+.full{
+  width: 100%;
 }
 
 .indent{

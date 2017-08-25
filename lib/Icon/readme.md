@@ -39,3 +39,5 @@ A list of possible values for the `icon` prop.
 | "validation-check" | &#10003; |
 | "validation-error" | &#10003; |
 | "trashBin" | &#10003; |
+| "down-caret" | &#10003; |
+| "up-caret" | &#10003; |

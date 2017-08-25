@@ -1,5 +1,22 @@
 # Change history for stripes-components
 
+## 1.5.0 (IN PROGRESS)
+* `<Notes>` component added. Part of STCOM-30.
+* `minWidth` prop added to `<DropdownMenu>`.
+* 'slim' class added to Button.css.
+* New icons added to <Icon> ('down-caret', 'up-caret').
+* Fix currently selected item in Settings. Fixes STCOM-37.
+* Add support for unsaved changes notification to `<AddressEdit>`. Fixes STCOM-35.
+* Add boolean prop to control validation rendering for `<TextField>`. Fixes STCOM-39.
+* Avoid "Unknown prop `validationEnabled` on `<input>` tag" warning. Fixes STCOM-42.
+* MultiColumnList doesn't issue console warnings when displaying React elements. Fixes STCOM-36.
+* MultiColumnList will allow overflow to be visible if requested. Fixes UIU-128.
+* `<TabButton>` component added. Part of UIU-128.
+* Change add button label to 'Add new' for `<EditableList>` and `<AuthorityList>`. Fixes UIU-157.
+* Fix selected `<Settings>` pane. Fixes STCOM-50.
+* Lint, including updating of the config-airbnb and jsx-a11y libraries. Part of STCOM-21. 
+* Fix address type validation in `<AddressEdit>`. Fixes STCOM-51.
+
 ## [1.4.0](https://github.com/folio-org/stripes-components/tree/v1.4.0) (2017-08-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.3.0...v1.4.0)
 
