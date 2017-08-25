@@ -1,3 +1,5 @@
+@import "../variables.css";
+
 .show {
 	display: block;
 }
@@ -12,7 +14,7 @@
    display: inline-block;
  }
 
- .DropdownMenuTether{
+ .DropdownMenuTether {
     z-index: 1000;
     display: none;
     float: left;
@@ -31,4 +33,16 @@
       list-style:none;
       padding: 0;
     }
+}
+
+@media(--medium){
+  .DropdownMenuTether{
+    min-width: 40vw;
+  }
+}
+
+@media(--small){
+  .DropdownMenuTether{
+    min-width: 90vw;
+  }
 }
