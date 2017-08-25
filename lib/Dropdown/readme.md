@@ -1,41 +1,103 @@
 # Dropdown
+A toggleable, contextual overlays for displaying lists of links and more.
 
-* [Overview](#overview)
-* [Props](#props)
-* [Basic Usage](#basic-usage)
-* [Advanced Usage](#advanced-usage)
+## Dropdown with Advanced Usage
+UI-modules may add styling to the parent div's such as overflow:hidden which may result in cropping the dropdown .So Dropdown component used [react-tether](https://www.npmjs.com/package/react-tether) module which is a wrapper around  [tether](http://tether.io/) library to assist us with such issues ,which renders it's children as a new React subtree within **body** and absolute positions element so they stay next to another element. 
 
-## Overview
+## Basic-Usage
 
-Hey ,I was told we have a new component what is it about?
+```
+ <Dropdown 
+  id="AddPermissionDropdown" 
+  dropdown
+  open={this.state.open} 
+  onToggle={this.onToggleAddPermDD}
+  group 
+  style={{ float: 'right' }}  
+  pullRight 
+  >
+      <Button 
+        data-role="toggle" 
+        align="end"
+        bottomMargin0  
+        aria-haspopup="true"
+      >
+        &#43; Add Permission
+      </Button>
+      <DropdownMenu
+        data-role="menu"
+        aria-label="available permissions"
+        onToggle={this.onToggleAddPermDD}
+      >
+        {permissionsDD}
+      </DropdownMenu>
+  </Dropdown>
+```
 
-**-Yeah ,we have our own DropDown component now (a toggleable, contextual overlays for displaying lists of links and more).**
+## Advanced-Usage
 
-Cool.I'm using the react bootstrap .Is this a replacement for that?
+To use the tether and have the [Default Props for tether](#DefaultProps-tether) set, all we need to do is **remove the dropdown prop** this will let component know you want to use the tether with default settings
 
-**-Yes,Exactly.But u may need to update some props along with pulling in the new stripes components version**
+```
+  <Dropdown
+    id="AddPermissionDropdown"
+    open={this.state.open} 
+    onToggle={this.onToggleAddPermDD}
+    style={{ float: 'right' }}
+    pullRight
+    >
+      <Button 
+       data-role="toggle"
+       align="end" 
+       bottomMargin0 
+       aria-haspopup="true"
+      >
+        &#43; Add Permission
+      </Button>
+      <DropdownMenu
+        data-role="menu"
+        aria-label="available permissions"
+        onToggle={this.onToggleAddPermDD}
+       >
+        {permissionsDD}
+      </DropdownMenu>
+  </Dropdown>
+```
 
-Oh,Props change.How big are the changes?
+In case, ui-modules want to have some control on positioning, target element  or would like to use other options that are available with [tether](http://tether.io/#options) .This will be a very good example
 
-**-Here is the [basic usage](#basic-usage) example and [props](#props) that are availble.We have two ways of usign the the dropdown now.**
+```
+ const tether = {
+       attachment:"top right",
+       classPrefix:"permissions",
+     }
+  <Dropdown
+    id="AddPermissionDropdown"
+    tether={tether} 
+    open={this.state.open} 
+    onToggle={this.onToggleAddPermDD}
+    style={{ float: 'right' }}
+    pullRight
+    >
+      <Button 
+       data-role="toggle"
+       align="end" 
+       bottomMargin0 
+       aria-haspopup="true"
+      >
+        &#43; Add Permission
+      </Button>
+      <DropdownMenu
+        data-role="menu"
+        aria-label="available permissions"
+        onToggle={this.onToggleAddPermDD}
+       >
+        {permissionsDD}
+      </DropdownMenu>
+  </Dropdown>
+```
 
-Umm two ways what for?
-
-**-Yes , so that styling on the parent div doesn't crop the drowpdown menu and u go like what just happened .As an example overflow:hidden on panes are causing that issue.**
-
-Ohhk WOW!! what is the solution you came up with?
-
-**-Tether!!**
-
-Tether wha-now ?
-
-**-[Tether](http://tether.io/) is a pretty cool library .Its A client-side library to make absolutely positioned elements attach to elements in the page efficiently.And we have react supported modules called [React-tether](https://github.com/souporserious/react-tether) which is what we used. [Here is an example for that](#advanced-usage).**
-
-Ahh cool thank you I will try those implementation out.Thanks for the breif discussion.
-
-**-You are welcome .Let us know if you find any bugs.**
-
-## Props
+## Properties
 
 | **Name**        | **Type**           | **Default**  | **Description**
 | ------------- |:-------------:| -----:|------------:|
@@ -43,75 +105,75 @@ Ahh cool thank you I will try those implementation out.Thanks for the breif disc
 | id      | one of: "string" ,"number"      |   |   An html id attribute, necessary for assistive technologies, such as screen readers. |
 | onToggle | function      |   |   callback for toggling open in the controlling component    |
 | group      | bool | false |          |
+| dropdown      | bool | false |    For basic setup of dropdown|
 | tag      | string      |  div |   customize component output by passing in an element name or Component                   |
-| tether | object      |   |     for absolute postioning see the advanced example                                   |
+| tether | object      |   |     For absolute postioning see the advanced example                                   |
 | disabled | bool      |   |                                        |
 | pullRight | bool      |   |                                        |
 
-## Basic Usage
-```js 
-  render() {
-     const permissionsDD = (
-      <ul>
-        <li><a onClick={this.onToggleAddPermDD} href='#'>XXXX</a></li>
-        <li><a href='#'>YYYY</a></li>
-        <li><a href='#'>ZZZZ</a></li>
-      </ul>
-    );
-    return (
-      <Pane defaultWidth="fill" fluidContentWidth paneTitle='Hosting'>
-          <div style={{height:'200px'}}>
-           <Col id ="test" className="example">
-            <button>another button</button>
-            <Dropdown group style={{ float: 'right' }}  pullRight id="AddPermissionDropdown" open={this.state.open} onToggle={this.onToggleAddPermDD}>
-              <Button  align="end" bottomMargin0 data-role="toggle" aria-haspopup="true">&#43; Add Permission</Button>
-                <DropdownMenu
-                  data-role="menu"
-                  aria-label="available permissions"
-                  onToggle={this.onToggleAddPermDD}
-                >{permissionsDD}</DropdownMenu>
-              </Dropdown>
-            </Col>
-          </div>
-         </Pane>
-    );
-  }
+## Default Props for tether
+
+| **Name**        | **Type**           | **Default**  | **Description**
+| ------------- |:-------------:| -----:|------------:|
+| attachment      | string | top center |  Positioning of the dropdown|
+| renderElementTo      | string     | document.body  |    Tells it where in the DOM tree to actually render the element |
+| constraints     | object   | [{ to: 'scrollParent',pin: true,}]|
+
+
+### Upgrading from Dropdown.
+
+Replace imports and make sure update following props
+* Update roles attribute bsRole => data-role
+* Need to add either dropdown bool or tether object props based on the requirement .Please look for examples above 
+
+1) Change 
+```
+import {Dropdown} from 'react-bootstrap';
+```
+To
+```
+import Dropdown from '@folio/stripes-components/lib/Dropdown';
+
 ```
 
-## Advanced Usage
+2) Change bsRole on the children 
+```
+<Button 
+    align="end" 
+    bottomMargin0 
+    bsRole="toggle" 
+    aria-haspopup="true"
+  >
+    &#43; Add Permission
+</Button>
+<DropdownMenu
+    bsRole="menu"
+    width="40em"
+    aria-label="available permissions"
+    onToggle={this.onToggleAddPermDD}
+  >
+  {permissionsDD}
+</DropdownMenu>
 
-```js 
-render() {
-      const tether = {
-       renderElementTo: `#test>button[data-role="toggle"]`,
-       classPrefix:"permissions",
-     }//For more options go to(http://tether.io/#options)
-     const permissionsDD = (
-      <ul>
-        <li><a onClick={this.onToggleAddPermDD} href='#'>XXXXX</a></li>
-        <li><a href='#'>YYYY</a></li>
-        <li><a href='#'>ZZZZ</a></li>
-      </ul>
-    );
-    return (
-      <Pane defaultWidth="fill" fluidContentWidth paneTitle='whatever'>
-        <div style={{height:'200px'}}>
-           <Col id ="test" className="example">
-            <Dropdown tether={tether} id="AddPermissionDropdown" open={this.state.open} onToggle={this.onToggleAddPermDD}>
-              <Button style={{ float: 'right' }} align="end" bottomMargin0 data-role="toggle" aria-haspopup="true">&#43; Add Permission</Button>
-                <DropdownMenu
-                  data-role="menu"
-                  aria-label="available permissions"
-                  onToggle={this.onToggleAddPermDD}
-                >{permissionsDD}</DropdownMenu>
-              </Dropdown>
-            </Col>
-          </div>
-        </Pane>
-    );
-  }
+```
+To
+```
+ <Button 
+    align="end" 
+    bottomMargin0 
+    data-role="toggle" 
+    aria-haspopup="true"
+  >
+    &#43; Add Permission
+</Button>
+<DropdownMenu
+    data-role="menu"
+    width="40em"
+    aria-label="available permissions"
+    onToggle={this.onToggleAddPermDD}
+  >
+  {permissionsDD}
+</DropdownMenu>
 ```
 
-## Improtant Notes
-**--Need to make sure we add data-role attribute for the child components like the toggle button and DropDownMenu.
-For reference see the examples**
+3) Add new prop to Dropdown either the **dropdown** or **tether** prop .If none provided component defaults to tether with basic tether props.
