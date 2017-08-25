@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## [1.5.0](https://github.com/folio-org/stripes-components/tree/v1.5.0) (2017-08-25)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.4.0...v1.5.0)
 * `<Notes>` component added. Part of STCOM-30.
 * `minWidth` prop added to `<DropdownMenu>`.
 * 'slim' class added to Button.css.
