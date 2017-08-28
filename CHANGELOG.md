@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## 1.6.0 (IN PROGRESS)
+
+* Add one side radius to `<Button>` styles. Fixes STCOM-57.
+
+
 ## [1.5.0](https://github.com/folio-org/stripes-components/tree/v1.5.0) (2017-08-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.4.0...v1.5.0)
 * `<Notes>` component added. Part of STCOM-30.
@@ -15,7 +20,7 @@
 * `<TabButton>` component added. Part of UIU-128.
 * Change add button label to 'Add new' for `<EditableList>` and `<AuthorityList>`. Fixes UIU-157.
 * Fix selected `<Settings>` pane. Fixes STCOM-50.
-* Lint, including updating of the config-airbnb and jsx-a11y libraries. Part of STCOM-21. 
+* Lint, including updating of the config-airbnb and jsx-a11y libraries. Part of STCOM-21.
 * Fix address type validation in `<AddressEdit>`. Fixes STCOM-51.
 
 ## [1.4.0](https://github.com/folio-org/stripes-components/tree/v1.4.0) (2017-08-01)
