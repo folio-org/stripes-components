@@ -1,7 +1,7 @@
 # Dropdown
 A toggleable, contextual overlays for displaying lists of links and more.
 
-## Dropdown with Advanced Usage
+## Dropdown with Custom Tether Options
 UI-modules may add styling to the parent div's such as overflow:hidden which may result in cropping the dropdown .So Dropdown component used [react-tether](https://www.npmjs.com/package/react-tether) module which is a wrapper around  [tether](http://tether.io/) library to assist us with such issues ,which renders it's children as a new React subtree within **body** and absolute positions element so they stay next to another element. 
 
 ## Basic-Usage
@@ -9,7 +9,6 @@ UI-modules may add styling to the parent div's such as overflow:hidden which may
 ```
  <Dropdown 
   id="AddPermissionDropdown" 
-  dropdown
   open={this.state.open} 
   onToggle={this.onToggleAddPermDD}
   group 
@@ -35,34 +34,6 @@ UI-modules may add styling to the parent div's such as overflow:hidden which may
 ```
 
 ## Advanced-Usage
-
-To use the tether and have the [Default Props for tether](#DefaultProps-tether) set, all we need to do is **remove the dropdown prop** this will let component know you want to use the tether with default settings
-
-```
-  <Dropdown
-    id="AddPermissionDropdown"
-    open={this.state.open} 
-    onToggle={this.onToggleAddPermDD}
-    style={{ float: 'right' }}
-    pullRight
-    >
-      <Button 
-       data-role="toggle"
-       align="end" 
-       bottomMargin0 
-       aria-haspopup="true"
-      >
-        &#43; Add Permission
-      </Button>
-      <DropdownMenu
-        data-role="menu"
-        aria-label="available permissions"
-        onToggle={this.onToggleAddPermDD}
-       >
-        {permissionsDD}
-      </DropdownMenu>
-  </Dropdown>
-```
 
 In case, ui-modules want to have some control on positioning, target element  or would like to use other options that are available with [tether](http://tether.io/#options) .This will be a very good example
 
@@ -105,7 +76,6 @@ In case, ui-modules want to have some control on positioning, target element  or
 | id      | one of: "string" ,"number"      |   |   An html id attribute, necessary for assistive technologies, such as screen readers. |
 | onToggle | function      |   |   callback for toggling open in the controlling component    |
 | group      | bool | false |          |
-| dropdown      | bool | false |    For basic setup of dropdown|
 | tag      | string      |  div |   customize component output by passing in an element name or Component                   |
 | tether | object      |   |     For absolute postioning see the advanced example                                   |
 | disabled | bool      |   |                                        |
@@ -115,9 +85,10 @@ In case, ui-modules want to have some control on positioning, target element  or
 
 | **Name**        | **Type**           | **Default**  | **Description**
 | ------------- |:-------------:| -----:|------------:|
-| attachment      | string | top center |  Positioning of the dropdown|
+| attachment      | string | top center |  Positioning of the dropdown. A string of the form 'vert-attachment horiz-attachment'vert-attachment can be any of 'top', 'middle', 'bottom' horiz-attachment can be any of 'left', 'center', 'right'|
+| targetAttachment      | string | bottom center |  Positioning of the dropdown. A string similar to attachment. The one difference is that, if it's not provided, targetAttachment will assume the mirror image of attachment.|
 | renderElementTo      | string     | document.body  |    Tells it where in the DOM tree to actually render the element |
-| constraints     | object   | [{ to: 'scrollParent',pin: true,}]|
+| constraints     | object   |  [{to: 'window',attachment: 'together',},{to: 'scrollParent',pin: true,},],|
 
 
 ### Upgrading from Dropdown.
@@ -175,5 +146,3 @@ To
   {permissionsDD}
 </DropdownMenu>
 ```
-
-3) Add new prop to Dropdown either the **dropdown** or **tether** prop .If none provided component defaults to tether with basic tether props.
