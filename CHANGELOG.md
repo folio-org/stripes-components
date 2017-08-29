@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## [1.6.0] (IN PROGRESS)
+## 1.6.0 (IN PROGRESS)
+* Add one side radius to `<Button>` styles. Fixes STCOM-57.
 * First pass at `<Notes>` CRUD. See LIBAPP-188. 
 
 ## [1.5.0](https://github.com/folio-org/stripes-components/tree/v1.5.0) (2017-08-25)
