@@ -41,3 +41,5 @@ A list of possible values for the `icon` prop.
 | "trashBin" | &#10003; |
 | "down-caret" | &#10003; |
 | "up-caret" | &#10003; |
+| "down-triangle" | &#10003; |
+| "up-triangle" | &#10003; |
