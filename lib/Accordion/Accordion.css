@@ -30,12 +30,6 @@
       animation-name: hoverFlash;
       animation-duration: 2s;
     }
-    &:hover{
-      background-color: var(--bgHover);
-    }
-    & button{
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -63,16 +57,27 @@
     animation-duration: 2s;
     background-color: var(--bgHover);
   }
-  &:hover{
-    background-color: color(var(--bgHover) tint(10%));
-  }
 }
 
 .headerWrapper{
   width: 100%;
+  border-radius: var(--radius);
   display: flex;
   align-items: flex-start;
   align-content: center;
+  min-height: calc(var(--controlHeight) + 4px);
+  transition: background-color .3s;
+  & button{
+    margin-bottom: 0;
+  }
+  &:focus{
+    outline: none;
+    animation-name: hoverFlash;
+    animation-duration: 2s;
+  }
+  &:hover{
+    background-color: color(var(--bgHover) tint(30%));
+  }
 }
 
 .filterSetlabel{
