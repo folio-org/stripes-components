@@ -142,7 +142,7 @@ a.button{
           outline: none;
           border-bottom: 4px solid var(--bgHover);
         }
-      
+
         &.selected{
           font-weight: bold;
           border-width: 0;
@@ -162,11 +162,18 @@ a.button{
   &.noRadius{
     border-radius: 0;
   }
+  &.noLeftRadius {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  &.noRightRadius {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
   &.transparent{
     background-color: transparent;
     border: 1px solid transparent;
   }
-  
   &.bottomMargin0, &.marginBottom0{
     margin-bottom: 0;
   }
