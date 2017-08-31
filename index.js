@@ -17,11 +17,13 @@ export { default as PaneMenu } from './lib/PaneMenu';
 export { default as Paneset } from './lib/Paneset';
 export { Grid, Row, Col } from './lib/LayoutGrid';
 export { default as Layout } from './lib/Layout';
+export { Accordion, AccordionSet, FilterAccordionHeader } from './lib/Accordion';
 
 /*misc*/
 export { default as Icon } from './lib/Icon';
 
 /*specific use */
 export { default as FilterPane } from './lib/FilterPane';
+export { default as FilterGroups } from './lib/FilterGroups';
 export { default as FilterControlGroup } from './lib/FilterControlGroup';
 export { default as FilterPaneSearch } from './lib/FilterPaneSearch';
