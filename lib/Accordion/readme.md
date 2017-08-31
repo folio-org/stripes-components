@@ -75,5 +75,19 @@ onToggleSection({label, id}) {
 </AccordionSet>
 ```
 
-##Custom Headers
-Base headers give many options by default, but if these are not adequate, the 
+## Custom Headers
+The default header suits many cases, but if it is not adequate, a custom header can be provided via `<Accordion>`'s `header` prop. A custom header component should take `ContentId` prop in order to appropriately apply aria-attributes to the custom header. Any props passed to `<Accordion>` will also be passed to its `header` component.
+
+## Props
+
+Name | type | description | default | required
+--- | --- | --- | --- | ---
+label | string, element | visible header label | | true
+open | bool | open or closed | true |
+id | string | unique ID to track accordion state | | true
+displayWhenOpen | element | content to display in header when Accordion is in the open state | | 
+displayWhenClosed | element | content to display in header when Accordion is in the closed state | | 
+onToggle | func | callback for toggling the accordion open/closed | | 
+header | node, func | used to render a custom accordion header | | 
+contentRef | func | reference fuction for accessing the accordion content's DOM element. | | 
+children | node, array of nodes | content of the accordion | | true
