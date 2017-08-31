@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 1.6.0 (IN PROGRESS)
+## [1.6.0](https://github.com/folio-org/stripes-components/tree/v1.6.0) (2017-08-31)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.5.0...v1.6.0)
 * Add one side radius to `<Button>` styles. Fixes STCOM-57.
 * First pass at `<Notes>` CRUD. See LIBAPP-188.
 * `<NavListSection>` does not try to render a null child. Fixes STCOM-58.
