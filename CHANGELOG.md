@@ -4,6 +4,9 @@
 * Add one side radius to `<Button>` styles. Fixes STCOM-57.
 * First pass at `<Notes>` CRUD. See LIBAPP-188.
 * `<NavListSection>` does not try to render a null child. Fixes STCOM-58.
+* *New Component* `<Accordion>` added to fulfill STCOM-20.
+* `<Button>` includes prop `buttonRef` for obtaining a ref to its rendered element.
+* `down-triangle` and `up-triangled` added to `<Icon>`.
 
 ## [1.5.0](https://github.com/folio-org/stripes-components/tree/v1.5.0) (2017-08-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.4.0...v1.5.0)
