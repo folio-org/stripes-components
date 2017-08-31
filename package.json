@@ -9,7 +9,9 @@
   },
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "lint": "eslint lib || true"
+    "lint": "eslint lib || true",
+    "test": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles",
+    "test-watch": "mocha --compilers js:babel-core/register -w --watch-extensions json"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -24,12 +26,19 @@
     ]
   },
   "devDependencies": {
-    "babel-core": "^6.17.0",
+    "babel-core": "^6.23.1",
     "babel-eslint": "^7.0.0",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "babel-register": "^6.18.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-2": "^6.16.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.5.0",
     "eslint": "^3.8.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-import-resolver-webpack": "0.7.1",
@@ -37,7 +46,13 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^5.1.0",
     "eslint-plugin-react": "^7.1.0",
-    "webpack": "1.11.0"
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^9.3.0",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.5.1",
+    "sinon": "^1.17.4",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "@folio/stripes-form": "^0.8.0",
@@ -50,13 +65,13 @@
     "moment-range": "^3.0.3",
     "mousetrap": "^1.6.1",
     "prop-types": "^15.5.10",
-    "react": "^15.3.2",
+    "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-flexbox-grid": "1.1.3",
     "react-overlays": "^0.8.0",
     "react-router-dom": "^4.1.1",
-    "redux-form": "^7.0.3",
-    "react-tether": "0.5.7"
+    "react-tether": "0.5.7",
+    "redux-form": "^7.0.3"
   },
   "peerDependencies": {
     "stripes-core": "^1.13.0"

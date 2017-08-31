@@ -10,6 +10,14 @@
     "browser": true,
     "node": true,
   },
+  "globals": {
+    "expect": true,
+    "describe":true,
+    "shallow":true,
+    "spy":true,
+    "it":true,
+    "mount":true,
+  },
   "rules": {
     "react/jsx-filename-extension":"off",
     "react/require-default-props": "off",
