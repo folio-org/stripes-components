@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 1.7.0 (IN PROGRESS)
+## [1.7.0](https://github.com/folio-org/stripes-components/tree/v1.7.0) (2017-09-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.6.0...v1.7.0)
 
 * `<Settings>` no longer emits routes for pages which fail the permission check. Fixes STCOM-64.
 
