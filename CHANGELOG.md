@@ -4,6 +4,10 @@
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.6.0...v1.7.0)
 
 * `<Settings>` no longer emits routes for pages which fail the permission check. Fixes STCOM-64.
+* Added `separator` prop to `<Accordion>` for adding a border between accordion panes.
+* `<FilterGroups>` pass `false` to the separator prop for `<Accordion>`
+* Added `displayHeading` prop to `<AddressList>` for optional rendering of the heading and 'Add Address' button.
+* Styling adjusted for `<DefaultAccordionHeader>` the background is now transparent for the entire `<Accordion>` header, save for the expand/collapse button.
 
 ## [1.6.0](https://github.com/folio-org/stripes-components/tree/v1.6.0) (2017-08-31)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.5.0...v1.6.0)
