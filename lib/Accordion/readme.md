@@ -17,10 +17,10 @@ import { AccordionSet, Accordion } from '@folio/stripes-components/lib/Accordion
   </Accordion>
 </AccordionSet>
 ```
-`id` and `label` are both required props. `label` represents the visual heading for the modal - it can be a string, and html tag or a component. It will be part of the clickable area for expanding/contracting the content.
+`id` and `label` are both required props. `label` represents the visual heading for the modal - it can be a string, an html tag or a component. It will be part of the clickable area for expanding/contracting the content.
 
 ## Controlled
-Accordions can, of course, be controlled by state or local resource. Simply include an object with a list of keys for each accordion's `id` set to a boolean value that will be passed through to the corresponding accordion's `open` prop. This object should passed to the `<AccordionSet>`'s `accordionStatus` prop. An `onToggle` handler will also need to be provided for proper state interaction. Passed to the `<AccordionSet>`'s `onToggle` prop, it will receive both the label and id of the target accordion- either of which could be used for additional interactions as needed.
+Accordions can, of course, be controlled by state or local resource. Simply include an object with a list of keys for each accordion's `id` set to a boolean value that will be passed through to the corresponding accordion's `open` prop. This object should be passed to the `<AccordionSet>`'s `accordionStatus` prop. An `onToggle` handler will also need to be provided for proper state interaction. Passed to the `<AccordionSet>`'s `onToggle` prop, it will receive both the label and id of the target accordion, either of which could be used for additional interactions as needed.
 
 ```
 import { AccordionSet, Accordion } from '@folio/stripes-components/lib/Accordion';
@@ -89,5 +89,5 @@ displayWhenOpen | element | content to display in header when Accordion is in th
 displayWhenClosed | element | content to display in header when Accordion is in the closed state | | 
 onToggle | func | callback for toggling the accordion open/closed | | 
 header | node, func | used to render a custom accordion header | | 
-contentRef | func | reference fuction for accessing the accordion content's DOM element. | | 
+contentRef | func | reference function for accessing the accordion content's DOM element. | | 
 children | node, array of nodes | content of the accordion | | true
