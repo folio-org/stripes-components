@@ -1,12 +1,17 @@
 # Dropdown
-A toggleable, contextual overlays for displaying lists of links and more.
+A toggleable, contextual overlay for displaying lists of links and more.
 
 ## Dropdown with Custom Tether Options
-UI-modules may add styling to the parent div's such as overflow:hidden which may result in cropping the dropdown .So Dropdown component used [react-tether][] module which is a wrapper around  [tether][] library to assist us with such issues ,which renders it's children as a new React subtree within **body** and absolute positions element so they stay next to another element. 
+Dropdown makes use of [react-tether](https://github.com/souporserious/react-tether) to render its menu to the **body** of the page by default. This overcomes issues with Dropdowns that might be cut off by containers with `overflow: hidden` in their styling. If any scrolling occurs, tether will also keep the menu element in the correct position relative to its corresponding `data-role="toggle"` component.
 
 ## Basic-Usage
+This basic version sets up a dropdown with it's open/closed status controlled by state. Note that the `onToggle` handler is passed to both the `<Dropdown>` component and the `<DropdownMenu>` component. `<DropdownMenu>` sets up listeners so that the `onToggle` function will be called if the user clicks anywhere outside of the menu in the DOM. 
 
 ```
+import { Dropdown } from '@folio/react-components/lib/Dropdown';
+
+//...
+
  <Dropdown 
   id="AddPermissionDropdown" 
   open={this.state.open} 
@@ -28,7 +33,10 @@ UI-modules may add styling to the parent div's such as overflow:hidden which may
         aria-label="available permissions"
         onToggle={this.onToggleAddPermDD}
       >
-        {permissionsDD}
+        <ul>
+          <li><a href="#">Example Link 1</a></li>
+          <li><a href="#">Example Link 2</a></li>
+        </ul>
       </DropdownMenu>
   </Dropdown>
 ```
@@ -70,7 +78,7 @@ In case, ui-modules want to have some control on positioning, target element  or
 
 ## UncontrolledDropdown-Usage
 
-If any of the modules does not want to control the dropdown i.e if the module doesn't set the state for the dropdown open and close it can use the below example  
+If the module is unable to keep track of the `<Dropdown>`'s open/closed status within its state (such as dropdowns used in repeated table rows), Using the 'Uncontrolled' version is best.
 
 ```
 import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
