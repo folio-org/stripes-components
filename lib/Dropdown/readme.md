@@ -8,7 +8,7 @@ Dropdown makes use of [react-tether](https://github.com/souporserious/react-teth
 This basic version sets up a dropdown with it's open/closed status controlled by state. Note that the `onToggle` handler is passed to both the `<Dropdown>` component and the `<DropdownMenu>` component. `<DropdownMenu>` sets up listeners so that the `onToggle` function will be called if the user clicks anywhere outside of the menu in the DOM. 
 
 ```
-import { Dropdown } from '@folio/react-components/lib/Dropdown';
+import { Dropdown } from '@folio/stripes-components/lib/Dropdown';
 
 //...
 
