@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## 1.8.0 IN-PROGRESS
+
+* `<Dropdown>` component added. See [docs](lib/Dropdown/readme.md). Part of STCOM-34.
+* `react-tether` dependency added for `<Dropdown>`.
+
 ## [1.7.0](https://github.com/folio-org/stripes-components/tree/v1.7.0) (2017-09-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.6.0...v1.7.0)
 
