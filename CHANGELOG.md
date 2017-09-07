@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 1.8.0
+* Use metadata, not metaData. See MODNOTES-2.
+* Correctly update note's link when selected user changes. Fixes STUTILNOTE-1.
+
 ## [1.7.0](https://github.com/folio-org/stripes-components/tree/v1.7.0) (2017-09-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.6.0...v1.7.0)
 
