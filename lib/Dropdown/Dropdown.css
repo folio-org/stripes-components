@@ -1,0 +1,48 @@
+@import "../variables.css";
+
+.show {
+	display: block;
+}
+
+.btnGroup {
+   position: relative;
+   display: inline-block;
+   vertical-align: middle;
+ }
+ 
+ .dropdown {
+   display: inline-block;
+ }
+
+ .DropdownMenuTether {
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 20vw;
+    padding: 5px;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    & ul{
+      list-style:none;
+      padding: 0;
+    }
+}
+
+@media(--medium){
+  .DropdownMenuTether{
+    min-width: 40vw;
+  }
+}
+
+@media(--small){
+  .DropdownMenuTether{
+    min-width: 90vw;
+  }
+}

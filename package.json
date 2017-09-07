@@ -55,7 +55,8 @@
     "react-flexbox-grid": "1.1.3",
     "react-overlays": "^0.8.0",
     "react-router-dom": "^4.1.1",
-    "redux-form": "^7.0.3"
+    "redux-form": "^7.0.3",
+    "react-tether": "0.5.7"
   },
   "peerDependencies": {
     "stripes-core": "^2.7.0"
