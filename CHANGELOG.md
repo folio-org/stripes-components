@@ -1,6 +1,9 @@
 # Change history for stripes-components
 
-## 1.8.0
+## 1.8.0 IN-PROGRESS
+
+* `<Dropdown>` component added. See [docs](lib/Dropdown/readme.md). Part of STCOM-34.
+* `react-tether` dependency added for `<Dropdown>`.
 * Use metadata, not metaData. See MODNOTES-2.
 * Correctly update note's link when selected user changes. Fixes STUTILNOTE-1.
 
