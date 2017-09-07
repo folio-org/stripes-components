@@ -40,7 +40,7 @@
     "webpack": "1.11.0"
   },
   "dependencies": {
-    "@folio/stripes-form": "^0.8.0",
+    "@folio/stripes-form": "^0.8.1",
     "@folio/stripes-react-hotkeys": "^1.0.0",
     "classnames": "^2.2.5",
     "create-react-class": "^15.5.3",
@@ -58,6 +58,6 @@
     "redux-form": "^7.0.3"
   },
   "peerDependencies": {
-    "stripes-core": "^1.13.0"
+    "stripes-core": "^2.7.0"
   }
 }
