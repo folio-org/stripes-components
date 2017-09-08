@@ -79,7 +79,11 @@
   }
   &::-ms-clear {
     display: none;
-    }
+  }
+  &:disabled{
+    background-color: #ebebe4;
+    color: #777;
+  }
 }
 
 .textFieldFeedback{

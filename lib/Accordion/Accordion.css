@@ -29,7 +29,6 @@
   }
   &> button{
     flex-shrink: 0;
-  }
   &:focus{
     outline: none;
     animation-name: hoverFlash;

@@ -1,5 +1,13 @@
 # Change history for stripes-components
 
+## 1.8.0 IN-PROGRESS
+
+* `<Dropdown>` component added. See [docs](lib/Dropdown/readme.md). Part of STCOM-34.
+* `react-tether` dependency added for `<Dropdown>`.
+* Use metadata, not metaData. See MODNOTES-2.
+* Correctly update note's link when selected user changes. Fixes STUTILNOTE-1.
+* Explicitly gray out text inputs. Fixes STCOM-9
+
 ## [1.7.0](https://github.com/folio-org/stripes-components/tree/v1.7.0) (2017-09-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.6.0...v1.7.0)
 
@@ -8,6 +16,7 @@
 * `<FilterGroups>` pass `false` to the separator prop for `<Accordion>`
 * Added `displayHeading` prop to `<AddressList>` for optional rendering of the heading and 'Add Address' button.
 * Styling adjusted for `<DefaultAccordionHeader>` the background is now transparent for the entire `<Accordion>` header, save for the expand/collapse button.
+* Refactor out `<Notes>`'s okapi interaction. See STUTILNOTE-2.
 
 ## [1.6.0](https://github.com/folio-org/stripes-components/tree/v1.6.0) (2017-08-31)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.5.0...v1.6.0)
