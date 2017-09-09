@@ -1,21 +1,12 @@
   import React from 'react';
-  import Dropdown from '../../lib/Dropdown/index';
+  import { Dropdown } from '../../lib/Dropdown/index';
   import Button from '../../lib/Button/index';
   import DropdownMenu from '../../lib/DropdownMenu/index';
 
-
   describe('Dropdown', () => {
-    const permissionsDD = shallow(
-      <ul>
-        <li><a>A New Hope</a></li>
-        <li><a>Empire Strikes Back</a></li>
-        <li><a>Return of Jedi</a></li>
-        <li><a>The Phantom Menace</a></li>
-        <li><a>Attack of Clones</a></li>
-        <li><a>Revenge Of Sith</a></li>
-      </ul>,
-      );
     const onToggleAddPermDD = spy();
+    spy(Dropdown.prototype, 'handleKeyDown');
+    spy(Dropdown.prototype, 'handleToggle');
     it('should be a list item', () => {
       const wrapper = shallow(
         <Dropdown id="AddPermissionDropdown" open={false} onToggle={onToggleAddPermDD}>
@@ -24,14 +15,23 @@
             data-role="menu"
             aria-label="available permissions"
             onToggle={onToggleAddPermDD}
-          > {permissionsDD}</DropdownMenu>
+          >
+            <ul>
+              <li><a>A New Hope</a></li>
+              <li><a>Empire Strikes Back</a></li>
+              <li><a>Return of Jedi</a></li>
+              <li><a>The Phantom Menace</a></li>
+              <li><a>Attack of Clones</a></li>
+              <li><a>Revenge Of Sith</a></li>
+            </ul>
+          </DropdownMenu>
         </Dropdown>);
       expect(wrapper.type()).to.eql('div');
       expect(wrapper.props().id).to.eql('AddPermissionDropdown');
       expect(wrapper.props().children.props.renderElementTo).to.eql(null);
     });
 
-    it('should change attachment postion with ', () => {
+    it('should change attachment postion with tether options ', () => {
       const tether = {
         attachment: 'top right',
         classPrefix: 'permissions',
@@ -43,7 +43,16 @@
             data-role="menu"
             aria-label="available permissions"
             onToggle={onToggleAddPermDD}
-          > {permissionsDD}</DropdownMenu>
+          >
+            <ul>
+              <li><a>A New Hope</a></li>
+              <li><a>Empire Strikes Back</a></li>
+              <li><a>Return of Jedi</a></li>
+              <li><a>The Phantom Menace</a></li>
+              <li><a>Attack of Clones</a></li>
+              <li><a>Revenge Of Sith</a></li>
+            </ul>
+          </DropdownMenu>
         </Dropdown>);
       expect(wrapper.type()).to.eql('div');
       expect(wrapper.props().id).to.eql('AddPermissionDropdown');
@@ -56,7 +65,6 @@
         attachment: 'top right',
         classPrefix: 'permissions',
       };
-      spy(Dropdown.prototype, 'handleToggle');
       const wrapper = shallow(
         <Dropdown tether={tether} id="AddPermissionDropdown" open={false} onToggle={onToggleAddPermDD}>
           <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true">&#43; Add Permission</Button>
@@ -64,7 +72,16 @@
             data-role="menu"
             aria-label="available permissions"
             onToggle={onToggleAddPermDD}
-          > {permissionsDD}</DropdownMenu>
+          >
+            <ul>
+              <li><a>A New Hope</a></li>
+              <li><a>Empire Strikes Back</a></li>
+              <li><a>Return of Jedi</a></li>
+              <li><a>The Phantom Menace</a></li>
+              <li><a>Attack of Clones</a></li>
+              <li><a>Revenge Of Sith</a></li>
+            </ul>
+          </DropdownMenu>
         </Dropdown>);
       expect(Dropdown.prototype.handleToggle.calledOnce).to.equal(false);
       wrapper.children().find('Button').simulate('click');
@@ -96,7 +113,16 @@
                   data-role="menu"
                   aria-label="available permissions"
                   onToggle={() => this.setState({ open: !this.state.open })}
-                > {permissionsDD}</DropdownMenu>
+                >
+                  <ul>
+                    <li><a>A New Hope</a></li>
+                    <li><a>Empire Strikes Back</a></li>
+                    <li><a>Return of Jedi</a></li>
+                    <li><a>The Phantom Menace</a></li>
+                    <li><a>Attack of Clones</a></li>
+                    <li><a>Revenge Of Sith</a></li>
+                  </ul>
+                </DropdownMenu>
               </Dropdown>
             </div>
           );
@@ -107,5 +133,52 @@
       expect(wrapper.props().children.props.open).to.eql(false);
       wrapper.children().find('Dropdown').simulate('toggle');
       expect(wrapper.props().children.props.open).to.eql(true);
+    });
+
+    it('should pass event, and source correctly when opened with keydown', () => {
+      const wrapper = shallow(
+        <Dropdown id="AddPermissionDropdown" open={false} onToggle={onToggleAddPermDD}>
+          <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true">&#43; Add Permission</Button>
+          <DropdownMenu
+            data-role="menu"
+            aria-label="available permissions"
+            onToggle={onToggleAddPermDD}
+          >
+            <ul>
+              <li><a>A New Hope</a></li>
+              <li><a>Empire Strikes Back</a></li>
+              <li><a>Return of Jedi</a></li>
+              <li><a>The Phantom Menace</a></li>
+              <li><a>Attack of Clones</a></li>
+              <li><a>Revenge Of Sith</a></li>
+            </ul>
+          </DropdownMenu>
+        </Dropdown>);
+      expect(Dropdown.prototype.handleKeyDown.calledOnce).to.equal(false);
+      wrapper.children().find('Button').simulate('keydown', { preventDefault: () => {}, keyCode: 40 });
+      expect(Dropdown.prototype.handleKeyDown.calledOnce).to.equal(true);
+    });
+
+    it('should pass event, and source correctly when closed with tab', () => {
+      const wrapper = shallow(
+        <Dropdown id="AddPermissionDropdown" open onToggle={onToggleAddPermDD}>
+          <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true">&#43; Add Permission</Button>
+          <DropdownMenu
+            data-role="menu"
+            aria-label="available permissions"
+            onToggle={onToggleAddPermDD}
+          >
+            <ul>
+              <li><a>A New Hope</a></li>
+              <li><a>Empire Strikes Back</a></li>
+              <li><a>Return of Jedi</a></li>
+              <li><a>The Phantom Menace</a></li>
+              <li><a>Attack of Clones</a></li>
+              <li><a>Revenge Of Sith</a></li>
+            </ul>
+          </DropdownMenu>
+        </Dropdown>);
+      wrapper.children().find('Button').simulate('tab', { keyCode: 9 });
+      expect(Dropdown.prototype.handleKeyDown.calledOnce).to.equal(true);
     });
   });
