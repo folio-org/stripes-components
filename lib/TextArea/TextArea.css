@@ -45,6 +45,11 @@
   &.textAreaHasError{
     border-color: #900;
   }
+  
+  &:disabled{
+    background-color: #ebebe4;
+    color: #777;
+  }
 }
 
 .textAreaFeedback{
