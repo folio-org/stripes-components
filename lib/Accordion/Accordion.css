@@ -1,0 +1,127 @@
+@import '../variables.css';
+
+@keyframes hoverFlash {
+  from {background-color: var(--bgHover)}
+  to {background-color: var(--bg)}
+}
+
+@keyframes focusFlash {
+  from {background-color: color(var(--bgHover) shade(10%))}
+  to {background-color: var(--bgHover)}
+}
+
+.root{
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.headerWrapper{
+  width: 100%;
+  padding: 0 8px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  min-height: calc(var(--controlHeight) + 4px);
+  transition: background-color .3s;
+  margin-bottom: 4px;
+  & button,& h1,& h2,& h3,& h4,& h5,& h6{
+    margin: 0;
+  }
+  & button{
+    flex-shrink:0;
+  }
+  &:focus{
+    outline: none;
+    animation-name: hoverFlash;
+    animation-duration: 2s;
+  }
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*cursor: pointer;
+  min-height: calc(var(--controlHeight) + 4px);
+  padding: 2px;
+  transition: background-color .3s;
+  border-radius: var(--radius);*/
+  &.default{
+    &:focus{
+      outline: none;
+      animation-name: hoverFlash;
+      animation-duration: 2s;
+    }
+  }
+}
+
+.defaultCollapseButton{
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color .3s;
+  cursor: pointer;
+  min-height: calc(var(--controlHeight) + 4px);
+  width: calc(var(--controlHeight) + 4px);
+  appearance: none;
+  border: none;
+  &:hover{
+    background-color: var(--bgHover);
+  }
+  &:focus{
+    outline: none;
+    animation-name: focusFlash;
+    animation-duration: 2s;
+  }
+  & *:focus{
+    outline: none;
+  }
+}
+
+.labelArea{
+  display: flex;
+  flex-grow: 2;
+  color: var(--subLabelColor #999);
+  font-weight: bold;
+  justify-content: flex-start;
+  padding: 0 4px;
+  & h1, h2, h3, h4, h5, h6{
+    margin: none;
+  }
+}
+
+.content{
+  padding: calc(var(--gutter) / 2) calc(var(--gutter, .8em) * 1.5);
+}
+
+.separator{
+  width: calc(100% - var(--gutter) * 2);
+  border-bottom: 1px solid #cecece;
+  margin: auto;
+  margin-bottom: 14px;
+}
+
+.filterSetHeader{
+  composes: header;
+  border-radius: var(--radius 4px);
+  height: var(--controlHeight 28px);
+  appearance: none;
+  background: none;
+  border: none;
+  &:focus{
+    outline: none;
+    animation-name: focusFlash;
+    animation-duration: 2s;
+    background-color: var(--bgHover);
+  }
+}
+
+
+
+.filterSetlabel{
+  font-weight: bold;
+  color: var(--subLabelColor #999);
+  pointer-events: none;
+  user-select: none;
+}
+

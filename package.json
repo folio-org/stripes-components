@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "1.5.0",
+  "version": "1.7.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -55,7 +55,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "@folio/stripes-form": "^0.8.0",
+    "@folio/stripes-form": "^0.8.1",
     "@folio/stripes-react-hotkeys": "^1.0.0",
     "classnames": "^2.2.5",
     "create-react-class": "^15.5.3",
@@ -74,6 +74,6 @@
     "redux-form": "^7.0.3"
   },
   "peerDependencies": {
-    "stripes-core": "^1.13.0"
+    "stripes-core": "^2.7.0"
   }
 }

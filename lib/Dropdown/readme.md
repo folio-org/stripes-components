@@ -1,12 +1,17 @@
 # Dropdown
-A toggleable, contextual overlays for displaying lists of links and more.
+A toggleable, contextual overlay for displaying lists of links and more.
 
 ## Dropdown with Custom Tether Options
-UI-modules may add styling to the parent div's such as overflow:hidden which may result in cropping the dropdown .So Dropdown component used [react-tether](https://www.npmjs.com/package/react-tether) module which is a wrapper around  [tether](http://tether.io/) library to assist us with such issues ,which renders it's children as a new React subtree within **body** and absolute positions element so they stay next to another element. 
+Dropdown makes use of [react-tether](https://github.com/souporserious/react-tether) to render its menu to the **body** of the page by default. This overcomes issues with Dropdowns that might be cut off by containers with `overflow: hidden` in their styling. If any scrolling occurs, tether will also keep the menu element in the correct position relative to its corresponding `data-role="toggle"` component.
 
 ## Basic-Usage
+This basic version sets up a dropdown with it's open/closed status controlled by state. Note that the `onToggle` handler is passed to both the `<Dropdown>` component and the `<DropdownMenu>` component. `<DropdownMenu>` sets up listeners so that the `onToggle` function will be called if the user clicks anywhere outside of the menu in the DOM. 
 
 ```
+import { Dropdown } from '@folio/stripes-components/lib/Dropdown';
+
+//...
+
  <Dropdown 
   id="AddPermissionDropdown" 
   open={this.state.open} 
@@ -28,14 +33,17 @@ UI-modules may add styling to the parent div's such as overflow:hidden which may
         aria-label="available permissions"
         onToggle={this.onToggleAddPermDD}
       >
-        {permissionsDD}
+        <ul>
+          <li><a href="#">Example Link 1</a></li>
+          <li><a href="#">Example Link 2</a></li>
+        </ul>
       </DropdownMenu>
   </Dropdown>
 ```
 
 ## Advanced-Usage
 
-In case, ui-modules want to have some control on positioning, target element  or would like to use other options that are available with [tether](http://tether.io/#options) .This will be a very good example
+In case, ui-modules want to have some control on positioning, target element  or would like to use other options that are available with [tether][] .This will be a very good example
 
 ```
  const tether = {
@@ -68,6 +76,26 @@ In case, ui-modules want to have some control on positioning, target element  or
   </Dropdown>
 ```
 
+## UncontrolledDropdown-Usage
+
+If the module is unable to keep track of the `<Dropdown>`'s open/closed status within its state (such as dropdowns used in repeated table rows), Using the 'Uncontrolled' version is best.
+
+```
+import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
+
+  <UncontrolledDropdown
+      id="uniqueid"
+      pullRight
+      onSelect={handleOptionsChange}
+      onToggle={this.handleOptionsClick}
+    >
+      <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true" t>&#46;&#46;&#46;</Button>
+      <DropdownMenu
+        data-role="menu"
+        aria-label="available permissions"
+      > <Button type="button" data-action="renew" >Renew</Button></DropdownMenu>
+    </UncontrolledDropdown>
+```
 ## Properties
 
 | **Name**        | **Type**           | **Default**  | **Description**
@@ -80,6 +108,7 @@ In case, ui-modules want to have some control on positioning, target element  or
 | tether | object      |   |     For absolute postioning see the advanced example                                   |
 | disabled | bool      |   |                                        |
 | pullRight | bool      |   |                                        |
+| onSelect | function      |   |   callback for selecting item from menu in the uncontrolling component    |
 
 ## Default Props for tether
 
@@ -103,7 +132,7 @@ import {Dropdown} from 'react-bootstrap';
 ```
 To
 ```
-import Dropdown from '@folio/stripes-components/lib/Dropdown';
+import {Dropdown} from '@folio/stripes-components/lib/Dropdown';
 
 ```
 
@@ -146,3 +175,7 @@ To
   {permissionsDD}
 </DropdownMenu>
 ```
+
+[react-tether]: https://www.npmjs.com/package/react-tether
+[tether]: http://tether.io/
+[tether]: http://tether.io/#options
