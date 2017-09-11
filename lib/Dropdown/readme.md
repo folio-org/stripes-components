@@ -86,13 +86,13 @@ import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
   <UncontrolledDropdown
       id="uniqueid"
       pullRight
-      onSelect={handleOptionsChange}
       onToggle={this.handleOptionsClick}
     >
       <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true" t>&#46;&#46;&#46;</Button>
       <DropdownMenu
         data-role="menu"
         aria-label="available permissions"
+        onSelect={e => handleOptionsChange(e)}
       > <Button type="button" data-action="renew" >Renew</Button></DropdownMenu>
     </UncontrolledDropdown>
 ```
