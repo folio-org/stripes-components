@@ -10,7 +10,12 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 A library of React components and utility functions for Stripes.
 
 ## Links to documentation of specific components and utilities
+
+Note that some do not have a readme doc.
+See the full list in the [lib](lib) directory.
+
 * [`<Accordion>`](lib/Accordion/readme.md)
+* [`<Dropdown>`](lib/Dropdown/readme.md)
 * [`<MultiColumnList>`](lib/MultiColumnList/readme.md)
 * [`<FilterGroups>`](lib/FilterGroups/readme.md)
 * [`<FilterPane>`](lib/FilterPane/readme.md)
