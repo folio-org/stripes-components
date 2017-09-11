@@ -43,7 +43,7 @@ import { Dropdown } from '@folio/stripes-components/lib/Dropdown';
 
 ## Advanced-Usage
 
-In case, ui-modules want to have some control on positioning, target element  or would like to use other options that are available with [tether][] .This will be a very good example
+In case ui-modules want to have some control on positioning, target element, or would like to use other options that are available with [tether][]. This will be a very good example:
 
 ```
  const tether = {
@@ -78,7 +78,7 @@ In case, ui-modules want to have some control on positioning, target element  or
 
 ## UncontrolledDropdown-Usage
 
-If the module is unable to keep track of the `<Dropdown>`'s open/closed status within its state (such as dropdowns used in repeated table rows), Using the 'Uncontrolled' version is best.
+If the module is unable to keep track of the `<Dropdown>`'s open/closed status within its state (such as dropdowns used in repeated table rows), using the 'Uncontrolled' version is best.
 
 ```
 import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
@@ -114,17 +114,17 @@ import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
 
 | **Name**        | **Type**           | **Default**  | **Description**
 | ------------- |:-------------:| -----:|------------:|
-| attachment      | string | top center |  Positioning of the dropdown. A string of the form 'vert-attachment horiz-attachment'vert-attachment can be any of 'top', 'middle', 'bottom' horiz-attachment can be any of 'left', 'center', 'right'|
+| attachment      | string | top center |  Positioning of the dropdown. A string of the form 'vert-attachment horiz-attachment'. The vert-attachment can be any of 'top', 'middle', 'bottom'. The horiz-attachment can be any of 'left', 'center', 'right'|
 | targetAttachment      | string | bottom center |  Positioning of the dropdown. A string similar to attachment. The one difference is that, if it's not provided, targetAttachment will assume the mirror image of attachment.|
 | renderElementTo      | string     | document.body  |    Tells it where in the DOM tree to actually render the element |
 | constraints     | object   |  [{to: 'window',attachment: 'together',},{to: 'scrollParent',pin: true,},],|
 
 
-### Upgrading from Dropdown.
+### Upgrading from Dropdown
 
-Replace imports and make sure update following props
+Replace imports and make sure to update following props
 * Update roles attribute bsRole => data-role
-* Need to add either dropdown bool or tether object props based on the requirement .Please look for examples above 
+* Need to add either dropdown bool or tether object props based on the requirement. Please look for examples above .
 
 1) Change 
 ```
