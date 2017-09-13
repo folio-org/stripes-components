@@ -50,6 +50,8 @@
     "jsdom": "^9.3.0",
     "mocha": "^2.5.3",
     "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "sinon": "^1.17.4",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
