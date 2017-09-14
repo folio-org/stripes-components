@@ -7,6 +7,7 @@
 * Use metadata, not metaData. See MODNOTES-2.
 * Correctly update note's link when selected user changes. Fixes STUTILNOTE-1.
 * Explicitly gray out text inputs. Fixes STCOM-9
+* Animated Transitions added to `<Accordion>`.
 
 ## [1.7.0](https://github.com/folio-org/stripes-components/tree/v1.7.0) (2017-09-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.6.0...v1.7.0)
