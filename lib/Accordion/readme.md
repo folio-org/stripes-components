@@ -98,7 +98,7 @@ Accordions can also be controlled outside of an accordion set... this works if y
 ## Custom Headers
 The default header suits many cases, but if it is not adequate, a custom header can be provided via `<Accordion>`'s `header` prop. A custom header component should take `ContentId` prop in order to appropriately apply aria-attributes to the custom header. Any props passed to `<Accordion>` will also be passed to its `header` component.
 
-## Props
+## Accordion Props
 
 Name | type | description | default | required
 --- | --- | --- | --- | ---
@@ -111,3 +111,20 @@ onToggle | func | callback for toggling the accordion open/closed | |
 header | node, func | used to render a custom accordion header | | 
 contentRef | func | reference function for accessing the accordion content's DOM element. | | 
 children | node, array of nodes | content of the accordion | |
+
+## Expand or Collapse All
+The `<ExpandAllButton>` component can be added to a stack of controlled accordions to provide a helper for performing collapse/expansions of the full stack all at once. The `onToggle` prop for `<ExpandAllButton>` takes a callback using the accordionStatus object that can be used to update the application's state.
+
+```
+// handler for ExpandAll...
+  handleExpandAll(newAccordionStatus) {
+    this.setState((curState) => {
+      const newState = _.cloneDeep(curState);
+      newState.accordions = newAccordionStatus;
+      return newState;
+    });
+  }
+
+// in JSX
+  <ExpandAllButton accordionStatus={this.state.accordions} onToggle={this.handleExpandAll} />
+```
