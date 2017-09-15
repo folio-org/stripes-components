@@ -5,6 +5,9 @@
     "import/resolver": {
       "webpack": {}
     },
+    "react": {
+      "version": "15.6.1"
+    },
   },
   "env": {
     "browser": true,
@@ -36,6 +39,7 @@
         tags: [],
         roles: ['tabpanel', 'dialog'],
       },
-    ]
+    ],
+    "jsx-a11y/href-no-hash": "off",
   }
 }
