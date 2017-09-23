@@ -31,12 +31,7 @@
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.18.0",
     "eslint": "^4.7.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-import-resolver-webpack": "^0.8.3",
-    "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.3.0",
+    "eslint-config-stripes": "^0.0.1",
     "webpack": "1.11.0"
   },
   "dependencies": {
