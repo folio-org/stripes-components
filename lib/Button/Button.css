@@ -170,9 +170,19 @@ a.button{
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
   }
+  &.lastBorderOnly {
+    border-right-color: transparent !important;
+  }
   &.transparent{
     background-color: transparent;
     border: 1px solid transparent;
+  }
+  &.link{
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: var(--primary);
+    padding: 4px;
   }
   &.bottomMargin0, &.marginBottom0{
     margin-bottom: 0;

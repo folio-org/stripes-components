@@ -14,7 +14,7 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
       id="uniqueid"
       pullRight
       onToggle={this.handleOptionsClick}
-      onSelect={e => handleOptionsChange(e)}
+      onSelectItem={handleOptionsChange}
     >
       <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true" t>&#46;&#46;&#46;</Button>
       <DropdownMenu
@@ -22,7 +22,7 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
         aria-label="available permissions"
       > 
         <button type="button">Example</button>
-        <MenuItem>
+        <MenuItem itemMeta={{ data, action: 'test' }}>
           <Button type="button" data-action="example" >Example1</Button>
            <button type="button"  >Example2</button>
         </MenuItem>
@@ -36,3 +36,4 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
 | ------------- |:-------------:| -----:|------------:|
 |children | node, array of nodes | |content of the DropdownMenu |
 | onClick | function      |   |   callback fired when clicking the element|
+| itemMeta | object      |   |   Value passed to the `onClick` handler, useful for identifying the selected menu item.  |

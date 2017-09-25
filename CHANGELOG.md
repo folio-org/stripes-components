@@ -7,6 +7,12 @@
 * Use metadata, not metaData. See MODNOTES-2.
 * Correctly update note's link when selected user changes. Fixes STUTILNOTE-1.
 * Explicitly gray out text inputs. Fixes STCOM-9
+* Animated Transitions added to `<Accordion>`.
+* `<ExpandAllButton>` added to `<Accordion>`. Part of STCOM-71. See [docs](lib/Accordion/readme.md#expand-or-collapse-all)
+* Pass native input props into `<RadioButton>`. Fixes STCOM-73
+* Add `<SegmentedControl>` component. Resolves STCOM-77. See [docs](lib/SegmentedControl/readme.md).
+* DropdownLayout CSS utility classes added to aid in layout of custom Dropdowns.
+* Refactor out `<Notes>` completely. See STUTILNOTE-2.
 
 ## [1.7.0](https://github.com/folio-org/stripes-components/tree/v1.7.0) (2017-09-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.6.0...v1.7.0)

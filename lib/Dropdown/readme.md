@@ -80,7 +80,7 @@ In case ui-modules want to have some control on positioning, target element, or 
 
 If the module is unable to keep track of the `<Dropdown>`'s open/closed status within its state (such as dropdowns used in repeated table rows), using the 'Uncontrolled' version is best.
 
-Note :Adding `<MenuItem>` for the children in the `<DropdownMenu>` will have an ability to close the dropdown on clicking the menuItems element.  
+Note :Adding `<MenuItem itemMeta={{metaData:'data' }}>` for the children in the `<DropdownMenu>` will have an ability to close the dropdown on clicking the menuItems element and be able to pass in any meta data specific to the items.  
 
 ```
 import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
@@ -90,14 +90,14 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
       id="uniqueid"
       pullRight
       onToggle={this.handleOptionsClick}
-      onSelect={e => handleOptionsChange(e)}
+      onSelectItem={handleOptionsChange}
     >
       <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true" t>&#46;&#46;&#46;</Button>
       <DropdownMenu
         data-role="menu"
         aria-label="available permissions"
       > 
-        <MenuItem>
+        <MenuItem itemMeta={{metaData:'data' }}>
           <Button type="button" data-action="renew" >Renew</Button>
         </MenuItem>
       </DropdownMenu>
@@ -115,7 +115,7 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
 | tether | object      |   |     For absolute postioning see the advanced example                                   |
 | disabled | bool      |   |                                        |
 | pullRight | bool      |   |                                        |
-| onSelect | function      |   |   callback for selecting item from menu in the uncontrolling component    |
+| onSelectItem | function      |   |   callback for selecting item from menu in the uncontrolling component    |
 
 ## Default Props for tether
 
@@ -182,6 +182,7 @@ To
   {permissionsDD}
 </DropdownMenu>
 ```
+3) In the case of `onSelect` prop is now `onSelectItem`
 
 [react-tether]: https://www.npmjs.com/package/react-tether
 [tether]: http://tether.io/

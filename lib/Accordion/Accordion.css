@@ -23,7 +23,7 @@
   align-items: center;
   min-height: calc(var(--controlHeight) + 4px);
   transition: background-color .3s;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
   & button,& h1,& h2,& h3,& h4,& h5,& h6{
     margin: 0;
   }
@@ -91,7 +91,13 @@
 }
 
 .content{
-  padding: calc(var(--gutter) / 2) calc(var(--gutter, .8em) * 1.5);
+  padding: 0 calc(var(--gutter, .8em) * 1.5);
+  max-height: 0; /* hidden */
+  overflow: hidden;
+  transition: max-height .25s ease;
+  &.expanded{
+    max-height: none; /* max-height applied inline */
+  }
 }
 
 .separator{

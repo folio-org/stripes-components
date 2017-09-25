@@ -1,5 +1,6 @@
 /* dom.js */
 const jsdom = require('jsdom').jsdom;
+
 const exposedProperties = ['window', 'navigator', 'document'];
 
 global.document = jsdom('');
@@ -12,5 +13,5 @@ Object.keys(document.defaultView).forEach((property) => {
 });
 
 global.navigator = {
-  userAgent: 'node.js'
+  userAgent: 'node.js',
 };
