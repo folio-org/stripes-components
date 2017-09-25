@@ -90,7 +90,7 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
       id="uniqueid"
       pullRight
       onToggle={this.handleOptionsClick}
-      onSelect={handleOptionsChange}
+      onSelectItem={handleOptionsChange}
     >
       <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true" t>&#46;&#46;&#46;</Button>
       <DropdownMenu
@@ -115,7 +115,7 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
 | tether | object      |   |     For absolute postioning see the advanced example                                   |
 | disabled | bool      |   |                                        |
 | pullRight | bool      |   |                                        |
-| onSelect | function      |   |   callback for selecting item from menu in the uncontrolling component    |
+| onSelectItem | function      |   |   callback for selecting item from menu in the uncontrolling component    |
 
 ## Default Props for tether
 
@@ -182,6 +182,7 @@ To
   {permissionsDD}
 </DropdownMenu>
 ```
+3) In the case of `onSelect` prop is now `onSelectItem`
 
 [react-tether]: https://www.npmjs.com/package/react-tether
 [tether]: http://tether.io/

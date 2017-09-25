@@ -14,7 +14,7 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
       id="uniqueid"
       pullRight
       onToggle={this.handleOptionsClick}
-      onSelect={handleOptionsChange}
+      onSelectItem={handleOptionsChange}
     >
       <Button align="end" bottomMargin0 data-role="toggle" aria-haspopup="true" t>&#46;&#46;&#46;</Button>
       <DropdownMenu
