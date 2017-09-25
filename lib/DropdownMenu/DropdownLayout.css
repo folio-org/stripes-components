@@ -1,0 +1,31 @@
+@import '../variables.css';
+
+.dropdownHeader{
+  padding: 6px 8px;
+  border-bottom: 1px solid #bbb;
+  font-weight: bold;
+  &+.dropdownBody{
+    height: calc(100% - 33px);
+  }
+}
+
+.dropdownBody{
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.dropdownColumn{
+  height: 100%;
+  overflow: auto;
+  padding: 8px;
+  &+.dropdownColumn{
+    border-left: 1px solid #bbb;
+  }
+  &.secondary{
+    background-color: var(--bgHover);
+  }
+  &.fill{
+    flex-grow: 2;
+  }
+}
