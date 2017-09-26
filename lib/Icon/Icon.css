@@ -1,5 +1,8 @@
 .root{
   margin: 0 4px;
+  &:focus{
+    outline: none;
+  }
 }
 
 :global .stripes__icon{

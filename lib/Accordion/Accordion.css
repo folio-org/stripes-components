@@ -17,13 +17,11 @@
 
 .headerWrapper{
   width: 100%;
-  padding: 0 8px;
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   min-height: calc(var(--controlHeight) + 4px);
   transition: background-color .3s;
-  margin-bottom: 12px;
   & button,& h1,& h2,& h3,& h4,& h5,& h6{
     margin: 0;
   }
@@ -42,12 +40,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*cursor: pointer;
-  min-height: calc(var(--controlHeight) + 4px);
-  padding: 2px;
-  transition: background-color .3s;
-  border-radius: var(--radius);*/
   &.default{
+    margin-bottom: 12px;
     &:focus{
       outline: none;
       animation-name: hoverFlash;
@@ -70,8 +64,7 @@
   }
   &:focus{
     outline: none;
-    animation-name: focusFlash;
-    animation-duration: 2s;
+    background-color: var(--bgHover); 
   }
   & *:focus{
     outline: none;
@@ -101,7 +94,7 @@
 }
 
 .separator{
-  width: calc(100% - var(--gutter) * 2);
+  width: 100%;
   border-bottom: 1px solid #cecece;
   margin: auto;
   margin-bottom: 14px;
@@ -122,12 +115,9 @@
   }
 }
 
-
-
 .filterSetlabel{
   font-weight: bold;
   color: var(--subLabelColor #999);
   pointer-events: none;
   user-select: none;
 }
-
