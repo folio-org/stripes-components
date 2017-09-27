@@ -12,6 +12,7 @@
 * Pass native input props into `<RadioButton>`. Fixes STCOM-73
 * Add `<SegmentedControl>` component. Resolves STCOM-77. See [docs](lib/SegmentedControl/readme.md).
 * DropdownLayout CSS utility classes added to aid in layout of custom Dropdowns.
+* `<RadioButtonGroup>` allows non-radio children for varied structure to RadioButton fields. Fixes STCOM-82.
 * Refactor out `<Notes>` completely. See STUTILNOTE-2.
 
 ## [1.7.0](https://github.com/folio-org/stripes-components/tree/v1.7.0) (2017-09-01)

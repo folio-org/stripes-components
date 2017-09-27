@@ -120,7 +120,7 @@ The `<ExpandAllButton>` component can be added to a stack of controlled accordio
   handleExpandAll(newAccordionStatus) {
     this.setState((curState) => {
       const newState = _.cloneDeep(curState);
-      newState.accordions = newAccordionStatus;
+      newState.accordions = newAccordionStatus; // substitute 'accordions' with your designated status object's name.
       return newState;
     });
   }
