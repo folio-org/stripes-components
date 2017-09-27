@@ -10,8 +10,7 @@
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
     "lint": "eslint lib || true",
-    "test": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles",
-    "test-watch": "mocha --compilers js:babel-core/register -w --watch-extensions json"
+    "test": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles"
   },
   "engines": {
     "node": ">=6.0.0"
