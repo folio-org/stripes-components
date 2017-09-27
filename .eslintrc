@@ -1,4 +1,12 @@
 {
+  "globals": {
+    "expect": true,
+    "describe":true,
+    "shallow":true,
+    "spy":true,
+    "it":true,
+    "mount":true,
+  },
   "extends": "stripes",
   "parser": "babel-eslint"
 }
