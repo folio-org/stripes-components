@@ -1,0 +1,4 @@
+
+buildNPM {
+  publishModDescriptor = 'no'
+}  
