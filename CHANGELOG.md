@@ -1,6 +1,10 @@
 # Change history for stripes-components
 
-## 1.8.0 IN-PROGRESS
+## 1.9.0 IN progress
+* Really restore missing props to generated component in `<TextField>` and `<Button>`. See STCOM-83. Fixes STCOM-84.
+
+## [1.8.0](https://github.com/folio-org/stripes-components/tree/v1.8.0) (2017-09-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.7.0...v1.8.0)
 
 * `<Dropdown>` component added. See [docs](lib/Dropdown/readme.md). Part of STCOM-34.
 * `react-tether` dependency added for `<Dropdown>`.
@@ -14,6 +18,7 @@
 * DropdownLayout CSS utility classes added to aid in layout of custom Dropdowns.
 * `<RadioButtonGroup>` allows non-radio children for varied structure to RadioButton fields. Fixes STCOM-82.
 * Refactor out `<Notes>` completely. See STUTILNOTE-2.
+* Restore missing props to generated component in `<TextField>`. Fixes STCOM-83.
 
 ## [1.7.0](https://github.com/folio-org/stripes-components/tree/v1.7.0) (2017-09-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.6.0...v1.7.0)
