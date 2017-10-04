@@ -9,7 +9,7 @@
   },
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "lint": "eslint lib || true",
+    "lint": "eslint lib",
     "test": "mocha --require babel-test-hook --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles"
   },
   "engines": {
