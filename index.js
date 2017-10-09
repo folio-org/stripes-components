@@ -4,6 +4,7 @@ export { default as Checkbox } from './lib/Checkbox';
 export { default as RadioButton } from './lib/RadioButton';
 export { default as Select } from './lib/Select';
 export { default as TextField } from './lib/TextField';
+export { default as Badge } from './lib/Badge';
 
 /*data containers*/
 export { default as KeyValue } from './lib/KeyValue';
