@@ -113,6 +113,19 @@ a.button{
       }
     }
 
+    &.dropdownActive{
+      &[aria-expanded="true"]{
+        border: 1px solid var(--secondary);
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+
+    &.textAlignStart{
+      text-align:left;
+    }
+
     &.paneHeaderButton{
       background-color: transparent;
       border: 1px solid transparent;
@@ -225,6 +238,9 @@ a.button{
   &.button{
     &:first-child{
       margin-right: 0;
+    }
+    &.textAlignStart{
+      text-align:right;
     }
   }
 }

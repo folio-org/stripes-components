@@ -66,4 +66,5 @@ firstMenu | node | Component (typically an instance of `<PaneMenu>`) to render b
 lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the far end of the header. |  | 
 onClose | func | Callback fired when the pane is closed using its dismiss button. |  | 
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  | 
-
+contentPadding | number | Amount of padding (in pixels) to apply to Pane's content `<div>` | 16 | 
+noOverflow | bool | set to true if the Pane content is not expected to scroll. This can cure issues with flashing scrollbars on search result Panes. | false |
