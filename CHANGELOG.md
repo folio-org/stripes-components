@@ -3,6 +3,8 @@
 ## 1.9.0 IN progress
 * Really restore missing props to generated component in `<TextField>` and `<Button>`. See STCOM-83. Fixes STCOM-84.
 * Add Badge component. Fixes STCOM-90.
+* Props `noOverflow` and `contentPadding` added to `<Pane>`. See [docs](lib/Pane/readme.md).
+* `<Dropdown>` supportive classes added to `<Button>`.
 
 ## [1.8.0](https://github.com/folio-org/stripes-components/tree/v1.8.0) (2017-09-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.7.0...v1.8.0)
