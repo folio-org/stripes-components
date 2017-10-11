@@ -54,6 +54,11 @@
   }
 }
 
+/* fix for shrinkage issues with checkbox as a flex-child */
+:global input[type='checkbox']{
+  min-width: 16px;
+}
+
 input[type='checkbox'].checkboxInput{
   vertical-align: middle;
   margin: 0 9px;

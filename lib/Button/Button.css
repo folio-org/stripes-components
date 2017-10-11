@@ -114,10 +114,23 @@ a.button{
     }
 
     &.dropdownActive{
-      &[aria-expanded="true"]{
+      &[aria-expanded="true"], &:focus{
         border: 1px solid var(--secondary);
       }
       &:focus{
+        outline: none;
+      }
+    }
+
+    &.dropdownItem{
+      text-align:left;
+      margin-bottom: 0;
+      background-color: transparent;
+      border: 1px solid transparent;
+      width: 100%;
+      border-radius: 0;
+      &:hover, &:focus{
+        background-color: var(--bgHover);
         outline: none;
       }
     }

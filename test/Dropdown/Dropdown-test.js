@@ -2,6 +2,7 @@ import React from 'react';
 import { Dropdown, UncontrolledDropdown } from '../../lib/Dropdown';
 import Button from '../../lib/Button';
 import DropdownMenu from '../../lib/DropdownMenu';
+import { configKeyEvent } from '../eventHelpers';
 
 const CustomMenu = props => (<div className="custom-menu"> {props.children}</div>);
 
@@ -143,7 +144,7 @@ describe('Dropdown', () => {
         </DropdownMenu>
       </Dropdown>);
     expect(Dropdown.prototype.handleKeyDown.calledOnce).to.equal(false);
-    wrapper.children().find('Button').simulate('keydown', { preventDefault: () => {}, keyCode: 40 });
+    wrapper.children().find('Button').simulate('keydown', configKeyEvent(40));
     expect(Dropdown.prototype.handleKeyDown.calledOnce).to.equal(true);
   });
 
@@ -159,7 +160,7 @@ describe('Dropdown', () => {
           {dropdownMenuChildren}
         </DropdownMenu>
       </Dropdown>);
-    wrapper.children().find('Button').simulate('keydown', { preventDefault: () => {}, keyCode: 9 });
+    wrapper.children().find('Button').simulate('keydown', configKeyEvent(9));
     expect(Dropdown.prototype.handleKeyDown.calledTwice).to.equal(true);
   });
   it('should pass event, and source correctly when opened with enter', () => {
@@ -174,7 +175,7 @@ describe('Dropdown', () => {
           {dropdownMenuChildren}
         </DropdownMenu>
       </Dropdown>);
-    wrapper.children().find('Button').simulate('keydown', { preventDefault: () => {}, keyCode: 13 });
+    wrapper.children().find('Button').simulate('keydown', configKeyEvent(13));
     expect(Dropdown.prototype.handleKeyDown.calledThrice).to.equal(true);
   });
 });
