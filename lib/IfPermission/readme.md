@@ -18,7 +18,7 @@ A single property is supported:
 
 ## Advanced Conditional Rendering
 
-If your situation requires conditional rendering in case the user does not have the required permission, use the stripes object's `hasPerm()` function directly instead of the `<IfPermission>` component in your JSX, like so:
+If your situation requires conditional rendering in case the user does not have the required permission, use the `stripes` object's `hasPerm()` function directly instead of the `<IfPermission>` component in your JSX, like so:
 
 ```
 <div>
