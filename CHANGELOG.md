@@ -5,9 +5,10 @@
 
 * Really restore missing props to generated component in `<TextField>` and `<Button>`. See STCOM-83. Fixes STCOM-84.
 * Add Badge component. Fixes STCOM-90.
-* Props `noOverflow` and `contentPadding` added to `<Pane>`. See [docs](lib/Pane/readme.md).
+* Props `noOverflow` and `contentPadding` added to `<Pane>`. See [docs](lib/Pane/readme.md). Fixes STCOM-40.
 * `<Dropdown>` supportive classes added to `<Button>`.
-* Add `<EntrySelector>`, copied from ui-circulation so it can also be used in other modules. Fixes STCOM-92.
+* Add `<EntrySelector>`, copied from ui-circulation so it can also be used in other modules.
+* Add 'else' conditional example to documentaion for `<IfPermission>`. See [docs](lib/IfPermission/readme.md). Fixes STCOM-93.
 
 ## [1.8.0](https://github.com/folio-org/stripes-components/tree/v1.8.0) (2017-09-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.7.0...v1.8.0)
