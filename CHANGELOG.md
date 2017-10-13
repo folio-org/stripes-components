@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 1.9.0 (IN PROGRESS)
+## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
 
 * Really restore missing props to generated component in `<TextField>` and `<Button>`. See STCOM-83. Fixes STCOM-84.
 * Add Badge component. Fixes STCOM-90.
