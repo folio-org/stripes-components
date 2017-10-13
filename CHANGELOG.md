@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 1.9.0 IN progress
+## 1.9.0 (IN PROGRESS)
+
 * Really restore missing props to generated component in `<TextField>` and `<Button>`. See STCOM-83. Fixes STCOM-84.
 * Add Badge component. Fixes STCOM-90.
 * Props `noOverflow` and `contentPadding` added to `<Pane>`. See [docs](lib/Pane/readme.md).
