@@ -6,7 +6,7 @@
 * Really restore missing props to generated component in `<TextField>` and `<Button>`. See STCOM-83. Fixes STCOM-84.
 * Add Badge component. Fixes STCOM-90.
 * Props `noOverflow` and `contentPadding` added to `<Pane>`. See [docs](lib/Pane/readme.md). Fixes STCOM-40.
-* `<Dropdown>` supportive classes added to `<Button>`.
+* `<Dropdown>` supportive classes added to `<Button>`. Fixes STCOM-68.
 * Add `<EntrySelector>`, copied from ui-circulation so it can also be used in other modules.
 * Add 'else' conditional example to documentaion for `<IfPermission>`. See [docs](lib/IfPermission/readme.md). Fixes STCOM-93.
 
