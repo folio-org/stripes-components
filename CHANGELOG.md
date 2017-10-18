@@ -1,4 +1,8 @@
 # Change history for stripes-components
+## In-Progress
+
+* Added `<ConfirmationModal>` component to 'structures' folder. Supports STCOM-66. See [docs](lib/structures/ConfirmationModal/readme.md).
+* Added `<Callout>` component for supplying feedback to the user with various actions. Supports STCOM-66. See [docs](lib/Callout/readme.md).
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
