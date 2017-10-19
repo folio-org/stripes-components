@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 2.0.0 (IN PROGRESS)
+
+* Refactor `<EntrySelector>` to make it more reusable. Fixes STCOM-97.
+
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
 
