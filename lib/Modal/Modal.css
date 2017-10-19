@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .modalRoot{
   display: flex;
   justify-content: center;
@@ -16,6 +18,8 @@
   max-height: 80vh;
   width: 60%;
   overflow: hidden;
+  border-radius: var(--radius, 4px);
+  box-shadow: 0px 5px 28px 1px rgba(0,0,0,0.75);
   &.small{
     width: 40%;
   }
@@ -74,4 +78,12 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.4);
+}
+
+@media(--small){
+  .modal{
+    &.small, &.large{
+      width: 80vw;
+    }
+  }
 }
