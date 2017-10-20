@@ -3,6 +3,7 @@
 
 * Added `<ConfirmationModal>` component to 'structures' folder. Supports STCOM-66. See [docs](lib/structures/ConfirmationModal/readme.md).
 * Added `<Callout>` component for supplying feedback to the user with various actions. Supports STCOM-66. See [docs](lib/Callout/readme.md).
+* Fix connect in `<Settings>`. Fixes STCOM-99.
 
 ## 2.0.0 (IN PROGRESS)
 
