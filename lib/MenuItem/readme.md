@@ -4,7 +4,7 @@ Wrapper component for the DropdownMenu children to provide control on menu items
 Example use case is when using UncontrolledDropdown.
 
 ## Basic-Usage
-This basic usage is for UncontrolledDropdown sets up a dropdown closed status when selected  any items inside the DropdownMenu 
+This basic usage is for UncontrolledDropdown sets up a dropdown closed status when selected  any items inside the DropdownMenu
 
 ```js
 import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
@@ -20,7 +20,7 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
       <DropdownMenu
         data-role="menu"
         aria-label="available permissions"
-      > 
+      >
         <button type="button">Example</button>
         <MenuItem itemMeta={{ data, action: 'test' }}>
           <Button type="button" data-action="example" >Example1</Button>

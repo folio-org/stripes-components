@@ -1,7 +1,7 @@
 # RadioButtonGroup
 
 Convenient wrapper component for sets of radio buttons. Will pass `name` prop as well as other shared props down to `<RadioButton>` children.
-The component will automatically render radio buttons within a `<FieldGroup>` with the value for the `label` prop applied as a `<legend>`. Non-`<RadioButton>` children can also be passed for alternative layouts, but **RadioButtons should still be direct descendants**. 
+The component will automatically render radio buttons within a `<FieldGroup>` with the value for the `label` prop applied as a `<legend>`. Non-`<RadioButton>` children can also be passed for alternative layouts, but **RadioButtons should still be direct descendants**.
 
 ## Usage
 Example with redux-form `<Field>` component:
@@ -18,7 +18,7 @@ Example with redux-form `<Field>` component:
 ```
 
 ## Props
-Name | type | description | default | required | 
+Name | type | description | default | required |
 --- | --- | --- | --- | --- |
 selectedValue | string | Sets default value for radio button set - **Not necessary for redux-form - will use the form's initialValues prop instead** | | |
 children | node or array of nodes | Set of `<RadioButton>`s for usage. Can include other tags (headers, spans, etc). | | &#10004;|
