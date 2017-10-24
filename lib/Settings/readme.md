@@ -28,4 +28,4 @@ The following properties are supported:
   * `label`: the human-readable label that, when clicked on, links to the specified route.
   * `component`: the component that is rendered at the specified route.
   * `perm`: if specified, the name of a permission which the current user must have in order to access the page; if the user lacks the permission, then the link is not provided. (If omitted, then no permission check is performed for the sub-page.)
-	  
+

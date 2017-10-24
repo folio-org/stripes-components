@@ -1,5 +1,5 @@
-# Callouts
-Keep your user informed about the actions they take! Callouts creates a small alert that appears at the bottom of the workspace.
+# Callout
+Keep your user informed about the actions they take! Callout creates a small alert that appears at the bottom of the workspace.
 
 ## Usage
 Simply add the `<Callout>` component to your module with a ref. This works best at the highest level of your module.
@@ -21,5 +21,5 @@ Use the ref to the `<Callout>` to call the `sendCallout` method, supplying a con
 prop | description | default | required
 -- | -- | -- | --
 type | 'error' or 'success'. | 'success' |
-timeout | timeout for automatic dismissal. Can be set to 0 to only allow for user-dismissal. | 6000 | 
-message | String or HTML to render in the content of the callout. | | #&10004;
+timeout | timeout for automatic dismissal. Can be set to 0 to only allow for user-dismissal. | 6000 |
+message | String or HTML to render in the content of the callout. | | &#10004;

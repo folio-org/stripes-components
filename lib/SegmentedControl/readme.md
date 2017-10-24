@@ -2,7 +2,7 @@
 Creates a split button set that can be used for filters, tabs, and other subnavigation.
 
 ## Usage
-`<SegmentedControl>` will accept one or more `<Button>` components as children. **Each child button should have its own unique `id` prop.** 
+`<SegmentedControl>` will accept one or more `<Button>` components as children. **Each child button should have its own unique `id` prop.**
 ```
 import SegmentedControl from '@folio/stripes-components/lib/SegmentedControl';
 // ...
@@ -32,6 +32,6 @@ Additionally, each child `<Button>` can have its own `onClick` handler as well f
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 tag | string | Set the HTML tag used to wrap the button set. | 'nav' |
-activeId | string | Which of the child `<Button>`s gets "active" styling |  | 
-onActivate | func | Handler called when a child `<Button>` is clicked |  | 
-children | node | Set of `<Button>`s. |  | 
+activeId | string | Which of the child `<Button>`s gets "active" styling |  |
+onActivate | func | Handler called when a child `<Button>` is clicked |  |
+children | node | Set of `<Button>`s. |  |
