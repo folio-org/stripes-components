@@ -1,5 +1,5 @@
-# Callouts
-Keep your user informed about the actions they take! Callouts creates a small alert that appears at the bottom of the workspace.
+# Callout
+Keep your user informed about the actions they take! Callout creates a small alert that appears at the bottom of the workspace.
 
 ## Usage
 Simply add the `<Callout>` component to your module with a ref. This works best at the highest level of your module.

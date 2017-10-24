@@ -21,5 +21,5 @@ Example with redux-form `<Field>` component:
 Name | type | description | default | required |
 --- | --- | --- | --- | --- |
 selectedValue | string | Sets default value for radio button set - **Not necessary for redux-form - will use the form's initialValues prop instead** | | |
-children | node or array of nodes | Set of `<RadioButton>`s for usage. Can include other tags (headers, spans, etc). | | &#10004;|
+children | node or array of nodes | Set of `<RadioButton>`s for usage. Can include other tags (headers, spans, etc.) | | &#10004;|
 label | string or node | Content to render in the `<legend>` tag of the created `<fieldset>`. | | |
