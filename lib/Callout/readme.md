@@ -22,4 +22,4 @@ prop | description | default | required
 -- | -- | -- | --
 type | 'error' or 'success'. | 'success' |
 timeout | timeout for automatic dismissal. Can be set to 0 to only allow for user-dismissal. | 6000 |
-message | String or HTML to render in the content of the callout. | | #&10004;
+message | String or HTML to render in the content of the callout. | | &#10004;
