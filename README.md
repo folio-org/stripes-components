@@ -15,6 +15,8 @@ Note that some do not have a readme doc.
 See the full list in the [lib](lib) directory.
 
 * [`<Accordion>`](lib/Accordion/readme.md)
+* [`<Callout>`](lib/Callout/readme.md)
+* [`<ConfirmationModal>`](lib/structures/ConfirmationModal/readme.md)
 * [`<Dropdown>`](lib/Dropdown/readme.md)
 * [`<MultiColumnList>`](lib/MultiColumnList/readme.md)
 * [`<FilterGroups>`](lib/FilterGroups/readme.md)
@@ -30,7 +32,10 @@ See the full list in the [lib](lib) directory.
 * [`<Pane>`](lib/Pane/readme.md)
 * [`<Layer>`](lib/Layer/readme.md)
 * [`<LayoutGrid>`](lib/LayoutGrid/readme.md)
+* [`<MenuItem>`](lib/MenuItem/readme.md)
 * [`<Modal>`](lib/Modal/readme.md)
+* [`<RadioButtonGroup>`](lib/RadioButtonGroup/readme.md)
+* [`<SegmentedControl>`](lib/SegmentedControl/readme.md)
 * [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup/readme.md)
 * [`<Settings>`](lib/Settings/readme.md)
 * [`<SRStatus>`](lib/SRStatus/readme.md)

@@ -45,4 +45,4 @@ open | bool | Boolean reflecting modal's open/closed status |  | &#10004;
 cancelLabel | string | String to render on the Cancel action. | "Cancel" |
 confirmLabel | string | String to render on the Submit action. | "Submit" |
 onConfirm | func | Callback fired when the Submit button is clicked |  | &#10004;
-onCancel | func | Callback fired when the Cancel button is clicked |  | &#10004; 
+onCancel | func | Callback fired when the Cancel button is clicked |  | &#10004;
