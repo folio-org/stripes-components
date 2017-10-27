@@ -5,6 +5,10 @@
 * Added `<Callout>` component for supplying feedback to the user with various actions. Supports STCOM-66. See [docs](lib/Callout/readme.md).
 * Fix connect in `<Settings>`. Fixes STCOM-99.
 * Update `<EntrySelector>`. Fixes STCOM-100.
+* Address FieldGroup uses a radio button for setting 'Primary' field. Fixes UIU-260.
+* Address FieldGroup's Address Type field will only display options that are previously unused in the address form. Fixes UIU-260.
+* Aesthetic updates - Delete button is now a trashcan Icon. Fixes UIU-260.
+* Changes in field order- Address Type comes first, Country is last. Fixes UIU-260.
 
 ## 2.0.0 (IN PROGRESS)
 
