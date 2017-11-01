@@ -9,6 +9,7 @@
 * Address FieldGroup's Address Type field will only display options that are previously unused in the address form. Fixes UIU-260.
 * Aesthetic updates - Delete button is now a trashcan Icon. Fixes UIU-260.
 * Changes in field order- Address Type comes first, Country is last. Fixes UIU-260.
+* Add onClick callback to `<EntrySelector>`. Refs UICIRC-20 Scenario 5.
 
 ## 2.0.0 (IN PROGRESS)
 
