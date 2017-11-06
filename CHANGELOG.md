@@ -9,6 +9,7 @@
 ## 2.0.0 (IN PROGRESS)
 
 * Refactor `<EntrySelector>` to make it more reusable. Fixes STCOM-97.
+* Fix bug in `<Datepicker>` mis-handling non-US date formats. Fixes STCOM-110.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
