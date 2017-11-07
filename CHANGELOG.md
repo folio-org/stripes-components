@@ -12,7 +12,7 @@
 * Aesthetic updates - Delete button is now a trashcan Icon. Fixes UIU-260.
 * Changes in field order- Address Type comes first, Country is last. Fixes UIU-260.
 * Add onClick callback to `<EntrySelector>`. Refs UICIRC-20 Scenario 5.
-* `transitionToParams` use `queryString.stringify` instead of by-hand gluing. Fixes STCOM-112
+* `transitionToParams` uses `queryString.stringify` instead of by-hand gluing. Fixes STCOM-112
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
