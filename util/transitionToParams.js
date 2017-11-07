@@ -11,7 +11,7 @@ function transitionToParams(params) {
 
   let url = location.pathname;
   if (keys.length) {
-    url += `?${keys.map(key => `${key}=${encodeURIComponent(allParams[key])}`).join('&')}`;
+    url += `?${queryString.stringify(allParams)}`;
   }
 
   this.props.history.push(url);
