@@ -45,3 +45,12 @@
 .marginTop1{
   margin-top: .1rem;
 }
+
+[dir="rtl"]{
+  & .right {
+    float: left;
+  }
+  & .left {
+    float: right;
+  }
+}

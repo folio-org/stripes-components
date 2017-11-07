@@ -1,14 +1,17 @@
 # Change history for stripes-components
-## In-Progress
-
-* Added `<ConfirmationModal>` component to 'structures' folder. Supports STCOM-66. See [docs](lib/structures/ConfirmationModal/readme.md).
-* Added `<Callout>` component for supplying feedback to the user with various actions. Supports STCOM-66. See [docs](lib/Callout/readme.md).
-* Fix connect in `<Settings>`. Fixes STCOM-99.
-* Update `<EntrySelector>`. Fixes STCOM-100.
 
 ## 2.0.0 (IN PROGRESS)
 
 * Refactor `<EntrySelector>` to make it more reusable. Fixes STCOM-97.
+* Added `<ConfirmationModal>` component to 'structures' folder. Supports STCOM-66. See [docs](lib/structures/ConfirmationModal/readme.md).
+* Added `<Callout>` component for supplying feedback to the user with various actions. Supports STCOM-66. See [docs](lib/Callout/readme.md).
+* Fix connect in `<Settings>`. Fixes STCOM-99.
+* Update `<EntrySelector>`. Fixes STCOM-100.
+* Address FieldGroup uses a radio button for setting 'Primary' field. Fixes UIU-260.
+* Address FieldGroup's Address Type field will only display options that are previously unused in the address form. Fixes UIU-260.
+* Aesthetic updates - Delete button is now a trashcan Icon. Fixes UIU-260.
+* Changes in field order- Address Type comes first, Country is last. Fixes UIU-260.
+* Add onClick callback to `<EntrySelector>`. Refs UICIRC-20 Scenario 5.
 * Fix bug in `<Datepicker>` mis-handling non-US date formats. Fixes STCOM-110.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
