@@ -12,7 +12,7 @@
 * Aesthetic updates - Delete button is now a trashcan Icon. Fixes UIU-260.
 * Changes in field order- Address Type comes first, Country is last. Fixes UIU-260.
 * Add onClick callback to `<EntrySelector>`. Refs UICIRC-20 Scenario 5.
-* Fix bug in `<Datepicker>` mis-handling non-US date formats. Fixes STCOM-110.
+* Fix bug in `<Datepicker>` mis-handling non-US date formats. Fixes STCOM-110, STCOM-114, STCOM-115.
 * `transitionToParams` uses `queryString.stringify` instead of by-hand gluing. Fixes STCOM-112
 * Fix defaultRoute in `<Settings>` when `pages` is not sorted by `label`. Fixes STCOM-113.
 
