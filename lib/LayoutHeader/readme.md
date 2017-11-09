@@ -21,7 +21,7 @@ onDelete | function | to support delete actions in the simplest use case. | |
 noActions | bool | hides action buttons. Useful for 'read-only' mode. | | 
 
 ## Custom Actions
-The actions prop is an array of objects with the shape of: 
+The actions prop can be used to supply a custom set of rendered buttons with icons. The type is an array of objects with the shape of: 
 ```
 [
   { 
