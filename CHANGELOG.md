@@ -15,6 +15,7 @@
 * Fix bug in `<Datepicker>` mis-handling non-US date formats. Fixes STCOM-110, STCOM-114, STCOM-115.
 * `transitionToParams` uses `queryString.stringify` instead of by-hand gluing. Fixes STCOM-112
 * Fix defaultRoute in `<Settings>` when `pages` is not sorted by `label`. Fixes STCOM-113.
+* Add `<LayoutHeader>` and `<LayoutBox>` components for assistance with layout tasks. Covers STCOM-118.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
