@@ -1,0 +1,39 @@
+@import '../variables.css';
+
+.sectionHeader{
+  background-color: var(--bgHover);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 14px;
+  & h1{
+    font-size: 1.3rem;
+  } 
+  & h2{
+    font-size: 1.2 rem;
+  } 
+  & h3{
+    font-size: 1rem;
+  }
+  & h4{
+    font-size: .9rem;
+  } 
+  & h5, & h6{
+    font-size: .8rem;
+  }
+}
+
+.sectionActions{
+  margin: 0 0 0 auto; /*align to end of header*/
+  padding: 4px 0;
+  & button {
+    &:hover{
+      & :global .stripes__icon {
+        fill: #333;
+      }
+    }
+    & :global .stripes__icon {
+      transition: fill .3s;
+    }
+  }
+}

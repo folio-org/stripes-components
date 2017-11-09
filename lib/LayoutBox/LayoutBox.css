@@ -1,0 +1,10 @@
+.sectionBox{
+  width: 100%;
+  border-color: #999;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  &:last-of-type {
+    border-bottom: 1px solid #999;
+    margin-bottom: 4px;
+  }
+}
