@@ -18,6 +18,7 @@ title | string | text for the header of the section | |
 level | number | The header level of the rendered `<Hx>` tag. (1-6). | 3 |
 actions | array of objects | see examples | |
 onDelete | function | to support delete actions in the simplest use case. | |
+noActions | bool | hides action buttons. Useful for 'read-only' mode. | | 
 
 ## Custom Actions
 The actions prop is an array of objects with the shape of: 
