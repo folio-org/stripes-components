@@ -25,7 +25,7 @@ set some data...
 
 Use the `EditableList` component in your jsx
 ```js
-<EditableList contentData={data} createButtonLabel="+ Add new" visibleFields={['addressType', 'desc']} itemTemplate={{ id: 'number', name: 'string' }} onUpdate={this.handleUpdate} onDelete={this.handleDelete} onCreate={this.handleCreate} />
+<EditableList contentData={data} createButtonLabel="+ Add new" visibleFields={['name']} itemTemplate={{ id: 'number', name: 'string' }} onUpdate={this.handleUpdate} onDelete={this.handleDelete} onCreate={this.handleCreate} />
 ```
 
 ### Configuration (props)
@@ -37,7 +37,7 @@ onCreate | Callback for creating new list items. | | no
 onUpdate | callback for saving record.  | | no
 onDelete | Callback for saving editted list items. | | no
 label | The text for the H3 tag in the header of the component | | no
-createButtonLabel | Label for the 'Add' button | '+ Add new' | no
+createButtonLabel | Label for the 'Add' button | `+ Add new` | no
 visibleFields | Array of fields to render. These will also be editable. | | yes
 itemTemplate | Object that reflects the shape of list item objects. Values should be strings indicating the type: `{name: 'string'}` | | yes
 uniqueField | Fieldname that includes the unique identifier for the list. | `id` | yes
