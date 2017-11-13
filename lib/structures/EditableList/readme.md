@@ -25,7 +25,7 @@ set some data...
 
 Use the `EditableList` component in your jsx
 ```js
-<EditableList contentData={data} createButtonLabel="+ Add new" visibleFields={['name']} itemTemplate={{ id: 'number', name: 'string' }} onUpdate={this.handleUpdate} onDelete={this.handleDelete} onCreate={this.handleCreate} />
+<EditableList contentData={contentData} createButtonLabel="+ Add new" visibleFields={['name']} itemTemplate={{ id: 'number', name: 'string' }} onUpdate={this.handleUpdate} onDelete={this.handleDelete} onCreate={this.handleCreate} />
 ```
 
 ### Configuration (props)
