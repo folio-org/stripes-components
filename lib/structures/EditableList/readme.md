@@ -34,7 +34,7 @@ Name | description | default | required
 contentData | Array of objects to be rendered as list items. | | yes
 nameKey | The key that uniquely names listed objects: defaults to 'name'. | | no
 onCreate | Callback for creating new list items. | | no
-onUpdate | callback for saving record.  | | no
+onUpdate | Callback for saving record.  | | no
 onDelete | Callback for saving editted list items. | | no
 label | The text for the H3 tag in the header of the component | | no
 createButtonLabel | Label for the 'Add' button | `+ Add new` | no
