@@ -18,6 +18,7 @@
 * Add `<LayoutHeader>` and `<LayoutBox>` components for assistance with layout tasks. Covers STCOM-118.
 * Fixed bug in `<Paneset>` occurring when multiple Panes are dismissed at once. Fixes STCOM-121 and STSMACOM-17.
 * Include `dataKey` in when connecting `<Settings>` components. Fixes UICIRC-33. 
+* Pass a ref through to TextArea for access by a parent. Refs STSMACOM-4. 
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
