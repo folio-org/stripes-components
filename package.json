@@ -10,7 +10,8 @@
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
     "lint": "eslint lib",
-    "test": "mocha --require babel-test-hook --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles"
+    "test": "mocha --require babel-test-hook --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -25,8 +26,13 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.15",
+    "@storybook/addon-options": "^3.2.15",
+    "@storybook/react": "^3.2.15",
+    "autoprefixer": "^7.1.6",
     "babel-core": "^6.17.0",
     "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
@@ -38,7 +44,16 @@
     "ignore-styles": "^5.0.1",
     "jsdom": "^9.3.0",
     "mocha": "^2.5.3",
+    "postcss-calc": "^6.0.1",
+    "postcss-color-function": "^4.0.1",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-import": "^11.0.0",
+    "postcss-media-minmax": "^3.0.0",
+    "postcss-nesting": "^4.2.1",
+    "raw-loader": "^0.5.1",
     "sinon": "^1.17.4",
+    "storybook-readme": "^3.1.1",
     "webpack": "1.11.0"
   },
   "dependencies": {
