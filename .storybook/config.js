@@ -1,5 +1,6 @@
 import { configure } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
+import '../lib/global.css';
 
 setOptions({
   name: 'FOLIO Stripes',

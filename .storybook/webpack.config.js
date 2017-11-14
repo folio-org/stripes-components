@@ -5,6 +5,7 @@
 // IMPORTANT
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
+const path = require('path');
 const postCssImport = require('postcss-import');
 const autoprefixer = require('autoprefixer');
 const postCssCustomProperties = require('postcss-custom-properties');
@@ -15,6 +16,9 @@ const postCssMediaMinMax = require('postcss-media-minmax');
 const postCssColorFunction = require('postcss-color-function');
 
 module.exports = {
+  entry: [
+    'typeface-source-sans-pro'
+  ],
   plugins: [
     // your custom plugins
   ],
@@ -72,6 +76,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(woff2?)$/,
+        loader: 'file-loader?name=fonts/[name].[hash].[ext]',
       }
     ],
   },
