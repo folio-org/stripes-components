@@ -1,6 +1,6 @@
 @import '../variables.css';
 
-.paneset{
+.paneset {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -9,16 +9,19 @@
   align-items: stretch;
   justify-content: flex-start;
   will-change: transform;
-  & .paneset, &.nested{
+
+  & .paneset,
+  &.nested {
     position: relative;
     flex-grow: 2;
   }
-  &.static{
+
+  &.static {
     position: static;
   }
 }
 
-@media (--small){
+@media (--small) {
   position: relative;
   display: block;
 }

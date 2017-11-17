@@ -1,48 +1,59 @@
 @import '../variables.css';
 
 @keyframes hoverFlash {
-  from {background-color: var(--bgHover)}
-  to {background-color: var(--bg)}
+  from { background-color: var(--bgHover); }
+  to { background-color: var(--bg); }
 }
 
 @keyframes focusFlash {
-  from {background-color: color(var(--bgHover) shade(10%))}
-  to {background-color: var(--bgHover)}
+  from { background-color: color(var(--bgHover) shade(10%)); }
+  to { background-color: var(--bgHover); }
 }
 
-.root{
+.root {
   width: 100%;
   margin-bottom: 4px;
 }
 
-.headerWrapper{
+.headerWrapper {
   width: 100%;
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   min-height: calc(var(--controlHeight) + 4px);
-  transition: background-color .3s;
-  & button,& h1,& h2,& h3,& h4,& h5,& h6{
+  transition: background-color 0.3s;
+
+  & button,
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
     margin: 0;
   }
-  &> button{
+
+  & > button {
     flex-shrink: 0;
   }
-  &:focus{
+
+  &:focus {
     outline: none;
     animation-name: hoverFlash;
     animation-duration: 2s;
   }
 }
 
-.header{
+.header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &.default{
+
+  &.default {
     margin-bottom: 12px;
-    &:focus{
+
+    &:focus {
       outline: none;
       animation-name: hoverFlash;
       animation-duration: 2s;
@@ -50,64 +61,75 @@
   }
 }
 
-.defaultCollapseButton{
+.defaultCollapseButton {
   border-radius: 50%;
   background-color: transparent;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
   cursor: pointer;
   min-height: calc(var(--controlHeight) + 4px);
   width: calc(var(--controlHeight) + 4px);
   appearance: none;
   border: none;
-  &:hover{
+
+  &:hover {
     background-color: var(--bgHover);
   }
-  &:focus{
+
+  &:focus {
     outline: none;
-    background-color: var(--bgHover); 
+    background-color: var(--bgHover);
   }
-  & *:focus{
+
+  & *:focus {
     outline: none;
   }
 }
 
-.labelArea{
+.labelArea {
   display: flex;
   flex-grow: 2;
   color: var(--subLabelColor #999);
   font-weight: bold;
   justify-content: flex-start;
   padding: 0 4px;
-  & h1, h2, h3, h4, h5, h6{
+
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: none;
   }
 }
 
-.content{
-  padding: 0 calc(var(--gutter, .8em) * 1.5);
+.content {
+  padding: 0 calc(var(--gutter, 0.8em) * 1.5);
   max-height: 0; /* hidden */
   overflow: hidden;
-  transition: max-height .25s ease;
-  &.expanded{
+  transition: max-height 0.25s ease;
+
+  &.expanded {
     max-height: none; /* max-height applied inline */
   }
 }
 
-.separator{
+.separator {
   width: 100%;
   border-bottom: 1px solid #cecece;
   margin: auto;
   margin-bottom: 14px;
 }
 
-.filterSetHeader{
+.filterSetHeader {
   composes: header;
   border-radius: var(--radius 4px);
   height: var(--controlHeight 28px);
   appearance: none;
   background: none;
   border: none;
-  &:focus{
+
+  &:focus {
     outline: none;
     animation-name: focusFlash;
     animation-duration: 2s;
@@ -115,7 +137,7 @@
   }
 }
 
-.filterSetlabel{
+.filterSetlabel {
   font-weight: bold;
   color: var(--subLabelColor #999);
   pointer-events: none;

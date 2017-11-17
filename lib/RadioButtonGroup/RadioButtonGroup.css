@@ -1,16 +1,17 @@
 @import '../variables.css';
 
-.groupRoot{
+.groupRoot {
   margin-bottom: var(--controlMarginBottom);
 }
 
-.groupLabel{
+.groupLabel {
   display: block;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: bold;
   text-transform: Uppercase;
   color: var(--labelColor);
-  &.required:after{
+
+  &.required::after {
     content: '(required)';
     margin: 0 4px;
     color: #999;
@@ -22,21 +23,22 @@ legend.groupLabel {
   margin-bottom: 6px;
 }
 
-.groupFeedback{
-  padding: 0 .4rem;
-  font-size: .8rem;
-  &:last-child{
+.groupFeedback {
+  padding: 0 0.4rem;
+  font-size: 0.8rem;
+
+  &:last-child {
     margin-bottom: var(--controlMarginBottom);
   }
 }
 
-.groupError{
+.groupError {
   composes: groupFeedback;
   color: #900;
-  font-weight: 700
+  font-weight: 700;
 }
 
-.groupWarning{
+.groupWarning {
   composes: groupFeedback;
   color: #e27c3e;
   font-weight: 700;

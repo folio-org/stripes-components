@@ -1,4 +1,4 @@
-:root{
+:root {
   --bg: #fcfcfc;
   --bgHover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
   --primary: #106c9e;
@@ -12,11 +12,10 @@
   --controlHeight: 28px;
   --radius: 6px;
   --inputBorderColor: #acacac;
-  --gutter: .8em;
+  --gutter: 0.8em;
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
 }
-
 
 @custom-media --small (max-width: 640px);
 @custom-media --mediumDown (max-width: 1024px);
@@ -26,5 +25,3 @@
 @custom-media --largeUp (min-width:1025px);
 @custom-media --xlarge (min-width: 1441px) and (max-width: 1920px);
 @custom-media --xxlarge (min-width: 1921px);
-
-

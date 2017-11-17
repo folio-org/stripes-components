@@ -1,12 +1,13 @@
-
-.root{
+.root {
   list-style: none;
   padding: 0;
   margin-bottom: 1rem;
-  &.marginBottom0{
+
+  &.marginBottom0 {
     margin-bottom: 0;
   }
-  & li{
+
+  & li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,4 +17,3 @@
     margin-bottom: 4px;
   }
 }
-

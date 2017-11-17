@@ -1,46 +1,57 @@
 @import '../variables.css';
 
-.heightSpacer{
+.heightSpacer {
   position: relative;
 }
 
-.rowContainer{
+.rowContainer {
   position: absolute;
   min-width: 100%;
+
   /* first descendants all display: block for height measurment */
-  &> *{
+  & > * {
     display: block;
   }
+
   /* keep block anchors from styling the entire row */
-  &> a{
+  & > a {
     color: #333;
-    &:hover, &:active, &:visited, &:focus{
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
       text-decoration: none;
     }
   }
 }
 
-.row{
+.row {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  
-  &.selected{
+
+  &.selected {
     color: #fff;
     background-color: color(var(--primary) shade(8%));
-    & .cell{
+
+    & .cell {
       color: #efefef;
       background-color: var(--primary);
     }
   }
-  &:hover, &:focus{
+
+  &:hover,
+  &:focus {
     outline: none;
     background-color: var(--bgHover);
     cursor: pointer;
-    &.selected{
+
+    &.selected {
       color: #fff;
       background-color: color(var(--primary) shade(8%));
-      &.cell{
+
+      &.cell {
         color: #fff;
         background-color: color(var(--primary) shade(8%));
       }
@@ -48,57 +59,62 @@
   }
 }
 
-.headerRow{
+.headerRow {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
   border-bottom: 1px solid #ddd;
   width: calc(100% - 16px);
-  &.hScroll{
+
+  &.hScroll {
     overflow: auto;
   }
 }
 
-.header{
+.header {
   display: flex;
   align-items: center;
-  flex-shrink:0;
-  flex-grow:0;
+  flex-shrink: 0;
+  flex-grow: 0;
   padding: 6px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  &.sorted{
+
+  &.sorted {
     text-decoration: underline;
   }
+
   &.ascending::after {
     content: "↑";
   }
+
   &.descending::after {
     content: "↓";
   }
 }
 
-.cell{
+.cell {
   display: flex;
   align-items: center;
-  flex-shrink:0;
-  flex-grow:0;
+  flex-shrink: 0;
+  flex-grow: 0;
   padding: 6px;
   overflow: hidden;
+
   &.showOverflow {
     overflow: visible;
   }
 }
 
-.scrollable{
+.scrollable {
   position: relative;
   overflow: auto;
   width: 100%;
 }
 
-.contentLoadingRow{
+.contentLoadingRow {
   width: 100%;
   display: flex;
   position: absolute;
@@ -108,7 +124,7 @@
   pointer-events: none;
 }
 
-.contentLoading{
+.contentLoading {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -118,18 +134,18 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.emptyMessage{
+.emptyMessage {
   width: 100%;
   color: #444;
 }
 
 @keyframes example {
-    from {background-color: var(--bgHover)}
-    to {background-color: var(--bg)}
+  from { background-color: var(--bgHover); }
+  to { background-color: var(--bg); }
 }
 
-.mclContainer{
-  &:focus{
+.mclContainer {
+  &:focus {
     outline: none;
     animation-name: example;
     animation-duration: 2s;

@@ -1,35 +1,39 @@
 @import '../variables.css';
 
-.root{
+.root {
   display: flex;
   align-items: center;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   margin-bottom: var(--controlMarginBottom);
-  &.inline{
+
+  &.inline {
     display: inline;
-    & + .root{
-        margin: 0 6px;
+
+    & + .root {
+      margin: 0 6px;
     }
   }
-  &.marginBottom0{
+
+  &.marginBottom0 {
     margin-bottom: 0;
   }
 }
 
-.radioLabel{
+.radioLabel {
   cursor: pointer;
   flex-grow: 2;
   padding: 4px 2px;
   margin: 0 4px 0 0;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--labelColor);
-  &.error{
+
+  &.error {
     color: #900;
   }
 }
 
-input[type=radio].input{
+input[type=radio].input {
   margin: 0 9px;
   margin-bottom: 2px;
 }
