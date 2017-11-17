@@ -55,7 +55,7 @@
     &.excluded {
       color: #999 !important;
       background: #dedede;
-      pointer: default;
+      cursor: default;
       pointer-events: none;
     }
 
