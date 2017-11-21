@@ -1,7 +1,5 @@
 .root {
-  position: absolute;
-  left: 0;
-  top: 100%;
+  position: relative;
   background: #fff;
   border-radius: 4px;
   border: 1px solid #bcbcbc;
