@@ -35,7 +35,7 @@ contentData | Array of objects to be rendered as list items. | | yes
 nameKey | The key that uniquely names listed objects: defaults to 'name'. | | no
 onCreate | Callback for creating new list items. | | no
 onUpdate | Callback for saving record.  | | no
-onDelete | Callback for saving editted list items. | | no
+onDelete | Callback for saving edited list items. | | no
 label | The text for the H3 tag in the header of the component | | no
 createButtonLabel | Label for the 'Add' button | `+ Add new` | no
 visibleFields | Array of fields to render. These will also be editable. | | yes
