@@ -9,7 +9,7 @@
   },
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "lint": "eslint lib",
+    "lint": "eslint lib && stylelint \"lib/**/*.css\"",
     "test": "mocha --require babel-test-hook --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
@@ -54,6 +54,8 @@
     "raw-loader": "^0.5.1",
     "sinon": "^1.17.4",
     "storybook-readme": "^3.1.1",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
     "webpack": "1.11.0"
   },
   "dependencies": {

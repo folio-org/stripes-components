@@ -1,55 +1,58 @@
-.right{
-    float: right;
+.right {
+  float: right;
 }
 
-.left{
-    float: left;
+.left {
+  float: left;
 }
 
-.centered{
-    margin: auto;
+.centered {
+  margin: auto;
 }
 
-.textCentered{
-    text-align: center;
+.textCentered {
+  text-align: center;
 }
 
-.textRight{
-    text-align: right;
+.textRight {
+  text-align: right;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
-  &.centerContent{
-    justify-content:center;
+
+  &.centerContent {
+    justify-content: center;
   }
-  &.justified{
+
+  &.justified {
     justify-content: space-between;
   }
 }
 
-.full{
+.full {
   width: 100%;
 }
 
-.indent{
-  padding-left:.4rem;
-  padding-right: .4rem;
+.indent {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 
-.marginTopHalf{
-  margin-top: .5rem;
+.marginTopHalf {
+  margin-top: 0.5rem;
 }
 
-.marginTop1{
-  margin-top: .1rem;
+.marginTop1 {
+  margin-top: 0.1rem;
 }
 
-[dir="rtl"]{
+[dir="rtl"] {
   & .right {
     float: left;
   }
+
   & .left {
     float: right;
   }

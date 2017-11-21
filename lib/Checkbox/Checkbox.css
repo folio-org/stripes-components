@@ -1,82 +1,94 @@
 @import '../variables.css';
 
-.root{
+.root {
   display: flex;
   align-items: center;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
   margin-bottom: var(--controlMarginBottom);
-  &.rootFullWidth{
+
+  &.rootFullWidth {
     width: 100%;
   }
-  &.marginBottom0{
+
+  &.marginBottom0 {
     margin-bottom: 0;
   }
-  &.rootHover{
+
+  &.rootHover {
     border-radius: 6px;
-    &:hover{
+
+    &:hover {
       background-color: #efefef;
     }
   }
-  &.inline{
-      display: inline;
-      & .checkboxInput{
-          margin-bottom: 4px;
-      }
+
+  &.inline {
+    display: inline;
+
+    & .checkboxInput {
+      margin-bottom: 4px;
+    }
   }
-  &.checkboxHasFeedback{
+
+  &.checkboxHasFeedback {
     margin-bottom: 0;
   }
-  &.hovered{
+
+  &.hovered {
     background-color: #efefef;
   }
 }
 
-.checkboxLabel{
+.checkboxLabel {
   cursor: pointer;
   flex-grow: 2;
   padding: 7px 2px;
   margin: 0 4px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: var(--labelColor);
-  &.error{
+
+  &.error {
     color: #900;
   }
 }
 
-.formLabel{
+.formLabel {
   composes: checkboxLabel;
   font-weight: bold;
   text-transform: Uppercase;
   color: var(--labelColor);
-  &.error{
+
+  &.error {
     color: #900;
   }
 }
 
 /* fix for shrinkage issues with checkbox as a flex-child */
-:global input[type='checkbox']{
+:global input[type='checkbox'] {
   min-width: 16px;
 }
 
-input[type='checkbox'].checkboxInput{
+input[type='checkbox'].checkboxInput {
   vertical-align: middle;
   margin: 0 9px;
-  & + .checkboxLabel{
+
+  & + .checkboxLabel {
     margin-left: 0;
   }
-  &.hidden{
-    clip:rect(0,0,0,0);
+
+  &.hidden {
+    clip: rect(0, 0, 0, 0);
     height: 1px;
     width: 1px;
     position: absolute;
     margin: -1px;
     border: 0;
     padding: 0;
-  } 
+  }
 }
 
-.iconContainer{
+.iconContainer {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
@@ -84,19 +96,20 @@ input[type='checkbox'].checkboxInput{
   display: flex;
   align-items: center;
   border: 1px dotted transparent;
-  &:after{
+
+  &::after {
     content: '\200B';
     position: absolute;
   }
 }
 
-.checkboxFeedback{
-  display:block;
-  padding: 0 .4rem;
-  margin-bottom: var(--controlMarginBottom); 
+.checkboxFeedback {
+  display: block;
+  padding: 0 0.4rem;
+  margin-bottom: var(--controlMarginBottom);
 }
 
-.checkboxWarning{
+.checkboxWarning {
   composes: checkboxFeedback;
   color: #e27c3e;
   font-weight: 700;

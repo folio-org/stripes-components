@@ -1,18 +1,14 @@
 @import '../variables.css';
 
-.kvLabel{   
+.kvLabel {
   display: block;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 0;
   text-transform: Uppercase;
   color: var(--labelColor, #333);
 }
 
-.kvValue{
-  
-}
-
-.kvRoot{
+.kvRoot {
   margin-bottom: var(--controlMarginBottom);
 }

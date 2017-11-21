@@ -1,4 +1,4 @@
-.LayerRoot{
+.LayerRoot {
   position: absolute;
   top: 0;
   left: 0;
@@ -7,61 +7,69 @@
   background-color: #fff;
 }
 
-.fadeEnter{
+.fadeEnter {
   opacity: 0.01;
-  &.fadeEnterActive{
+
+  &.fadeEnterActive {
     opacity: 1;
-    transition: opacity .2s ease-in;
+    transition: opacity 0.2s ease-in;
   }
 }
 
-.fadeLeave{
+.fadeLeave {
   opacity: 1;
-  &.fadeLeaveActive{
+
+  &.fadeLeaveActive {
     opacity: 0.01;
-    transition: opacity .2s ease-in;
+    transition: opacity 0.2s ease-in;
   }
 }
 
-.slideEnter{
+.slideEnter {
   top: 100%;
-  &.slideEnterActive{
+
+  &.slideEnterActive {
     top: 0%;
-    transition: top .3s ease-in;
+    transition: top 0.3s ease-in;
   }
 }
 
-.slideLeave{
+.slideLeave {
   top: 0%;
-  &.slideLeaveActive{
+
+  &.slideLeaveActive {
     top: 100%;
-    transition: top .3s ease-in;
+    transition: top 0.3s ease-in;
   }
 }
 
-.olayEnter{
+.olayEnter {
   opacity: 0.01;
-  &.olayEnterActive{
+
+  &.olayEnterActive {
     opacity: 1;
-    transition: opacity .1s linear;
+    transition: opacity 0.1s linear;
   }
 }
 
-.olayLeave{
+.olayLeave {
   opacity: 1;
-  &.olayLeaveActive{
+
+  &.olayLeaveActive {
     opacity: 0.01;
-    transition: opacity .4s linear;
+    transition: opacity 0.4s linear;
   }
 }
 
-.overlay{
+.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-:global body{overflow-y:hidden;}
+:global body {
+  overflow-y: hidden;
+}
