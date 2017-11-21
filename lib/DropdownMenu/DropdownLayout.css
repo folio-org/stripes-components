@@ -1,31 +1,35 @@
 @import '../variables.css';
 
-.dropdownHeader{
+.dropdownHeader {
   padding: 6px 8px;
   border-bottom: 1px solid #bbb;
   font-weight: bold;
-  &+.dropdownBody{
+
+  & + .dropdownBody {
     height: calc(100% - 33px);
   }
 }
 
-.dropdownBody{
+.dropdownBody {
   position: relative;
   display: flex;
   height: 100%;
 }
 
-.dropdownColumn{
+.dropdownColumn {
   height: 100%;
   overflow: auto;
   padding: 8px;
-  &+.dropdownColumn{
+
+  & + .dropdownColumn {
     border-left: 1px solid #bbb;
   }
-  &.secondary{
+
+  &.secondary {
     background-color: var(--bgHover);
   }
-  &.fill{
+
+  &.fill {
     flex-grow: 2;
   }
 }

@@ -1,72 +1,77 @@
 @import '../variables.css';
 
-.root{
+.root {
   position: relative;
   max-width: 100%;
-  &.rootFull{
+
+  &.rootFull {
     width: 100%;
   }
 }
 
-.textAreaLabel{   
+.textAreaLabel {
   display: block;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 4px;
   text-transform: Uppercase;
   color: var(--labelColor);
-  &.required:after{
+
+  &.required::after {
     content: '(required)';
     margin: 0 4px;
     color: #666;
   }
 }
 
-.textArea{
+.textArea {
   min-height: var(--controlHeight);
   margin-bottom: var(--controlMarginBottom);
   padding: 4px;
   border: 1px solid var(--inputBorderColor);
-  &.textAreaFull{
+
+  &.textAreaFull {
     width: 100%;
   }
-  
-  &.rounded{
+
+  &.rounded {
     border-radius: var(--radius);
   }
 
-  &.noBorder{
+  &.noBorder {
     border-width: 0;
-  } 
-  
-  &.textAreaHasFeedback{
-    margin-bottom: .4rem;
   }
-  &.textAreaHasError{
+
+  &.textAreaHasFeedback {
+    margin-bottom: 0.4rem;
+  }
+
+  &.textAreaHasError {
     border-color: #900;
   }
-  
-  &:disabled{
+
+  &:disabled {
     background-color: #ebebe4;
     color: #777;
   }
 }
 
-.textAreaFeedback{
-  padding: 0 .4rem;
-  font-size: .8rem;
-  &:last-child{
-      margin-bottom: var(--controlMarginBottom);
-    }
+.textAreaFeedback {
+  padding: 0 0.4rem;
+  font-size: 0.8rem;
+
+  &:last-child {
+    margin-bottom: var(--controlMarginBottom);
+  }
 }
 
-.textAreaError{
+.textAreaError {
   composes: textAreaFeedback;
   color: #900;
   font-weight: bold;
 }
 
-.textfieldWarning{
+.textfieldWarning {
   composes: textAreaFeedback;
   color: #e27c3e;
   font-weight: bold;

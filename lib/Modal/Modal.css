@@ -1,6 +1,6 @@
 @import '../variables.css';
 
-.modalRoot{
+.modalRoot {
   display: flex;
   justify-content: center;
   top: 0;
@@ -9,7 +9,7 @@
   height: 100%;
 }
 
-.modal{
+.modal {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -19,31 +19,33 @@
   width: 60%;
   overflow: hidden;
   border-radius: var(--radius, 4px);
-  box-shadow: 0px 5px 28px 1px rgba(0,0,0,0.75);
-  &.small{
+  box-shadow: 0 5px 28px 1px rgba(0, 0, 0, 0.75);
+
+  &.small {
     width: 40%;
   }
-  &.large{
+
+  &.large {
     width: 90%;
   }
 }
 
-.modalHeader{
+.modalHeader {
   position: relative;
   border-bottom: 1px solid #dedede;
   flex: 0, 0, 42px;
 }
 
-.modalLabel{
+.modalLabel {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   font-weight: bold;
   font-size: calc(1.2rem);
   min-height: 32px;
 }
 
-.modalContent{
+.modalContent {
   padding: 1rem;
   flex: 1 2 auto;
   overflow: auto;
@@ -51,7 +53,7 @@
   max-height: calc(100% - 31px - 2rem);
 }
 
-.modalControls{
+.modalControls {
   position: absolute;
   height: 100%;
   top: 0;
@@ -61,28 +63,29 @@
   pointer-events: none;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
-.closeModal{
+.closeModal {
   background-color: transparent;
   border: 0;
   padding: 0;
   pointer-events: all;
 }
 
-.backdrop{
+.backdrop {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-@media(--small){
-  .modal{
-    &.small, &.large{
+@media (--small) {
+  .modal {
+    &.small,
+    &.large {
       width: 80vw;
     }
   }

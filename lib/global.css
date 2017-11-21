@@ -2,12 +2,35 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Noto, DroidSans, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", /*specific Arabic fonts */
-  "Adobe Arabic", "Myriad Arabic", /*specific other fonts */
-  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  font-family:
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Noto,
+    DroidSans,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Adobe Arabic",
+    "Myriad     abic",
+    "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro",
+    メイリオ    Meiryo,
+    "ＭＳ Ｐゴシック",
+    sans-serif;
   font-size: 14px;
   color: #444;
   letter-spacing: 0.04em;
@@ -52,12 +75,12 @@ h6 {
 }
 
 ul {
-  margin: 0 0 14px 0;
+  margin: 0 0 14px;
 }
 
 hr {
   border: 1px solid #cdcdcd;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 1px;
 }
 
 :global(.fullWidth) {
@@ -65,7 +88,7 @@ hr {
 }
 
 :global(.marginTop0) {
-  margin-top: 0 !important
+  margin-top: 0 !important;
 }
 
 :global(.marginBottom0) {
@@ -73,18 +96,19 @@ hr {
 }
 
 :global(.marginBottomHalf) {
-  margin-bottom: .5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 :global(.marginTopHalf) {
-  margin-top: .5rem !important;
+  margin-top: 0.5rem !important;
 }
 
 :global(.floatEnd) {
   float: right !important;
 }
 
-:global(body[dir="rtl"] .floatEnd), :global(html[dir="rtl"] .floatEnd) {
+:global(body[dir="rtl"] .floatEnd),
+:global(html[dir="rtl"] .floatEnd) {
   float: left !important;
 }
 

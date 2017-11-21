@@ -1,17 +1,19 @@
-.root{
+.root {
   margin: 0 4px;
-  &:focus{
+
+  &:focus {
     outline: none;
   }
 }
 
-:global .stripes__icon{
+:global .stripes__icon {
   fill: #999;
 }
 
-button .root{
+button .root {
   float: left;
-  &.center{
+
+  &.center {
     float: none;
     display: flex;
     justify-content: center;
@@ -20,9 +22,8 @@ button .root{
   }
 }
 
-[dir='rtl']{
-  & button .root{
+[dir='rtl'] {
+  & button .root {
     float: right;
   }
 }
-

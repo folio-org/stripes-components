@@ -1,102 +1,108 @@
-.root{
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background: #fff;
-    border-radius: 4px;
-    border: 1px solid #bcbcbc;
-    padding: 4px;
-    box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.39);
-    z-index: 9999;
+.root {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #bcbcbc;
+  padding: 4px;
+  box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.39);
+  z-index: 9999;
 }
 
-.srOnly{
+.srOnly {
   position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* old IE*/
+  clip: rect(1px 1px 1px 1px); /* old IE */
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
 }
 
-.calendar{
-    & td{
-        vertical-align: middle;
-    }
-    
-    & tbody tr{
-        height: 38px;
-    }
-    
-    & .dayButton{
-        appearance: none;
-        background: none;
-        color: #333;
-        text-decoration: none;
-        text-align: center;
-        padding: 4px;
-        border: 2px solid transparent;
-        width: 38px;
-        height: 38px;
-        cursor: pointer;
-        &:hover{
-          background-color: #eee;
-        }
-        &.muted{
-            color: #999;
-        }
-        &.today{
-          background: color(#106c9e tint(80%));
-        }
-        &.excluded{
-          color: #999 !important;
-          background: #dedede;
-          pointer: default;
-          pointer-events: none;
-        }
-        &.selected{
-            background: #106c9e !important;
-            color: #fff;
-            transition: all .2s;
-            &:hover{
-                 background-color: #0c577f;
-            }
-            &.cursor{
-                color: #fff;
-            }
-        }
-        &.cursor{
-            border: 2px solid #666;
-            color: #333;
-        }
-        
-    }
-}
+.calendar {
+  & td {
+    vertical-align: middle;
+  }
 
+  & tbody tr {
+    height: 38px;
+  }
 
-
-.selectedMonth{
-    display: block;
-    text-align: center;
-}
-
-.nav{
-    display: block;
-    text-decoration: none;
+  & .dayButton {
     appearance: none;
     background: none;
-    border: 0;
-    text-align: center;
     color: #333;
-    border-radius: 4px;
-    margin-bottom: 4px;
-    padding: 4px 0;
-    &:hover{
-        background: #eee;
+    text-decoration: none;
+    text-align: center;
+    padding: 4px;
+    border: 2px solid transparent;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #eee;
     }
+
+    &.muted {
+      color: #999;
+    }
+
+    &.today {
+      background: color(#106c9e tint(80%));
+    }
+
+    &.excluded {
+      color: #999 !important;
+      background: #dedede;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &.selected {
+      background: #106c9e !important;
+      color: #fff;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #0c577f;
+      }
+
+      &.cursor {
+        color: #fff;
+      }
+    }
+
+    &.cursor {
+      border: 2px solid #666;
+      color: #333;
+    }
+  }
 }
 
-.weekday{
-    font-size: .9rem;
-    text-align: center;
+.selectedMonth {
+  display: block;
+  text-align: center;
+}
+
+.nav {
+  display: block;
+  text-decoration: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  text-align: center;
+  color: #333;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  padding: 4px 0;
+
+  &:hover {
+    background: #eee;
+  }
+}
+
+.weekday {
+  font-size: 0.9rem;
+  text-align: center;
 }
