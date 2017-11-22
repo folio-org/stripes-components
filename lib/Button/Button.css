@@ -1,312 +1,303 @@
 @import '../variables.css';
 
-a.button {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
+/**
+ * Button style mixin
+ */
 
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.button {
-  padding: 5px 8px;
-  text-align: center;
-  -webkit-appearance: none;
-  cursor: pointer;
-  color: #555;
-  border-radius: 6px;
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-  background-color: transparent;
-  border: transparent;
-  margin-bottom: var(--controlMarginBottom);
-  margin-left: 2px;
-  margin-right: 2px;
-  max-height: var(--controlHeight);
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 0.9rem;
-
-  &.slim {
-    padding: 5px 2px;
-  }
-
-  &.block {
-    display: block;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &.primary {
-    background-color: var(--primary);
-    border: 1px solid var(--primary);
-    color: #fff;
-
-    &:hover {
-      background-color: color(var(--primary) shade(8%));
-    }
-
-    &.hollow {
-      background-color: transparent;
-      color: var(--primary);
-
-      &:hover {
-        background-color: color(var(--primary) shade(8%));
+    @define-mixin buttonStyle $color {
+        background-color: $color;
+        border: 1px solid $color;
         color: #fff;
-      }
-    }
-  }
-
-  &.secondary {
-    background-color: var(--secondary);
-    border: 1px solid var(--secondary);
-    color: #fff;
-
-    & :global .stripes__icon {
-      fill: #fff;
-    }
-
-    &:hover {
-      background-color: color(var(--secondary) shade(8%));
-
-      & :global .stripes__icon {
-        fill: #fff;
-      }
-    }
-
-    &.hollow {
-      background-color: transparent;
-      color: var(--secondary);
-
-      & :global .stripes__icon {
-        fill: var(--secondary);
-      }
-
-      &:hover {
-        background-color: color(var(--secondary) shade(8%));
-        color: #fff;
-
-        & :global .stripes__icon {
-          fill: #fff;
-        }
-      }
-    }
-  }
-
-  &.error,
-  &.negative {
-    background-color: var(--error);
-    border: 1px solid var(--error);
-    color: #fff;
-
-    &.hollow {
-      background-color: transparent;
-      color: var(--error);
-
-      & :global .stripes__icon {
-        fill: var(--error);
-      }
-
-      &:hover {
-        background-color: color(var(--error) shade(8%));
-        color: #fff;
-
-        & :global .stripes__icon {
-          fill: #fff;
-        }
-      }
-    }
-  }
-
-  &.hover {
-    background-color: transparent;
-    border: 1px solid transparent;
-
-    &:hover {
-      background-color: var(--bgHover);
-    }
-  }
-
-  &.dropdownActive {
-    &[aria-expanded="true"],
-    &:focus {
-      border: 1px solid var(--secondary);
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &.dropdownItem {
-    text-align: left;
-    margin-bottom: 0;
-    background-color: transparent;
-    border: 1px solid transparent;
-    width: 100%;
-    border-radius: 0;
-
-    &:hover,
-    &:focus {
-      background-color: var(--bgHover);
-      outline: none;
-    }
-  }
-
-  &.textAlignStart {
-    text-align: left;
-  }
-
-  &.paneHeaderButton {
-    background-color: transparent;
-    border: 1px solid transparent;
-    margin: 0;
-    max-height: var(--controlHeightTouch);
-    height: var(--controlHeightTouch);
-    border-radius: 0;
-    padding: 8px;
-
-    &:hover {
-      background-color: var(--bgHover);
-    }
-
-    &.primary {
-      background-color: var(--primary);
-      border: 1px solid var(--primary);
-      color: #fff;
-
-      &:hover {
-        background-color: color(var(--primary) shade(8%));
-      }
-    }
-
-    &.tab {
-      font-weight: bold;
-      border-width: 0;
-      border-bottom: 4px solid transparent;
-
-      &:focus,
-      &:hover {
-        outline: none;
-        border-bottom: 4px solid var(--bgHover);
-      }
-
-      &.selected {
-        font-weight: bold;
-        border-width: 0;
-        border-bottom: 4px solid var(--primary);
 
         &:focus {
-          border-bottom-color: color(var(--primary) shade(8%));
+            box-shadow: 0 0 0px 3px rgba($color, .5);
         }
-      }
 
-      &:hover {
-        background: transparent;
-      }
-    }
-  }
+        &:active {
+            box-shadow: 0 0 0px 18px rgba($color, 0.3);
+        }
 
-  &.paneHeaderNewButton {
-    margin-right: 17px;
-  }
+        &.hollow {
+            background-color: transparent;
+            color: $color;
 
-  &.noRadius {
-    border-radius: 0;
-  }
+            & :global .stripes__icon{
+                fill: $color;
+            }
 
-  &.noLeftRadius {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
+            &:hover{
+                background-color: color($color shade(8%));
+                color: #fff;
 
-  &.noRightRadius {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  &.lastBorderOnly {
-    border-right-color: transparent !important;
-  }
-
-  &.transparent {
-    background-color: transparent;
-    border: 1px solid transparent;
-  }
-
-  &.link {
-    background-color: transparent;
-    border: 1px solid transparent;
-    cursor: pointer;
-    color: var(--primary);
-    padding: 4px;
-  }
-
-  &.bottomMargin0,
-  &.marginBottom0 {
-    margin-bottom: 0;
-  }
-
-  &.fullWidth {
-    width: 100%;
-  }
-
-  &.fieldControl {
-    background-color: transparent;
-    margin: 0;
-    height: var(--controlHeight);
-    padding: 0;
-  }
-
-  &[disabled] {
-    background-color: #ccc;
-    border-color: #ccc;
-    color: #888;
-
-    &:hover {
-      background-color: #ccc;
-      border-color: #ccc;
-      color: #888;
-      cursor: initial;
-    }
-  }
-
-  &:not(.fullWidth, .fieldControl) + .button {
-    margin: 0 4px;
-  }
-
-  &.mega {
-    width: 100%;
-    max-height: 16rem;
-    height: 16rem;
-    color: #fff;
-    font-size: 2rem;
-    border-radius: 0;
-  }
-}
-
-[dir='rtl'] {
-  &.button {
-    &:first-child {
-      margin-right: 0;
+                & :global .stripes__icon{
+                    fill: #fff;
+                }
+            }
+        }
     }
 
-    &.textAlignStart {
-      text-align: right;
-    }
-  }
-}
+/**
+* Default styling
+*/
 
-@media (--small) {
-  .button {
-    height: var(--controlHeightSmall);
-    max-height: var(--controlHeightSmall);
-  }
-}
+    .button {
+        padding: 0 10px;
+        height: 24px;
+        text-align: center;
+        -webkit-appearance: none;
+        cursor: pointer;
+        color: #555;
+        border-radius: 6px;
+        transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+        background-color: transparent;
+        border: transparent;
+        margin-bottom: var(--controlMarginBottom);
+        margin-left: 2px;
+        margin-right: 2px;
+        max-height: var(--controlHeight);
+        overflow: hidden;
+        white-space: nowrap;
+        font-size:.9rem;
+        box-shadow: 0 0 0 18px transparent;
+        line-height: 100%;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        &.slim{
+            padding: 5px 2px;
+        }
+
+        &.block{
+            display: block;
+        }
+
+        &:first-child{
+            margin-left: 0;
+        }
+
+        &:hover{
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline:none;
+            transition:box-shadow .3s ease-out;
+            backface-visibility: hidden;
+        }
+
+        /**
+         * Colors
+         */
+
+            /**
+             * Button Style: Primary
+             */
+
+                &.primary{
+                    @mixin buttonStyle var(--primary);
+                }
+
+            /**
+             * Button Style: Secondary
+             */
+
+                &.secondary{
+                    @mixin buttonStyle var(--secondary);
+                }
+
+            /**
+             * Button Style: Success
+             */
+
+                &.success {
+                    @mixin buttonStyle var(--success);
+                }
+
+            /**
+             * Button Style: Warning
+             */
+
+                &.warning {
+                    @mixin buttonStyle var(--warn);
+                }
+
+            /**
+             * Button Style: Error
+             */
+
+                &.error, &.negative{
+                    @mixin buttonStyle var(--error);
+                }
+
+            /**
+             * Button Style: Transparent
+             */
+
+                &.transparent {
+                    &.hover{
+                        background-color: transparent;
+                        border: 1px solid transparent;
+                        &:hover{
+                            background-color: var(--bgHover);
+                        }
+                    }
+                    &:focus {
+                        box-shadow: 0 0 0px 3px rgba(153, 153, 153, 0.2);
+                    }
+                }
+
+
+        &.dropdownActive{
+            &[aria-expanded="true"], &:focus{
+                border: 1px solid var(--secondary);
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+
+        &.dropdownItem{
+            text-align:left;
+            margin-bottom: 0;
+            background-color: transparent;
+            border: 1px solid transparent;
+            width: 100%;
+            border-radius: 0;
+            &:hover, &:focus{
+                background-color: var(--bgHover);
+                outline: none;
+            }
+        }
+
+        &.textAlignStart{
+            text-align:left;
+        }
+
+        &.paneHeaderButton{
+            background-color: transparent;
+            border: 1px solid transparent;
+            margin: 0;
+            max-height: var(--controlHeightTouch);
+            height: var(--controlHeightTouch);
+            border-radius: 0;
+            padding: 8px;
+            &:hover{
+                background-color: var(--bgHover);
+            }
+
+            &.primary{
+                background-color: var(--primary);
+                border: 1px solid var(--primary);
+                color: #fff;
+                &:hover{
+                    background-color: color(var(--primary) shade(8%));
+                }
+            }
+
+            &.tab{
+                font-weight: bold;
+                border-width: 0;
+                border-bottom: 4px solid transparent;
+                &:focus, &:hover{
+                    outline: none;
+                    border-bottom: 4px solid var(--bgHover);
+                }
+
+                &.selected{
+                    font-weight: bold;
+                    border-width: 0;
+                    border-bottom:4px solid var(--primary);
+                    &:focus{
+                        border-bottom-color: color(var(--primary) shade(8%));
+                    }
+                }
+                &:hover{
+                    background: transparent;
+                }
+            }
+        }
+        &.paneHeaderNewButton{
+            margin-right: 17px;
+        }
+        &.noRadius{
+            border-radius: 0;
+        }
+        &.noLeftRadius {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        &.noRightRadius {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        &.lastBorderOnly {
+            border-right-color: transparent !important;
+        }
+        &.transparent{
+            background-color: transparent;
+            border: 1px solid transparent;
+        }
+        &.link{
+            background-color: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            color: var(--primary);
+            padding: 4px;
+        }
+        &.bottomMargin0, &.marginBottom0{
+            margin-bottom: 0;
+        }
+        &.fullWidth{
+            width: 100%;
+        }
+        &.fieldControl{
+            background-color: transparent;
+            margin: 0;
+            height: var(--controlHeight);
+            padding:0;
+        }
+        &[disabled]{
+            background-color: #ccc;
+            border-color: #ccc;
+            color: #888;
+            &:hover{
+                background-color: #ccc;
+                border-color: #ccc;
+                color: #888;
+                cursor: initial;
+            }
+        }
+        &:not(.fullWidth, .fieldControl)+ .button{
+            margin: 0 4px;
+        }
+
+        &.mega{
+            width: 100%;
+            max-height: 16rem;
+            height: 16rem;
+            color: #fff;
+            font-size: 2rem;
+            border-radius: 0;
+        }
+    }
+
+    [dir='rtl']{
+        &.button{
+            &:first-child{
+                margin-right: 0;
+            }
+            &.textAlignStart{
+                text-align:right;
+            }
+        }
+    }
+
+    @media(--small){
+        .button{
+            height: var(--controlHeightSmall);
+            max-height: var(--controlHeightSmall);
+        }
+    }

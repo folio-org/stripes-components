@@ -14,6 +14,8 @@ const postCssNesting = require('postcss-nesting');
 const postCssCustomMedia = require('postcss-custom-media');
 const postCssMediaMinMax = require('postcss-media-minmax');
 const postCssColorFunction = require('postcss-color-function');
+const postCssMixins = require('postcss-mixins');
+const postCssRucksack = require('rucksack-css');
 
 module.exports = {
   entry: [
@@ -66,12 +68,14 @@ module.exports = {
               plugins: () => [
                 postCssImport(),
                 autoprefixer(),
+                postCssMixins(),
                 postCssCustomProperties(),
                 postCssCalc(),
                 postCssNesting(),
                 postCssCustomMedia(),
                 postCssMediaMinMax(),
                 postCssColorFunction(),
+                postCssRucksack(),
               ],
             },
           },
