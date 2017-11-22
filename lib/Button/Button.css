@@ -5,16 +5,16 @@
  */
 
     @define-mixin buttonStyle $color {
-        background-color: $color;
+        /*background-color: $color;
         border: 1px solid $color;
         color: #fff;
 
         &:focus {
-            box-shadow: 0 0 0px 3px rgba($color, .5);
+            box-shadow: 0 0 0px 3px color($color alpha(-50%));
         }
 
         &:active {
-            box-shadow: 0 0 0px 18px rgba($color, 0.3);
+            box-shadow: 0 0 0px 18px color($color alpha(-30%));
         }
 
         &.hollow {
@@ -33,7 +33,7 @@
                     fill: #fff;
                 }
             }
-        }
+        }*/
     }
 
 /**
@@ -96,16 +96,72 @@
              * Button Style: Primary
              */
 
-                &.primary{
-                    @mixin buttonStyle var(--primary);
+                &.primary {
+                    background-color: var(--primary);
+                    border: 1px solid var(--primary);
+                    color: #fff;
+
+                    &:active {
+                        box-shadow: 0 0 0px 18px color(var(--primary) alpha(-30%));
+                    }
+
+                    &:focus {
+                        box-shadow: 0 0 0px 3px color(var(--primary) alpha(-50%));
+                    }                    
+
+                    &.hollow {
+                        background-color: transparent;
+                        color: var(--primary);
+
+                        & :global .stripes__icon{
+                            fill: var(--primary);
+                        }
+
+                        &:hover{
+                            background-color: color(var(--primary) shade(8%));
+                            color: #fff;
+
+                            & :global .stripes__icon{
+                                fill: #fff;
+                            }
+                        }
+                    }
                 }
 
             /**
-             * Button Style: Secondary
+             * Button Style: secondary
              */
 
                 &.secondary{
-                    @mixin buttonStyle var(--secondary);
+                    background-color: var(--secondary);
+                    border: 1px solid var(--secondary);
+                    color: #fff;
+
+                    &:active {
+                        box-shadow: 0 0 0px 18px color(var(--secondary) alpha(-30%));
+                    }
+
+                    &:focus {
+                        box-shadow: 0 0 0px 3px color(var(--secondary) alpha(-50%));
+                    }
+
+                    &.hollow {
+                        background-color: transparent;
+                        color: var(--secondary);
+
+                        & :global .stripes__icon{
+                            fill: var(--secondary);
+                        }
+
+                        &:hover{
+                            background-color: color(var(--secondary) shade(8%));
+                            color: #fff;
+
+                            & :global .stripes__icon{
+                                fill: #fff;
+                            }
+                        }
+                    }
                 }
 
             /**
@@ -113,7 +169,35 @@
              */
 
                 &.success {
-                    @mixin buttonStyle var(--success);
+                    background-color: var(--success);
+                    border: 1px solid var(--success);
+                    color: #fff;
+
+                    &:active {
+                        box-shadow: 0 0 0px 18px color(var(--success) alpha(-30%));
+                    }
+
+                    &:focus {
+                        box-shadow: 0 0 0px 3px color(var(--success) alpha(-50%));
+                    }
+
+                    &.hollow {
+                        background-color: transparent;
+                        color: var(--success);
+
+                        & :global .stripes__icon{
+                            fill: var(--success);
+                        }
+
+                        &:hover{
+                            background-color: color(var(--success) shade(8%));
+                            color: #fff;
+
+                            & :global .stripes__icon{
+                                fill: #fff;
+                            }
+                        }
+                    }
                 }
 
             /**
@@ -121,7 +205,35 @@
              */
 
                 &.warning {
-                    @mixin buttonStyle var(--warn);
+                    background-color: var(--warn);
+                    border: 1px solid var(--warn);
+                    color: #fff;
+
+                    &:active {
+                        box-shadow: 0 0 0px 18px color(var(--warn) alpha(-30%));
+                    }
+
+                    &:focus {
+                        box-shadow: 0 0 0px 3px color(var(--warn) alpha(-50%));
+                    }
+
+                    &.hollow {
+                        background-color: transparent;
+                        color: var(--warn);
+
+                        & :global .stripes__icon{
+                            fill: var(--warn);
+                        }
+
+                        &:hover{
+                            background-color: color(var(--warn) shade(8%));
+                            color: #fff;
+
+                            & :global .stripes__icon{
+                                fill: #fff;
+                            }
+                        }
+                    }
                 }
 
             /**
@@ -129,7 +241,35 @@
              */
 
                 &.error, &.negative{
-                    @mixin buttonStyle var(--error);
+                    background-color: var(--error);
+                    border: 1px solid var(--error);
+                    color: #fff;
+
+                    &:active {
+                        box-shadow: 0 0 0px 18px color(var(--error) alpha(-30%));
+                    }
+
+                    &:focus {
+                        box-shadow: 0 0 0px 3px color(var(--error) alpha(-50%));
+                    }
+
+                    &.hollow {
+                        background-color: transparent;
+                        color: var(--error);
+
+                        & :global .stripes__icon{
+                            fill: var(--error);
+                        }
+
+                        &:hover{
+                            background-color: color(var(--error) shade(8%));
+                            color: #fff;
+
+                            & :global .stripes__icon{
+                                fill: #fff;
+                            }
+                        }
+                    }
                 }
 
             /**
@@ -144,6 +284,9 @@
                             background-color: var(--bgHover);
                         }
                     }
+                    &:active {
+                        box-shadow: 0 0 0px 18px rgba(153, 153, 153, 0.2);
+                    }
                     &:focus {
                         box-shadow: 0 0 0px 3px rgba(153, 153, 153, 0.2);
                     }
@@ -152,7 +295,7 @@
 
         &.dropdownActive{
             &[aria-expanded="true"], &:focus{
-                border: 1px solid var(--secondary);
+                border: 1px solid var(--error);
             }
             &:focus{
                 outline: none;
