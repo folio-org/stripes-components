@@ -30,26 +30,24 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
 
   &.selected {
     color: #fff;
-    background-color: color(var(--primary) shade(8%));
-
-    & .cell {
-      color: #efefef;
-      background-color: var(--primary);
-    }
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   &:hover,
   &:focus {
     outline: none;
-    background-color: var(--bgHover);
+    background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
-    &.selected {
+    &.selected,
+    &:active {
       color: #fff;
-      background-color: color(var(--primary) shade(8%));
+      background-color: color(var(--primary) shade(8%)) !important;
 
       &.cell {
         color: #fff;
@@ -59,11 +57,22 @@
   }
 }
 
+.rowsBody {
+  padding: 3px 6px;
+}
+
+/*.rowsBody .row:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.008);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}*/
+
 .headerRow {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  border-bottom: 1px solid #ddd;
   width: calc(100% - 16px);
 
   &.hScroll {
@@ -77,10 +86,10 @@
   flex-shrink: 0;
   flex-grow: 0;
   padding: 6px;
-  font-size: 0.7rem;
   font-weight: bold;
-  text-transform: uppercase;
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: capitalize;
 
   &.sorted {
     text-decoration: underline;
