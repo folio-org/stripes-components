@@ -23,7 +23,7 @@
   overflow: hidden;
   white-space: nowrap;
   font-size: 0.9rem;
-  box-shadow: 0 0 0 6px transparent;
+  box-shadow: 0 0 0 18px transparent;
   line-height: 100%;
   display: inline-flex;
   align-items: center;
@@ -66,7 +66,7 @@
     color: #fff;
 
     &:active {
-      box-shadow: 0 0 0 6px color(var(--primary) alpha(-30%));
+      box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
     }
 
     &:focus {
@@ -102,7 +102,7 @@
     color: #fff;
 
     &:active {
-      box-shadow: 0 0 0 6px color(var(--secondary) alpha(-30%));
+      box-shadow: 0 0 0 18px color(var(--secondary) alpha(-30%));
     }
 
     &:focus {
@@ -138,7 +138,7 @@
     color: #fff;
 
     &:active {
-      box-shadow: 0 0 0 6px color(var(--success) alpha(-30%));
+      box-shadow: 0 0 0 18px color(var(--success) alpha(-30%));
     }
 
     &:focus {
@@ -174,7 +174,7 @@
     color: #fff;
 
     &:active {
-      box-shadow: 0 0 0 6px color(var(--warn) alpha(-30%));
+      box-shadow: 0 0 0 18px color(var(--warn) alpha(-30%));
     }
 
     &:focus {
@@ -211,7 +211,7 @@
     color: #fff;
 
     &:active {
-      box-shadow: 0 0 0 6px color(var(--error) alpha(-30%));
+      box-shadow: 0 0 0 18px color(var(--error) alpha(-30%));
     }
 
     &:focus {
@@ -252,7 +252,7 @@
     }
 
     &:active {
-      box-shadow: 0 0 0 6px rgba(153, 153, 153, 0.2);
+      box-shadow: 0 0 0 18px rgba(153, 153, 153, 0.2);
     }
 
     &:focus {
