@@ -22,8 +22,8 @@ buttonClass | string | Add a custom class |
 hollow | bool | Converts to an outlined button (see the [styles section](/?selectedKind=Button&selectedStory=Styles)) |
 align | string | Change the alignment of the button (with flexbox) Options: start, center, end |
 className | string | Replace CSS classes completely |
-bottomMargin0 | string | Remove bottom margin |
-marginBottom0 | string | Remove bottom margin |
+bottomMargin0 | bool | Remove bottom margin |
+marginBottom0 | bool | Remove bottom margin |
 fullWidth | fullWidth | Forces the button width to 100% |
 href | string | Returns an anchor-tag with an href-attribute |
 allowAnchorClick | bool | Allow anchor click |
