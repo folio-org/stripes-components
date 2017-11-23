@@ -33,41 +33,53 @@
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 7px;
 
-  &.selected {
+  /* Different bg on even rows */
+  &:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.008);
+  }
+
+  /* Selected style */
+  &.selected,
+  &.selected:nth-child(even) {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Hover and focus style */
+  &:hover:not(.selected),
+  &:focus:not(.selected) {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  &:nth-child(even):hover:not(.selected),
+  &:nth-child(even):focus:not(.selected) {
+    background: rgba(0, 0, 0, 0.1);
   }
 
   &:hover,
   &:focus {
     outline: none;
-    background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
+  }
 
-    &.selected,
-    &:active {
-      color: #fff;
-      background-color: color(var(--primary) shade(8%)) !important;
-
-      &.cell {
-        color: #fff;
-        background-color: color(var(--primary) shade(8%));
-      }
-    }
+  /* Active style (we have to be a bit specific to avoid using !important ) */
+  &:active,
+  &:nth-child(even):active,
+  &:hover:active,
+  &:nth-child(even):hover:active {
+    color: #fff;
+    background-color: var(--primary);
   }
 }
 
 .rowsBody {
-  padding: 3px 6px;
+  padding: 0 6px 3px;
+
+  /* Use monospaced numbers, aka Tabular Numerals (tnum) */
+  font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
 }
-
-/*.rowsBody .row:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.008);
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-}*/
 
 .headerRow {
   display: flex;
@@ -85,9 +97,9 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 6px;
-  font-weight: bold;
+  padding: 6px 12px;
   cursor: pointer;
+  font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
   text-transform: capitalize;
 
@@ -109,7 +121,7 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 6px;
+  padding: 3px 6px;
   overflow: hidden;
 
   &.showOverflow {

@@ -26,7 +26,6 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.16",
     "@storybook/addon-options": "^3.2.15",
     "@storybook/react": "^3.2.15",
     "autoprefixer": "^7.1.6",
@@ -61,6 +60,8 @@
   "dependencies": {
     "@folio/stripes-form": "^0.8.1",
     "@folio/stripes-react-hotkeys": "^1.0.0",
+    "@storybook/addon-actions": "^3.2.16",
+    "@storybook/addon-knobs": "^3.2.16",
     "classnames": "^2.2.5",
     "create-react-class": "^15.5.3",
     "dom-helpers": "^3.2.1",
