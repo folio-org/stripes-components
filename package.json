@@ -28,8 +28,6 @@
   "devDependencies": {
     "@storybook/addon-options": "^3.2.15",
     "@storybook/react": "^3.2.15",
-    "@storybook/addon-actions": "^3.2.16",
-    "@storybook/addon-knobs": "^3.2.16",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.17.0",
     "babel-eslint": "^8.0.0",
@@ -60,6 +58,8 @@
     "webpack": "1.11.0"
   },
   "dependencies": {
+    "@storybook/addon-actions": "^3.2.16",
+    "@storybook/addon-knobs": "^3.2.16",
     "@folio/stripes-form": "^0.8.1",
     "@folio/stripes-react-hotkeys": "^1.0.0",
     "classnames": "^2.2.5",
