@@ -44,8 +44,7 @@
   flex-grow: 2;
   padding: 7px 2px;
   margin: 0 4px;
-  font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--labelColor);
 
   &.error {
