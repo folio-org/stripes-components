@@ -2,3 +2,4 @@
 /lib/backup/
 /nbproject/private/
 yarn.lock
+atom.cson

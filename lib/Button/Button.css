@@ -1,17 +1,12 @@
 @import '../variables.css';
 
-a.button {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
+/**
+* Default styling
+*/
 
 .button {
-  padding: 5px 8px;
+  padding: 0 10px;
+  height: 24px;
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
@@ -20,13 +15,21 @@ a.button {
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
   background-color: transparent;
   border: transparent;
-  margin-bottom: var(--controlMarginBottom);
+
+  /* margin-bottom: var(--controlMarginBottom); */
   margin-left: 2px;
   margin-right: 2px;
   max-height: var(--controlHeight);
   overflow: hidden;
   white-space: nowrap;
   font-size: 0.9rem;
+  box-shadow: 0 0 0 18px transparent;
+  line-height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: 0;
 
   &.slim {
     padding: 5px 2px;
@@ -44,41 +47,66 @@ a.button {
     text-decoration: none;
   }
 
+  &:focus {
+    transition: box-shadow 0.3s ease-out;
+    backface-visibility: hidden;
+  }
+
+  /**
+  * Colors
+  */
+
+  /**
+  * Button Style: Primary
+  */
+
   &.primary {
     background-color: var(--primary);
     border: 1px solid var(--primary);
     color: #fff;
 
-    &:hover {
-      background-color: color(var(--primary) shade(8%));
+    &:active {
+      box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
     }
 
     &.hollow {
       background-color: transparent;
       color: var(--primary);
 
+      & :global .stripes__icon {
+        fill: var(--primary);
+      }
+
       &:hover {
         background-color: color(var(--primary) shade(8%));
         color: #fff;
+
+        & :global .stripes__icon {
+          fill: #fff;
+        }
       }
     }
   }
+
+  /**
+  * Button Style: secondary
+  */
 
   &.secondary {
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
     color: #fff;
 
-    & :global .stripes__icon {
-      fill: #fff;
+    &:active {
+      box-shadow: 0 0 0 18px color(var(--secondary) alpha(-30%));
     }
 
-    &:hover {
-      background-color: color(var(--secondary) shade(8%));
-
-      & :global .stripes__icon {
-        fill: #fff;
-      }
+    &:focus {
+      box-shadow: 0 0 0 3px color(var(--secondary) alpha(-50%));
     }
 
     &.hollow {
@@ -100,11 +128,95 @@ a.button {
     }
   }
 
+  /**
+  * Button Style: Success
+  */
+
+  &.success {
+    background-color: var(--success);
+    border: 1px solid var(--success);
+    color: #fff;
+
+    &:active {
+      box-shadow: 0 0 0 18px color(var(--success) alpha(-30%));
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px color(var(--success) alpha(-50%));
+    }
+
+    &.hollow {
+      background-color: transparent;
+      color: var(--success);
+
+      & :global .stripes__icon {
+        fill: var(--success);
+      }
+
+      &:hover {
+        background-color: color(var(--success) shade(8%));
+        color: #fff;
+
+        & :global .stripes__icon {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  /**
+  * Button Style: Warning
+  */
+
+  &.warning {
+    background-color: var(--warn);
+    border: 1px solid var(--warn);
+    color: #fff;
+
+    &:active {
+      box-shadow: 0 0 0 18px color(var(--warn) alpha(-30%));
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px color(var(--warn) alpha(-50%));
+    }
+
+    &.hollow {
+      background-color: transparent;
+      color: var(--warn);
+
+      & :global .stripes__icon {
+        fill: var(--warn);
+      }
+
+      &:hover {
+        background-color: color(var(--warn) shade(8%));
+        color: #fff;
+
+        & :global .stripes__icon {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  /**
+  * Button Style: Error
+  */
+
   &.error,
   &.negative {
     background-color: var(--error);
     border: 1px solid var(--error);
     color: #fff;
+
+    &:active {
+      box-shadow: 0 0 0 18px color(var(--error) alpha(-30%));
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px color(var(--error) alpha(-50%));
+    }
 
     &.hollow {
       background-color: transparent;
@@ -125,19 +237,33 @@ a.button {
     }
   }
 
-  &.hover {
-    background-color: transparent;
-    border: 1px solid transparent;
+  /**
+  * Button Style: Transparent
+  */
 
-    &:hover {
-      background-color: var(--bgHover);
+  &.transparent {
+    &.hover {
+      background-color: transparent;
+      border: 1px solid transparent;
+
+      &:hover {
+        background-color: var(--bgHover);
+      }
+    }
+
+    &:active {
+      box-shadow: 0 0 0 18px rgba(153, 153, 153, 0.2);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.2);
     }
   }
 
   &.dropdownActive {
     &[aria-expanded="true"],
     &:focus {
-      border: 1px solid var(--secondary);
+      border: 1px solid var(--error);
     }
 
     &:focus {
