@@ -1,5 +1,8 @@
 .root {
   margin: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:focus {
     outline: none;
