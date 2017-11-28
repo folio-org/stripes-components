@@ -91,7 +91,6 @@
   color: var(--subLabelColor #999);
   font-weight: bold;
   justify-content: flex-start;
-  padding: 0 4px;
 
   & h1,
   h2,
@@ -128,13 +127,19 @@
   appearance: none;
   background: none;
   border: none;
+  font-size: inherit;
 
   &:focus {
     outline: none;
-    animation-name: focusFlash;
+
+    /* animation-name: focusFlash;
     animation-duration: 2s;
-    background-color: var(--bgHover);
+    background-color: var(--bgHover); */
   }
+}
+
+.filterSetHeader svg {
+  height: 0.8em;
 }
 
 .filterSetlabel {
