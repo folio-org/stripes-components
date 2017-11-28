@@ -8,5 +8,10 @@
     "mount":true,
   },
   "extends": "stripes",
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["**/*.stories.js"]
+    }]
+  }
 }
