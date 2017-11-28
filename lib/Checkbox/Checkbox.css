@@ -43,7 +43,6 @@
   cursor: pointer;
   flex-grow: 2;
   padding: 4px 2px;
-  margin: 0 4px;
   font-weight: 600;
   color: var(--labelColor);
 
