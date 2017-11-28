@@ -91,7 +91,6 @@
   color: var(--subLabelColor #999);
   font-weight: bold;
   justify-content: flex-start;
-  /*padding: 0 4px;*/
 
   & h1,
   h2,
@@ -132,9 +131,10 @@
 
   &:focus {
     outline: none;
-    /*animation-name: focusFlash;
+
+    /* animation-name: focusFlash;
     animation-duration: 2s;
-    background-color: var(--bgHover);*/
+    background-color: var(--bgHover); */
   }
 }
 
