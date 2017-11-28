@@ -30,17 +30,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.008);
   border-radius: 7px;
 
   /* Different bg on even rows */
-  &.isEven {
-    background-color: rgba(0, 0, 0, 0.008);
+  &.isOdd {
+    background-color: rgba(0, 0, 0, 0.05);
   }
 
   /* Selected style */
   &.selected,
-  &.selected.isEven {
+  &.selected.isOdd {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -48,12 +48,12 @@
   /* Hover and focus style */
   &:hover:not(.selected),
   &:focus:not(.selected) {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
-  &.isEven:hover:not(.selected),
-  &.isEven:focus:not(.selected) {
-    background: rgba(0, 0, 0, 0.1);
+  &.isOdd:hover:not(.selected),
+  &.isOdd:focus:not(.selected) {
+    background: rgba(0, 0, 0, 0.15);
   }
 
   &:hover,
@@ -64,9 +64,9 @@
 
   /* Active style (we have to be a bit specific to avoid using !important ) */
   &:active,
-  &.isEven:active,
+  &.isOdd:active,
   &:hover:active,
-  &.isEven:hover:active {
+  &.isOdd:hover:active {
     color: #fff;
     background-color: var(--primary);
   }
