@@ -21,6 +21,7 @@
 * Adding empty `<Icon icon="profile" />` in support of UIU-283; see STCOM-124.
 * Show errors for `<Select>` elements regardless of the presence of a label attribute. Fixes STCOM-126.
 * Add `react-tether` to `<Datepicker>`. Fixes STCOM-125.
+* Remove `<Accordion>` from `<AddressList`. Fixes STCOM-138.
 * Add `interactive` to `<MultiColumnList>` to toggle cursor CSS on non-interactive lists. Fixes STCOM-139.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
