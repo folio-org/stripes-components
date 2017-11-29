@@ -121,7 +121,7 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 3px 6px;
+  padding: 5px 6px;
   overflow: hidden;
 
   &.showOverflow {
