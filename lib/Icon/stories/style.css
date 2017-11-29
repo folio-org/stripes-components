@@ -28,6 +28,7 @@
 
 .iconGridItem p {
   font-size: 12px;
+  margin-top: 6px;
 }
 
 :global(.stripes__icon) {
