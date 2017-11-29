@@ -1,7 +1,18 @@
 # Icon
 Component for rendering a variety of FOLIO icons.
 
-### Props
+## Basic Usage
+```
+import { Icon } from '@folio/stripes-components/lib/Icon';
+
+<Icon
+  icon="bookmark"
+  size="small"
+  iconClassName="myClass"
+/>
+```
+
+## Props
 Name | type | description | default |
 --- | --- | --- | ---
 icon | string | Sets icon to be rendered. See icon list for possible options | ICON |
