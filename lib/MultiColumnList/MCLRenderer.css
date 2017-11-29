@@ -59,6 +59,10 @@
   &:hover,
   &:focus {
     outline: none;
+  }
+
+  &.isInteractive:hover,
+  &.isInteractive:focus {
     cursor: pointer;
   }
 
