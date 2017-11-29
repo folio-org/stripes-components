@@ -83,6 +83,20 @@ hr {
   border-width: 0 0 1px;
 }
 
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 :global(.fullWidth) {
   width: 100% !important;
 }
