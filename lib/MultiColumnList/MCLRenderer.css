@@ -12,18 +12,6 @@
   & > * {
     display: block;
   }
-
-  /* keep block anchors from styling the entire row */
-  & > a {
-    color: #333;
-
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus {
-      text-decoration: none;
-    }
-  }
 }
 
 .row {
@@ -32,6 +20,8 @@
   align-items: stretch;
   background-color: rgba(0, 0, 0, 0.008);
   border-radius: 7px;
+  color: #333;
+  text-decoration: none;
 
   /* Different bg on even rows */
   &.isOdd {
