@@ -1,3 +1,5 @@
+@import "reset";
+
 * {
   box-sizing: border-box;
 }
@@ -41,6 +43,10 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight: 600;
+}
+
 fieldset {
   border: none;
 }
@@ -81,6 +87,20 @@ ul {
 hr {
   border: 1px solid #cdcdcd;
   border-width: 0 0 1px;
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 :global(.fullWidth) {

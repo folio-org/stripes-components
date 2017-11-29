@@ -1,0 +1,37 @@
+.iconGrid {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.iconGridItem {
+  margin: 15px;
+  text-align: center;
+  flex-basis: 130px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.iconGridItemInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 120px;
+  height: 120px;
+}
+
+.iconGridItem p {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+:global(.stripes__icon) {
+  height: 20px;
+  width: 20px;
+}
