@@ -9,6 +9,11 @@
   }
 }
 
+.root svg {
+  height: inherit;
+  width: inherit;
+}
+
 :global .stripes__icon {
   fill: #999;
 }
@@ -29,4 +34,43 @@ button .root {
   & button .root {
     float: right;
   }
+}
+
+/**
+ * Sizing
+ */
+
+.small {
+  height: 12px;
+  width: 12px;
+}
+
+.medium {
+  height: 18px;
+  width: 18px;
+}
+
+.large {
+  height: 28px;
+  width: 28px;
+}
+
+/**
+ * Specific styling for spinner
+ * (Spinner is likely to be deprecated later on)
+ */
+
+.iconSpinner.small {
+  width: 40px;
+  height: 20px;
+}
+
+.iconSpinner.medium {
+  width: 60px;
+  height: 30px;
+}
+
+.iconSpinner.large {
+  width: 100px;
+  height: 50px;
 }
