@@ -51,12 +51,11 @@
   justify-content: space-between;
   align-items: center;
 
-    /*
-    &:focus {
-      outline: none;
-      animation-name: hoverFlash;
-      animation-duration: 2s;
-    } */
+  /* &:focus {
+    outline: none;
+    animation-name: hoverFlash;
+    animation-duration: 2s;
+  } */
 }
 
 .labelArea {
