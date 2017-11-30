@@ -21,7 +21,8 @@
   display: flex;
   align-items: center;
   min-height: calc(var(--controlHeight) + 4px);
-  transition: background-color 0.3s;
+
+  /* transition: background-color 0.3s; */
 
   & button,
   & h1,
@@ -39,50 +40,23 @@
 
   &:focus {
     outline: none;
-    animation-name: hoverFlash;
-    animation-duration: 2s;
+
+    /* animation-name: hoverFlash;
+    animation-duration: 2s; */
   }
 }
 
 .header {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  &.default {
-    margin-bottom: 12px;
-
+    /*
     &:focus {
       outline: none;
       animation-name: hoverFlash;
       animation-duration: 2s;
-    }
-  }
-}
-
-.defaultCollapseButton {
-  border-radius: 50%;
-  background-color: transparent;
-  transition: background-color 0.3s;
-  cursor: pointer;
-  min-height: calc(var(--controlHeight) + 4px);
-  width: calc(var(--controlHeight) + 4px);
-  appearance: none;
-  border: none;
-
-  &:hover {
-    background-color: var(--bgHover);
-  }
-
-  &:focus {
-    outline: none;
-    background-color: var(--bgHover);
-  }
-
-  & *:focus {
-    outline: none;
-  }
+    } */
 }
 
 .labelArea {
@@ -91,6 +65,7 @@
   color: var(--subLabelColor #999);
   font-weight: bold;
   justify-content: flex-start;
+  padding-left: 4px;
 
   & h1,
   h2,
@@ -116,10 +91,41 @@
 .separator {
   width: 100%;
   border-bottom: 1px solid #cecece;
-  margin: auto;
-  margin-bottom: 14px;
+  margin: 8px auto;
 }
 
+/**
+ * Default Accordion Header
+ */
+
+.header.default {
+  flex-basis: 100%;
+}
+
+.headerDefaultContentRight {
+  flex-grow: 2;
+  flex-shrink: 0;
+}
+
+.defaultCollapseButton {
+  flex: 1;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  font-size: 1.3em;
+
+  &:hover,
+  &:focus {
+    opacity: 0.85;
+  }
+}
+
+/**
+ * Filter set header
+ */
 .filterSetHeader {
   composes: header;
   border-radius: var(--radius 4px);
