@@ -5,6 +5,7 @@
   align-items: center;
   transition: background-color 0.2s ease;
   margin-bottom: var(--controlMarginBottom);
+  position: relative;
 
   &.rootFullWidth {
     width: 100%;
@@ -27,10 +28,19 @@
   }
 
   &.inline {
-    display: inline;
+    display: inline-flex;
+    margin: 0 4px;
+    top: 4px;
 
-    & .checkboxInput {
-      margin-bottom: 4px;
+    & label.checkboxLabel {
+      height: 18px;
+      width: 18px;
+      padding: 0;
+
+      &::before,
+      &::after {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -41,6 +51,9 @@
   padding: 4px 2px;
   font-weight: 600;
   color: var(--labelColor);
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
 
   &:hover {
     opacity: 0.8;
@@ -94,18 +107,9 @@ input[type=checkbox].checkboxInput:not(:checked) {
   left: -9999px;
 }
 
-input[type=checkbox].checkboxInput + label.checkboxLabel::before,
-input[type=checkbox].checkboxInput + label.checkboxLabel::after {
+.checkboxLabel::before,
+.checkboxLabel::after {
   margin-top: 5px;
-}
-
-input[type=checkbox].checkboxInput:checked + label.checkboxLabel,
-input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel {
-  position: relative;
-  padding-left: 28px;
-  cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
 }
 
 input[type=checkbox].checkboxInput:checked + label.checkboxLabel::before,
