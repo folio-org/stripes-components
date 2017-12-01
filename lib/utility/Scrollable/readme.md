@@ -16,3 +16,12 @@ import { Scrollable } from '@folio/stripes-components/lib/utility/Scrollable';
   </div>
 </Scrollable>
 ```
+
+## Props
+
+Name | type | description | default
+--- | --- | --- | ---
+noOverflow | bool | Disables scroll and returns a container with overflow: hidden; Useful for when a child element should be scrolled instead. | false
+containerClass | string | Add class to scrolling container | ''
+containerStyle | object | Add style to scrolling container | null
+onScroll | function | Listen for scroll events. Fires on both X and Y direction | null
