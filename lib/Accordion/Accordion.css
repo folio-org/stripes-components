@@ -12,7 +12,6 @@
 
 .root {
   width: 100%;
-  /*margin-bottom: 4px;*/
 }
 
 /**
@@ -20,7 +19,7 @@
  */
 
 .hasSeparator .headerWrapper {
-   border-top: 1px solid var(--minor-divider-color);
+  border-top: 1px solid var(--minor-divider-color);
 }
 
 .headerWrapper {
@@ -65,16 +64,7 @@
   color: var(--subLabelColor #999);
   font-weight: bold;
   justify-content: flex-start;
-  padding-left: 4px;
-
-  & h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: none;
-  }
+  padding-left: 6px;
 }
 
 /**
@@ -117,7 +107,7 @@
   align-items: center;
   padding: 0;
   background-color: transparent;
-  font-size: 1.3em;
+  font-size: 18px;
   min-height: 44px;
 
   &:hover,
