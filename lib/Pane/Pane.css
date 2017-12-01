@@ -14,6 +14,14 @@
   background-color: #fcfcfc;
 }
 
+/**
+ * Pane Content
+ */
+
+.paneContent {
+  padding: var(--major-padding);
+}
+
 @media (--small) {
   .pane {
     position: absolute;

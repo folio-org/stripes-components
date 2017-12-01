@@ -1,0 +1,113 @@
+.scrollable {
+  height: 100%;
+  position: relative;
+}
+
+/**
+ * Perfect Scrollbar
+ */
+
+/*
+* Container style
+*/
+:global .ps {
+  overflow: hidden !important;
+  overflow-anchor: none;
+  -ms-overflow-style: none;
+  touch-action: auto;
+  -ms-touch-action: auto;
+}
+
+/*
+* Scrollbar rail styles
+*/
+:global .ps__rail-x {
+  display: none;
+  opacity: 0;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
+  height: 15px;
+  bottom: 0;
+  position: absolute;
+}
+
+:global .ps__rail-y {
+  display: none;
+  opacity: 0;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
+  width: 15px;
+  right: 0;
+  position: absolute;
+}
+
+:global .ps--active-x > .ps__rail-x,
+:global .ps--active-y > .ps__rail-y {
+  display: block;
+  background-color: transparent;
+}
+
+:global .ps:hover > .ps__rail-x,
+:global .ps:hover > .ps__rail-y,
+:global .ps--focus > .ps__rail-x,
+:global .ps--focus > .ps__rail-y,
+:global .ps--scrolling-x > .ps__rail-x,
+:global .ps--scrolling-y > .ps__rail-y {
+  opacity: 0.6;
+}
+
+:global .ps__rail-x:hover,
+:global .ps__rail-y:hover,
+:global .ps__rail-x:focus,
+:global .ps__rail-y:focus {
+  background-color: #eee;
+  opacity: 0.9;
+}
+
+/*
+* Scrollbar thumb styles
+*/
+:global .ps__thumb-x {
+  background-color: #aaa;
+  border-radius: 6px;
+  transition: background-color 0.2s linear, height 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s linear, height 0.2s ease-in-out;
+  height: 6px;
+  bottom: 2px;
+  position: absolute;
+}
+
+:global .ps__thumb-y {
+  background-color: #aaa;
+  border-radius: 6px;
+  transition: background-color 0.2s linear, width 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s linear, width 0.2s ease-in-out;
+  width: 6px;
+  right: 2px;
+  position: absolute;
+}
+
+:global .ps__rail-x:hover > .ps__thumb-x,
+:global .ps__rail-x:focus > .ps__thumb-x {
+  background-color: #999;
+  height: 11px;
+}
+
+:global .ps__rail-y:hover > .ps__thumb-y,
+:global .ps__rail-y:focus > .ps__thumb-y {
+  background-color: #999;
+  width: 11px;
+}
+
+/* MS supports */
+@supports (-ms-overflow-style: none) {
+  :global .ps {
+    overflow: auto !important;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  :global .ps {
+    overflow: auto !important;
+  }
+}
