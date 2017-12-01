@@ -122,12 +122,13 @@
 .filterSetHeader {
   composes: header;
   border-radius: var(--radius 4px);
-  height: var(--controlHeight 28px);
+  height: var(--controlHeight 24px);
   appearance: none;
   background: none;
   border: none;
   font-size: inherit;
   width: 100%;
+  padding: 0;
 
   &:focus {
     outline: none;
