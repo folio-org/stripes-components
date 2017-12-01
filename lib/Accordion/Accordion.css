@@ -12,12 +12,19 @@
 
 .root {
   width: 100%;
-  margin-bottom: 4px;
+  /*margin-bottom: 4px;*/
+}
+
+/**
+ * Header
+ */
+
+.hasSeparator .headerWrapper {
+   border-top: 1px solid var(--minor-divider-color);
 }
 
 .headerWrapper {
   width: 100%;
-  border-radius: var(--radius);
   display: flex;
   align-items: center;
   min-height: calc(var(--controlHeight) + 4px);
@@ -40,9 +47,6 @@
 
   &:focus {
     outline: none;
-
-    /* animation-name: hoverFlash;
-    animation-duration: 2s; */
   }
 }
 
@@ -50,14 +54,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* &:focus {
-    outline: none;
-    animation-name: hoverFlash;
-    animation-duration: 2s;
-  } */
 }
 
+/**
+ * Label
+ */
 .labelArea {
   display: flex;
   flex-grow: 2;
@@ -76,8 +77,10 @@
   }
 }
 
+/**
+ * Content
+ */
 .content {
-  padding: 0 calc(var(--gutter, 0.8em) * 1.5);
   max-height: 0; /* hidden */
   overflow: hidden;
   transition: max-height 0.25s ease;
@@ -115,6 +118,7 @@
   padding: 0;
   background-color: transparent;
   font-size: 1.3em;
+  min-height: 44px;
 
   &:hover,
   &:focus {
