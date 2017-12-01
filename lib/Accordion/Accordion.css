@@ -127,6 +127,7 @@
   background: none;
   border: none;
   font-size: inherit;
+  width: 100%;
 
   &:focus {
     outline: none;
@@ -135,10 +136,6 @@
     animation-duration: 2s;
     background-color: var(--bgHover); */
   }
-}
-
-.filterSetHeader svg {
-  height: 0.8em;
 }
 
 .filterSetlabel {

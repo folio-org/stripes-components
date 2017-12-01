@@ -20,6 +20,7 @@
 
 .paneContent {
   padding: var(--major-padding);
+  height: 100%;
 }
 
 @media (--small) {
