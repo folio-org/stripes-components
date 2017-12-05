@@ -31,6 +31,10 @@ label.radioLabel {
     opacity: 0.8;
   }
 
+  &:active {
+    opacity: 0.65;
+  }
+
   &.error {
     color: var(--error);
 
