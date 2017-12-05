@@ -12,7 +12,7 @@
   cursor: pointer;
   color: #555;
   border-radius: 6px;
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  transition: background-color 0.25s, color 0.25s, opacity 0.5s;
   background-color: transparent;
   border: transparent;
 
@@ -23,13 +23,14 @@
   overflow: hidden;
   white-space: nowrap;
   font-size: 0.9rem;
-  box-shadow: 0 0 0 18px transparent;
   line-height: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   outline: 0;
+  box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
+  opacity: 1;
 
   &.slim {
     padding: 5px 2px;
@@ -45,10 +46,10 @@
 
   &:hover {
     text-decoration: none;
+    opacity: 0.8;
   }
 
   &:focus {
-    transition: box-shadow 0.3s ease-out;
     backface-visibility: hidden;
   }
 
@@ -65,11 +66,12 @@
     border: 1px solid var(--primary);
     color: #fff;
 
-    &:active {
+    &:focus:active {
       box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
     }
 
     &:focus {
+      transition: box-shadow 0.3s ease-out;
       box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
     }
 
@@ -101,11 +103,12 @@
     border: 1px solid var(--secondary);
     color: #fff;
 
-    &:active {
+    &:focus:active {
       box-shadow: 0 0 0 18px color(var(--secondary) alpha(-30%));
     }
 
     &:focus {
+      transition: box-shadow 0.3s ease-out;
       box-shadow: 0 0 0 3px color(var(--secondary) alpha(-50%));
     }
 
@@ -137,11 +140,12 @@
     border: 1px solid var(--success);
     color: #fff;
 
-    &:active {
+    &:focus:active {
       box-shadow: 0 0 0 18px color(var(--success) alpha(-30%));
     }
 
     &:focus {
+      transition: box-shadow 0.3s ease-out;
       box-shadow: 0 0 0 3px color(var(--success) alpha(-50%));
     }
 
@@ -173,11 +177,12 @@
     border: 1px solid var(--warn);
     color: #fff;
 
-    &:active {
+    &:focus:active {
       box-shadow: 0 0 0 18px color(var(--warn) alpha(-30%));
     }
 
     &:focus {
+      transition: box-shadow 0.3s ease-out;
       box-shadow: 0 0 0 3px color(var(--warn) alpha(-50%));
     }
 
@@ -210,11 +215,12 @@
     border: 1px solid var(--error);
     color: #fff;
 
-    &:active {
+    &:focus:active {
       box-shadow: 0 0 0 18px color(var(--error) alpha(-30%));
     }
 
     &:focus {
+      transition: box-shadow 0.3s ease-out;
       box-shadow: 0 0 0 3px color(var(--error) alpha(-50%));
     }
 
@@ -251,11 +257,12 @@
       }
     }
 
-    &:active {
+    &:focus:active {
       box-shadow: 0 0 0 18px rgba(153, 153, 153, 0.2);
     }
 
     &:focus {
+      transition: box-shadow 0.3s ease-out;
       box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.2);
     }
   }
