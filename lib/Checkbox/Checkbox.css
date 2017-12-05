@@ -1,5 +1,36 @@
 @import '../variables.css';
 
+.checkboxLabel {
+  box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
+  outline: 0;
+  opacity: 1;
+  transition: opacity 0.4s;
+  border-radius: 6px;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+    transition: none !important;
+    box-shadow: 0 0 0 18px rgba(0, 0, 0, 0) !important;
+  }
+}
+input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
+  backface-visibility: hidden;
+}
+
+input[type=checkbox].checkboxInput:active + label.checkboxLabel {
+  opacity: 0.7;
+}
+input[type=checkbox].checkboxInput:focus:active + label.checkboxLabel {
+  transition: none;
+  box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
+}
+
+input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
+}
+
 .root {
   display: flex;
   align-items: center;
@@ -50,13 +81,13 @@
   align-items: center;
   cursor: pointer;
   flex-grow: 2;
-  padding: 0 2px;
+  padding: 2px 5px;
   font-weight: 600;
   color: var(--labelColor);
   position: relative;
   padding-left: 28px;
   line-height: 20px;
-  min-height: 24px;
+  border-radius: 4px;
 
   &:hover {
     opacity: 0.8;
@@ -123,7 +154,7 @@ input[type=checkbox].checkboxInput:checked + label.checkboxLabel::before,
 input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 4px;
   top: 0;
   width: 16px;
   height: 16px;
@@ -139,7 +170,7 @@ input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::after {
   height: 4px;
   position: absolute;
   top: 4px;
-  left: 4px;
+  left: 8px;
   border: 3px solid #313131;
   border-top: none;
   border-right: none;
