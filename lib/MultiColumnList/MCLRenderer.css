@@ -1,5 +1,19 @@
 @import '../variables.css';
 
+
+.mclContainer {
+  /* We add negative margin here to make up for positive margin on first/last cell in each row
+   (since the total padding has to be 15px in total and the container (e.g. pane) has 15px of padding)
+   margin: 0 -10px; */
+
+  &:focus {
+    outline: none;
+
+    /* animation-name: example;
+    animation-duration: 2s; */
+  }
+}
+
 .heightSpacer {
   position: relative;
 }
@@ -157,12 +171,4 @@
 @keyframes example {
   from { background-color: var(--bgHover); }
   to { background-color: var(--bg); }
-}
-
-.mclContainer {
-  &:focus {
-    outline: none;
-    animation-name: example;
-    animation-duration: 2s;
-  }
 }

@@ -70,6 +70,7 @@
     color: #fff;
 
     &:focus:active {
+      transition: none;
       box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
     }
 
@@ -107,6 +108,7 @@
     color: #fff;
 
     &:focus:active {
+      transition: none;
       box-shadow: 0 0 0 18px color(var(--secondary) alpha(-30%));
     }
 
@@ -144,6 +146,7 @@
     color: #fff;
 
     &:focus:active {
+      transition: none;
       box-shadow: 0 0 0 18px color(var(--success) alpha(-30%));
     }
 
@@ -181,6 +184,7 @@
     color: #fff;
 
     &:focus:active {
+      transition: none;
       box-shadow: 0 0 0 18px color(var(--warn) alpha(-30%));
     }
 
@@ -219,6 +223,7 @@
     color: #fff;
 
     &:focus:active {
+      transition: none;
       box-shadow: 0 0 0 18px color(var(--error) alpha(-30%));
     }
 
@@ -261,6 +266,7 @@
     }
 
     &:focus:active {
+      transition: none;
       box-shadow: 0 0 0 18px rgba(153, 153, 153, 0.2);
     }
 
