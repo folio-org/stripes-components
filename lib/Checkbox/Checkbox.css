@@ -10,8 +10,6 @@
   &:hover {
     text-decoration: none;
     opacity: 0.8;
-    transition: none !important;
-    box-shadow: 0 0 0 18px rgba(0, 0, 0, 0) !important;
   }
 }
 input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
