@@ -23,6 +23,7 @@
 * Add `react-tether` to `<Datepicker>`. Fixes STCOM-125.
 * Remove `<Accordion>` from `<AddressList`. Fixes STCOM-138.
 * Add `interactive` to `<MultiColumnList>` to toggle cursor CSS on non-interactive lists. Fixes STCOM-139.
+* Add `handleFilterChange` method for FilterGroups. Works with anointed resource instead of component state. Fixes STCOM-148.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
