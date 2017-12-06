@@ -21,6 +21,11 @@
 .paneContent {
   padding: var(--major-padding);
   height: 100%;
+
+  /* If content is list */
+  &.contentIsList {
+    padding: 0;
+  }
 }
 
 @media (--small) {
