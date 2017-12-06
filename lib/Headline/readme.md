@@ -15,8 +15,8 @@ Renders headlines in different sizes and with different tags, margins and styles
 ### Props
 Name | Type | Description | Options | Default
 --- | --- | --- | --- | ---
-title | string | The title of the headline | | |
-children | node | Alternative way to set the title of the headline | | |
+label | string | The label of the headline | | |
+children | node | Alternative way to set the label of the headline | | |
 size | string | The size of the headline | small, medium, large | medium
 margin | string | The bottom margin of the component. Automatically matches the size-prop. | small, medium, large | medium
 tag | string | The tag of the headline | h1, h2, h3, h4, h5, h6, p, div | h2
