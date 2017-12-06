@@ -1,6 +1,5 @@
 @import '../variables.css';
 
-
 .mclContainer {
   /* We add negative margin here to make up for positive margin on first/last cell in each row
    (since the total padding has to be 15px in total and the container (e.g. pane) has 15px of padding)
