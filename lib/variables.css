@@ -9,12 +9,18 @@
   --labelColor: #333;
   --subLabelColor: #999;
   --controlMarginBottom: 8px;
-  --controlHeight: 28px;
+  --controlHeight: 24px;
   --radius: 6px;
   --inputBorderColor: #acacac;
   --gutter: 0.8em;
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
+  --minor-divider-color: rgba(0, 0, 0, 0.1);
+
+  /**
+   * Padding
+   */
+  --major-padding: 15px;
 }
 
 @custom-media --small (max-width: 640px);

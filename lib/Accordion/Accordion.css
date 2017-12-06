@@ -12,12 +12,18 @@
 
 .root {
   width: 100%;
-  margin-bottom: 4px;
+}
+
+/**
+ * Header
+ */
+
+.hasSeparator .headerWrapper {
+  border-top: 1px solid var(--minor-divider-color);
 }
 
 .headerWrapper {
   width: 100%;
-  border-radius: var(--radius);
   display: flex;
   align-items: center;
   min-height: calc(var(--controlHeight) + 4px);
@@ -40,9 +46,6 @@
 
   &:focus {
     outline: none;
-
-    /* animation-name: hoverFlash;
-    animation-duration: 2s; */
   }
 }
 
@@ -50,34 +53,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* &:focus {
-    outline: none;
-    animation-name: hoverFlash;
-    animation-duration: 2s;
-  } */
 }
 
+/**
+ * Label
+ */
 .labelArea {
   display: flex;
   flex-grow: 2;
   color: var(--subLabelColor #999);
-  font-weight: bold;
+  font-weight: 600;
   justify-content: flex-start;
-  padding-left: 4px;
-
-  & h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: none;
-  }
+  padding-left: 6px;
 }
 
+/**
+ * Content
+ */
 .content {
-  padding: 0 calc(var(--gutter, 0.8em) * 1.5);
   max-height: 0; /* hidden */
   overflow: hidden;
   transition: max-height 0.25s ease;
@@ -114,7 +107,8 @@
   align-items: center;
   padding: 0;
   background-color: transparent;
-  font-size: 1.3em;
+  font-size: 18px;
+  min-height: 44px;
 
   &:hover,
   &:focus {
@@ -128,11 +122,13 @@
 .filterSetHeader {
   composes: header;
   border-radius: var(--radius 4px);
-  height: var(--controlHeight 28px);
+  height: var(--controlHeight 24px);
   appearance: none;
   background: none;
   border: none;
   font-size: inherit;
+  width: 100%;
+  padding: 0;
 
   &:focus {
     outline: none;
@@ -141,10 +137,6 @@
     animation-duration: 2s;
     background-color: var(--bgHover); */
   }
-}
-
-.filterSetHeader svg {
-  height: 0.8em;
 }
 
 .filterSetlabel {
