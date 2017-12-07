@@ -1,0 +1,54 @@
+/**
+ * Pane Menu Icon
+ */
+
+@import '../variables';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  width: var(--controlHeightTouch);
+  height: var(--controlHeightTouch);
+}
+
+.icon {
+  padding: 4px;
+  border-radius: 3px;
+}
+
+/**
+ * Hover/focus/active styles
+ */
+
+.icon {
+  pointer-events: none;
+  transition: opacity 0.4s;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+}
+
+.root {
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    backface-visibility: hidden;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.root:focus:active .icon {
+  transition: none;
+  box-shadow: 0 0 0 8px color(var(--primary) alpha(-30%));
+}
+
+.root:focus .icon {
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
+}
