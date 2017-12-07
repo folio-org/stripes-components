@@ -11,10 +11,12 @@ The items-prop is your array of times and the itemFormatter is a function that d
 
   const items = ['Apples', 'Bananas', 'Strawberries', 'Oranges'];
   const itemFormatter = (item) => (<li>{item}</li>);
+  const isEmptyMessage = 'No items to show';
 
   <List
     items={items}
     itemFormatter={itemFormatter}
+    isEmptyMessage={isEmptyMessage}
   />
 ```
 
