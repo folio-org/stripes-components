@@ -1,19 +1,60 @@
+@import "../variables";
+
 .root {
-  list-style: none;
-  padding: 0;
   margin-bottom: 1rem;
 
   &.marginBottom0 {
     margin-bottom: 0;
   }
+}
 
+/**
+ * Is empty message
+ */
+.isEmptyMessage {
+  color: var(--subLabelColor);
+}
+
+/**
+ * List style
+ * Easily change list style by changing the listStyle-prop (defaults to: default)
+ */
+
+/**
+ * Default
+ */
+.listStyleDefault {
   & li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #dcdcdc;
-    padding: 4px 8px;
+    background-color: rgba(0, 0, 0, 0.008);
+    padding: 5px 6px;
     border-radius: 4px;
+    margin-bottom: 4px;
+
+    &:nth-child(odd) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+/**
+ * Bullets
+ */
+ul.listStyleBullets,
+ul.listStyleBullets ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.2;
+
+  & ul {
+    margin-top: 4px;
+    list-style-type: circle;
+    margin-bottom: 8px;
+  }
+
+  & li {
     margin-bottom: 4px;
   }
 }

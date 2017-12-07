@@ -19,12 +19,17 @@
  */
 
 .paneContent {
-  padding: var(--major-padding);
   height: 100%;
 
-  /* If content is list */
-  &.contentIsList {
-    padding: 0;
+  width: 100%;
+  overflow: auto;
+
+  &.hasPadding {
+    padding: var(--major-padding);
+  }
+
+  &.noOverflow {
+    overflow: hidden;
   }
 }
 
