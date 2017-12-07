@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 2.0.0 (IN PROGRESS)
+## 2.0.0 (https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
 
 * Refactor `<EntrySelector>` to make it more reusable. Fixes STCOM-97.
 * Added `<ConfirmationModal>` component to 'structures' folder. Supports STCOM-66. See [docs](lib/structures/ConfirmationModal/readme.md).
@@ -25,6 +26,8 @@
 * Add `interactive` to `<MultiColumnList>` to toggle cursor CSS on non-interactive lists. Fixes STCOM-139.
 * Add `handleFilterChange` method for FilterGroups. Works with anointed resource instead of component state. Fixes STCOM-148.
 * Add `filterState` method for FilterGroups. Like `initialFilterState` but doesn't need the configuraton object. Fixes STCOM-147.
+* Numerous style updates to `<MultiColumnList>`, `<Button>`, `<Checkbox>` and other components.
+* Storybook resource added. Run `yarn storybook` to see component demos and documentation.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
