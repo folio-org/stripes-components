@@ -19,8 +19,17 @@
  */
 
 .paneContent {
-  padding: var(--major-padding);
   height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  &.hasPadding {
+    padding: var(--major-padding);
+  }
+
+  &.noOverflow {
+    overflow: hidden;
+  }
 }
 
 @media (--small) {
