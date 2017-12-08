@@ -30,6 +30,20 @@
 (which can be turned in to a button for toggling a popover in the future) */
 .paneHeaderCenterInner {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Add ellipsis to titles */
+.paneTitle,
+.paneSub {
+  width: 100%;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
 }
 
 /* Pane title */
@@ -41,8 +55,7 @@
 /* Pane sub */
 .paneSub {
   color: var(--subLabelColor);
-  font-size: 0.9em;
-  margin-top: 2px;
+  font-size: 11px;
 }
 
 /* Left content area */
