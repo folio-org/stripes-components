@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 44px;
+  padding: 0 10px;
   left: 0;
   right: 0;
 }
@@ -58,13 +59,12 @@
   font-size: 11px;
 }
 
-/* Left content area */
+/* First content area */
 
 /* .paneContentFirstArea {
-
 } */
 
-/* Right content area */
+/* Last content area */
 .paneContentLastArea {
   margin-left: auto;
 
