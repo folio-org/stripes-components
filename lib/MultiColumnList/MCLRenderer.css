@@ -1,7 +1,7 @@
 @import '../variables.css';
 
 .mclContainer {
-    &:focus {
+  &:focus {
     outline: none;
 
     /* animation-name: example;
