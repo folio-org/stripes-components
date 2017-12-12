@@ -1,10 +1,6 @@
 @import '../variables.css';
 
 .mclContainer {
-  /* We add negative margin here to make up for positive margin on first/last cell in each row
-   (since the total padding has to be 15px in total and the container (e.g. pane) has 15px of padding)
-   margin: 0 -10px; */
-
   &:focus {
     outline: none;
 
@@ -35,6 +31,18 @@
   border-radius: 7px;
   color: #333;
   text-decoration: none;
+
+  & a {
+    color: var(--primary);
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
 
   /* Different bg on even rows */
   &.isOdd {
@@ -104,7 +112,7 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 6px 12px;
+  padding: 6px 5px;
   cursor: pointer;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
