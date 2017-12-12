@@ -15,6 +15,7 @@ Renders a square button with a centered icon.
 
 ## Props
 Name | Type | Description
+-- | -- | --
 icon | string | Select the icon. You can use any icon that's available in the Icon-component
 className | string | Append your own CSS class
 style | object | Set the inline style
