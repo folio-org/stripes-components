@@ -44,7 +44,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1;
+  line-height: 1.25;
 }
 
 /* Pane title */
@@ -57,7 +57,7 @@
 .paneSub {
   color: var(--subLabelColor);
   font-size: 11px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* First content area */
