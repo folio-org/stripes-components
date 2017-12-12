@@ -5,6 +5,7 @@
 @import '../variables';
 
 .root {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +13,7 @@
   width: var(--controlHeightTouch);
   height: var(--controlHeightTouch);
   transition: opacity 0.4s;
+  border-radius: 0;
 
   &:hover {
     text-decoration: none;
@@ -22,4 +24,16 @@
   &:focus {
     opacity: 0.6;
   }
+}
+
+.badgeCount {
+  position: absolute;
+  background-color: var(--secondary);
+  color: var(--labelColor);
+  border-radius: 20%;
+  padding: 0 3px;
+  font-weight: 600;
+  font-size: 11px;
+  top: 15%;
+  left: 50%;
 }
