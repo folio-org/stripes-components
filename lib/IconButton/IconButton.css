@@ -28,12 +28,7 @@
 
 .badgeCount {
   position: absolute;
-  background-color: var(--secondary);
-  color: var(--labelColor);
-  border-radius: 20%;
-  padding: 0 3px;
-  font-weight: 600;
-  font-size: 11px;
   top: 15%;
   left: 50%;
+  font-size: 11px;
 }
