@@ -1,6 +1,6 @@
 @import '../../../variables.css';
 
-.item {
+.addressItem {
   border-color: #999;
   border-width: 1px 1px 0;
   border-style: solid;
@@ -11,7 +11,7 @@
   }
 }
 
-.content {
+.addressItemContent {
   padding: 14px;
   background-color: color(var(--bg) blend(var(--bgHover) 20%));
   width: 100%;
