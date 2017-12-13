@@ -1,6 +1,6 @@
 @import '../variables.css';
 
-.root {
+.badge {
   border-radius: 40%;
   padding: 2px 5px;
   font-weight: 600;

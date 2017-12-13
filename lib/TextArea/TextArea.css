@@ -1,10 +1,10 @@
 @import '../variables.css';
 
-.root {
+.textArea {
   position: relative;
   max-width: 100%;
 
-  &.rootFull {
+  &.fullWidth {
     width: 100%;
   }
 }
