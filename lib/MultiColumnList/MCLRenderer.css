@@ -105,8 +105,7 @@
   width: calc(100% - 22px);
 
   /* header columns has padding of their own and we need a total of 15px from edge to text */
-  padding-top: 6px;
-  padding-left: 10px;
+  padding: 6px 10px 0;
 
   &.hScroll {
     overflow: auto;
