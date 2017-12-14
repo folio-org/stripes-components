@@ -1,5 +1,10 @@
 @import '../variables.css';
 
+:root {
+  --input-horizontal-padding: 4px;
+  --input-vertical-padding: 8px;
+}
+
 .root {
   position: relative;
   width: 100%;
@@ -8,6 +13,7 @@
 .label {
   display: block;
   margin-bottom: 6px;
+  color: #000;
 
   &.required::after {
     content: '(required)';
@@ -52,11 +58,12 @@
   height: var(--controlHeight);
   min-height: var(--controlHeight);
   margin-bottom: var(--controlMarginBottom);
-  padding: 4px 8px;
+  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
   border: 1px solid var(--inputBorderColor);
   background-color: rgba(0, 0, 0, 0.02);
   width: 100%;
   outline: 0;
+  letter-spacing: 0.4px;
 
   &:focus {
     border-color: var(--primary);
@@ -92,8 +99,17 @@
   }
 }
 
+.errorIcon {
+  fill: var(--error);
+}
+
+.successIcon {
+  fill: var(--success);
+}
+
 .textFieldFeedback {
-  padding: 0 0.4rem;
+  padding: 0 var(--input-vertical-padding);
+  font-size: 0.9em;
 
   &:last-child {
     margin-bottom: var(--controlMarginBottom);

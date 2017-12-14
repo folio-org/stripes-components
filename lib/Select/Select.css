@@ -8,7 +8,8 @@
 
 .selectLabel {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  color: #000;
 
   &.required::after {
     content: '(required)';
