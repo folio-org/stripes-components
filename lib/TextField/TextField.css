@@ -81,12 +81,16 @@
     margin-bottom: 0.4rem;
   }
 
+  &.textFieldWarning {
+    border-color: var(--warn);
+  }
+
   &.textFieldError {
-    border-color: #900;
+    border-color: var(--error);
   }
 
   &.textFieldValid {
-    border-color: #0a751e;
+    border-color: var(--success);
   }
 
   &::-ms-clear {
