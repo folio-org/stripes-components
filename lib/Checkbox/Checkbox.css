@@ -4,7 +4,7 @@
   --checkbox-size: 12px;
 }
 
-.root {
+.checkbox {
   display: flex;
   align-items: center;
   transition: background-color 0.2s ease;
@@ -86,7 +86,7 @@
 /**
  * Checkbox feedback
  */
-.root {
+.checkbox {
   &.hasWarning .checkboxFeedback {
     color: var(--warn);
   }
