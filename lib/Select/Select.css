@@ -1,9 +1,6 @@
 @import '../variables.css';
 
 .root {
-  background-color: rgba(0, 0, 0, 0.02);
-  border: 1px solid var(--inputBorderColor);
-
   &.fullWidth {
     width: 100%;
   }
