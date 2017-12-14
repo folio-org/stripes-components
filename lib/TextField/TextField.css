@@ -7,11 +7,7 @@
 
 .label {
   display: block;
-  font-size: 0.8em;
-  font-weight: bold;
   margin-bottom: 4px;
-  text-transform: Uppercase;
-  color: var(--labelColor);
 
   &.required::after {
     content: '(required)';
@@ -56,9 +52,15 @@
   height: var(--controlHeight);
   min-height: var(--controlHeight);
   margin-bottom: var(--controlMarginBottom);
-  padding: 4px;
+  padding: 4px 8px;
   border: 1px solid var(--inputBorderColor);
+  background-color: rgba(0, 0, 0, 0.02);
   width: 100%;
+  outline: 0;
+
+  &:focus {
+    border-color: var(--primary);
+  }
 
   &.rounded {
     border-radius: var(--radius);
@@ -92,7 +94,6 @@
 
 .textFieldFeedback {
   padding: 0 0.4rem;
-  font-size: 0.8rem;
 
   &:last-child {
     margin-bottom: var(--controlMarginBottom);
@@ -102,13 +103,11 @@
 .textfieldError {
   composes: textFieldFeedback;
   color: #900;
-  font-weight: bold;
 }
 
 .textfieldWarning {
   composes: textFieldFeedback;
   color: #e27c3e;
-  font-weight: bold;
 }
 
 @media (--small) {

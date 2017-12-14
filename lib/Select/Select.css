@@ -1,6 +1,9 @@
 @import '../variables.css';
 
 .root {
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--inputBorderColor);
+
   &.fullWidth {
     width: 100%;
   }
@@ -8,11 +11,7 @@
 
 .selectLabel {
   display: block;
-  font-size: 0.8em;
-  font-weight: bold;
   margin-bottom: 4px;
-  text-transform: Uppercase;
-  color: var(--labelColor);
 
   &.required::after {
     content: '(required)';
