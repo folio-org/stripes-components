@@ -7,7 +7,7 @@
 
 .label {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 
   &.required::after {
     content: '(required)';
