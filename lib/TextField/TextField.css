@@ -26,7 +26,8 @@
   position: relative;
 }
 
-.startControls {
+.startControls,
+.endControls {
   pointer-events: none;
   height: var(--controlHeight, 100%);
   position: absolute;
@@ -36,15 +37,15 @@
   align-items: stretch;
 }
 
+.startControls {
+  padding-left: 2px;
+  justify-content: flex-start;
+}
+
 .endControls {
-  pointer-events: none;
-  height: var(--controlHeight, 100%);
+  padding-right: 2px;
   width: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
   justify-content: flex-end;
-  align-items: stretch;
 }
 
 .controlGroup {
@@ -101,6 +102,10 @@
     background-color: #ebebe4;
     color: #777;
   }
+}
+
+.warningIcon {
+  fill: var(--error);
 }
 
 .errorIcon {
