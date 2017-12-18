@@ -11,6 +11,7 @@
   justify-content: center;
   outline: 0;
   width: var(--controlHeightTouch);
+  min-width: var(--controlHeightTouch);
   height: var(--controlHeightTouch);
   transition: opacity 0.4s;
   border-radius: 0;
