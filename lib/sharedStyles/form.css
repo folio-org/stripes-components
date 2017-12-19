@@ -48,4 +48,46 @@
   &:focus {
     border-color: var(--primary);
   }
+
+  /**
+   * Feedback styles
+   */
+  &.hasFeedback {
+    margin-bottom: 0.4rem;
+  }
+
+  &.feedbackWarning {
+    border-color: var(--warn);
+  }
+
+  &.feedbackError {
+    border-color: var(--error);
+  }
+
+  &.feedbackValid {
+    border-color: var(--success);
+  }
+}
+
+/**
+ * Feedback block
+ */
+
+.feedbackBlock {
+  padding: 0 var(--input-vertical-padding);
+  font-size: 0.9em;
+
+  &:last-child {
+    margin-bottom: var(--controlMarginBottom);
+  }
+}
+
+.feedbackError {
+  composes: feedbackBlock;
+  color: var(--error);
+}
+
+.feedbackWarning {
+  composes: feedbackBlock;
+  color: var(--warn);
 }
