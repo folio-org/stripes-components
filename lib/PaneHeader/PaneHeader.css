@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 44px;
-  padding: 0 10px;
+  padding: 0 5px;
   left: 0;
   right: 0;
 }
@@ -44,7 +44,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.25;
+  line-height: 1.1;
 }
 
 /* Pane title */
@@ -57,7 +57,6 @@
 .paneSub {
   color: var(--subLabelColor);
   font-size: 11px;
-  margin-top: 2px;
 }
 
 /* First content area */

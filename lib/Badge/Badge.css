@@ -1,8 +1,8 @@
 @import '../variables.css';
 
 .root {
-  border-radius: 6px;
-  padding: 0 5px;
+  border-radius: 40%;
+  padding: 2px 5px;
   font-weight: 600;
   font-size: 1rem;
 }
