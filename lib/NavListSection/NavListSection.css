@@ -5,19 +5,21 @@
 }
 
 .listRoot {
+  margin: 0 -6px;
+
   & a,
   & button {
-    display: flex;
+    display: block;
+    width: 100%;
     padding: 5px 6px;
     color: var(--labelColor);
     border-radius: var(--radius);
     min-height: var(--controlHeight);
     text-align: left;
-    width: 100%;
     background-color: rgba(0, 0, 0, 0.008);
     outline: 0;
     line-height: 1.15;
-    margin: 0 -6px 1px -6px;
+    margin-bottom: 1px;
 
     &:hover,
     &:focus {
