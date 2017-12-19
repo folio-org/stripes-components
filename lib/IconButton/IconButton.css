@@ -27,7 +27,7 @@
   }
 }
 
-.badgeCount {
+.iconButton .badgeCount {
   position: absolute;
   top: 15%;
   left: 50%;
