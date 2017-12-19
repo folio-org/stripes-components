@@ -6,24 +6,6 @@
   }
 }
 
-.selectFeedback {
-  padding: 0 0.4rem;
-  font-size: 0.8rem;
-  margin-bottom: var(--controlMarginBottom);
-}
-
-.selectError {
-  composes: selectFeedback;
-  color: #900;
-  font-weight: 700;
-}
-
-.selectWarning {
-  composes: selectFeedback;
-  color: #e27c3e;
-  font-weight: 700;
-}
-
 .selectControl {
   &.fullWidth {
     width: 100%;
@@ -39,9 +21,5 @@
     & option {
       color: #444;
     }
-  }
-
-  &.error {
-    border-color: #900;
   }
 }
