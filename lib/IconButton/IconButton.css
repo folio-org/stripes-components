@@ -10,10 +10,18 @@
   align-items: center;
   justify-content: center;
   outline: 0;
-  width: var(--controlHeightTouch);
-  height: var(--controlHeightTouch);
   transition: opacity 0.4s;
   border-radius: 0;
+
+  &.small {
+    width: var(--controlHeight);
+    height: var(--controlHeight);
+  }
+
+  &.large {
+    width: var(--controlHeightTouch);
+    height: var(--controlHeightTouch);
+  }
 
   &:hover {
     text-decoration: none;

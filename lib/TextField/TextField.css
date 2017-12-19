@@ -65,6 +65,14 @@
   fill: var(--success);
 }
 
+/**
+ * Text Field Icon
+ */
+.textFieldIcon {
+  display: flex;
+  align-items: center;
+}
+
 @media (--small) {
   .input {
     height: var(--controlHeightSmall);
