@@ -12,12 +12,12 @@
     color: var(--labelColor);
     border-radius: var(--radius);
     min-height: var(--controlHeight);
-    margin-bottom: 1px;
     text-align: left;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.008);
     outline: 0;
     line-height: 1.15;
+    margin: 0 -6px 1px -6px;
 
     &:hover,
     &:focus {
@@ -47,7 +47,7 @@
     &:active,
     &:nth-child(odd):active {
       background-color: var(--primary);
-      color: #FFF;
+      color: #fff;
     }
   }
 
