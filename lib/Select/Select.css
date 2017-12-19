@@ -6,18 +6,6 @@
   }
 }
 
-.selectLabel {
-  display: block;
-  margin-bottom: 6px;
-  color: #000;
-
-  &.required::after {
-    content: '(required)';
-    margin: 0 4px;
-    color: #999;
-  }
-}
-
 .selectFeedback {
   padding: 0 0.4rem;
   font-size: 0.8rem;
@@ -37,9 +25,6 @@
 }
 
 .selectControl {
-  height: var(--controlHeight);
-  margin-bottom: var(--controlMarginBottom);
-
   &.fullWidth {
     width: 100%;
   }

@@ -1,0 +1,51 @@
+/**
+ * Shared form styles
+ */
+
+@import "../variables";
+
+:root {
+  --input-horizontal-padding: 4px;
+  --input-vertical-padding: 8px;
+}
+
+/**
+ * Input Group
+ */
+.inputGroup {
+  position: relative;
+}
+
+/**
+ * Label
+ */
+.label {
+  display: block;
+  margin-bottom: 6px;
+  color: #000;
+
+  &.required::after {
+    content: '(required)';
+    margin: 0 4px;
+    color: #666;
+  }
+}
+
+/**
+ * Input
+ */
+.input {
+  height: var(--controlHeight);
+  min-height: var(--controlHeight);
+  margin-bottom: var(--controlMarginBottom);
+  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
+  border: 1px solid var(--inputBorderColor);
+  background-color: rgba(0, 0, 0, 0.02);
+  width: 100%;
+  outline: 0;
+  letter-spacing: 0.4px;
+
+  &:focus {
+    border-color: var(--primary);
+  }
+}
