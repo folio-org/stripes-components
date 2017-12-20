@@ -34,25 +34,6 @@
   align-items: center;
 }
 
-.input {
-  &.rounded {
-    border-radius: var(--radius);
-  }
-
-  &.noBorder {
-    border-width: 0;
-  }
-
-  &::-ms-clear {
-    display: none;
-  }
-
-  &:disabled {
-    background-color: #ebebe4;
-    color: #777;
-  }
-}
-
 .warningIcon {
   fill: var(--error);
 }

@@ -32,13 +32,10 @@
 }
 
 /**
- * Input
+ * Default input, textarea and select styling
  */
 .input {
-  height: var(--controlHeight);
-  min-height: var(--controlHeight);
   margin-bottom: var(--controlMarginBottom);
-  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
   border: 1px solid var(--inputBorderColor);
   background-color: rgba(0, 0, 0, 0.02);
   width: 100%;
@@ -49,8 +46,29 @@
     border-color: var(--primary);
   }
 
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.rounded {
+    border-radius: var(--radius);
+  }
+
+  &.noBorder {
+    border: 0;
+  }
+
   &.marginBottom0 {
     margin-bottom: 0;
+  }
+
+  &:disabled {
+    background-color: #ebebe4;
+    color: #777;
+  }
+
+  &::-ms-clear {
+    display: none;
   }
 
   /**
@@ -71,6 +89,31 @@
   &.feedbackValid {
     border-color: var(--success);
   }
+}
+
+/**
+ * Specific <input> style
+ */
+input.input {
+  height: var(--controlHeight);
+  min-height: var(--controlHeight);
+  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
+}
+
+/**
+ * Specific <select> style
+ */
+select.input {
+  height: var(--controlHeight);
+  padding: 0 var(--input-vertical-padding);
+}
+
+/**
+ * Sepcific <textarea> style
+ */
+textarea.input {
+  min-height: var(--controlHeight);
+  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
 }
 
 /**
