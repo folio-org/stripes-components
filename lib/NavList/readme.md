@@ -3,7 +3,7 @@
 Renders a vertical navigation list in conjunction with NavListSection
 
 ## Basic Usage
-NavList uses NavListSection to add one or more sections to your navigation. You can use react routers <Link>-component to add links/buttons to your NavListSection or simply just buttons or anchor-tags.
+NavList uses NavListSection to add one or more sections to your navigation. You can use React router's `<Link>` component to add links/buttons to your NavListSection or simply just buttons or anchor-tags.
 
 ```
   import NavList from '@folio/stripes-components/lib/NavList';

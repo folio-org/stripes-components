@@ -9,6 +9,10 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 
 A library of React components and utility functions for Stripes.
 
+* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
+* [CSS for stripes-components development](docs/CSSinStripes.md)
+* [Change-log](CHANGELOG.md)
+
 ## Links to documentation of specific components and utilities
 
 The following components are available in the [lib](lib) directory.
@@ -48,7 +52,7 @@ Component | doc | category
 [`<MetaSection>`](lib/MetaSection) | [doc](lib/MetaSection/readme.md) |
 [`<Modal>`](lib/Modal) | [doc](lib/Modal/readme.md) |
 [`<MultiColumnList>`](lib/MultiColumnList) | [doc](lib/MultiColumnList/readme.md) |
-[`<NavList>`](lib/NavList) | |
+[`<NavList>`](lib/NavList) | [doc](lib/NavList/readme.md) |
 [`<NavListSection>`](lib/NavListSection) | |
 [`<Pane>`](lib/Pane) | [doc](lib/Pane/readme.md) |
 [`<PaneHeader>`](lib/PaneHeader) | |
@@ -69,18 +73,11 @@ Component | doc | category
 [`<TextArea>`](lib/TextArea) | |
 [`<TextField>`](lib/TextField) | |
 
-## Additional Documentation
-* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
-* [CSS for stripes-components development](docs/CSSinStripes.md)
-
-See also:
-* [Change-log](CHANGELOG.md)
-
 ## Additional information
 
 See [stripes-core](https://github.com/folio-org/stripes-core).
 
-See project [STRPCOMP](https://issues.folio.org/browse/STRPCOMP)
+See project [STRCOM](https://issues.folio.org/browse/STRCOM)
 at the [FOLIO issue tracker](http://dev.folio.org/community/guide-issues).
 
 Other FOLIO Developer documentation is at [dev.folio.org](http://dev.folio.org/)
