@@ -9,6 +9,10 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 
 A library of React components and utility functions for Stripes.
 
+* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
+* [CSS for stripes-components development](docs/CSSinStripes.md)
+* [Change-log](CHANGELOG.md)
+
 ## Links to documentation of specific components and utilities
 
 The following components are available in the [lib](lib) directory.
@@ -68,13 +72,6 @@ Component | doc | category
 [`<TabButton>`](lib/TabButton) | |
 [`<TextArea>`](lib/TextArea) | |
 [`<TextField>`](lib/TextField) | |
-
-## Additional Documentation
-* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
-* [CSS for stripes-components development](docs/CSSinStripes.md)
-
-See also:
-* [Change-log](CHANGELOG.md)
 
 ## Additional information
 
