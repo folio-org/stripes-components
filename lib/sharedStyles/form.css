@@ -49,6 +49,10 @@
     border-color: var(--primary);
   }
 
+  &.marginBottom0 {
+    margin-bottom: 0;
+  }
+
   /**
    * Feedback styles
    */
