@@ -52,7 +52,7 @@ Component | doc | category
 [`<MetaSection>`](lib/MetaSection) | [doc](lib/MetaSection/readme.md) |
 [`<Modal>`](lib/Modal) | [doc](lib/Modal/readme.md) |
 [`<MultiColumnList>`](lib/MultiColumnList) | [doc](lib/MultiColumnList/readme.md) |
-[`<NavList>`](lib/NavList) | |
+[`<NavList>`](lib/NavList) | [doc](lib/NavList/readme.md) |
 [`<NavListSection>`](lib/NavListSection) | |
 [`<Pane>`](lib/Pane) | [doc](lib/Pane/readme.md) |
 [`<PaneHeader>`](lib/PaneHeader) | |
