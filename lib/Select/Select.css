@@ -6,60 +6,12 @@
   }
 }
 
-.selectLabel {
-  display: block;
-  font-size: 0.8em;
-  font-weight: bold;
-  margin-bottom: 4px;
-  text-transform: Uppercase;
-  color: var(--labelColor);
-
-  &.required::after {
-    content: '(required)';
-    margin: 0 4px;
-    color: #999;
-  }
-}
-
-.selectFeedback {
-  padding: 0 0.4rem;
-  font-size: 0.8rem;
-  margin-bottom: var(--controlMarginBottom);
-}
-
-.selectError {
-  composes: selectFeedback;
-  color: #900;
-  font-weight: 700;
-}
-
-.selectWarning {
-  composes: selectFeedback;
-  color: #e27c3e;
-  font-weight: 700;
-}
-
 .selectControl {
-  height: var(--controlHeight);
-  margin-bottom: var(--controlMarginBottom);
-
-  &.fullWidth {
-    width: 100%;
-  }
-
-  &.marginBottom0 {
-    margin-bottom: 0;
-  }
-
   &.placeholder {
     color: #888;
 
     & option {
       color: #444;
     }
-  }
-
-  &.error {
-    border-color: #900;
   }
 }

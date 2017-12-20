@@ -5,26 +5,8 @@
   width: 100%;
 }
 
-.label {
-  display: block;
-  font-size: 0.8em;
-  font-weight: bold;
-  margin-bottom: 4px;
-  text-transform: Uppercase;
-  color: var(--labelColor);
-
-  &.required::after {
-    content: '(required)';
-    margin: 0 4px;
-    color: #666;
-  }
-}
-
-.inputGroup {
-  position: relative;
-}
-
-.startControls {
+.startControls,
+.endControls {
   pointer-events: none;
   height: var(--controlHeight, 100%);
   position: absolute;
@@ -34,15 +16,15 @@
   align-items: stretch;
 }
 
+.startControls {
+  padding-left: 2px;
+  justify-content: flex-start;
+}
+
 .endControls {
-  pointer-events: none;
-  height: var(--controlHeight, 100%);
+  padding-right: 2px;
   width: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
   justify-content: flex-end;
-  align-items: stretch;
 }
 
 .controlGroup {
@@ -52,63 +34,24 @@
   align-items: center;
 }
 
-.input {
-  height: var(--controlHeight);
-  min-height: var(--controlHeight);
-  margin-bottom: var(--controlMarginBottom);
-  padding: 4px;
-  border: 1px solid var(--inputBorderColor);
-  width: 100%;
-
-  &.rounded {
-    border-radius: var(--radius);
-  }
-
-  &.noBorder {
-    border-width: 0;
-  }
-
-  &.textFieldHasFeedback {
-    margin-bottom: 0.4rem;
-  }
-
-  &.textFieldError {
-    border-color: #900;
-  }
-
-  &.textFieldValid {
-    border-color: #0a751e;
-  }
-
-  &::-ms-clear {
-    display: none;
-  }
-
-  &:disabled {
-    background-color: #ebebe4;
-    color: #777;
-  }
+.warningIcon {
+  fill: var(--error);
 }
 
-.textFieldFeedback {
-  padding: 0 0.4rem;
-  font-size: 0.8rem;
-
-  &:last-child {
-    margin-bottom: var(--controlMarginBottom);
-  }
+.errorIcon {
+  fill: var(--error);
 }
 
-.textfieldError {
-  composes: textFieldFeedback;
-  color: #900;
-  font-weight: bold;
+.successIcon {
+  fill: var(--success);
 }
 
-.textfieldWarning {
-  composes: textFieldFeedback;
-  color: #e27c3e;
-  font-weight: bold;
+/**
+ * Text Field Icon
+ */
+.textFieldIcon {
+  display: flex;
+  align-items: center;
 }
 
 @media (--small) {

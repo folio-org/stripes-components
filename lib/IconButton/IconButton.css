@@ -11,7 +11,6 @@
   justify-content: center;
   outline: 0;
   width: var(--controlHeightTouch);
-  min-width: var(--controlHeightTouch);
   height: var(--controlHeightTouch);
   transition: opacity 0.4s;
   border-radius: 0;
@@ -27,7 +26,25 @@
   }
 }
 
-.iconButton .badgeCount {
+/**
+* Sizes
+*/
+.iconButton.large {
+  width: var(--controlHeightTouch);
+  height: var(--controlHeightTouch);
+  min-width: var(--controlHeightTouch);
+}
+
+.iconButton.small {
+  width: var(--controlHeight);
+  height: var(--controlHeight);
+  min-width: var(--controlHeight);
+}
+
+/**
+ * Badge
+ */
+.badgeCount {
   position: absolute;
   top: 15%;
   left: 50%;
