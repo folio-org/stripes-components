@@ -178,7 +178,8 @@
 
 .emptyMessage {
   width: 100%;
-  color: #444;
+  padding: 15px;
+  color: var(--labelColor);
 }
 
 @keyframes example {
