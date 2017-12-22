@@ -16,7 +16,6 @@
     border-radius: var(--radius);
     min-height: var(--controlHeight);
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.008);
     outline: 0;
     line-height: 1.15;
     margin-bottom: 1px;
@@ -28,27 +27,15 @@
       cursor: pointer;
     }
 
-    /* Odd list items */
-    &:nth-child(odd) {
-      background-color: rgba(0, 0, 0, 0.05);
-
-      &:hover,
-      &:focus {
-        background-color: rgba(0, 0, 0, 0.15);
-      }
-    }
-
     /* Active/selected element */
-    &.active,
-    &.active:nth-child(odd) {
+    &.active {
       background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
       text-decoration: none;
     }
 
     /* Active style */
-    &:active,
-    &:nth-child(odd):active {
+    &:active {
       background-color: var(--primary);
       color: #fff;
     }
