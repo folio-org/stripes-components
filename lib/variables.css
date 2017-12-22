@@ -1,22 +1,27 @@
-:root{
+:root {
   --bg: #fcfcfc;
   --bgHover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
-  --primary: #106c9e;
+  --primary: #2b75bb;
   --secondary: #999;
   --error: #900;
   --warn: #e27c3e;
   --success: #070;
   --labelColor: #333;
   --subLabelColor: #999;
-  --controlMarginBottom: 8px;
-  --controlHeight: 28px;
+  --controlMarginBottom: 12px;
+  --controlHeight: 24px;
   --radius: 6px;
   --inputBorderColor: #acacac;
-  --gutter: .8em;
+  --gutter: 0.8em;
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
-}
+  --minor-divider-color: rgba(0, 0, 0, 0.1);
 
+  /**
+   * Padding
+   */
+  --major-padding: 15px;
+}
 
 @custom-media --small (max-width: 640px);
 @custom-media --mediumDown (max-width: 1024px);
@@ -26,5 +31,3 @@
 @custom-media --largeUp (min-width:1025px);
 @custom-media --xlarge (min-width: 1441px) and (max-width: 1920px);
 @custom-media --xxlarge (min-width: 1921px);
-
-

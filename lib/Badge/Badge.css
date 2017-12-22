@@ -1,9 +1,21 @@
 @import '../variables.css';
 
 .root {
-  background-color: var(--bgHover);
-  border-radius: 6px;
-  padding: 3px 7px 3px 7px;
-  font-weight: bold;
+  border-radius: 40%;
+  padding: 2px 5px;
+  font-weight: 600;
   font-size: 1rem;
+}
+
+/**
+ * Colors
+ */
+.default {
+  background-color: var(--bgHover);
+  color: var(--labelColor);
+}
+
+.red {
+  color: #fff;
+  background-color: var(--error);
 }

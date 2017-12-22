@@ -1,20 +1,39 @@
 @import '../variables.css';
 
-.pane{
-    border-right: 1px solid #ccc;
-    height: 100%;
-    max-height: calc(100vh - 44px);
-    display: flex;
-    flex-direction: column;
-    /*transition: all .25s ease-in-out; */
-    overflow: hidden;
-    position: relative;
-    will-change: transform;
-    background-color: #fcfcfc;
+.pane {
+  border-right: 1px solid #ccc;
+  height: 100%;
+  max-height: calc(100vh - 44px);
+  display: flex;
+  flex-direction: column;
+
+  /* transition: all .25s ease-in-out; */
+  overflow: hidden;
+  position: relative;
+  will-change: transform;
+  background-color: #fcfcfc;
 }
 
-@media (--small){
-  .pane{
+/**
+ * Pane Content
+ */
+
+.paneContent {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  &.hasPadding {
+    padding: var(--major-padding);
+  }
+
+  &.noOverflow {
+    overflow: hidden;
+  }
+}
+
+@media (--small) {
+  .pane {
     position: absolute;
     top: 0;
     left: 0;

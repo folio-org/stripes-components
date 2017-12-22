@@ -1,35 +1,111 @@
 @import '../variables.css';
 
-.root{
+:root {
+  --radio-button-size: 12px;
+}
+
+.radioButton {
   display: flex;
   align-items: center;
-  transition: all .2s ease;
-  margin-bottom: var(--controlMarginBottom);
-  &.inline{
+  transition: all 0.2s ease;
+
+  &.inline {
     display: inline;
-    & + .root{
-        margin: 0 6px;
+
+    & + .radioButton {
+      margin: 0 6px;
     }
   }
-  &.marginBottom0{
+
+  &.marginBottom0 {
     margin-bottom: 0;
   }
 }
 
-.radioLabel{
+label.radioLabel {
+  position: relative;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  min-height: 24px;
   cursor: pointer;
   flex-grow: 2;
-  padding: 4px 2px;
-  margin: 0 4px 0 0;
-  font-size: .8rem;
+  padding: 0 2px 0 22px;
   font-weight: 600;
   color: var(--labelColor);
-  &.error{
-    color: #900;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.65;
+  }
+
+  &.error {
+    color: var(--error);
+
+    &::before {
+      border-color: var(--error) !important;
+    }
   }
 }
 
-input[type=radio].input{
+input[type=radio].input {
   margin: 0 9px;
   margin-bottom: 2px;
+
+  &:focus + label.radioLabel {
+    opacity: 0.8;
+  }
+}
+
+input[type=radio].input:checked,
+input[type=radio].input:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=radio].input + label.radioLabel::before,
+input[type=radio].input + label.radioLabel::after {
+  margin-top: 5px;
+}
+
+input[type=radio].input:checked + label.radioLabel::before,
+input[type=radio].input:not(:checked) + label.radioLabel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--radio-button-size);
+  height: var(--radio-button-size);
+  border: 1px solid var(--inputBorderColor);
+  border-radius: 100%;
+  background: #fff;
+}
+
+input[type=radio].input:checked + label.radioLabel::after,
+input[type=radio].input:not(:checked) + label.radioLabel::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #313131;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type=radio].input:not(:checked) + label.radioLabel::after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+input[type=radio].input:checked + label.radioLabel::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }

@@ -1,28 +1,57 @@
-.root{
-  margin: 0 4px;
-  &:focus{
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus {
     outline: none;
   }
 }
 
-:global .stripes__icon{
+.root svg {
+  height: inherit;
+  width: inherit;
+}
+
+:global .stripes__icon {
   fill: #999;
 }
 
-button .root{
-  float: left;
-  &.center{
-    float: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-  }
+/**
+ * Sizing
+ */
+
+.small {
+  height: 16px;
+  width: 16px;
 }
 
-[dir='rtl']{
-  & button .root{
-    float: right;
-  }
+.medium {
+  height: 24px;
+  width: 24px;
 }
 
+.large {
+  height: 28px;
+  width: 28px;
+}
+
+/**
+ * Specific styling for spinner
+ * (Spinner is likely to be deprecated later on)
+ */
+
+.iconSpinner.small {
+  width: 40px;
+  height: 20px;
+}
+
+.iconSpinner.medium {
+  width: 60px;
+  height: 30px;
+}
+
+.iconSpinner.large {
+  width: 100px;
+  height: 50px;
+}

@@ -1,18 +1,16 @@
-.filterList{
-  list-style: none;
-  margin-top: 0;
-  padding: 0;
+@import "../variables";
+
+.filterList {
+  padding: 0 0 0 var(--major-padding);
 }
 
-.listTopLabel{
+.listTopLabel {
   display: block;
   font-weight: bold;
   margin-bottom: 4px;
-  text-transform: Uppercase;
   color: #666;
 }
 
-.listItem{
+.listItem {
   display: flex;
 }
-

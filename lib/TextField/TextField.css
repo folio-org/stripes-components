@@ -1,116 +1,66 @@
 @import '../variables.css';
 
-.root{
-    position: relative;
-    width: 100%;
-}
-
-.label{
-  display: block;
-  font-size: .8em;
-  font-weight: bold;
-  margin-bottom: 4px;
-  text-transform: Uppercase;
-  color: var(--labelColor);
-  &.required:after{
-    content: '(required)';
-    margin: 0 4px;
-    color: #666;
-  }
-}
-
-.inputGroup{
-    position: relative;
-}
-
-.startControls{
-    pointer-events: none;
-    height: var(--controlHeight, 100%);
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
-.endControls{
-    pointer-events: none;
-    height: var(--controlHeight, 100%);
-    width: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: stretch;
-}
-
-
-.controlGroup{
-    pointer-events: all;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-
-.input{
-  height: var(--controlHeight);
-  min-height: var(--controlHeight);
-  margin-bottom: var(--controlMarginBottom);
-  padding: 4px;
-  border: 1px solid var(--inputBorderColor);
+.root {
+  position: relative;
   width: 100%;
-  &.rounded{
-    border-radius: var(--radius);
-  }
-
-  &.noBorder{
-    border-width: 0;
-  }
-  
-  &.textFieldHasFeedback{
-    margin-bottom: .4rem;
-  }
-  &.textFieldError{
-    border-color: #900;
-  }
-  &.textFieldValid{
-    border-color: #0A751E;
-  }
-  &::-ms-clear {
-    display: none;
-  }
-  &:disabled{
-    background-color: #ebebe4;
-    color: #777;
-  }
 }
 
-.textFieldFeedback{
-  padding: 0 .4rem;
-  font-size: .8rem;
-  &:last-child{
-      margin-bottom: var(--controlMarginBottom);
-    }
+.startControls,
+.endControls {
+  pointer-events: none;
+  height: var(--controlHeight, 100%);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
-.textfieldError{
-  composes: textFieldFeedback;
-  color: #900;
-  font-weight: bold;
+.startControls {
+  padding-left: 2px;
+  justify-content: flex-start;
 }
 
-.textfieldWarning{
-  composes: textFieldFeedback;
-  color: #e27c3e;
-  font-weight: bold;
+.endControls {
+  padding-right: 2px;
+  width: 100%;
+  justify-content: flex-end;
 }
 
-@media (--small){
-  .input{
+.controlGroup {
+  pointer-events: all;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.warningIcon {
+  fill: var(--error);
+}
+
+.errorIcon {
+  fill: var(--error);
+}
+
+.successIcon {
+  fill: var(--success);
+}
+
+/**
+ * Text Field Icon
+ */
+.textFieldIcon {
+  display: flex;
+  align-items: center;
+}
+
+@media (--small) {
+  .input {
     height: var(--controlHeightSmall);
   }
-  .startControls, .endControls{
-      height: var(--controlHeightSmall, 100%);
+
+  .startControls,
+  .endControls {
+    height: var(--controlHeightSmall, 100%);
   }
 }

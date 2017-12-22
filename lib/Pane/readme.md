@@ -68,3 +68,4 @@ onClose | func | Callback fired when the pane is closed using its dismiss button
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  | 
 contentPadding | number | Amount of padding (in pixels) to apply to Pane's content `<div>` | 16 | 
 noOverflow | bool | set to true if the Pane content is not expected to scroll. This can cure issues with flashing scrollbars on search result Panes. | false |
+subheader | node | Render a component below the Pane's header. |  | false 
