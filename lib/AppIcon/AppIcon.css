@@ -15,6 +15,15 @@
 }
 
 /**
+ * Label
+ */
+.label {
+  margin-left: 6px;
+  color: var(--labelColor);
+  letter-spacing: 0.02em;
+}
+
+/**
  * Icon
  */
 .icon {
