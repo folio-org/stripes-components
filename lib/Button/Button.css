@@ -413,9 +413,6 @@
     color: #888;
 
     &:hover {
-      background-color: #ccc;
-      border-color: #ccc;
-      color: #888;
       cursor: initial;
     }
   }
