@@ -408,12 +408,13 @@
   }
 
   &[disabled] {
-    background-color: #ccc;
-    border-color: #ccc;
-    color: #888;
+    background-color: #ccc !important;
+    border-color: #ccc !important;
+    color: #888 !important;
 
     &:hover {
       cursor: initial;
+      opacity: 1;
     }
   }
 

@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.controlWrap {
+  position: relative;
+  margin-bottom: var(--controlMarginBottom);
+}
+
 .startControls,
 .endControls {
   pointer-events: none;
