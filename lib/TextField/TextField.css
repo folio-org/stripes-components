@@ -8,7 +8,7 @@
 .startControls,
 .endControls {
   pointer-events: none;
-  height: var(--controlHeight, 100%);
+  height: 100%;
   position: absolute;
   top: 0;
   display: flex;
@@ -29,7 +29,7 @@
 
 .controlGroup {
   pointer-events: all;
-  height: 100%;
+  height: var(--controlHeight);
   display: flex;
   align-items: center;
 }
