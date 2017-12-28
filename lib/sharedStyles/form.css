@@ -1,0 +1,144 @@
+/**
+ * Shared form styles
+ */
+
+@import "../variables";
+
+:root {
+  --input-horizontal-padding: 4px;
+  --input-vertical-padding: 8px;
+}
+
+/**
+ * Input Group
+ */
+.inputGroup {
+  position: relative;
+}
+
+/**
+ * Label
+ */
+.label {
+  display: block;
+  margin-bottom: 6px;
+  color: #000;
+
+  &.required::after {
+    content: '(required)';
+    margin: 0 4px;
+    color: #666;
+  }
+}
+
+/**
+ * Default input, textarea and select styling
+ */
+.input {
+  margin-bottom: var(--controlMarginBottom);
+  border: 1px solid var(--inputBorderColor);
+  background-color: rgba(0, 0, 0, 0.02);
+  width: 100%;
+  outline: 0;
+  letter-spacing: 0.4px;
+
+  &:focus {
+    border-color: var(--primary);
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.rounded {
+    border-radius: var(--radius);
+  }
+
+  &.noBorder {
+    border: 0;
+  }
+
+  &.marginBottom0 {
+    margin-bottom: 0;
+  }
+
+  &:disabled {
+    background-color: #ebebe4;
+    color: #777;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  /**
+   * Feedback styles
+   */
+  &.hasFeedback {
+    margin-bottom: 0.4rem;
+  }
+
+  &.feedbackWarning {
+    border-color: var(--warn);
+    background-color: color(var(--warn) alpha(-95%));
+  }
+
+  &.feedbackError {
+    border-color: var(--error);
+    background-color: color(var(--error) alpha(-95%));
+  }
+
+  &.feedbackValid {
+    border-color: var(--success);
+    background-color: color(var(--success) alpha(-95%));
+  }
+}
+
+/**
+ * Specific <input> style
+ */
+input.input {
+  height: var(--controlHeight);
+  min-height: var(--controlHeight);
+  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
+}
+
+/**
+ * Specific <select> style
+ */
+select.input {
+  height: var(--controlHeight);
+  padding: 0 var(--input-vertical-padding);
+  appearance: none;
+}
+
+/**
+ * Sepcific <textarea> style
+ */
+textarea.input {
+  min-height: var(--controlHeight);
+  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
+}
+
+/**
+ * Feedback block
+ */
+
+.feedbackBlock {
+  padding: 0 var(--input-vertical-padding);
+  font-size: 0.9em;
+
+  &:last-child {
+    margin-bottom: var(--controlMarginBottom);
+  }
+}
+
+.feedbackError {
+  composes: feedbackBlock;
+  color: var(--error);
+}
+
+.feedbackWarning {
+  composes: feedbackBlock;
+  color: var(--warn);
+}

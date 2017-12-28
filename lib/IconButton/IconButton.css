@@ -26,6 +26,24 @@
   }
 }
 
+/**
+* Sizes
+*/
+.iconButton.large {
+  width: var(--controlHeightTouch);
+  height: var(--controlHeightTouch);
+  min-width: var(--controlHeightTouch);
+}
+
+.iconButton.small {
+  width: var(--controlHeight);
+  height: var(--controlHeight);
+  min-width: var(--controlHeight);
+}
+
+/**
+ * Badge
+ */
 .badgeCount {
   position: absolute;
   top: 15%;
