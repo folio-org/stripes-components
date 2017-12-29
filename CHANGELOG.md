@@ -3,6 +3,7 @@
 ## 2.1.0 (IN PROGRESS)
 
 * Adjust address read only view. Fixes STCOM-152.
+* `<FilterPaneSearch>` supports `searchableFields` and `onChangeField` properties. Fixes STCOM-171.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
@@ -21,7 +22,7 @@
 * `transitionToParams` uses `queryString.stringify` instead of by-hand gluing. Fixes STCOM-112
 * Fix defaultRoute in `<Settings>` when `pages` is not sorted by `label`. Fixes STCOM-113.
 * Add `<LayoutHeader>` and `<LayoutBox>` components for assistance with layout tasks. Covers STCOM-118.
-* Fixed bug in `<Paneset>` occurring when multiple Panes are dismissed at once. Fixes STCOM-121 and STSMACOM-17.
+* Fixed bug in `<Paneset>` occurring when multiple Panes are dismissed at once. Fixes STCOM-121, STCOM-117 and STSMACOM-17.
 * Include `dataKey` in when connecting `<Settings>` components. Fixes UICIRC-33.
 * Adding empty `<Icon icon="profile" />` in support of UIU-283; see STCOM-124.
 * Show errors for `<Select>` elements regardless of the presence of a label attribute. Fixes STCOM-126.
@@ -32,7 +33,7 @@
 * Add `filterState` method for FilterGroups. Like `initialFilterState` but doesn't need the configuraton object. Fixes STCOM-147.
 * Numerous style updates to `<MultiColumnList>`, `<Button>`, `<Checkbox>` and other components.
 * Storybook resource added. Run `yarn storybook` to see component demos and documentation.
-* Pass a ref through to TextArea for access by a parent. Refs STSMACOM-4. 
+* Pass a ref through to TextArea for access by a parent. Refs STSMACOM-4.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
