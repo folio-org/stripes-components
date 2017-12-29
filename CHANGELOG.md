@@ -21,7 +21,7 @@
 * `transitionToParams` uses `queryString.stringify` instead of by-hand gluing. Fixes STCOM-112
 * Fix defaultRoute in `<Settings>` when `pages` is not sorted by `label`. Fixes STCOM-113.
 * Add `<LayoutHeader>` and `<LayoutBox>` components for assistance with layout tasks. Covers STCOM-118.
-* Fixed bug in `<Paneset>` occurring when multiple Panes are dismissed at once. Fixes STCOM-121 and STSMACOM-17.
+* Fixed bug in `<Paneset>` occurring when multiple Panes are dismissed at once. Fixes STCOM-121, STCOM-117 and STSMACOM-17.
 * Include `dataKey` in when connecting `<Settings>` components. Fixes UICIRC-33.
 * Adding empty `<Icon icon="profile" />` in support of UIU-283; see STCOM-124.
 * Show errors for `<Select>` elements regardless of the presence of a label attribute. Fixes STCOM-126.
