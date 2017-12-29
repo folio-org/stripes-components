@@ -3,6 +3,7 @@
 ## 2.1.0 (IN PROGRESS)
 
 * Adjust address read only view. Fixes STCOM-152.
+* `<FilterPaneSearch>` supports `searchableFields` and `onChangeField` properties. Fixes STCOM-171.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
