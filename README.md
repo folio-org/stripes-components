@@ -69,6 +69,7 @@ Component | doc | category
 [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup) | [doc](lib/structures/AddressFieldGroup/readme.md) | structure
 [`<ConfirmationModal>`](lib/structures/ConfirmationModal) | [doc](lib/structures/ConfirmationModal/readme.md) | structure
 [`<EditableList>`](lib/structures/EditableList) | [doc](lib/structures/EditableList/readme.md) | structure
+[`<RepeatableField>`](lib/structures/RepeatableField) | [doc](lib/structures/RepeatableField/readme.md) | structure
 [`<TabButton>`](lib/TabButton) | |
 [`<TextArea>`](lib/TextArea) | |
 [`<TextField>`](lib/TextField) | |
