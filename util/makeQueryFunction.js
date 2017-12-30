@@ -6,7 +6,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig) {
 
     let cql = undefined;
     if (query && qfield) {
-      cql = `${qfield}="${query}"`;
+      cql = `${qfield}="${query}*"`;
     } else if (query) {
       cql = queryTemplate.replace(/\$QUERY/g, query);
     }
