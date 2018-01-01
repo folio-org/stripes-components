@@ -7,26 +7,8 @@
 /**
  * Root Icon container
  */
-.appIconRoot {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-/**
- * Label
- */
-.label {
-  margin-left: 6px;
-  color: var(--labelColor);
-  letter-spacing: 0.02em;
-}
-
-/**
- * Icon
- */
-.icon {
+.appIcon {
+  display: inline-block;
   position: relative;
   box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
   opacity: 1;
@@ -40,19 +22,19 @@
 button,
 a {
   /* focus */
-  &:focus .icon.focusable {
+  &:focus .appIcon.focusable {
     box-shadow: 0 0 0 6px rgba(43, 117, 187, 0.2);
     background-color: rgba(43, 117, 187, 0.2);
     transition: box-shadow 0.3s, background-color 0.3s;
     backface-visibility: hidden;
 
-    & .outline svg {
+    & .popover svg {
       fill: rgba(0, 0, 0, 0.7);
     }
   }
 
   /* focus & active */
-  &:focus:active .icon.focusable {
+  &:focus:active .appIcon.focusable {
     box-shadow: 0 0 0 18px rgba(43, 117, 187, 0.2);
     background-color: rgba(43, 117, 187, 0.2);
     transition: none;
@@ -62,7 +44,7 @@ a {
 /**
  * Is active
  */
-.appIconRoot.outline.isActive svg {
+.appIcon.popover.isActive svg {
   fill: var(--primary);
 }
 
@@ -71,12 +53,12 @@ a {
  */
 
 /* Default app icon */
-.appIconRoot.block {
-  &.noIcon .icon {
+.appIcon.default {
+  &.noIcon {
     background-color: var(--secondary) !important;
   }
 
-  & .icon::after {
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -94,8 +76,8 @@ a {
   }
 }
 
-/* outline app icon (used for popovers in the header) */
-.appIconRoot.outline {
+/* popover app icon (used for popovers in the header) */
+.appIcon.popover {
   & svg {
     fill: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -106,17 +88,17 @@ a {
 /**
  * Icon Sizes
  */
-.appIconRoot.large .icon {
+.appIcon.large {
   height: 48px;
   width: 48px;
 }
 
-.appIconRoot.medium .icon {
+.appIcon.medium {
   width: 24px;
   height: 24px;
 }
 
-.appIconRoot.small .icon {
+.appIcon.small {
   width: 14px;
   height: 14px;
 }
