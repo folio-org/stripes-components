@@ -6,7 +6,12 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig) {
 
     let cql = undefined;
     if (query && qindex) {
-      cql = `${qindex}="${query}*"`;
+      const t = qindex.split('/', 2);
+      if (t.length === 1) {
+        cql = `${qindex}="${query}*"`;
+      } else {
+        cql = `${t[0]} =/${t[1]} "${query}*"`;
+      }
     } else if (query) {
       cql = queryTemplate.replace(/\$QUERY/g, query);
     }

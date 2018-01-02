@@ -6,6 +6,7 @@
 * `<FilterPaneSearch>` supports `searchableIndexes`, `selectedIndex` and `onChangeIndex` properties. Fixes STCOM-171.
 * Functions made by `makeQueryFunction` support the `qindex` parameter, which is interpreted as the name of the _only_ field to search. This allows us to support field-specific searching. Fixes STCOM-172.
 * `<Select>` options can be disabled via a 'disabled' property in dataOptions. Fixes STCOM-173.
+* `makeQueryFunction` supports relation-modifiers in the `qindex` parameter. Fixes STCOM-174.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
