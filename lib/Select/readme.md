@@ -26,19 +26,19 @@ rounded | bool | Applies a border-radius to the Select input | false | false
 marginBottom0 | bool | Styles the input with no bottom margin. | false | false
 fullWidth | bool | Styles input to a width of 100% of its container. | | false
 validationEnabled | bool | Controls whether or not the select displays validation icons. | true | false
-value | string | Sets the selected value for the input. **not necessary if part of a redux-form** | | false
-onChange | func | Event handler for the select's `onChange` event. **not necessary if part of a redux-form** | | false
+value | string | Sets the selected value for the input. **This prop isn't necessary if part of a redux-form (see below)** | | false
+onChange | func | Event handler for the select's `onChange` event. **This prop isn't necessary if part of a redux-form (see below)** | | false
 
 ## Properties set by Redux-form
-If `<Select>` is used within a redux-form `<Field>` component (currently the most common case.) You don't have to set any of these props yourself.
+If `<Select>` is used within a redux-form `<Field>` component (currently the most common case.) You don't have to set any of these props yourself. See the [redux-form website](https://redux-form.com/7.2.0/) for more details.
 
 * value - Sets the selected value for the input.
 * input - object - contains necessary props for the input itself such as the field's `value`
-* meta - contains good-to-have info for the field such as `touched`
+* meta - object - contains good-to-have info for the field such as `touched`
 
 ## Usage with Redux-form's <Field> component
-Used within a `<Field>` component. See the [redux-form website](https://redux-form.com/7.2.0/) for more details and documents on the `<Field>` component.
 In Short, `<Field>` requires a `name` and a `component` prop. The `name` is the data field and the `component` prop takes the `<Select>`. Additional props supplied are passed into the rendered `<Select>` component.
+See the [redux-form website](https://redux-form.com/7.2.0/) for more information.
 
 ```
 import Select from '@folio/stripes-components/lib/Select';
