@@ -133,7 +133,7 @@ anchoredRowFormatter(
     );
   }
 
-// andthe JSX...
+// and the JSX...
 
 <MultiColumnList
   // ...other props
