@@ -3,8 +3,8 @@
 ## 2.1.0 (IN PROGRESS)
 
 * Adjust address read only view. Fixes STCOM-152.
-* `<FilterPaneSearch>` supports `searchableFields` and `onChangeField` properties. Fixes STCOM-171.
-* Functions made by `makeQueryFunction` support the `qfield` parameter, which is interpreted as the name of the _only_ field to search. This allows us to support field-specific searching. Fixes STCOM-172.
+* `<FilterPaneSearch>` supports `searchableIndexes`, `selectedIndex` and `onChangeIndex` properties. Fixes STCOM-171.
+* Functions made by `makeQueryFunction` support the `qindex` parameter, which is interpreted as the name of the _only_ field to search. This allows us to support field-specific searching. Fixes STCOM-172.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
