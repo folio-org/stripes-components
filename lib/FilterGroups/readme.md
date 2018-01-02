@@ -16,7 +16,7 @@ This component renders a set of filter-groups, each of which pertains to a searc
 
 ## Basic Usage
 
-```js 
+```js
 const filterConfig = [
   {
     label: 'Item Types',
@@ -116,7 +116,7 @@ The state of the filters is represented in the user-interface's URL as
 a single query parameter, `filters`, whose value is a comma-separated
 list of the full names of all selected filters. For example:
 
-     
+
 	http://example.com/users?filters=item.DVDs,item.Microfilm,location.Main+Library
 
 

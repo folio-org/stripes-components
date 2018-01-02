@@ -5,25 +5,25 @@ A toggleable, contextual overlay for displaying lists of links and more.
 Dropdown makes use of [react-tether](https://github.com/souporserious/react-tether) to render its menu to the **body** of the page by default. This overcomes issues with Dropdowns that might be cut off by containers with `overflow: hidden` in their styling. If any scrolling occurs, tether will also keep the menu element in the correct position relative to its corresponding `data-role="toggle"` component.
 
 ## Basic-Usage
-This basic version sets up a dropdown with it's open/closed status controlled by state. Note that the `onToggle` handler is passed to both the `<Dropdown>` component and the `<DropdownMenu>` component. `<DropdownMenu>` sets up listeners so that the `onToggle` function will be called if the user clicks anywhere outside of the menu in the DOM. 
+This basic version sets up a dropdown with it's open/closed status controlled by state. Note that the `onToggle` handler is passed to both the `<Dropdown>` component and the `<DropdownMenu>` component. `<DropdownMenu>` sets up listeners so that the `onToggle` function will be called if the user clicks anywhere outside of the menu in the DOM.
 
 ```
 import { Dropdown } from '@folio/stripes-components/lib/Dropdown';
 
 //...
 
- <Dropdown 
-  id="AddPermissionDropdown" 
-  open={this.state.open} 
+ <Dropdown
+  id="AddPermissionDropdown"
+  open={this.state.open}
   onToggle={this.onToggleAddPermDD}
-  group 
-  style={{ float: 'right' }}  
-  pullRight 
+  group
+  style={{ float: 'right' }}
+  pullRight
   >
-      <Button 
-        data-role="toggle" 
+      <Button
+        data-role="toggle"
         align="end"
-        bottomMargin0  
+        bottomMargin0
         aria-haspopup="true"
       >
         &#43; Add Permission
@@ -52,16 +52,16 @@ In case ui-modules want to have some control on positioning, target element, or 
      }
   <Dropdown
     id="AddPermissionDropdown"
-    tether={tether} 
-    open={this.state.open} 
+    tether={tether}
+    open={this.state.open}
     onToggle={this.onToggleAddPermDD}
     style={{ float: 'right' }}
     pullRight
     >
-      <Button 
+      <Button
        data-role="toggle"
-       align="end" 
-       bottomMargin0 
+       align="end"
+       bottomMargin0
        aria-haspopup="true"
       >
         &#43; Add Permission
@@ -80,7 +80,7 @@ In case ui-modules want to have some control on positioning, target element, or 
 
 If the module is unable to keep track of the `<Dropdown>`'s open/closed status within its state (such as dropdowns used in repeated table rows), using the 'Uncontrolled' version is best.
 
-Note :Adding `<MenuItem itemMeta={{metaData:'data' }}>` for the children in the `<DropdownMenu>` will have an ability to close the dropdown on clicking the menuItems element and be able to pass in any meta data specific to the items.  
+Note :Adding `<MenuItem itemMeta={{metaData:'data' }}>` for the children in the `<DropdownMenu>` will have an ability to close the dropdown on clicking the menuItems element and be able to pass in any meta data specific to the items.
 
 ```
 import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
@@ -96,7 +96,7 @@ import MenuItem from '@folio/stripes-components/lib/MenuItem';
       <DropdownMenu
         data-role="menu"
         aria-label="available permissions"
-      > 
+      >
         <MenuItem itemMeta={{metaData:'data' }}>
           <Button type="button" data-action="renew" >Renew</Button>
         </MenuItem>
@@ -133,7 +133,7 @@ Replace imports and make sure to update following props
 * Update roles attribute bsRole => data-role
 * Need to add either dropdown bool or tether object props based on the requirement. Please look for examples above .
 
-1) Change 
+1) Change
 ```
 import {Dropdown} from 'react-bootstrap';
 ```
@@ -143,12 +143,12 @@ import {Dropdown} from '@folio/stripes-components/lib/Dropdown';
 
 ```
 
-2) Change bsRole on the children 
+2) Change bsRole on the children
 ```
-<Button 
-    align="end" 
-    bottomMargin0 
-    bsRole="toggle" 
+<Button
+    align="end"
+    bottomMargin0
+    bsRole="toggle"
     aria-haspopup="true"
   >
     &#43; Add Permission
@@ -165,10 +165,10 @@ import {Dropdown} from '@folio/stripes-components/lib/Dropdown';
 ```
 To
 ```
- <Button 
-    align="end" 
-    bottomMargin0 
-    data-role="toggle" 
+ <Button
+    align="end"
+    bottomMargin0
+    data-role="toggle"
     aria-haspopup="true"
   >
     &#43; Add Permission

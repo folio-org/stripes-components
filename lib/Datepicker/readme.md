@@ -13,7 +13,7 @@ import Datepicker from '@folio/stripes-components/lib/Datepicker';
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 label | string | visible field label | | false
-backendDateStandard | string | parses to/from ISO 8601 standard by default before committing value. | "ISO 8601" | false 
+backendDateStandard | string | parses to/from ISO 8601 standard by default before committing value. | "ISO 8601" | false
 id | string | id for date field - used in the "id" attribute of the text input | | false
 useFocus | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
 disabled | bool | if true, field will be disabled for focus or entry. | false | false
@@ -37,4 +37,4 @@ excludeDates | array, string or Moment object | Disables supplied dates from bei
 * **Ctrl + PgUp** - backwards 1 year
 * **Ctrl + PgDown** - forwards 1 year
 * **Enter** - Select date at cursor
-* **Esc** - Close calendar 
+* **Esc** - Close calendar

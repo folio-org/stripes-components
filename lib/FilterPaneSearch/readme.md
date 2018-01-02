@@ -4,12 +4,12 @@ A pre-built component that can be used to replace that can be supplied to `<Pane
 ## Usage
 ```
 const searchHeader = (
-  <FilterPaneSearch 
-    id="SearchField" 
-    onChange={this.onChangeSearch} 
-    onClear={this.onClearSearch} 
-    value={this.state.searchTerm} 
-    resultsList={this.resultsList} 
+  <FilterPaneSearch
+    id="SearchField"
+    onChange={this.onChangeSearch}
+    onClear={this.onClearSearch}
+    value={this.state.searchTerm}
+    resultsList={this.resultsList}
     searchAriaLabel="Users search"
   />
 );

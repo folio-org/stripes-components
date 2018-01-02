@@ -8,7 +8,7 @@
 ```js
 import { HotKeys } from '@folio/stripes-components/lib/HotKeys';
 //..
-const keys = { 
+const keys = {
   'delete' : ['delete','backspace'],
 };
 
@@ -30,7 +30,7 @@ Components can be wrapped to give them the necessary props/functionality to resp
 import { HotKeysHOC } from '@folio/stripes-components/lib/HotKeys';
 
 class MyComponent extends React.Component {
-  // typical component internals... constructor(), render(), etc.  
+  // typical component internals... constructor(), render(), etc.
 }
 
 // wrap component with HOC...
@@ -39,7 +39,7 @@ export default HotKeysHOC(MyComponent);
 You can then use the component as normal, supplying appropriate `keyMap` and `handlers` props.
 
 ```js
-const keys = { 
+const keys = {
   'delete' : ['delete','backspace'],
 };
 
