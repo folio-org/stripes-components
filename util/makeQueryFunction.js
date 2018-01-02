@@ -2,11 +2,11 @@ import { filters2cql } from '../lib/FilterGroups';
 
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig) {
   return (queryParams, _pathComponents, _resourceValues, logger) => {
-    const { qfield, query, filters } = queryParams || {};
+    const { qindex, query, filters } = queryParams || {};
 
     let cql = undefined;
-    if (query && qfield) {
-      cql = `${qfield}="${query}*"`;
+    if (query && qindex) {
+      cql = `${qindex}="${query}*"`;
     } else if (query) {
       cql = queryTemplate.replace(/\$QUERY/g, query);
     }
