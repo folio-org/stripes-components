@@ -36,7 +36,7 @@ If `<Select>` is used within a redux-form `<Field>` component (currently the mos
 * input - object - contains necessary props for the input itself such as the field's `value`
 * meta - object - contains good-to-have info for the field such as `touched`
 
-## Usage with Redux-form's <Field> component
+## Usage with Redux-form's `<Field>` component
 In Short, `<Field>` requires a `name` and a `component` prop. The `name` is the data field and the `component` prop takes the `<Select>`. Additional props supplied are passed into the rendered `<Select>` component.
 See the [redux-form website](https://redux-form.com/7.2.0/) for more information.
 
