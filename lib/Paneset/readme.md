@@ -37,6 +37,6 @@ By default, `<Paneset>` will report itself to its Paneset ancestors for appropri
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 nested | bool | Use if paneset is nested within a paneset. Applies relative positioning. | false |
-static | bool | Applies static positioning to the paneset (instead of 'absolute'). | false | 
-isRoot | bool | This paneset will not report itself to an ascendant `<Paneset>`. This is necessary for `<Panesets>` rendered in `<Layer>` components. | false | 
+static | bool | Applies static positioning to the paneset (instead of 'absolute'). | false |
+isRoot | bool | This paneset will not report itself to an ascendant `<Paneset>`. This is necessary for `<Panesets>` rendered in `<Layer>` components. | false |
 children | node | Set of panes and other components that render panes. | |

@@ -98,12 +98,12 @@ const resultsFormatter = {
     contentData={catalogResults}
     formatter={resultsFormatter}
     visibleColumns={['title', 'author']}
-/>   
+/>
 ```
 
 ### Formatting Rows
 It's possible to modify the rendered mark-up of rows using the `rowFormatter` prop. If one of these is needed, the best place to start is a fork of [defaultRowFormatter](lib/MultiColumnList/defaultRowFormatter.js).
-Here's an example that wraps rows in anchor tags instead of the default div:  
+Here's an example that wraps rows in anchor tags instead of the default div:
 ```js
 // utility function to fill anchor's href attribute...
 getRowURL(rowData){
@@ -138,5 +138,5 @@ anchoredRowFormatter(
 <MultiColumnList
   // ...other props
   rowFormatter={this.anchoredRowFormatter}
-/>   
+/>
 ```
