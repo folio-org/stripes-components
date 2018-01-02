@@ -4,7 +4,7 @@ We can start from the highest level in the typical module component tree and wor
 ## Panesets
 Panesets are containers for a collection of Panes that span the width of their containing element. Under the hood they control sizing and general management of their descendent Pane components. They can be nested using the 'nested' prop. See their [documentation](../lib/Paneset/readme.md) for more info.
 ## Panes
-Panes are the primary layout device for FOLIO module UI. They contain the FOLIO 'chrome'- a header area and space for menus and functions that pertain to the contents of the Pane. Consult their [documentation] on ways to customize them. 
+Panes are the primary layout device for FOLIO module UI. They contain the FOLIO 'chrome'- a header area and space for menus and functions that pertain to the contents of the Pane. Consult their [documentation] on ways to customize them.
 ## Layers
 The `Layer` component can be used within a Paneset to trigger visibility on a new 'layer' of the UI. It typically contains a Paneset with its descendent Panes. It uses a boolean prop to show or hide itself, so it can and should be triggered through user interaction. Check out the [documentation](https://github.com/folio-org/stripes-components/blob/master/lib/Layer/readme.md) for more info.
 ## LayoutGrid

@@ -4,7 +4,7 @@ Automagical support for right-to-left languages (rtl), dynamic sizing of columns
 ## Basics
 Every `<Row>` contains a series of `<Col>`s. Each `<Col>` has different size properties that apply to different media query breakpoints. Each property accepts an integer from 1 to 12, representing the fraction x/12 of the total width of the `<Row>`. `xs` is the base, dominant prop that would be used most often, as the grid is 'mobile first.' Other breakpoint props, increasing in size: `sm`, `md`, `lg`, can be used to adjust the layout of the row as the size of the viewport increases.
 
-Basic examples: 
+Basic examples:
 ```
 // Most common usage for basic layout:
 <Row>
@@ -28,7 +28,7 @@ More examples can be found [here](https://roylee0704.github.io/react-flexbox-gri
 
 Simply replace imports:
 
-Change 
+Change
 ```
 import { Row, Col } from 'react-bootstrap';
 ```

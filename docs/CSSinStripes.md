@@ -16,11 +16,11 @@ We also make use of [PostCSS](https://github.com/postcss/postcss) and a few of i
 
 ### CSS-Modules
 CSS files can be written as normal. For class-naming, camelCase is recommended, but not enforced. These files should live in the same directory as the component's .js file.
-``` 
+```
 /* ComponentName.css */
 .className{
     color: #090;
-} 
+}
 ```
 Then in your component's .js...
 ```
@@ -37,7 +37,7 @@ When the element is inspected in the browser, you can see that the CSS class is 
 ```
 
 ### PostCSS
-We use PostCSS to allow CSS to be written using an easy syntax that meets the upcoming CSS4 spec. Here are some syntax examples of the features we make use of: 
+We use PostCSS to allow CSS to be written using an easy syntax that meets the upcoming CSS4 spec. Here are some syntax examples of the features we make use of:
 #### Nesting
 ```
 .parentClass{

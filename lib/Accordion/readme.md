@@ -54,7 +54,7 @@ onToggleSection({label, id}) {
   });
 }
 
-... // include in the jsx: 
+... // include in the jsx:
 
 <AccordionSet accordionStatus={this.state.accordions} onToggle={this.onToggleSection}>
   <Accordion label="Example Accordion" id="ex-1">
@@ -67,7 +67,7 @@ onToggleSection({label, id}) {
 ```
 Accordions can also be controlled outside of an accordion set... this works if you need to have different accordions of view be their own components. Simply pass the onToggle to each accordion separately.
 
-``` 
+```
   <Accordion label="Example Accordion" onToggle={this.onToggleSection} open={this.state.accordions['ex-1']} id="ex-1">
     <p>Accordion content!</p>
   </Accordion>
@@ -80,8 +80,8 @@ Accordions can also be controlled outside of an accordion set... this works if y
 `<Accordion>` provides two additional props: `displayWhenOpen` and `displayWhenClosed` that are used to place content in the accordion header at various states. An example of this would be summary information rendered in the `displayWhenClosed` prop, and `<Button>`'s rendered in the `displayWhenOpen` prop.
 ```
 <AccordionSet>
-  <Accordion 
-    label="Example Accordion" 
+  <Accordion
+    label="Example Accordion"
     id="ex-1"
     displayWhenClosed={<em>3 items</em>}
     displayWhenOpen={<Button>Add item</Button>}
@@ -105,11 +105,11 @@ Name | type | description | default | required
 label | string, element | visible header label | | true
 open | bool | open or closed | true |
 id | string | unique ID to track accordion state | |
-displayWhenOpen | element | content to display in header when Accordion is in the open state | | 
-displayWhenClosed | element | content to display in header when Accordion is in the closed state | | 
-onToggle | func | callback for toggling the accordion open/closed | | 
-header | node, func | used to render a custom accordion header | | 
-contentRef | func | reference function for accessing the accordion content's DOM element. | | 
+displayWhenOpen | element | content to display in header when Accordion is in the open state | |
+displayWhenClosed | element | content to display in header when Accordion is in the closed state | |
+onToggle | func | callback for toggling the accordion open/closed | |
+header | node, func | used to render a custom accordion header | |
+contentRef | func | reference function for accessing the accordion content's DOM element. | |
 children | node, array of nodes | content of the accordion | |
 
 ## Expand or Collapse All
