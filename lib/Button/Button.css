@@ -396,6 +396,11 @@
     margin-bottom: 0;
   }
 
+  &.paddingSide0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &.fullWidth {
     width: 100%;
   }
