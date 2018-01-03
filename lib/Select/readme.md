@@ -30,7 +30,7 @@ value | string | Sets the selected value for the input. **This prop isn't necess
 onChange | func | Event handler for the select's `onChange` event. **This prop isn't necessary if part of a redux-form (see below)** | | false
 
 ## Properties set by Redux-form
-If `<Select>` is used within a redux-form `<Field>` component (currently the most common case.) You don't have to set any of these props yourself. See the [redux-form website](https://redux-form.com/7.2.0/) for more details.
+If `<Select>` is used within a redux-form `<Field>` component (currently the most common case) then you don't have to set any of these props yourself. See the [redux-form website](https://redux-form.com/7.2.0/) for more details.
 
 * value - Sets the selected value for the input.
 * input - object - contains necessary props for the input itself such as the field's `value`
