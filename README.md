@@ -63,7 +63,7 @@ Component | doc | category
 [`<RadioButton>`](lib/RadioButton) | |
 [`<RadioButtonGroup>`](lib/RadioButtonGroup) | [doc](lib/RadioButtonGroup/readme.md) |
 [`<SegmentedControl>`](lib/SegmentedControl) | [doc](lib/SegmentedControl/readme.md) |
-[`<Select>`](lib/Select) | |
+[`<Select>`](lib/Select) | [doc](lib/Select/readme.md) |
 [`<Settings>`](lib/Settings) | [doc](lib/Settings/readme.md) |
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) |
 [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup) | [doc](lib/structures/AddressFieldGroup/readme.md) | structure
