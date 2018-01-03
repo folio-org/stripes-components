@@ -1,6 +1,6 @@
 @import "../variables";
 
-.root {
+.list {
   margin-bottom: 1rem;
 
   &.marginBottom0 {

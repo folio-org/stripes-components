@@ -1,4 +1,4 @@
-.root {
+.calendar {
   position: relative;
   background: #fff;
   border-radius: 4px;
@@ -17,7 +17,7 @@
   overflow: hidden;
 }
 
-.calendar {
+.calendarInner {
   & td {
     vertical-align: middle;
   }
