@@ -11,7 +11,8 @@
   border: none;
   padding: 8px;
   margin-bottom: 0;
-  &.halfWidth{
+
+  &.halfWidth {
     width: 50%;
   }
 }
@@ -59,7 +60,7 @@
   }
 }
 
-[dir="rtl"]{
+[dir="rtl"] {
   & .selectWrap {
     border-width: 0 0 0 1px;
   }
