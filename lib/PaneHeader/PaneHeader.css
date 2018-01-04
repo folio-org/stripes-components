@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #dcdcdc;
-  min-height: 44px;
+  min-height: 45px;
   position: relative;
   will-change: transform;
 }
