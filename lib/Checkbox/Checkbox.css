@@ -69,6 +69,11 @@
   &:active {
     opacity: 0.65;
   }
+
+  &.disabledLabel {
+    opacity: 0.65;
+    cursor: default;
+  }
 }
 
 .formLabel {
@@ -135,6 +140,22 @@ input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::before {
   border: 1px solid var(--inputBorderColor);
   border-radius: 4px;
   background: #f7f7f7;
+}
+
+/* focus styles */
+input[type=checkbox].checkboxInput:checked:focus + label.checkboxLabel::before,
+input[type=checkbox].checkboxInput:not(:checked):focus + label.checkboxLabel::before{
+  border-color: var(--primary);
+}
+
+input[type=checkbox].checkboxInput:disabled:focus + label.checkboxLabel::before {
+  opacity: 0.65;
+  border-color: var(--primary);
+}
+
+/* disabled styles */
+input[type=checkbox]:disabled + label.checkboxLabel::before {
+  opacity: 0.65;
 }
 
 input[type=checkbox].checkboxInput:checked + label.checkboxLabel::after,
