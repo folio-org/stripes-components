@@ -11,6 +11,34 @@
   border: none;
   padding: 8px;
   margin-bottom: 0;
+  &.halfWidth{
+    width: 50%;
+  }
+}
+
+.headerSearchSelect {
+  border-width: 0;
+  padding: 0 4px;
+  height: 100%;
+  appearance: none;
+}
+
+.selectWrap {
+  position: relative;
+  border-width: 0 1px 0 0;
+  border-color: #dfdfdf;
+  border-style: solid;
+}
+
+.iconWrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  pointer-events: none;
 }
 
 .clearIcon {
@@ -28,5 +56,11 @@
     & .clearIcon {
       fill: #666;
     }
+  }
+}
+
+[dir="rtl"]{
+  & .selectWrap {
+    border-width: 0 0 0 1px;
   }
 }
