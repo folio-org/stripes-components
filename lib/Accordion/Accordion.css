@@ -10,7 +10,7 @@
   to { background-color: var(--bgHover); }
 }
 
-.root {
+.accordion {
   width: 100%;
 }
 
