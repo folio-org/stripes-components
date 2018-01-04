@@ -40,10 +40,6 @@
     margin: 0;
   }
 
-  & > button {
-    flex-shrink: 0;
-  }
-
   &:focus {
     outline: none;
   }
