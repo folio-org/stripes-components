@@ -8,6 +8,7 @@
 * `<Select>` options can be disabled via a 'disabled' property in dataOptions. Fixes STCOM-173.
 * `makeQueryFunction` supports relation-modifiers in the `qindex` parameter. Fixes STCOM-174.
 * `<FilterGroups>` implements the new `disableNames` property. Fixes STCOM-166.
+* `<FilterPaneSearch>` supports specific field selection. Fixes STCOM-177.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
