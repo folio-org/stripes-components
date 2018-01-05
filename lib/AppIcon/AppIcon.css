@@ -5,7 +5,7 @@
 @import '../variables';
 
 /**
- * Root Icon container
+ * Icon
  */
 .appIcon {
   display: inline-block;
@@ -14,49 +14,7 @@
   opacity: 1;
   transition: none;
   border-radius: 25%;
-}
-
-/**
- * Is clickable
- */
-button,
-a {
-  /* focus */
-  &:focus .appIcon.focusable {
-    box-shadow: 0 0 0 6px rgba(43, 117, 187, 0.2);
-    background-color: rgba(43, 117, 187, 0.2);
-    transition: box-shadow 0.3s, background-color 0.3s;
-    backface-visibility: hidden;
-
-    & .popover svg {
-      fill: rgba(0, 0, 0, 0.7);
-    }
-  }
-
-  /* focus & active */
-  &:focus:active .appIcon.focusable {
-    box-shadow: 0 0 0 18px rgba(43, 117, 187, 0.2);
-    background-color: rgba(43, 117, 187, 0.2);
-    transition: none;
-  }
-}
-
-/**
- * Is active
- */
-.appIcon.popover.isActive svg {
-  fill: var(--primary);
-}
-
-/**
- * Styles
- */
-
-/* Default app icon */
-.appIcon.default {
-  &.noIcon {
-    background-color: var(--secondary) !important;
-  }
+  background-color: var(--secondary) !important;
 
   &::after {
     content: "";
@@ -76,17 +34,8 @@ a {
   }
 }
 
-/* popover app icon (used for popovers in the header) */
-.appIcon.popover {
-  & svg {
-    fill: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-  }
-}
-
 /**
- * Icon Sizes
+ * Sizes
  */
 .appIcon.large {
   height: 48px;
