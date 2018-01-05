@@ -7,7 +7,7 @@ Displays a list with an array of items or children
 The items-prop is your array of times and the itemFormatter is a function that determines how to format each item.
 
 ```
-  import List from '@/folio/stripes-components/lib/List';
+  import List from '@folio/stripes-components/lib/List';
 
   const items = ['Apples', 'Bananas', 'Strawberries', 'Oranges'];
   const itemFormatter = (item) => (<li>{item}</li>);
