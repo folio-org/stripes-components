@@ -144,7 +144,7 @@ input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::before {
 
 /* focus styles */
 input[type=checkbox].checkboxInput:checked:focus + label.checkboxLabel::before,
-input[type=checkbox].checkboxInput:not(:checked):focus + label.checkboxLabel::before{
+input[type=checkbox].checkboxInput:not(:checked):focus + label.checkboxLabel::before {
   border-color: var(--primary);
 }
 
