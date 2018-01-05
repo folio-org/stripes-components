@@ -14,9 +14,57 @@
   opacity: 1;
   transition: none;
   border-radius: 25%;
+<<<<<<< HEAD
   background-color: var(--secondary) !important;
 
   &::after {
+=======
+}
+
+/**
+ * Is clickable
+ */
+button,
+a {
+  /* focus */
+  &:focus .icon.focusable {
+    box-shadow: 0 0 0 6px rgba(43, 117, 187, 0.2);
+    background-color: rgba(43, 117, 187, 0.2);
+    transition: box-shadow 0.3s, background-color 0.3s;
+    backface-visibility: hidden;
+
+    & .outline svg {
+      fill: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  /* focus & active */
+  &:focus:active .icon.focusable {
+    box-shadow: 0 0 0 18px rgba(43, 117, 187, 0.2);
+    background-color: rgba(43, 117, 187, 0.2);
+    transition: none;
+  }
+}
+
+/**
+ * Is active
+ */
+.appIconRoot.outline.isActive svg {
+  fill: var(--primary);
+}
+
+/**
+ * Styles
+ */
+
+/* Default app icon */
+.appIconRoot.block {
+  &.noIcon .icon {
+    background-color: var(--secondary) !important;
+  }
+
+  & .icon::after {
+>>>>>>> e1de063... Added focusable prop which controls if an app icon can be focused when inside a button or anchor-tag
     content: "";
     position: absolute;
     top: 0;
@@ -34,6 +82,18 @@
   }
 }
 
+<<<<<<< HEAD
+=======
+/* outline app icon (used for popovers in the header) */
+.appIconRoot.outline {
+  & svg {
+    fill: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+>>>>>>> e1de063... Added focusable prop which controls if an app icon can be focused when inside a button or anchor-tag
 /**
  * Sizes
  */
