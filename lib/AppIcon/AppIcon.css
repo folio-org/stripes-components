@@ -1,0 +1,53 @@
+/**
+ * AppIcon
+ */
+
+@import '../variables';
+
+/**
+ * Icon
+ */
+.appIcon {
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
+  opacity: 1;
+  transition: none;
+  border-radius: 25%;
+  background-color: var(--secondary) !important;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    border-radius: 25%;
+  }
+
+  & img {
+    width: 100%;
+    border-radius: 25%;
+    height: auto;
+  }
+}
+
+/**
+ * Sizes
+ */
+.appIcon.large {
+  height: 48px;
+  width: 48px;
+}
+
+.appIcon.medium {
+  width: 24px;
+  height: 24px;
+}
+
+.appIcon.small {
+  width: 14px;
+  height: 14px;
+}
