@@ -39,6 +39,7 @@
 /* Add ellipsis to titles */
 .paneTitle,
 .paneSub {
+  margin: 0;
   width: 100%;
   flex: 1;
   white-space: nowrap;
