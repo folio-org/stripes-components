@@ -36,8 +36,8 @@
  */
 .input {
   margin-bottom: var(--controlMarginBottom);
-  border: 1px solid var(--inputBorderColor);
-  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.03);
   width: 100%;
   outline: 0;
   letter-spacing: 0.4px;
@@ -51,7 +51,7 @@
   }
 
   &.rounded {
-    border-radius: var(--radius);
+    border-radius: 4px;
   }
 
   &.noBorder {
