@@ -47,3 +47,37 @@ Renders a single `<TextField>` for each item...
   newItemTemplate= {{name:""}}
 />
 ```
+
+## Custom Field components
+
+The `component` property of the `template` array can be used to pass in an existing component. If deeper control of props is necessary, such as option lists for `<Select>` inputs being manipulated based on `field` settings, you can pass a rendering function through to a `render` key on the template object instead of using the `component` key. The function will be passed the `fields` object, `field`, `fieldIndex`, `template`, `templateIndex` for use within your render function.
+
+```
+const renderLanguageField = ({fields, field, fieldIndex, template, templateIndex}) => {
+  const languageOptions = languages.selectOptions(field);
+  return (
+    <Field
+      label={fieldIndex === 0 ? 'language' : null}
+      name={`${field}`}
+      component={Select}
+      dataOptions={[{ label: 'Select language', value: '' }, ...languageOptions]}
+    />
+  );
+}
+
+class LanguageFields extends React.Component {
+  render() {
+    return (
+      <RepeatableField
+        name="languages"
+        label="Languages"
+        addLabel="+ Add language"
+        addId="clickable-add-language"
+        template={[{
+          render: renderLanguageField
+        }]}
+      />
+    );
+  }
+}
+```
