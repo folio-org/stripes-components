@@ -16,6 +16,8 @@
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
   --minor-divider-color: rgba(0, 0, 0, 0.1);
+  --linkColor: var(--primary);
+  --linkColorVisited: #4f2bbb;
 
   /**
    * Padding
