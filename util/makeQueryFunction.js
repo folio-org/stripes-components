@@ -1,8 +1,12 @@
 import { filters2cql } from '../lib/FilterGroups';
 
-function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig) {
+function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIfNoQuery) {
   return (queryParams, _pathComponents, _resourceValues, logger) => {
     const { qindex, query, filters } = queryParams || {};
+
+    if ((query === undefined || query === '') && failIfNoQuery) {
+      return null;
+    }
 
     let cql = undefined;
     if (query && qindex) {
