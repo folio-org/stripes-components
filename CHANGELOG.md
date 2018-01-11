@@ -11,6 +11,7 @@
 * `<FilterPaneSearch>` supports specific field selection. Fixes STCOM-177.
 * Added `<RepeatableField>` component. Fixes STCOM-143.
 * New `failIfNoQuery` argument to `makeQueryFunction`, specifies whether to reject an empty query. Fixes STCOM-181.
+* `<MultiColumnList>` accepts a React component as the `isEmptyMessage` property (as well as a string, as before). Fixes STCOM-184.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
