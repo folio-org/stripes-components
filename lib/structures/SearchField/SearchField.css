@@ -2,7 +2,26 @@
  * SearchField
  */
 
+/**
+ * Has searchable indexes
+ */
+
 /* Select field */
-select.select {
-  background-color: yellow;
+.searchFieldWrap .select {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: -1px;
+  position: relative;
+
+  /* To make sure it's position is above
+  so the focus style isn't hidden by the input */
+  &:focus {
+    z-index: 5;
+  }
+}
+
+/* Text Field */
+.hasSearchableIndexes input.input {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
