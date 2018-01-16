@@ -46,7 +46,6 @@ ul.listStyleBullets,
 ul.listStyleBullets ul {
   list-style-type: disc;
   padding-left: 20px;
-  line-height: 1.2;
 
   & ul {
     margin-top: 4px;

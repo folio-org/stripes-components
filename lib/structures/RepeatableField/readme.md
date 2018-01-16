@@ -30,8 +30,10 @@ Name | type | description | default | required
 name | string | Name of particular array of data that the rendered array of fields will refer to. |  | yes
 label  | string | The visible label of the array of fields | | yes
 addLabel | string | text for the 'Add item' button that's rendered with the fields. | |
+addButtonId | string | HTML `id` attribute to assign to the add button. If not provided, one will be generated. | |
 template | array of objects | Each object within the array represents props that will be passed to the rendered redux-form `<Field>` inputs. | | yes
 newItemTemplate | object | Object representing the default field values applied when a new item is added to the array. | | yes
+addDefaultItem | bool | Sets whether or not the list will add a default, empty item. | `false` | 
 
 ## Single field example
 Renders a single `<TextField>` for each item...

@@ -7,10 +7,6 @@
   color: var(--secondary, #333);
 }
 
-.kvValue {
-  line-height: 120%;
-}
-
 .kvRoot {
   padding: 0 5px 14px 0;
 
