@@ -16,18 +16,10 @@
   top: 10vh;
   background-color: #fff;
   max-height: 80vh;
-  width: 60%;
+  width: 80vw;
   overflow: hidden;
   border-radius: var(--radius, 4px);
   box-shadow: 0 5px 28px 1px rgba(0, 0, 0, 0.75);
-
-  &.small {
-    width: 40%;
-  }
-
-  &.large {
-    width: 90%;
-  }
 }
 
 .modalHeader {
@@ -82,11 +74,16 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-@media (--small) {
+@media (--mediumUp) {
   .modal {
-    &.small,
+    width: 60%;
+
+    &.small {
+      width: 40%;
+    }
+
     &.large {
-      width: 80vw;
+      width: 90%;
     }
   }
 }
