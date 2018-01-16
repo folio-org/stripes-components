@@ -8,7 +8,6 @@
   display: block;
   width: 100%;
   font-size: 21px;
-  line-height: inherit;
   color: #333;
   border: 0;
   margin-bottom: 6px;
@@ -18,7 +17,6 @@
 .subLegend {
   composes: legend;
   font-size: 18px;
-  line-height: 21px;
   color: #777;
 }
 
