@@ -8,7 +8,7 @@
   margin-bottom: 15px;
 }
 
-.editListRow{
+.editListRow {
   display: flex;
   max-width: 100%;
   justify-content: flex-start;
@@ -18,8 +18,13 @@
   margin-bottom: 4px;
 }
 
-.editListHeaders{
+.editListHeaders {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
+}
+
+.editableListError {
+  width: 100%;
+  padding: 6px;
 }
