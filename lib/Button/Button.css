@@ -19,6 +19,7 @@
   /* margin-bottom: var(--controlMarginBottom); */
   margin-left: 2px;
   margin-right: 2px;
+  margin-bottom: 15px;
   max-height: var(--controlHeight);
   overflow: hidden;
   white-space: nowrap;
