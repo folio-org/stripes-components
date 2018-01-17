@@ -1,10 +1,15 @@
 @import '../variables.css';
 
 .badge {
-  border-radius: 40%;
-  padding: 2px 5px;
+  border-radius: 999px;
   font-weight: 600;
-  font-size: 1rem;
+  display: inline-block;
+  color: var(--labelColor);
+  text-align: center;
+}
+
+.label {
+  padding: 0 6px;
 }
 
 /**
@@ -18,4 +23,27 @@
 .red {
   color: #fff;
   background-color: var(--error);
+}
+
+.primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/**
+ * Size
+ */
+
+.small {
+  font-size: 10px;
+  height: 18px;
+  min-width: 18px;
+  line-height: 18px;
+}
+
+.medium {
+  font-size: 14px;
+  height: 22px;
+  min-width: 22px;
+  line-height: 22px;
 }
