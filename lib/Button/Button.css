@@ -6,7 +6,7 @@
 
 .button {
   padding: 3px 10px 7px;
-  height: 24px;
+  height: var(--controlHeightSmall);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
@@ -19,7 +19,7 @@
   /* margin-bottom: var(--controlMarginBottom); */
   margin-left: 2px;
   margin-right: 2px;
-  max-height: var(--controlHeight);
+  max-height: var(--controlHeightSmall);
   overflow: hidden;
   white-space: nowrap;
   line-height: 100%;
@@ -450,9 +450,9 @@
   }
 }
 
-@media (--small) {
+@media (--mediumUp) {
   .button {
-    height: var(--controlHeightSmall);
-    max-height: var(--controlHeightSmall);
+    height: var(--controlHeight);
+    max-height: var(--controlHeight);
   }
 }
