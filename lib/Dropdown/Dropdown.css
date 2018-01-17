@@ -18,7 +18,7 @@
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 20vw;
+  min-width: 90vw;
   font-size: 14px;
   text-align: left;
   list-style: none;
@@ -38,14 +38,14 @@
   }
 }
 
-@media (--medium) {
+@media (--mediumUp) {
   .DropdownMenuTether {
     min-width: 40vw;
   }
 }
 
-@media (--small) {
+@media (--largeUp) {
   .DropdownMenuTether {
-    min-width: 90vw;
+    min-width: 20vw;
   }
 }
