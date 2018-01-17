@@ -11,6 +11,10 @@
   overflow: hidden;
   position: relative;
   will-change: transform;
+
+  &:last-child {
+    border-right: none;
+  }
 }
 
 /**
