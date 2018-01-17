@@ -6,14 +6,20 @@
 
 .iconButton {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   outline: 0;
   width: var(--controlHeightTouch);
   height: var(--controlHeightTouch);
+  min-width: var(--controlHeightTouch);
   transition: opacity 0.4s;
   border-radius: 0;
+
+  /* Let the button expand in width if we have a badge */
+  &.hasBadge {
+    width: auto;
+  }
 
   &:hover {
     text-decoration: none;
@@ -24,29 +30,4 @@
   &:focus {
     opacity: 0.6;
   }
-}
-
-/**
-* Sizes
-*/
-.iconButton.large {
-  width: var(--controlHeightTouch);
-  height: var(--controlHeightTouch);
-  min-width: var(--controlHeightTouch);
-}
-
-.iconButton.small {
-  width: var(--controlHeight);
-  height: var(--controlHeight);
-  min-width: var(--controlHeight);
-}
-
-/**
- * Badge
- */
-div.badgeCount {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  font-size: 10px;
 }
