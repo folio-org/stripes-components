@@ -122,7 +122,6 @@
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
   text-transform: capitalize;
-  line-height: 1;
 
   &.sorted {
     text-decoration: underline;

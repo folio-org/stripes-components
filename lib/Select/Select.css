@@ -23,6 +23,12 @@
 .selectIcon {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 10px;
   pointer-events: none;
+}
+
+@media (--mediumUp) {
+  .selectIcon {
+    top: 0;
+  }
 }

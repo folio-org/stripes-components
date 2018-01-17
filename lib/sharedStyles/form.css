@@ -98,8 +98,8 @@
  * Specific <input> style
  */
 input.input {
-  height: var(--controlHeight);
-  min-height: var(--controlHeight);
+  height: var(--controlHeightSmall);
+  min-height: var(--controlHeightSmall);
   padding: var(--input-horizontal-padding) var(--input-vertical-padding);
 }
 
@@ -107,7 +107,7 @@ input.input {
  * Specific <select> style
  */
 select.input {
-  height: var(--controlHeight);
+  height: var(--controlHeightSmall);
   padding: 0 var(--input-vertical-padding);
   appearance: none;
 }
@@ -116,7 +116,7 @@ select.input {
  * Sepcific <textarea> style
  */
 textarea.input {
-  min-height: var(--controlHeight);
+  min-height: var(--controlHeightSmall);
   padding: var(--input-horizontal-padding) var(--input-vertical-padding);
 }
 
@@ -141,4 +141,22 @@ textarea.input {
 .feedbackWarning {
   composes: feedbackBlock;
   color: var(--warn);
+}
+
+/**
+ * Wider screens
+ */
+@media (--mediumUp) {
+  input.input {
+    height: var(--controlHeight);
+    min-height: var(--controlHeight);
+  }
+
+  select.input {
+    height: var(--controlHeight);
+  }
+
+  textarea.input {
+    min-height: var(--controlHeight);
+  }
 }

@@ -28,6 +28,7 @@ fullWidth | bool | Styles input to a width of 100% of its container. | | false
 validationEnabled | bool | Controls whether or not the select displays validation icons. | true | false
 value | string | Sets the selected value for the input. **This prop isn't necessary if part of a redux-form (see below)** | | false
 onChange | func | Event handler for the select's `onChange` event. **This prop isn't necessary if part of a redux-form (see below)** | | false
+selectClass | string | Adds className to the select field | | false
 
 ## Properties set by Redux-form
 If `<Select>` is used within a redux-form `<Field>` component (currently the most common case) then you don't have to set any of these props yourself. See the [redux-form website](https://redux-form.com/7.2.0/) for more details.
