@@ -4,6 +4,7 @@
   border-color: #999;
   border-width: 1px 1px 0;
   border-style: solid;
+  width: 100%;
 
   &:last-of-type {
     border-bottom: 1px solid #999;

@@ -18,8 +18,10 @@ Name | Type | Description
 -- | -- | --
 icon | string | Select the icon. You can use any icon that's available in the Icon-component
 className | string | Append your own CSS class
+type | string | Set the type of the button (defaults to "button")
 style | object | Set the inline style
 onClick | function | Attach an event handler
+href | string | Turns the button into a link (instead of using an onClick handler)
 badgeCount | string / number | Display a small number badge on the IconButton
 id | string | Adds an id attribute to the button
 title | string | Adds a title attribute to the button
