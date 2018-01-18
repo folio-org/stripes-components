@@ -21,8 +21,9 @@ There are also various [Utility functions](util/README.md).
 Component | doc | category
 --- | --- | ---
 [`<Accordion>`](lib/Accordion) | [doc](lib/Accordion/readme.md) |
+[`<AppIcon>`](lib/AppIcon) | [doc](lib/AppIcon/readme.md) |
 [`<AuthorityList>`](lib/AuthorityList) | |
-[`<Badge>`](lib/Badge) | |
+[`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) |
 [`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) |
 [`<Callout>`](lib/Callout) | [doc](lib/Callout/readme.md) |
 [`<Checkbox>`](lib/Checkbox) | |
@@ -70,6 +71,7 @@ Component | doc | category
 [`<ConfirmationModal>`](lib/structures/ConfirmationModal) | [doc](lib/structures/ConfirmationModal/readme.md) | structure
 [`<EditableList>`](lib/structures/EditableList) | [doc](lib/structures/EditableList/readme.md) | structure
 [`<RepeatableField>`](lib/structures/RepeatableField) | [doc](lib/structures/RepeatableField/readme.md) | structure
+[`<RepeatableField>`](lib/structures/SearchField) | [doc](lib/structures/SearchField/readme.md) | structure
 [`<TabButton>`](lib/TabButton) | |
 [`<TextArea>`](lib/TextArea) | |
 [`<TextField>`](lib/TextField) | |
