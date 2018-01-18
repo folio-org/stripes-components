@@ -15,6 +15,8 @@
   min-width: var(--controlHeightTouch);
   transition: opacity 0.4s;
   border-radius: 0;
+  background: none;
+  color: var(--labelColor);
 
   /* Let the button expand in width if we have a badge */
   &.hasBadge {
