@@ -47,6 +47,7 @@ readOnlyFields | array of strings | Array of non-editable columns - good for dis
 formatter | object | Allows custom content/components to be displayed in the grid. see example below. | | no
 columnMapping | object | Allows custom column names to be applied in case they differ from the properties of `contentData`'s objects| | no
 columnWidths | object | Allows custom column widths to be set. If you use this, be sure to set a width for an 'actions' column as part of this object. | | no
+id | string | Used as a basic suffix for `id` attributes throughout the component. | | 
 
 ### Using formatters for custom data
 Sometimes the data alone just won't serve what you need and it needs to be formatted in some certain way. The `formatter` prop allows for custom rendering of data. Each key of the `formatter` object should correspond with a field from `visibleFields` that you'd like to render custom content for. The function will be passed the data object for the particular item of the list, so multiple data points can be used to affect the display.
