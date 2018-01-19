@@ -439,7 +439,7 @@
 
 a.button {
   padding: 8px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 [dir='rtl'] {
