@@ -437,6 +437,11 @@
   }
 }
 
+a.button {
+  padding: 8px;
+  margin-bottom: 0;
+}
+
 [dir='rtl'] {
   &.button {
     &:first-child {
