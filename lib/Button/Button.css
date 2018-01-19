@@ -15,10 +15,9 @@
   transition: background-color 0.25s, color 0.25s, opacity 0.4s, box-shadow 0s;
   background-color: transparent;
   border: transparent;
-
-  /* margin-bottom: var(--controlMarginBottom); */
   margin-left: 2px;
   margin-right: 2px;
+  margin-bottom: var(--gutter);
   max-height: var(--controlHeightSmall);
   overflow: hidden;
   white-space: nowrap;
