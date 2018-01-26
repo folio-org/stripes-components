@@ -122,8 +122,8 @@
   background: none;
   border: none;
   font-size: inherit;
-  width: 100%;
   padding: 0;
+  width: 100%;
 
   &:focus {
     outline: none;
@@ -132,6 +132,14 @@
     animation-duration: 2s;
     background-color: var(--bgHover); */
   }
+}
+
+.filterSetHeader.clearButtonVisible {
+  width: auto;
+}
+
+.headerWrapper .clearIconButton {
+  height: 14px;
 }
 
 .filterSetlabel {
