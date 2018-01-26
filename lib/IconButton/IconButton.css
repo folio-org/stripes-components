@@ -10,9 +10,6 @@
   align-items: center;
   justify-content: center;
   outline: 0;
-  width: var(--controlHeightTouch);
-  height: var(--controlHeightTouch);
-  min-width: var(--controlHeightTouch);
   transition: opacity 0.4s;
   border-radius: 0;
   background: none;
@@ -31,4 +28,22 @@
   &:focus {
     opacity: 0.6;
   }
+}
+
+/**
+ * Size
+ */
+
+.medium {
+  width: var(--controlHeightTouch);
+  height: var(--controlHeightTouch);
+  min-width: var(--controlHeightTouch);
+  padding: 0 10px;
+}
+
+.small {
+  width: var(--controlHeight);
+  height: var(--controlHeight);
+  min-width: var(--controlHeight);
+  padding: 0 5px;
 }
