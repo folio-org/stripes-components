@@ -143,8 +143,8 @@
 }
 
 .filterSetlabel {
-  font-weight: bold;
-  color: var(--subLabelColor #999);
+  font-weight: 600;
+  color: #000;
   pointer-events: none;
   user-select: none;
 }
