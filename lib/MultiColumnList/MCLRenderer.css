@@ -34,6 +34,10 @@
   margin-left: 9px;
   margin-right: 9px;
 
+  &:visited {
+    color: #333;
+  }
+
   & a {
     color: var(--primary);
 

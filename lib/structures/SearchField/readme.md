@@ -49,6 +49,7 @@ placeholder | string | Adds a placeholder to the search input field
 id | string | Adds an ID to the input field
 ariaLabel | string | Adds an aria label to the input field
 value | string | The value of the input field
+loading | boolean | Adds a loading state to icon (on fetch etc.)
 onChange | function | On change handler for the input field
 onClear | function | On clear search field callback
 clearSearchId | string | Adds id to the clear search icon

@@ -122,8 +122,8 @@
   background: none;
   border: none;
   font-size: inherit;
-  width: 100%;
   padding: 0;
+  width: 100%;
 
   &:focus {
     outline: none;
@@ -134,9 +134,17 @@
   }
 }
 
+.filterSetHeader.clearButtonVisible {
+  width: auto;
+}
+
+.headerWrapper .clearIconButton {
+  height: 14px;
+}
+
 .filterSetlabel {
-  font-weight: bold;
-  color: var(--subLabelColor #999);
+  font-weight: 600;
+  color: #000;
   pointer-events: none;
   user-select: none;
 }
