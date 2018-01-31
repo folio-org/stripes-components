@@ -126,7 +126,7 @@
   color: rgba(0, 0, 0, 0.5);
   text-transform: capitalize;
 
-  .clickable {
+  &.clickable {
     cursor: pointer;
   }
 
