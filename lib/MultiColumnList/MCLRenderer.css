@@ -122,10 +122,13 @@
   flex-shrink: 0;
   flex-grow: 0;
   padding: 6px 5px;
-  cursor: pointer;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
   text-transform: capitalize;
+
+  .clickable {
+    cursor: pointer;
+  }
 
   &.sorted {
     text-decoration: underline;
