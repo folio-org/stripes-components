@@ -53,6 +53,8 @@
     "postcss-media-minmax": "^3.0.0",
     "postcss-nesting": "^4.2.1",
     "raw-loader": "^0.5.1",
+    "react": "^15.6",
+    "react-dom": "^15.6",
     "sinon": "^1.17.4",
     "storybook-readme": "^3.1.1",
     "stylelint": "^8.2.0",
@@ -83,8 +85,6 @@
     "typeface-source-sans-pro": "^0.0.44"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*",
     "stripes-core": "^2.7.0"
   }
 }
