@@ -32,7 +32,7 @@
 
   &.inline {
     display: inline-flex;
-    margin-right: 6px;
+    margin-right: 4px;
 
     & label.checkboxLabel {
       height: var(--checkbox-size);
