@@ -2,10 +2,11 @@
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.05);
   margin-bottom: 10px;
+  padding-bottom: 6px;
 }
 
 .metaSectionContent {
-  padding: 0 28px 8px;
+  padding: 0 26px;
   color: #333;
 }
 
@@ -19,7 +20,7 @@
 
   & > button {
     flex-shrink: 0;
-    padding: 6px;
+    padding: 6px 6px 0;
     width: 100%;
     background-color: transparent;
     border: none;
