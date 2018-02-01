@@ -6,25 +6,15 @@ Complete list of button colors and styles
 The color of the button can be modified by changing the buttonStyle-prop
 
 ```
-<Button buttonStyle="error">
-    Error
+<Button buttonStyle="danger">
+    Do something dangerous
 </Button>
 ```
 
 Name | Type | Description
 --- | --- | ---
-primary | string | This is the default color of the button component
-secondary | string | |
-error | string | |
+default | string | This is the default color of the button component
+primary | string | |
+danger | string | |
 success | string | |
 warning | string | |
-transparent | string | |
-
-
-## Hollow
-Any button can be transformed into an outlined button by adding the hollow-prop
-```
-<Button hollow>
-    Hollow Button
-</Button>
-```
