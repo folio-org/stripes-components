@@ -19,8 +19,7 @@ These are general descriptive categories that indicate the type of use cases tha
 
 Category name | description
 --- | --- 
-**structure** | These are components that aid in the general structure/layout of your app's UI.
-They include generic containers and components that render structurally important html tags (`<Headline>`, for instance.)
+**structure** | These are components that aid in the general structure/layout of your app's UI. They include generic containers and components that render structurally important html tags (`<Headline>`, for instance.)
 **control** | Components with the control category are form elements and other interactive widgets including `<TextField>`, `<Button>` and `<Dropdown>` - additionally, this category includes componets that aid the functionality of other control components, such as the way `<DropdownMenu>` is used with `<Dropdown>`
 **data display** | Data display components are used for dispay of dynamic content. These include `<List>` and `<MultiColumnList>`
 **design** | These components render `<Icon>`s and other prominent visual landmarks.
