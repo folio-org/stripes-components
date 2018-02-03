@@ -20,8 +20,8 @@ These are general descriptive categories that indicate the type of use cases tha
 Category name | description
 --- | ---
 **structure** | These are components that aid in the general structure/layout of your app's UI. They include generic containers and components that render structurally important html tags (`<Headline>`, for instance.)
-**control** | Components with the control category are form elements and other interactive widgets including `<TextField>`, `<Button>` and `<Dropdown>` - additionally, this category includes componets that aid the functionality of other control components, such as the way `<DropdownMenu>` is used with `<Dropdown>`
-**data-display** | Data display components are used for dispay of dynamic content. These include `<List>` and `<MultiColumnList>`
+**control** | Components with the control category are form elements and other interactive widgets including `<TextField>`, `<Button>` and `<Dropdown>` - additionally, this category includes components that aid the functionality of other control components, such as the way `<DropdownMenu>` is used with `<Dropdown>`
+**data-display** | Data display components are used for display of dynamic content. These include `<List>` and `<MultiColumnList>`
 **design** | These components render `<Icon>`s and other prominent visual landmarks.
 **user-feedback** | These components are geared for making the user aware of happenings in the system. They include `<Callout>` and `<SRStatus>`.
 **accessibility** | Components with this category play an important role in developing accessible modules.
@@ -38,7 +38,7 @@ Component | doc | categories
 --- | --- | ---
 [`<Accordion>`](lib/Accordion) | [doc](lib/Accordion/readme.md) | structure
 [`<AppIcon>`](lib/AppIcon) | [doc](lib/AppIcon/readme.md) | design
-[`<AuthorityList>`](lib/AuthorityList) | | control prefab
+[`<AuthorityList>`](lib/AuthorityList) | | control, prefab
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
 [`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) | control
 [`<Callout>`](lib/Callout) | [doc](lib/Callout/readme.md) | user-feedback
@@ -84,7 +84,7 @@ Component | doc | categories
 [`<Settings>`](lib/Settings) | [doc](lib/Settings/readme.md) | prefab
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) | accessibility, user-feedback
 [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup) | [doc](lib/structures/AddressFieldGroup/readme.md) | control, prefab
-[`<ConfirmationModal>`](lib/structures/ConfirmationModal) | [doc](lib/structures/ConfirmationModal/readme.md) | control prefab
+[`<ConfirmationModal>`](lib/structures/ConfirmationModal) | [doc](lib/structures/ConfirmationModal/readme.md) | control, prefab
 [`<EditableList>`](lib/structures/EditableList) | [doc](lib/structures/EditableList/readme.md) | control, prefab
 [`<RepeatableField>`](lib/structures/RepeatableField) | [doc](lib/structures/RepeatableField/readme.md) | control, prefab
 [`<SearchField>`](lib/structures/SearchField) | [doc](lib/structures/SearchField/readme.md) | control, prefab
