@@ -18,7 +18,7 @@ A library of React components and utility functions for Stripes.
 These are general descriptive categories that indicate the type of use cases that components serve. A component can have multiple categories associated with it.
 
 Category name | description
---- | --- 
+--- | ---
 **structure** | These are components that aid in the general structure/layout of your app's UI. They include generic containers and components that render structurally important html tags (`<Headline>`, for instance.)
 **control** | Components with the control category are form elements and other interactive widgets including `<TextField>`, `<Button>` and `<Dropdown>` - additionally, this category includes componets that aid the functionality of other control components, such as the way `<DropdownMenu>` is used with `<Dropdown>`
 **data-display** | Data display components are used for dispay of dynamic content. These include `<List>` and `<MultiColumnList>`
@@ -52,7 +52,7 @@ Component | doc | categories
 [`<FilterPane>`](lib/FilterPane) | [doc](lib/FilterPane/readme.md) | structure
 [`<FilterPaneSearch>`](lib/FilterPaneSearch) | [doc](lib/FilterPaneSearch/readme.md) | obsolete
 [`<FocusLink>`](lib/FocusLink) | [doc](lib/FocusLink/readme.md) | accessibility
-[`<Headline>`](lib/Headline) | [doc](lib/Headline/readme.md) | structure 
+[`<Headline>`](lib/Headline) | [doc](lib/Headline/readme.md) | structure
 [`<HotKeys>`](lib/HotKeys) | [doc](lib/HotKeys/readme.md) | utility
 [`<Icon>`](lib/Icon) | [doc](lib/Icon/readme.md) | design
 [`<IconButton>`](lib/IconButton) | [doc](lib/IconButton/readme.md) | control
