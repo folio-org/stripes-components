@@ -36,13 +36,13 @@ Name | type | description | default | required
 `autosize` | bool | if true, list will size itself to fit its containing element. Use this to have a list occupy the full width and height of a `<Pane>`s content area. | false | 
 `height` | string or number | the height of the table. **Necessary if `virtualize` is active you aren't using `autosize` already.** |  | 
 `maxHeight` | number | the maximum height that the list should grow to before scrolling its list body in pixels. | | 
+`onRowClick` | function | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | | 
 `rowMetadata` | object | arbitrary data that is passed as a metadata object to the `onRowClick` handler - useful for passing in data that may exist outside of the realm of the rendered MCL. | | 
 `headerMetadata` | object | Object with data to include with the | | 
 `formatter`  | object mapping names to functions | see separate section | | 
 `selectedRow` | object | Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | | 
 `sortedColumn` | string | Used to apply styling to the appropriate column. | | 
 `sortOrder` | string | 'ascending' or 'descending' direction. | | 
-`onRowClick` | function | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | | 
 `onHeaderClick` | func[event, headerMetadata] | callback function invoked when one of the cells in the header is clicked (typically to choose a sort-order). By default, headerMetadata includes the column's data name as well as its alias, in case a object is supplied to the columnMapping prop. | | 
 `columnMapping` | object | Maps rendered column labels to the data fields for the onHeaderClick prop. | `{}` | 
 `columnWidths` | object | Set custom column widths, e.g. {email: '40%'}. Component will automatically measure any columns that are unspecified. | | 
@@ -57,6 +57,9 @@ Name | type | description | default | required
 `rowFormatter`  | func | function of shape `<name>({rowIndex, rowClass, rowData, cells, rowProps}){return <reactElement>}` that can be used to supply custom row layout. Forking [defaultRowFormatter](lib/MultiColumnList/defaultRowFormatter.js) is a good place to start if you need to use this. | `defaultRowFormatter` | 
 `interactive` | bool | Applies a "pointer" cursor when the mouse hovers over a row | `true` | 
 `headerRowClass` | string | Applies a css class to the header row of the list. | | 
+
+## Usability: Clickable Rows vs clickable cells
+Using both types of interaction is not good for users or developers, so it's best to simply use one or the other. For clickable cell content, place clickable elements within `formatter`s. Clickable rows are easily created by using the `onRowClick` prop.
 
 ## Formatter
 
