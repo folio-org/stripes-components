@@ -18,3 +18,4 @@ primary | string | |
 danger | string | |
 success | string | |
 warning | string | |
+link | string | |
