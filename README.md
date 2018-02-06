@@ -5,21 +5,25 @@ Copyright (C) 2016-2018 The Open Library Foundation
 This software is distributed under the terms of the Apache License,
 Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 
+<!-- md2toc -l 2 README.md -->
+* [Introduction](#introduction)
+* [Component categories](#component-categories)
+* [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
+* [To be documented](#to-be-documented)
+* [Additional information](#additional-information)
+
+
 ## Introduction
 
-A library of React components and utility functions for Stripes.
+This is a library of React components and utility functions for use with [the Stripes UI toolkit](https://github.com/folio-org/stripes-core/), part of [the FOLIO project](https://www.folio.org/).
 
-* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
-* [CSS for stripes-components development](docs/CSSinStripes.md)
-* [Change-log](CHANGELOG.md)
-
-## Component Categories
+## Component categories
 
 These are general descriptive categories that indicate the type of use cases that components serve. A component can have multiple categories associated with it.
 
-Category name | description
+Category | Description
 --- | ---
-**structure** | These are components that aid in the general structure/layout of your app's UI. They include generic containers and components that render structurally important html tags (`<Headline>`, for instance.)
+**structure** | These are components that aid in the general structure/layout of your app's UI. They include generic containers and components that render structurally important HTML tags (`<Headline>`, for instance.)
 **control** | Components with the control category are form elements and other interactive widgets including `<TextField>`, `<Button>` and `<Dropdown>` - additionally, this category includes components that aid the functionality of other control components, such as the way `<DropdownMenu>` is used with `<Dropdown>`
 **data-display** | Data display components are used for display of dynamic content. These include `<List>` and `<MultiColumnList>`
 **design** | These components render `<Icon>`s and other prominent visual landmarks.
@@ -32,13 +36,11 @@ Category name | description
 ## Links to documentation of specific components and utilities
 
 The following components are available in the [lib](lib) directory.
-There are also various [Utility functions](util/README.md).
 
 Component | doc | categories
 --- | --- | ---
 [`<Accordion>`](lib/Accordion) | [doc](lib/Accordion/readme.md) | structure
 [`<AppIcon>`](lib/AppIcon) | [doc](lib/AppIcon/readme.md) | design
-[`<AuthorityList>`](lib/AuthorityList) | | control, prefab
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
 [`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) | control
 [`<Callout>`](lib/Callout) | [doc](lib/Callout/readme.md) | user-feedback
@@ -92,11 +94,27 @@ Component | doc | categories
 [`<TextArea>`](lib/TextArea) | | control
 [`<TextField>`](lib/TextField) | | control
 
+There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
+
+
+## To be documented
+
+XXX Say something about
+[`sharedStyles`](lib/sharedStyles/),
+[`global.css`](lib/global.css)
+and
+[`variables.css`](lib/variables.css).
+
+
 ## Additional information
 
-See [stripes-core](https://github.com/folio-org/stripes-core).
+Some related documents:
 
-See project [STRCOM](https://issues.folio.org/browse/STRCOM)
+* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
+* [CSS for stripes-components development](docs/CSSinStripes.md)
+* [Change-log](CHANGELOG.md)
+
+See project [STCOM](https://issues.folio.org/browse/STCOM) (STripes COMponents)
 at the [FOLIO issue tracker](http://dev.folio.org/community/guide-issues).
 
 Other FOLIO Developer documentation is at [dev.folio.org](http://dev.folio.org/)
