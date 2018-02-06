@@ -54,7 +54,7 @@ Name | type | description | default | required
 `loading` | bool | If true, will display an animated loading icon. | |
 `onScroll` | func | Callback for scrolling of list body. | `() => {}` |
 `striped` | bool | Adds striped style to rows | `true` |
-`rowFormatter`  | func | function of shape `<name>({rowIndex, rowClass, rowData, cells, rowProps}){return <reactElement>}` that can be used to supply custom row layout. Forking [defaultRowFormatter](lib/MultiColumnList/defaultRowFormatter.js) is a good place to start if you need to use this. | `defaultRowFormatter` |
+`rowFormatter`  | func | function of shape `<name>({rowIndex, rowClass, rowData, cells, rowProps}){return <reactElement>}` that can be used to supply custom row layout. Forking [defaultRowFormatter](defaultRowFormatter.js) is a good place to start if you need to use this. | `defaultRowFormatter` |
 `interactive` | bool | Applies a "pointer" cursor when the mouse hovers over a row | `true` |
 `headerRowClass` | string | Applies a css class to the header row of the list. | |
 
@@ -106,7 +106,7 @@ const resultsFormatter = {
 ```
 
 ### Formatting Rows
-It's possible to modify the rendered mark-up of rows using the `rowFormatter` prop. If one of these is needed, the best place to start is a fork of [defaultRowFormatter](lib/MultiColumnList/defaultRowFormatter.js).
+It's possible to modify the rendered mark-up of rows using the `rowFormatter` prop. If one of these is needed, the best place to start is a fork of [defaultRowFormatter](defaultRowFormatter.js).
 Here's an example that wraps rows in anchor tags instead of the default div:
 ```js
 // utility function to fill anchor's href attribute...
