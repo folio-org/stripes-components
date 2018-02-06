@@ -64,7 +64,7 @@ Component | doc | categories
 [`<LayoutBox>`](lib/LayoutBox) | | structure
 [`<LayoutGrid>`](lib/LayoutGrid) | [doc](lib/LayoutGrid/readme.md) | structure
 [`<LayoutHeader>`](lib/LayoutHeader) | [doc](lib/LayoutHeader/readme.md) | structure
-[`<List>`](lib/List) | [doc](lib/List/readme.md) | data display
+[`<List>`](lib/List) | [doc](lib/List/readme.md) | data-display
 [`<MenuItem>`](lib/MenuItem) | [doc](lib/MenuItem/readme.md) | control
 [`<MetaSection>`](lib/MetaSection) | [doc](lib/MetaSection/readme.md) | data-display
 [`<Modal>`](lib/Modal) | [doc](lib/Modal/readme.md) | container
