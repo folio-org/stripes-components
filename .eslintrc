@@ -5,13 +5,13 @@
     "shallow":true,
     "spy":true,
     "it":true,
-    "mount":true,
+    "mount":true
   },
   "extends": "stripes",
   "parser": "babel-eslint",
   "rules": {
     "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": ["**/*.stories.js", "**/stories/*.js"]
+      "devDependencies": true
     }]
   }
 }
