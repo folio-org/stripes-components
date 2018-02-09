@@ -17,6 +17,7 @@
 * In `<Button>`, omit "hollow" prop from those passed to `<button>`. Fixes STCOM-196.
 * Remove the old `<AuthorityList>`, which has been superseded by `<ControlledVocab>` in stripes-smart-components. Completes STSMACOM-6.
 * Remove `<MultiColumnList>`'s default click handler - component now checks for a supplied click handler before calling `preventDefault()`. Fixes STCOM-197
+* Remove `<MultColumnList>`'s focus-tracking via ref to rowFormatter. Fixes STCOM-202.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
