@@ -7,7 +7,7 @@
     "it":true,
     "mount":true
   },
-  "extends": "stripes",
+  "extends": "@folio/eslint-config-stripes",
   "parser": "babel-eslint",
   "rules": {
     "import/no-extraneous-dependencies": ["error", {
