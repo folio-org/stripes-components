@@ -63,7 +63,6 @@
     "webpack": "1.11.0"
   },
   "dependencies": {
-    "@folio/eslint-config-stripes": "^1.1.100012",
     "@folio/stripes-form": "^0.8.2",
     "@folio/stripes-react-hotkeys": "^1.0.0",
     "classnames": "^2.2.5",
