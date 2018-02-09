@@ -26,6 +26,7 @@
     ]
   },
   "devDependencies": {
+    "@folio/eslint-config-stripes": "^1.1.0",
     "@storybook/addon-actions": "^3.2.16",
     "@storybook/addon-knobs": "^3.3.11",
     "@storybook/addon-options": "^3.2.15",
@@ -42,7 +43,6 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.8.0",
-    "@folio/eslint-config-stripes": "^1.1.0",
     "ignore-styles": "^5.0.1",
     "jsdom": "^9.3.0",
     "mocha": "^2.5.3",
@@ -63,6 +63,7 @@
     "webpack": "1.11.0"
   },
   "dependencies": {
+    "@folio/eslint-config-stripes": "^1.1.100012",
     "@folio/stripes-form": "^0.8.2",
     "@folio/stripes-react-hotkeys": "^1.0.0",
     "classnames": "^2.2.5",
