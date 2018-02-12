@@ -7,7 +7,7 @@
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 20vw;
+  min-width: 90vw;
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 14px;
@@ -25,14 +25,14 @@
   }
 }
 
-@media (--medium) {
+@media (--mediumUp) {
   .DropdownMenu {
     min-width: 40vw;
   }
 }
 
-@media (--small) {
+@media (--largeUp) {
   .DropdownMenu {
-    min-width: 90vw;
+    min-width: 20vw;
   }
 }

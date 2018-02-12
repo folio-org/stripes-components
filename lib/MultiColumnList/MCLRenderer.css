@@ -1,11 +1,6 @@
 @import '../variables.css';
 
-
 .mclContainer {
-  /* We add negative margin here to make up for positive margin on first/last cell in each row
-   (since the total padding has to be 15px in total and the container (e.g. pane) has 15px of padding)
-   margin: 0 -10px; */
-
   &:focus {
     outline: none;
 
@@ -36,6 +31,24 @@
   border-radius: 7px;
   color: #333;
   text-decoration: none;
+  margin-left: 9px;
+  margin-right: 9px;
+
+  &:visited {
+    color: #333;
+  }
+
+  & a {
+    color: var(--primary);
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
 
   /* Different bg on even rows */
   &.isOdd {
@@ -93,7 +106,10 @@
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  width: calc(100% - 16px);
+  width: calc(100% - 22px);
+
+  /* header columns has padding of their own and we need a total of 15px from edge to text */
+  padding: 6px 10px 0;
 
   &.hScroll {
     overflow: auto;
@@ -105,11 +121,14 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 6px 12px;
-  cursor: pointer;
+  padding: 6px 5px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
   text-transform: capitalize;
+
+  &.clickable {
+    cursor: pointer;
+  }
 
   &.sorted {
     text-decoration: underline;
@@ -165,7 +184,8 @@
 
 .emptyMessage {
   width: 100%;
-  color: #444;
+  padding: 15px;
+  color: var(--labelColor);
 }
 
 @keyframes example {

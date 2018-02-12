@@ -1,17 +1,24 @@
 @import '../variables.css';
 
 .pane {
+  background-color: #fff;
   border-right: 1px solid #ccc;
   height: 100%;
   max-height: calc(100vh - 44px);
   display: flex;
   flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   /* transition: all .25s ease-in-out; */
   overflow: hidden;
-  position: relative;
+  position: absolute;
   will-change: transform;
-  background-color: #fcfcfc;
+
+  &:last-child {
+    border-right: none;
+  }
 }
 
 /**
@@ -19,16 +26,21 @@
  */
 
 .paneContent {
-  padding: var(--major-padding);
   height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  &.hasPadding {
+    padding: var(--major-padding);
+  }
+
+  &.noOverflow {
+    overflow: hidden;
+  }
 }
 
-@media (--small) {
+@media (--mediumUp) {
   .pane {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
+    position: relative;
   }
 }

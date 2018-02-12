@@ -16,11 +16,11 @@ We also make use of [PostCSS](https://github.com/postcss/postcss) and a few of i
 
 ### CSS-Modules
 CSS files can be written as normal. For class-naming, camelCase is recommended, but not enforced. These files should live in the same directory as the component's .js file.
-``` 
+```
 /* ComponentName.css */
-.className{
-    color: #090;
-} 
+.className {
+  color: #090;
+}
 ```
 Then in your component's .js...
 ```
@@ -37,39 +37,55 @@ When the element is inspected in the browser, you can see that the CSS class is 
 ```
 
 ### PostCSS
-We use PostCSS to allow CSS to be written using an easy syntax that meets the upcoming CSS4 spec. Here are some syntax examples of the features we make use of: 
+We use PostCSS to allow CSS to be written using an easy syntax that meets the upcoming CSS4 spec. Here are some syntax examples of the features we make use of:
 #### Nesting
 ```
-.parentClass{
-    &.specificityClass{ ... }
-    &:pseudoSelector{ ... }
-    & .childClass{ ... }
-    &>.directDescendant{ ... }
+.parentClass {
+  &.specificityClass { ... }
+  &:pseudoSelector { ... }
+  & .childClass { ... }
+  &>.directDescendant { ... }
 }
 ```
 #### Color Manipulation
 You can see a list of available [color functions](https://github.com/postcss/postcss-color-function/blob/master/README.md#list-of-color-adjuster), e.g.
 ```
-.darkerBG{
-    background-color: color(#fff shade(8%))
+.darkerBG {
+  background-color: color(#fff shade(8%))
 }
 ```
 #### CSS Variables
 ```
 /* Conforming to spec, these *must* be declared on root */
-:root{
-    --primary: #106c9e;
+:root {
+  --primary: #106c9e;
 }
 
 /* the second parameter is a fallback in case the variable isn't present */
-.primaryButton{
-    background-color: var(--primary, #106c9e;);
+.primaryButton {
+  background-color: var(--primary, #106c9e);
 }
 ```
 For consistency, there is a [shared set](../lib/variables.css) of established CSS variables/values.
 It is subject to change.
 
-### Bootstrap deprecation
-Currently there are a low number of components that still make use of Bootstrap classes. We are currently working to remove Bootstrap.css and React-Bootstrap from our dependencies. That said, Bootstrap class names *should not* be used if your component needs custom styling.
+### Media Queries
+`stripes-components` provides [pre-set breakpoints](../lib/variables.css) that you can use to adjust styles at different browser window widths.
+```
+@media (--mediumUp) {
+  .button {
+    height: 2em;
+  }
+}
+```
 
+Use `min-width` breakpoints like `smallUp`, `mediumUp`, and `largeUp` when possible. There are `max-width` breakpoints available, but the cases for their use should be rare. Leaning on `min-width` promotes a mobile-first CSS workflow, where the narrowest screen size is the default. Layout can gradually be added as the width increases.
 
+This:
+```
+x ≥ 321px, x ≥ 641px, x ≥ 1025px, x ≥ 1441px
+```
+is easier to debug and reason about than this:
+```
+x ≤ 640px, 641px ≤ x ≤ 1024px, 1025px ≤ x < 1440px, x ≥ 1441px
+```

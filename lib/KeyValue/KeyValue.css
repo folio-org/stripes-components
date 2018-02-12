@@ -2,13 +2,9 @@
 
 .kvLabel {
   display: block;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 2px;
   color: var(--secondary, #333);
-}
-
-.kvValue {
-  line-height: 120%;
 }
 
 .kvRoot {

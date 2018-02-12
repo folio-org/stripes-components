@@ -16,18 +16,11 @@
   top: 10vh;
   background-color: #fff;
   max-height: 80vh;
-  width: 60%;
+  width: 80vw;
   overflow: hidden;
-  border-radius: var(--radius, 4px);
-  box-shadow: 0 5px 28px 1px rgba(0, 0, 0, 0.75);
-
-  &.small {
-    width: 40%;
-  }
-
-  &.large {
-    width: 90%;
-  }
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.24);
+  outline: 0;
 }
 
 .modalHeader {
@@ -40,17 +33,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  font-size: calc(1.2rem);
-  min-height: 32px;
+  font-weight: 600;
+  min-height: 44px;
 }
 
 .modalContent {
-  padding: 1rem;
+  padding: var(--major-padding);
   flex: 1 2 auto;
   overflow: auto;
   width: 100%;
-  max-height: calc(100% - 31px - 2rem);
+  max-height: calc(100% - 44px - 2rem);
 }
 
 .modalControls {
@@ -63,7 +55,6 @@
   pointer-events: none;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 0.5rem;
 }
 
 .closeModal {
@@ -79,14 +70,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media (--small) {
+@media (--mediumUp) {
   .modal {
-    &.small,
+    &.medium {
+      width: 60%;
+    }
+
+    &.small {
+      width: 40%;
+    }
+
     &.large {
-      width: 80vw;
+      width: 90%;
     }
   }
 }

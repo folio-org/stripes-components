@@ -1,15 +1,75 @@
+@import "../variables";
+
 .paneHeader {
   width: 100%;
   display: flex;
-  align-content: center;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #dcdcdc;
-  min-height: 44px;
+  min-height: 45px;
   position: relative;
   will-change: transform;
 }
 
+/**
+ * Default Pane Header styling
+ */
+
+/* Centered content in pane */
+.paneHeaderCenter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 44px;
+  padding: 0 5px;
+  left: 0;
+  right: 0;
+}
+
+/* Inner part of pane header
+(which can be turned in to a button for toggling a popover in the future) */
+.paneHeaderCenterInner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Add ellipsis to titles */
+.paneTitle,
+.paneSub {
+  margin: 0;
+  width: 100%;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pane title */
 .paneTitle {
-  font-weight: bold;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+/* Pane sub */
+.paneSub {
+  color: var(--subLabelColor);
+  font-size: 11px;
+}
+
+/* First content area */
+
+/* .paneContentFirstArea {
+} */
+
+/* Last content area */
+.paneContentLastArea {
+  margin-left: auto;
+
+  /* Control close icon position with order. Useful for when changing dir to rtl */
+  & .paneHeaderCloseIcon {
+    order: 99;
+  }
 }

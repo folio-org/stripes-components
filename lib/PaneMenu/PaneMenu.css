@@ -2,19 +2,7 @@
 
 .paneMenu {
   display: flex;
-
-  & button,
-  & a {
-    background-color: transparent;
-    border: none;
-    transition: all 0.2s ease;
-    padding: 4px;
-    margin: 0;
-    cursor: pointer;
-    height: var(--controlHeightTouch);
-
-    &:hover {
-      background-color: #ececec;
-    }
-  }
+  align-items: center;
+  position: relative;
+  z-index: 2;
 }

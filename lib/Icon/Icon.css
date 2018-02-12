@@ -1,5 +1,4 @@
-.root {
-  /*margin: 0 4px;*/
+.icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +8,7 @@
   }
 }
 
-.root svg {
+.icon svg {
   height: inherit;
   width: inherit;
 }
@@ -23,13 +22,13 @@
  */
 
 .small {
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
 }
 
 .medium {
-  height: 18px;
-  width: 18px;
+  height: 24px;
+  width: 24px;
 }
 
 .large {

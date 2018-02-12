@@ -1,6 +1,27 @@
 # Change history for stripes-components
 
-## 2.0.0 (IN PROGRESS)
+## 2.1.0 (IN PROGRESS)
+
+* Adjust address read only view. Fixes STCOM-152.
+* `<FilterPaneSearch>` supports `searchableIndexes`, `selectedIndex` and `onChangeIndex` properties. Fixes STCOM-171.
+* Functions made by `makeQueryFunction` support the `qindex` parameter, which is interpreted as the name of the _only_ field to search. This allows us to support field-specific searching. Fixes STCOM-172.
+* `<Select>` options can be disabled via a 'disabled' property in dataOptions. Fixes STCOM-173.
+* `makeQueryFunction` supports relation-modifiers in the `qindex` parameter. Fixes STCOM-174.
+* `<FilterGroups>` implements the new `disableNames` property. Fixes STCOM-166.
+* `<FilterPaneSearch>` supports specific field selection. Fixes STCOM-177.
+* Added `<RepeatableField>` component. Fixes STCOM-143.
+* New `failIfNoQuery` argument to `makeQueryFunction`, specifies whether to reject an empty query. Fixes STCOM-181.
+* `<MultiColumnList>` accepts a React component as the `isEmptyMessage` property (as well as a string, as before). Fixes STCOM-184.
+* In `<FilterGroups>`, the `handleFilterChange` and `handleFilterClear` functions return the modified filter state. Fixes STCOM-188.
+* Backwards the function delete-suppression in `<EditableList>` was. Fixes STCOM-189.
+* In `<Button>`, omit "hollow" prop from those passed to `<button>`. Fixes STCOM-196.
+* Remove the old `<AuthorityList>`, which has been superseded by `<ControlledVocab>` in stripes-smart-components. Completes STSMACOM-6.
+* Remove `<MultiColumnList>`'s default click handler - component now checks for a supplied click handler before calling `preventDefault()`. Fixes STCOM-197
+* Remove `<MultColumnList>`'s focus-tracking via ref to rowFormatter. Fixes STCOM-202.
+* Adjust EditableListForm setup. Fixes STCOM-203.
+  
+## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
 
 * Refactor `<EntrySelector>` to make it more reusable. Fixes STCOM-97.
 * Added `<ConfirmationModal>` component to 'structures' folder. Supports STCOM-66. See [docs](lib/structures/ConfirmationModal/readme.md).
@@ -16,13 +37,18 @@
 * `transitionToParams` uses `queryString.stringify` instead of by-hand gluing. Fixes STCOM-112
 * Fix defaultRoute in `<Settings>` when `pages` is not sorted by `label`. Fixes STCOM-113.
 * Add `<LayoutHeader>` and `<LayoutBox>` components for assistance with layout tasks. Covers STCOM-118.
-* Fixed bug in `<Paneset>` occurring when multiple Panes are dismissed at once. Fixes STCOM-121 and STSMACOM-17.
+* Fixed bug in `<Paneset>` occurring when multiple Panes are dismissed at once. Fixes STCOM-121, STCOM-117 and STSMACOM-17.
 * Include `dataKey` in when connecting `<Settings>` components. Fixes UICIRC-33.
 * Adding empty `<Icon icon="profile" />` in support of UIU-283; see STCOM-124.
 * Show errors for `<Select>` elements regardless of the presence of a label attribute. Fixes STCOM-126.
 * Add `react-tether` to `<Datepicker>`. Fixes STCOM-125.
 * Remove `<Accordion>` from `<AddressList`. Fixes STCOM-138.
 * Add `interactive` to `<MultiColumnList>` to toggle cursor CSS on non-interactive lists. Fixes STCOM-139.
+* Add `handleFilterChange` method for FilterGroups. Works with anointed resource instead of component state. Fixes STCOM-148.
+* Add `filterState` method for FilterGroups. Like `initialFilterState` but doesn't need the configuraton object. Fixes STCOM-147.
+* Numerous style updates to `<MultiColumnList>`, `<Button>`, `<Checkbox>` and other components.
+* Storybook resource added. Run `yarn storybook` to see component demos and documentation.
+* Pass a ref through to TextArea for access by a parent. Refs STSMACOM-4.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)

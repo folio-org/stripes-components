@@ -1,0 +1,49 @@
+/**
+ * Pane Menu Icon
+ */
+
+@import '../variables';
+
+.iconButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  transition: opacity 0.4s;
+  border-radius: 0;
+  background: none;
+
+  /* Let the button expand in width if we have a badge */
+  &.hasBadge {
+    width: auto;
+  }
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+/**
+ * Size
+ */
+
+.medium {
+  width: var(--controlHeightTouch);
+  height: var(--controlHeightTouch);
+  min-width: var(--controlHeightTouch);
+  padding: 0 10px;
+}
+
+.small {
+  width: var(--controlHeight);
+  height: var(--controlHeight);
+  min-width: var(--controlHeight);
+  padding: 0 5px;
+}

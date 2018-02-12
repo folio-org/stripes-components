@@ -10,7 +10,7 @@
   to { background-color: var(--bgHover); }
 }
 
-.root {
+.accordion {
   width: 100%;
 }
 
@@ -40,10 +40,6 @@
     margin: 0;
   }
 
-  & > button {
-    flex-shrink: 0;
-  }
-
   &:focus {
     outline: none;
   }
@@ -62,9 +58,8 @@
   display: flex;
   flex-grow: 2;
   color: var(--subLabelColor #999);
-  font-weight: bold;
+  font-weight: 600;
   justify-content: flex-start;
-  padding-left: 6px;
 }
 
 /**
@@ -127,8 +122,8 @@
   background: none;
   border: none;
   font-size: inherit;
-  width: 100%;
   padding: 0;
+  width: 100%;
 
   &:focus {
     outline: none;
@@ -139,9 +134,17 @@
   }
 }
 
+.filterSetHeader.clearButtonVisible {
+  width: auto;
+}
+
+.headerWrapper .clearIconButton {
+  height: 14px;
+}
+
 .filterSetlabel {
-  font-weight: bold;
-  color: var(--subLabelColor #999);
+  font-weight: 600;
+  color: #000;
   pointer-events: none;
   user-select: none;
 }

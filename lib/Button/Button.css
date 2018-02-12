@@ -5,8 +5,8 @@
 */
 
 .button {
-  padding: 0 10px;
-  height: 24px;
+  padding: 3px 10px 7px;
+  height: var(--controlHeightSmall);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
@@ -15,11 +15,10 @@
   transition: background-color 0.25s, color 0.25s, opacity 0.4s, box-shadow 0s;
   background-color: transparent;
   border: transparent;
-
-  /* margin-bottom: var(--controlMarginBottom); */
   margin-left: 2px;
   margin-right: 2px;
-  max-height: var(--controlHeight);
+  margin-bottom: var(--gutter);
+  max-height: var(--controlHeightSmall);
   overflow: hidden;
   white-space: nowrap;
   line-height: 100%;
@@ -61,13 +60,17 @@
   */
 
   /**
-  * Button Style: Primary
+  * Button Style: Default
   */
 
-  &.primary {
-    background-color: var(--primary);
+  &.default {
+    background-color: transparent;
     border: 1px solid var(--primary);
-    color: #fff;
+    color: var(--primary);
+
+    & :global .stripes__icon {
+      fill: var(--primary);
+    }
 
     &:focus:active {
       transition: none;
@@ -79,60 +82,34 @@
       box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
     }
 
-    &.hollow {
-      background-color: transparent;
-      color: var(--primary);
+    &:hover {
+      background-color: color(var(--primary) shade(8%));
+      color: #fff;
 
       & :global .stripes__icon {
-        fill: var(--primary);
-      }
-
-      &:hover {
-        background-color: color(var(--primary) shade(8%));
-        color: #fff;
-
-        & :global .stripes__icon {
-          fill: #fff;
-        }
+        fill: #fff;
       }
     }
   }
 
   /**
-  * Button Style: secondary
+  * Button Style: Primary
   */
 
-  &.secondary {
-    background-color: var(--secondary);
-    border: 1px solid var(--secondary);
+  &.primary {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    font-weight: 600;
     color: #fff;
 
     &:focus:active {
       transition: none;
-      box-shadow: 0 0 0 18px color(var(--secondary) alpha(-30%));
+      box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
     }
 
     &:focus {
       transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--secondary) alpha(-50%));
-    }
-
-    &.hollow {
-      background-color: transparent;
-      color: var(--secondary);
-
-      & :global .stripes__icon {
-        fill: var(--secondary);
-      }
-
-      &:hover {
-        background-color: color(var(--secondary) shade(8%));
-        color: #fff;
-
-        & :global .stripes__icon {
-          fill: #fff;
-        }
-      }
+      box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
     }
   }
 
@@ -154,24 +131,6 @@
       transition: box-shadow 0.3s ease-out;
       box-shadow: 0 0 0 3px color(var(--success) alpha(-50%));
     }
-
-    &.hollow {
-      background-color: transparent;
-      color: var(--success);
-
-      & :global .stripes__icon {
-        fill: var(--success);
-      }
-
-      &:hover {
-        background-color: color(var(--success) shade(8%));
-        color: #fff;
-
-        & :global .stripes__icon {
-          fill: #fff;
-        }
-      }
-    }
   }
 
   /**
@@ -192,94 +151,32 @@
       transition: box-shadow 0.3s ease-out;
       box-shadow: 0 0 0 3px color(var(--warn) alpha(-50%));
     }
-
-    &.hollow {
-      background-color: transparent;
-      color: var(--warn);
-
-      & :global .stripes__icon {
-        fill: var(--warn);
-      }
-
-      &:hover {
-        background-color: color(var(--warn) shade(8%));
-        color: #fff;
-
-        & :global .stripes__icon {
-          fill: #fff;
-        }
-      }
-    }
   }
 
   /**
-  * Button Style: Error
+  * Button Style: Danger
   */
 
-  &.error,
-  &.negative {
-    background-color: var(--error);
-    border: 1px solid var(--error);
+  &.danger {
+    background-color: var(--danger);
+    border: 1px solid var(--danger);
     color: #fff;
 
     &:focus:active {
       transition: none;
-      box-shadow: 0 0 0 18px color(var(--error) alpha(-30%));
+      box-shadow: 0 0 0 18px color(var(--danger) alpha(-30%));
     }
 
     &:focus {
       transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--error) alpha(-50%));
-    }
-
-    &.hollow {
-      background-color: transparent;
-      color: var(--error);
-
-      & :global .stripes__icon {
-        fill: var(--error);
-      }
-
-      &:hover {
-        background-color: color(var(--error) shade(8%));
-        color: #fff;
-
-        & :global .stripes__icon {
-          fill: #fff;
-        }
-      }
-    }
-  }
-
-  /**
-  * Button Style: Transparent
-  */
-
-  &.transparent {
-    &.hover {
-      background-color: transparent;
-      border: 1px solid transparent;
-
-      &:hover {
-        background-color: var(--bgHover);
-      }
-    }
-
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px rgba(153, 153, 153, 0.2);
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px rgba(153, 153, 153, 0.2);
+      box-shadow: 0 0 0 3px color(var(--danger) alpha(-50%));
     }
   }
 
   &.dropdownActive {
     &[aria-expanded="true"],
     &:focus {
-      border: 1px solid var(--error);
+      border: 1px solid var(--danger);
     }
 
     &:focus {
@@ -357,7 +254,7 @@
   }
 
   &.paneHeaderNewButton {
-    margin-right: 17px;
+    margin-right: 15px;
   }
 
   &.noRadius {
@@ -378,11 +275,6 @@
     border-right-color: transparent !important;
   }
 
-  &.transparent {
-    background-color: transparent;
-    border: 1px solid transparent;
-  }
-
   &.link {
     background-color: transparent;
     border: 1px solid transparent;
@@ -394,6 +286,11 @@
   &.bottomMargin0,
   &.marginBottom0 {
     margin-bottom: 0;
+  }
+
+  &.paddingSide0 {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &.fullWidth {
@@ -408,15 +305,13 @@
   }
 
   &[disabled] {
-    background-color: #ccc;
-    border-color: #ccc;
-    color: #888;
+    background-color: #ccc !important;
+    border-color: #ccc !important;
+    color: #888 !important;
 
     &:hover {
-      background-color: #ccc;
-      border-color: #ccc;
-      color: #888;
       cursor: initial;
+      opacity: 1;
     }
   }
 
@@ -434,6 +329,11 @@
   }
 }
 
+a.button {
+  padding: 8px;
+  margin-bottom: 0;
+}
+
 [dir='rtl'] {
   &.button {
     &:first-child {
@@ -446,9 +346,9 @@
   }
 }
 
-@media (--small) {
+@media (--mediumUp) {
   .button {
-    height: var(--controlHeightSmall);
-    max-height: var(--controlHeightSmall);
+    height: var(--controlHeight);
+    max-height: var(--controlHeight);
   }
 }

@@ -1,10 +1,24 @@
 import { filters2cql } from '../lib/FilterGroups';
 
-function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig) {
+function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIfNoQuery) {
   return (queryParams, _pathComponents, _resourceValues, logger) => {
-    const { query, filters } = queryParams || {};
+    const { qindex, query, filters } = queryParams || {};
 
-    let cql = !query ? undefined : queryTemplate.replace(/\$QUERY/g, query);
+    if ((query === undefined || query === '') && failIfNoQuery) {
+      return null;
+    }
+
+    let cql = undefined;
+    if (query && qindex) {
+      const t = qindex.split('/', 2);
+      if (t.length === 1) {
+        cql = `${qindex}="${query}*"`;
+      } else {
+        cql = `${t[0]} =/${t[1]} "${query}*"`;
+      }
+    } else if (query) {
+      cql = queryTemplate.replace(/\$QUERY/g, query);
+    }
     const filterCql = filters2cql(filterConfig, filters);
     if (filterCql) {
       if (cql) {

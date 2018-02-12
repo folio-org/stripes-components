@@ -19,11 +19,11 @@ Name | Type | Description
 buttonStyle | string | Change the style/color of the button (see the [styles section](/?selectedKind=Button&selectedStory=Styles)) |
 type | string | Change the button type |
 buttonClass | string | Add a custom class |
-hollow | bool | Converts to an outlined button (see the [styles section](/?selectedKind=Button&selectedStory=Styles)) |
 align | string | Change the alignment of the button (with flexbox) Options: start, center, end |
 className | string | Replace CSS classes completely |
 bottomMargin0 | bool | Remove bottom margin |
 marginBottom0 | bool | Remove bottom margin |
+paddingSide0 | bool | Remove padding on the sides |
 fullWidth | fullWidth | Forces the button width to 100% |
 href | string | Returns an anchor-tag with an href-attribute |
 allowAnchorClick | bool | Allow anchor click |

@@ -1,15 +1,18 @@
 @import '../variables.css';
 
-.root {
+:root {
+  --radio-button-size: 12px;
+}
+
+.radioButton {
   display: flex;
   align-items: center;
   transition: all 0.2s ease;
-  margin-bottom: var(--controlMarginBottom);
 
   &.inline {
     display: inline;
 
-    & + .root {
+    & + .radioButton {
       margin: 0 6px;
     }
   }
@@ -20,10 +23,14 @@
 }
 
 label.radioLabel {
+  position: relative;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  min-height: 24px;
   cursor: pointer;
   flex-grow: 2;
-  padding: 4px 2px;
-  margin: 0 4px 0 0;
+  padding: 0 2px 0 22px;
   font-weight: 600;
   color: var(--labelColor);
 
@@ -64,24 +71,15 @@ input[type=radio].input + label.radioLabel::after {
   margin-top: 5px;
 }
 
-input[type=radio].input:checked + label.radioLabel,
-input[type=radio].input:not(:checked) + label.radioLabel {
-  position: relative;
-  padding-left: 28px;
-  cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
-}
-
 input[type=radio].input:checked + label.radioLabel::before,
 input[type=radio].input:not(:checked) + label.radioLabel::before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #ddd;
+  width: var(--radio-button-size);
+  height: var(--radio-button-size);
+  border: 1px solid var(--inputBorderColor);
   border-radius: 100%;
   background: #fff;
 }
@@ -89,12 +87,12 @@ input[type=radio].input:not(:checked) + label.radioLabel::before {
 input[type=radio].input:checked + label.radioLabel::after,
 input[type=radio].input:not(:checked) + label.radioLabel::after {
   content: '';
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: #313131;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 4px;
+  left: 4px;
   border-radius: 100%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;

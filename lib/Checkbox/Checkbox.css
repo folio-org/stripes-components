@@ -1,42 +1,16 @@
 @import '../variables.css';
 
-.checkboxLabel {
-  box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
-  outline: 0;
-  opacity: 1;
-  transition: opacity 0.4s;
-  border-radius: 6px;
-
-  &:hover {
-    text-decoration: none;
-    opacity: 0.8;
-  }
-}
-input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
-  backface-visibility: hidden;
+:root {
+  --checkbox-size: 12px;
 }
 
-input[type=checkbox].checkboxInput:active + label.checkboxLabel {
-  opacity: 0.7;
-}
-input[type=checkbox].checkboxInput:focus:active + label.checkboxLabel {
-  transition: none;
-  box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
-}
-
-input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
-  transition: box-shadow 0.3s ease-out;
-  box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
-}
-
-.root {
+.checkbox {
   display: flex;
   align-items: center;
   transition: background-color 0.2s ease;
-  margin-bottom: var(--controlMarginBottom);
   position: relative;
 
-  &.rootFullWidth {
+  &.fullWidth {
     width: 100%;
   }
 
@@ -44,7 +18,7 @@ input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
     margin-bottom: 0;
   }
 
-  &.rootHover {
+  &.hover {
     border-radius: 6px;
 
     &:hover {
@@ -58,13 +32,13 @@ input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
 
   &.inline {
     display: inline-flex;
-    margin: 0 4px;
-    top: 4px;
+    margin-right: 4px;
 
     & label.checkboxLabel {
-      height: 18px;
-      width: 18px;
+      height: var(--checkbox-size);
+      width: var(--checkbox-size);
       padding: 0;
+      min-height: 0;
 
       &::before,
       &::after {
@@ -76,14 +50,15 @@ input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
 
 .checkboxLabel {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   cursor: pointer;
   flex-grow: 2;
   padding: 2px 5px;
   font-weight: 600;
   color: var(--labelColor);
   position: relative;
-  padding-left: 28px;
+  padding-left: 22px;
   line-height: 20px;
   border-radius: 4px;
 
@@ -93,6 +68,11 @@ input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
 
   &:active {
     opacity: 0.65;
+  }
+
+  &.disabledLabel {
+    opacity: 0.65;
+    cursor: default;
   }
 }
 
@@ -111,7 +91,7 @@ input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
 /**
  * Checkbox feedback
  */
-.root {
+.checkbox {
   &.hasWarning .checkboxFeedback {
     color: var(--warn);
   }
@@ -122,7 +102,7 @@ input[type=checkbox].checkboxInput:focus + label.checkboxLabel {
 }
 
 .checkboxFeedback {
-  margin-top: 2px;
+  font-size: 12px;
 }
 
 /**
@@ -145,31 +125,47 @@ input[type=checkbox].checkboxInput:not(:checked) {
 
 .checkboxLabel::before,
 .checkboxLabel::after {
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 input[type=checkbox].checkboxInput:checked + label.checkboxLabel::before,
 input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::before {
   content: '';
   position: absolute;
-  left: 4px;
+  left: 0;
   top: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #ddd;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border: 1px solid var(--inputBorderColor);
   border-radius: 4px;
   background: #f7f7f7;
+}
+
+/* focus styles */
+input[type=checkbox].checkboxInput:checked:focus + label.checkboxLabel::before,
+input[type=checkbox].checkboxInput:not(:checked):focus + label.checkboxLabel::before {
+  border-color: var(--primary);
+}
+
+input[type=checkbox].checkboxInput:disabled:focus + label.checkboxLabel::before {
+  opacity: 0.65;
+  border-color: var(--primary);
+}
+
+/* disabled styles */
+input[type=checkbox]:disabled + label.checkboxLabel::before {
+  opacity: 0.65;
 }
 
 input[type=checkbox].checkboxInput:checked + label.checkboxLabel::after,
 input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::after {
   content: '';
-  width: 8px;
-  height: 4px;
+  width: 6px;
+  height: 3px;
   position: absolute;
-  top: 4px;
-  left: 8px;
-  border: 3px solid #313131;
+  top: 3px;
+  left: 3px;
+  border: 3px solid var(--labelColor);
   border-top: none;
   border-right: none;
   background: transparent;
@@ -184,37 +180,3 @@ input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::after {
 input[type=checkbox].checkboxInput:checked + label.checkboxLabel::after {
   opacity: 1;
 }
-
-/* input[type='checkbox'].checkboxInput {
-  vertical-align: middle;
-  margin: 0 9px;
-
-  & + .checkboxLabel {
-    margin-left: 0;
-  }
-
-  &.hidden {
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    width: 1px;
-    position: absolute;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-  }
-}
-
-.iconContainer {
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  border: 1px dotted transparent;
-
-  &::after {
-    content: '\200B';
-    position: absolute;
-  }
-} */

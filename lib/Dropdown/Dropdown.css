@@ -18,9 +18,7 @@
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 20vw;
-  padding: 5px;
-  margin: 2px 0 0;
+  min-width: 90vw;
   font-size: 14px;
   text-align: left;
   list-style: none;
@@ -30,20 +28,24 @@
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 
+  &.hasPadding {
+    padding: 15px;
+  }
+
   & ul {
     list-style: none;
     padding: 0;
   }
 }
 
-@media (--medium) {
+@media (--mediumUp) {
   .DropdownMenuTether {
     min-width: 40vw;
   }
 }
 
-@media (--small) {
+@media (--largeUp) {
   .DropdownMenuTether {
-    min-width: 90vw;
+    min-width: 20vw;
   }
 }

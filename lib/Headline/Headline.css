@@ -1,0 +1,59 @@
+/**
+ * Component: Headline
+ */
+
+@import '../variables';
+
+/**
+ * Root styling
+ */
+
+.headline {
+  margin-top: 0;
+
+  /* Faded */
+  &.isFaded {
+    color: var(--subLabelColor);
+  }
+
+  /* Bold */
+  &.isBold {
+    font-weight: 600;
+  }
+}
+
+/**
+ * Size
+ */
+
+.sizeSmall {
+  font-size: 14px;
+}
+
+.sizeMedium {
+  font-size: 18px;
+}
+
+.sizeLarge {
+  font-size: 24px;
+}
+
+/**
+ * Margin
+ */
+
+.marginNone {
+  margin-bottom: 0;
+}
+
+.marginSmall {
+  margin-bottom: 8px;
+}
+
+.marginMedium {
+  margin-bottom: 12px;
+}
+
+.marginLarge {
+  margin-bottom: 14px;
+}

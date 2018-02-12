@@ -1,6 +1,6 @@
 @import '../variables.css';
 
-.calloutRoot {
+.callout {
   position: fixed;
   top: 0;
   left: 0;

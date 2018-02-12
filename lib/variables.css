@@ -4,11 +4,12 @@
   --primary: #2b75bb;
   --secondary: #999;
   --error: #900;
+  --danger: #900;
   --warn: #e27c3e;
   --success: #070;
   --labelColor: #333;
   --subLabelColor: #999;
-  --controlMarginBottom: 8px;
+  --controlMarginBottom: 12px;
   --controlHeight: 24px;
   --radius: 6px;
   --inputBorderColor: #acacac;
@@ -16,6 +17,8 @@
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
   --minor-divider-color: rgba(0, 0, 0, 0.1);
+  --linkColor: var(--primary);
+  --linkColorVisited: #4f2bbb;
 
   /**
    * Padding
@@ -23,11 +26,16 @@
   --major-padding: 15px;
 }
 
+/* Lean on min-width queries to create mobile-first CSS. */
+@custom-media --smallUp (min-width: 321px);
+@custom-media --mediumUp (min-width: 641px);
+@custom-media --largeUp (min-width: 1025px);
+@custom-media --xlargeUp (min-width: 1441px);
+@custom-media --xxlargeUp (min-width: 1921px);
+
+/* Use these max-width queries as infrequently as possible. */
 @custom-media --small (max-width: 640px);
 @custom-media --mediumDown (max-width: 1024px);
-@custom-media --medium (min-width: 641px) and (max-width:1024px);
-@custom-media --mediumUp (min-width: 641px);
-@custom-media --large (min-width:1025px) and (max-width: 1440px);
-@custom-media --largeUp (min-width:1025px);
+@custom-media --medium (min-width: 641px) and (max-width: 1024px);
+@custom-media --large (min-width: 1025px) and (max-width: 1440px);
 @custom-media --xlarge (min-width: 1441px) and (max-width: 1920px);
-@custom-media --xxlarge (min-width: 1921px);
