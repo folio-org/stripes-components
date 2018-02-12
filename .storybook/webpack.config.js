@@ -25,10 +25,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.md$/,
-        use: "raw-loader"
-      },
-      {
         test(fn) {
           // We want to transpile files inside node_modules/@folio or outside
           // any node_modules directory. And definitely not files in
