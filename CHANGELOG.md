@@ -19,6 +19,7 @@
 * Remove `<MultiColumnList>`'s default click handler - component now checks for a supplied click handler before calling `preventDefault()`. Fixes STCOM-197
 * Remove `<MultColumnList>`'s focus-tracking via ref to rowFormatter. Fixes STCOM-202.
 * Adjust EditableListForm setup. Fixes STCOM-203.
+* Implement `restrictWhenAllSelected` group flag for filter-groups. Fixes STCOM-204.
 * Update `<FilterGroups>` documentation for recent API changes. Fixes STCOM-206.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
