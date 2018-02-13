@@ -113,29 +113,19 @@ URL. For example:
 	http://example.com/users?filters=item.DVDs,item.Microfilm,location.Main+Library
 
 
-## The `initialFilterState` function
+## The `filterState` function
 
-This function takes as its parameters the filter configuration
-structure and a comma-separated string of filters' full names, such as
-`'item.DVDs,item.Microfilm,location.Main Library'`. It returns an
-object whose keys are the full names and whose values are all the
-boolean `true`.
+This function takes as its parameter a comma-separated string of
+filters' full names, such as `'item.DVDs,item.Microfilm,location.Main
+Library'`. It returns an object whose keys are the full names and
+whose values are all the boolean `true`.
 
 It therefore maps between the URL representation of a set of filters
-and the React component-state of the same. It is used to set the
-initial state of a React component based on the value of the query
-parameter in the URL:
+and the more programatically accessible representation that must be
+passed into the `<FilterGroups>` component:
 
-	class SomeComponent extends React.Component {
-	  constructor(props) {
-	    super(props);
-
-	    const query = props.location.query || {};
-	    this.state = {
-	      filters: initialFilterState(filterConfig, query.filters),
-	      // other members of component state
-	    };
-
+	const filters = filterState(this.queryParam('filters'));
+	return <FilterGroups ... filters={filters} />;
 
 ## The `<FilterGroups>` component
 
@@ -176,8 +166,7 @@ between applications.
 
 This function takes as its parameters the figure configuration
 structure and a comma-separated string of filters' full names, such as
-`'item.DVDs,item.Microfilm,location.Main Library'` -- exactly the same
-parameters as the `initialFilterState` function.
+`'item.DVDs,item.Microfilm,location.Main Library'`.
 
 It returns a string containing a CQL query corresponding to the
 specified set of filters, such as
