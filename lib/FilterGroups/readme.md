@@ -23,6 +23,7 @@ const filterConfig = [
     name: 'item',
     cql: 'materialType',
     values: ['Books', 'DVDs', 'Microfilm'],
+    restrictWhenAllSelected: true,
   }, {
     label: 'Location',
     name: 'location',
@@ -73,8 +74,15 @@ filter groups. Each group is represented by an object with four keys:
   for the kind of records under consideration.
 * `values` -- A list of the possible values that may be selected for
   the filter.
+* `restrictWhenAllSelected` -- a boolean indicating how to behave when
+  all the filters in the group are selected. By default, this is taken
+  to mean no restriction is intended, and so that filter group makes
+  no contribution to the query. However, if this is set true, then a
+  query clause is always included. (See
+  [STCOM-204](https://issues.folio.org/browse/STCOM-204) for
+  rationale.)
 
-Each of the values is typically represented by a simple string, which
+Each of the `values` is typically represented by a simple string, which
 is used both to display on the page and as the value to use in
 queries. However, each value may optionally instead be an object
 containing two keys:
