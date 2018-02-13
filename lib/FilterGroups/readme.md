@@ -4,7 +4,6 @@
 * [Basic Usage](#basic-usage)
 * [Overview](#overview)
     * [Filter configuration](#filter-configuration)
-    * [Component state](#component-state)
     * [Representation in the user-interface URL](#representation-in-the-user-interface-url)
 * [The `initialFilterState` function](#the-initialfilterstate-function)
 * [The `<FilterGroups>` component](#the-filtergroups-component)
@@ -100,21 +99,6 @@ Each filter value has a "full name", made up of the group name, a
 period and the filter name itself. For example, in the configuration
 above, the full names include `item.Books` and `location.Annex
 Library`.
-
-### Component state
-
-The FilterGroup utilities use a single member of the component's
-state, `filters`. Its value represents which filters are presently
-selected. It is represented as an object whose keys are the full names of
-filters, and whose values are booleans. (Since a value of `false` has
-the same meaning as the key not being present, usually all values are
-`true`.) For example:
-
-	filters: {
-	  'item.DVDs': true,
-	  'item.Microfilm': true,
-	  'location.Main Library': true
-	}
 
 ### Representation in the user-interface URL
 
