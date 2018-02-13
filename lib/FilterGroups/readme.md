@@ -51,12 +51,10 @@ several different contexts to drive different but related pieces of
 code.
 
 In order to make it easy to use without needing to make a lot of
-decisions, this library is opinionated about state representation,
-both within the React component that uses it and in the user-interface
-URL.
-
-XXX Some thought is still required regarding whether it could usefully
-be more or less opinionated than it presently is.
+decisions, this library is somewhat opinionated about state
+representation. This state is set using a `transitionToParams` method,
+and obtined using a `queryParam` method. There must both be provided
+within the React component that uses `<FilterGroups>`.
 
 
 ### Filter configuration
