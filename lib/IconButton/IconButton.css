@@ -20,6 +20,10 @@
   }
 }
 
+.iconButtonInner {
+  display: flex;
+}
+
 /**
  * Size
  */

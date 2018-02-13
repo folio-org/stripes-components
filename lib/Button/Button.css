@@ -4,6 +4,10 @@
 * Default styling
 */
 
+.buttonInner {
+  display: flex;
+}
+
 .button {
   padding: 3px 10px 7px;
   height: var(--controlHeightSmall);
@@ -19,7 +23,6 @@
   margin-right: 2px;
   margin-bottom: var(--gutter);
   max-height: var(--controlHeightSmall);
-  overflow: hidden;
   white-space: nowrap;
   line-height: 100%;
   display: inline-flex;

@@ -6,6 +6,12 @@
 
 .accessibleFocusRoot {
   position: relative;
+  outline: none;
+  z-index: 1;
+}
+
+.accessibleFocusRoot.flex {
+  display: flex;
 }
 
 .accessibleFocusRoot * {
@@ -21,17 +27,17 @@
   right: 0;
   background: transparent;
   border-radius: var(--radius);
-  z-index: 1;
+  z-index: -1;
 }
 
 /**
  * Hover
  */
-button:hover > .accessibleFocusRoot,
-a:hover > .accessibleFocusRoot,
-button.accessibleFocusRoot:hover,
-a.accessibleFocusRoot:hover {
-  opacity: 0.75;
+button:hover > .accessibleFocusRoot::before,
+a:hover > .accessibleFocusRoot::before,
+button.accessibleFocusRoot:hover::before,
+a.accessibleFocusRoot:hover::before {
+  background: rgba(37, 118, 195, 0.2);
 }
 
 /**
@@ -41,7 +47,6 @@ button:focus > .accessibleFocusRoot::before,
 a:focus > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:focus::before,
 a.accessibleFocusRoot:focus::before {
-  outline: none;
   background: rgba(37, 118, 195, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 3px rgba(37, 118, 195, 0.3);
@@ -54,13 +59,13 @@ button:active > .accessibleFocusRoot,
 a:active > .accessibleFocusRoot,
 button.accessibleFocusRoot:active,
 a.accessibleFocusRoot:active {
-  color: #fff !important;
+  color: #fff;
 
   & * {
-    color: #fff !important;
+    color: #fff;
   }
   & svg {
-    fill: #FFF !important;
+    fill: #fff;
   }
 }
 
@@ -68,7 +73,6 @@ button:active > .accessibleFocusRoot::before,
 a:active > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:active::before,
 a.accessibleFocusRoot:active::before {
-  outline: none;
   background: rgb(37, 118, 195);
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: rgb(255, 255, 255);
