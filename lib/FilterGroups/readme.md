@@ -1,6 +1,6 @@
 # FilterGroups
 
-<!-- ../../../okapi/doc/md2toc -l 2 readme.md -->
+<!-- md2toc -l 2 readme.md -->
 * [Basic Usage](#basic-usage)
 * [Overview](#overview)
     * [Filter configuration](#filter-configuration)
