@@ -102,10 +102,13 @@ Library`.
 
 ### Representation in the user-interface URL
 
-The state of the filters is represented in the user-interface's URL as
-a single query parameter, `filters`, whose value is a comma-separated
-list of the full names of all selected filters. For example:
-
+The state of the filters is communicated back to the caller by
+invoking its `transitionTo` method to set the valu of a single query
+parameter, `filters`, whose value is a comma-separated list of the
+full names of all selected filters. Typically, the caller's
+`transitionTo` method will set its values into the anointed
+stripes-connect resource resulting in a change in the user-interface's
+URL. For example:
 
 	http://example.com/users?filters=item.DVDs,item.Microfilm,location.Main+Library
 
