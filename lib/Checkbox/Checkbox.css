@@ -19,16 +19,19 @@
 
   &.inline {
     display: inline-flex;
-    height: auto;
 
-    & label.checkboxLabel {
+    /**
+     * If we only render the checkbox (no label)
+     */
+
+    &.noLabel {
       height: auto;
-      padding: 6px;
-      margin: 0;
-    }
 
-    & .labelText {
-      display: none;
+      & label.checkboxLabel {
+        height: auto;
+        padding: 6px;
+        margin: 0;
+      }
     }
   }
 }
