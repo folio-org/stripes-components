@@ -36,6 +36,7 @@
 button:hover > .accessibleFocusRoot::before,
 a:hover > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:hover::before,
+input:hover + label.accessibleFocusRoot::before,
 a.accessibleFocusRoot:hover::before {
   background: rgba(37, 118, 195, 0.2);
 }
@@ -46,6 +47,7 @@ a.accessibleFocusRoot:hover::before {
 button:focus > .accessibleFocusRoot::before,
 a:focus > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:focus::before,
+input:focus + label.accessibleFocusRoot::before,
 a.accessibleFocusRoot:focus::before {
   background: rgba(37, 118, 195, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -58,6 +60,7 @@ a.accessibleFocusRoot:focus::before {
 button:active > .accessibleFocusRoot,
 a:active > .accessibleFocusRoot,
 button.accessibleFocusRoot:active,
+input:active + label.accessibleFocusRoot,
 a.accessibleFocusRoot:active {
   color: #fff;
 
@@ -72,6 +75,7 @@ a.accessibleFocusRoot:active {
 button:active > .accessibleFocusRoot::before,
 a:active > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:active::before,
+input:active + label.accessibleFocusRoot::before,
 a.accessibleFocusRoot:active::before {
   background: rgb(37, 118, 195);
   border: 1px solid rgba(0, 0, 0, 0.2);
