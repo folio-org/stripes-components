@@ -1,10 +1,9 @@
 # FilterGroups
 
-<!-- ../../../okapi/doc/md2toc -l 2 readme.md -->
+<!-- md2toc -l 2 readme.md -->
 * [Basic Usage](#basic-usage)
 * [Overview](#overview)
     * [Filter configuration](#filter-configuration)
-    * [Component state](#component-state)
     * [Representation in the user-interface URL](#representation-in-the-user-interface-url)
 * [The `initialFilterState` function](#the-initialfilterstate-function)
 * [The `<FilterGroups>` component](#the-filtergroups-component)
@@ -23,6 +22,7 @@ const filterConfig = [
     name: 'item',
     cql: 'materialType',
     values: ['Books', 'DVDs', 'Microfilm'],
+    restrictWhenAllSelected: true,
   }, {
     label: 'Location',
     name: 'location',
@@ -51,12 +51,10 @@ several different contexts to drive different but related pieces of
 code.
 
 In order to make it easy to use without needing to make a lot of
-decisions, this library is opinionated about state representation,
-both within the React component that uses it and in the user-interface
-URL.
-
-XXX Some thought is still required regarding whether it could usefully
-be more or less opinionated than it presently is.
+decisions, this library is somewhat opinionated about state
+representation. This state is set using a `transitionToParams` method,
+and obtined using a `queryParam` method. There must both be provided
+within the React component that uses `<FilterGroups>`.
 
 
 ### Filter configuration
@@ -75,8 +73,15 @@ filter groups. Each group is represented by an object with four keys:
   for the kind of records under consideration.
 * `values` -- A list of the possible values that may be selected for
   the filter.
+* `restrictWhenAllSelected` -- a boolean indicating how to behave when
+  all the filters in the group are selected. By default, this is taken
+  to mean no restriction is intended, and so that filter group makes
+  no contribution to the query. However, if this is set true, then a
+  query clause is always included. (See
+  [STCOM-204](https://issues.folio.org/browse/STCOM-204) for
+  rationale.)
 
-Each of the values is typically represented by a simple string, which
+Each of the `values` is typically represented by a simple string, which
 is used both to display on the page and as the value to use in
 queries. However, each value may optionally instead be an object
 containing two keys:
@@ -95,54 +100,32 @@ period and the filter name itself. For example, in the configuration
 above, the full names include `item.Books` and `location.Annex
 Library`.
 
-### Component state
-
-The FilterGroup utilities use a single member of the component's
-state, `filters`. Its value represents which filters are presently
-selected. It is represented as an object whose keys are the full names of
-filters, and whose values are booleans. (Since a value of `false` has
-the same meaning as the key not being present, usually all values are
-`true`.) For example:
-
-	filters: {
-	  'item.DVDs': true,
-	  'item.Microfilm': true,
-	  'location.Main Library': true
-	}
-
 ### Representation in the user-interface URL
 
-The state of the filters is represented in the user-interface's URL as
-a single query parameter, `filters`, whose value is a comma-separated
-list of the full names of all selected filters. For example:
-
+The state of the filters is communicated back to the caller by
+invoking its `transitionTo` method to set the valu of a single query
+parameter, `filters`, whose value is a comma-separated list of the
+full names of all selected filters. Typically, the caller's
+`transitionTo` method will set its values into the anointed
+stripes-connect resource resulting in a change in the user-interface's
+URL. For example:
 
 	http://example.com/users?filters=item.DVDs,item.Microfilm,location.Main+Library
 
 
-## The `initialFilterState` function
+## The `filterState` function
 
-This function takes as its parameters the filter configuration
-structure and a comma-separated string of filters' full names, such as
-`'item.DVDs,item.Microfilm,location.Main Library'`. It returns an
-object whose keys are the full names and whose values are all the
-boolean `true`.
+This function takes as its parameter a comma-separated string of
+filters' full names, such as `'item.DVDs,item.Microfilm,location.Main
+Library'`. It returns an object whose keys are the full names and
+whose values are all the boolean `true`.
 
 It therefore maps between the URL representation of a set of filters
-and the React component-state of the same. It is used to set the
-initial state of a React component based on the value of the query
-parameter in the URL:
+and the more programatically accessible representation that must be
+passed into the `<FilterGroups>` component:
 
-	class SomeComponent extends React.Component {
-	  constructor(props) {
-	    super(props);
-
-	    const query = props.location.query || {};
-	    this.state = {
-	      filters: initialFilterState(filterConfig, query.filters),
-	      // other members of component state
-	    };
-
+	const filters = filterState(this.queryParam('filters'));
+	return <FilterGroups ... filters={filters} />;
 
 ## The `<FilterGroups>` component
 
@@ -183,8 +166,7 @@ between applications.
 
 This function takes as its parameters the figure configuration
 structure and a comma-separated string of filters' full names, such as
-`'item.DVDs,item.Microfilm,location.Main Library'` -- exactly the same
-parameters as the `initialFilterState` function.
+`'item.DVDs,item.Microfilm,location.Main Library'`.
 
 It returns a string containing a CQL query corresponding to the
 specified set of filters, such as
