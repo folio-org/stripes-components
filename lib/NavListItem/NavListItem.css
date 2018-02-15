@@ -1,0 +1,23 @@
+/**
+ * Nav List Item
+ */
+@import '../variables.css';
+
+a.NavListItem,
+button.NavListItem {
+  display: block;
+  width: 100%;
+  padding: 5px 6px;
+  color: var(--labelColor);
+  border-radius: var(--radius);
+  min-height: var(--controlHeight);
+  text-align: left;
+  outline: 0;
+  margin-bottom: 1px;
+
+  &.isActive {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-decoration: none;
+  }
+}
