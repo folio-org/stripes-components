@@ -18,13 +18,13 @@
     text-align: left;
     outline: 0;
     margin-bottom: 1px;
-
+/*
     &:hover,
     &:focus {
       background-color: rgba(0, 0, 0, 0.1);
       text-decoration: none;
       cursor: pointer;
-    }
+    } */
 
     /* Active/selected element */
     &.active {
@@ -34,10 +34,10 @@
     }
 
     /* Active style */
-    &:active {
+    /* &:active {
       background-color: var(--primary);
       color: #fff;
-    }
+    } */
   }
 
   & button {
