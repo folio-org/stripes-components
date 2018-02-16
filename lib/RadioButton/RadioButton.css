@@ -7,19 +7,19 @@
 .radioButton {
   display: flex;
   align-items: center;
-  transition: all 0.2s ease;
+  margin-left: -5px;
 
   &.inline {
-    display: inline;
-
-    & + .radioButton {
-      margin: 0 6px;
-    }
+    display: inline-flex;
   }
 
   &.marginBottom0 {
     margin-bottom: 0;
   }
+}
+
+.labelText {
+  margin: 0 6px;
 }
 
 label.radioLabel {
@@ -30,17 +30,9 @@ label.radioLabel {
   min-height: 24px;
   cursor: pointer;
   flex-grow: 2;
-  padding: 0 2px 0 22px;
   font-weight: 600;
   color: var(--labelColor);
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.65;
-  }
+  padding: 0 5px;
 
   &.error {
     color: var(--error);
@@ -51,60 +43,39 @@ label.radioLabel {
   }
 }
 
-input[type=radio].input {
-  margin: 0 9px;
-  margin-bottom: 2px;
-
-  &:focus + label.radioLabel {
-    opacity: 0.8;
-  }
-}
-
-input[type=radio].input:checked,
-input[type=radio].input:not(:checked) {
+.input {
   position: absolute;
   left: -9999px;
 }
 
-input[type=radio].input + label.radioLabel::before,
-input[type=radio].input + label.radioLabel::after {
-  margin-top: 5px;
-}
-
-input[type=radio].input:checked + label.radioLabel::before,
-input[type=radio].input:not(:checked) + label.radioLabel::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
+.labelPseudo {
+  position: relative;
   width: var(--radio-button-size);
   height: var(--radio-button-size);
   border: 1px solid var(--inputBorderColor);
-  border-radius: 100%;
+  border-radius: 999px;
   background: #fff;
 }
 
-input[type=radio].input:checked + label.radioLabel::after,
-input[type=radio].input:not(:checked) + label.radioLabel::after {
+.labelPseudo::after {
   content: '';
   width: 6px;
   height: 6px;
   background: #313131;
   position: absolute;
-  top: 4px;
-  left: 4px;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s ease;
+  top: 24%;
+  left: 20%;
+  border-radius: 999px;
   transition: all 0.2s ease;
 }
 
-input[type=radio].input:not(:checked) + label.radioLabel::after {
+.input:not(:checked) + label.radioLabel .labelPseudo::after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-input[type=radio].input:checked + label.radioLabel::after {
+.input:checked + label.radioLabel .labelPseudo::after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);

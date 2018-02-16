@@ -17,6 +17,9 @@
     margin-bottom: 0;
   }
 
+  /**
+   * Inline checkbox
+   */
   &.inline {
     display: inline-flex;
 
