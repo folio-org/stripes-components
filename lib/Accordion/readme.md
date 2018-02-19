@@ -21,7 +21,7 @@ import { AccordionSet, Accordion } from '@folio/stripes-components/lib/Accordion
 
 ## Without the Set
 Accordions can function outside of a set as well. The set provides a convenient way to pass handlers down to all accordions if they're all in the same file.
-It's possible to have accordions on their own, without an id or toggleHandler(), in which case the component controls itself via its own internal state. The downside of this is that the Accordion's collapsed/expanded state will not persist-able - it will be open by default.
+It's possible to have accordions on their own, without an id or toggleHandler(), in which case the component controls itself via its own internal state. The downside of this is that the Accordion's collapsed/expanded state will not persist-able - it will be open by default. If you want your Accordion to be closed by default, the `closedByDefault` prop can be used in this scenario. (If the Accordion is controlled, `closedByDefault` will not work!).
 
 ```
 <Accordion label="Example Accordion">
@@ -104,6 +104,7 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 label | string, element | visible header label | | true
 open | bool | open or closed | true |
+closedByDefault | bool | Use to collapse the Accordion by default. Ensure that you use it only when the Accordion is not being controlled by an `open` prop | false |
 id | string | unique ID to track accordion state | |
 displayWhenOpen | element | content to display in header when Accordion is in the open state | |
 displayWhenClosed | element | content to display in header when Accordion is in the closed state | |
