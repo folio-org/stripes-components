@@ -4,6 +4,11 @@
 
 @import '../variables';
 
+:root {
+  --focus-dot-offset-default: 4px;
+  --focus-dot-offset-negative-default: -4px;
+}
+
 .accessibleFocusRoot {
   position: relative;
   outline: none;
@@ -18,6 +23,9 @@
   z-index: 2;
 }
 
+/**
+ * Focus/active pseudo element
+ */
 .accessibleFocusRoot::before {
   content: "";
   position: absolute;
@@ -31,6 +39,49 @@
 }
 
 /**
+ * Dot pseudo element
+ */
+.accessibleFocusRoot::after {
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0.7em;
+  position: absolute;
+  transform: translateY(-50%) scale(1);
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  background-color: rgb(0, 0, 0);
+}
+
+.accessibleFocusRoot.focusDotPositionStart::after {
+  left: var(--focus-dot-offset-default);
+  top: 50%;
+}
+
+.accessibleFocusRoot.focusDotPositionEnd::after {
+  right: var(--focus-dot-offset-default);
+  top: 50%;
+}
+
+.accessibleFocusRoot.focusDotPositionTop::after {
+  top: 0;
+  transform: translateX(-50%) scale(1);
+  left: 50%;
+}
+
+.accessibleFocusRoot.focusDotPositionBottom::after {
+  bottom: 0;
+  transform: translateX(-50%) scale(1);
+  left: 50%;
+}
+
+/**
  * Hover
  */
 button:hover > .accessibleFocusRoot::before,
@@ -39,6 +90,11 @@ button.accessibleFocusRoot:hover::before,
 input:hover + label.accessibleFocusRoot::before,
 a.accessibleFocusRoot:hover::before {
   background: rgba(37, 118, 195, 0.2);
+}
+
+a.accessibleFocusRoot:hover,
+button.accessibleFocusRoot:hover {
+  cursor: pointer;
 }
 
 /**
@@ -52,6 +108,15 @@ a.accessibleFocusRoot:focus::before {
   background: rgba(37, 118, 195, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 3px rgba(37, 118, 195, 0.3);
+}
+
+button:focus > .accessibleFocusRoot.hasDot::after,
+a:focus > .accessibleFocusRoot.hasDot::after,
+button.accessibleFocusRoot.hasDot:focus::after,
+input:focus + label.accessibleFocusRoot.hasDot::after,
+a.accessibleFocusRoot.hasDot:focus::after {
+  visibility: visible;
+  opacity: 1;
 }
 
 /**
@@ -80,4 +145,12 @@ a.accessibleFocusRoot:active::before {
   background: rgb(37, 118, 195);
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: rgb(255, 255, 255);
+}
+
+button:active > .accessibleFocusRoot::after,
+a:active > .accessibleFocusRoot::after,
+button.accessibleFocusRoot:active::after,
+input:active + label.accessibleFocusRoot::after,
+a.accessibleFocusRoot:active::after {
+  background-color: #fff;
 }
