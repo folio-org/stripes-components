@@ -91,7 +91,7 @@ ul {
 }
 
 hr {
-  border: 1px solid #cdcdcd;
+  border: 1px solid var(--minor-divider-color);
   border-width: 0 0 1px;
 }
 
