@@ -53,7 +53,7 @@ code.
 In order to make it easy to use without needing to make a lot of
 decisions, this library is somewhat opinionated about state
 representation. This state is set using a `transitionToParams` method,
-and obtined using a `queryParam` method. There must both be provided
+and obtained using a `queryParam` method. These must both be provided
 within the React component that uses `<FilterGroups>`.
 
 
@@ -103,7 +103,7 @@ Library`.
 ### Representation in the user-interface URL
 
 The state of the filters is communicated back to the caller by
-invoking its `transitionTo` method to set the valu of a single query
+invoking its `transitionTo` method to set the value of a single query
 parameter, `filters`, whose value is a comma-separated list of the
 full names of all selected filters. Typically, the caller's
 `transitionTo` method will set its values into the anointed
@@ -121,7 +121,7 @@ Library'`. It returns an object whose keys are the full names and
 whose values are all the boolean `true`.
 
 It therefore maps between the URL representation of a set of filters
-and the more programatically accessible representation that must be
+and the more programmatically accessible representation that must be
 passed into the `<FilterGroups>` component:
 
 	const filters = filterState(this.queryParam('filters'));
