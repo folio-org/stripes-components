@@ -42,9 +42,15 @@
   margin: 0;
   width: 100%;
   flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  & span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 /* Pane title */
@@ -59,11 +65,6 @@
   font-size: 11px;
 }
 
-/* First content area */
-
-/* .paneContentFirstArea {
-} */
-
 /* Last content area */
 .paneContentLastArea {
   margin-left: auto;
@@ -72,4 +73,32 @@
   & .paneHeaderCloseIcon {
     order: 99;
   }
+}
+
+/* Pane action menu */
+.paneHeaderCenterButton {
+  outline: 0;
+  max-width: 100%;
+  padding: 2px 5px;
+  border-radius: var(--radius);
+
+  &:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+/**
+ * Pane Action menu
+ */
+
+/* icon */
+.paneActionMenuIcon {
+  /* position: absolute;
+  right: 0;
+  top: 0; */
 }
