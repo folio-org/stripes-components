@@ -3,7 +3,9 @@
 Displays an app's icon in various sizes.
 
 ## Usage
-AppIcon supports different ways of loading icons. Option 1 is the recommended implementation and option 1/2 are to be used in edge cases.
+AppIcon supports different ways of loading icons.
+
+Option 1 is the recommended implementation but if needed (edge case) option 1 and 2 can be used.
 
 ```js
   import AppIcon from '@folio/stripes-components/lib/AppIcon';
