@@ -27,12 +27,12 @@ p {
   position: absolute;
 
   &.bottom {
-    border-width: 8.7px 5px 0 5px;
+    border-width: 8.7px 5px 0;
     border-color: var(--minor-divider-color rgba(0, 0, 0, 0.1)) transparent transparent transparent;
   }
 
   &.top {
-    border-width: 0 5px 8.7px 5px;
+    border-width: 0 5px 8.7px;
     border-color: transparent transparent var(--minor-divider-color rgba(0, 0, 0, 0.1)) transparent;
   }
 
