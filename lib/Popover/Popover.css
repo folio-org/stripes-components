@@ -1,0 +1,48 @@
+@import "../variables.css";
+
+.popoverTarget {
+  position: static;
+  display: inline-block;
+}
+
+.popoverPop {
+  position: absolute;
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid var(--minor-divider-color rgba(0, 0, 0, 0.1));
+  background-color: var(--bg #fcfcfc);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.popoverArrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+
+  &.bottom {
+    border-width: 8.7px 5px 0 5px;
+    border-color: var(--minor-divider-color rgba(0, 0, 0, 0.1)) transparent transparent transparent;
+  }
+
+  &.top {
+    border-width: 0 5px 8.7px 5px;
+    border-color: transparent transparent var(--minor-divider-color rgba(0, 0, 0, 0.1)) transparent;
+  }
+
+  &.end {
+    border-width: 5px 0 5px 8.7px;
+    border-color: transparent transparent transparent var(--minor-divider-color rgba(0, 0, 0, 0.1));
+  }
+
+  &.start {
+    border-width: 5px 8.7px 5px 0;
+    border-color: transparent var(--minor-divider-color rgba(0, 0, 0, 0.1)) transparent transparent;
+  }
+}
