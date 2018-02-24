@@ -24,6 +24,16 @@
 }
 
 /**
+ * Disabled state
+ */
+.accessibleFocusRoot:disabled {
+  &::after,
+  &::before {
+    display: none;
+  }
+}
+
+/**
  * Focus/active pseudo element
  */
 .accessibleFocusRoot::before {
@@ -122,11 +132,11 @@ a.accessibleFocusRoot.hasDot:focus::after {
 /**
  * Active
  */
-button:active > .accessibleFocusRoot,
-a:active > .accessibleFocusRoot,
-button.accessibleFocusRoot:active,
-input:active + label.accessibleFocusRoot,
-a.accessibleFocusRoot:active {
+button:not([disabled]):active > .accessibleFocusRoot,
+a:not([disabled]):active > .accessibleFocusRoot,
+button.accessibleFocusRoot:not([disabled]):active,
+input:not([disabled]):active + label.accessibleFocusRoot,
+a.accessibleFocusRoot:not([disabled]):active {
   color: #fff;
 
   & * {
