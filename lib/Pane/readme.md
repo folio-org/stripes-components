@@ -55,6 +55,30 @@ const searchHeader = <FilterPaneSearch id="SearchField" {...otherProps} />;
 </Pane>
 ```
 
+### Pane Action Menu
+Activate the Pane Action Menu by supplying an array of objects to the `actionMenuItems` prop.
+```js
+const actionMenuItems = [
+  {
+    label: 'Edit',
+    onClick: () => { console.log('Clicked!') }, // Using "onClick" will render a <button>
+    id="some-id" // Other keys such as id, className, title etc. will be spread on each action menu item
+  },
+  {
+    label: 'Jump to section',
+    href: '#section-id', // Using "href" will render a <a>
+  },
+  {
+    label: 'Go to user',
+    to: '/user/xxx', // Using "to" will render the react-router's <Link>
+  },
+];
+
+<Pane defaultWidth="20%" paneTitle="My title" actionMenuItems={actionMenuItems}>
+    // Pane Content
+</Pane>
+```
+
 
 ### Props
 Name | type | description | default | required
@@ -64,6 +88,7 @@ height | string | css-value representation of a custom pane height. The maximum 
 dismissible | bool or "last"| If true, pane will render a close (&times;) button in its firstMenu. If "last" is supplied, the button will render in the lastMenu. | false |
 firstMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the beginning of the header. |  |
 lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the far end of the header. |  |
+actionMenuItems | array | Array of objects that will form an action menu which can be toggled by clicking on the pane header title |  |
 onClose | func | Callback fired when the pane is closed using its dismiss button. |  |
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  |
 contentPadding | number | Amount of padding (in pixels) to apply to Pane's content `<div>` | 16 |

@@ -45,19 +45,6 @@
     margin-left: 0;
   }
 
-  /* &:hover {
-    text-decoration: none;
-    opacity: 0.8;
-  }
-
-  &:focus {
-    backface-visibility: hidden;
-  }
-
-  &:active {
-    opacity: 0.7;
-  } */
-
   /**
   * Colors
   */
@@ -75,260 +62,183 @@
       fill: var(--primary);
     }
 
-    /* &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
-    }
-
-    &:hover {
-      background-color: color(var(--primary) shade(8%));
-      color: #fff;
-
-      & :global .stripes__icon {
-        fill: #fff;
-      }
-    } */
-  }
-
-  /**
-  * Button Style: Primary
-  */
-
-  &.primary {
-    background-color: var(--primary);
-    border: 1px solid var(--primary);
-    font-weight: 600;
-    color: #fff;
-/*
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
-    } */
-  }
-
-  /**
-  * Button Style: Success
-  */
-
-  &.success {
-    background-color: var(--success);
-    border: 1px solid var(--success);
-    color: #fff;
-/*
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--success) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--success) alpha(-50%));
-    } */
-  }
-
-  /**
-  * Button Style: Warning
-  */
-
-  &.warning {
-    background-color: var(--warn);
-    border: 1px solid var(--warn);
-    color: #fff;
-/*
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--warn) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--warn) alpha(-50%));
-    } */
-  }
-
-  /**
-  * Button Style: Danger
-  */
-
-  &.danger {
-    background-color: var(--danger);
-    border: 1px solid var(--danger);
-    color: #fff;
-/*
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--danger) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--danger) alpha(-50%));
-    } */
-  }
-
-  &.dropdownActive {
-    &[aria-expanded="true"],
-    &:focus {
-      border: 1px solid var(--danger);
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &.dropdownItem {
-    text-align: left;
-    margin-bottom: 0;
-    background-color: transparent;
-    border: 1px solid transparent;
-    width: 100%;
-    border-radius: 0;
-
-    &:hover,
-    &:focus {
-      background-color: var(--bgHover);
-      outline: none;
-    }
-  }
-
-  &.textAlignStart {
-    text-align: left;
-  }
-
-  &.paneHeaderButton {
-    background-color: transparent;
-    border: 1px solid transparent;
-    margin: 0;
-    max-height: var(--controlHeightTouch);
-    height: var(--controlHeightTouch);
-    border-radius: 0;
-    padding: 8px;
-/*
-    &:hover {
-      background-color: var(--bgHover);
-    }
-
     &.primary {
       background-color: var(--primary);
       border: 1px solid var(--primary);
+      font-weight: 600;
       color: #fff;
+    }
 
-      &:hover {
-        background-color: color(var(--primary) shade(8%));
+    /**
+    * Button Style: Success
+    */
+
+    &.success {
+      background-color: var(--success);
+      border: 1px solid var(--success);
+      color: #fff;
+    }
+
+    /**
+    * Button Style: Warning
+    */
+
+    &.warning {
+      background-color: var(--warn);
+      border: 1px solid var(--warn);
+      color: #fff;
+    }
+
+    /**
+    * Button Style: Danger
+    */
+
+    &.danger {
+      background-color: var(--danger);
+      border: 1px solid var(--danger);
+      color: #fff;
+    }
+
+    &.dropdownActive {
+      &[aria-expanded="true"],
+      &:focus {
+        border: 1px solid var(--danger);
       }
-    } */
 
-    &.tab {
-      font-weight: bold;
-      border-width: 0;
-      border-bottom: 4px solid transparent;
-
-      &:focus,
-      &:hover {
+      &:focus {
         outline: none;
-        border-bottom: 4px solid var(--bgHover);
       }
+    }
 
-      &.selected {
+    &.dropdownItem {
+      text-align: left;
+      margin-bottom: 0;
+      background-color: transparent;
+      border: 1px solid transparent;
+      width: 100%;
+      border-radius: 0;
+
+      &:hover,
+      &:focus {
+        background-color: var(--bgHover);
+        outline: none;
+      }
+    }
+
+    &.textAlignStart {
+      text-align: left;
+    }
+
+    &.paneHeaderButton {
+      background-color: transparent;
+      border: 1px solid transparent;
+      margin: 0;
+      max-height: var(--controlHeightTouch);
+      height: var(--controlHeightTouch);
+      border-radius: 0;
+      padding: 8px;
+
+      &.tab {
         font-weight: bold;
         border-width: 0;
-        border-bottom: 4px solid var(--primary);
+        border-bottom: 4px solid transparent;
 
-        &:focus {
-          border-bottom-color: color(var(--primary) shade(8%));
+        &:focus,
+        &:hover {
+          outline: none;
+          border-bottom: 4px solid var(--bgHover);
+        }
+
+        &.selected {
+          font-weight: bold;
+          border-width: 0;
+          border-bottom: 4px solid var(--primary);
+
+          &:focus {
+            border-bottom-color: color(var(--primary) shade(8%));
+          }
+        }
+
+        &:hover {
+          background: transparent;
         }
       }
+    }
+
+    &.paneHeaderNewButton {
+      margin-right: 15px;
+    }
+
+    &.noRadius {
+      border-radius: 0;
+    }
+
+    &.noLeftRadius {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &.noRightRadius {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &.lastBorderOnly {
+      border-right-color: transparent !important;
+    }
+
+    &.link {
+      background-color: transparent;
+      border: 1px solid transparent;
+      cursor: pointer;
+      color: var(--primary);
+      padding: 4px;
+    }
+
+    &.bottomMargin0,
+    &.marginBottom0 {
+      margin-bottom: 0;
+    }
+
+    &.paddingSide0 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &.fullWidth {
+      width: 100%;
+    }
+
+    &.fieldControl {
+      background-color: transparent;
+      margin: 0;
+      height: var(--controlHeight);
+      padding: 0;
+    }
+
+    &[disabled] {
+      background-color: #ccc !important;
+      border-color: #ccc !important;
+      color: #888 !important;
 
       &:hover {
-        background: transparent;
+        cursor: initial;
+        opacity: 1;
       }
     }
-  }
 
-  &.paneHeaderNewButton {
-    margin-right: 15px;
-  }
-
-  &.noRadius {
-    border-radius: 0;
-  }
-
-  &.noLeftRadius {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  &.noRightRadius {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  &.lastBorderOnly {
-    border-right-color: transparent !important;
-  }
-
-  &.link {
-    background-color: transparent;
-    border: 1px solid transparent;
-    cursor: pointer;
-    color: var(--primary);
-    padding: 4px;
-  }
-
-  &.bottomMargin0,
-  &.marginBottom0 {
-    margin-bottom: 0;
-  }
-
-  &.paddingSide0 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  &.fullWidth {
-    width: 100%;
-  }
-
-  &.fieldControl {
-    background-color: transparent;
-    margin: 0;
-    height: var(--controlHeight);
-    padding: 0;
-  }
-
-  &[disabled] {
-    background-color: #ccc !important;
-    border-color: #ccc !important;
-    color: #888 !important;
-
-    &:hover {
-      cursor: initial;
-      opacity: 1;
+    &:not(.fullWidth, .fieldControl) + .button {
+      margin: 0 4px;
     }
-  }
 
-  &:not(.fullWidth, .fieldControl) + .button {
-    margin: 0 4px;
-  }
-
-  &.mega {
-    width: 100%;
-    max-height: 16rem;
-    height: 16rem;
-    color: #fff;
-    font-size: 2rem;
-    border-radius: 0;
+    &.mega {
+      width: 100%;
+      max-height: 16rem;
+      height: 16rem;
+      color: #fff;
+      font-size: 2rem;
+      border-radius: 0;
+    }
   }
 }
 

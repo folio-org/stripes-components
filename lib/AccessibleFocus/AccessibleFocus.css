@@ -132,6 +132,7 @@ a.accessibleFocusRoot:active {
   & * {
     color: #fff;
   }
+
   & svg {
     fill: #fff;
   }
