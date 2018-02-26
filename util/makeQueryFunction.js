@@ -1,13 +1,22 @@
 import { filters2cql } from '../lib/FilterGroups';
+import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTResource';
 
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIfNoQuery) {
-  return (queryParams, _pathComponents, _resourceValues, logger) => {
-    const { qindex, query, filters } = queryParams || {};
+  return (queryParams, pathComponents, resourceValues, logger) => {
+    
+    const { qindex, filters, query} = queryParams || {};
 
     if ((query === undefined || query === '') && failIfNoQuery) {
       return null;
     }
 
+    //This check should remain in place until all uses of the $QUERY syntax have been removed from stripes modules
+    if(queryTemplate.includes("$QUERY")) {
+      console.warn("Use of '$QUERY' in the queryTemplate is deprecated. Use the '?{query}' syntax instead, as found https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution")
+      queryTemplate = queryTemplate.replace(/\$QUERY/g, '?{query}');
+      //replace all instances of '$QUERY' with '?{query}'
+    }
+    
     let cql = undefined;
     if (query && qindex) {
       const t = qindex.split('/', 2);
@@ -17,8 +26,9 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIf
         cql = `${t[0]} =/${t[1]} "${query}*"`;
       }
     } else if (query) {
-      cql = queryTemplate.replace(/\$QUERY/g, query);
+      cql = compilePathTemplate(queryTemplate, queryParams, pathComponents, resourceValues);
     }
+    
     const filterCql = filters2cql(filterConfig, filters);
     if (filterCql) {
       if (cql) {
@@ -27,7 +37,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIf
         cql = filterCql;
       }
     }
-
+    
     let { sort } = queryParams || {};
     if (sort) {
       const sortIndexes = sort.split(',').map((sort1) => {
@@ -48,6 +58,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIf
     }
 
     logger.log('mquery', `query='${query}' filters='${filters}' sort='${sort}' -> ${cql}`);
+    console.log("mquery",cql);
     return cql;
   };
 }
