@@ -33,7 +33,7 @@ Option 1 is the recommended implementation but if needed (edge case) option 1 an
 ## Props
 Name | Type | Description
 -- | -- | --
-app | string | The lowercased name of an app. E.g. "users" or "inventory". It will get the icon from metadata located in the stripes-object which should be available in React Context.
+app | string | The lowercased name of an app, e.g. "users" or "inventory". It will get the icon from metadata located in the stripes-object which should be available in React Context.
 icon | object | Icon in form of an object
 size | string | Determines the size of the icon. (small, medium, large)
 style | object | For adding custom style to component
