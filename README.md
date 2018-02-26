@@ -79,6 +79,7 @@ Component | doc | categories
 [`<Paneset>`](lib/Paneset) | [doc](lib/Paneset/readme.md) | structure
 [`<PaneSubheader>`](lib/PaneSubheader) | [doc](lib/PaneSubheader/readme.md) | structure
 [`<Pluggable>`](lib/Pluggable) | | utility
+[`<Popover>`](lib/Popover) | [doc](lib/Popover/readme.md) | control
 [`<RadioButton>`](lib/RadioButton) | | control
 [`<RadioButtonGroup>`](lib/RadioButtonGroup) | [doc](lib/RadioButtonGroup/readme.md) | control
 [`<SegmentedControl>`](lib/SegmentedControl) | [doc](lib/SegmentedControl/readme.md) | control
