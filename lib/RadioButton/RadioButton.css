@@ -7,7 +7,6 @@
 .radioButton {
   display: flex;
   align-items: center;
-  margin-left: -5px;
 
   &.inline {
     display: inline-flex;
@@ -32,7 +31,7 @@ label.radioLabel {
   flex-grow: 2;
   font-weight: 600;
   color: var(--labelColor);
-  padding: 0 5px;
+  border-radius: var(--radius);
 
   &.error {
     color: var(--error);

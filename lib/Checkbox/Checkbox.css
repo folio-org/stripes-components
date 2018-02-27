@@ -47,9 +47,7 @@
   flex-grow: 2;
   position: relative;
   line-height: 20px;
-  border-radius: 4px;
-  margin-left: -5px;
-  padding: 0 5px;
+  border-radius: var(--radius);
 
   &.disabledLabel {
     opacity: 0.65;

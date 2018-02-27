@@ -219,12 +219,14 @@ a.accessibleFocusRoot:active::before {
   color: rgb(255, 255, 255);
 }
 
-button:active > .accessibleFocusRoot::after,
-a:active > .accessibleFocusRoot::after,
-button.accessibleFocusRoot:active::after,
-input:active + label.accessibleFocusRoot::after,
-a.accessibleFocusRoot:active::after {
+button:active > .accessibleFocusRoot.hasDot::after,
+a:active > .accessibleFocusRoot.hasDot::after,
+button.accessibleFocusRoot.hasDot:active::after,
+input:active + label.accessibleFocusRoot.hasDot::after,
+a.accessibleFocusRoot.hasDot:active::after {
   background-color: #fff;
+  visibility: visible;
+  opacity: 1;
 }
 
 /**
