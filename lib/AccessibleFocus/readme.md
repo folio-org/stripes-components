@@ -16,7 +16,7 @@ The `AccessibleFocus`-component can be used in several ways depending on which e
 Use `AccessibleFocus` as a replacement element for another element - such as a button- or anchor-element.
 
 ```js
-<AccessibleFocus tag="button" id="my-button" aria-label="My button">
+<AccessibleFocus component="button" id="my-button" aria-label="My button">
   <span>My button</span>
 </AccessibleFocus>
 ```
