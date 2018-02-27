@@ -7,7 +7,7 @@ a.NavListItem,
 button.NavListItem {
   display: block;
   width: 100%;
-  padding: 5px 6px;
+  padding: 5px 10px;
   color: var(--labelColor);
   border-radius: var(--radius);
   min-height: var(--controlHeight);
@@ -19,5 +19,10 @@ button.NavListItem {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-decoration: none;
+
+    /* Custom AccessibleFocus styling */
+    &::after {
+      background-color: #fff;
+    }
   }
 }
