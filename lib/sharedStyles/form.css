@@ -52,10 +52,6 @@
     width: 100%;
   }
 
-  &.rounded {
-    border-radius: 4px;
-  }
-
   &.noBorder {
     border: 0;
   }
