@@ -12,9 +12,8 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIf
 
     //This check should remain in place until all uses of the $QUERY syntax have been removed from stripes modules
     if(queryTemplate.includes("$QUERY")) {
-      console.warn("Use of '$QUERY' in the queryTemplate is deprecated. Use the '?{query}' syntax instead, as found https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution")
+      logger.log('mquery', 'Use of "$QUERY" in the queryTemplate is deprecated. Use the "?{query}" syntax instead, as found https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution')
       queryTemplate = queryTemplate.replace(/\$QUERY/g, '?{query}');
-      //replace all instances of '$QUERY' with '?{query}'
     }
     
     let cql = undefined;
@@ -58,7 +57,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIf
     }
 
     logger.log('mquery', `query='${query}' filters='${filters}' sort='${sort}' -> ${cql}`);
-    console.log("mquery",cql);
+    
     return cql;
   };
 }
