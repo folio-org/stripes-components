@@ -1,12 +1,18 @@
 /**
  * AccessibleFocus
+ * @variables-needs-updating
  */
 
 @import '../variables';
 
 :root {
   --focus-dot-offset-default: 4px;
-  --focus-dot-offset-negative-default: -4px;
+  --focus-dot-offset-small: -5px;
+  --focus-dot-offset-medium: -10px;
+  --focus-dot-offset-large: -15px;
+  --box-offset-small: -5px;
+  --box-offset-medium: -10px;
+  --box-offset-large: -15px;
 }
 
 .accessibleFocusRoot {
@@ -49,7 +55,7 @@
 }
 
 /**
- * Dot pseudo element
+ * Focus Dot pseudo element
  */
 .accessibleFocusRoot::after {
   content: "";
@@ -58,14 +64,14 @@
   font-size: 0.7em;
   position: absolute;
   transform: translateY(-50%) scale(1);
-  width: 4px;
-  height: 4px;
+  width: calc(var(--gutter) / 4.2);
+  height: calc(var(--gutter) / 4.2);
   border-radius: 999px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 2;
   background-color: rgb(0, 0, 0);
 }
 
@@ -80,15 +86,70 @@
 }
 
 .accessibleFocusRoot.focusDotPositionTop::after {
-  top: 0;
+  top: var(--focus-dot-offset-default);
   transform: translateX(-50%) scale(1);
   left: 50%;
 }
 
 .accessibleFocusRoot.focusDotPositionBottom::after {
-  bottom: 0;
+  bottom: var(--focus-dot-offset-default);
   transform: translateX(-50%) scale(1);
   left: 50%;
+}
+
+/**
+ * Focus Dot Offsets
+ */
+
+/* small focus dot offset */
+.accessibleFocusRoot.focusDotPositionStart.focusDotOffsetSmall::after {
+  left: var(--focus-dot-offset-small);
+}
+
+.accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetSmall::after {
+  right: var(--focus-dot-offset-small);
+}
+
+.accessibleFocusRoot.focusDotPositionTop.focusDotOffsetSmall::after {
+  top: var(--focus-dot-offset-small);
+}
+
+.accessibleFocusRoot.focusDotPositionBottom.focusDotOffsetSmall::after {
+  bottom: var(--focus-dot-offset-small);
+}
+
+/* medium focus dot offset */
+.accessibleFocusRoot.focusDotPositionStart.focusDotOffsetMedium::after {
+  left: var(--focus-dot-offset-medium);
+}
+
+.accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetMedium::after {
+  right: var(--focus-dot-offset-medium);
+}
+
+.accessibleFocusRoot.focusDotPositionTop.focusDotOffsetMedium::after {
+  top: var(--focus-dot-offset-medium);
+}
+
+.accessibleFocusRoot.focusDotPositionBottom.focusDotOffsetMedium::after {
+  bottom: var(--focus-dot-offset-medium);
+}
+
+/* large focus dot offset */
+.accessibleFocusRoot.focusDotPositionStart.focusDotOffsetLarge::after {
+  left: var(--focus-dot-offset-large);
+}
+
+.accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetLarge::after {
+  right: var(--focus-dot-offset-large);
+}
+
+.accessibleFocusRoot.focusDotPositionTop.focusDotOffsetLarge::after {
+  top: var(--focus-dot-offset-large);
+}
+
+.accessibleFocusRoot.focusDotPositionBottom.focusDotOffsetLarge::after {
+  bottom: var(--focus-dot-offset-large);
 }
 
 /**
@@ -164,4 +225,82 @@ button.accessibleFocusRoot:active::after,
 input:active + label.accessibleFocusRoot::after,
 a.accessibleFocusRoot:active::after {
   background-color: #fff;
+}
+
+/**
+ * Box Offset
+ */
+
+/* Apply to all sides */
+.accessibleFocusRoot.boxOffsetSmall::before {
+  left: var(--box-offset-small);
+  right: var(--box-offset-small);
+  top: var(--box-offset-small);
+  bottom: var(--box-offset-small);
+}
+
+.accessibleFocusRoot.boxOffsetMedium::before {
+  left: var(--box-offset-medium);
+  right: var(--box-offset-medium);
+  top: var(--box-offset-medium);
+  bottom: var(--box-offset-medium);
+}
+
+.accessibleFocusRoot.boxOffsetLarge::before {
+  left: var(--box-offset-large);
+  right: var(--box-offset-large);
+  top: var(--box-offset-large);
+  bottom: var(--box-offset-large);
+}
+
+/* Apply to start only */
+.accessibleFocusRoot.boxOffsetStartSmall::before {
+  left: var(--box-offset-small);
+}
+
+.accessibleFocusRoot.boxOffsetStartMedium::before {
+  left: var(--box-offset-medium);
+}
+
+.accessibleFocusRoot.boxOffsetStartLarge::before {
+  left: var(--box-offset-large);
+}
+
+/* Apply to end only */
+.accessibleFocusRoot.boxOffsetEndSmall::before {
+  right: var(--box-offset-small);
+}
+
+.accessibleFocusRoot.boxOffsetEndMedium::before {
+  right: var(--box-offset-medium);
+}
+
+.accessibleFocusRoot.boxOffsetEndLarge::before {
+  right: var(--box-offset-large);
+}
+
+/* Apply to top only */
+.accessibleFocusRoot.boxOffsetTopSmall::before {
+  top: var(--box-offset-small);
+}
+
+.accessibleFocusRoot.boxOffsetTopMedium::before {
+  top: var(--box-offset-medium);
+}
+
+.accessibleFocusRoot.boxOffsetTopLarge::before {
+  top: var(--box-offset-large);
+}
+
+/* Apply to bottom only */
+.accessibleFocusRoot.boxOffsetBottomSmall::before {
+  bottom: var(--box-offset-small);
+}
+
+.accessibleFocusRoot.boxOffsetBottomMedium::before {
+  bottom: var(--box-offset-medium);
+}
+
+.accessibleFocusRoot.boxOffsetBottomLarge::before {
+  bottom: var(--box-offset-large);
 }
