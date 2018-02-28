@@ -92,6 +92,7 @@
 .headerDefaultContentRight {
   flex-grow: 2;
   flex-shrink: 0;
+  padding: 0 4px;
 }
 
 .defaultCollapseButton {
@@ -104,6 +105,7 @@
   background-color: transparent;
   font-size: 18px;
   min-height: 44px;
+  width: 100%;
 
   &:hover,
   &:focus {
@@ -133,10 +135,6 @@
 
   &:focus {
     outline: none;
-
-    /* animation-name: focusFlash;
-    animation-duration: 2s;
-    background-color: var(--bgHover); */
   }
 }
 
