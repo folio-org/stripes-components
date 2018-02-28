@@ -11,7 +11,8 @@
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
     "lint": "eslint lib && stylelint \"lib/**/*.css\"",
     "test": "mocha --require babel-test-hook --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out"
   },
   "engines": {
     "node": ">=6.0.0"
