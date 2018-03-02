@@ -21,6 +21,7 @@
 * Adjust EditableListForm setup. Fixes STCOM-203.
 * Implement `restrictWhenAllSelected` group flag for filter-groups. Fixes STCOM-204. Included in v2.0.1.
 * Update `<FilterGroups>` documentation for recent API changes. Fixes STCOM-206.
+* `<SearchForm>` does not add a placeholder to the dropdown of indexes if `searchableIndexesPlaceholder` is null. Fixes STCOM-220.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
