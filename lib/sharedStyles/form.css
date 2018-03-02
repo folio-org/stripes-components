@@ -37,7 +37,7 @@
 .input {
   margin-bottom: var(--controlMarginBottom);
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.03);
   width: 100%;
   outline: 0;
   letter-spacing: 0.4px;
