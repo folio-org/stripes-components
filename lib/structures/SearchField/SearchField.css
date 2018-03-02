@@ -2,6 +2,8 @@
  * SearchField
  */
 
+@import "../../variables.css";
+
 /**
  * Has searchable indexes
  */
@@ -15,11 +17,7 @@
   }
 }
 
-/* Text Field */
-.hasSearchableIndexes input.input {
-  &:focus {
-    & svg {
-      fill: blue;
-    }
-  }
+/* Color search icon on focus */
+.searchFieldWrap .isFocused svg {
+  fill: var(--primary);
 }
