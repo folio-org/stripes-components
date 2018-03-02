@@ -20,6 +20,6 @@
 }
 
 /* Color search icon on focus */
-.searchFieldWrap .isFocused svg {
+.searchFieldWrap .isFocused svg.searchIcon {
   fill: var(--primary);
 }
