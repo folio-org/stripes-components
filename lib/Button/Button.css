@@ -191,6 +191,7 @@
     border: 1px solid transparent;
     width: 100%;
     border-radius: 0;
+    display: block;
 
     &:hover,
     &:focus {
