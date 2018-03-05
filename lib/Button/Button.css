@@ -335,6 +335,10 @@ a.button {
   margin-bottom: 0;
 }
 
+a.dropdownItem {
+  padding-bottom: 1.6em;
+}
+
 [dir='rtl'] {
   &.button {
     &:first-child {
