@@ -1,12 +1,25 @@
 import { filters2cql } from '../lib/FilterGroups';
 import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTResource';
 
-function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failIfNoQuery) {
+// failOnCondition can take values:
+//      0: do not fail even if query and filters and empty
+//      1: fail if query is empty, whatever the filter state
+//      2: fail if both query and filters and empty.
+//
+// For compatibility, false and true may be used for 0 and 1 respectively.
+//
+function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition) {
   return (queryParams, pathComponents, resourceValues, logger) => {
     
     const { qindex, filters, query} = queryParams || {};
 
-    if ((query === undefined || query === '') && failIfNoQuery) {
+    if ((query === undefined || query === '') &&
+        (failOnCondition === 1 || failOnCondition === true)) {
+      return null;
+    }
+    if ((query === undefined || query === '') &&
+        (filters === undefined || filters === '') &&
+        (failOnCondition === 2)) {
       return null;
     }
 
