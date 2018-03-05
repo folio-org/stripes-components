@@ -23,6 +23,7 @@
 * Update `<FilterGroups>` documentation for recent API changes. Fixes STCOM-206.
 * `<SearchForm>` does not add a placeholder to the dropdown of indexes if `searchableIndexesPlaceholder` is null. Fixes STCOM-220.
 * Generalise `failIfNoQuery` argument to `makeQueryFunction`, now `failOnCondition`. Fixes STCOM-219. Available from v2.0.2.
+* Proper documentation for makeQueryFunction. Fixes STCOM-221.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
