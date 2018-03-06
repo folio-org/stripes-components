@@ -37,7 +37,7 @@
 .input {
   margin-bottom: var(--controlMarginBottom);
   border: 1px solid rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0);
+  color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.03);
   width: 100%;
   outline: 0;
@@ -93,6 +93,10 @@
   &.feedbackValid {
     border-color: var(--success);
     background-color: color(var(--success) alpha(-95%));
+  }
+
+  &.feedbackChanged {
+    background-color: color(var(--primary) alpha(-80%));
   }
 }
 
