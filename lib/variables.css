@@ -8,7 +8,7 @@
   --warn: #e27c3e;
   --success: #070;
   --labelColor: #333;
-  --subLabelColor: #999;
+  --subLabelColor: rgba(0, 0, 0, 0.62);
   --controlMarginBottom: 12px;
   --controlHeight: 24px;
   --radius: 6px;
