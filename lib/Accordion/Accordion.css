@@ -158,7 +158,7 @@
 
 .filterSetLabel {
   font-weight: 600;
-  color: #8e8e8e;
+  color: #000;
   pointer-events: none;
   user-select: none;
 }
