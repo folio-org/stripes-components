@@ -11,7 +11,7 @@ import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTRes
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition) {
   return (queryParams, pathComponents, resourceValues, logger) => {
     
-    const { qindex, filters, query, sort } = queryParams || {};
+    const { qindex, filters, query, sort } = resourceValues.query || {};
 
     if ((query === undefined || query === '') &&
         (failOnCondition === 1 || failOnCondition === true)) {
@@ -25,7 +25,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
 
     //This check should remain in place until all uses of the $QUERY syntax have been removed from stripes modules
     if (queryTemplate.includes("$QUERY")) {
-      console.warn('Use of "$QUERY" in the queryTemplate is deprecated. Use the "?{query}" syntax instead, as found at https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution')
+      console.warn('Use of "$QUERY" in the queryTemplate is deprecated. Use the "%{query.query}" syntax instead, as found at https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution')
       queryTemplate = queryTemplate.replace(/\$QUERY/g, '?{query}');
     }
     
