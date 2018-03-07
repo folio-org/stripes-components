@@ -11,7 +11,7 @@ import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTRes
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition) {
   return (queryParams, pathComponents, resourceValues, logger) => {
     
-    const { qindex, filters, query} = queryParams || {};
+    const { qindex, filters, query, sort } = queryParams || {};
 
     if ((query === undefined || query === '') &&
         (failOnCondition === 1 || failOnCondition === true)) {
@@ -54,7 +54,6 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       }
     }
     
-    let { sort } = queryParams || {};
     if (sort) {
       const sortIndexes = sort.split(',').map((sort1) => {
         let reverse = false;
