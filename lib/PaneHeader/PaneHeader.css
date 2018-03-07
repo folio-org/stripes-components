@@ -59,6 +59,10 @@
   font-weight: 600;
 }
 
+.paneTitleLabel {
+  margin: 0 2px;
+}
+
 /* Pane sub */
 .paneSub {
   color: var(--subLabelColor);
