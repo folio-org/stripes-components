@@ -1,0 +1,13 @@
+/**
+ * InformationIcon
+ */
+
+@import "../variables";
+
+.wrap {
+  max-width: 360px;
+}
+
+.button {
+  margin-top: var(--gutter);
+}
