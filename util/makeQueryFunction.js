@@ -35,10 +35,14 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       if (t.length === 1) {
         cql = `${qindex}="${query}*"`;
       } else {
-        cql = `${t[0]} =/${t[1]} "${query}*"`;
+        cql = `${t[0]} =\/${t[1]} "${query}*"`;
       }
     } else if (query) {
       cql = compilePathTemplate(queryTemplate, queryParams, pathComponents, resourceValues);
+      if (cql === null) {
+        // Some part of the template requires something that we don't have.
+        return null;
+      }
     }
     
     const filterCql = filters2cql(filterConfig, filters);
