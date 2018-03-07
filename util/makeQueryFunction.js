@@ -39,6 +39,10 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       }
     } else if (query) {
       cql = compilePathTemplate(queryTemplate, queryParams, pathComponents, resourceValues);
+      if (cql === null) {
+        // Some part of the template requires something that we don't have.
+        return null;
+      }
     }
     
     const filterCql = filters2cql(filterConfig, filters);
