@@ -8,7 +8,7 @@ Similar to `<Dropdown>`, `<Popover>` requires at least two children - their role
 ```
 import Popover from '@folio/stripes-components/lib/Popover';
 <Popover>
-  <Button data-role="target">Test Popover3</Button>
+  <Button data-role="target">Test Popover</Button>
   <p data-role="popover">Lorem ipsum delor sit amet...</p>
 </Popover>
 ```
