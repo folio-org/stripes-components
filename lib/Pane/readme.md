@@ -40,9 +40,11 @@ To make a pane dismissible, simply supply the `dismissible` prop and a module-le
 ```
 ### Pane Header
 A default `<Pane>` builds a simple header that includes centered title text (supplied in the `paneTitle` prop) with customizable menus at either end (`firstMenu`, `lastMenu` props). When the page is rendered in a right-to-left language, the menus will automatically switch placement.
+
+Add a `<AppIcon />`-component to the pane header by providing an `appIcon`-prop that matches the key of an installed folio app. Providing the `appIconKey`-prop will display a specific icon that is bundled with the app with they key of `appIcon` (optional). See example below.
 ```js
 const paneStartMenu = <PaneMenu><button><Icon icon="bookmark" /></button></PaneMenu>
-<Pane defaultWidth="50%" paneTitle="Example First Menu" firstMenu={paneStartMenu}>
+<Pane defaultWidth="50%" paneTitle="Example First Menu" firstMenu={paneStartMenu} appIcon="instances" appIconKey="items">
     // Pane Content...
 </Pane>
 ```
@@ -91,6 +93,8 @@ lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render bu
 actionMenuItems | array | Array of objects that will form an action menu which can be toggled by clicking on the pane header title |  |
 onClose | func | Callback fired when the pane is closed using its dismiss button. |  |
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  |
+appIcon | string | Renders an app icon in the pane header matching to the provided appIcon-key. |  |
+appIconKey | string | Renders a specific icon matching the appIconKey from an app with the key of appIcon (requires the above appIcon-prop to be provided). |  |
 contentPadding | number | Amount of padding (in pixels) to apply to Pane's content `<div>` | 16 |
 noOverflow | bool | set to true if the Pane content is not expected to scroll. This can cure issues with flashing scrollbars on search result Panes. | false |
 subheader | node | Render a component below the Pane's header. |  | false
