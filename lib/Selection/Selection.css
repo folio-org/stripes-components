@@ -1,5 +1,5 @@
-@import '@folio/stripes-components/lib/variables.css';
-@import '@folio/stripes-components/lib/sharedStyles/form.css';
+@import '../variables.css';
+@import '../sharedStyles/form.css';
 
 .selectionListRoot {
   background-color: #fff;
@@ -34,6 +34,25 @@
   &.rounded {
     border-radius: var(--radius);
   }  
+
+  &.hasFeedback {
+    margin-bottom: 0.4rem;
+  }
+
+  &.feedbackWarning {
+    border-color: var(--warn);
+    background-color: color(var(--warn) alpha(-95%));
+  }
+
+  &.feedbackError {
+    border-color: var(--error);
+    background-color: color(var(--error) alpha(-95%));
+  }
+
+  &.feedbackValid {
+    border-color: var(--success);
+    background-color: color(var(--success) alpha(-95%));
+  }
 }
 
 .SelectionFilterContainer {
