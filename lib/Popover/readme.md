@@ -21,6 +21,7 @@ alignment | string | Position along the cross-axis. Can be centered, or align wi
 children | arrayOf(node) | Requires two children one with `data-role="target"` and another with `data-role="popover"`. Ideally, the target child is an interactive element - a `<Button>`, for instance. The popover can be any dom element. | | &#10004;
 noPadding | bool | Removes padding from popover content if set to true | `false` |
 offset | number | Distance of the popover toward or away from the target. | 0 |
+activeClass | string | Adds the activeClass to the wrapper once the Popover is open |  |
 
 ## Positioning
 Setting `position` of "top" and `alignment` of "end" will render the popover above the trigger, aligned with the 'end' of the target's bounding box.

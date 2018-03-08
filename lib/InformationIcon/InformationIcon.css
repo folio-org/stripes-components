@@ -5,7 +5,16 @@
 @import "../variables";
 
 .wrap {
-  max-width: 360px;
+  max-width: 270px;
+}
+
+.content {
+  text-align: center;
+}
+
+.icon:hover svg,
+.activeClass .icon svg {
+  fill: var(--primary);
 }
 
 .button {
