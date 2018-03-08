@@ -28,9 +28,9 @@ http://localhost:3000/users?filters=active.Active&sort=Water&query=Email
 ```
 The `filters` query parameter is unaffected (since it was not included in the parameters passed in), the old `sort` value `Name` is replaced by the new value `Email`, and the new parameter `query` is added with the value `water`.
 
-## makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig)
+## makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition)
 
-Makes and returns a function, suitable to be used as the `query` param of a stripes-connect resource configuration. The function is itself configured by four parameters, which will vary depending on the module that is using it. It is generally used as follows:
+Makes and returns a function, suitable to be used as the `query` param of a stripes-connect resource configuration. The function is itself configured by five parameters, which will vary depending on the module that is using it, and will use these to determine how to interpret the query, filters and sort-specification in the application state. It is generally used as follows:
 ```
 static manifest = Object.freeze({
   items: {
@@ -39,16 +39,31 @@ static manifest = Object.freeze({
     path: 'item-storage/items',
     params: {
       query: makeQueryFunction(
-        'materialType=*',
+        'cql.allRecords=1',
         'materialType="${query}" or barcode="${query}*" or title="${query}*"',
         { 'Material Type': 'materialType' },
-        filterConfig
+        filterConfig,
+	2
       ),
     },
     staticFallback: { params: {} },
   },
 });
 ```
+
+The five parameters are:
+
+* `findAll` -- a CQL string that can be used to find all records, for situations where no query or filters are specified and the application wants all records to be listed.
+* `queryTemplate` -- a CQL string into which the query and other data can be substituted, using the same syntax as [path substitution in stripes-connect](https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution): for example, `?{query}` interpolates the `query` parameter from the URL.
+* `sortMap` -- an object mapping the names of columns in the display to the CQL sort-specifiers that they should invoke when clicked on.
+* `filterConfig` -- the configuration of the application's filter as passed to [the `<FilterGroups>` component](../lib/FilterGroups/readme.md#filter-configuration).
+* `failOnCondition` -- an optional indicator of how to behave when no query and/or filters are provided. Can take the following values:
+  * `0`: do not fail even if query and filters and empty
+  * `1`: fail if query is empty, whatever the filter state
+  * `2`: fail if both query and filters and empty.
+
+  For backwards compatibility, `false` (or omitting the argument altogether) is equivalent to `0` , and `true` is equivalent to `1`.
+
 
 ## makePathFunction(basePath, findAll, queryTemplate, sortMap, filterConfig)
 

@@ -72,7 +72,7 @@
 
   &.disabledLabel {
     opacity: 0.65;
-    cursor: default;
+    cursor: not-allowed;
   }
 }
 
