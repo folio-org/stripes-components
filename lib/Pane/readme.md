@@ -93,8 +93,7 @@ lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render bu
 actionMenuItems | array | Array of objects that will form an action menu which can be toggled by clicking on the pane header title |  |
 onClose | func | Callback fired when the pane is closed using its dismiss button. |  |
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  |
-appIcon | string | Renders an app icon in the pane header matching to the provided appIcon-key. |  |
-appIconKey | string | Renders a specific icon matching the appIconKey from an app with the key of appIcon (requires the above appIcon-prop to be provided). |  |
+appIcon | object | Render an AppIcon in the PaneHeader by passing an object with a key of `app` that matches an installed folio app. Optionally you can pass a `key` in the same object which refers to a specific icon inside an app with the key of `app`. E.g. { app: 'instances', key: 'items' } |  |
 contentPadding | number | Amount of padding (in pixels) to apply to Pane's content `<div>` | 16 |
 noOverflow | bool | set to true if the Pane content is not expected to scroll. This can cure issues with flashing scrollbars on search result Panes. | false |
 subheader | node | Render a component below the Pane's header. |  | false
