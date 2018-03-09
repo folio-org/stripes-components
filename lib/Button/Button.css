@@ -122,6 +122,7 @@
     border: 1px solid transparent;
     width: 100%;
     border-radius: 0;
+    display: block;
 
     &:hover,
     &:focus {
@@ -249,6 +250,10 @@
 a.button {
   padding: 8px;
   margin-bottom: 0;
+}
+
+a.dropdownItem {
+  padding-bottom: 1.6em;
 }
 
 [dir='rtl'] {

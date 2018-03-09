@@ -14,6 +14,20 @@
   width: 100%;
 }
 
+.disabled {
+  /* Doing this math since the SAS pane has padding that surrounds Accordians
+     and makes the disabled background-color not run to the edges. These rules
+     could become an issue if disabled Accordions become used with a parent
+     that does not use major-padding. */
+  margin-left: calc(0 - var(--major-padding));
+  padding-left: var(--major-padding);
+  width: calc(100% + (2 * var(--major-padding)));
+
+  & .header {
+    opacity: 0.5;
+  }
+}
+
 /**
  * Header
  */

@@ -57,6 +57,11 @@
 .paneTitle {
   font-size: inherit;
   font-weight: 600;
+  align-items: center;
+}
+
+.paneTitleLabel {
+  margin: 0 4px;
 }
 
 /* Pane sub */
