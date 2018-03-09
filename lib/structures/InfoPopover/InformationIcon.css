@@ -2,7 +2,7 @@
  * InformationIcon
  */
 
-@import "../variables";
+@import "../../variables";
 
 .wrap {
   max-width: 270px;
