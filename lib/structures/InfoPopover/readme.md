@@ -1,5 +1,5 @@
-# InformationIcon
-Display a small information icon which can be toggled by clicking on it. Useful for displaying additional information or explanations to features around the system.
+# InfoPopover
+Display a small information icon which can be toggled by clicking on it.
 
 ## Props
 Name | Type | Description | default
