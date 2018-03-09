@@ -120,7 +120,7 @@ input[type=checkbox].checkboxInput {
 input[type=checkbox].checkboxInput:checked,
 input[type=checkbox].checkboxInput:not(:checked) {
   position: absolute;
-  left: -9999px;
+  left: -10px;
 }
 
 .checkboxLabel::before,
