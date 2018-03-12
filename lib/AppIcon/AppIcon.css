@@ -39,15 +39,18 @@
  */
 .appIcon.large {
   height: 48px;
+  min-width: 48px;
   width: 48px;
 }
 
 .appIcon.medium {
   width: 24px;
+  min-width: 24px;
   height: 24px;
 }
 
 .appIcon.small {
   width: 14px;
+  min-width: 14px;
   height: 14px;
 }

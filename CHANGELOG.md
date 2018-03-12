@@ -21,6 +21,13 @@
 * Adjust EditableListForm setup. Fixes STCOM-203.
 * Implement `restrictWhenAllSelected` group flag for filter-groups. Fixes STCOM-204. Included in v2.0.1.
 * Update `<FilterGroups>` documentation for recent API changes. Fixes STCOM-206.
+* `<SearchForm>` does not add a placeholder to the dropdown of indexes if `searchableIndexesPlaceholder` is null. Fixes STCOM-220.
+* Generalise `failIfNoQuery` argument to `makeQueryFunction`, now `failOnCondition`. Fixes STCOM-219. Available from v2.0.2.
+* Proper documentation for `makeQueryFunction`. Fixes STCOM-221.
+* Make `makeQueryFunction` robust to failed substitutions. Fixes STCOM-225. Available from v2.0.3.
+* `makeQueryFunction` favours parameter-access via the anointed resource rather than the URL. Fixes STCOM-226. Available from v2.0.4.
+* In `<Checkbox>`, nest HTML checkboxes inside labels instead of associating the labels by ID. Fixes STCOM-227. Available from 2.0.5.
+* CSS tweak for `<Checkbox>` to bring the UI element back on screen. Refs STCOM-227. Available from 2.0.6. 
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
