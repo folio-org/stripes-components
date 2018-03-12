@@ -28,6 +28,7 @@
 * `makeQueryFunction` favours parameter-access via the anointed resource rather than the URL. Fixes STCOM-226. Available from v2.0.4.
 * In `<Checkbox>`, nest HTML checkboxes inside labels instead of associating the labels by ID. Fixes STCOM-227. Available from 2.0.5.
 * CSS tweak for `<Checkbox>` to bring the UI element back on screen. Refs STCOM-227. Available from 2.0.6. 
+* In `<EditableList>` (via `<EditableListForm>`), added a new `actionProps` prop to allow for direct prop edits for action buttons.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
