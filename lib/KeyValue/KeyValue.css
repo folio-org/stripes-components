@@ -2,13 +2,11 @@
 
 .kvLabel {
   display: block;
-  font-weight: 600;
+  font-weight: var(--text-weight-basis);
   margin-bottom: 2px;
-  color: var(--secondary, #333);
+  color: var(--subLabelColor);
 }
 
 .kvRoot {
-  padding: 0 5px 14px 0;
-
-  /* margin-bottom: var(--controlMarginBottom); */
+  margin-bottom: var(--controlMarginBottom);
 }
