@@ -11,7 +11,7 @@
   z-index: 9999;
 }
 
-.center{
+.center {
   text-align: center;
 }
 
@@ -21,14 +21,17 @@
   width: 100%;
   margin-bottom: 0;
   text-align: center;
+
   /* suppress weird stylind in firefox */
   border: 1px solid var(--inputBorderColor, #acacac);
   -moz-appearance: textfield;
-  &::-webkit-inner-spin-button, 
-  &::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
+
   &:focus {
     border-color: var(--primary, #2b75bb);
   }
@@ -42,5 +45,3 @@
   width: 1px;
   overflow: hidden;
 }
-
-
