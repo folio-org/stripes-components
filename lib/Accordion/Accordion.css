@@ -22,6 +22,7 @@
   margin-left: calc(0 - var(--major-padding));
   padding-left: var(--major-padding);
   width: calc(100% + (2 * var(--major-padding)));
+  background-color: #f2f2f2;
 
   & .header {
     opacity: 0.5;
