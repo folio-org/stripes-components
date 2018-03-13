@@ -23,7 +23,7 @@
 
 .selectionControl {
   margin-bottom: var(--controlMarginBottom);
-  background-color: #fefefe;
+  background-color: rgba(0, 0, 0, 0.03);
   border: 1px solid var(--inputBorderColor);
   height: var(--controlHeight); 
   padding: 0 8px;
@@ -31,8 +31,14 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--primary,  #0c577f);
+  }
+
   &.rounded {
-    border-radius: var(--radius);
+    border-radius: var(--radius, 4px);
   }  
 
   &.hasFeedback {
@@ -77,6 +83,11 @@
   padding: 4px 8px;
   border-style: solid;
   border-color: var(--inputBorderColor);
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary,  #0c577f);
+  }
 }
 
 .SelectionControlContainer {
@@ -103,7 +114,7 @@
   justify-content: space-between;
 
   &.selected {
-    background: var(--primary  #0c577f);
+    background: var(--primary,  #0c577f);
     color: #fff;
     transition: all 0.2s;
   
@@ -116,9 +127,11 @@
       background-color: rgb(0, 95, 146);
     }
   }
+
   &.cursor{
-    background-color: var(--hover  #ccc);
+    background-color: var(--hover,  #ccc);
   }
+
   &:hover{
     background-color: #ccc;
   }
