@@ -7,8 +7,13 @@
 .listRoot {
   margin: 0 -6px;
 
-  & a,
-  & button {
+  &.stripped a:nth-child(odd),
+  &.stripped button:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  & a.navListSectionItem,
+  & button.navListSectionItem {
     display: block;
     width: 100%;
     padding: 5px 6px;
@@ -17,7 +22,6 @@
     min-height: var(--controlHeight);
     text-align: left;
     outline: 0;
-    margin-bottom: 1px;
 
     &:hover,
     &:focus {

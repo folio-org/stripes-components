@@ -50,7 +50,7 @@
     }
   }
 
-  /* Different bg on even rows */
+  /* Different bg on odd rows */
   &.isOdd {
     background-color: rgba(0, 0, 0, 0.05);
   }
