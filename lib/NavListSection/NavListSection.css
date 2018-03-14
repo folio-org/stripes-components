@@ -16,11 +16,11 @@
   display: block;
   width: 100%;
   padding: 5px 6px;
-  color: var(--labelColor);
   border-radius: var(--radius);
   min-height: var(--controlHeight);
   text-align: left;
   outline: 0;
+  color: var(--bodyColor);
 
   &:hover,
   &:focus {
@@ -34,17 +34,25 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-decoration: none;
+
+    & * {
+      color: #fff;
+    }
   }
 
   /* Active style */
   &:active {
     background-color: var(--primary);
     color: #fff;
+
+    & * {
+      color: #fff;
+    }
   }
 }
 
 a.navListSectionItem {
-  color: var(--labelColor);
+  color: var(--bodyColor);
 }
 
 button.navListSectionItem {
