@@ -6,46 +6,48 @@
 
 .listRoot {
   margin: 0 -6px;
+}
 
-  &.stripped a:nth-child(odd),
-  &.stripped button:nth-child(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
+.stripped .navListSectionItem:nth-child(odd):not(:hover):not(:active):not(.active) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.navListSectionItem {
+  display: block;
+  width: 100%;
+  padding: 5px 6px;
+  color: var(--labelColor);
+  border-radius: var(--radius);
+  min-height: var(--controlHeight);
+  text-align: left;
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    cursor: pointer;
   }
 
-  & a.navListSectionItem,
-  & button.navListSectionItem {
-    display: block;
-    width: 100%;
-    padding: 5px 6px;
-    color: var(--labelColor);
-    border-radius: var(--radius);
-    min-height: var(--controlHeight);
-    text-align: left;
-    outline: 0;
-
-    &:hover,
-    &:focus {
-      background-color: rgba(0, 0, 0, 0.1);
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    /* Active/selected element */
-    &.active {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      text-decoration: none;
-    }
-
-    /* Active style */
-    &:active {
-      background-color: var(--primary);
-      color: #fff;
-    }
+  /* Active/selected element */
+  &.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-decoration: none;
   }
 
-  & button {
-    appearance: none;
-    border: none;
+  /* Active style */
+  &:active {
+    background-color: var(--primary);
+    color: #fff;
   }
+}
+
+a.navListSectionItem {
+  color: var(--labelColor);
+}
+
+button.navListSectionItem {
+  appearance: none;
+  border: none;
 }
