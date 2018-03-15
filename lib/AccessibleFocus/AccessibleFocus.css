@@ -32,7 +32,11 @@
 /**
  * Disabled state
  */
+:disabled > .accessibleFocusRoot,
 .accessibleFocusRoot:disabled {
+  opacity: 0.6;
+  cursor: default;
+
   &::after,
   &::before {
     display: none;

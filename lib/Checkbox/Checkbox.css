@@ -100,7 +100,7 @@ input.checkboxInput {
 
 input.checkboxInput {
   position: absolute;
-  left: -9999px;
+  left: -10px;
 }
 
 .labelPseudo {

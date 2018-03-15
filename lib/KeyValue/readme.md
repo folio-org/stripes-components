@@ -12,3 +12,12 @@ import { KeyValue } from '@folio/stripes-components/lib/KeyValue';
   value="Some value"
 />
 ```
+
+The "value" can also be a node, passed as children. This version is useful for acceptance testing.
+```
+<KeyValue label="Some label">
+  <span data-test-id="my-test-string">Some node</span>
+</KeyValue>
+```
+
+If the `value` prop is set and children exist, the `value` prop is ignored.
