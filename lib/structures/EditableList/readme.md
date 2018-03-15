@@ -42,6 +42,7 @@ visibleFields | array of strings | Array of fields to render. These will also be
 itemTemplate | object | Object that reflects the shape of list item objects. Values should be strings indicating the type: `{name: 'string'}` | {} | no
 uniqueField | string | Fieldname that includes the unique identifier for the list. | `id` | yes
 actionSuppression | object | Object containing properties of list action names: `delete`, `edit` and values of sentinel functions that return booleans based on object properties. | `{ delete: () => false, edit: () => false }` | no
+actionProps | object | Object containing properties of list action names: 'delete', 'edit' and values of sentinel functions that return objects to destructure onto the action button props. | `{ delete: (item) => {return { disabled: item.item.inUse } } }`
 isEmptyMessage | string | Message to display for an empty list. | | no
 readOnlyFields | array of strings | Array of non-editable columns - good for displaying meta information within the row. | | no
 formatter | object | Allows custom content/components to be displayed in the grid. see example below. | | no
