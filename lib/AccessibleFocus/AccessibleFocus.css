@@ -162,6 +162,7 @@
 button:hover > .accessibleFocusRoot::before,
 a:hover > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:hover::before,
+label.accessibleFocusRoot:hover::before,
 input:hover + label.accessibleFocusRoot::before,
 a.accessibleFocusRoot:hover::before {
   background: rgba(37, 118, 195, 0.2);
@@ -178,6 +179,7 @@ button.accessibleFocusRoot:hover {
 button:focus > .accessibleFocusRoot::before,
 a:focus > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:focus::before,
+label.accessibleFocusRoot:focus::before,
 input:focus + label.accessibleFocusRoot::before,
 a.accessibleFocusRoot:focus::before {
   background: rgba(37, 118, 195, 0.3);
@@ -188,6 +190,7 @@ a.accessibleFocusRoot:focus::before {
 button:focus > .accessibleFocusRoot.hasDot::after,
 a:focus > .accessibleFocusRoot.hasDot::after,
 button.accessibleFocusRoot.hasDot:focus::after,
+label.accessibleFocusRoot.hasDot:focus::after,
 input:focus + label.accessibleFocusRoot.hasDot::after,
 a.accessibleFocusRoot.hasDot:focus::after {
   visibility: visible;
@@ -200,6 +203,7 @@ a.accessibleFocusRoot.hasDot:focus::after {
 button:not([disabled]):active > .accessibleFocusRoot,
 a:not([disabled]):active > .accessibleFocusRoot,
 button.accessibleFocusRoot:not([disabled]):active,
+label.accessibleFocusRoot:not([disabled]):active,
 input:not([disabled]):active + label.accessibleFocusRoot,
 a.accessibleFocusRoot:not([disabled]):active {
   color: #fff;
@@ -216,6 +220,7 @@ a.accessibleFocusRoot:not([disabled]):active {
 button:active > .accessibleFocusRoot::before,
 a:active > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:active::before,
+label.accessibleFocusRoot:active::before,
 input:active + label.accessibleFocusRoot::before,
 a.accessibleFocusRoot:active::before {
   background: rgb(37, 118, 195);
@@ -226,6 +231,7 @@ a.accessibleFocusRoot:active::before {
 button:active > .accessibleFocusRoot.hasDot::after,
 a:active > .accessibleFocusRoot.hasDot::after,
 button.accessibleFocusRoot.hasDot:active::after,
+label.accessibleFocusRoot.hasDot:active::after,
 input:active + label.accessibleFocusRoot.hasDot::after,
 a.accessibleFocusRoot.hasDot:active::after {
   background-color: #fff;

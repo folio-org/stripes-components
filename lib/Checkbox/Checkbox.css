@@ -117,7 +117,8 @@ input.checkboxInput:disabled .labelPseudo {
   opacity: 0.65;
 }
 
-input.checkboxInput:checked + label.checkboxLabel .labelPseudo::after {
+/* input.checkboxInput:checked + label.checkboxLabel .labelPseudo::after { */
+input.checkboxInput:checked + .labelPseudo::after {
   content: '';
   width: 56%;
   height: 30%;
@@ -132,10 +133,12 @@ input.checkboxInput:checked + label.checkboxLabel .labelPseudo::after {
   transition: all 0.1s ease;
 }
 
-input.checkboxInput:not(:checked) + label .labelPseudo::after {
+/* input.checkboxInput:not(:checked) + label .labelPseudo::after { */
+input.checkboxInput:not(:checked) + .labelPseudo::after {
   opacity: 0;
 }
 
-input.checkboxInput:checked + label .labelPseudo::after {
+/* input.checkboxInput:checked + label .labelPseudo::after { */
+input.checkboxInput:checked + .labelPseudo::after {
   opacity: 1;
 }
