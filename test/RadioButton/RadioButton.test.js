@@ -27,7 +27,12 @@ describe('RadioButton', () => {
       found.push(id);
     });
 
-    expect(duplicates, 'duplicates').to.be.empty;
+    // Check for duplicates
+    expect(duplicates.length, 'duplicates').to.equal(0);
+
+    // Check if custom ID was attached
+    expect(found, 'Custom ID is not added to RadioButton').to.include.members(['my-custom-id']);
+
     done();
   });
 });

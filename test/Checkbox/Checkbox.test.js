@@ -29,6 +29,9 @@ describe('Checkbox', () => {
     // Check for duplicates
     expect(duplicates.length, 'duplicates').to.equal(0);
 
+    // Check if custom ID was added
+    expect(found, 'Custom ID is not added to Checkbox').to.include.members(['my-custom-id']);
+
     done();
   });
 
