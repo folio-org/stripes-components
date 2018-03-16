@@ -30,5 +30,25 @@ describe('Checkbox', () => {
     done();
   });
 
+  /**
+   * Test for click evetns
+   */
+  it('should flip the value on click', (done) => {
+    const handleClick = spy();
 
+    const wrapper = mount(
+      <Checkbox
+        onChange={() => { this.setState({ checkbox_1: !this.state.checkbox_1 }); }}
+        input={{
+          value: 'some value',
+        }}
+      />
+    );
+
+console.log(wrapper.find('input').prop('value'));
+    // wrapper.props['value'].to.equal('some value');
+
+    done();
+    // done(new Error('Fail!'));
+  });
 });
