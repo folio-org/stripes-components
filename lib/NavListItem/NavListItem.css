@@ -3,23 +3,25 @@
  */
 @import '../variables.css';
 
+/* if stripped styles is activated in NavList */
 .stripped .NavListItem:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-a.NavListItem,
-button.NavListItem {
+.NavListItem {
   display: block;
   width: 100%;
   padding: 5px 10px;
-  color: var(--labelColor);
+  color: var(--bodyColor);
   border-radius: var(--radius);
   min-height: var(--controlHeight);
   text-align: left;
   outline: 0;
-  margin-bottom: 1px;
 
-
+  /* for links */
+  &:visited {
+    color: var(--bodyColor);
+  }
 
   &.isActive {
     background-color: rgba(0, 0, 0, 0.5);
