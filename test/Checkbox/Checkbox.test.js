@@ -2,19 +2,18 @@
  * Checkbox tests
  */
 
- import React from 'react';
+import React from 'react';
 import Checkbox from '../../lib/Checkbox';
 
 describe('Checkbox', () => {
-
   /**
    * Ensure that Checkbox always renders with a unique ID
    */
   it('should always render with a unique ID ', (done) => {
-    let items = [];
+    const items = [];
     const found = [];
     const duplicates = [];
-    for (var i = 0; i < 100; i++) {
+    for (let i = 0; i < 100; i++) {
       const myCustomId = i === 50 ? 'my-custom-id' : null;
       items.push(<Checkbox className="checkbox" id={myCustomId} key={i} />);
     }
@@ -26,29 +25,47 @@ describe('Checkbox', () => {
       }
       found.push(id);
     });
-    expect(duplicates, 'duplicates').to.be.empty;
+
+    // Check for duplicates
+    expect(duplicates.length, 'duplicates').to.equal(0);
+
     done();
   });
 
   /**
-   * Test for click evetns
+   * Test for redux-form compabillity
+   * (redux-form injects a prop of 'input' which contains event handlers such as onChange, onBlur etc.)
    */
-  it('should flip the value on click', (done) => {
-    const handleClick = spy();
-
-    const wrapper = mount(
-      <Checkbox
-        onChange={() => { this.setState({ checkbox_1: !this.state.checkbox_1 }); }}
-        input={{
-          value: 'some value',
-        }}
-      />
+  it('should work with both props.onChange/props.value and props.input.onChange/props.input.value', (done) => {
+    const state = {
+      value1: '',
+      value2: '',
+    };
+    const expectedValue = 'bananas';
+    const checkboxes = mount(
+      <div>
+        <Checkbox
+          input={{
+            value: state.value1,
+            onChange: () => {
+              state.value1 = expectedValue;
+            },
+          }}
+        />
+        <Checkbox
+          value={state.value2}
+          onChange={() => { state.value2 = expectedValue; }}
+        />
+      </div>,
     );
 
-console.log(wrapper.find('input').prop('value'));
-    // wrapper.props['value'].to.equal('some value');
+    // Simulate changes on inputs
+    checkboxes.find(Checkbox).forEach(node => node.find('input').simulate('change'));
+
+    // Check for expected values
+    expect(state.value1, 'this.props.input.onChange is not working').to.equal(expectedValue);
+    expect(state.value2, 'this.props.onChange is not working').to.equal(expectedValue);
 
     done();
-    // done(new Error('Fail!'));
   });
 });
