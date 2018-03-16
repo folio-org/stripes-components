@@ -3,6 +3,10 @@
  */
 @import '../variables.css';
 
+.stripped .NavListItem:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 a.NavListItem,
 button.NavListItem {
   display: block;
@@ -14,6 +18,8 @@ button.NavListItem {
   text-align: left;
   outline: 0;
   margin-bottom: 1px;
+
+
 
   &.isActive {
     background-color: rgba(0, 0, 0, 0.5);

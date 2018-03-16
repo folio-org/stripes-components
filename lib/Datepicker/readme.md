@@ -22,6 +22,8 @@ value | string | date to be displayed in the textfield. In forms, this is suppli
 onChange | func | Event handler to handle updates to the datefield text. | | false
 screenReaderMessage | string | Additional message to be read by screenreaders when textfield is focused in addition to the label and format - which are always read. | | false
 excludeDates | array, string or Moment object | Disables supplied dates from being selected in the calendar. | | false
+`passThroughValue` | string | Can be used to set dynamic values up to the form - values should be inspected/adjusted in a handler at submission time (like a button click that calls `submit()`.) See below for usage example. |  |
+
 <!-- locale | string | locale for datepicker to use to display calendar. e.g. "de" will display calendar using the German locale | "en" | false -->
 <!-- dateFormat | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false-->
 
@@ -38,3 +40,9 @@ excludeDates | array, string or Moment object | Disables supplied dates from bei
 * **Ctrl + PgDown** - forwards 1 year
 * **Enter** - Select date at cursor
 * **Esc** - Close calendar
+
+## Passthrough value
+Using the prop `passThroughValue` means that you expect a non-date string to be passed as a value, and want to use that to derive the time value that you do want submitted. An example of this would be to pass through "Today" and actually submit the current time (whenever the submit button is pressed.) "Today" can be set as an initial value, or the user can enter "Today". 
+```
+<Field name="exampleDateReturned" label="Date returned" id="dateReturnDP" placeholder="Select Date" component={Datepicker} passThroughValue="Today"/>
+```
