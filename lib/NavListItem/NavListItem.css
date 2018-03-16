@@ -18,7 +18,7 @@
   text-align: left;
   outline: 0;
 
-  /* for links */
+  /* for anchor tags */
   &:visited {
     color: var(--bodyColor);
   }
