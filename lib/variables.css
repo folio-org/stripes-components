@@ -14,7 +14,7 @@
   --controlHeight: 24px;
   --radius: 6px;
   --inputBorderColor: #acacac;
-  --gutter: 0.8em;
+  --gutter: 15px;
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
   --minor-divider-color: rgba(0, 0, 0, 0.1);
