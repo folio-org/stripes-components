@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 2.1.0 (IN PROGRESS)
+## 3.0.0 (IN PROGRESS)
 
 * Adjust address read only view. Fixes STCOM-152.
 * `<FilterPaneSearch>` supports `searchableIndexes`, `selectedIndex` and `onChangeIndex` properties. Fixes STCOM-171.
@@ -30,6 +30,7 @@
 * CSS tweak for `<Checkbox>` to bring the UI element back on screen. Refs STCOM-227. Available from 2.0.6. 
 * In `<EditableList>` (via `<EditableListForm>`), added a new `actionProps` prop to allow for direct prop edits for action buttons.
 * Fix multiple addresses displaying side by side. Fixes STCOM-230.
+* `<MultiColumnList>` fills properly fills height when `autosize` prop is used - even on browser resize. Fixes STCOM-29.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
