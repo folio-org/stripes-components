@@ -85,16 +85,19 @@ Component | doc | categories
 [`<RadioButtonGroup>`](lib/RadioButtonGroup) | [doc](lib/RadioButtonGroup/readme.md) | control
 [`<SegmentedControl>`](lib/SegmentedControl) | [doc](lib/SegmentedControl/readme.md) | control
 [`<Select>`](lib/Select) | [doc](lib/Select/readme.md) | control
+[`<Selection>`](lib/Selection) | [doc](lib/Selection/readme.md) | control
 [`<Settings>`](lib/Settings) | [doc](lib/Settings/readme.md) | prefab
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) | accessibility, user-feedback
 [`<AddressFieldGroup>`](lib/structures/AddressFieldGroup) | [doc](lib/structures/AddressFieldGroup/readme.md) | control, prefab
 [`<ConfirmationModal>`](lib/structures/ConfirmationModal) | [doc](lib/structures/ConfirmationModal/readme.md) | control, prefab
 [`<EditableList>`](lib/structures/EditableList) | [doc](lib/structures/EditableList/readme.md) | control, prefab
+[`<InfoPopover>`](lib/structures/InfoPopover) | [doc](lib/structures/InfoPopover/readme.md) | control, prefab
 [`<RepeatableField>`](lib/structures/RepeatableField) | [doc](lib/structures/RepeatableField/readme.md) | control, prefab
 [`<SearchField>`](lib/structures/SearchField) | [doc](lib/structures/SearchField/readme.md) | control, prefab
 [`<TabButton>`](lib/TabButton) | | control
 [`<TextArea>`](lib/TextArea) | | control
 [`<TextField>`](lib/TextField) | | control
+[`<Timepicker>`](lib/Timepicker) | [doc](lib/Timepicker/readme.md) | control
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
