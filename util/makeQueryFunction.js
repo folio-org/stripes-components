@@ -10,7 +10,7 @@ import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTRes
 //
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition) {
   return (queryParams, pathComponents, resourceValues, logger) => {
-    
+
     const { qindex, filters, query, sort } = resourceValues.query || {};
 
     if ((query === undefined || query === '') &&
@@ -28,7 +28,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       console.warn('Use of "$QUERY" in the queryTemplate is deprecated. Use the "%{query.query}" syntax instead, as found at https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution')
       queryTemplate = queryTemplate.replace(/\$QUERY/g, '?{query}');
     }
-    
+
     let cql = undefined;
     if (query && qindex) {
       const t = qindex.split('/', 2);
@@ -44,7 +44,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
         return null;
       }
     }
-    
+
     const filterCql = filters2cql(filterConfig, filters);
     if (filterCql) {
       if (cql) {
@@ -53,7 +53,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
         cql = filterCql;
       }
     }
-    
+
     if (sort) {
       const sortIndexes = sort.split(',').map((sort1) => {
         let reverse = false;
@@ -73,7 +73,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
     }
 
     logger.log('mquery', `query='${query}' filters='${filters}' sort='${sort}' -> ${cql}`);
-    
+
     return cql;
   };
 }

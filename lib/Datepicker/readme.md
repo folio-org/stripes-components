@@ -42,7 +42,7 @@ excludeDates | array, string or Moment object | Disables supplied dates from bei
 * **Esc** - Close calendar
 
 ## Passthrough value
-Using the prop `passThroughValue` means that you expect a non-date string to be passed as a value, and want to use that to derive the time value that you do want submitted. An example of this would be to pass through "Today" and actually submit the current time (whenever the submit button is pressed.) "Today" can be set as an initial value, or the user can enter "Today". 
+Using the prop `passThroughValue` means that you expect a non-date string to be passed as a value, and want to use that to derive the time value that you do want submitted. An example of this would be to pass through "Today" and actually submit the current time (whenever the submit button is pressed.) "Today" can be set as an initial value, or the user can enter "Today".
 ```
 <Field name="exampleDateReturned" label="Date returned" id="dateReturnDP" placeholder="Select Date" component={Datepicker} passThroughValue="Today"/>
 ```

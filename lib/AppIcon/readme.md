@@ -20,7 +20,7 @@ Option 1 is the recommended implementation but if needed (edge case) option 1 an
 ```
 
 ***2. Supply an object to the icon prop***
-```js  
+```js
   const icon = {
     src: '/static/some-icon.png',
     alt: 'My icon',
