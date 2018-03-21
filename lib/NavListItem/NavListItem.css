@@ -28,6 +28,8 @@
     color: #fff;
     text-decoration: none;
 
+    /* Make sure child elements has
+    white text color when item is active */
     & * {
       color: #fff;
     }
