@@ -25,6 +25,11 @@
   display: flex;
 }
 
+.wrappedInner {
+  display: flex;
+  align-items: center;
+}
+
 .accessibleFocusRoot * {
   z-index: 2;
 }

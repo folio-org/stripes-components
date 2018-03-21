@@ -4,7 +4,7 @@
 @import '../variables.css';
 
 /* if stripped styles is activated in NavList */
-.stripped .NavListItem:nth-child(odd) {
+.stripped .NavListItem:nth-child(odd):not(.isActive):not(:hover):not(:active) {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -27,6 +27,10 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-decoration: none;
+
+    & * {
+      color: #fff;
+    }
 
     /* Custom AccessibleFocus styling */
     &::after {
