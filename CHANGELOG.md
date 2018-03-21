@@ -62,6 +62,13 @@
 * Numerous style updates to `<MultiColumnList>`, `<Button>`, `<Checkbox>` and other components.
 * Storybook resource added. Run `yarn storybook` to see component demos and documentation.
 * Pass a ref through to TextArea for access by a parent. Refs STSMACOM-4.
+* Added AccessibleFocus component which purpose is to achieve universal hover, focus and active styling for most clickable/focusable elements through a single helper component. Added examples and readme for this component as well.
+* Updated all related components to use AccessibleFocus (Button, Checkbox, RadioButton, MCL, Accordion headers, IconButton etc.)
+* Removed refs in Accordion headers since they aren't needed anymore
+* Added IconButton to CalloutElement instead of regular button
+* Added NavListItem component for NavListSection instead of using arbitrary children. This allows us to have better control over the NavList component styling and functionality. Minor update to NavListSection to match this change.
+* Added stripped styling to NavListItem (optional)
+* Added a test for Checkbox to make sure it works with both redux-form (input.onChange) and default prop (onChange)
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
