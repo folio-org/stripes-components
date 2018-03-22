@@ -33,19 +33,19 @@
   text-decoration: none;
   margin-left: 5px;
   margin-right: 5px;
+  outline: none;
 
   &:visited {
     color: #333;
   }
 
-  /* Different bg on even rows */
-  &.isOdd {
+  /* Different bg on odd rows */
+  &.isOdd:not(.selected) {
     background-color: rgba(0, 0, 0, 0.05);
   }
 
   /* Selected style */
-  &.selected,
-  &.selected.isOdd {
+  &.selected {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.62);
 
@@ -53,6 +53,29 @@
     &::after {
       background-color: #fff;
     }
+  }
+
+  /* Hover and focus style */
+  &.isInteractive:hover:not(.selected),
+  &.isInteractive:focus:not(.selected) {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &.isInteractive:hover,
+  &.isInteractive:focus {
+    outline: none;
+  }
+
+  &.isInteractive:hover,
+  &.isInteractive:focus {
+    cursor: pointer;
+  }
+
+  /* Active style */
+  &.isInteractive:active,
+  &.isInteractive:hover:active {
+    color: #fff;
+    background-color: var(--primary);
   }
 }
 
