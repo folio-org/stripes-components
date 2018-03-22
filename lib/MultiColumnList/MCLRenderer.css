@@ -33,6 +33,7 @@
   text-decoration: none;
   margin-left: 9px;
   margin-right: 9px;
+  outline: none;
 
   &:visited {
     color: #333;
@@ -51,30 +52,24 @@
   }
 
   /* Different bg on odd rows */
-  &.isOdd {
+  &.isOdd:not(.selected) {
     background-color: rgba(0, 0, 0, 0.05);
   }
 
   /* Selected style */
-  &.selected,
-  &.selected.isOdd {
+  &.selected {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.62);
   }
 
   /* Hover and focus style */
-  &:hover:not(.selected),
-  &:focus:not(.selected) {
+  &.isInteractive:hover:not(.selected),
+  &.isInteractive:focus:not(.selected) {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
-  &.isOdd:hover:not(.selected),
-  &.isOdd:focus:not(.selected) {
-    background: rgba(0, 0, 0, 0.15);
-  }
-
-  &:hover,
-  &:focus {
+  &.isInteractive:hover,
+  &.isInteractive:focus {
     outline: none;
   }
 
@@ -83,11 +78,9 @@
     cursor: pointer;
   }
 
-  /* Active style (we have to be a bit specific to avoid using !important ) */
-  &:active,
-  &.isOdd:active,
-  &:hover:active,
-  &.isOdd:hover:active {
+  /* Active style */
+  &.isInteractive:active,
+  &.isInteractive:hover:active {
     color: #fff;
     background-color: var(--primary);
   }

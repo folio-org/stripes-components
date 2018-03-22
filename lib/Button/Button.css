@@ -190,8 +190,8 @@
     background-color: transparent;
     border: 1px solid transparent;
     width: 100%;
-    border-radius: 0;
     display: block;
+    color: #555;
 
     &:hover,
     &:focus {
@@ -328,15 +328,6 @@
     font-size: 2rem;
     border-radius: 0;
   }
-}
-
-a.button {
-  padding: 8px;
-  margin-bottom: 0;
-}
-
-a.dropdownItem {
-  padding-bottom: 1.6em;
 }
 
 [dir='rtl'] {
