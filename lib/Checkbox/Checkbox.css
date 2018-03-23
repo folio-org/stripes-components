@@ -120,17 +120,17 @@ input.checkboxInput:disabled .labelPseudo {
 /* input.checkboxInput:checked + label.checkboxLabel .labelPseudo::after { */
 input.checkboxInput:checked + .labelPseudo::after {
   content: '';
-  width: 56%;
-  height: 30%;
+  width: 6px;
+  height: 3px;
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 1px;
+  left: 1px;
   border: 3px solid var(--labelColor);
   border-top: none;
   border-right: none;
   background: transparent;
   transform: rotate(-45deg);
-  transition: all 0.1s ease;
+  opacity: 0;
 }
 
 /* input.checkboxInput:not(:checked) + label .labelPseudo::after { */

@@ -62,8 +62,8 @@ label.radioLabel {
   height: 6px;
   background: #313131;
   position: absolute;
-  top: 24%;
-  left: 20%;
+  top: 2px;
+  left: 2px;
   border-radius: 999px;
   transition: all 0.2s ease;
 }
