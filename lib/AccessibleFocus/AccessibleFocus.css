@@ -181,6 +181,7 @@ button.accessibleFocusRoot:hover {
 /**
  * Focus
  */
+.accessibleFocusRoot.isFocused::before,
 button:focus > .accessibleFocusRoot::before,
 a:focus > .accessibleFocusRoot::before,
 button.accessibleFocusRoot:focus::before,
@@ -192,6 +193,7 @@ a.accessibleFocusRoot:focus::before {
   box-shadow: 0 0 0 3px rgba(37, 118, 195, 0.3);
 }
 
+.accessibleFocusRoot.isFocused.hasDot::after,
 button:focus > .accessibleFocusRoot.hasDot::after,
 a:focus > .accessibleFocusRoot.hasDot::after,
 button.accessibleFocusRoot.hasDot:focus::after,

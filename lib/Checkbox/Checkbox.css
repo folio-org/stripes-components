@@ -131,6 +131,7 @@ input.checkboxInput:checked + .labelPseudo::after {
   background: transparent;
   transform: rotate(-45deg);
   opacity: 0;
+  z-index: 5;
 }
 
 /* input.checkboxInput:not(:checked) + label .labelPseudo::after { */
@@ -141,4 +142,25 @@ input.checkboxInput:not(:checked) + .labelPseudo::after {
 /* input.checkboxInput:checked + label .labelPseudo::after { */
 input.checkboxInput:checked + .labelPseudo::after {
   opacity: 1;
+}
+
+/**
+ * Alternative way of making focus work
+ * Only until we can add id to input and htmlFor to label
+ */
+.focusEl {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.focusEl div {
+  height: 100%;
+  width: 100%;
+}
+
+input.checkboxInput:focus + .labelPseudo + .focusEl {
+  display: block;
 }
