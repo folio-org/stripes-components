@@ -33,6 +33,8 @@
 * `<MultiColumnList>` properly fills height when `autosize` prop is used - even on browser resize. Fixes STCOM-29.
 * `<Timepicker>` component added. See [docs](lib/Timepicker/readme.md).
 * Fixed text overflowing icon in <Select>
+* Fixed text overflowing icon in `<Select>`.
+* Ignore yarn-error.log file. Refs STRIPES-517.
 * `<Selection>` component added. Resolves STCOM-131.
 * Custom option formatter added to `<Selection>`. Resolves STCOM-233.
 
