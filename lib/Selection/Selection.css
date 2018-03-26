@@ -111,6 +111,7 @@
   display: flex;
   width: 80%;
 }
+
 /* Selection List Options */
 
 .option {
@@ -166,7 +167,6 @@
 .optionMatchedSubstring {
   font-weight: 700;
 }
-
 
 .SelectionMultiContainer {
   border: 1px solid var(--inputBorderColor);
