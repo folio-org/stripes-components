@@ -1,17 +1,20 @@
-/*form elements*/
+/* form elements */
+export { default as Badge } from './lib/Badge';
 export { default as Button } from './lib/Button';
 export { default as Checkbox } from './lib/Checkbox';
+export { default as Datepicker } from './lib/Datepicker';
 export { default as RadioButton } from './lib/RadioButton';
+export { default as SearchField } from './lib/structures/SearchField';
 export { default as Select } from './lib/Select';
+export { default as TextArea } from './lib/TextArea';
 export { default as TextField } from './lib/TextField';
-export { default as Badge } from './lib/Badge';
 
-/*data containers*/
+/* data containers */
 export { default as KeyValue } from './lib/KeyValue';
 export { default as MultiColumnList } from './lib/MultiColumnList';
 export { default as List } from './lib/List';
 
-/*layout containers*/
+/* layout containers */
 export { default as Pane } from './lib/Pane';
 export { default as PaneHeader } from './lib/PaneHeader';
 export { default as PaneMenu } from './lib/PaneMenu';
@@ -20,10 +23,12 @@ export { Grid, Row, Col } from './lib/LayoutGrid';
 export { default as Layout } from './lib/Layout';
 export { Accordion, AccordionSet, FilterAccordionHeader } from './lib/Accordion';
 
-/*misc*/
+/* misc */
 export { default as Icon } from './lib/Icon';
+export { default as IconButton } from './lib/IconButton';
+export { default as Modal } from './lib/Modal';
 
-/*specific use */
+/* specific use */
 export { default as FilterPane } from './lib/FilterPane';
 export { default as FilterGroups } from './lib/FilterGroups';
 export { default as FilterControlGroup } from './lib/FilterControlGroup';
