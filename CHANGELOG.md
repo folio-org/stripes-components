@@ -33,6 +33,8 @@
 * `<MultiColumnList>` properly fills height when `autosize` prop is used - even on browser resize. Fixes STCOM-29.
 * `<Timepicker>` component added. See [docs](lib/Timepicker/readme.md).
 * Fixed text overflowing icon in <Select>
+* `<Selection>` component added. Resolves STCOM-131.
+* Custom option formatter added to `<Selection>`. Resolves STCOM-233.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
