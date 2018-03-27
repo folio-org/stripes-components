@@ -4,3 +4,4 @@
 yarn.lock
 atom.cson
 .DS_Store
+yarn-error.log

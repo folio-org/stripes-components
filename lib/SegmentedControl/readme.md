@@ -32,6 +32,7 @@ Additionally, each child `<Button>` can have its own `onClick` handler as well f
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 tag | string | Set the HTML tag used to wrap the button set. | 'nav' |
+className | string | Add a custom className to SegmentedControl | |
 activeId | string | Which of the child `<Button>`s gets "active" styling |  |
 onActivate | func | Handler called when a child `<Button>` is clicked |  |
 children | node | Set of `<Button>`s. |  |
