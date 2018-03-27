@@ -38,6 +38,15 @@ To make a pane dismissible, simply supply the `dismissible` prop and a module-le
         </Pane>
     }
 ```
+
+#### Maximizable
+To make a pane maximizable, simply supply the `Maximizable` prop.
+```js
+    <Pane paneTitle="Maximize this" maximizable >
+        // Pane Content...
+    </Pane>
+```
+
 ### Pane Header
 A default `<Pane>` builds a simple header that includes centered title text (supplied in the `paneTitle` prop) with customizable menus at either end (`firstMenu`, `lastMenu` props). When the page is rendered in a right-to-left language, the menus will automatically switch placement.
 
@@ -46,14 +55,6 @@ Add an `<AppIcon />`-component to the pane header by providing an `appIcon`-prop
 const paneStartMenu = <PaneMenu><button><Icon icon="bookmark" /></button></PaneMenu>
 <Pane defaultWidth="50%" paneTitle="Example First Menu" firstMenu={paneStartMenu} appIcon="instances" appIconKey="items">
     // Pane Content...
-</Pane>
-```
-### Custom Header
-If the header needs functionality, the `header` prop will accept a component to render instead of the default pane header.
-```js
-const searchHeader = <FilterPaneSearch id="SearchField" {...otherProps} />;
-<Pane defaultWidth="20%" header={searchHeader}>
-    // Pane Content
 </Pane>
 ```
 
@@ -88,6 +89,7 @@ Name | type | description | default | required
 defaultWidth | string percentage or `"fill"` | Tells the pane the percentage of the paneset that it should occupy. A string percentage (`"25%"`) will render a pane with a width of 25% of its containing element. The string `"fill"` will cause the pane to occupy any remaining space in the paneset after percentage-sized panes are accounted for. |  | &#10004;
 height | string | css-value representation of a custom pane height. The maximum height of a Pane is 100% of the viewport (vh unit) - the height of the universal FOLIO header. A situation where you may need this is if the Pane (or Paneset) is wrapped in an unstyled element without any width/max-width set.  |  |
 dismissible | bool or "last"| If true, pane will render a close (&times;) button in its firstMenu. If "last" is supplied, the button will render in the lastMenu. | false |
+maximizable | bool | If true, pane will render a "Maximize" action in its action menu that can be used to expand the pane's width to a full 100% of the screen space. | false | 
 firstMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the beginning of the header. |  |
 lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the far end of the header. |  |
 actionMenuItems | array | Array of objects that will form an action menu which can be toggled by clicking on the pane header title |  |
