@@ -58,3 +58,12 @@
   width: 100px;
   height: 50px;
 }
+
+/**
+ * Flippable
+ * Icon should flip on dir="rtl"
+ */
+
+:global([dir="rtl"]) .icon.flippable svg {
+  transform: rotate(180deg);
+}
