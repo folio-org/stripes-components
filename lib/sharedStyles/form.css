@@ -123,7 +123,7 @@ select.input {
  */
 textarea.input {
   min-height: var(--controlHeightSmall);
-  padding: var(--input-horizontal-padding) (var(--input-vertical-padding) + 14); /* Add some extra padding on the right to avoid text to overflow the icon */
+  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
 }
 
 /**
