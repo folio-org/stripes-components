@@ -2,7 +2,6 @@
  * <EmptyMessage />
  */
 
-  .emptyMessage {
-    color: rgba(0, 0, 0, 0.62);
-    font-size: 20px;
-  }
+.emptyMessage {
+  color: rgba(0, 0, 0, 0.62);
+}
