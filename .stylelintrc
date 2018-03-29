@@ -15,5 +15,6 @@
         "compose-with"
       ],
     }],
+    "function-name-case": null
   }
 }
