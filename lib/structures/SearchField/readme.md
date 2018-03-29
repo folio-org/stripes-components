@@ -5,7 +5,7 @@ Universal search field component.
 ## Basic Usage
 
 ```
-  import SearchField from '@folio/lib/structures/SearchField';
+  import SearchField from '@folio/stripes-components/lib/structures/SearchField';
 
   <SearchField
     onChange={...}
