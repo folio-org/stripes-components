@@ -107,6 +107,13 @@
   align-items: flex-start;
 }
 
+.singleValue {
+  display: flex;
+  width: 80%;
+}
+
+/* Selection List Options */
+
 .option {
   padding: 6px;
   cursor: default;
@@ -135,6 +142,30 @@
   &:hover {
     background-color: #ccc;
   }
+
+  &.optionCentered {
+    justify-content: center;
+  }
+
+  &.optionStart {
+    justify-content: flex-start;
+  }
+
+  &.optionEnd {
+    justify-content: flex-end;
+  }
+
+  &.optionOutside {
+    justify-content: space-between;
+  }
+}
+
+.optionSegment {
+  padding: 0 2px;
+}
+
+.optionMatchedSubstring {
+  font-weight: 700;
 }
 
 .SelectionMultiContainer {
