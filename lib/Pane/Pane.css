@@ -11,7 +11,10 @@
   left: 0;
   width: 100%;
 
-  /* transition: all .25s ease-in-out; */
+  /* simply uncomment this next property to enable janky css-based pane animations */
+
+  /* transition: flex .25s ease-in-out; */
+
   overflow: hidden;
   position: absolute;
   will-change: transform;
