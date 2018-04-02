@@ -14,16 +14,16 @@
   border-radius: var(--radius);
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.24);
   outline: 0;
+
+  & p {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 /* No padding on content */
 .popoverPop.noPadding {
   padding: 0;
-}
-
-p {
-  padding: 0;
-  margin: 0;
 }
 
 /* Transition */
