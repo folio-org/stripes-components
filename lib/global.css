@@ -149,3 +149,7 @@ button {
   clip-path: inset(50%);
   border: 0;
 }
+
+:global(.tether-element) {
+  z-index: 9999;
+}
