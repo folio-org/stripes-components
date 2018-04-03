@@ -69,7 +69,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       });
 
       if (cql === undefined) cql = findAll;
-      cql += ` sortby ${sortIndexes.join(' ')}`;
+      cql = `(${cql}) sortby ${sortIndexes.join(' ')}`;
     }
 
     logger.log('mquery', `query='${query}' filters='${filters}' sort='${sort}' -> ${cql}`);

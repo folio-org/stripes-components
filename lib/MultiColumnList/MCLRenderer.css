@@ -169,9 +169,7 @@
 }
 
 .emptyMessage {
-  width: 100%;
   padding: 15px;
-  color: var(--labelColor);
 }
 
 @keyframes example {

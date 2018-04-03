@@ -1,7 +1,8 @@
 .icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 
   &:focus {
     outline: none;
@@ -23,17 +24,19 @@
 
 .small {
   height: 16px;
-  width: 16px;
+  min-width: 16px;
 }
 
 .medium {
   height: 24px;
   width: 24px;
+  min-width: 24px;
 }
 
 .large {
   height: 28px;
   width: 28px;
+  min-width: 28px;
 }
 
 /**
@@ -54,4 +57,13 @@
 .iconSpinner.large {
   width: 100px;
   height: 50px;
+}
+
+/**
+ * Flippable
+ * Icon should flip on dir="rtl"
+ */
+
+:global([dir="rtl"]) .icon.flippable svg {
+  transform: rotate(180deg);
 }

@@ -46,6 +46,14 @@
   justify-content: center;
   position: relative;
 
+  /*  If paneTitle is wrapped in a div
+      we add display:flex and vertcially centers the content */
+  & div {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Any span within paneTitle will get ellipsis applied to it */
   & span {
     white-space: nowrap;
     overflow: hidden;
@@ -58,6 +66,7 @@
   font-size: inherit;
   font-weight: 600;
   align-items: center;
+  letter-spacing: 0.04em;
 }
 
 .paneTitleLabel {

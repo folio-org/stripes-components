@@ -1,0 +1,7 @@
+@import '../variables.css';
+
+.settingsBackButton {
+  @media (--mediumUp) {
+    display: none;
+  }
+}
