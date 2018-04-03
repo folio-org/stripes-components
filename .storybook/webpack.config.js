@@ -14,6 +14,7 @@ const postCssNesting = require('postcss-nesting');
 const postCssCustomMedia = require('postcss-custom-media');
 const postCssMediaMinMax = require('postcss-media-minmax');
 const postCssColorFunction = require('postcss-color-function');
+const postCssFunctions = require('postcss-functions');
 
 module.exports = {
   entry: [
@@ -72,6 +73,9 @@ module.exports = {
                 postCssCustomMedia(),
                 postCssMediaMinMax(),
                 postCssColorFunction(),
+                postCssFunctions({
+                  glob: path.join(path.resolve(), 'lib/sharedStyles/functions', '*.js'),
+                }),
               ],
             },
           },

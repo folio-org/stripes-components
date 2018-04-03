@@ -15,7 +15,7 @@
 }
 
 .DropdownMenuTether {
-  z-index: 1000;
+  z-index: stripesZIndex('dropdownMenuTether');
   display: none;
   float: left;
   min-width: 90vw;
