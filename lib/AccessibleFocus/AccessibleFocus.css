@@ -21,8 +21,6 @@
   z-index: 1;
 }
 
-
-
 .accessibleFocusRoot.flex {
   display: flex;
 }
@@ -87,7 +85,7 @@
 }
 
 /* Focus dot start */
-[dir="ltr"] .accessibleFocusRoot.focusDotPositionStart::after {
+:not([dir="rtl"]) .accessibleFocusRoot.focusDotPositionStart::after {
   left: var(--focus-dot-offset-default);
   top: 50%;
 }
@@ -98,7 +96,7 @@
 }
 
 /* Focus dot end */
-[dir="ltr"] .accessibleFocusRoot.focusDotPositionEnd::after {
+:not([dir="rtl"]) .accessibleFocusRoot.focusDotPositionEnd::after {
   right: var(--focus-dot-offset-default);
   top: 50%;
 }
@@ -127,30 +125,30 @@
  */
 
 /* small focus dot offset */
-[dir="ltr"] .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetSmall::after { left: var(--focus-dot-offset-small); }
+:not([dir="rtl"]) .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetSmall::after { left: var(--focus-dot-offset-small); }
 [dir="rtl"] .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetSmall::after { right: var(--focus-dot-offset-small); }
 
-[dir="ltr"] .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetSmall::after { right: var(--focus-dot-offset-small); }
+:not([dir="rtl"]) .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetSmall::after { right: var(--focus-dot-offset-small); }
 [dir="rtl"] .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetSmall::after { left: var(--focus-dot-offset-small); }
 
 .accessibleFocusRoot.focusDotPositionTop.focusDotOffsetSmall::after { top: var(--focus-dot-offset-small); }
 .accessibleFocusRoot.focusDotPositionBottom.focusDotOffsetSmall::after { bottom: var(--focus-dot-offset-small); }
 
 /* medium focus dot offset */
-[dir="ltr"] .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetMedium::after { left: var(--focus-dot-offset-medium); }
+:not([dir="rtl"]) .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetMedium::after { left: var(--focus-dot-offset-medium); }
 [dir="rtl"] .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetMedium::after { right: var(--focus-dot-offset-medium); }
 
-[dir="ltr"] .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetMedium::after { right: var(--focus-dot-offset-medium); }
+:not([dir="rtl"]) .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetMedium::after { right: var(--focus-dot-offset-medium); }
 [dir="rtl"] .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetMedium::after { left: var(--focus-dot-offset-medium); }
 
 .accessibleFocusRoot.focusDotPositionTop.focusDotOffsetMedium::after { top: var(--focus-dot-offset-medium); }
 .accessibleFocusRoot.focusDotPositionBottom.focusDotOffsetMedium::after { bottom: var(--focus-dot-offset-medium); }
 
 /* large focus dot offset */
-[dir="ltr"] .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetLarge::after { left: var(--focus-dot-offset-large); }
+:not([dir="rtl"]) .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetLarge::after { left: var(--focus-dot-offset-large); }
 [dir="rtl"] .accessibleFocusRoot.focusDotPositionStart.focusDotOffsetLarge::after { right: var(--focus-dot-offset-large); }
 
-[dir="ltr"] .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetLarge::after { right: var(--focus-dot-offset-large); }
+:not([dir="rtl"]) .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetLarge::after { right: var(--focus-dot-offset-large); }
 [dir="rtl"] .accessibleFocusRoot.focusDotPositionEnd.focusDotOffsetLarge::after { left: var(--focus-dot-offset-large); }
 
 .accessibleFocusRoot.focusDotPositionTop.focusDotOffsetLarge::after { top: var(--focus-dot-offset-large); }
@@ -262,23 +260,23 @@ a.accessibleFocusRoot.hasDot:active::after {
 }
 
 /* Apply to start only */
-[dir="ltr"] .accessibleFocusRoot.boxOffsetStartSmall::before { left: var(--box-offset-small); }
+:not([dir="rtl"]) .accessibleFocusRoot.boxOffsetStartSmall::before { left: var(--box-offset-small); }
 [dir="rtl"] .accessibleFocusRoot.boxOffsetStartSmall::before { right: var(--box-offset-small); }
 
-[dir="ltr"] .accessibleFocusRoot.boxOffsetStartMedium::before { left: var(--box-offset-medium); }
+:not([dir="rtl"]) .accessibleFocusRoot.boxOffsetStartMedium::before { left: var(--box-offset-medium); }
 [dir="rtl"] .accessibleFocusRoot.boxOffsetStartMedium::before { right: var(--box-offset-medium); }
 
-[dir="ltr"] .accessibleFocusRoot.boxOffsetStartLarge::before { left: var(--box-offset-large); }
+:not([dir="rtl"]) .accessibleFocusRoot.boxOffsetStartLarge::before { left: var(--box-offset-large); }
 [dir="rtl"] .accessibleFocusRoot.boxOffsetStartLarge::before { right: var(--box-offset-large); }
 
 /* Apply to end only */
-[dir="ltr"] .accessibleFocusRoot.boxOffsetEndSmall::before { right: var(--box-offset-small); }
+:not([dir="rtl"]) .accessibleFocusRoot.boxOffsetEndSmall::before { right: var(--box-offset-small); }
 [dir="rtl"] .accessibleFocusRoot.boxOffsetEndSmall::before { left: var(--box-offset-small); }
 
-[dir="ltr"] .accessibleFocusRoot.boxOffsetEndMedium::before { right: var(--box-offset-medium); }
+:not([dir="rtl"]) .accessibleFocusRoot.boxOffsetEndMedium::before { right: var(--box-offset-medium); }
 [dir="rtl"] .accessibleFocusRoot.boxOffsetEndMedium::before { left: var(--box-offset-medium); }
 
-[dir="ltr"] .accessibleFocusRoot.boxOffsetEndLarge::before { right: var(--box-offset-large); }
+:not([dir="rtl"]) .accessibleFocusRoot.boxOffsetEndLarge::before { right: var(--box-offset-large); }
 [dir="rtl"] .accessibleFocusRoot.boxOffsetEndLarge::before { left: var(--box-offset-large); }
 
 /* Apply to top only */
