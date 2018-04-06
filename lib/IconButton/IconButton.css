@@ -21,8 +21,13 @@
 }
 
 .iconButtonInner {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
   display: flex;
   align-items: center;
+}
+
+.mediumOffset {
+  composes: boxOffsetSmall from "../sharedStyles/AccessibleFocus.css";
 }
 
 /**
