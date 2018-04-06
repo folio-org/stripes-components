@@ -24,7 +24,7 @@
 }
 
 .row {
-  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
+  composes: accessibleFocusRoot hasDot focusDotPositionStart from "../sharedStyles/AccessibleFocus.css";
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
