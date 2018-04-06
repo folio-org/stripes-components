@@ -21,7 +21,9 @@
   margin: 0 6px;
 }
 
-label.radioLabel {
+.radioLabel {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
+  padding: 0 5px;
   position: relative;
   line-height: 20px;
   display: flex;
