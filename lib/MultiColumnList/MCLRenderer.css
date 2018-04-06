@@ -24,6 +24,7 @@
 }
 
 .row {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -53,29 +54,6 @@
     &::after {
       background-color: #fff;
     }
-  }
-
-  /* Hover and focus style */
-  &.isInteractive:hover:not(.selected),
-  &.isInteractive:focus:not(.selected) {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  &.isInteractive:hover,
-  &.isInteractive:focus {
-    outline: none;
-  }
-
-  &.isInteractive:hover,
-  &.isInteractive:focus {
-    cursor: pointer;
-  }
-
-  /* Active style */
-  &.isInteractive:active,
-  &.isInteractive:hover:active {
-    color: #fff;
-    background-color: var(--primary);
   }
 }
 
