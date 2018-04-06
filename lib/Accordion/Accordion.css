@@ -129,6 +129,7 @@
 }
 
 .headerInner {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
   width: 100%;
   display: flex;
   align-items: center;
