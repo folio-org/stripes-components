@@ -139,6 +139,7 @@
  * Filter set header
  */
 .filterSetHeader {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
   composes: header;
   border-radius: var(--radius 4px);
   height: var(--controlHeight 24px);
@@ -154,7 +155,8 @@
   }
 }
 
-.filterSetHeader.clearButtonVisible {
+.clearButtonVisible {
+  composes: boxOffsetEndSmall from "../sharedStyles/AccessibleFocus.css";
   width: auto;
 }
 
