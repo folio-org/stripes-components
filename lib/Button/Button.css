@@ -10,6 +10,7 @@
 }
 
 .button {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
   padding: 3px 10px 7px;
   height: var(--controlHeightSmall);
   text-align: center;
