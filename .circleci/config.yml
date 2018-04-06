@@ -27,7 +27,7 @@ jobs:
           at: ~/
       - run:
           name: Lint JS
-          command: yarn eslint lib
+          command: yarn eslint --max-warnings=0
 
   stylelint:
     docker:
@@ -37,7 +37,7 @@ jobs:
           at: ~/
       - run:
           name: Lint CSS
-          command: yarn stylelint lib/**/*.css
+          command: yarn stylelint
 
   test-chrome:
     docker:
