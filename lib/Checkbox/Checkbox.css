@@ -40,6 +40,8 @@
 }
 
 .checkboxLabel {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
+  padding: 0 5px;
   height: var(--controlHeight);
   display: flex;
   cursor: pointer;
@@ -53,6 +55,10 @@
     opacity: 0.65;
     cursor: not-allowed;
   }
+}
+
+.labelFocused {
+  composes: isFocused from "../sharedStyles/AccessibleFocus.css";
 }
 
 .formLabel {
@@ -142,25 +148,4 @@ input.checkboxInput:not(:checked) + .labelPseudo::after {
 /* input.checkboxInput:checked + label .labelPseudo::after { */
 input.checkboxInput:checked + .labelPseudo::after {
   opacity: 1;
-}
-
-/**
- * Alternative way of making focus work
- * Only until we can add id to input and htmlFor to label
- */
-.focusEl {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  display: none;
-}
-
-.focusEl div {
-  height: 100%;
-  width: 100%;
-}
-
-input.checkboxInput:focus + .labelPseudo + .focusEl {
-  display: block;
 }
