@@ -29,6 +29,8 @@
     ]
   },
   "devDependencies": {
+    "@bigtest/interaction": "^0.4.0",
+    "@bigtest/mocha": "^0.3.3",
     "@folio/eslint-config-stripes": "^1.1.0",
     "@folio/stripes-cli": "^1.0.100056",
     "@folio/stripes-core": "^2.9.4000220",
