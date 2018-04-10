@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Harness from './harness';
 
 function getCleanTestingRoot() {
   let $root = document.getElementById('root');
@@ -25,11 +24,3 @@ export function mount(component) {
     ReactDOM.render(component, getCleanTestingRoot(), resolve);
   });
 }
-
-export function mountWithHarness(component) {
-  return mount(
-    <Harness>
-      {component}
-    </Harness>
-  );
-};
