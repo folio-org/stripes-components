@@ -71,6 +71,7 @@
 * Numerous style updates to `<MultiColumnList>`, `<Button>`, `<Checkbox>` and other components.
 * Storybook resource added. Run `yarn storybook` to see component demos and documentation.
 * Pass a ref through to TextArea for access by a parent. Refs STSMACOM-4.
+* Add ability to pass custom filter to `<Selection>` component. Fixes STCOM-251.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
