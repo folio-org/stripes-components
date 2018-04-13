@@ -23,8 +23,12 @@
   }
 }
 
-.row {
+/* Row is interactive (clickable, hoverable and focusable etc.) */
+.isInteractive {
   composes: accessibleFocusRoot hasDot focusDotPositionStart from "../sharedStyles/AccessibleFocus.css";
+}
+
+.row {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
