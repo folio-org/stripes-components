@@ -41,6 +41,10 @@
     border-radius: var(--radius, 4px);
   }
 
+  &.marginBottom0 {
+    margin-bottom: 0;
+  }
+
   &.hasFeedback {
     margin-bottom: 0.4rem;
   }
