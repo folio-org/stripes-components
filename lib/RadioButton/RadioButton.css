@@ -44,6 +44,10 @@
   }
 }
 
+.labelFocused {
+  composes: isFocused from "../sharedStyles/AccessibleFocus.css";
+}
+
 .input {
   position: absolute;
   z-index: -1;
@@ -71,13 +75,13 @@
   transition: all 0.2s ease;
 }
 
-.input:not(:checked) + label.radioLabel .labelPseudo::after {
+.input:not(:checked) + .labelPseudo::after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-.input:checked + label.radioLabel .labelPseudo::after {
+.input:checked + .labelPseudo::after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
