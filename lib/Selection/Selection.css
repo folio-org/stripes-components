@@ -42,7 +42,8 @@
   }
 
   &.marginBottom0 {
-    margin-bottom: 0;
+    /* stylelint-disable-next-line length-zero-no-unit */
+    margin-bottom: 0px;
   }
 
   &.hasFeedback {
