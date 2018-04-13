@@ -5,6 +5,7 @@
 @import '../variables';
 
 .iconButton {
+  composes: accessibleFocusParent from "../sharedStyles/AccessibleFocus.css";
   position: relative;
   display: inline-flex;
   align-items: center;
