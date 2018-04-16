@@ -8,7 +8,7 @@ import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTRes
 //
 // For compatibility, false and true may be used for 0 and 1 respectively.
 //
-function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition, hiddenFilterConfig) {
+function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition) {
   return (queryParams, pathComponents, resourceValues, logger) => {
 
     const { qindex, filters, query, sort } = resourceValues.query || {};
@@ -45,7 +45,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       }
     }
 
-    const filterCql = filters2cql(filterConfig, filters, hiddenFilterConfig);
+    const filterCql = filters2cql(filterConfig, filters);
     if (filterCql) {
       if (cql) {
         cql = `(${cql}) and ${filterCql}`;
