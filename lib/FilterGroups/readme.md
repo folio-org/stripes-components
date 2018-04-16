@@ -27,7 +27,10 @@ const filterConfig = [
     label: 'Location',
     name: 'location',
     cql: 'location.name',
-    values: [{ name: 'Main Library', cql: 'main' }, 'Annex Library'],
+    values: [
+      { name: 'Library of Trantor', cql: 'trantor', hidden: true},
+      { name: 'Main Library', cql: 'main' },
+      'Annex Library'],
   },
 ];
 
@@ -88,12 +91,17 @@ containing two keys:
 
 * `name` -- the name used to display the filter on the page.
 * `cql` -- the value used when generating CQL queries.
+* `hidden` -- hide the value in the UI and always apply the filter
 
 In the example above, there are two filter groups, "Item Types" and
 "Location". All the values of the former are simple strings; one of
 the values of the latter is of the more complex form, using "Main
 Library" as the displayed value and just 'main' as the corresponding
-value to use in searches.
+value to use in searches. Additionally, the value with the name
+"Library of Trantor", which has the attribute `hidden: true` will
+not be exposed in the UI (i.e. there will not be a checkbox for it)
+but it will _always_ be applied to the `location` filters. Think of it
+as a hidden checkbox that is always checked.
 
 Each filter value has a "full name", made up of the group name, a
 period and the filter name itself. For example, in the configuration
@@ -188,5 +196,3 @@ The interpretation of the filters is as follows:
 
 In short, records are found if they match _any_ of the values for _all_ of
 the non-empty groups.
-
-
