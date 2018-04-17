@@ -17,6 +17,8 @@ backendDateStandard | string | parses to/from ISO 8601 standard by default befor
 id | string | id for date field - used in the "id" attribute of the text input | | false
 useFocus | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
 disabled | bool | if true, field will be disabled for focus or entry. | false | false
+ignoreLocalOffset | bool | if true, ignores the timezone setting and treats the date as UTC to display the date.
+| false | false. See below for more explanation
 readOnly | bool | if true, field will be readonly. 'Calendar' and 'clear' buttons will be omitted. | false | false
 value | string | date to be displayed in the textfield. In forms, this is supplied by the initialValues prop supplied to the form | "" | false
 onChange | func | Event handler to handle updates to the datefield text. | | false
@@ -46,3 +48,6 @@ Using the prop `passThroughValue` means that you expect a non-date string to be 
 ```
 <Field name="exampleDateReturned" label="Date returned" id="dateReturnDP" placeholder="Select Date" component={Datepicker} passThroughValue="Today"/>
 ```
+
+## ignoreLocalOffset
+If your date does not lean on time for validation (eg: Birthdates, that shouldn't change their value based on timezone), apply the "ignoreLocalOffset" prop to the datepicker, for it to use UTC in its produced value. For dates that lean on time (eg: expiryDate), ignore this prop.
