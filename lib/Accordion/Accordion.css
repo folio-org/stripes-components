@@ -111,6 +111,7 @@
 }
 
 .defaultCollapseButton {
+  composes: accessibleFocusParent from "../sharedStyles/AccessibleFocus.css";
   flex: 1;
   border: none;
   outline: none;
