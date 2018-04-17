@@ -2,6 +2,7 @@
 
 ## 3.0.0 (IN PROGRESS)
 
+* In `<Datepicker>`, added a new `ignoreLocalOffset` prop that ignores the tenant timezone and treats the date as UTC to display the date. Fixes UIORG-55
 * Adjust address read only view. Fixes STCOM-152.
 * `<FilterPaneSearch>` supports `searchableIndexes`, `selectedIndex` and `onChangeIndex` properties. Fixes STCOM-171.
 * Functions made by `makeQueryFunction` support the `qindex` parameter, which is interpreted as the name of the _only_ field to search. This allows us to support field-specific searching. Fixes STCOM-172.
@@ -41,6 +42,7 @@
 * Use country-code to country-name mapping in `<AddressFieldGroup>`. Fixes STCOM-242. Available from v2.0.8.
 * MCL should use column-titles, not column keys, for the aria-label field. Fixes STCOM-246. Available from v2.0.9.
 * Allow for selecting value programmatically in Selection component. Fixes STCOM-250.
+* `<FilterGroups>` support hidden constraints. Refs UIU-500. Available from v2.0.10.
 * Added AccessibleFocus styling which purpose is to achieve universal hover, focus and active styling for most clickable/focusable elements through a single source of CSS classes.
 * Updated all related components to use AccessibleFocus (Button, Checkbox, RadioButton, MCL, Accordion headers, IconButton etc.)
 * Removed refs in Accordion headers since they aren't needed anymore

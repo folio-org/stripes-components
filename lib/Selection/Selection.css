@@ -41,6 +41,11 @@
     border-radius: var(--radius, 4px);
   }
 
+  &.marginBottom0 {
+    /* stylelint-disable-next-line length-zero-no-unit */
+    margin-bottom: 0px;
+  }
+
   &.hasFeedback {
     margin-bottom: 0.4rem;
   }
