@@ -10,13 +10,16 @@
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
     "lint": "eslint lib && stylelint \"lib/**/*.css\"",
-    "test": "mocha --require babel-test-hook --require ./test/helpers.js --require ./test/dom.js --recursive --require ignore-styles",
+    "eslint": "eslint lib",
+    "stylelint": "stylelint \"lib/**/*.css\"",
+    "test": "stripes test karma",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "engines": {
     "node": ">=6.0.0"
   },
   "stripes": {
+    "type": "app",
     "actionNames": [
       "selectPreviousRow",
       "selectNextRow",
@@ -26,7 +29,10 @@
     ]
   },
   "devDependencies": {
+    "@bigtest/interaction": "^0.4.0",
+    "@bigtest/mocha": "^0.3.3",
     "@folio/eslint-config-stripes": "^1.1.0",
+    "@folio/stripes-cli": "^1.0.100056",
     "@storybook/addon-actions": "^3.2.16",
     "@storybook/addon-knobs": "^3.3.11",
     "@storybook/addon-options": "^3.2.15",
@@ -60,7 +66,7 @@
     "storybook-readme": "^3.2.0",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
-    "webpack": "1.11.0"
+    "webpack": "^3.4.1"
   },
   "dependencies": {
     "@folio/stripes-form": "^0.8.2",
