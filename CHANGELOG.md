@@ -44,6 +44,7 @@
 * Allow for selecting value programmatically in Selection component. Fixes STCOM-250.
 * `<FilterGroups>` support hidden constraints. Refs UIU-500. Available from v2.0.10.
 * Don't choke on undefined filters. Fixes UIU-470. Available from v2.0.11.
+* Fix `<ConfirmationModal>` scope. Fixes STCOM-255.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
