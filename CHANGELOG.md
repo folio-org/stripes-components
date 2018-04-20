@@ -46,6 +46,7 @@
 * Don't choke on undefined filters. Fixes UIU-470. Available from v2.0.11.
 * Fix `<ConfirmationModal>` scope. Fixes STCOM-255.
 * `<EditableList>` now autofocuses the first editable field when mounting an editable row. Fixes STCOM-256.
+* Added `<ErrorBoundary>` component to stop render() error propagation.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
