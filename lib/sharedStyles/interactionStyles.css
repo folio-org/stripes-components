@@ -1,0 +1,258 @@
+/**
+ * Universal Interaction Styles
+ * @variables-needs-updating
+ */
+
+@import '../variables.css';
+
+:root {
+  --focus-dot-offset-default: 4px;
+  --focus-dot-offset-small: -5px;
+  --focus-dot-offset-medium: -10px;
+  --focus-dot-offset-large: -15px;
+  --box-offset-small: -5px;
+  --box-offset-medium: -10px;
+  --box-offset-large: -15px;
+}
+
+.interactionStyles {
+  position: relative;
+  outline: none;
+  z-index: 1;
+}
+
+.interactionStyles * {
+  z-index: 2;
+}
+
+/**
+ * Disabled state
+ */
+.interactionStylesControl:disabled > .interactionStyles,
+.interactionStyles:disabled {
+  opacity: 0.5;
+  cursor: default;
+
+  &::after,
+  &::before {
+    display: none;
+  }
+}
+
+/**
+ * Focus/active pseudo element
+ */
+.interactionStyles::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-radius: var(--radius);
+  z-index: -1;
+}
+
+/**
+ * Focus Dot pseudo element
+ */
+.interactionStyles::after {
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transform: translateY(-50%) scale(1);
+  min-width: calc(var(--gutter) / 4.2);
+  width: calc(var(--gutter) / 4.2);
+  height: calc(var(--gutter) / 4.2);
+  border-radius: 999px;
+  display: block;
+  z-index: 2;
+  background-color: rgb(0, 0, 0);
+}
+
+/* Focus dot start */
+:not([dir="rtl"]) .interactionStyles.focusDotPositionStart::after {
+  left: var(--focus-dot-offset-default);
+  top: 50%;
+}
+
+[dir="rtl"] .interactionStyles.focusDotPositionStart::after {
+  right: var(--focus-dot-offset-default);
+  top: 50%;
+}
+
+/* Focus dot end */
+:not([dir="rtl"]) .interactionStyles.focusDotPositionEnd::after {
+  right: var(--focus-dot-offset-default);
+  top: 50%;
+}
+
+[dir="rtl"] .interactionStyles.focusDotPositionEnd::after {
+  left: var(--focus-dot-offset-default);
+  top: 50%;
+}
+
+/* Focus dot top */
+.interactionStyles.focusDotPositionTop::after {
+  top: var(--focus-dot-offset-default);
+  transform: translateX(-50%) scale(1);
+  left: 50%;
+}
+
+/* Focus dot bottom */
+.interactionStyles.focusDotPositionBottom::after {
+  bottom: var(--focus-dot-offset-default);
+  transform: translateX(-50%) scale(1);
+  left: 50%;
+}
+
+/**
+ * Focus Dot Offsets
+ */
+
+/* small focus dot offset */
+:not([dir="rtl"]) .interactionStyles.focusDotPositionStart.focusDotOffsetSmall::after { left: var(--focus-dot-offset-small); }
+[dir="rtl"] .interactionStyles.focusDotPositionStart.focusDotOffsetSmall::after { right: var(--focus-dot-offset-small); }
+
+:not([dir="rtl"]) .interactionStyles.focusDotPositionEnd.focusDotOffsetSmall::after { right: var(--focus-dot-offset-small); }
+[dir="rtl"] .interactionStyles.focusDotPositionEnd.focusDotOffsetSmall::after { left: var(--focus-dot-offset-small); }
+
+.interactionStyles.focusDotPositionTop.focusDotOffsetSmall::after { top: var(--focus-dot-offset-small); }
+.interactionStyles.focusDotPositionBottom.focusDotOffsetSmall::after { bottom: var(--focus-dot-offset-small); }
+
+/* medium focus dot offset */
+:not([dir="rtl"]) .interactionStyles.focusDotPositionStart.focusDotOffsetMedium::after { left: var(--focus-dot-offset-medium); }
+[dir="rtl"] .interactionStyles.focusDotPositionStart.focusDotOffsetMedium::after { right: var(--focus-dot-offset-medium); }
+
+:not([dir="rtl"]) .interactionStyles.focusDotPositionEnd.focusDotOffsetMedium::after { right: var(--focus-dot-offset-medium); }
+[dir="rtl"] .interactionStyles.focusDotPositionEnd.focusDotOffsetMedium::after { left: var(--focus-dot-offset-medium); }
+
+.interactionStyles.focusDotPositionTop.focusDotOffsetMedium::after { top: var(--focus-dot-offset-medium); }
+.interactionStyles.focusDotPositionBottom.focusDotOffsetMedium::after { bottom: var(--focus-dot-offset-medium); }
+
+/* large focus dot offset */
+:not([dir="rtl"]) .interactionStyles.focusDotPositionStart.focusDotOffsetLarge::after { left: var(--focus-dot-offset-large); }
+[dir="rtl"] .interactionStyles.focusDotPositionStart.focusDotOffsetLarge::after { right: var(--focus-dot-offset-large); }
+
+:not([dir="rtl"]) .interactionStyles.focusDotPositionEnd.focusDotOffsetLarge::after { right: var(--focus-dot-offset-large); }
+[dir="rtl"] .interactionStyles.focusDotPositionEnd.focusDotOffsetLarge::after { left: var(--focus-dot-offset-large); }
+
+.interactionStyles.focusDotPositionTop.focusDotOffsetLarge::after { top: var(--focus-dot-offset-large); }
+.interactionStyles.focusDotPositionBottom.focusDotOffsetLarge::after { bottom: var(--focus-dot-offset-large); }
+
+/**
+ * Hover
+ */
+
+.isHovered::before,
+.interactionStylesControl:hover > .interactionStyles::before,
+.interactionStyles:hover::before {
+  background: rgba(37, 118, 195, 0.2);
+}
+
+.interactionStyles:hover {
+  cursor: pointer;
+}
+
+/**
+ * Focus
+ */
+.isFocused::before,
+.interactionStylesControl:focus > .interactionStyles::before,
+.interactionStyles:focus::before {
+  background: rgba(37, 118, 195, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 3px rgba(37, 118, 195, 0.3);
+}
+
+.isFocused.hasDot::after,
+.interactionStylesControl:focus > .interactionStyles.hasDot::after,
+.interactionStyles.hasDot:focus::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/**
+ * Active
+ */
+.isActive,
+.interactionStylesControl:active > .interactionStyles,
+.interactionStyles:active {
+  color: #fff;
+  & * { color: #fff; }
+  & svg { fill: #fff; }
+}
+
+.isActive::before,
+.interactionStylesControl:active > .interactionStyles::before,
+.interactionStyles:active::before {
+  background: rgb(37, 118, 195);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
+}
+
+.interactionStyles.hasDot.isActive:active::after,
+.interactionStylesControl:active > .interactionStyles.hasDot::after,
+.interactionStyles.hasDot:active::after {
+  background-color: #fff;
+  visibility: visible;
+  opacity: 1;
+}
+
+/**
+ * Box Offset
+ */
+
+/* Apply to all sides */
+.interactionStyles.boxOffsetSmall::before {
+  left: var(--box-offset-small);
+  right: var(--box-offset-small);
+  top: var(--box-offset-small);
+  bottom: var(--box-offset-small);
+}
+
+.interactionStyles.boxOffsetMedium::before {
+  left: var(--box-offset-medium);
+  right: var(--box-offset-medium);
+  top: var(--box-offset-medium);
+  bottom: var(--box-offset-medium);
+}
+
+.interactionStyles.boxOffsetLarge::before {
+  left: var(--box-offset-large);
+  right: var(--box-offset-large);
+  top: var(--box-offset-large);
+  bottom: var(--box-offset-large);
+}
+
+/* Apply to start only */
+:not([dir="rtl"]) .interactionStyles.boxOffsetStartSmall::before { left: var(--box-offset-small); }
+[dir="rtl"] .interactionStyles.boxOffsetStartSmall::before { right: var(--box-offset-small); }
+
+:not([dir="rtl"]) .interactionStyles.boxOffsetStartMedium::before { left: var(--box-offset-medium); }
+[dir="rtl"] .interactionStyles.boxOffsetStartMedium::before { right: var(--box-offset-medium); }
+
+:not([dir="rtl"]) .interactionStyles.boxOffsetStartLarge::before { left: var(--box-offset-large); }
+[dir="rtl"] .interactionStyles.boxOffsetStartLarge::before { right: var(--box-offset-large); }
+
+/* Apply to end only */
+:not([dir="rtl"]) .interactionStyles.boxOffsetEndSmall::before { right: var(--box-offset-small); }
+[dir="rtl"] .interactionStyles.boxOffsetEndSmall::before { left: var(--box-offset-small); }
+
+:not([dir="rtl"]) .interactionStyles.boxOffsetEndMedium::before { right: var(--box-offset-medium); }
+[dir="rtl"] .interactionStyles.boxOffsetEndMedium::before { left: var(--box-offset-medium); }
+
+:not([dir="rtl"]) .interactionStyles.boxOffsetEndLarge::before { right: var(--box-offset-large); }
+[dir="rtl"] .interactionStyles.boxOffsetEndLarge::before { left: var(--box-offset-large); }
+
+/* Apply to top only */
+.interactionStyles.boxOffsetTopSmall::before { top: var(--box-offset-small); }
+.interactionStyles.boxOffsetTopMedium::before { top: var(--box-offset-medium); }
+.interactionStyles.boxOffsetTopLarge::before { top: var(--box-offset-large); }
+
+/* Apply to bottom only */
+.interactionStyles.boxOffsetBottomSmall::before { bottom: var(--box-offset-small); }
+.interactionStyles.boxOffsetBottomMedium::before { bottom: var(--box-offset-medium); }
+.interactionStyles.boxOffsetBottomLarge::before { bottom: var(--box-offset-large); }

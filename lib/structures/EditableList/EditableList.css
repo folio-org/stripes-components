@@ -16,6 +16,7 @@
   border-radius: 8px;
   background-color: #efefef;
   margin-bottom: 4px;
+  min-height: 40px;
 }
 
 .editListHeaders {
