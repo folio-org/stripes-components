@@ -20,6 +20,17 @@
   &.isBold {
     font-weight: 600;
   }
+
+  /* Flex */
+  &.flex {
+    display: flex;
+  }
+
+  /* Block */
+  &.block {
+    display: block;
+    width: 100%;
+  }
 }
 
 /**
