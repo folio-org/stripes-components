@@ -23,4 +23,6 @@
 
 .placeholder {
   fill: #999;
+  width: 100%;
+  height: auto;
 }
