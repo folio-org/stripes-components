@@ -44,6 +44,9 @@
 * Allow for selecting value programmatically in Selection component. Fixes STCOM-250.
 * `<FilterGroups>` support hidden constraints. Refs UIU-500. Available from v2.0.10.
 * Don't choke on undefined filters. Fixes UIU-470. Available from v2.0.11.
+* Fix `<ConfirmationModal>` scope. Fixes STCOM-255.
+* `<EditableList>` now autofocuses the first editable field when mounting an editable row. Fixes STCOM-256.
+* Added `<ErrorBoundary>` component to stop render() error propagation.
 * Added AccessibleFocus styling which purpose is to achieve universal hover, focus and active styling for most clickable/focusable elements through a single source of CSS classes.
 * Updated all related components to use AccessibleFocus (Button, Checkbox, RadioButton, MCL, Accordion headers, IconButton etc.)
 * Removed refs in Accordion headers since they aren't needed anymore

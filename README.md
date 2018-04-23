@@ -50,7 +50,7 @@ Component | doc | categories
 [`<Dropdown>`](lib/Dropdown) | [doc](lib/Dropdown/readme.md) | control
 [`<DropdownMenu>`](lib/DropdownMenu) | | control
 [`<EntrySelector>`](lib/EntrySelector) | | control
-[`<FilterControlGroup>`](lib/FilterControlGroup) | | control
+[`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
 [`<FilterGroups>`](lib/FilterGroups) | [doc](lib/FilterGroups/readme.md) | control
 [`<FilterPane>`](lib/FilterPane) | [doc](lib/FilterPane/readme.md) | structure
 [`<FilterPaneSearch>`](lib/FilterPaneSearch) | [doc](lib/FilterPaneSearch/readme.md) | obsolete

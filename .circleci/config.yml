@@ -1,0 +1,73 @@
+version: 2.0
+
+jobs:
+  checkout-and-install:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: package-v1-{{ checksum "package.lock" }}
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - persist_to_workspace:
+          root: ~/
+          paths: project
+      - save_cache:
+          key: package-v1-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/project/node_modules
+
+  eslint:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Lint JS
+          command: yarn eslint --max-warnings=0
+
+  stylelint:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Lint CSS
+          command: yarn stylelint
+
+  test-chrome:
+    docker:
+      - image: circleci/node:latest-browsers
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Run tests
+          command: yarn test --karma.singleRun --karma.browsers=Chrome
+      - store_test_results:
+          path: ./artifacts/junit
+      - store_artifacts:
+          name: Store junit test report
+          path: ./artifacts/junit
+      - store_artifacts:
+          name: Store code coverage report
+          path: ./artifacts/coverage/lcov.txt
+
+workflows:
+  version: 2
+  push:
+    jobs:
+      - checkout-and-install
+      - eslint:
+          requires:
+            - checkout-and-install
+      - stylelint:
+          requires:
+            - checkout-and-install
+      - test-chrome:
+          requires:
+            - checkout-and-install
