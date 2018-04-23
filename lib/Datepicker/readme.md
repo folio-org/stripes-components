@@ -16,6 +16,7 @@ label | string | visible field label | | false
 backendDateStandard | string | parses to/from ISO 8601 standard by default before committing value. | "ISO 8601" | false
 id | string | id for date field - used in the "id" attribute of the text input | | false
 useFocus | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
+autoFocus | bool | If this prop is `true`, component will automatically focus on mount | | 
 disabled | bool | if true, field will be disabled for focus or entry. | false | false
 ignoreLocalOffset | bool | if true, ignores the timezone setting and treats the date as UTC to display the date.
 | false | false. See below for more explanation

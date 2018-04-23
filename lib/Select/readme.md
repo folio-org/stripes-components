@@ -20,6 +20,7 @@ Name | type | description | default | required
 label | string | Adds an html `<label>` tag container a string to the element. | | false
 id | string | HTML id attribute applied to input - will also set the HtmlFor attribute of the label. |  | false
 dataOptions | array | Array of objects for options in the shape of `{value:<string>, label: <string>, disabled:<bool>}` |  | required
+autoFocus | bool | If this prop is `true`, `<select>` will automatically focus on mount | `false` | false
 placeHolder | string | Sets a disabled first option in the options list. |  | false
 required | bool | Sets the required attribute on the select field. | false | false
 rounded | bool | Applies a border-radius to the Select input | false | false

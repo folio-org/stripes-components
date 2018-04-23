@@ -28,3 +28,4 @@ badgeCount | string / number | Display a small number badge on the IconButton
 id | string | Adds an id attribute to the button
 title | string | Adds a title attribute to the button
 ariaLabel | string | Adds an aria label to the button
+autoFocus | bool | If this prop is `true`, component will automatically focus on mount | | 

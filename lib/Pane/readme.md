@@ -91,6 +91,7 @@ dismissible | bool or "last"| If true, pane will render a close (&times;) button
 firstMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the beginning of the header. |  |
 lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the far end of the header. |  |
 actionMenuItems | array | Array of objects that will form an action menu which can be toggled by clicking on the pane header title |  |
+actionMenuAutoFocus | bool | If this prop is `true`, the `actionMenu` will automatically focus when the Pane mounts | | 
 onClose | func | Callback fired when the pane is closed using its dismiss button. |  |
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  |
 appIcon | object | Render an AppIcon in the PaneHeader by passing an object with a key of `app` that matches an installed FOLIO app. Optionally you can pass a `key` in the same object which refers to a specific icon inside an app with the key of `app`, e.g. { app: 'instances', key: 'items' } |  |
