@@ -42,7 +42,7 @@
 * Use country-code to country-name mapping in `<AddressFieldGroup>`. Fixes STCOM-242. Available from v2.0.8.
 * MCL should use column-titles, not column keys, for the aria-label field. Fixes STCOM-246. Available from v2.0.9.
 * Allow for selecting value programmatically in Selection component. Fixes STCOM-250.
-* `<FilterGroups>` support hidden constraints. Refs UIU-500. Available from v2.0.10.
+* `<FilterGroups>` support hidden constraints. Refs UIU-400. Available from v2.0.10.
 * Don't choke on undefined filters. Fixes UIU-470. Available from v2.0.11.
 * Fix `<ConfirmationModal>` scope. Fixes STCOM-255.
 * `<EditableList>` now autofocuses the first editable field when mounting an editable row. Fixes STCOM-256.
