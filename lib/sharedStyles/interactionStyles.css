@@ -61,18 +61,13 @@
   content: "";
   opacity: 0;
   visibility: hidden;
-  font-size: 0.7em;
   position: absolute;
   transform: translateY(-50%) scale(1);
   min-width: calc(var(--gutter) / 4.2);
   width: calc(var(--gutter) / 4.2);
   height: calc(var(--gutter) / 4.2);
   border-radius: 999px;
-  display: flex;
-  flex-shrink: 0;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  display: block;
   z-index: 2;
   background-color: rgb(0, 0, 0);
 }
