@@ -5,6 +5,7 @@
 @import '../variables';
 
 .iconButton {
+  composes: accessibleFocusParent from "../sharedStyles/AccessibleFocus.css";
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -18,21 +19,16 @@
   &.hasBadge {
     width: auto;
   }
+}
 
-  &:hover {
-    text-decoration: none;
-    opacity: 0.8;
-  }
+.iconButtonInner {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
+  display: flex;
+  align-items: center;
+}
 
-  &:active,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: default;
-  }
+.mediumOffset {
+  composes: boxOffsetSmall from "../sharedStyles/AccessibleFocus.css";
 }
 
 /**

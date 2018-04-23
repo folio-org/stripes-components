@@ -107,9 +107,11 @@
 .headerDefaultContentRight {
   flex-grow: 2;
   flex-shrink: 0;
+  padding: 0 4px;
 }
 
 .defaultCollapseButton {
+  composes: accessibleFocusParent from "../sharedStyles/AccessibleFocus.css";
   flex: 1;
   border: none;
   outline: none;
@@ -119,6 +121,7 @@
   background-color: transparent;
   font-size: 18px;
   min-height: 44px;
+  width: 100%;
 
   &:hover,
   &:focus {
@@ -126,10 +129,18 @@
   }
 }
 
+.headerInner {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 /**
  * Filter set header
  */
 .filterSetHeader {
+  composes: accessibleFocusRoot from "../sharedStyles/AccessibleFocus.css";
   composes: header;
   border-radius: var(--radius 4px);
   height: var(--controlHeight 24px);
@@ -142,22 +153,15 @@
 
   &:focus {
     outline: none;
-
-    /* animation-name: focusFlash;
-    animation-duration: 2s;
-    background-color: var(--bgHover); */
   }
 }
 
-.filterSetHeader.clearButtonVisible {
+.clearButtonVisible {
+  composes: boxOffsetEndSmall from "../sharedStyles/AccessibleFocus.css";
   width: auto;
 }
 
-.headerWrapper .clearIconButton {
-  height: 14px;
-}
-
-.filterSetLabel {
+.filterSetlabel {
   font-weight: 600;
   color: #000;
   pointer-events: none;

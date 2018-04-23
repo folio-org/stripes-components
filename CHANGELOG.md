@@ -47,6 +47,13 @@
 * Fix `<ConfirmationModal>` scope. Fixes STCOM-255.
 * `<EditableList>` now autofocuses the first editable field when mounting an editable row. Fixes STCOM-256.
 * Added `<ErrorBoundary>` component to stop render() error propagation.
+* Added AccessibleFocus styling which purpose is to achieve universal hover, focus and active styling for most clickable/focusable elements through a single source of CSS classes.
+* Updated all related components to use AccessibleFocus (Button, Checkbox, RadioButton, MCL, Accordion headers, IconButton etc.)
+* Removed refs in Accordion headers since they aren't needed anymore
+* Added IconButton to CalloutElement instead of regular button
+* Added NavListItem component for NavListSection instead of using arbitrary children. This allows us to have better control over the NavList component styling and functionality. Minor update to NavListSection to match this change.
+* Added stripped styling to NavListItem (optional)
+* Added a test for Checkbox to make sure it works with both redux-form (input.onChange) and default prop (onChange)
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)

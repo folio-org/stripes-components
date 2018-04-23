@@ -4,4 +4,5 @@
 yarn.lock
 atom.cson
 .DS_Store
+/.out
 yarn-error.log
