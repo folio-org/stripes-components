@@ -7,8 +7,8 @@
 .checkbox {
   display: flex;
   align-items: center;
-  transition: background-color 0.2s ease;
   position: relative;
+  color: var(--labelColor);
 
   &.fullWidth {
     width: 100%;
@@ -18,57 +18,39 @@
     margin-bottom: 0;
   }
 
-  &.hover {
-    border-radius: 6px;
-
-    &:hover {
-      background-color: #efefef;
-    }
-  }
-
-  &.hovered {
-    background-color: #efefef;
-  }
-
+  /**
+   * Inline checkbox
+   */
   &.inline {
     display: inline-flex;
-    margin-right: 4px;
 
-    & label.checkboxLabel {
-      height: var(--checkbox-size);
-      width: var(--checkbox-size);
-      padding: 0;
-      min-height: 0;
+    /**
+     * If we only render the checkbox (no label)
+     */
 
-      &::before,
-      &::after {
-        margin-top: 0;
+    &.noLabel {
+      height: auto;
+
+      & label.checkboxLabel {
+        height: auto;
+        padding: 6px;
+        margin: 0;
       }
     }
   }
 }
 
 .checkboxLabel {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  padding: 0 5px;
+  height: var(--controlHeight);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   cursor: pointer;
+  align-items: center;
   flex-grow: 2;
-  padding: 0 2px;
-  font-weight: 600;
-  color: var(--labelColor);
   position: relative;
-  padding-left: 22px;
   line-height: 20px;
-  min-height: 24px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.65;
-  }
+  border-radius: var(--radius);
 
   &.disabledLabel {
     opacity: 0.65;
@@ -76,11 +58,19 @@
   }
 }
 
+.labelFocused {
+  composes: isFocused from "../sharedStyles/interactionStyles.css";
+}
+
 .formLabel {
   composes: checkboxLabel;
   font-weight: bold;
   text-transform: Uppercase;
-  color: var(--labelColor);
+}
+
+.labelText {
+  margin: 0 6px;
+  font-weight: 600;
 }
 
 /* fix for shrinkage issues with checkbox as a flex-child */
@@ -108,32 +98,19 @@
 /**
  * Custom input styling
  */
-input[type=checkbox].checkboxInput {
+input.checkboxInput {
   margin: 0 9px;
   margin-bottom: 2px;
-
-  /* &:focus + label.checkboxLabel {
-    opacity: 0.8;
-  } */
 }
 
-input[type=checkbox].checkboxInput:checked,
-input[type=checkbox].checkboxInput:not(:checked) {
+input.checkboxInput {
   position: absolute;
-  left: -10px;
+  clip: rect(1px, 1px, 1px, 1px);
+  z-index: -1;
 }
 
-.checkboxLabel::before,
-.checkboxLabel::after {
-  margin-top: 5px;
-}
-
-input[type=checkbox].checkboxInput:checked + label.checkboxLabel::before,
-input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
+.labelPseudo {
+  position: relative;
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   border: 1px solid var(--inputBorderColor);
@@ -141,42 +118,34 @@ input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::before {
   background: #f7f7f7;
 }
 
-/* focus styles */
-input[type=checkbox].checkboxInput:checked:focus + label.checkboxLabel::before,
-input[type=checkbox].checkboxInput:not(:checked):focus + label.checkboxLabel::before {
-  border-color: var(--primary);
-}
-
-input[type=checkbox].checkboxInput:disabled:focus + label.checkboxLabel::before {
-  opacity: 0.65;
-  border-color: var(--primary);
-}
-
 /* disabled styles */
-input[type=checkbox]:disabled + label.checkboxLabel::before {
+input.checkboxInput:disabled .labelPseudo {
   opacity: 0.65;
 }
 
-input[type=checkbox].checkboxInput:checked + label.checkboxLabel::after,
-input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::after {
+/* input.checkboxInput:checked + label.checkboxLabel .labelPseudo::after { */
+input.checkboxInput:checked + .labelPseudo::after {
   content: '';
   width: 6px;
   height: 3px;
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 1px;
+  left: 1px;
   border: 3px solid var(--labelColor);
   border-top: none;
   border-right: none;
   background: transparent;
   transform: rotate(-45deg);
-  transition: all 0.1s ease;
+  opacity: 0;
+  z-index: 5;
 }
 
-input[type=checkbox].checkboxInput:not(:checked) + label.checkboxLabel::after {
+/* input.checkboxInput:not(:checked) + label .labelPseudo::after { */
+input.checkboxInput:not(:checked) + .labelPseudo::after {
   opacity: 0;
 }
 
-input[type=checkbox].checkboxInput:checked + label.checkboxLabel::after {
+/* input.checkboxInput:checked + label .labelPseudo::after { */
+input.checkboxInput:checked + .labelPseudo::after {
   opacity: 1;
 }

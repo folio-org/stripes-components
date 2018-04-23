@@ -1,15 +1,5 @@
 @import '../variables.css';
 
-@keyframes hoverFlash {
-  from { background-color: var(--bgHover); }
-  to { background-color: var(--bg); }
-}
-
-@keyframes focusFlash {
-  from { background-color: color(var(--bgHover) shade(10%)); }
-  to { background-color: var(--bgHover); }
-}
-
 .accordion {
   width: 100%;
 }
@@ -72,7 +62,6 @@
 .labelArea {
   display: flex;
   flex-grow: 2;
-  color: var(--subLabelColor #999);
   font-weight: 600;
   justify-content: flex-start;
 }
@@ -107,9 +96,11 @@
 .headerDefaultContentRight {
   flex-grow: 2;
   flex-shrink: 0;
+  padding: 0 4px;
 }
 
 .defaultCollapseButton {
+  composes: interactionStylesControl from "../sharedStyles/interactionStyles.css";
   flex: 1;
   border: none;
   outline: none;
@@ -119,6 +110,8 @@
   background-color: transparent;
   font-size: 18px;
   min-height: 44px;
+  width: 100%;
+  color: var(--subLabelColor #999);
 
   &:hover,
   &:focus {
@@ -126,10 +119,18 @@
   }
 }
 
+.headerInner {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 /**
  * Filter set header
  */
 .filterSetHeader {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   composes: header;
   border-radius: var(--radius 4px);
   height: var(--controlHeight 24px);
@@ -142,22 +143,15 @@
 
   &:focus {
     outline: none;
-
-    /* animation-name: focusFlash;
-    animation-duration: 2s;
-    background-color: var(--bgHover); */
   }
 }
 
-.filterSetHeader.clearButtonVisible {
+.clearButtonVisible {
+  composes: boxOffsetEndSmall from "../sharedStyles/interactionStyles.css";
   width: auto;
 }
 
-.headerWrapper .clearIconButton {
-  height: 14px;
-}
-
-.filterSetLabel {
+.filterSetlabel {
   font-weight: 600;
   color: #000;
   pointer-events: none;

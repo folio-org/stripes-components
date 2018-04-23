@@ -2,12 +2,15 @@
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.05);
   margin-bottom: 10px;
-  padding-bottom: 6px;
 }
 
 .metaSectionContent {
-  padding: 0 26px;
+  padding: 3px 26px;
   color: #333;
+}
+
+.metaSectionContentBlock {
+  margin: 4px 0;
 }
 
 .headerWrapper {
@@ -15,24 +18,15 @@
   display: flex;
   align-items: center;
   min-height: 24px;
+}
 
-  /* transition: background-color 0.3s; */
-
-  & > button {
-    flex-shrink: 0;
-    padding: 6px 6px 0;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &:focus {
-    outline: none;
-  }
+.metaHeaderButton {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  flex-shrink: 0;
+  padding: 6px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
 }
 
 .metaHeader {
@@ -43,10 +37,6 @@
 
   &:focus {
     outline: none;
-
-    /* animation-name: focusFlash;
-    animation-duration: 2s;
-    background-color: var(--bgHover); */
   }
 }
 
