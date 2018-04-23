@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  color: var(--labelColor);
 
   &.fullWidth {
     width: 100%;
@@ -65,13 +66,11 @@
   composes: checkboxLabel;
   font-weight: bold;
   text-transform: Uppercase;
-  color: var(--labelColor);
 }
 
 .labelText {
   margin: 0 6px;
   font-weight: 600;
-  color: var(--labelColor);
 }
 
 /* fix for shrinkage issues with checkbox as a flex-child */

@@ -50,7 +50,7 @@
     color: #fff;
     background-color: rgba(0, 0, 0, 0.62);
 
-    /** AccessibleFocus styling */
+    /** For universal interaction styling */
     &::after {
       background-color: #fff;
     }

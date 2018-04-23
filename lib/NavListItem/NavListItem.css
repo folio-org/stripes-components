@@ -9,7 +9,7 @@
 }
 
 .NavListItem {
-  composes: accessibleFocusRoot hasDot focusDotPositionStart from "../sharedStyles/AccessibleFocus.css";
+  composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
   display: block;
   width: 100%;
   padding: 5px 10px;
@@ -35,7 +35,7 @@
       color: #fff;
     }
 
-    /* Custom AccessibleFocus styling */
+    /* Custom universal interaction styling */
     &::after {
       background-color: #fff;
     }

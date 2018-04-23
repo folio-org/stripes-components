@@ -182,15 +182,15 @@
 /**
  * Active
  */
-.isActive:not([disabled]),
-.interactionStylesControl:not([disabled]):active > .interactionStyles,
-.interactionStyles:not([disabled]):active {
+.isActive,
+.interactionStylesControl:active > .interactionStyles,
+.interactionStyles:active {
   color: #fff;
   & * { color: #fff; }
   & svg { fill: #fff; }
 }
 
-.isActive:active::before,
+.isActive::before,
 .interactionStylesControl:active > .interactionStyles::before,
 .interactionStyles:active::before {
   background: rgb(37, 118, 195);

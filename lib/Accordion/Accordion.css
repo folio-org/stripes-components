@@ -62,7 +62,6 @@
 .labelArea {
   display: flex;
   flex-grow: 2;
-  color: var(--subLabelColor #999);
   font-weight: 600;
   justify-content: flex-start;
 }
@@ -112,6 +111,7 @@
   font-size: 18px;
   min-height: 44px;
   width: 100%;
+  color: var(--subLabelColor #999);
 
   &:hover,
   &:focus {
