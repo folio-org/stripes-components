@@ -79,6 +79,8 @@ Name | type | description | default | required
 `onChange` | function | Callback function that will receive the control's current value and the onChange event object. `fn(e, value)` **Not necessary if using redux-form**, but it will still work if callback from a change is needed.
 `onFilter` | function | Callback function used for custom data filtering | | false | 
 `useValidStyle` | bool | if true, "success" styles will be applied to control if it contains a valid value `onBlur` (using redux-form validation.) | false |
+`autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | | 
+
 ## Usage in Redux-form
 Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.
 ```

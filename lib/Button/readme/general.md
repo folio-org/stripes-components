@@ -31,3 +31,4 @@ onClick | function | Adds an onClick handler |
 role | string | Adds [role-attribute](https://www.w3.org/wiki/PF/XTech/HTML5/RoleAttribute) to the button |,
 children | node / array of nodes | Adds child node(s) to button |
 buttonRef | string | Adds ref-attribute |
+autoFocus | bool | If this prop is `true`, component will automatically focus on mount | | 
