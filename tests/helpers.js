@@ -24,3 +24,7 @@ export function mount(component) {
     ReactDOM.render(component, getCleanTestingRoot(), resolve);
   });
 }
+
+export function selectorFromClassnameString(str) {
+  return str.replace(/\s/, '.');
+}
