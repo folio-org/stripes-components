@@ -112,6 +112,7 @@ onToggle | func | callback for toggling the accordion open/closed | |
 header | node, func | used to render a custom accordion header | |
 contentRef | func | reference function for accessing the accordion content's DOM element. | |
 children | node, array of nodes | content of the accordion | |
+autoFocus | bool | If this prop is `true`, Accordion toggle/label will automatically focus on mount | | 
 
 ## Expand or Collapse All
 The `<ExpandAllButton>` component can be added to a stack of controlled accordions to provide a helper for performing collapse/expansions of the full stack all at once. The `onToggle` prop for `<ExpandAllButton>` takes a callback using the accordionStatus object that can be used to update the application's state.
