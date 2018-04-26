@@ -50,6 +50,7 @@
 * Added universal interaction styles to all relevant components.
 * Various updates in relation to new universal interaction styles.
 * Restore checkbox IDs, which were erroneously removed. Available from v2.0.13.
+* Add ability to style cancel btn on confirm modal. Part of UIIN-121.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
