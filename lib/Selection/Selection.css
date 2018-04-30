@@ -37,10 +37,6 @@
     border-color: var(--primary, #0c577f);
   }
 
-  &.rounded {
-    border-radius: var(--radius, 4px);
-  }
-
   &.marginBottom0 {
     /* stylelint-disable-next-line length-zero-no-unit */
     margin-bottom: 0px;
@@ -180,10 +176,6 @@
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
-
-  &.rounded {
-    border-radius: var(--radius);
-  }
 }
 
 .SelectionFilterInline {
