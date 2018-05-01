@@ -45,6 +45,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  pointer-events: none;
 
   /*  If paneTitle is wrapped in a div
       we add display:flex and vertcially centers the content */
@@ -71,6 +72,7 @@
 
 .paneTitleLabel {
   margin: 0 4px;
+  outline: 0;
 }
 
 /* Pane sub */
@@ -91,6 +93,7 @@
 
 /* Pane action menu */
 .paneHeaderCenterButton {
+  composes: interactionStyles from '../sharedStyles/interactionStyles.css';
   outline: 0;
   max-width: 100%;
   padding: 2px 5px;
