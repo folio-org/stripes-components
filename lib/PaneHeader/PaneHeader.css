@@ -98,13 +98,4 @@
   max-width: 100%;
   padding: 2px 5px;
   border-radius: var(--radius);
-
-  &:hover {
-    opacity: 0.8;
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-
-  &:active {
-    opacity: 0.7;
-  }
 }
