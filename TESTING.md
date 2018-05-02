@@ -1,6 +1,6 @@
 # Testing Components
 
-Component tests can be run by navigating to your `stripes-components` folder and running 
+Component tests can be run by navigating to your `stripes-components` folder and running
 ```
 yarn test
 ```
@@ -19,9 +19,9 @@ Button
 |  |-Button-test.js
 ```
 ## Interactors
-An Interactor is a set quick values based on reading from and interaction with the rendered DOM. This employs [bigTest/interaction](https://github.com/thefrontside/bigtest/tree/master/packages/interaction) for setting up checks for event handlers, DOM attributes, classnames, etc.
+An Interactor is a set quick values based on reading from and interaction with the rendered DOM. This employs [bigtest/interactor](https://github.com/bigtestjs/interactor) for setting up checks for event handlers, DOM attributes, classnames, etc.
 See the [Button Interactor](lib/Button/tests/interactor.js) for an example.
 
 ## expect(tests).to.be.simple
-Tests are mocha style, employing [bigtest/mocha](https://github.com/thefrontside/bigtest/tree/master/packages/mocha) to test for DOM updates asynchronously without having to worry about calling `wait(###)` to hope DOM updates have happened by the time your assertion is checked.
-This requires a slighly different style to writing tests as outlined in bigtest/mocha's [documentation on writing tests](https://github.com/thefrontside/bigtest/tree/master/packages/mocha#writing-tests)
+Tests are mocha style, employing [bigtest/mocha](https://github.com/bigtestjs/mocha) to test for DOM updates asynchronously without having to worry about calling `wait(###)` to hope DOM updates have happened by the time your assertion is checked.
+This requires a slighly different style to writing tests as outlined in bigtest/mocha's [documentation on writing tests](https://github.com/bigtestjs/mocha#writing-tests)
