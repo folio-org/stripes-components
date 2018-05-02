@@ -51,14 +51,13 @@ customFormatter = ({ option, searchTerm }) => {
 }
 
 // ...within the render function...
-  <Selection 
+  <Selection
     name="SelectionCountry"
     formatter={this.customFormatter}
-    onChange={this.handleChange} 
-    rounded 
-    label="Country" 
-    id="countrySelect" 
-    placeholder="Select country" 
+    onChange={this.handleChange}
+    label="Country"
+    id="countrySelect"
+    placeholder="Select country"
     dataOptions={countriesOptions}
   />
 ```
@@ -72,14 +71,13 @@ Name | type | description | default | required
 `label` | string | If provided, will render a `<label>` tag with an `htmlFor` attribute directed at the provided `id` prop. | |
 `emptyMessage` | string | Message to display filtering leaves the options list empty | 'No matching options' |
 `listMaxHeight` | string | Sets a style attribute on options list, setting a max-height. list will scroll if the options list is too long to fit. | '174px' |
-`formatter` | function |  Used to customize the formatting of options. The `<OptionSegment>` component enables control over filter highlighting. Formatter results are rendered within a flexbox `<div>`. | `DefaultOptionFormatter` | 
+`formatter` | function |  Used to customize the formatting of options. The `<OptionSegment>` component enables control over filter highlighting. Formatter results are rendered within a flexbox `<div>`. | `DefaultOptionFormatter` |
 `optionAlignment` | string | One of `start`, `end`, `outside`, `center`. Determines the alignment of OptionSegments and block elements that appear within the `formatter`.
-`rounded` | bool | Sets the 'rounded' style for the input (rounded corners via border-radius) | |
 `value` | string | Sets the value for the control. **Not necessary if using redux-form.** | |
 `onChange` | function | Callback function that will receive the control's current value and the onChange event object. `fn(e, value)` **Not necessary if using redux-form**, but it will still work if callback from a change is needed.
-`onFilter` | function | Callback function used for custom data filtering | | false | 
+`onFilter` | function | Callback function used for custom data filtering | | false |
 `useValidStyle` | bool | if true, "success" styles will be applied to control if it contains a valid value `onBlur` (using redux-form validation.) | false |
-`autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | | 
+`autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 
 ## Usage in Redux-form
 Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.
