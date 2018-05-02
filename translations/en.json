@@ -1,0 +1,13 @@
+{
+  "expandAll": "Expand all",
+  "collapseAll": "Collapse all",
+  "goToPreviousYear": "Go to previous year",
+  "goToPreviousMonth": "Go to previous month",
+  "goToNextYear": "Go to next year",
+  "goToNextMonth": "Go to next month",
+  "selectDay": "Select {dayOfWeek}, {date}",
+  "dateSelected": "{date} selected",
+  "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
+  "clearFieldValue": "Clear field value",
+  "showOrHideDatepicker": "Show/hide datepicker"
+}
