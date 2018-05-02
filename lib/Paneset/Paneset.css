@@ -9,6 +9,7 @@
   align-items: stretch;
   justify-content: flex-start;
   will-change: transform;
+  overflow: hidden;
 
   & .paneset,
   &.nested {
