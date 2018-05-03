@@ -1,8 +1,8 @@
-# Stripes-componetns FAQ
+# Stripes-components FAQ
 ## Module developers
 1. **Why should I use `stripes-components`?**
 
-   Stripes-components sets foundation for a cohesive feel/behavior experience among all ui modules within the FOLIO ecosystem. It gives high importance to accessibilty, adoption tenant-set themes, testability, and reuse across the board. Its goal is to facilitate module development with UI components that virtually snap together and provide the above functionalities as bonus.
+   Stripes-components sets foundation for a cohesive UI experience among all UI modules within the FOLIO ecosystem. It gives high importance to accessibilty, adoption tenant-set themes, testability, and reuse across the board. Its goal is to facilitate module development with UI components that virtually snap together and provide the above functionalities as bonus.
 
 2. **How do I find out what’s available in `stripes-components`?**
 
