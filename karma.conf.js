@@ -4,7 +4,7 @@ module.exports = (config) => {
   
     customLaunchers: {
       ChromeDocker: {
-        base: 'Chrome',
+        base: 'ChromeHeadless',
         flags: [
            '--no-sandbox',
            '--disable-web-security'
