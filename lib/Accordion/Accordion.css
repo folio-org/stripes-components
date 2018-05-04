@@ -9,9 +9,9 @@
      and makes the disabled background-color not run to the edges. These rules
      could become an issue if disabled Accordions become used with a parent
      that does not use major-padding. */
-  margin-left: calc(0 - var(--major-padding));
-  padding-left: var(--major-padding);
-  width: calc(100% + (2 * var(--major-padding)));
+  margin-left: calc(0 - var(--gutter));
+  padding-left: var(--gutter);
+  width: calc(100% + (2 * var(--gutter)));
   background-color: #f2f2f2;
 
   & .header {
@@ -24,7 +24,7 @@
  */
 
 .hasSeparator .headerWrapper {
-  border-top: 1px solid var(--minor-divider-color);
+  border-top: 1px solid var(--border-color-p2);
 }
 
 .headerWrapper {

@@ -4,7 +4,7 @@
   display: block;
   font-weight: var(--text-weight-basis);
   margin-bottom: 2px;
-  color: var(--subLabelColor);
+  color: var(--text-color-p2);
 }
 
 .kvRoot {

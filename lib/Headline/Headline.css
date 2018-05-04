@@ -13,7 +13,7 @@
 
   /* Faded */
   &.isFaded {
-    color: var(--subLabelColor);
+    color: var(--text-color-p2);
   }
 
   /* Bold */

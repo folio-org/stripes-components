@@ -38,7 +38,7 @@
 }
 
 .modalContent {
-  padding: var(--major-padding);
+  padding: var(--gutter);
   flex: 1 2 auto;
   overflow: auto;
   width: 100%;

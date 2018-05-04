@@ -4,6 +4,7 @@
   --border-color: rgba(0, 0, 0, 0.2);
   --border-color-p2: rgba(0, 0, 0, 0.1);
   --icon-color: rgba(0, 0, 0, 0.3);
+  --color-current: rgba(0, 0, 0, 0.62);
   --bg: #fcfcfc;
   --bgHover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
   --primary: #2b75bb;
@@ -12,26 +13,28 @@
   --danger: #900;
   --warn: #e27c3e;
   --success: #070;
-  --bodyColor: #000;
-  --labelColor: #333;
-  --subLabelColor: rgba(0, 0, 0, 0.62);
   --controlMarginBottom: 12px;
   --controlHeight: 24px;
   --radius: 6px;
-  --inputBorderColor: #acacac;
   --gutter: 15px;
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
-  --minor-divider-color: rgba(0, 0, 0, 0.1);
   --linkColor: var(--primary);
   --linkColorVisited: #4f2bbb;
 
   /**
-   * Padding
+   * Deprecated
    */
+  --bodyColor: var(--text-color);
+  --subLabelColor: var(--text-color-p2);
+  --labelColor: var(--text-color-p2);
+  --inputBorderColor: var(--border-color-p2);
+  --minor-divider-color: var(--border-color-p2);
   --major-padding: 15px;
 
-  /* Font-weights */
+  /**
+   * Font-weights
+   */
   --text-weight-basis: 400;
   --text-weight-addition-factor: 200;
   --text-weight-headline-basis: 600;

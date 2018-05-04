@@ -12,7 +12,7 @@
  * Is empty message
  */
 .isEmptyMessage {
-  color: var(--subLabelColor);
+  color: var(--text-color-p2);
 }
 
 /**
