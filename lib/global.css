@@ -41,11 +41,11 @@ html {
 }
 
 a {
-  color: var(--linkColor);
+  color: var(--link-color);
   text-decoration: none;
 
   &:visited {
-    color: var(--linkColorVisited);
+    color: var(--link-color-visited);
   }
 }
 

@@ -5,6 +5,8 @@
   --border-color-p2: rgba(0, 0, 0, 0.1);
   --icon-color: rgba(0, 0, 0, 0.3);
   --color-current: rgba(0, 0, 0, 0.62);
+  --color-link: var(--primary);
+  --color-link-visited: #4f2bbb;
   --bg: #fcfcfc;
   --bgHover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
   --primary: #2b75bb;
@@ -19,8 +21,6 @@
   --gutter: 15px;
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
-  --linkColor: var(--primary);
-  --linkColorVisited: #4f2bbb;
 
   /**
    * Deprecated
@@ -31,6 +31,8 @@
   --inputBorderColor: var(--border-color-p2);
   --minor-divider-color: var(--border-color-p2);
   --major-padding: 15px;
+  --linkColor: var(--color-link);
+  --linkColorVisited: var(--color-link-visited);
 
   /**
    * Font-weights
