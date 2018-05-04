@@ -30,7 +30,7 @@
   --labelColor: var(--color-text-p2);
   --inputBorderColor: var(--color-border-p2);
   --minor-divider-color: var(--color-border-p2);
-  --major-padding: 15px;
+  --major-padding: var(--gutter);
   --linkColor: var(--color-link);
   --linkColorVisited: var(--color-link-visited);
 
