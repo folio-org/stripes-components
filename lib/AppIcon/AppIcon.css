@@ -14,7 +14,7 @@
   opacity: 1;
   transition: none;
   border-radius: 25%;
-  background-color: var(--icon-color) !important;
+  background-color: var(--color-icon) !important;
 
   &::after {
     content: "";

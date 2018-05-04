@@ -58,12 +58,12 @@
 
 .addressFormListItem {
   width: 100%;
-  border-color: var(--border-color-p2);
+  border-color: var(--color-border-p2);
   border-width: 1px 1px 0;
   border-style: solid;
 
   &:last-of-type {
-    border-bottom: 1px solid var(--border-color-p2);
+    border-bottom: 1px solid var(--color-border-p2);
     margin-bottom: 4px;
   }
 }

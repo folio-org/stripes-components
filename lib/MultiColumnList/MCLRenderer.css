@@ -87,7 +87,7 @@
   flex-grow: 0;
   padding: 6px 5px;
   font-weight: 600;
-  color: var(--text-color-p2);
+  color: var(--color-text-p2);
   text-transform: capitalize;
 
   &.clickable {

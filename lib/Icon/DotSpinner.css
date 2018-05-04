@@ -20,7 +20,7 @@
     width: 33%;
     height: 33%;
     margin: 0 8%;
-    background-color: var(--icon-color);
+    background-color: var(--color-icon);
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;

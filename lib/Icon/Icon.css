@@ -17,7 +17,7 @@
 }
 
 :global .stripes__icon {
-  fill: var(--icon-color);
+  fill: var(--color-icon);
 }
 
 /**

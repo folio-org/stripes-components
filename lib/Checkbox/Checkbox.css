@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  color: var(--text-color-p2);
+  color: var(--color-text-p2);
 
   &.fullWidth {
     width: 100%;
@@ -113,7 +113,7 @@ input.checkboxInput {
   position: relative;
   width: var(--checkbox-size);
   height: var(--checkbox-size);
-  border: 1px solid var(----border-color);
+  border: 1px solid var(----color-border);
   border-radius: 4px;
   background: #f7f7f7;
 }
@@ -131,7 +131,7 @@ input.checkboxInput:checked + .labelPseudo::after {
   position: absolute;
   top: 1px;
   left: 1px;
-  border: 3px solid var(--text-color-p2);
+  border: 3px solid var(--color-text-p2);
   border-top: none;
   border-right: none;
   background: transparent;

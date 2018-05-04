@@ -1,9 +1,9 @@
 :root {
-  --text-color: #000;
-  --text-color-p2: rgba(0, 0, 0, 0.62);
-  --border-color: rgba(0, 0, 0, 0.2);
-  --border-color-p2: rgba(0, 0, 0, 0.1);
-  --icon-color: rgba(0, 0, 0, 0.3);
+  --color-text: #000;
+  --color-text-p2: rgba(0, 0, 0, 0.62);
+  --color-border: rgba(0, 0, 0, 0.2);
+  --color-border-p2: rgba(0, 0, 0, 0.1);
+  --color-icon: rgba(0, 0, 0, 0.3);
   --color-current: rgba(0, 0, 0, 0.62);
   --color-link: var(--primary);
   --color-link-visited: #4f2bbb;
@@ -25,11 +25,11 @@
   /**
    * Deprecated
    */
-  --bodyColor: var(--text-color);
-  --subLabelColor: var(--text-color-p2);
-  --labelColor: var(--text-color-p2);
-  --inputBorderColor: var(--border-color-p2);
-  --minor-divider-color: var(--border-color-p2);
+  --bodyColor: var(--color-text);
+  --subLabelColor: var(--color-text-p2);
+  --labelColor: var(--color-text-p2);
+  --inputBorderColor: var(--color-border-p2);
+  --minor-divider-color: var(--color-border-p2);
   --major-padding: 15px;
   --linkColor: var(--color-link);
   --linkColorVisited: var(--color-link-visited);

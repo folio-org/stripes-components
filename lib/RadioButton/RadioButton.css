@@ -32,7 +32,7 @@
   cursor: pointer;
   flex-grow: 2;
   font-weight: 600;
-  color: var(--text-color-p2);
+  color: var(--color-text-p2);
   border-radius: var(--radius);
 
   &.error {
@@ -58,7 +58,7 @@
   position: relative;
   width: var(--radio-button-size);
   height: var(--radio-button-size);
-  border: 1px solid var(----border-color);
+  border: 1px solid var(----color-border);
   border-radius: 999px;
   background: #fff;
 }
