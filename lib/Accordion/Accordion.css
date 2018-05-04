@@ -81,7 +81,7 @@
 
 .separator {
   width: 100%;
-  border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid var(--border-color-p2);
   margin: 8px auto;
 }
 
@@ -111,7 +111,7 @@
   font-size: 18px;
   min-height: 44px;
   width: 100%;
-  color: var(--subLabelColor #999);
+  color: var(--text-color-p2);
 
   &:hover,
   &:focus {

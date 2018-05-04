@@ -22,7 +22,7 @@
 }
 
 .placeholder {
-  fill: #999;
+  fill: var(--icon-color);
   width: 100%;
   height: auto;
 }

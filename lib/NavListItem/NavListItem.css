@@ -25,7 +25,7 @@
   }
 
   &.isActive {
-    background-color: rgba(0, 0, 0, 0.62);
+    background-color: var(--text-color-p2);
     color: #fff;
     text-decoration: none;
 

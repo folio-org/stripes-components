@@ -63,9 +63,9 @@
   visibility: hidden;
   position: absolute;
   transform: translateY(-50%) scale(1);
-  min-width: calc(var(--gutter) / 4.2);
-  width: calc(var(--gutter) / 4.2);
-  height: calc(var(--gutter) / 4.2);
+  min-width: 4px;
+  width: 4px;
+  height: 4px;
   border-radius: 999px;
   display: block;
   z-index: 2;
@@ -188,8 +188,8 @@
 .isActive::before,
 .interactionStylesControl:active > .interactionStyles::before,
 .interactionStyles:active::before {
-  background: rgb(37, 118, 195);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: var(--primary);
+  border: 1px solid var(--border-color);
   color: rgb(255, 255, 255);
 }
 
