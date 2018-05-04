@@ -22,7 +22,7 @@
 .label {
   display: block;
   margin-bottom: 6px;
-  color: #000;
+  color: var(--color-text);
 
   &.required::after {
     content: '(required)';
@@ -37,8 +37,8 @@
 .input {
   margin-bottom: var(--controlMarginBottom);
   border: 1px solid var(--color-border);
-  color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.03);
+  color: var(--color-text);
+  background-color: var(--color-fill-form-element);
   width: 100%;
   outline: 0;
   letter-spacing: 0.4px;

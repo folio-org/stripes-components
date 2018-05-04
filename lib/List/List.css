@@ -30,13 +30,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.008);
     padding: 5px 6px;
     border-radius: 4px;
     margin-bottom: 4px;
 
     &:nth-child(odd) {
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: var(--color-fill);
     }
   }
 }

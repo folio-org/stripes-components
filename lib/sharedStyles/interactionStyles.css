@@ -149,7 +149,7 @@
 .isHovered::before,
 .interactionStylesControl:hover > .interactionStyles::before,
 .interactionStyles:hover::before {
-  background: rgba(37, 118, 195, 0.2);
+  background: var(--color-fill-hover);
 }
 
 .interactionStyles:hover {
@@ -162,9 +162,9 @@
 .isFocused::before,
 .interactionStylesControl:focus > .interactionStyles::before,
 .interactionStyles:focus::before {
-  background: rgba(37, 118, 195, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0 3px rgba(37, 118, 195, 0.3);
+  background: var(--color-fill-focus);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 0 0 3px var(--color-fill-focus);
 }
 
 .isFocused.hasDot::after,
@@ -188,9 +188,9 @@
 .isActive::before,
 .interactionStylesControl:active > .interactionStyles::before,
 .interactionStyles:active::before {
-  background: var(--primary);
+  background: var(--color-fill-active);
   border: 1px solid var(--color-border);
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 .interactionStyles.hasDot.isActive:active::after,

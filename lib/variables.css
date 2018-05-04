@@ -4,9 +4,17 @@
   --color-border: rgba(0, 0, 0, 0.2);
   --color-border-p2: rgba(0, 0, 0, 0.1);
   --color-icon: rgba(0, 0, 0, 0.3);
-  --color-current: rgba(0, 0, 0, 0.62);
   --color-link: var(--primary);
   --color-link-visited: #4f2bbb;
+  --color-fill: rgba(0, 0, 0, 0.03);
+  --color-fill-table-row-odd: rgba(0, 0, 0, 0.05);
+  --color-fill-form-element: var(--color-fill);
+  --color-fill-current: rgba(0, 0, 0, 0.62);
+  --color-fill-disabled: rgba(0, 0, 0, 0.05);
+  --color-fill-hover: rgba(37, 118, 195, 0.2);
+  --color-fill-focus: rgba(37, 118, 195, 0.3);
+  --color-fill-active: var(--primary);
+  --shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.24);
   --bg: #fcfcfc;
   --bgHover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
   --primary: #2b75bb;
@@ -37,12 +45,15 @@
   /**
    * Font-weights
    */
+  --text-weights-are-bolder: 1;
   --text-weight-basis: 400;
   --text-weight-addition-factor: 200;
   --text-weight-headline-basis: 600;
   --text-weight-headline-addition-factor: 100;
   --text-weight: calc(var(--text-weight-basis) + ( var(--text-weight-addition-factor) * var(--text-weights-are-bolder)));
   --text-weight-headline: calc(var(--text-weight-headline-basis) + ( var(--text-weight-headline-addition-factor) * var(--text-weights-are-bolder)));
+  --text-weight-button: var(--text-weight);
+  --text-weight-button-primary: calc(var(--text-weight-headline-basis) + ( var(--text-weight-headline-addition-factor) * var(--text-weights-are-bolder)));
 }
 
 /* Lean on min-width queries to create mobile-first CSS. */

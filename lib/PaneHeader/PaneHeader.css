@@ -68,6 +68,7 @@
   font-weight: 600;
   align-items: center;
   letter-spacing: 0.04em;
+  color: var(--color-text);
 }
 
 .paneTitleLabel {

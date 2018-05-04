@@ -35,17 +35,17 @@ html {
     "ＭＳ Ｐゴシック",
     sans-serif;
   font-size: 14px;
-  color: #000;
+  color: var(--color-text);
   letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
 
   &:visited {
-    color: var(--link-color-visited);
+    color: var(--color-link-visited);
   }
 }
 

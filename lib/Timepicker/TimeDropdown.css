@@ -23,7 +23,7 @@
   text-align: center;
 
   /* suppress weird stylind in firefox */
-  border: 1px solid var(----color-border, #acacac);
+  border: 1px solid var(--color-border);
   -moz-appearance: textfield;
 
   &::-webkit-inner-spin-button,
