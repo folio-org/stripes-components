@@ -1,4 +1,9 @@
 :root {
+  --text-color: #000;
+  --text-color-p2: rgba(0, 0, 0, 0.62);
+  --border-color: rgba(0, 0, 0, 0.2);
+  --border-color-p2: rgba(0, 0, 0, 0.1);
+  --icon-color: rgba(0, 0, 0, 0.3);
   --bg: #fcfcfc;
   --bgHover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
   --primary: #2b75bb;
