@@ -108,44 +108,43 @@ input.checkboxInput {
   z-index: -1;
 }
 
-.labelPseudo {
+.labelCheck {
   position: relative;
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   border: 1px solid var(--color-border);
   border-radius: 4px;
   background: var(--color-fill-form-element);
+  display: flex;
+
+  & svg {
+    opacity: 0;
+    width: 100%;
+
+    & path {
+      stroke: #000;
+      fill: #fff;
+    }
+  }
 }
 
 /* disabled styles */
-.checkboxInput:disabled .labelPseudo {
+.checkboxInput:disabled .labelCheck {
   opacity: 0.65;
-}
-
-.checkboxInput + .labelPseudo::after {
-  content: '';
-  width: 6px;
-  height: 3px;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  border: 1px solid #000;
-  border-top: none;
-  border-right: none;
-  background: transparent;
-  transform: rotate(-45deg);
-  opacity: 0;
-  z-index: 5;
 }
 
 /**
  * Checked state
  */
-.checkboxInput:checked + .labelPseudo {
+.checkboxInput:checked + .labelCheck {
   background-color: #000;
 
-  &::after {
+  & svg {
     opacity: 1;
-    border-color: #fff;
+  }
+
+  & svg path {
+    fill: #000;
+    stroke: #fff;
   }
 }
