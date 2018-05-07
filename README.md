@@ -9,6 +9,8 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 * [Introduction](#introduction)
 * [Component categories](#component-categories)
 * [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
+* [Testing](#testing)
+* [FAQ](#FAQ)
 * [To be documented](#to-be-documented)
 * [Additional information](#additional-information)
 
@@ -101,6 +103,11 @@ Component | doc | categories
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
+## Testing
+Component tests are automated browser tests powered by karma and written using mocha syntax. See [TESTING.md](TESTING.md) for more information.
+
+## FAQ
+Check our [Frequently asked questions for Module developers page](FAQ.md)
 
 ## To be documented
 
