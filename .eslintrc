@@ -8,6 +8,15 @@
     "mount":true
   },
   "extends": "@folio/eslint-config-stripes",
+  "overrides": [
+    {
+      "files": ["lib/**/tests/*"],
+      "rules": {
+        "no-unused-expressions": "off",
+        "func-names": "off"
+      }
+    }
+  ],
   "parser": "babel-eslint",
   "rules": {
     "import/no-extraneous-dependencies": ["error", {

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import '../lib/global.css';
+
 function getCleanTestingRoot() {
   let $root = document.getElementById('root');
 
