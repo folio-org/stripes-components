@@ -116,6 +116,7 @@ input.checkboxInput {
   border-radius: 4px;
   background: var(--color-fill-form-element);
   display: flex;
+  overflow: hidden;
 
   & svg {
     opacity: 0;
