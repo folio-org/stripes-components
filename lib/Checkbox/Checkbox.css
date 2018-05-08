@@ -124,7 +124,6 @@ input.checkboxInput {
 
     & path {
       stroke: #000;
-      fill: #fff;
     }
   }
 }
@@ -145,7 +144,6 @@ input.checkboxInput {
   }
 
   & svg path {
-    fill: #000;
     stroke: #fff;
   }
 }
