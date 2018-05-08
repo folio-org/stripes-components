@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  color: var(--labelColor);
+  color: var(--color-text);
 
   &.fullWidth {
     width: 100%;
@@ -70,7 +70,6 @@
 
 .labelText {
   margin: 0 6px;
-  font-weight: 600;
 }
 
 /* fix for shrinkage issues with checkbox as a flex-child */
@@ -109,43 +108,41 @@ input.checkboxInput {
   z-index: -1;
 }
 
-.labelPseudo {
+.labelCheck {
   position: relative;
   width: var(--checkbox-size);
   height: var(--checkbox-size);
-  border: 1px solid var(--inputBorderColor);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
-  background: #f7f7f7;
+  background: var(--color-fill-form-element);
+  display: flex;
+  overflow: hidden;
+
+  & svg {
+    opacity: 0;
+
+    & path {
+      stroke: #000;
+    }
+  }
 }
 
 /* disabled styles */
-input.checkboxInput:disabled .labelPseudo {
+.checkboxInput:disabled .labelCheck {
   opacity: 0.65;
 }
 
-/* input.checkboxInput:checked + label.checkboxLabel .labelPseudo::after { */
-input.checkboxInput:checked + .labelPseudo::after {
-  content: '';
-  width: 6px;
-  height: 3px;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  border: 3px solid var(--labelColor);
-  border-top: none;
-  border-right: none;
-  background: transparent;
-  transform: rotate(-45deg);
-  opacity: 0;
-  z-index: 5;
-}
+/**
+ * Checked state
+ */
+.checkboxInput:checked + .labelCheck {
+  background-color: #000;
 
-/* input.checkboxInput:not(:checked) + label .labelPseudo::after { */
-input.checkboxInput:not(:checked) + .labelPseudo::after {
-  opacity: 0;
-}
+  & svg {
+    opacity: 1;
+  }
 
-/* input.checkboxInput:checked + label .labelPseudo::after { */
-input.checkboxInput:checked + .labelPseudo::after {
-  opacity: 1;
+  & svg path {
+    stroke: #fff;
+  }
 }

@@ -43,7 +43,7 @@
     }
 
     &.muted {
-      color: #999;
+      color: var(--color-fill-disabled);
     }
 
     &.today {
@@ -51,7 +51,7 @@
     }
 
     &.excluded {
-      color: #999 !important;
+      color: var(--color-text-p2) !important;
       background: #dedede;
       cursor: default;
       pointer-events: none;

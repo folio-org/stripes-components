@@ -2,6 +2,8 @@
  * <EmptyMessage />
  */
 
+@import "../../variables";
+
 .emptyMessage {
-  color: rgba(0, 0, 0, 0.62);
+  color: var(--color-text-p2);
 }

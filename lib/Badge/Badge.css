@@ -4,7 +4,7 @@
   border-radius: 999px;
   font-weight: 700;
   display: inline-block;
-  color: var(--labelColor);
+  color: var(--color-text-p2);
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
  */
 .default {
   background-color: var(--bgHover);
-  color: var(--labelColor);
+  color: var(--color-text-p2);
 }
 
 .red {

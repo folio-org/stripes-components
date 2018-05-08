@@ -1,3 +1,5 @@
+@import "../variables";
+
 .spinner {
   width: inherit;
   height: inherit;
@@ -18,7 +20,7 @@
     width: 33%;
     height: 33%;
     margin: 0 8%;
-    background-color: #999;
+    background-color: var(--color-icon);
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
