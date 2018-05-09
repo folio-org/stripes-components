@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Harness from './Harness';
+
+import '../lib/global.css';
 
 function getCleanTestingRoot() {
   let $root = document.getElementById('root');
@@ -22,6 +25,12 @@ function getCleanTestingRoot() {
 export function mount(component) {
   return new Promise(resolve => {
     ReactDOM.render(component, getCleanTestingRoot(), resolve);
+  });
+}
+
+export function mountWithContext(component) {
+  return new Promise(resolve => {
+    ReactDOM.render(<Harness>{component}</Harness>, getCleanTestingRoot(), resolve);
   });
 }
 

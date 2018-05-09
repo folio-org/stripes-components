@@ -43,7 +43,7 @@
 }
 
 .clearIcon {
-  fill: #999;
+  fill: var(--color-icon);
   transition: all 0.25s ease;
 }
 
@@ -51,7 +51,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #999;
+  color: var(--color-text-p2);
 
   &:hover {
     & .clearIcon {

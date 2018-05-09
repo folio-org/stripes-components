@@ -9,10 +9,10 @@
      and makes the disabled background-color not run to the edges. These rules
      could become an issue if disabled Accordions become used with a parent
      that does not use major-padding. */
-  margin-left: calc(0 - var(--major-padding));
-  padding-left: var(--major-padding);
-  width: calc(100% + (2 * var(--major-padding)));
-  background-color: #f2f2f2;
+  margin-left: calc(0 - var(--gutter));
+  padding-left: var(--gutter);
+  width: calc(100% + (2 * var(--gutter)));
+  background-color: var(--color-fill-disabled);
 
   & .header {
     opacity: 0.5;
@@ -24,7 +24,7 @@
  */
 
 .hasSeparator .headerWrapper {
-  border-top: 1px solid var(--minor-divider-color);
+  border-top: 1px solid var(--color-border-p2);
 }
 
 .headerWrapper {
@@ -64,6 +64,7 @@
   flex-grow: 2;
   font-weight: 600;
   justify-content: flex-start;
+  color: var(--color-text-p2);
 }
 
 /**
@@ -81,7 +82,7 @@
 
 .separator {
   width: 100%;
-  border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid var(--color-border-p2);
   margin: 8px auto;
 }
 
@@ -111,7 +112,7 @@
   font-size: 18px;
   min-height: 44px;
   width: 100%;
-  color: var(--subLabelColor #999);
+  color: var(--color-text);
 
   &:hover,
   &:focus {
@@ -140,6 +141,7 @@
   font-size: inherit;
   padding: 0;
   width: 100%;
+  color: var(--color-text-p2);
 
   &:focus {
     outline: none;
@@ -153,7 +155,7 @@
 
 .filterSetlabel {
   font-weight: 600;
-  color: #000;
+  color: var(--color-text-p2);
   pointer-events: none;
   user-select: none;
 }
