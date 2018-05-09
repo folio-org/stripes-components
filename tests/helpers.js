@@ -24,6 +24,12 @@ function getCleanTestingRoot() {
 
 export function mount(component) {
   return new Promise(resolve => {
+    ReactDOM.render(component, getCleanTestingRoot(), resolve);
+  });
+}
+
+export function mountWithContext(component) {
+  return new Promise(resolve => {
     ReactDOM.render(<Harness>{component}</Harness>, getCleanTestingRoot(), resolve);
   });
 }
