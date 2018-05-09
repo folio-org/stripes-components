@@ -12,6 +12,10 @@ export { default as TextArea } from './lib/TextArea';
 export { default as TextField } from './lib/TextField';
 export { default as Timepicker } from './lib/Timepicker';
 
+/* context providers/consumers */
+export { default as withLocale, LocaleContext } from './lib/Locale';
+export { default as withTimeZone, TimeZoneContext } from './lib/TimeZone';
+
 /* data containers */
 export { default as KeyValue } from './lib/KeyValue';
 export { default as MultiColumnList } from './lib/MultiColumnList';

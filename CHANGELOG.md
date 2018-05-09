@@ -2,6 +2,7 @@
 
 ## 3.0.0 (IN PROGRESS)
 
+* Create `Locale` and `TimeZone` contexts. Fixes STCOM-259.
 * In `<Datepicker>`, added a new `ignoreLocalOffset` prop that ignores the tenant timezone and treats the date as UTC to display the date. Fixes UIORG-55
 * Adjust address read only view. Fixes STCOM-152.
 * `<FilterPaneSearch>` supports `searchableIndexes`, `selectedIndex` and `onChangeIndex` properties. Fixes STCOM-171.
