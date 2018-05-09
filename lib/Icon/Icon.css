@@ -1,3 +1,5 @@
+@import "../variables";
+
 .icon {
   display: inline-flex;
   align-items: center;
@@ -15,7 +17,7 @@
 }
 
 :global .stripes__icon {
-  fill: #999;
+  fill: var(--color-icon);
 }
 
 /**

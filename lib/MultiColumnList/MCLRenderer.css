@@ -30,25 +30,25 @@
   justify-content: flex-start;
   align-items: stretch;
   border-radius: 7px;
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
   margin-left: 5px;
   margin-right: 5px;
   outline: none;
 
   &:visited {
-    color: #333;
+    color: var(--color-text);
   }
 
   /* Different bg on odd rows */
   &.isOdd:not(.selected) {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--color-fill-table-row-odd);
   }
 
   /* Selected style */
   &.selected {
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.62);
+    background-color: var(--color-fill-current);
 
     /** For universal interaction styling */
     &::after {
@@ -87,7 +87,7 @@
   flex-grow: 0;
   padding: 6px 5px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-text-p2);
   text-transform: capitalize;
 
   &.clickable {

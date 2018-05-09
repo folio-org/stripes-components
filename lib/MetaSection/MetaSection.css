@@ -1,12 +1,14 @@
+@import '../variables';
+
 .metaSectionRoot {
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--color-fill);
   margin-bottom: 10px;
 }
 
 .metaSectionContent {
   padding: 3px 26px;
-  color: #333;
+  color: var(--color-text);
 }
 
 .metaSectionContentBlock {
@@ -41,7 +43,7 @@
 }
 
 .metaHeaderLabel {
-  color: #333;
+  color: var(--color-text);
   pointer-events: none;
   user-select: none;
   padding: 0 4px;

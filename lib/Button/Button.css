@@ -34,6 +34,7 @@
   outline: 0;
   box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
   opacity: 1;
+  font-weight: var(--text-weight-button);
 
   &.slim {
     padding: 5px 2px;
@@ -72,7 +73,7 @@
   &.primary {
     background-color: var(--primary);
     border: 1px solid var(--primary);
-    font-weight: 600;
+    font-weight: var(--text-weight-button-primary);
     color: #fff;
 
     &:hover {
