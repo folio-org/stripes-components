@@ -80,13 +80,23 @@
 /**
  * Checkbox feedback
  */
-.checkbox {
-  &.hasWarning .checkboxFeedback {
+.hasWarning {
+  & .checkboxFeedback {
     color: var(--warn);
   }
 
-  &.hasError .checkboxFeedback {
+  & .labelCheck {
+    border-color: var(--warn);
+  }
+}
+
+.hasError {
+  & .checkboxFeedback {
     color: var(--error);
+  }
+
+  & .labelCheck {
+    border-color: var(--error);
   }
 }
 
