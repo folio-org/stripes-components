@@ -22,7 +22,7 @@ To see components in action, our storybook can be run locally via the command
       3. Be documented for other developers:
          * in the CHANGELOG.md
          * in the component's README.md if it affects the component's API or is noteworthy to future users of the components.
-      4. Be in-line with [stripes-components style guidelines](docs/cssInStripes.md) 
+      4. Be in-line with [stripes-components style guidelines](docs/cssInStripes.md)
 
 
 4. **There’s not a component that meets the use case I have. What should I do?**
