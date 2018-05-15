@@ -51,6 +51,7 @@ Component | doc | categories
 [`<Datepicker>`](lib/Datepicker) | [doc](lib/Datepicker/readme.md) | control
 [`<Dropdown>`](lib/Dropdown) | [doc](lib/Dropdown/readme.md) | control
 [`<DropdownMenu>`](lib/DropdownMenu) | | control
+[`<EmptyMessage>`](lib/structures/EmptyMessage) | [doc](lib/structures/EmptyMessage/readme.md) | structure
 [`<EntrySelector>`](lib/EntrySelector) | | control
 [`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
 [`<FilterGroups>`](lib/FilterGroups) | [doc](lib/FilterGroups/readme.md) | control
