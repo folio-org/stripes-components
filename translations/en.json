@@ -41,5 +41,7 @@
   "closeItem": "Close {item}",
   "dismissModal": "Dismiss modal",
   "removeSelection": "Remove selection",
-  "addSelection": "Add selection"
+  "addSelection": "Add selection",
+  "collapseSection": "Collapse section",
+  "expandSection": "Expand section"
 }
