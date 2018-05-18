@@ -39,7 +39,7 @@ onDelete | function | Callback for saving edited list items. | | no
 label | string | The text for the H3 tag in the header of the component | | no
 createButtonLabel | string | Label for the 'Add' button | `+ Add new` | no
 visibleFields | array of strings | Array of fields to render. These will also be editable. | | yes
-itemTemplate | object | Object that reflects the shape of list item objects. Values should be strings indicating the type: `{name: 'string'}` | {} | no
+itemTemplate | object | Object where each key's value is the default value for that field: `{ resourceType: 'book' }` | {} | no
 uniqueField | string | Fieldname that includes the unique identifier for the list. | `id` | yes
 actionSuppression | object | Object containing properties of list action names: `delete`, `edit` and values of sentinel functions that return booleans based on object properties. | `{ delete: () => false, edit: () => false }` | no
 actionProps | object | Object containing properties of list action names: 'delete', 'edit' and values of sentinel functions that return objects to destructure onto the action button props. | `{ delete: (item) => {return { disabled: item.item.inUse } } }`
