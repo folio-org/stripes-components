@@ -10,6 +10,7 @@
   "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
   "clearFieldValue": "Clear field value",
   "showOrHideDatepicker": "Show/hide datepicker",
+  "showOrHideTimepicker": "Show/hide timepicker",
   "clearThisField": "Clear this field",
   "validatingInProcess": "Validating...",
   "fieldIsValid": "Field is valid",
@@ -35,5 +36,12 @@
   "editThisItem": "Edit this item",
   "deleteThisItem": "Delete this item",
   "removeFields": "remove fields for {item} {num}",
-  "addNewField": "+ Add {item}"
+  "addNewField": "+ Add {item}",
+  "closePane": "Close pane",
+  "closeItem": "Close {item}",
+  "dismissModal": "Dismiss modal",
+  "removeSelection": "Remove selection",
+  "addSelection": "Add selection",
+  "collapseSection": "Collapse section",
+  "expandSection": "Expand section"
 }
