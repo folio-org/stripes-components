@@ -8,15 +8,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm } from 'redux-form';
 
-function validate(values) {
-  const errors = {};
-
-  if (values.testField === 'invalid') {
-    errors.testField = 'testField is Invalid';
-  }
-  return errors;
-}
-
 class TestForm extends React.Component {
   static propTypes = {
     children: PropTypes.node
@@ -28,6 +19,5 @@ class TestForm extends React.Component {
 }
 
 export default reduxForm({
-  form: 'formsDemo',
-  validate
+  form: 'formsDemo'
 })(TestForm);
