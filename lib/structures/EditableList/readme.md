@@ -52,17 +52,18 @@ columnWidths | object | Allows custom column widths to be set. If you use this, 
 id | string | Used as a basic suffix for `id` attributes throughout the component. | |
 
 ### Custom Field Components
-Many times a `<TextField>` won't be adequate for the value that needs to be edited, so to provide your own `<Field>`, using the `fieldComponents` prop is the way. It accepts an object with keys corresponding to visibleFields that contain functions that will receive `field, name, rowIndex, mappedName` as arguments and return a `<Field>` component. The arguments can be used to construct the appropriate `name` and `aria-label` props on the `<Field>`. For example,  say we want to set up one of our fields (`color`) to use a `<Select>` instead of the default `<TextField>`: 
+Many times a `<TextField>` won't be adequate for the value that needs to be edited, so to provide your own `<Field>`, using the `fieldComponents` prop is the way to accomplish this. It accepts an object with keys corresponding to visibleFields that contain render functions. The functions will be provided an object with a `fieldProps` key that can be spread on the `<Field>` for convenience (it applies `name` and `aria-label` props). Other provided props are listed after the example.
+
+Say we want to set up one of our fields (`color`) to use a `<Select>` instead of the default `<TextField>`: 
 
 ```
 // define the custom components, being sure to pass in the appropriate props for redux-form to work and for *accessibility*.
 
 this.fieldComponents = {
-      color: (field, name, rowIndex, mappedName) => (
+      color: ({fieldProps}) => (
         <Field 
-        name={`${field}[${rowIndex}].${name}`}  // required for <Field> to work properly
+        { ...fieldProps } // spread fieldProps to apply 'name' and 'aria-label' props.
         component={Select}
-        aria-label={`${mappedName} ${rowIndex}`} // accessibility
         marginBottom0
         dataOptions={[
           {label: 'orange', value: 'orange'},
@@ -90,6 +91,14 @@ this.fieldComponents = {
       }
     />
 ```
+#### Render props provided to fieldComponent function
+Name | description
+--- | --- 
+`fieldProps` | contains `name` (required by `<Field>`) and `aria-label` props.
+`fieldIndex` | the index of the field on the row.
+`rowIndex` | the index of the editable item within the list.
+`name` | the lone string key of the field (same as provided in the visibleFields prop).
+`mappedName` | the name for the column used in columnMapping, if any (otherwise, same as name.)
 
 ### Using formatters for custom data
 Sometimes the data alone just won't serve what you need and it needs to be formatted in some certain way. The `formatter` prop allows for custom rendering of data. Each key of the `formatter` object should correspond with a field from `visibleFields` that you'd like to render custom content for. The function will be passed the data object for the particular item of the list, so multiple data points can be used to affect the display.
