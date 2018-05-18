@@ -54,6 +54,7 @@
 * Pass parent's resources to EntrySelector. Fixes STCOM-262.
 * Updated current CSS variables and added new ones. Replaced in various style sheets
 * Updated checked styling of RadioButton and Checkbox. Replaced check icon with SVG in Checkbox.
+* `<EditableList>` now uses `itemTemplate` prop to define default field values.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
