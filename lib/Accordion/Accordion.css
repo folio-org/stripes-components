@@ -1,15 +1,5 @@
 @import '../variables.css';
 
-@keyframes hoverFlash {
-  from { background-color: var(--bgHover); }
-  to { background-color: var(--bg); }
-}
-
-@keyframes focusFlash {
-  from { background-color: color(var(--bgHover) shade(10%)); }
-  to { background-color: var(--bgHover); }
-}
-
 .accordion {
   width: 100%;
 }
@@ -19,10 +9,10 @@
      and makes the disabled background-color not run to the edges. These rules
      could become an issue if disabled Accordions become used with a parent
      that does not use major-padding. */
-  margin-left: calc(0 - var(--major-padding));
-  padding-left: var(--major-padding);
-  width: calc(100% + (2 * var(--major-padding)));
-  background-color: #f2f2f2;
+  margin-left: calc(0 - var(--gutter));
+  padding-left: var(--gutter);
+  width: calc(100% + (2 * var(--gutter)));
+  background-color: var(--color-fill-disabled);
 
   & .header {
     opacity: 0.5;
@@ -34,7 +24,7 @@
  */
 
 .hasSeparator .headerWrapper {
-  border-top: 1px solid var(--minor-divider-color);
+  border-top: 1px solid var(--color-border-p2);
 }
 
 .headerWrapper {
@@ -72,9 +62,9 @@
 .labelArea {
   display: flex;
   flex-grow: 2;
-  color: var(--subLabelColor #999);
   font-weight: 600;
   justify-content: flex-start;
+  color: var(--color-text-p2);
 }
 
 /**
@@ -92,7 +82,7 @@
 
 .separator {
   width: 100%;
-  border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid var(--color-border-p2);
   margin: 8px auto;
 }
 
@@ -107,9 +97,11 @@
 .headerDefaultContentRight {
   flex-grow: 2;
   flex-shrink: 0;
+  padding: 0 4px;
 }
 
 .defaultCollapseButton {
+  composes: interactionStylesControl from "../sharedStyles/interactionStyles.css";
   flex: 1;
   border: none;
   outline: none;
@@ -119,6 +111,8 @@
   background-color: transparent;
   font-size: 18px;
   min-height: 44px;
+  width: 100%;
+  color: var(--color-text);
 
   &:hover,
   &:focus {
@@ -126,10 +120,18 @@
   }
 }
 
+.headerInner {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 /**
  * Filter set header
  */
 .filterSetHeader {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   composes: header;
   border-radius: var(--radius 4px);
   height: var(--controlHeight 24px);
@@ -139,27 +141,21 @@
   font-size: inherit;
   padding: 0;
   width: 100%;
+  color: var(--color-text-p2);
 
   &:focus {
     outline: none;
-
-    /* animation-name: focusFlash;
-    animation-duration: 2s;
-    background-color: var(--bgHover); */
   }
 }
 
-.filterSetHeader.clearButtonVisible {
+.clearButtonVisible {
+  composes: boxOffsetEndSmall from "../sharedStyles/interactionStyles.css";
   width: auto;
 }
 
-.headerWrapper .clearIconButton {
-  height: 14px;
-}
-
-.filterSetLabel {
+.filterSetlabel {
   font-weight: 600;
-  color: #000;
+  color: var(--color-text-p2);
   pointer-events: none;
   user-select: none;
 }

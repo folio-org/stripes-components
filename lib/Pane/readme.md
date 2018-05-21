@@ -93,6 +93,8 @@ lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render bu
 actionMenuItems | array | Array of objects that will form an action menu which can be toggled by clicking on the pane header title |  |
 onClose | func | Callback fired when the pane is closed using its dismiss button. |  |
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  |
+paneTitleRef | func | function to set a ref to title element - great for managing focus when new panes are shown/updated. | |
+paneTitleAutoFocus | bool | If this prop is `true`, the pane title will automatically focus when the Pane mounts | |
 appIcon | object | Render an AppIcon in the PaneHeader by passing an object with a key of `app` that matches an installed FOLIO app. Optionally you can pass a `key` in the same object which refers to a specific icon inside an app with the key of `app`, e.g. { app: 'instances', key: 'items' } |  |
 contentPadding | number | Amount of padding (in pixels) to apply to Pane's content `<div>` | 16 |
 noOverflow | bool | set to true if the Pane content is not expected to scroll. This can cure issues with flashing scrollbars on search result Panes. | false |

@@ -24,7 +24,7 @@
 .selectionControl {
   margin-bottom: var(--controlMarginBottom);
   background-color: rgba(0, 0, 0, 0.03);
-  border: 1px solid var(--inputBorderColor);
+  border: 1px solid var(--color-border);
   height: var(--controlHeight);
   padding: 0 8px;
   width: 100%;
@@ -37,8 +37,9 @@
     border-color: var(--primary, #0c577f);
   }
 
-  &.rounded {
-    border-radius: var(--radius, 4px);
+  &.marginBottom0 {
+    /* stylelint-disable-next-line length-zero-no-unit */
+    margin-bottom: 0px;
   }
 
   &.hasFeedback {
@@ -82,7 +83,7 @@
   width: 100%;
   padding: 4px 8px;
   border-style: solid;
-  border-color: var(--inputBorderColor);
+  border-color: var(--color-border);
 
   &:focus {
     outline: none;
@@ -169,16 +170,12 @@
 }
 
 .SelectionMultiContainer {
-  border: 1px solid var(--inputBorderColor);
+  border: 1px solid var(--color-border);
   padding: 0 4px;
   padding-right: 24px;
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
-
-  &.rounded {
-    border-radius: var(--radius);
-  }
 }
 
 .SelectionFilterInline {
@@ -219,7 +216,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid var(--inputBorderColor);
+  border: 1px solid var(--color-border);
   background-color: #efefef;
   white-space: nowrap;
 

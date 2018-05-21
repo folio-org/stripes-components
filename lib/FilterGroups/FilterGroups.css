@@ -1,0 +1,7 @@
+/**
+ * Filter Groups
+*/
+
+.filterGroupLabel {
+  composes: boxOffsetStartMedium hasDot focusDotPositionStart focusDotOffsetSmall from "../sharedStyles/interactionStyles.css";
+}

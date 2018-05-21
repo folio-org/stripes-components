@@ -3,9 +3,6 @@
 .mclContainer {
   &:focus {
     outline: none;
-
-    /* animation-name: example;
-    animation-duration: 2s; */
   }
 }
 
@@ -23,66 +20,40 @@
   }
 }
 
+/* Row is interactive (clickable, hoverable and focusable etc.) */
+.isInteractive {
+  composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
+}
+
 .row {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  background-color: rgba(0, 0, 0, 0.008);
   border-radius: 7px;
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
-  margin-left: 9px;
-  margin-right: 9px;
+  margin-left: 5px;
+  margin-right: 5px;
   outline: none;
 
   &:visited {
-    color: #333;
-  }
-
-  & a {
-    color: var(--primary);
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.7;
-    }
+    color: var(--color-text);
   }
 
   /* Different bg on odd rows */
   &.isOdd:not(.selected) {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--color-fill-table-row-odd);
   }
 
   /* Selected style */
   &.selected {
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.62);
-  }
+    background-color: var(--color-fill-current);
 
-  /* Hover and focus style */
-  &.isInteractive:hover:not(.selected),
-  &.isInteractive:focus:not(.selected) {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  &.isInteractive:hover,
-  &.isInteractive:focus {
-    outline: none;
-  }
-
-  &.isInteractive:hover,
-  &.isInteractive:focus {
-    cursor: pointer;
-  }
-
-  /* Active style */
-  &.isInteractive:active,
-  &.isInteractive:hover:active {
-    color: #fff;
-    background-color: var(--primary);
+    /** For universal interaction styling */
+    &::after {
+      background-color: #fff;
+    }
   }
 }
 
@@ -116,7 +87,7 @@
   flex-grow: 0;
   padding: 6px 5px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--color-text-p2);
   text-transform: capitalize;
 
   &.clickable {
@@ -141,7 +112,7 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 5px 6px;
+  padding: 5px 10px;
   overflow: hidden;
 
   &.showOverflow {
@@ -177,9 +148,4 @@
 
 .emptyMessage {
   padding: 15px;
-}
-
-@keyframes example {
-  from { background-color: var(--bgHover); }
-  to { background-color: var(--bg); }
 }

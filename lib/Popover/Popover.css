@@ -9,11 +9,12 @@
   position: absolute;
   display: inline-block;
   padding: var(--gutter);
-  border: 1px solid var(--minor-divider-color rgba(0, 0, 0, 0.1));
+  border: 1px solid var(--color-border-p2 rgba(0, 0, 0, 0.1));
   background-color: #fff;
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: var(--shadow);
   outline: 0;
+  pointer-events: all;
 
   & p {
     padding: 0;

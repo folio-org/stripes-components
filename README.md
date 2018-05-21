@@ -9,6 +9,8 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 * [Introduction](#introduction)
 * [Component categories](#component-categories)
 * [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
+* [Testing](#testing)
+* [FAQ](#FAQ)
 * [To be documented](#to-be-documented)
 * [Additional information](#additional-information)
 
@@ -49,8 +51,9 @@ Component | doc | categories
 [`<Datepicker>`](lib/Datepicker) | [doc](lib/Datepicker/readme.md) | control
 [`<Dropdown>`](lib/Dropdown) | [doc](lib/Dropdown/readme.md) | control
 [`<DropdownMenu>`](lib/DropdownMenu) | | control
+[`<EmptyMessage>`](lib/structures/EmptyMessage) | [doc](lib/structures/EmptyMessage/readme.md) | structure
 [`<EntrySelector>`](lib/EntrySelector) | | control
-[`<FilterControlGroup>`](lib/FilterControlGroup) | | control
+[`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
 [`<FilterGroups>`](lib/FilterGroups) | [doc](lib/FilterGroups/readme.md) | control
 [`<FilterPane>`](lib/FilterPane) | [doc](lib/FilterPane/readme.md) | structure
 [`<FilterPaneSearch>`](lib/FilterPaneSearch) | [doc](lib/FilterPaneSearch/readme.md) | obsolete
@@ -101,6 +104,11 @@ Component | doc | categories
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
+## Testing
+Component tests are automated browser tests powered by karma and written using mocha syntax. See [TESTING.md](TESTING.md) for more information.
+
+## FAQ
+Check our [Frequently asked questions for Module developers page](FAQ.md)
 
 ## To be documented
 

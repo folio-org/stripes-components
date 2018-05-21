@@ -4,22 +4,27 @@
 * Default styling
 */
 
+.buttonInner {
+  display: flex;
+  align-items: center;
+}
+
 .button {
-  padding: 3px 10px 7px;
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  padding: 0 10px;
   height: var(--controlHeightSmall);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
   color: #555;
   border-radius: 6px;
-  transition: background-color 0.25s, color 0.25s, opacity 0.4s, box-shadow 0s;
+  transition: background-color 0.25s, color 0.25s, opacity 0.07s, box-shadow 0s;
   background-color: transparent;
   border: transparent;
   margin-left: 2px;
   margin-right: 2px;
   margin-bottom: var(--gutter);
   max-height: var(--controlHeightSmall);
-  overflow: hidden;
   white-space: nowrap;
   line-height: 100%;
   display: inline-flex;
@@ -29,6 +34,7 @@
   outline: 0;
   box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
   opacity: 1;
+  font-weight: var(--text-weight-button);
 
   &.slim {
     padding: 5px 2px;
@@ -40,19 +46,6 @@
 
   &:first-child {
     margin-left: 0;
-  }
-
-  &:hover {
-    text-decoration: none;
-    opacity: 0.8;
-  }
-
-  &:focus {
-    backface-visibility: hidden;
-  }
-
-  &:active {
-    opacity: 0.7;
   }
 
   /**
@@ -71,45 +64,20 @@
     & :global .stripes__icon {
       fill: var(--primary);
     }
-
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
-    }
-
-    &:hover {
-      background-color: color(var(--primary) shade(8%));
-      color: #fff;
-
-      & :global .stripes__icon {
-        fill: #fff;
-      }
-    }
   }
 
   /**
-  * Button Style: Primary
-  */
+   * Button style primary
+   */
 
   &.primary {
     background-color: var(--primary);
     border: 1px solid var(--primary);
-    font-weight: 600;
+    font-weight: var(--text-weight-button-primary);
     color: #fff;
 
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--primary) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--primary) alpha(-50%));
+    &:hover {
+      opacity: 0.9;
     }
   }
 
@@ -121,16 +89,6 @@
     background-color: var(--success);
     border: 1px solid var(--success);
     color: #fff;
-
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--success) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--success) alpha(-50%));
-    }
   }
 
   /**
@@ -141,16 +99,6 @@
     background-color: var(--warn);
     border: 1px solid var(--warn);
     color: #fff;
-
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--warn) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--warn) alpha(-50%));
-    }
   }
 
   /**
@@ -161,16 +109,6 @@
     background-color: var(--danger);
     border: 1px solid var(--danger);
     color: #fff;
-
-    &:focus:active {
-      transition: none;
-      box-shadow: 0 0 0 18px color(var(--danger) alpha(-30%));
-    }
-
-    &:focus {
-      transition: box-shadow 0.3s ease-out;
-      box-shadow: 0 0 0 3px color(var(--danger) alpha(-50%));
-    }
   }
 
   &.dropdownActive {
@@ -212,20 +150,6 @@
     height: var(--controlHeightTouch);
     border-radius: 0;
     padding: 8px;
-
-    &:hover {
-      background-color: var(--bgHover);
-    }
-
-    &.primary {
-      background-color: var(--primary);
-      border: 1px solid var(--primary);
-      color: #fff;
-
-      &:hover {
-        background-color: color(var(--primary) shade(8%));
-      }
-    }
 
     &.tab {
       font-weight: bold;
@@ -312,7 +236,6 @@
 
     &:hover {
       cursor: initial;
-      opacity: 1;
     }
   }
 

@@ -1,13 +1,18 @@
+@import '../variables';
+
 .metaSectionRoot {
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--color-fill);
   margin-bottom: 10px;
-  padding-bottom: 6px;
 }
 
 .metaSectionContent {
-  padding: 0 26px;
-  color: #333;
+  padding: 3px 26px;
+  color: var(--color-text);
+}
+
+.metaSectionContentBlock {
+  margin: 4px 0;
 }
 
 .headerWrapper {
@@ -15,24 +20,15 @@
   display: flex;
   align-items: center;
   min-height: 24px;
+}
 
-  /* transition: background-color 0.3s; */
-
-  & > button {
-    flex-shrink: 0;
-    padding: 6px 6px 0;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &:focus {
-    outline: none;
-  }
+.metaHeaderButton {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  flex-shrink: 0;
+  padding: 6px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
 }
 
 .metaHeader {
@@ -43,15 +39,11 @@
 
   &:focus {
     outline: none;
-
-    /* animation-name: focusFlash;
-    animation-duration: 2s;
-    background-color: var(--bgHover); */
   }
 }
 
 .metaHeaderLabel {
-  color: #333;
+  color: var(--color-text);
   pointer-events: none;
   user-select: none;
   padding: 0 4px;
