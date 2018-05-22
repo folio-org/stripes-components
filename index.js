@@ -56,14 +56,14 @@ export { default as Settings } from './lib/Settings';
 export { default as SRStatus } from './lib/SRStatus';
 
 /* structures */
-export { default as AddressEdit } from './lib/structures/AddressFieldGroup/AddressEdit';
-export { default as AddressList } from './lib/structures/AddressFieldGroup/AddressList';
-export { default as AddressView } from './lib/structures/AddressFieldGroup/AddressView';
-export { default as ConfirmationModal } from './lib/structures/ConfirmationModal';
-export { default as EditableList } from './lib/structures/EditableList';
-export { default as InfoPopover } from './lib/structures/InfoPopover';
-export { default as RepeatableField } from './lib/structures/RepeatableField';
-export { default as SearchField } from './lib/structures/SearchField';
+export { default as AddressEdit } from './lib/AddressFieldGroup/AddressEdit';
+export { default as AddressList } from './lib/AddressFieldGroup/AddressList';
+export { default as AddressView } from './lib/AddressFieldGroup/AddressView';
+export { default as ConfirmationModal } from './lib/ConfirmationModal';
+export { default as EditableList } from './lib/EditableList';
+export { default as InfoPopover } from './lib/InfoPopover';
+export { default as RepeatableField } from './lib/RepeatableField';
+export { default as SearchField } from './lib/SearchField';
 
 /* specific use */
 export { default as FilterPane } from './lib/FilterPane';

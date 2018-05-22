@@ -29,5 +29,5 @@ To see components in action, our storybook can be run locally via the command
 
     Ask the questions  a) Could the use case be solved with a composition of components? b) Could other FOLIO module developers benefit from the solution?
 If only a is true, then the component could live/be exported within your own module, while using stripes components internally.
-If both a and b are true, we have a `structures` folder that's useful for housing shared assembled structures of system-independent components. Your idea may have a home here!
+If both a and b are true, your idea might have a home here.
 If only b is true, we may have a new component on our hands! Just follow similar steps as #3 - 1. Reach out 2. Propose new component in PR, meet the criteria.

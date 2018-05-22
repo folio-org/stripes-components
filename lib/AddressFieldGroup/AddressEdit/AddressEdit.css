@@ -1,0 +1,123 @@
+@import '../../variables.css';
+
+.addressEditList {
+  margin-bottom: 1rem;
+}
+
+.legend {
+  display: block;
+  width: 100%;
+  font-size: 21px;
+  color: #333;
+  border: 0;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+}
+
+.subLegend {
+  composes: legend;
+  font-size: 18px;
+  color: #777;
+}
+
+.indent {
+  padding: 0 6px;
+}
+
+.removeAddress {
+  padding: 0;
+  text-align: center;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #555;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  background-color: transparent;
+  border: 1px solid transparent;
+  width: auto;
+  height: auto;
+  margin: 0;
+
+  & :global .stripes__icon {
+    fill: #aaa;
+    transition: fill 0.25s ease;
+  }
+
+  &:hover {
+    & :global .stripes__icon {
+      fill: color(#900 blend(#aaa 50%));
+    }
+  }
+}
+
+.addressFormList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.addressFormListItem {
+  width: 100%;
+  border-color: var(--color-border-p2);
+  border-width: 1px 1px 0;
+  border-style: solid;
+
+  &:last-of-type {
+    border-bottom: 1px solid var(--color-border-p2);
+    margin-bottom: 4px;
+  }
+}
+
+.addressFormHeader {
+  background-color: var(--bgHover);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.addressHeaderActions {
+  margin: 0 0 0 auto; /* align to end of header */
+  padding: 4px 0;
+
+  & button {
+    &:hover {
+      & :global .stripes__icon {
+        fill: #333;
+      }
+    }
+
+    & :global .stripes__icon {
+      transition: fill 0.3s;
+    }
+  }
+}
+
+.addressLabel {
+  font-weight: bold;
+}
+
+.addressFormBody {
+  padding: 14px;
+  background-color: color(var(--bg) blend(var(--bgHover) 20%));
+  width: 100%;
+}
+
+.primaryToggle {
+  padding: 4px 8px;
+  color: #555;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 0;
+
+  & input[type="radio"] {
+    margin: 0 4px;
+    vertical-align: text-top;
+  }
+}
+
+[dir="rtl"] {
+  .addressHeaderActions {
+    margin: 0 auto 0 0;
+  }
+}
