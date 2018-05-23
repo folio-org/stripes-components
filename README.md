@@ -86,6 +86,7 @@ Component | doc | categories
 [`<Popover>`](lib/Popover) | [doc](lib/Popover/readme.md) | control
 [`<RadioButton>`](lib/RadioButton) | | control
 [`<RadioButtonGroup>`](lib/RadioButtonGroup) | [doc](lib/RadioButtonGroup/readme.md) | control
+[`<ReduxFormField>`](lib/ReduxFormField) | [doc](lib/ReduxFormField/readme.md) | control
 [`<SegmentedControl>`](lib/SegmentedControl) | [doc](lib/SegmentedControl/readme.md) | control
 [`<Select>`](lib/Select) | [doc](lib/Select/readme.md) | control
 [`<Selection>`](lib/Selection) | [doc](lib/Selection/readme.md) | control
