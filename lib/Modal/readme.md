@@ -22,3 +22,4 @@ scope | string | Parent element for modal. Defaults to 'module' which keeps the 
 closeOnBackgroundClick | bool | Modal can be dismissed by clicking the background overlay. | false |
 dismissible | bool | If true, renders a close 'X' in the starting corner of the modal. | false |
 children | node | Content for the body of the modal. | | &#10004;
+enforceFocus | bool | If true, automatically attempts to regain focus when its children are clicked.  | true |
