@@ -57,6 +57,7 @@
 * `<EditableList>` now uses `itemTemplate` prop to define default field values.
 * `<EditableList>` will accept custom edit mode components using the `fieldComponents` prop. Fixes STCOM-272.
 * Provide id attribute to accordion expander buttons. Refs STCOM-276. Available from v2.0.17.
+* Added `enforceFocus` prop to `<Modal>`.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
