@@ -56,6 +56,7 @@
 * Updated checked styling of RadioButton and Checkbox. Replaced check icon with SVG in Checkbox.
 * `<EditableList>` now uses `itemTemplate` prop to define default field values.
 * `<EditableList>` will accept custom edit mode components using the `fieldComponents` prop. Fixes STCOM-272.
+* Provide id attribute to accordion expander buttons. Refs STCOM-276. Available from v2.0.17.
 * Added a mock context decorator to prevent certain component examples from failing to render in the storybook
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)

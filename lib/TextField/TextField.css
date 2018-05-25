@@ -48,6 +48,10 @@
   fill: var(--success);
 }
 
+.loadingIcon {
+  fill: var(--secondary);
+}
+
 /**
  * Text Field Icon
  */

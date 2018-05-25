@@ -54,14 +54,14 @@ id | string | Used as a basic suffix for `id` attributes throughout the componen
 ### Custom Field Components
 Many times a `<TextField>` won't be adequate for the value that needs to be edited, so to provide your own `<Field>`, using the `fieldComponents` prop is the way to accomplish this. It accepts an object with keys corresponding to visibleFields that contain render functions. The functions will be provided an object with a `fieldProps` key that can be spread on the `<Field>` for convenience (it applies `name` and `aria-label` props). Other provided props are listed after the example.
 
-Say we want to set up one of our fields (`color`) to use a `<Select>` instead of the default `<TextField>`: 
+Say we want to set up one of our fields (`color`) to use a `<Select>` instead of the default `<TextField>`:
 
 ```
 // define the custom components, being sure to pass in the appropriate props for redux-form to work and for *accessibility*.
 
 this.fieldComponents = {
       color: ({fieldProps}) => (
-        <Field 
+        <Field
         { ...fieldProps } // spread fieldProps to apply 'name' and 'aria-label' props.
         component={Select}
         marginBottom0
@@ -74,8 +74,8 @@ this.fieldComponents = {
     }
 
     // ... later in the JSX...
-    
-    <EditableList 
+
+    <EditableList
       columnMapping={{
         id: "Identifier",
         name: "title",
@@ -93,7 +93,7 @@ this.fieldComponents = {
 ```
 #### Render props provided to fieldComponent function
 Name | description
---- | --- 
+--- | ---
 `fieldProps` | contains `name` (required by `<Field>`) and `aria-label` props.
 `fieldIndex` | the index of the field on the row.
 `rowIndex` | the index of the editable item within the list.
