@@ -25,6 +25,7 @@
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 
 .mediumOffset {
