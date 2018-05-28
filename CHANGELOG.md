@@ -33,7 +33,6 @@
 * Fix multiple addresses displaying side by side. Fixes STCOM-230.
 * `<MultiColumnList>` properly fills height when `autosize` prop is used - even on browser resize. Fixes STCOM-29.
 * `<Timepicker>` component added. See [docs](lib/Timepicker/readme.md).
-* Fixed text overflowing icon in <Select>
 * Fixed text overflowing icon in `<Select>`.
 * Ignore yarn-error.log file. Refs STRIPES-517.
 * `<Selection>` component added. Resolves STCOM-131.
@@ -50,11 +49,16 @@
 * Added universal interaction styles to all relevant components.
 * Various updates in relation to new universal interaction styles.
 * Restore checkbox IDs, which were erroneously removed. Available from v2.0.13.
-* Add ability to style cancel btn on confirm modal. Part of UIIN-121.
+* Add ability to style cancel button on confirm modal. Part of UIIN-121.
 * Settings sections. Refs UIORG-75. Available from v2.0.14.
 * Pass parent's resources to EntrySelector. Fixes STCOM-262.
 * Updated current CSS variables and added new ones. Replaced in various style sheets
-* Updated checked styling of RadioButotn and Checkbox. Replaced check icon with SVG in Checkbox.
+* Updated checked styling of RadioButton and Checkbox. Replaced check icon with SVG in Checkbox.
+* `<EditableList>` now uses `itemTemplate` prop to define default field values.
+* `<EditableList>` will accept custom edit mode components using the `fieldComponents` prop. Fixes STCOM-272.
+* Provide id attribute to accordion expander buttons. Refs STCOM-276. Available from v2.0.17.
+* Added `enforceFocus` prop to `<Modal>`.
+* Added react-intl decorator to storybook config to prevent certain functions in component context from being undefined
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)

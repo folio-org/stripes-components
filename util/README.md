@@ -43,7 +43,7 @@ static manifest = Object.freeze({
         'materialType="${query}" or barcode="${query}*" or title="${query}*"',
         { 'Material Type': 'materialType' },
         filterConfig,
-	2
+        2
       ),
     },
     staticFallback: { params: {} },
