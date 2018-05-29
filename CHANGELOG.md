@@ -58,6 +58,7 @@
 * `<EditableList>` will accept custom edit mode components using the `fieldComponents` prop. Fixes STCOM-272.
 * Provide id attribute to accordion expander buttons. Refs STCOM-276. Available from v2.0.17.
 * Added `enforceFocus` prop to `<Modal>`.
+* Added react-intl decorator to storybook config to prevent certain functions in component context from being undefined
 * Added `<DateTimePicker>` component. Available from v2.0.18.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
