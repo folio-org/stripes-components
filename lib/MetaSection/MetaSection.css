@@ -7,12 +7,17 @@
 }
 
 .metaSectionContent {
-  padding: 3px 26px;
+  margin-top: -6px;
+  padding: 0 0 4px 27px;
   color: var(--color-text);
 }
 
 .metaSectionContentBlock {
-  margin: 4px 0;
+  margin: 2px 0;
+}
+
+.metaSectionGroup {
+  margin-top: 10px;
 }
 
 .headerWrapper {
