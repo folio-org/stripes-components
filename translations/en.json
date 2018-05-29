@@ -43,5 +43,8 @@
   "removeSelection": "Remove selection",
   "addSelection": "Add selection",
   "collapseSection": "Collapse section",
-  "expandSection": "Expand section"
+  "expandSection": "Expand section",
+  "metaSection.source": "Source",
+  "metaSection.recordCreated": "Record created",
+  "metaSection.recordLastUpdated": "Record last updated"
 }
