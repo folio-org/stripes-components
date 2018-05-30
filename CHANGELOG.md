@@ -61,12 +61,13 @@
 * Added react-intl decorator to storybook config to prevent certain functions in component context from being undefined
 * Added `timezone` prop to `<Timepicker>` for override of context timezone.
 * Updated Accordion collapse logic to apply display:none when closed and overflow:visible when open
+* Deprecate `structures` directory. [STCOM-277](https://issues.folio.org/browse/STCOM-277)
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
 
 * Refactor `<EntrySelector>` to make it more reusable. Fixes STCOM-97.
-* Added `<ConfirmationModal>` component to 'structures' folder. Supports STCOM-66. See [docs](lib/structures/ConfirmationModal/readme.md).
+* Added `<ConfirmationModal>` component to 'structures' folder. Supports STCOM-66. See [docs](lib/ConfirmationModal/readme.md).
 * Added `<Callout>` component for supplying feedback to the user with various actions. Supports STCOM-66. See [docs](lib/Callout/readme.md).
 * Fix connect in `<Settings>`. Fixes STCOM-99.
 * Update `<EntrySelector>`. Fixes STCOM-100.

@@ -1,0 +1,25 @@
+/**
+ * SearchField
+ */
+
+@import "../variables.css";
+
+/**
+ * Has searchable indexes
+ */
+
+/* Select field */
+.searchFieldWrap .select {
+  /* To make sure it's position is above
+  so the focus style isn't hidden by the input */
+  margin-bottom: -1px;
+
+  &:focus {
+    z-index: 5;
+  }
+}
+
+/* Color search icon on focus */
+.searchFieldWrap .isFocused svg.searchIcon {
+  fill: var(--primary);
+}

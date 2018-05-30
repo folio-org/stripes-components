@@ -1,0 +1,22 @@
+/**
+ * InfoPopover
+ */
+
+@import "../variables";
+
+.wrap {
+  max-width: 270px;
+}
+
+.content {
+  text-align: center;
+}
+
+.icon:hover svg,
+.activeClass .icon svg {
+  fill: var(--primary);
+}
+
+.button {
+  margin-top: var(--gutter);
+}
