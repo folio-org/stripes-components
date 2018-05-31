@@ -92,6 +92,6 @@
     "typeface-source-sans-pro": "^0.0.44"
   },
   "peerDependencies": {
-    "stripes-core": "^2.7.0"
+    "@folio/stripes-core": "^2.7.0"
   }
 }
