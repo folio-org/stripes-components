@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "2.0.18",
+  "version": "2.0.19",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -29,7 +29,7 @@
     ]
   },
   "devDependencies": {
-    "@bigtest/interactor": "^0.4.2",
+    "@bigtest/interactor": "^0.5.0",
     "@bigtest/mocha": "^0.3.3",
     "@folio/eslint-config-stripes": "^1.1.0",
     "@folio/stripes-cli": "^1.1.100073",
