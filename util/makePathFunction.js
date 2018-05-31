@@ -1,4 +1,4 @@
-import { filters2cql } from '@folio/stripes-components/lib/FilterGroups';
+import { filters2cql } from '../lib/FilterGroups';
 
 function makePathFunction(basePath, findAll, queryTemplate, sortMap, filterConfig) {
   return (queryParams, _pathComponents, _resourceValues, logger) => {

@@ -1,0 +1,9 @@
+/**
+ * <EmptyMessage />
+ */
+
+@import "../variables";
+
+.emptyMessage {
+  color: var(--color-text-p2);
+}

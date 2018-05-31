@@ -51,7 +51,7 @@ Component | doc | categories
 [`<Datepicker>`](lib/Datepicker) | [doc](lib/Datepicker/readme.md) | control
 [`<Dropdown>`](lib/Dropdown) | [doc](lib/Dropdown/readme.md) | control
 [`<DropdownMenu>`](lib/DropdownMenu) | | control
-[`<EmptyMessage>`](lib/structures/EmptyMessage) | [doc](lib/structures/EmptyMessage/readme.md) | structure
+[`<EmptyMessage>`](lib/EmptyMessage) | [doc](lib/EmptyMessage/readme.md) | structure
 [`<EntrySelector>`](lib/EntrySelector) | | control
 [`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
 [`<FilterGroups>`](lib/FilterGroups) | [doc](lib/FilterGroups/readme.md) | control
@@ -92,12 +92,12 @@ Component | doc | categories
 [`<Selection>`](lib/Selection) | [doc](lib/Selection/readme.md) | control
 [`<Settings>`](lib/Settings) | [doc](lib/Settings/readme.md) | prefab
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) | accessibility, user-feedback
-[`<AddressFieldGroup>`](lib/structures/AddressFieldGroup) | [doc](lib/structures/AddressFieldGroup/readme.md) | control, prefab
-[`<ConfirmationModal>`](lib/structures/ConfirmationModal) | [doc](lib/structures/ConfirmationModal/readme.md) | control, prefab
-[`<EditableList>`](lib/structures/EditableList) | [doc](lib/structures/EditableList/readme.md) | control, prefab
-[`<InfoPopover>`](lib/structures/InfoPopover) | [doc](lib/structures/InfoPopover/readme.md) | control, prefab
-[`<RepeatableField>`](lib/structures/RepeatableField) | [doc](lib/structures/RepeatableField/readme.md) | control, prefab
-[`<SearchField>`](lib/structures/SearchField) | [doc](lib/structures/SearchField/readme.md) | control, prefab
+[`<AddressFieldGroup>`](lib/AddressFieldGroup) | [doc](lib/AddressFieldGroup/readme.md) | control, prefab
+[`<ConfirmationModal>`](lib/ConfirmationModal) | [doc](lib/ConfirmationModal/readme.md) | control, prefab
+[`<EditableList>`](lib/EditableList) | [doc](lib/EditableList/readme.md) | control, prefab
+[`<InfoPopover>`](lib/InfoPopover) | [doc](lib/InfoPopover/readme.md) | control, prefab
+[`<RepeatableField>`](lib/RepeatableField) | [doc](lib/RepeatableField/readme.md) | control, prefab
+[`<SearchField>`](lib/SearchField) | [doc](lib/SearchField/readme.md) | control, prefab
 [`<TabButton>`](lib/TabButton) | | control
 [`<TextArea>`](lib/TextArea) | | control
 [`<TextField>`](lib/TextField) | | control
