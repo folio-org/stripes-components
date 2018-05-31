@@ -46,5 +46,6 @@
   "expandSection": "Expand section",
   "metaSection.source": "Source: {source}",
   "metaSection.recordCreated": "Record created: {date} {time}",
-  "metaSection.recordLastUpdated": "Record last updated: {date} {time}"
+  "metaSection.recordLastUpdated": "Record last updated: {date} {time}",
+  "tableColumnCount": "Table with {count} columns"
 }
