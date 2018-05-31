@@ -4,7 +4,7 @@ Higher-order component for making a component easy to use in a [Redux Form](http
 When passing a component into the `component` prop of a `Field`, Redux Form will inject `input` and `meta` props.
 
 When doing this:
-```
+```jsx
 <Field name="myField" component={MyCustomInput} />
 ```
 `MyCustomInput` will receive `input` and `meta` objects in its props;
@@ -12,7 +12,7 @@ When doing this:
 
 ## Usage
 To normalize the `input` and `meta` props injected by Redux Form:
-```
+```jsx
 import reduxFormField from '@folio/stripes-components/lib/ReduxFormField';
 
 function ExampleComponent({ value, onChange, warningText, errorText }) => (
