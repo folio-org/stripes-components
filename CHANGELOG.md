@@ -62,6 +62,7 @@
 * Added `timezone` prop to `<Timepicker>` for override of context timezone.
 * Updated Accordion collapse logic to apply display:none when closed and overflow:visible when open
 * Deprecate `structures` directory. [STCOM-277](https://issues.folio.org/browse/STCOM-277)
+* `<AccordionSet>` works via context and sets up keyboard navigation for contained `<Accordion>`s. Fixes STCOM-213.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)

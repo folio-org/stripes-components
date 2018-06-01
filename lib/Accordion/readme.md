@@ -19,15 +19,24 @@ import { AccordionSet, Accordion } from '@folio/stripes-components/lib/Accordion
 ```
 `label` is the only required prop. `label` represents the visual heading for the modal - it can be a string, an html tag or a component.
 
-## Without the Set
-Accordions can function outside of a set as well. The set provides a convenient way to pass handlers down to all accordions if they're all in the same file.
-It's possible to have accordions on their own, without an id or toggleHandler(), in which case the component controls itself via its own internal state. The downside of this is that the Accordion's collapsed/expanded state will not persist-able - it will be open by default. If you want your Accordion to be closed by default, the `closedByDefault` prop can be used in this scenario. (If the Accordion is controlled, `closedByDefault` will not work!)
-
+## AccordionSets
+The `<AccordionSet>` sets up keyboard navigation and conveniently controls state of its wrapped collection of accordions if no `accordionStatus` prop is provided.
+`<Accordion>`s don't have to be direct children of an `<AccordionSet>` since they register themselves via context passed down from the set. Component heirarchies like this will work fine:
 ```
-<Accordion label="Example Accordion">
-  <p>Accordion content!</p>
-</Accordion>
+<AccordionSet>
+  <IfInterface>
+    <AccountAccordion /> // <Accordion> is rendered within.
+  </IfInterface>
+</AccordionSet>
 ```
+## Keyboard Navigation
+Keyboard support comes packaged with use of the `<AccordionSet>`. The keys are active when an accordion header is in focus. Bindings are as follows:
+| key | function |
+| -- | -- |
+`up` | Navigate to the previous accordion header. If the first accordion header is focused, the focus will jump to the last accordion. |
+`down` | Navigate to the next accordion header. If the last accordion header is focused, the focus will jump to the first accordion. |
+`home` | Navigate to the first accordion in the set. |
+`end` | Navigate to the last accordion in the set. |
 
 ## Controlled
 Accordions can, of course, be controlled by state or local resource. Simply include an object with a list of keys for each accordion's `id` set to a boolean value that will be passed through to the corresponding accordion's `open` prop. This object should be passed to the `<AccordionSet>`'s `accordionStatus` prop. An `onToggle` handler will also need to be provided for proper state interaction. Passed to the `<AccordionSet>`'s `onToggle` prop, it will receive both the label and id of the target accordion, either of which could be used for additional interactions as needed.
@@ -64,16 +73,6 @@ onToggleSection({label, id}) {
     <p>Accordion content!</p>
   </Accordion>
 </AccordionSet>
-```
-Accordions can also be controlled outside of an accordion set... this works if you need to have different accordions of view be their own components. Simply pass the onToggle to each accordion separately.
-
-```
-  <Accordion label="Example Accordion" onToggle={this.onToggleSection} open={this.state.accordions['ex-1']} id="ex-1">
-    <p>Accordion content!</p>
-  </Accordion>
-  <Accordion label="Acc #2" onToggle={this.onToggleSection} open={this.state.accordions['ex-2']} id="ex-2">
-    <p>Accordion content!</p>
-  </Accordion>
 ```
 
 ## Rendering Summary Items and Actions in the Header.
