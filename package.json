@@ -9,8 +9,8 @@
   },
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "lint": "eslint lib && stylelint \"lib/**/*.css\"",
-    "eslint": "eslint lib",
+    "lint": "eslint ./ && stylelint \"lib/**/*.css\"",
+    "eslint": "eslint ./",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
     "storybook": "start-storybook -p 9001 -c .storybook"
