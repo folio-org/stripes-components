@@ -31,7 +31,7 @@
   "devDependencies": {
     "@bigtest/interactor": "^0.5.0",
     "@bigtest/mocha": "^0.3.3",
-    "@folio/eslint-config-stripes": "^1.1.0",
+    "@folio/eslint-config-stripes": "^2.0.0",
     "@folio/stripes-cli": "^1.1.100073",
     "@storybook/addon-actions": "^3.2.16",
     "@storybook/addon-knobs": "^3.3.11",
