@@ -1,5 +1,5 @@
-import { filters2cql } from '../lib/FilterGroups';
 import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTResource';
+import { filters2cql } from '../lib/FilterGroups';
 
 // failOnCondition can take values:
 //      0: do not fail even if query and filters and empty
@@ -10,7 +10,6 @@ import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTRes
 //
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition) {
   return (queryParams, pathComponents, resourceValues, logger) => {
-
     const { qindex, filters, query, sort } = resourceValues.query || {};
 
     if ((query === undefined || query === '') &&
@@ -23,19 +22,19 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       return null;
     }
 
-    //This check should remain in place until all uses of the $QUERY syntax have been removed from stripes modules
-    if (queryTemplate.includes("$QUERY")) {
-      console.warn('Use of "$QUERY" in the queryTemplate is deprecated. Use the "%{query.query}" syntax instead, as found at https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution')
-      queryTemplate = queryTemplate.replace(/\$QUERY/g, '?{query}');
+    // This check should remain '$QUERY' until all uses of the $QUERY syntax have been removed from stripes modules
+    if (queryTemplate.includes('$QUERY')) {
+      console.warn('Use of "$QUERY" in the queryTemplate is deprecated. Use the "%{query.query}" syntax instead, as found at https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution');
+      queryTemplate = queryTemplate.replace(/\$QUERY/g, '?{query}'); // eslint-disable-line no-param-reassign
     }
 
-    let cql = undefined;
+    let cql;
     if (query && qindex) {
       const t = qindex.split('/', 2);
       if (t.length === 1) {
         cql = `${qindex}="${query}*"`;
       } else {
-        cql = `${t[0]} =\/${t[1]} "${query}*"`;
+        cql = `${t[0]} =\${t[1]} "${query}*"`;
       }
     } else if (query) {
       cql = compilePathTemplate(queryTemplate, queryParams, pathComponents, resourceValues);
@@ -58,7 +57,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       const sortIndexes = sort.split(',').map((sort1) => {
         let reverse = false;
         if (sort1.startsWith('-')) {
-          sort1 = sort1.substr(1);
+          sort1 = sort1.substr(1); // eslint-disable-line no-param-reassign
           reverse = true;
         }
         let sortIndex = sortMap[sort1] || sort1;
