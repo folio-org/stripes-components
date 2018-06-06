@@ -77,22 +77,22 @@
     margin-bottom: 0.4rem;
   }
 
-  &.feedbackWarning {
+  &.hasWarning {
     border-color: var(--warn);
     background-color: color(var(--warn) alpha(-95%));
   }
 
-  &.feedbackError {
+  &.hasError {
     border-color: var(--error);
     background-color: color(var(--error) alpha(-95%));
   }
 
-  &.feedbackValid {
+  &.isValid {
     border-color: var(--success);
     background-color: color(var(--success) alpha(-95%));
   }
 
-  &.feedbackChanged {
+  &.isChanged {
     background-color: color(var(--primary) alpha(-80%));
   }
 }
