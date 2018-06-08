@@ -5,7 +5,7 @@ import { reducer as formReducer } from 'redux-form';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
-import translations from '../translations/en';
+import translations from '../translations/stripes-components/en';
 
 const reducers = {
   form: formReducer,
