@@ -9,7 +9,7 @@ import '../lib/global.css';
 
 // Load the locale data for all your defined locales
 import { setIntlConfig, withIntl } from 'storybook-addon-intl';
-import enTranslations from '../translations/en.json';
+import enTranslations from '../translations/stripes-components/en.json';
 import { addLocaleData } from 'react-intl';
 import enLocaleData from 'react-intl/locale-data/en';
 addLocaleData(enLocaleData);
