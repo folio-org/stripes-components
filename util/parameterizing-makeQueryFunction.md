@@ -15,7 +15,7 @@
 
 ### Motivation
 
-UNAM (the National Autonomous University of Mexico) are adding functionality to the Users app to allow an administrator, once a user has been selected, to search within his or her fees and fines. To achieve this, they want to use the `<SearchAndSort>` high-level utility component and the associated function `makeQueryFunction`. However, this does not work because the URL query parameters that it uses -- `query`, `filters`, `sort` -- have already been set by the User app's own use of `<SearchAndSort>`.
+UNAM (the National Autonomous University of Mexico) are adding functionality to the Users app to allow an administrator, once a user has been selected, to search within that user's fees and fines. To achieve this, they want to use the `<SearchAndSort>` high-level utility component and the associated function `makeQueryFunction`. However, this does not work because the URL query parameters that it uses -- `query`, `filters`, `sort` -- have already been set by the User app's own use of `<SearchAndSort>`.
 
 How can the UNAM team provide searching at this nested level within an app?
 
