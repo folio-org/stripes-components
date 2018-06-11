@@ -188,8 +188,6 @@
 
 .SelectionMultiSelected {
   list-style: none;
-  flex: 2 2 100%;
-  width: 100%;
   flex-wrap: wrap;
   display: flex;
   padding: 0;
@@ -211,7 +209,7 @@
   pointer-events: all;
 }
 
-.ValueNodeContainer {
+.ValueChipContainer {
   margin: 2px;
   display: flex;
   justify-content: space-between;
@@ -220,7 +218,7 @@
   background-color: #efefef;
   white-space: nowrap;
 
-  &.ValueNodeSelected {
+  &.ValueChipSelected {
     background-color: var(--primary);
     color: #fff;
     border-color: #00c;
@@ -231,7 +229,12 @@
   }
 }
 
-.ValueNodeValue {
+.SelectionMultiSelectInputContainer {
+  margin: 2px;
+  flex: 2 2 auto;
+}
+
+.ValueChipValue {
   display: flex;
   padding: 0 4px;
 }
