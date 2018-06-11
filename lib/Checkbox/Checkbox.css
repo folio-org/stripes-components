@@ -43,13 +43,12 @@
 .checkboxLabel {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   padding: 0 5px;
-  height: var(--controlHeight);
+  min-height: var(--controlHeight);
   display: flex;
   cursor: pointer;
   align-items: center;
   flex-grow: 2;
   position: relative;
-  line-height: 20px;
   border-radius: var(--radius);
 
   &.disabledLabel {
@@ -127,6 +126,7 @@ input.checkboxInput {
   background: var(--color-fill-form-element);
   display: flex;
   overflow: hidden;
+  flex-shrink: 0;
 
   & svg {
     opacity: 0;
