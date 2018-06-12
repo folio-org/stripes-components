@@ -1,6 +1,10 @@
 @import '../variables.css';
 @import '../sharedStyles/form.css';
 
+.selectionRoot {
+  position: relative;
+}
+
 .selectionListRoot {
   background-color: #fff;
   border-radius: 4px;
