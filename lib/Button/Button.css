@@ -231,9 +231,10 @@
   }
 
   &[disabled] {
-    background-color: #ccc !important;
-    border-color: #ccc !important;
-    color: #888 !important;
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #888;
+    transition: opacity ease-in-out 500ms;
 
     &:hover {
       cursor: initial;
