@@ -234,7 +234,7 @@
     background-color: #ccc;
     border-color: #ccc;
     color: #888;
-    transition: opacity ease-in-out 300ms;
+    transition: opacity ease-in-out 500ms;
 
     &:hover {
       cursor: initial;
