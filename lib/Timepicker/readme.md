@@ -16,7 +16,7 @@ Name | type | description | default | required
 `onChange` | function | Callback function that will receive the control's current value and the onChange event object. `fn(e, value)` **Not necessary if using redux-form**, but it will still work if callback from a change is needed. |  |
 `passThroughValue` | string | Can be used to set dynamic values up to the form - values should be inspected/adjusted in a handler at submission time (like a button click that calls `submit()`.) See below for usage example. |  |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
-`timezone` | string | Overrides the time zone provided by context. | "UTC" | false
+`timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
 
 ## Usage in Redux-form
