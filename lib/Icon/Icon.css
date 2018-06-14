@@ -21,6 +21,21 @@
 }
 
 /**
+ * Coloring
+ */
+.error {
+  fill: var(--error);
+}
+
+.warn {
+  fill: var(--warn);
+}
+
+.success {
+  fill: var(--success);
+}
+
+/**
  * Sizing
  */
 
