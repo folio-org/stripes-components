@@ -6,7 +6,6 @@
 
 .checkbox {
   display: flex;
-  align-items: center;
   position: relative;
   color: var(--color-text);
 
@@ -42,14 +41,12 @@
 
 .checkboxLabel {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 0 5px;
-  height: var(--controlHeight);
+  padding: 4px 5px;
+  min-height: var(--controlHeight);
   display: flex;
   cursor: pointer;
-  align-items: center;
   flex-grow: 2;
   position: relative;
-  line-height: 20px;
   border-radius: var(--radius);
 
   &.disabledLabel {
@@ -127,6 +124,8 @@ input.checkboxInput {
   background: var(--color-fill-form-element);
   display: flex;
   overflow: hidden;
+  flex-shrink: 0;
+  margin-top: 2px;
 
   & svg {
     opacity: 0;

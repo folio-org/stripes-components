@@ -64,6 +64,10 @@
 * Deprecate `structures` directory. [STCOM-277](https://issues.folio.org/browse/STCOM-277)
 * `<AccordionSet>` works via context and sets up keyboard navigation for contained `<Accordion>`s. Fixes STCOM-213.
 * Add `timezone` prop to ``<Datepicker>`.
+* Added fix for checkboxes/radiobuttons getting squashed together on small widhts. Fixes STCOM-260.
+* Added `autocomplete` prop to `<TextField>` that takes HTML5 string values. Fixes STCOM-289.
+* camelCase `timeZone` props
+* Fix `stripes.context.locale` logic for `<Datepicker>` and `<Timepicker>`
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
