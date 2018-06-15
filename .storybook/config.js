@@ -14,9 +14,18 @@ import { addLocaleData } from 'react-intl';
 import enLocaleData from 'react-intl/locale-data/en';
 addLocaleData(enLocaleData);
 
+// mimics the StripesTranslationPlugin in @folio/stripes-core
+function prefixKeys(obj) {
+  const res = {};
+  for (const key of Object.keys(obj)) {
+    res[`stripes-components.${key}`] = obj[key];
+  }
+  return res;
+}
+
 // Define messages
 const messages = {
-  en: enTranslations,
+  en: prefixKeys(enTranslations),
 };
 
 // Set intl configuration
