@@ -61,6 +61,7 @@
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "storybook-addon-intl": "^2.3.0",
+    "storybook-addon-rtl": "^0.1.1",
     "storybook-readme": "^3.2.0",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
