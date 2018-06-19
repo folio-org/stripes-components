@@ -1,5 +1,6 @@
 import { configure, addDecorator } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
+import { initializeRTL } from 'storybook-addon-rtl';
 import '../lib/global.css';
 
 
@@ -27,6 +28,8 @@ setIntlConfig({
 });
 
 addDecorator(withIntl);
+
+initializeRTL();
 
 /**
  * Set options
