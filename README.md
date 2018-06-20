@@ -57,6 +57,7 @@ Component | doc | categories
 [`<EmptyMessage>`](lib/EmptyMessage) | [doc](lib/EmptyMessage/readme.md) | structure
 [`<EntrySelector>`](lib/EntrySelector) | | control
 [`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
+[`<FilterControlGroup>`](lib/FilterControlGroup) | | control
 [`<FilterGroups>`](lib/FilterGroups) | [doc](lib/FilterGroups/readme.md) | control
 [`<FilterPane>`](lib/FilterPane) | [doc](lib/FilterPane/readme.md) | structure
 [`<FilterPaneSearch>`](lib/FilterPaneSearch) | [doc](lib/FilterPaneSearch/readme.md) | obsolete
@@ -80,6 +81,7 @@ Component | doc | categories
 [`<Modal>`](lib/Modal) | [doc](lib/Modal/readme.md) | container
 [`<MultiColumnList>`](lib/MultiColumnList) | [doc](lib/MultiColumnList/readme.md) | data-display
 [`<NavList>`](lib/NavList) | [doc](lib/NavList/readme.md) | control
+[`<NavListItem>`](lib/NavListItem) | | control
 [`<NavListSection>`](lib/NavListSection) | | control
 [`<Pane>`](lib/Pane) | [doc](lib/Pane/readme.md) | structure
 [`<PaneHeader>`](lib/PaneHeader) | | structure
