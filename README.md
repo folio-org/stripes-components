@@ -42,15 +42,18 @@ The following components are available in the [lib](lib) directory.
 Component | doc | categories
 --- | --- | ---
 [`<Accordion>`](lib/Accordion) | [doc](lib/Accordion/readme.md) | structure
+[`<AddressFieldGroup>`](lib/AddressFieldGroup) | [doc](lib/AddressFieldGroup/readme.md) | control, prefab
 [`<AppIcon>`](lib/AppIcon) | [doc](lib/AppIcon/readme.md) | design
 [`<Avatar>`](lib/Avatar) | [doc](lib/Avatar/readme.md) | data-display
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
 [`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) | control
 [`<Callout>`](lib/Callout) | [doc](lib/Callout/readme.md) | user-feedback
 [`<Checkbox>`](lib/Checkbox) | | control
+[`<ConfirmationModal>`](lib/ConfirmationModal) | [doc](lib/ConfirmationModal/readme.md) | control, prefab
 [`<Datepicker>`](lib/Datepicker) | [doc](lib/Datepicker/readme.md) | control
 [`<Dropdown>`](lib/Dropdown) | [doc](lib/Dropdown/readme.md) | control
 [`<DropdownMenu>`](lib/DropdownMenu) | | control
+[`<EditableList>`](lib/EditableList) | [doc](lib/EditableList/readme.md) | control, prefab
 [`<EmptyMessage>`](lib/EmptyMessage) | [doc](lib/EmptyMessage/readme.md) | structure
 [`<EntrySelector>`](lib/EntrySelector) | | control
 [`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
@@ -64,6 +67,7 @@ Component | doc | categories
 [`<IconButton>`](lib/IconButton) | [doc](lib/IconButton/readme.md) | control
 [`<IfInterface>`](lib/IfInterface) | [doc](lib/IfInterface/readme.md) | utility
 [`<IfPermission>`](lib/IfPermission) | [doc](lib/IfPermission/readme.md) | utility
+[`<InfoPopover>`](lib/InfoPopover) | [doc](lib/InfoPopover/readme.md) | control, prefab
 [`<KeyValue>`](lib/KeyValue) | [doc](lib/KeyValue/readme.md) | data-display
 [`<Layer>`](lib/Layer) | [doc](lib/Layer/readme.md) | structure
 [`<Layout>`](lib/Layout) | | structure
@@ -87,17 +91,13 @@ Component | doc | categories
 [`<RadioButton>`](lib/RadioButton) | | control
 [`<RadioButtonGroup>`](lib/RadioButtonGroup) | [doc](lib/RadioButtonGroup/readme.md) | control
 [`<ReduxFormField>`](lib/ReduxFormField) | [doc](lib/ReduxFormField/readme.md) | control
+[`<RepeatableField>`](lib/RepeatableField) | [doc](lib/RepeatableField/readme.md) | control, prefab
+[`<SearchField>`](lib/SearchField) | [doc](lib/SearchField/readme.md) | control, prefab
 [`<SegmentedControl>`](lib/SegmentedControl) | [doc](lib/SegmentedControl/readme.md) | control
 [`<Select>`](lib/Select) | [doc](lib/Select/readme.md) | control
 [`<Selection>`](lib/Selection) | [doc](lib/Selection/readme.md) | control
 [`<Settings>`](lib/Settings) | [doc](lib/Settings/readme.md) | prefab
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) | accessibility, user-feedback
-[`<AddressFieldGroup>`](lib/AddressFieldGroup) | [doc](lib/AddressFieldGroup/readme.md) | control, prefab
-[`<ConfirmationModal>`](lib/ConfirmationModal) | [doc](lib/ConfirmationModal/readme.md) | control, prefab
-[`<EditableList>`](lib/EditableList) | [doc](lib/EditableList/readme.md) | control, prefab
-[`<InfoPopover>`](lib/InfoPopover) | [doc](lib/InfoPopover/readme.md) | control, prefab
-[`<RepeatableField>`](lib/RepeatableField) | [doc](lib/RepeatableField/readme.md) | control, prefab
-[`<SearchField>`](lib/SearchField) | [doc](lib/SearchField/readme.md) | control, prefab
 [`<TabButton>`](lib/TabButton) | | control
 [`<TextArea>`](lib/TextArea) | | control
 [`<TextField>`](lib/TextField) | | control
