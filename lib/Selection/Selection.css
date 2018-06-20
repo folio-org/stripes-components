@@ -1,5 +1,4 @@
 @import '../variables.css';
-@import '../sharedStyles/form.css';
 
 .selectionRoot {
   position: relative;
@@ -26,9 +25,6 @@
 }
 
 .selectionControl {
-  margin-bottom: var(--controlMarginBottom);
-  background-color: rgba(0, 0, 0, 0.03);
-  border: 1px solid var(--color-border);
   height: var(--controlHeight);
   padding: 0 8px;
   width: 100%;
@@ -36,33 +32,9 @@
   align-items: flex-start;
   justify-content: space-between;
 
-  &:focus {
-    outline: none;
-    border-color: var(--primary, #0c577f);
-  }
-
   &.marginBottom0 {
     /* stylelint-disable-next-line length-zero-no-unit */
     margin-bottom: 0px;
-  }
-
-  &.hasFeedback {
-    margin-bottom: 0.4rem;
-  }
-
-  &.feedbackWarning {
-    border-color: var(--warn);
-    background-color: color(var(--warn) alpha(-95%));
-  }
-
-  &.feedbackError {
-    border-color: var(--error);
-    background-color: color(var(--error) alpha(-95%));
-  }
-
-  &.feedbackValid {
-    border-color: var(--success);
-    background-color: color(var(--success) alpha(-95%));
   }
 }
 
