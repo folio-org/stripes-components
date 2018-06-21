@@ -63,8 +63,8 @@
 * Updated Accordion collapse logic to apply display:none when closed and overflow:visible when open
 * Deprecate `structures` directory. [STCOM-277](https://issues.folio.org/browse/STCOM-277)
 * `<AccordionSet>` works via context and sets up keyboard navigation for contained `<Accordion>`s. Fixes STCOM-213.
-* Add `timezone` prop to ``<Datepicker>`.
-* Added fix for checkboxes/radiobuttons getting squashed together on small widhts. Fixes STCOM-260.
+* Add `timezone` prop to `<Datepicker>`.
+* Added fix for checkboxes/radiobuttons getting squashed together on small widths. Fixes STCOM-260.
 * Added `autocomplete` prop to `<TextField>` that takes HTML5 string values. Fixes STCOM-289.
 * camelCase `timeZone` props
 * Fix `stripes.context.locale` logic for `<Datepicker>` and `<Timepicker>`
@@ -100,6 +100,7 @@
 * Storybook resource added. Run `yarn storybook` to see component demos and documentation.
 * Pass a ref through to TextArea for access by a parent. Refs STSMACOM-4.
 * Add ability to pass custom filter to `<Selection>` component. Fixes STCOM-251.
+* Add ability to colour `<Icon>` using `status` prop.
 
 ## [1.9.0](https://github.com/folio-org/stripes-components/tree/v1.9.0) (2017-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.8.0...v1.9.0)
