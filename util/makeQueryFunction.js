@@ -1,4 +1,5 @@
 import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTResource';
+import { isString, isObject, mapKeys } from 'lodash';
 import { filters2cql } from '../lib/FilterGroups';
 
 // failOnCondition can take values:
@@ -8,7 +9,7 @@ import { filters2cql } from '../lib/FilterGroups';
 //
 // For compatibility, false and true may be used for 0 and 1 respectively.
 //
-function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition) {
+function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition, params) {
   return (queryParams, pathComponents, resourceValues, logger) => {
     const { qindex, filters, query, sort } = resourceValues.query || {};
 
@@ -20,6 +21,18 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
         (filters === undefined || filters === '') &&
         (failOnCondition === 2)) {
       return null;
+    }
+
+    let parsedParams = queryParams;
+
+    if (isString(params)) {
+      parsedParams = mapKeys(queryParams, (value, key) => (`${params}.${key}`));
+    }
+
+    if (isObject(params)) {
+      parsedParams = mapKeys(queryParams, (value, key) => {
+        return (params[key]) ? params[key] : key;
+      });
     }
 
     // This check should remain '$QUERY' until all uses of the $QUERY syntax have been removed from stripes modules
@@ -38,7 +51,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
         cql = `${t[0]} =\${t[1]} "${query}*"`;
       }
     } else if (query) {
-      cql = compilePathTemplate(queryTemplate, queryParams, pathComponents, resourceValues);
+      cql = compilePathTemplate(queryTemplate, parsedParams, pathComponents, resourceValues);
       if (cql === null) {
         // Some part of the template requires something that we don't have.
         return null;
