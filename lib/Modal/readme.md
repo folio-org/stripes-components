@@ -4,8 +4,16 @@ Basic component for rendering a modal pop-up.
 
 ```js
 import Modal from '@folio/stripes-components/lib/Modal';
-//..
-<Modal dismissible closeOnBackgroundClick open label="example">
+import Button from '@folio/stripes-components/lib/Button';
+
+// Add a footer to the modal (optional)
+const footer = (
+  <Fragment>
+    <Button buttonStyle="primary" marginBottom0>Save</Button>
+  </Fragment>
+);
+
+<Modal dismissible closeOnBackgroundClick open label="example" footer={footer}>
   <button onClick={this.handleClose}>Close modal</button>
 </Modal>
 ```
@@ -22,5 +30,7 @@ scope | string | Parent element for modal. Defaults to 'module' which keeps the 
 closeOnBackgroundClick | bool | Modal can be dismissed by clicking the background overlay. | false |
 dismissible | bool | If true, renders a close 'X' in the starting corner of the modal. | false |
 children | node | Content for the body of the modal. | | &#10004;
+footer | node | Footer content of the modal. Pass a single component or multiple components wrapped in a Fragment. | |
+wrappingElement | string | Change the HTML-tag of the wrapping element. Useful if the modal is a form. | |
 enforceFocus | bool | If true, automatically attempts to regain focus when its children are clicked.  | true |
 restoreFocus | bool | If true, the modal will restore focus to previously focused element once modal is hidden. | true |
