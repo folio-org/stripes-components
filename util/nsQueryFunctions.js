@@ -4,7 +4,7 @@ const PARAM_FILTER = { filters: 1, query: 1, sort: 1, qindex: 1 };
 
 export function getNsKey(key, params) {
   if (!params || !PARAM_FILTER[key]) return key;
-  return (isString(params)) ? `${params}.${key}` : params[key];
+  return (isString(params)) ? `${params}.${key}` : (params[key] || key);
 }
 
 // Adds namespace / prefix to keys for given query
