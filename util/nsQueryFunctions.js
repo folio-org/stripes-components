@@ -15,8 +15,7 @@ export function getNsKey(key, params) {
 // { "users.query" : "test", "users.filters": "active", userId: 1 }
 export function mapNsKeys(values, params) {
   if (!params) return values;
-  return mapKeys(values, (value, key) =>
-    (PARAM_FILTER[key] ? getNsKey(key, params) : key));
+  return mapKeys(values, (value, key) => getNsKey(key, params));
 }
 
 // Removes namespace / prefix from keys for given values
