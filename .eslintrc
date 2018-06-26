@@ -20,7 +20,8 @@
   "parser": "babel-eslint",
   "rules": {
     "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": true
+      "devDependencies": true,
+      "peerDependencies": true
     }],
     "no-console": ["error", {
       "allow": ["warn", "error"]
