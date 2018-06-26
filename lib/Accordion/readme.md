@@ -21,7 +21,7 @@ import { AccordionSet, Accordion } from '@folio/stripes-components/lib/Accordion
 
 ## AccordionSets
 The `<AccordionSet>` sets up keyboard navigation and conveniently controls state of its wrapped collection of accordions if no `accordionStatus` prop is provided.
-`<Accordion>`s don't have to be direct children of an `<AccordionSet>` since they register themselves via context passed down from the set. Component heirarchies like this will work fine:
+`<Accordion>`s don't have to be direct children of an `<AccordionSet>` since they register themselves via context passed down from the set. Component hierarchies like this will work fine:
 ```
 <AccordionSet>
   <IfInterface>
