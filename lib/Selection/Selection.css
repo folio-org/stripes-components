@@ -24,6 +24,10 @@
   position: relative;
 }
 
+.selectListSection {
+  padding: 4px;
+}
+
 .selectionControl {
   height: var(--controlHeight);
   padding: 0 8px;
@@ -213,6 +217,11 @@
 .ValueChipValue {
   display: flex;
   padding: 0 4px;
+}
+
+.SelectionEmptyMessage {
+  font-weight: bold;
+  padding: 6px;
 }
 
 .srOnly {
