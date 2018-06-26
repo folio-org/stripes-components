@@ -1,24 +1,34 @@
 # Testing in Stripes Components
 
 Tests can fortify new features from breaking changes, help prevent
-bugs from being reintroduced, and overall future-proof our components
-against an ever-changing ecosystem. As more people get involved and
-contribute, they can be confident in fixing or introducing changes
-without breaking existing functionality.
+bugs from being reintroduced, and overall future-proof our against an
+ever-changing ecosystem. As more people get involved and contribute,
+they can be confident in fixing or introducing changes without
+breaking existing functionality.
 
 When we write tests, we need to make sure that they are resilient to
 change as well as being easily understandable should somebody need to
 add or adjust tests as other features are introduced and bugs are
 fixed.
 
-Stripes Components uses
-[`@folio/stripes-cli`](https://github.com/folio-org/stripes-cli) to
-launch a browser and run our tests using
-[Karma](http://karma-runner.github.io). The tests themselves live
-alongside each component in their own `tests` subdirectory, and are
-written using [Mocha](https://mochajs.org/),
-[Chai](https://github.com/chaijs/chai), and
-[BigTest](https://bigtestjs.io/).
+## Directory structure
+
+Each component's directory should contain a `tests` directory that
+contains test files named with the component name, and sometimes a
+specific test suite name. The `tests` directory should also contain an
+often quite useful `interactor.js` file. For example, the directory
+structure for `<Button>` looks like this:
+
+```
+Button
+|-Button.js
+|-Button.css
+|-index.js
+|-readme
+|-tests
+|  |-interactor.js
+|  |-Button-test.js
+```
 
 ## When Should I Write Tests?
 
@@ -53,20 +63,16 @@ is fixed.
 
 Tests in stripes components are written using
 [Mocha](https://mochajs.org/) via
-[`@bigtest/mocha`](https://github.com/bigtestjs/mocha). This package
-makes code within `it` blocks _convergent_, which means that if any
-assertions within fail, they will run again repeatedly until they pass
-or a timeout elapses. This makes testing asynchronous rendering easier
-since we don't have to know exactly _when_ a component, or any updates
-to a component, render into the DOM. As long as it renders within the
-timeout, the test will eventually pass.
-
-**Important:** since `it` blocks are convergent, and can be run
-multiple or possibly hundreds of times, _side-effects should be kept
-in hooks_ such as `beforeEach`. If an action, such as clicking an
-element, is performed inside of a convergent `it`, the action could
-happen repeatedly, further complicating any debugging or final error
-thrown.
+[`@bigtest/mocha`](https://github.com/bigtestjs/mocha). At the core of
+this package is the concept of _convergences_ which make testing
+asynchronous applications both robust and fast. They accomplish this
+by freeing us from the burden of worrying about when a component, or
+any updates to a component, will render into the DOM. If a test
+initially fails, as long as the component renders within the timeout,
+the test will rerun eventually pass. To read more about how this
+strategy works, and why it is so effective, checkout the
+[documentation on
+convergences](https://github.com/bigtestjs/convergence#why-convergence).
 
 ### Getting Started
 
@@ -79,31 +85,49 @@ component](https://github.com/folio-org/stripes-components/blob/master/lib/Butto
 and follow the same patterns but specific to the component you're
 working on.
 
+The patterns themselves can be outlined in a few simple steps:
+
+1. Do any setup work necessary
+2. Perform any actions on the component that we want to verify
+3. Make assertions against the desired state
+
 Here's a sample of tests from the `Button` component:
 
 ``` javascript
 import React from 'react';
+
+// testing tools
 import { describe, beforeEach, it } from '@bigtest/mocha';
 import { expect } from 'chai';
 
+// test helpers
 import { mount } from '../../../tests/helpers';
 
+// the component to test
 import Button from '../Button';
+
+// interactor used to perform actions (more on this later)
 import ButtonInteractor from './interactor';
 
+// the actual tests
 describe('Button', () => {
   const button = new ButtonInteractor();
   let clicked;
 
+  // 1. Do any setup work necessary
   beforeEach(async () => {
+    // set to false before each test
     clicked = false;
 
+    // mount our component with props
     await mount(
       <Button onClick={() => { clicked = true; }} id="button-test">
         test
       </Button>
     );
   });
+
+  // make assertions against the initial rendered state
 
   it('renders a <button> tag', () => {
     expect(button.isButton).to.be.true;
@@ -117,11 +141,16 @@ describe('Button', () => {
     expect(button.id).to.equal('button-test');
   });
 
+  // testing a specific action
+
   describe('clicking the button', () => {
+
+    // 2. Perform any actions on the component that we want to verify
     beforeEach(async () => {
       await button.click();
     });
 
+    // 3. Make assertions against the desired state
     it('calls the onClick handler', () => {
       expect(clicked).to.be.true;
     });
@@ -139,8 +168,8 @@ and debug our tests after they run. You can then use Mocha's `it.only`
 to isolate a specific test to debug.
 
 Since `@bigtest/mocha` makes our tests convergent, and could possibly
-run them multiple times, _they only contain assertions_. You'll also
-notice when we perform our `clicked` test that the `await
+run them multiple times, _they must only contain assertions_. You'll
+also notice when we perform our `clicked` test that the `await
 button.clickButton()` action is separated into it's own `beforeEach`
 hook so it isn't accidentally invoked more than once. Separating
 side-effects this way and repeatedly running our assertions until
@@ -176,17 +205,21 @@ export default interactor(class ButtonInteractor {
 });
 ```
 
-An `Interactor` is a composable [page
-object](https://martinfowler.com/bliki/PageObject.html) we use
-throughout our tests. This adds a layer of durability to our suite
-because when things like classnames or the markup inevitably change,
-we should only need to update our interactor as oppose to updating
-each of our tests. Interactors can also be composed by each other, so
-if another component uses a button, that component's interactor can
-use the `ButtonInteractor` too.
+You should always use an interactor if your tests need to interact
+with the DOM either by reading attributes, properties, text,
+classnames, or by sending actions such as click, focus, blur, or
+change events.
 
-Interactors are convergent and will wait for elements to exist in the
-DOM before interacting with them. Interactor properties are also lazy
+An `Interactor` is a powerful, customizable, composable, [page
+object](https://martinfowler.com/bliki/PageObject.html). This adds a
+layer of durability to our suite because when things like classnames
+or the markup inevitably change, we should only need to update our
+interactor as oppose to updating each of our tests. Interactors can
+also be composed by each other, so if another component uses a button,
+that component's interactor can use the `ButtonInteractor` too.
+
+Interactors are also convergent and will wait for elements to exist in
+the DOM before interacting with them. Interactor properties are lazy
 and do not query for the element until they are accessed. To learn
 more about what they do, how to create your own interactors, and how
 to then compose interactors, check out the [BigTest Interactor
