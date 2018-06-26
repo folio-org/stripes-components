@@ -7,7 +7,7 @@ export function getNsKey(key, params) {
   return (isString(params)) ? `${params}.${key}` : (params[key] || key);
 }
 
-// Adds namespace / prefix to keys for given query
+// Adds namespace / prefix to keys for given values object
 //
 // example:
 // values = { query: "test", filters: 'active', userId: 1 }, params = 'users'
@@ -18,7 +18,7 @@ export function mapNsKeys(values, params) {
   return mapKeys(values, (value, key) => getNsKey(key, params));
 }
 
-// Removes namespace / prefix from keys for given values
+// Removes namespace / prefix from keys for given values object
 //
 // example:
 // values = { "users.query" : "test", "users.filters": "active" }, params = 'users'
