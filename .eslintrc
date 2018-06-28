@@ -22,6 +22,7 @@
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": true
     }],
+    "max-len": ["warn", { "code": 120 }],
     "no-console": ["error", {
       "allow": ["warn", "error"]
     }],
