@@ -1,13 +1,14 @@
 import { isString, isObject, mapKeys, mapValues, transform } from 'lodash';
 
-const PARAM_FILTER = { filters: 1, query: 1, sort: 1, qindex: 1 };
+// the list of allowed parameters to which the namespace will be added
+const PARAM_WHITELIST = { filters: 1, query: 1, sort: 1, qindex: 1 };
 
 export function getNsKey(key, params) {
-  if (!params || !PARAM_FILTER[key]) return key;
+  if (!params || !PARAM_WHITELIST[key]) return key;
   return (isString(params)) ? `${params}.${key}` : (params[key] || key);
 }
 
-// Adds namespace / prefix to keys for given values object
+// Adds namespace / prefix to keys in whitelist for given values object
 //
 // example:
 // values = { query: "test", filters: 'active', userId: 1 }, params = 'users'
