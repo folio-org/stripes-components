@@ -109,7 +109,25 @@ Component | doc | categories
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
 ## Testing
-Component tests are automated browser tests powered by karma and written using mocha syntax. See [TESTING.md](TESTING.md) for more information.
+Stripes Components' tests are automated browser tests powered by
+[Karma](http://karma-runner.github.io) and written using
+[Mocha](https://mochajs.org/), [Chai](https://github.com/chaijs/chai),
+and [BigTest](https://bigtestjs.io/).
+
+Component tests can be run by navigating to your `stripes-components`
+folder and running
+
+```
+yarn test
+```
+
+This will spin up Karma via
+[`stripes-cli`](https://github.com/folio-org/stripes-cli) and run all
+tests locally in the Chrome browser.
+
+See our [testing documentation](docs/Testing.md) for more information
+on writing tests.
+
 
 ## FAQ
 Check our [Frequently asked questions for Module developers page](FAQ.md)
