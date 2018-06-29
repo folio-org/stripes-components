@@ -1,4 +1,6 @@
-# Column Selector Pattern (refer `lib/Loans/OpenLoans/OpenLoans.js`)
+# Column Selector Pattern 
+
+(refer `https://github.com/folio-org/ui-users/blob/master/lib/Loans/OpenLoans/OpenLoans.js`) for the patterns implementation
 
 # Purpose
 
