@@ -1,4 +1,4 @@
-# Column Selector pattern (refer ` lib/Loans/OpenLoans/OpenLoans.js`)
+# Column Selector Pattern (refer `lib/Loans/OpenLoans/OpenLoans.js`)
 
 # Purpose
 
