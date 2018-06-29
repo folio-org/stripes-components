@@ -35,19 +35,19 @@ This section covers the variables required and the functions we need to implemen
 `controllableColumns`: List of all columns that can be toggled for visibility (excludes `checkbox` and `ellipsis`).
 `visibileColumns`: An object that can be built from the controllableColumns list, with a key value pair of `title` and `status` respectively. Needs to be stored in the state. All the statuses are set to true (column is visible) initially.
 
-```const visibleColumns = this.controllableColumns.map(columnName => ({
+```
+const visibleColumns = this.controllableColumns.map(columnName => ({
       title: columnName,
       status: true,
     }));
-
 ```
 
-```Example: visibileColumns = {
+```
+Example: visibileColumns = {
       'due date': true,
       'loan Policy': false,
     }
 ```
-
 
 **Variables that need to be stored in the state:**
 
