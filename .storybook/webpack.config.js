@@ -56,9 +56,18 @@ module.exports = {
         use: [
           {
             loader: 'style-loader',
+            options: {
+              sourceMap: true,
+            },
           },
           {
-            loader: 'css-loader?modules&localIdentName=[local]---[hash:base64:5]',
+            loader: 'css-loader',
+            options: {
+              localIdentName: '[local]---[hash:base64:5]',
+              modules: true,
+              sourceMap: true,
+              importLoaders: 1,
+            },
           },
           {
             loader: 'postcss-loader',
@@ -73,6 +82,7 @@ module.exports = {
                 postCssMediaMinMax(),
                 postCssColorFunction(),
               ],
+              sourceMap: true,
             },
           },
         ],
