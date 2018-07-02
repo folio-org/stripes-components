@@ -24,6 +24,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
 
     // This check should remain '$QUERY' until all uses of the $QUERY syntax have been removed from stripes modules
     if (queryTemplate.includes('$QUERY')) {
+      // eslint-disable-next-line max-len
       console.warn('Use of "$QUERY" in the queryTemplate is deprecated. Use the "%{query.query}" syntax instead, as found at https://github.com/folio-org/stripes-connect/blob/master/doc/api.md#text-substitution');
       queryTemplate = queryTemplate.replace(/\$QUERY/g, '?{query}'); // eslint-disable-line no-param-reassign
     }

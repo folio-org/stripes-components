@@ -3,6 +3,8 @@ Higher-order component for injecting the `intl` context into a component from a 
 
 Uses React 16.3 `forwardRef()` to enable cleaner ref handling than `react-intl`'s `injectIntl()`.
 
+This component is intended to only be a temporary replacement for `react-intl`'s `injectIntl()`, until ref handling can be improved upstream. Not intended for use outside of `stripes-components`.
+
 ## Usage
 Use exactly like `react-intl` `injectIntl()`.
 
