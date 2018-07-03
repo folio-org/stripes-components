@@ -3,15 +3,15 @@
  */
 
 .iconWithText {
-  display: inline-block;
-
-  padding: 0 2px;
-}
-
-/* .inner {
   display: inline-flex;
   align-items: center;
-} */
+  vertical-align: top;
+  padding: 0 6px 0 0;
+}
+
+[dir=rtl] .iconWithText {
+  padding: 0 0 0 6px;
+}
 
 .text {
   font-size: inherit;
