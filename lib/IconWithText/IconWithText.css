@@ -3,9 +3,38 @@
  */
 
 .iconWithText {
-  background-color: yellow;
+  display: inline-block;
+
+  padding: 0 2px;
 }
 
+/* .inner {
+  display: inline-flex;
+  align-items: center;
+} */
+
 .text {
-  background-color: blue;
+  font-size: inherit;
+}
+
+.icon {
+
+}
+
+/**
+ * App Icon
+ */
+.appIcon {
+  margin-right: 4px;
+}
+
+[dir=rtl] .appIcon {
+  margin-left: 4px;
+}
+
+/**
+ * Regular Icon
+ */
+.regularIcon {
+
 }
