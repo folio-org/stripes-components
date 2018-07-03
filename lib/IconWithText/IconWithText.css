@@ -17,10 +17,6 @@
   font-size: inherit;
 }
 
-.icon {
-
-}
-
 /**
  * App Icon
  */
@@ -36,5 +32,5 @@
  * Regular Icon
  */
 .regularIcon {
-
+  display: relative;
 }
