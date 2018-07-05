@@ -76,6 +76,7 @@
 * add `focusable='false'` attribute to `<Icon>`'s rendered SVG's.
 * Modify makeQueryFunction to support param namespacing. Fixes STCOM-300.
 * Turn on `pointer-events: auto` for `<Modal>`. Fixes UICHKOUT-437.
+* Add link to user record in `<MetaSection>`. Fixes STCOM-305.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
