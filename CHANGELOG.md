@@ -74,6 +74,7 @@
 * Fix issue with Selection not rendering as an overlay.
 * accessibility updates and tests added to Selection: Single Select.
 * add `focusable='false'` attribute to `<Icon>`'s rendered SVG's.
+* expose inner `<Paneset>`'s width as prop on `<EntrySelector>`. Fixes STCOM-309
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
