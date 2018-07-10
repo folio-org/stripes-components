@@ -1,5 +1,8 @@
 @import '../variables.css';
-@import '../sharedStyles/form.css';
+
+.selectionRoot {
+  position: relative;
+}
 
 .selectionListRoot {
   background-color: #fff;
@@ -21,10 +24,11 @@
   position: relative;
 }
 
+.selectListSection {
+  padding: 4px;
+}
+
 .selectionControl {
-  margin-bottom: var(--controlMarginBottom);
-  background-color: rgba(0, 0, 0, 0.03);
-  border: 1px solid var(--color-border);
   height: var(--controlHeight);
   padding: 0 8px;
   width: 100%;
@@ -32,41 +36,17 @@
   align-items: flex-start;
   justify-content: space-between;
 
-  &:focus {
-    outline: none;
-    border-color: var(--primary, #0c577f);
-  }
-
   &.marginBottom0 {
     /* stylelint-disable-next-line length-zero-no-unit */
     margin-bottom: 0px;
   }
-
-  &.hasFeedback {
-    margin-bottom: 0.4rem;
-  }
-
-  &.feedbackWarning {
-    border-color: var(--warn);
-    background-color: color(var(--warn) alpha(-95%));
-  }
-
-  &.feedbackError {
-    border-color: var(--error);
-    background-color: color(var(--error) alpha(-95%));
-  }
-
-  &.feedbackValid {
-    border-color: var(--success);
-    background-color: color(var(--success) alpha(-95%));
-  }
 }
 
-.SelectionFilterContainer {
+.selectionFilterContainer {
   padding: 4px;
 }
 
-.SelectionEndControls {
+.selectionEndControls {
   pointer-events: none;
   height: 100%;
   position: absolute;
@@ -78,7 +58,7 @@
   justify-content: flex-end;
 }
 
-.SelectionFilter {
+.selectionFilter {
   border-radius: var(--radius, 4px);
   width: 100%;
   padding: 4px 8px;
@@ -91,12 +71,12 @@
   }
 }
 
-.SelectionControlContainer {
+.selectionControlContainer {
   position: relative;
   width: 100%;
 }
 
-.selectAheadMobileBackdrop {
+.selectionMobileBackdrop {
   position: fixed;
   top: 0;
   width: 100%;
@@ -169,7 +149,7 @@
   font-weight: 700;
 }
 
-.SelectionMultiContainer {
+.selectionMultiContainer {
   border: 1px solid var(--color-border);
   padding: 0 4px;
   padding-right: 24px;
@@ -178,7 +158,7 @@
   flex-wrap: wrap;
 }
 
-.SelectionFilterInline {
+.selectionFilterInline {
   min-width: 100px;
   width: 100%;
   border-width: 0;
@@ -186,32 +166,30 @@
   height: var(--controlHeight);
 }
 
-.SelectionMultiSelected {
+.selectionMultiSelected {
   list-style: none;
-  flex: 2 2 100%;
-  width: 100%;
   flex-wrap: wrap;
   display: flex;
   padding: 0;
   margin-bottom: 0;
 }
 
-.SelectionMultiSelectedItem {
+.selectionMultiSelectedItem {
   display: inline-block;
   margin: 2px;
 }
 
-.SelectionMultiInputContainer {
+.selectionMultiInputContainer {
   flex: 2 2 auto;
   display: inline-block;
   margin: 3px;
 }
 
-.SelectionClearAll {
+.selectionClearAll {
   pointer-events: all;
 }
 
-.ValueNodeContainer {
+.ValueChipContainer {
   margin: 2px;
   display: flex;
   justify-content: space-between;
@@ -220,7 +198,7 @@
   background-color: #efefef;
   white-space: nowrap;
 
-  &.ValueNodeSelected {
+  &.ValueChipSelected {
     background-color: var(--primary);
     color: #fff;
     border-color: #00c;
@@ -231,9 +209,19 @@
   }
 }
 
-.ValueNodeValue {
+.selectionMultiSelectInputContainer {
+  margin: 2px;
+  flex: 2 2 auto;
+}
+
+.ValueChipValue {
   display: flex;
   padding: 0 4px;
+}
+
+.selectionEmptyMessage {
+  font-weight: bold;
+  padding: 6px;
 }
 
 .srOnly {
@@ -246,7 +234,7 @@
 }
 
 *[dir="rtl"] {
-  & .SelectionMultiContainer {
+  & .selectionMultiContainer {
     padding-left: 24px;
     padding-right: 0;
   }

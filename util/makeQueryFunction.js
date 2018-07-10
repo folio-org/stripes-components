@@ -1,5 +1,6 @@
 import { compilePathTemplate } from '@folio/stripes-connect/RESTResource/RESTResource';
 import { filters2cql } from '../lib/FilterGroups';
+import { removeNsKeys } from './nsQueryFunctions';
 
 // failOnCondition can take values:
 //      0: do not fail even if query and filters and empty
@@ -8,9 +9,11 @@ import { filters2cql } from '../lib/FilterGroups';
 //
 // For compatibility, false and true may be used for 0 and 1 respectively.
 //
-function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition) {
+function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition, nsParams) {
   return (queryParams, pathComponents, resourceValues, logger) => {
-    const { qindex, filters, query, sort } = resourceValues.query || {};
+    const resourceQuery = removeNsKeys(resourceValues.query, nsParams);
+    const nsQueryParams = removeNsKeys(queryParams, nsParams);
+    const { qindex, filters, query, sort } = resourceQuery || {};
 
     if ((query === undefined || query === '') &&
         (failOnCondition === 1 || failOnCondition === true)) {
@@ -38,7 +41,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
         cql = `${t[0]} =\${t[1]} "${query}*"`;
       }
     } else if (query) {
-      cql = compilePathTemplate(queryTemplate, queryParams, pathComponents, resourceValues);
+      cql = compilePathTemplate(queryTemplate, nsQueryParams, pathComponents, { query: resourceQuery });
       if (cql === null) {
         // Some part of the template requires something that we don't have.
         return null;
