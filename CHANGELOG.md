@@ -77,6 +77,7 @@
 * Modify makeQueryFunction to support param namespacing. Fixes STCOM-300.
 * Turn on `pointer-events: auto` for `<Modal>`. Fixes UICHKOUT-437.
 * Add link to user record in `<MetaSection>`. Fixes STCOM-305.
+* Upgrade to webpack 4. Refs STCOR-175. Available from v2.1.6.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)

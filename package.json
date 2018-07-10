@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -65,7 +65,7 @@
     "storybook-readme": "^3.2.0",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
-    "webpack": "^3.4.1"
+    "webpack": "^4.10.2"
   },
   "dependencies": {
     "@folio/stripes-connect": "^3.1.3",
