@@ -71,6 +71,12 @@
 * Added footer-prop to Modal and added a ModalFooter component that can be used as a default modal footer. UIEH-434.
 * Fix `activeLink` logic in `<Settings>`: if it's not provided, don't define it. Fixes UIORG-79.
 * Use `reduxFormField()` with `<TextField>`. Fixes clear button behavior.
+* Fix issue with Selection not rendering as an overlay.
+* accessibility updates and tests added to Selection: Single Select.
+* add `focusable='false'` attribute to `<Icon>`'s rendered SVG's.
+* Modify makeQueryFunction to support param namespacing. Fixes STCOM-300.
+* Turn on `pointer-events: auto` for `<Modal>`. Fixes UICHKOUT-437.
+* Add link to user record in `<MetaSection>`. Fixes STCOM-305.
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
