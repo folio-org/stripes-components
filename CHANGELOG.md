@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 3.0.0 (IN PROGRESS)
+## 4.0.0 (IN PROGRESS)
+
+## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0)
 
 * In `<Datepicker>`, added a new `ignoreLocalOffset` prop that ignores the tenant timezone and treats the date as UTC to display the date. Fixes UIORG-55
 * Adjust address read only view. Fixes STCOM-152.
@@ -77,6 +79,10 @@
 * Modify makeQueryFunction to support param namespacing. Fixes STCOM-300.
 * Turn on `pointer-events: auto` for `<Modal>`. Fixes UICHKOUT-437.
 * Add link to user record in `<MetaSection>`. Fixes STCOM-305.
+* Upgrade to webpack 4. Refs STCOR-175. Available from v2.1.6.
+* Correct PropTypes in `<MetaSection>`. Available from v2.1.7.
+* expose inner `<Paneset>`'s width as prop on `<EntrySelector>`. Fixes STCOM-309
+* Remove `structures` directory. [STCOM-284](https://issues.folio.org/browse/STCOM-284)
 
 ## [2.0.0](https://github.com/folio-org/stripes-components/tree/v2.0.0) (2017-12-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v1.9.0...v2.0.0)
