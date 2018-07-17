@@ -1,0 +1,20 @@
+@import '../variables.css';
+
+.modalFooterButton {
+  flex-basis: 100%;
+  margin: 0;
+  width: 100%;
+
+  & + .modalFooterButton {
+    margin: var(--gutter) 0 0;
+  }
+
+  @media (--mediumUp) {
+    flex-basis: auto;
+    width: auto;
+
+    & + .modalFooterButton {
+      margin: 0 4px;
+    }
+  }
+}

@@ -36,6 +36,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .modalLabel {
@@ -44,6 +45,7 @@
   align-items: center;
   font-weight: 600;
   min-height: 44px;
+  padding: 0 1em;
 }
 
 .modalContent {
