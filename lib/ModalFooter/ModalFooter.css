@@ -2,11 +2,11 @@
 
 .modalFooterButton {
   flex-basis: 100%;
-  margin-bottom: 0;
+  margin: 0;
   width: 100%;
 
   & + .modalFooterButton {
-    margin-top: var(--gutter);
+    margin: var(--gutter) 0 0;
   }
 
   @media (--mediumUp) {
@@ -14,7 +14,7 @@
     width: auto;
 
     & + .modalFooterButton {
-      margin-top: 0;
+      margin: 0 4px;
     }
   }
 }
