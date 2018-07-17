@@ -1,0 +1,449 @@
+# Accessible Routing in FOLIO
+
+## Introduction
+
+Currently, navigation inside of FOLIO modules is only accessible to
+those who use a mouse. That means keyboard, screen reader, dictation,
+and switch users will not be able to navigate around FOLIO modules
+without some form of assistance.
+
+This is because FOLIO is built as a single page app (or SPA). SPAs
+don’t reload the entire page when a link is clicked and you navigate
+to a new page (or route), only the part of the page that changed will
+re-render. This makes navigation efficient but not without a
+trade-off. Assistive tech (AT) does not know when a route transition
+has happened, so it does not alert the user that something has
+changed. I have [written about this in a little more detail with
+examples
+here.](https://medium.com/@robdel12/single-page-apps-routers-are-broken-255daa310cf)
+
+The good news is we can fix this, but it’s going to take a little bit
+of effort. No framework or library has _solved_ this problem yet. The
+closest might be Ember with `ember-a11y`.
+
+With that in mind, we wanted to do a spike on eHoldings to see what it
+would take to make a React SPA accessible while also looking for ways
+to create a pattern for other FOLIO modules can follow.
+
+## Spike Goals
+
+We had a sprint cut out to see what we could do. We knew we weren’t
+going to solve it for everyone in the first shot but wanted to make
+sure what we learned was documented and shared.
+
+Sharing and documenting what we learned while going through this
+process will be very helpful to any future FOLIO developers looking to
+implement accessible routing. It's important that we assess the needs
+of not only eHoldings, but the greater FOLIO community.
+
+We also wanted to try a couple of different approaches to focus
+management. Could we rely on the router to provide the right
+information for what needs to be focused? Do we have to wrap the
+router to make that information available? Are routes the best way to
+do this (and if not, why?)
+
+There were three major areas that needed focus management in eHoldings:
+
+- Searching for a title/package/provider
+- Selecting a title/package/provider should place focus in the show component
+- Closing the third pane should place the focus back on the previously
+  selected title/package/provider.
+
+### Accessible Focus Management
+
+Before we go too much further I want to make sure we’re on the same
+page about accessible focus management. When we navigate with a mouse
+and can see what’s happening on the page it’s easy to perceive the
+changes on the page. But any other method of navigation requires the
+developer to _manage the focus_ of the user.
+
+What does that mean? To be as clear as possible I’ll use an example
+from eHoldings. In the eHoldings module, we have a three-pane
+layout. One on the left, one in the middle, and one the right. The
+rightmost pane is not always present. The center pane is usually a
+list of items (like packages). If I were to navigate this layout with
+_only_ a keyboard I would tab to the package I want, press enter, and
+expect for my _keyboard focus_ to be placed in the newly opened
+rightmost pane. This is important because the package list is an
+infinite scrolling list and it would be impossible to tab all the way
+through the list to get to that third pane on the right.
+
+You can think about this as a _context change_. When I pressed enter
+on the package I wanted, I was changing my context from _selecting_ a
+package to _viewing_ a package. My mental model has changed and the
+way I interact with the UI has also changed. It’s safe to say any time
+there is a _context change_ there should be focus management done.
+
+Now you might be thinking “what should I focus then?”. That’s an
+excellent question and the crux of what makes automating accessibility
+_impossible_. It’s all about providing the right context to the user
+so they can operate on the UI in the manner they _expect_ to. This is
+very hard to do right. Keeping with the example I gave for eHoldings,
+we would want to set focus on the newly selected packages heading
+inside of that third pane on the right. That way they know what
+package was selected and they can navigate down through the pane as
+needed.
+
+The best advice I can give to test if there’s enough context given is
+by closing your eyes. If you close your eyes and can **use** your
+application without looking at what’s on the page, you’re in pretty
+decent shape. There is no silver bullet for focus management. Just
+like there’s no silver bullet for great UX.
+
+Lastly, **never** set focus without the user explicitly invoking an
+action. The user must be in control over this or it will be extremely
+confusing.
+
+## Spiked Approaches
+
+While we were evaluating how to tackle this problem we came up with
+three different approaches that could solve the issue at hand:
+
+- Focus on mount through routes
+- Wrap the route components with a container component
+- Manually manage focus based on different kinds of state
+
+We learned that none of these three were going to get it done by
+themselves. It will take a combination of all three to achieve
+accessible navigation.
+
+### Focus on mount through routes
+
+This is the first approach we took. When a route component renders its
+given component, we should call `focus` on that component containing
+the element. The code for this is simple when compared to other
+solutions:
+
+```javascript
+class FocusOnMount extends Component {
+  componentDidMount() {
+    this.node.focus()
+  }
+
+  render() {
+    return (
+      <div ref={n => this.node = n} tabIndex="-1">
+        {this.props.children}
+      </div>
+    )
+  }
+}
+
+class AccessibleRoute extends Component {
+  render() {
+    return (
+      <Route path={this.props.path} render={() => (
+        <FocusOnMount>
+          <Route {...this.props}/>
+        </FocusOnMount>
+      )}/>
+    )
+  }
+}
+
+// Usage
+<AccessibleRoute path="/somewhere" component={Thing}/>
+```
+
+On the surface, this seemed like a great solution that could get us
+pretty far. But once you start using the application beyond testing it
+begins to fall apart. This approach only works under specific
+conditions in your application.
+
+A lot of components are used past their initial mount. This means if
+the user is navigating around these components won’t set focus after
+the first time since they don’t get torn down. The logical next step
+would be to try and set focus based on updates in the
+`componentDidUpdate`hook, but those conditionals turned nasty fast.
+
+The next problem is each one of these components is entirely isolated
+from each other. That means if you have a tree of components with a
+hierarchy it turned into a focus war. The last component to mount
+would win, which is nondeterministic.
+
+Lastly, most FOLIO applications have a single route component which
+means you will have to have a TON of logic in  `componentDidUpdate` if
+you relied on this approach alone. This is the weakest mark against
+this solution since I think all FOLIO applications should refactor to
+break up their routes better, but that’s for a different time.
+
+### Wrap the route components with a container component
+
+Given what we learned from the first approach where the route
+components were entirely isolated, we wondered if we could make more
+information available to routes. This would make it so nested routes
+would know what route is actually being routed to, which in theory,
+eliminates the focus war. This is similar to how Ember’s router works
+and how the `ember-a11y` addon is able to focus child routes smartly.
+
+The idea was to wrap all of our `Route` components in eHoldings with a
+container component that computed the routing tree from its child
+route `path` props.  It’s important to note that this approach only
+works if you have a clear routing hierarchy like eHoldings does:
+
+```javascript
+<Route path={rootPath} component={ApplicationRoute}>
+  <Route path={`${rootPath}/:type?/:id?`} component={SearchRoute}>
+    <Switch>
+      <Route
+        path={`${rootPath}/providers/:providerId`}
+        exact
+        component={ProviderShow}
+      />
+      <Route
+        path={`${rootPath}/packages/new`}
+        exact
+        component={PackageCreate}
+      />
+      <Route
+        path={`${rootPath}/packages/:packageId`}
+        exact
+        component={PackageShow}
+      />
+      <Route
+        path={`${rootPath}/packages/:packageId/edit`}
+        exact
+        component={PackageEdit}
+      />
+      <Route path={`${rootPath}/titles/new`} exact component={TitleCreate} />
+      <Route path={`${rootPath}/titles/:titleId`} exact component={TitleShow} />
+      <Route
+        path={`${rootPath}/titles/:titleId/edit`}
+        exact
+        component={TitleEdit}
+      />
+      <Route
+        path={`${rootPath}/resources/:id`}
+        exact
+        component={ResourceShow}
+      />
+      <Route
+        path={`${rootPath}/resources/:id/edit`}
+        exact
+        component={ResourceEdit}
+      />
+      <Route
+        render={() => <Redirect to={`${rootPath}?searchType=providers`} />}
+      />
+    </Switch>
+  </Route>
+</Route>
+```
+
+You need to have a routing hierarchy so the container component can
+understand the route transitions. When you’re going from route A to
+route B, you want to send a prop to the component route B is going to
+render. That prop will signal that component to focus the correct
+element.
+
+The main problem with this approach was the time investment needed to
+build a robust enough component that could transverse its children and
+build the route tree. We decided for the sake of time to cut the scope
+down to emulate what the `Switch` component does so we didn’t have to
+transverse children and grandchildren components.
+
+It wasn’t until after we started writing code that we realized we
+could wrap the `Route` component since it already has the current
+`location` and the routers `match` URL. From there if the current
+`match` equaled the current `location` we could safely assume that
+the component should focus an element.  This is what that code looked
+like:
+
+```javascript
+export class Route extends Component {
+  static propTypes = {
+    component: PropTypes.func,
+    children: PropTypes.node
+  };
+
+  renderRoute = (routeProps) => {
+    let shouldFocus;
+    let {
+      match,
+      location,
+    } = routeProps;
+    let {
+      component: Component,
+      children
+    } = this.props;
+
+    if (match.url !== location.pathname) {
+      shouldFocus = false;
+    } else {
+      shouldFocus = true;
+    }
+
+    return (
+      <Component {...routeProps} shouldFocus={shouldFocus}>{children}</Component>
+    );
+  }
+
+  render() {
+    let { component: Component, children, ...props } = this.props;
+
+    // we currently always provide a component
+    /* istanbul ignore else */
+    if (Component) {
+      return (
+        <RouterRoute
+          {...props}
+          render={this.renderRoute}
+        /> // eslint-disable-line no-shadow
+      );
+    } else {
+      return (<RouterRoute {...props}>{children}</RouterRoute>);
+    }
+  }
+}
+```
+
+In theory, this was enough information we needed to start properly
+focusing routes even after their first mount. But in practice, this
+didn’t play out the way we expected. Since the entire app re-renders
+any time there is a state change within the app, things kept getting
+refocused unexpectedly.
+
+The root of this problem is the router still does not provide enough
+information about its current state. The best way to solve the
+re-render problem is to provide an `onTransition` hook of some
+sort. That way you clearly know if a new route is being transitioned
+to.
+
+While implementing, testing, and debugging this approach we realized
+the way eHoldings was built doesn’t require us to rely on the router
+to manage focus.
+
+### Manually manage focus based on different kinds of state
+
+Building off of the lessons learned from the two previous approaches
+we discovered it would be possible to manually manage focus in
+eHoldings. While the focus wouldn’t be managed through the router like
+we initially set out to achieve, the routing structure absolutely
+plays a critical role here.
+
+To give a specific example in eHoldings, the third rightmost pane is a
+component called `PackageShow` which is routed to when the
+`${rootPath}/packages/:packageId` path matches (Note: It also can be
+`TitleShow` or `ResourceShow` based on your search type). Each time
+you select a new package this component is entirely re-mounted since
+all of the data changes. It’s safe for us to focus the pane heading
+each time this component is mounted. This is because our components
+lifecycle is deterministic due to the routing structure.  The code for
+the details view is simple thanks to the routing structure. It focuses
+on the heading once the component mounts and the model is finished
+loading.
+
+Another example of manual focus management that doesn’t rely on the
+router would be focusing the correct item in the list when you close
+the third rightmost pane. We created a higher order component to wrap
+around each list item that focuses itself (since it’s a link) if the
+`shouldFocus` prop is true:
+
+```js
+/**
+ * Higher order component that, when given the prop
+ * `shouldFocus={true}`, will focus the component's DOM node on mount
+ * and on update when the prop is toggled from `false` to `true`.
+ */
+export default function shouldFocus(Focusable) {
+  return class extends Component {
+    static propTypes = {
+      shouldFocus: PropTypes.bool
+    };
+
+    componentDidMount() {
+      if (this.props.shouldFocus) {
+        this.focusable.focus();
+      }
+    }
+
+    componentDidUpdate(prevProps) {
+      if (this.props.shouldFocus && !prevProps.shouldFocus) {
+        this.focusable.focus();
+      }
+    }
+
+    get focusable() {
+      // eslint-disable-next-line react/no-find-dom-node
+      return findDOMNode(this);
+    }
+
+    render() {
+      return (
+        <Focusable {...this.props} />
+      );
+    }
+  };
+}
+```
+
+That HOC handles calling focus on those wrapped components, but where
+does that `shouldFocus` prop come from? The answer is the
+`routes/search.js` component. That component holds all of the
+information we need to determine which item in the list needs to be
+focused. In the `componentWillReceiveProps` method we check the URL to
+make sure the details pane is closed and for the currently active item
+ID. This new prop that’s called `shouldFocusItem` is then passed to
+each infinite list container.
+
+That new prop is now used for each list item to determine if it’s the
+active & selected item. It’s also used to compute `shouldFocus` for
+the HOC that wraps the list item components.
+
+This ultimately was the approach we used to implement accessible
+routing in eHoldings. If you would like to see more code and the final
+product (with focus management tests) you can [check out the PR
+here.](https://github.com/folio-org/ui-eholdings/pull/448)
+
+
+## Difference between eHoldings & rest of FOLIO
+
+There’s one major difference between eHoldings and the way the rest of
+the FOLIO modules were built. eHoldings has an explicit and defined
+routing hierarchy with many different routes. Current FOLIO modules
+use `stripes-connect` which provides a single route and renders the
+different components by matching query params. I touched on this a
+little bit when detailing the different solutions we explored.
+
+Having this clear routing hierarchy is key to having maintainable
+focus management within eHoldings. It also has many other
+non-accessible benefits like creating a clear separation between the
+data loading component and view components.
+
+There will have to be some refactoring for other FOLIO modules to
+adopt an accessible routing solution. Through our discoveries in this
+spike, it might not have to be too drastic as first thought. With that
+said we highly recommend another spike in a different FOLIO module to
+get a full understanding of the required work.
+
+## Conclusion
+
+Our spike works well in eHoldings for keyboard navigation and tested
+well in macOS / VoiceOver / Safari. The main parts of navigation are
+now accessible to most forms of assistive tech.
+
+I recommend doing another spike just like this one on another FOLIO
+module. We need to see the amount of work that will be needed to adapt
+what we learned in eHoldings to the `stripes-connect`ed modules. It
+will be different but how different is unknown. While having a clear
+routing structure absolutely helped us manage focus manually via props
+and current URL, I’m unsure how far the other FOLIO modules will have
+to refactor in order to realize those benefits.
+
+Another reason to re-spike is because eHoldings is a different UI with
+different interactions. There are different workflows and routes in
+every module — so each one will need special care and attention.
+
+Ideally, in the future, we should also spike an implementation of a
+fully featured router. Think `stripes-router`. I believe the router
+should possess enough information to be able to smartly focus routes
+based on transitions. That would make a lot of the manual work we did
+in eHoldings unnecessary. It would also make sure the focus management
+is more maintainable & manageable.
+
+Lastly, this still needs to be tested thoroughly with JAWS, NVDA,
+TalkBack, iOS VoiceOver, and Dragon NaturallySpeaking. We did lots of
+testing in macOS / VoiceOver / Safari because that’s what is
+immediately available on our end. But to be 100% sure this is working
+as expected we should test with each AT combo and note any
+differences.
