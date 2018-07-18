@@ -108,6 +108,11 @@ Component | doc | categories
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
+## Patterns
+Useful recipes for UI patterns appearing in FOLIO modules.
+
+[Show/Hide Columns in MCL](docs/patterns/ColumnSelector.md) Give users the ability to select only the data they need to see in this guide.
+
 ## Testing
 Stripes Components' tests are automated browser tests powered by
 [Karma](http://karma-runner.github.io) and written using
