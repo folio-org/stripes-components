@@ -6,7 +6,7 @@
   width: 100%;
 
   & + .modalFooterButton {
-    margin: var(--gutter) 0 0;
+    margin: var(--controlMarginBottom) 0 0;
   }
 
   @media (--mediumUp) {
