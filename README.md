@@ -9,6 +9,7 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 * [Introduction](#introduction)
 * [Component categories](#component-categories)
 * [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
+* [Patterns - UI Recipes](#patterns)
 * [Testing](#testing)
 * [FAQ](#FAQ)
 * [To be documented](#to-be-documented)
