@@ -9,6 +9,7 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 * [Introduction](#introduction)
 * [Component categories](#component-categories)
 * [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
+* [Patterns - UI Recipes](#patterns)
 * [Testing](#testing)
 * [FAQ](#FAQ)
 * [To be documented](#to-be-documented)
@@ -107,6 +108,12 @@ Component | doc | categories
 [`<Timepicker>`](lib/Timepicker) | [doc](lib/Timepicker/readme.md) | control
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
+
+## Patterns
+Useful recipes for UI patterns appearing in FOLIO modules.
+
+[Show/Hide Columns in MCL](docs/patterns/ColumnSelector.md) Give users the ability to select only the data they need to see in this guide.
+[Accessible Routing](docs/patterns/AccessibleRouting.md) Detail the approachs to implementing accessibile focus management
 
 ## Testing
 Stripes Components' tests are automated browser tests powered by
