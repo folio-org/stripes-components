@@ -50,6 +50,7 @@
     "chai": "^3.5.0",
     "eslint": "^4.8.0",
     "file-loader": "^1.1.5",
+    "jest-mock": "23.2.0",
     "mocha": "^4.0.1",
     "postcss-calc": "^6.0.1",
     "postcss-color-function": "^4.0.1",
