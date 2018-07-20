@@ -8,20 +8,16 @@
   vertical-align: top;
 }
 
-
-
-.text {
-  font-size: inherit;
-}
-
 /**
  * Padding
  */
-[dir=rtl] .paddingEnd, .paddingStart {
+[dir=rtl] .paddingEnd,
+.paddingStart {
   padding: 0 0 0 6px;
 }
 
-[dir=rtl] .paddingStart, .paddingEnd {
+[dir=rtl] .paddingStart,
+.paddingEnd {
   padding: 0 6px 0 0;
 }
 
@@ -36,30 +32,23 @@
  * Icon Placement
  */
 
-/* Start placement (left on ltr / right on rtl) */ 
+/* Start placement (left on ltr / right on rtl) */
 .iconPlacementStart .icon {
   order: 0;
 }
-
-  /* Specific for appIcon */
-  .iconPlacementStart .appIcon {
-    margin: 0 4px 0 0;
-  }
-
-  [dir=rtl] .iconPlacementStart .appIcon {
-    margin: 0 0 0 4px;
-  }
 
 /* End placement (right on ltr / left on rtl) */
 .iconPlacementEnd .icon {
   order: 2;
 }
 
-  /* Specific for app icon */
-  .iconPlacementEnd .appIcon {
-    margin: 0 0 0 4px;
-  }
+/* Specific for app icon */
+[dir=rtl] .iconPlacementStart .appIcon,
+.iconPlacementEnd .appIcon {
+  margin: 0 0 0 4px;
+}
 
-  [dir=rtl] .iconPlacementEnd .appIcon {
-    margin: 0 4px 0 0;
-  }
+[dir=rtl] .iconPlacementEnd .appIcon,
+.iconPlacementStart .appIcon {
+  margin: 0 4px 0 0;
+}
