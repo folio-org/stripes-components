@@ -2,6 +2,7 @@
 
 ## 4.0.0 (IN PROGRESS)
 * Expose `Settings` nav pane width via `navPaneWidth` prop.
+* Rename `errorText` and `warningText` props to `error` and `warning` for consistency. Fixes STCOM-314
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0)
 
