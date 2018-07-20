@@ -36,6 +36,7 @@
   box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
   opacity: 1;
   font-weight: var(--text-weight-button);
+  vertical-align: top;
 
   &.slim {
     padding: 5px 2px;
