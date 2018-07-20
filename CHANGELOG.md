@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 4.0.0 (IN PROGRESS)
+* Rename `errorText` and `warningText` props to `error` and `warning` for consistency. Fixes STCOM-314
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0)
 
