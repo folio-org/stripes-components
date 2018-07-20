@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 4.0.0 (IN PROGRESS)
+* Expose `Settings` nav pane width via `navPaneWidth` prop.
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0)
 
