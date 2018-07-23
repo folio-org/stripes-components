@@ -1,5 +1,7 @@
 # IconWithText
-Renders an icon with an inline label
+Renders an icon with an inline label. 
+
+Useful for displaying icons with associated labels in a consistent way across the platform. The component can be used inside other existing components or as a standalone component.
 
 ## Basic Usage
 ```js
