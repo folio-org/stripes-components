@@ -9,6 +9,13 @@
 }
 
 /**
+ * Block
+ */
+.block {
+  display: flex;
+}
+
+/**
  * Padding
  */
 [dir=rtl] .paddingEnd,

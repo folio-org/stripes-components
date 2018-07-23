@@ -33,4 +33,5 @@ icon | string | Determines which icon that should be rendered. If the "app"-prop
 iconPlacement | string | Determines the position of the icon. Supports "start" and "end" | start
 paddingEnd | boolean | Adds padding in the end of the component | false
 paddingStart | boolean | Adds padding in the start of the component | false
+block | boolean | Changes display from inline-flex to flex making the component full width | false
 text | string, node | The text of the component. It's also possible to pass another component/node. | undefined
