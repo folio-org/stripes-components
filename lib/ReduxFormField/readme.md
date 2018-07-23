@@ -15,8 +15,8 @@ To normalize the `input` and `meta` props injected by Redux Form:
 ```jsx
 import reduxFormField from '@folio/stripes-components/lib/ReduxFormField';
 
-function ExampleComponent({ value, onChange, warningText, errorText }) => (
-  <div>{warningText}</div>
+function ExampleComponent({ value, onChange, warning, error }) => (
+  <div>{warning}</div>
 );
 
 export default reduxFormField(
@@ -24,8 +24,8 @@ export default reduxFormField(
   ({ input, meta }) => ({
     value: input.value,
     onChange: input.onChange,
-    warningText: (meta.touched && meta.warning ? meta.warning : ''),
-    errorText: (meta.touched && meta.error ? meta.error : '')
+    warning: (meta.touched && meta.warning ? meta.warning : ''),
+    error: (meta.touched && meta.error ? meta.error : '')
   })
 );
 ```
