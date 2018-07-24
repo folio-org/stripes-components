@@ -34,7 +34,6 @@ id | string | Add an ID to the root element | undefined
 className | string | Add additional CSS classes to the root element | undefined
 icon | string | Determines which icon that should be rendered. If the "app"-prop is provided it will reference the "iconKey" of [AppIcon](/?selectedKind=AppIcon). If no "app"-prop is provided it will reference the available icons for the [Icon](/?selectedKind=Icon)-component. | undefined
 iconPlacement | string | Determines the position of the icon. Supports "start" and "end" | start
-paddingEnd | boolean | Adds padding in the end of the component | false
-paddingStart | boolean | Adds padding in the start of the component | false
+padding | string | Adds padding on the sides of the component. Options: "start", "end" & "both" | undefined
 block | boolean | Changes display from inline-flex to flex making the component full width | false
 text | string, node | The text of the component. It's also possible to pass another component/node. | undefined

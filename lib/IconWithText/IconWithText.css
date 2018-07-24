@@ -18,14 +18,18 @@
 /**
  * Padding
  */
-[dir=rtl] .paddingEnd,
-.paddingStart {
+.padding-start,
+[dir=rtl] .padding-end {
   padding: 0 0 0 6px;
 }
 
-[dir=rtl] .paddingStart,
-.paddingEnd {
+.padding-end,
+[dir=rtl] .padding-start {
   padding: 0 6px 0 0;
+}
+
+.padding-both {
+  padding: 0 6px 0 6px;
 }
 
 /**
