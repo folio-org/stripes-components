@@ -5,6 +5,7 @@
 }
 
 .selectionListRoot {
+  z-index: 9999;
   background-color: #fff;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -189,34 +190,9 @@
   pointer-events: all;
 }
 
-.ValueChipContainer {
-  margin: 2px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid var(--color-border);
-  background-color: #efefef;
-  white-space: nowrap;
-
-  &.ValueChipSelected {
-    background-color: var(--primary);
-    color: #fff;
-    border-color: #00c;
-
-    & svg {
-      fill: #fff;
-    }
-  }
-}
-
 .selectionMultiSelectInputContainer {
   margin: 2px;
   flex: 2 2 auto;
-}
-
-.ValueChipValue {
-  display: flex;
-  padding: 0 4px;
 }
 
 .selectionEmptyMessage {
