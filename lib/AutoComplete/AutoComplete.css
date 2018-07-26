@@ -20,3 +20,13 @@
     padding: 0;
   }
 }
+
+.textFieldDiv{
+  position: 'relative';
+  width: '100%';
+}
+
+.downshift{
+  display: 'inline-block';
+   position: 'relative';
+}
