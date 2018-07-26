@@ -21,12 +21,12 @@
   }
 }
 
-.textFieldDiv{
+.textFieldDiv {
   position: 'relative';
   width: '100%';
 }
 
-.downshift{
+.downshift {
   display: 'inline-block';
-   position: 'relative';
+  position: 'relative';
 }
