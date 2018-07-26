@@ -12,7 +12,7 @@ import IconWithText from '@folio/stripes-components/lib/IconWithText';
     text="Bookmark"
     icon="bookmark"
     iconPosition="end"
-    paddingEnd
+    padding="both"
 />
 
 // Render an AppIcon
@@ -20,7 +20,7 @@ import IconWithText from '@folio/stripes-components/lib/IconWithText';
     text="Holdings"
     app="inventory"
     icon="holdings"
-    paddingStart
+    padding="start"
 />
 ```
 

@@ -56,10 +56,10 @@
 /* Specific for app icon */
 [dir=rtl] .iconPlacementStart .appIcon,
 .iconPlacementEnd .appIcon {
-  margin: 0 0 0 4px;
+  margin: 0 0 0 0.4em;
 }
 
 [dir=rtl] .iconPlacementEnd .appIcon,
 .iconPlacementStart .appIcon {
-  margin: 0 4px 0 0;
+  margin: 0 0.4em 0 0;
 }
