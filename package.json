@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "3.0.1",
+  "version": "3.0.4",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -29,7 +29,7 @@
     ]
   },
   "devDependencies": {
-    "@bigtest/interactor": "^0.7.0",
+    "@bigtest/interactor": "^0.7.2",
     "@bigtest/mocha": "^0.5.0",
     "@folio/eslint-config-stripes": "^2.0.0",
     "@folio/stripes-cli": "^1.2.0",
@@ -89,7 +89,7 @@
     "react-overlays": "^0.8.3",
     "react-redux": "^5.0.2",
     "react-router-dom": "^4.1.1",
-    "react-tether": "^0.6.1",
+    "react-tether": "^1.0.1",
     "react-transition-group": "^2.2.1",
     "redux": "^3.6.0",
     "redux-form": "^7.0.3",
