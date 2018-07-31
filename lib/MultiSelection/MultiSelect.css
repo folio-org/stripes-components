@@ -69,7 +69,8 @@
   margin-top: 4px;
   padding: 4px;
   background-color: #fff;
-  border: 1px solid rgba(0.0, 0.0, 0.0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
   &.untethered {
     margin-top: -7px;
     position: absolute;
@@ -83,7 +84,7 @@
   overflow: auto;
 }
 
-.multiSelectToggleButton{
+.multiSelectToggleButton {
   min-width: 22px;
   min-height: 30px;
 }
@@ -111,6 +112,7 @@
 .multiSelectStatus {
   composes: feedbackBlock from '../sharedStyles/form.css';
   font-weight: bold;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -120,14 +122,14 @@
   padding: 4px 0;
 }
 
-.valueChipRoot { /*root of ValueChip*/
+.valueChipRoot { /* root of ValueChip */
   margin: 2px;
   display: inline-block;
   border: 1px solid var(--color-border);
   background-color: #efefef;
 }
 
-.valueChipGroup { /*container for remove button and label*/
+.valueChipGroup { /* container for remove button and label */
   display: flex;
   justify-content: space-between;
   align-items: center;
