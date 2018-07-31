@@ -2,6 +2,10 @@
 
 .multiSelectContainer {
   width: 100%;
+}
+
+.multiSelectControlWrapper {
+  width: 100%;
   position: relative;
 }
 
@@ -62,11 +66,14 @@
 
 .multiSelectMenu {
   composes: selectionListRoot from '../Selection/Selection.css';
+  margin-top: 4px;
   padding: 4px;
-  margin-top: -6px;
-  position: absolute;
   background-color: #fff;
   border: 1px solid rgba(0.0, 0.0, 0.0, 0.2);
+  &.untethered {
+    margin-top: -7px;
+    position: absolute;
+  }
 }
 
 .multiSelectOptionList {
