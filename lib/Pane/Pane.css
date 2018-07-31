@@ -4,7 +4,9 @@
   border-right: 1px solid var(--color-border);
   height: 100%;
   max-height: calc(100vh - 44px);
-  display: flex;
+  width: 100%;
+  display: block;
+  position: absolute;
   flex-direction: column;
   top: 0;
   left: 0;
@@ -17,6 +19,7 @@
 
   &:last-child {
     border-right: none;
+    background-color: var(--bg #fcfcfc);
   }
 }
 
@@ -41,5 +44,6 @@
 @media (--mediumUp) {
   .pane {
     position: relative;
+    display: flex;
   }
 }

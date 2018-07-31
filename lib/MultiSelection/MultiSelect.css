@@ -120,6 +120,21 @@
   padding: 4px 0;
 }
 
+.mobileBackdrop {
+  background-color: rgba(0,0,0,0.2);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  pointer-events: all;
+  top: 0;
+  left: 0;
+}
+
+.mobileContainer {
+  width: 80vw;
+  margin: 16px auto;
+}
+
 .valueChipRoot { /*root of ValueChip*/
   margin: 2px;
   display: inline-block;
