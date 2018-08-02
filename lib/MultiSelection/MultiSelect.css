@@ -109,7 +109,7 @@
   composes: feedbackWarning from '../sharedStyles/form.css';
 }
 
-.multiSelectStatus {
+.multiSelectEmptyMessage {
   composes: feedbackBlock from '../sharedStyles/form.css';
   font-weight: bold;
 
@@ -135,6 +135,7 @@
 .mobileContainer {
   width: 80vw;
   margin: 16px auto;
+  position: relative;
 }
 
 .valueChipRoot { /* root of ValueChip */
