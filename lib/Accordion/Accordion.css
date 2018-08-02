@@ -76,6 +76,8 @@
   transition: max-height 0.25s ease;
 
   &.expanded {
+    flex: 1;
+    min-height: 0;
     max-height: none; /* max-height applied inline */
     overflow: visible;
   }
