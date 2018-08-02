@@ -116,9 +116,10 @@ class AutoSuggest extends React.Component {
                     />
                   </div>
                   <ul className={css.AutoSuggest} {...getMenuProps({
+                        refKey: 'innerRef',
                         id: autoSuggestId,
                         style: { width: `${listWidth}px` }
-                      })}
+                      }, {suppressRefError: true})}
                   >
                     {isOpen
                       ? items
