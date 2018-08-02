@@ -115,7 +115,11 @@ class AutoSuggest extends React.Component {
                       )}
                     />
                   </div>
-                  <ul className={css.AutoSuggest} style={{ width: `${listWidth}px` }} {...getMenuProps({ id: autoSuggestId })} >
+                  <ul className={css.AutoSuggest} {...getMenuProps({
+                        id: autoSuggestId,
+                        style: { width: `${listWidth}px` }
+                      })}
+                  >
                     {isOpen
                       ? items
                         .filter(item => !inputValue || item.value.includes(inputValue))
