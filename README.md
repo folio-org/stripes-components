@@ -11,7 +11,7 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 * [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
 * [Patterns - UI Recipes](#patterns)
 * [Testing](#testing)
-* [FAQ](#FAQ)
+* [FAQ](#faq)
 * [To be documented](#to-be-documented)
 * [Additional information](#additional-information)
 
