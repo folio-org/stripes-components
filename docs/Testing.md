@@ -1,7 +1,7 @@
 # Testing in Stripes Components
 
 Tests can fortify new features from breaking changes, help prevent
-bugs from being reintroduced, and overall future-proof our against an
+bugs from being reintroduced, and overall future-proof against an
 ever-changing ecosystem. As more people get involved and contribute,
 they can be confident in fixing or introducing changes without
 breaking existing functionality.
@@ -69,7 +69,7 @@ asynchronous applications both robust and fast. They accomplish this
 by freeing us from the burden of worrying about when a component, or
 any updates to a component, will render into the DOM. If a test
 initially fails, as long as the component renders within the timeout,
-the test will rerun eventually pass. To read more about how this
+the test will rerun and eventually pass. To read more about how this
 strategy works, and why it is so effective, checkout the
 [documentation on
 convergences](https://github.com/bigtestjs/convergence#why-convergence).
@@ -173,7 +173,7 @@ also notice when we perform our `clicked` test that the `await
 button.clickButton()` action is separated into it's own `beforeEach`
 hook so it isn't accidentally invoked more than once. Separating
 side-effects this way and repeatedly running our assertions until
-completion results in _very fast testing times_. For example, the
+completion, results in _very fast testing times_. For example, the
 tests above run and complete in _less than a tenth of a second_.
 
 ### Testing Component Interactions
@@ -214,7 +214,7 @@ An `Interactor` is a powerful, customizable, composable, [page
 object](https://martinfowler.com/bliki/PageObject.html). This adds a
 layer of durability to our suite because when things like classnames
 or the markup inevitably change, we should only need to update our
-interactor as oppose to updating each of our tests. Interactors can
+interactor as opposed to updating each of our tests. Interactors can
 also be composed by each other, so if another component uses a button,
 that component's interactor can use the `ButtonInteractor` too.
 
@@ -228,9 +228,9 @@ Guides](https://bigtestjs.io/guides/interactors/introduction/).
 #### Note about CSS classnames
 
 When importing the `css` classnames, properties will return a
-_space-separated_ list of names. To query for element via classname,
+_space-separated_ list of names. To query for an element via classname,
 you must denote a class using a leading period (`.classname`). So
-while ``.${css.button}`` works when a _single classname_ is returned,
+while `.${css.button}` works when a _single classname_ is returned,
 it will not work when using postcss `compose:`, which returns
 _multiple classnames_. For this, another helper is needed to convert
 the classname string into a proper selector.
