@@ -81,6 +81,7 @@ Component | doc | categories
 [`<MenuItem>`](lib/MenuItem) | [doc](lib/MenuItem/readme.md) | control
 [`<MetaSection>`](lib/MetaSection) | [doc](lib/MetaSection/readme.md) | data-display
 [`<Modal>`](lib/Modal) | [doc](lib/Modal/readme.md) | container
+[`<ModalFooter>`](lib/ModalFooter) | [doc](lib/ModalFooter/readme.md) | container
 [`<MultiColumnList>`](lib/MultiColumnList) | [doc](lib/MultiColumnList/readme.md) | data-display
 [`<NavList>`](lib/NavList) | [doc](lib/NavList/readme.md) | control
 [`<NavListItem>`](lib/NavListItem) | | control
