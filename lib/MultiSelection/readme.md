@@ -45,6 +45,7 @@ Name | type | description | default | required
 
 ## Validation props
 These are props that could be applicable if setting up your own validation system. These would probably best be handled within `onChange` and `onBlur` event handlers.
+
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 `dirty` | bool | Apply a specific style when the value has changed. | false | 
