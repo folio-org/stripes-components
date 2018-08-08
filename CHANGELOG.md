@@ -6,6 +6,7 @@
 * Change button relationship margins
 * Add min-height to expanded Accordion CSS
 * Added "tag"-icon to list of icons
+* Adjust <ModalFooter> button CSS
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0)
 
