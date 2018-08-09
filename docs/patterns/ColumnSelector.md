@@ -23,9 +23,9 @@ The Column selector can be built with ease from our shared component library.
 2) Store the set of visible columns (which are the columns to be rendered on the page) in the state.
 3) Render the checkboxes (used to toggle the visibility of individual columns) with the names of the columns.
 4) Click the checkboxes to toggle the state of individual columns to show/hide them.
-5) Pass down the visible columns form the state to the `<MultiColumnList>` component.
+5) Pass down the visible columns from the state to the `<MultiColumnList>` component.
 
-`Note` : You should not store status or render checkboxes for any columns that should never be hidden (such as checkboxes, ellipsis or other row-level controls.) These should not be present in the `controllableColumns` array (described below), but should always be present in the visibleColumns array which is returned from the `getVisibleColumns()` function. (also described below).
+`Note` : You should not store status or render checkboxes for any columns that should never be hidden (such as checkboxes, ellipsis or other row-level controls.) These should not be present in the `controllableColumns` array (described below), but should always be present in the visibleColumns array which is returned from the `getVisibleColumns()` function. (Also described below.)
 
 # Implementation
 
