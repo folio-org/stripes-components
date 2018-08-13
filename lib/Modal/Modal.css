@@ -88,7 +88,7 @@
  * Responsive changes
  */
 @media (--mediumUp) {
-  .modal.small {
+  .small {
     max-width: 550px;
   }
   .modal {
@@ -98,13 +98,13 @@
 }
 
 @media (--mediumUp) {
-  .modal.medium {
+  .medium {
     max-width: 750px;
   }
 }
 
 @media (--largeUp) {
-  .modal.large {
+  .large {
     max-width: 1100px;
   }
 }
