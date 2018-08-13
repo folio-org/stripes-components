@@ -7,3 +7,4 @@ atom.cson
 yarn-error.log
 artifacts
 .npmrc
+.out
