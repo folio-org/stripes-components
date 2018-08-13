@@ -31,7 +31,6 @@
   min-height: 24px;
   cursor: pointer;
   flex-grow: 2;
-  color: var(--color-text-p2);
   border-radius: var(--radius);
 
   &.error {
@@ -52,10 +51,14 @@
 }
 
 .labelDisabled {
-  opacity: 0.65;
+  color: var(--color-text-p2);
 
   &:hover {
     cursor: not-allowed;
+  }
+
+  & .labelPseudo {
+    opacity: 0.5;
   }
 }
 

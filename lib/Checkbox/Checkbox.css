@@ -49,8 +49,12 @@
   border-radius: var(--radius);
 
   &.disabledLabel {
-    opacity: 0.65;
     cursor: not-allowed;
+    color: var(--color-text-p2);
+
+    & .labelCheck {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -139,11 +143,6 @@ input.checkboxInput {
       stroke: #000;
     }
   }
-}
-
-/* disabled styles */
-.checkboxInput:disabled .labelCheck {
-  opacity: 0.65;
 }
 
 /**
