@@ -11,7 +11,7 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 * [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
 * [Patterns - UI Recipes](#patterns)
 * [Testing](#testing)
-* [FAQ](#FAQ)
+* [FAQ](#faq)
 * [To be documented](#to-be-documented)
 * [Additional information](#additional-information)
 
@@ -81,6 +81,7 @@ Component | doc | categories
 [`<MenuItem>`](lib/MenuItem) | [doc](lib/MenuItem/readme.md) | control
 [`<MetaSection>`](lib/MetaSection) | [doc](lib/MetaSection/readme.md) | data-display
 [`<Modal>`](lib/Modal) | [doc](lib/Modal/readme.md) | container
+[`<ModalFooter>`](lib/ModalFooter) | [doc](lib/ModalFooter/readme.md) | container
 [`<MultiColumnList>`](lib/MultiColumnList) | [doc](lib/MultiColumnList/readme.md) | data-display
 [`<NavList>`](lib/NavList) | [doc](lib/NavList/readme.md) | control
 [`<NavListItem>`](lib/NavListItem) | | control
@@ -112,8 +113,8 @@ There are also various [utility _functions_](util) (as opposed to React componen
 ## Patterns
 Useful recipes for UI patterns appearing in FOLIO modules.
 
-[Show/Hide Columns in MCL](docs/patterns/ColumnSelector.md) Give users the ability to select only the data they need to see in this guide.
-[Accessible Routing](docs/patterns/AccessibleRouting.md) Detail the approachs to implementing accessibile focus management
+* [Show/Hide Columns in MCL](docs/patterns/ColumnSelector.md) -- Give users the ability to select only the data they need to see.
+* [Accessible Routing](docs/patterns/AccessibleRouting.md) -- Detail the approaches to implementing accessible focus management.
 
 ## Testing
 Stripes Components' tests are automated browser tests powered by
@@ -157,6 +158,6 @@ Some related documents:
 * [Change-log](CHANGELOG.md)
 
 See project [STCOM](https://issues.folio.org/browse/STCOM) (STripes COMponents)
-at the [FOLIO issue tracker](http://dev.folio.org/community/guide-issues).
+at the [FOLIO issue tracker](https://dev.folio.org/guidelines/issue-tracker/).
 
-Other FOLIO Developer documentation is at [dev.folio.org](http://dev.folio.org/)
+Other FOLIO Developer documentation is at [dev.folio.org](https://dev.folio.org/)

@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "3.0.4",
+  "version": "3.0.6",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -13,13 +13,14 @@
     "eslint": "eslint ./",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out"
   },
   "engines": {
     "node": ">=6.0.0"
   },
   "stripes": {
-    "type": "app",
+    "type": "components",
     "actionNames": [
       "selectPreviousRow",
       "selectNextRow",

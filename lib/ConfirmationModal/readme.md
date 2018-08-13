@@ -1,6 +1,6 @@
 # ConfirmationModal
 
-A basic confirmation modal with props to support a heading (required) and brief message along with customizeable 'cancel' and 'submit' action labeling.
+A basic confirmation modal with props to support a heading (required) and brief message along with customizable 'cancel' and 'submit' action labeling.
 
 ## Basic usage
 
@@ -20,7 +20,6 @@ hideConfirm() {
 }
 
 handleSubmit() {
-  alert('submitting!');
   this.hideConfirm();
 }
 
