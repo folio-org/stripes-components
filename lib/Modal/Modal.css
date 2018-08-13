@@ -17,7 +17,7 @@
   top: 60px;
   background-color: #fff;
   max-height: calc(100% - 75px);
-  width: calc(100% - 30px);
+  width: calc(100% - (var(--gutter) * 2));
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
