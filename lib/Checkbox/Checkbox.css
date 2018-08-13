@@ -67,6 +67,8 @@
 
 .labelText {
   margin: 0 6px;
+  display: flex;
+  align-items: center;
 }
 
 /* fix for shrinkage issues with checkbox as a flex-child */
