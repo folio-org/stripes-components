@@ -43,7 +43,7 @@
   }
 }
 
-.interactionStyles {
+.labelInteractionStyles {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
 }
 
