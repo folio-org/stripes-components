@@ -63,8 +63,7 @@
 
   &:disabled {
     background-color: var(--color-fill-disabled);
-    color: #777;
-    opacity: 0.7;
+    color: var(--color-text-p2);
   }
 
   &::-ms-clear {
