@@ -20,7 +20,7 @@
  * Label
  */
 .label {
-  display: block;
+  display: flex;
   margin-bottom: 6px;
   color: var(--color-text);
 
