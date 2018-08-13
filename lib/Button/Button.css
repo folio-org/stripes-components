@@ -22,9 +22,7 @@
   transition: background-color 0.25s, color 0.25s, opacity 0.07s, box-shadow 0s;
   background-color: transparent;
   border: transparent;
-  margin-left: 2px;
-  margin-right: 2px;
-  margin-bottom: var(--gutter);
+  margin: 0 0 var(--gutter);
   max-height: var(--controlHeightSmall);
   white-space: nowrap;
   line-height: 100%;
@@ -45,8 +43,8 @@
     display: block;
   }
 
-  &:first-child {
-    margin-left: 0;
+  & + .button {
+    margin-left: 4px;
   }
 
   /**
@@ -255,10 +253,11 @@
   }
 }
 
-[dir='rtl'] {
-  &.button {
-    &:first-child {
-      margin-right: 0;
+[dir="rtl"] {
+  & .button {
+    & + .button {
+      margin-left: 0;
+      margin-right: 4px;
     }
 
     &.textAlignStart {
