@@ -21,6 +21,7 @@
  */
 .label {
   display: flex;
+  align-items: center;
   margin-bottom: 6px;
   color: var(--color-text);
 
