@@ -13,7 +13,8 @@
     "eslint": "eslint ./",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out"
   },
   "engines": {
     "node": ">=6.0.0"
