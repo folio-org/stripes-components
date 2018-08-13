@@ -6,7 +6,7 @@
 ```
 import { MultiSelection } from '@folio/stripes-components';
 
-const optionList = const listOptions = [
+const optionList = [
   { value: 'test0', label: 'Option 0' },
   { value: 'test1', label: 'Option 1' },
   { value: 'test2', label: 'Option 2' },
@@ -67,8 +67,8 @@ The shape of the items in your dataOptions array may require you to pass additio
 // if the data options are an array of strings instead of objects
 
 dataOptions = [ 'one', 'two', 'three' ];
-toString = (item) => item;
-formatter = ({item}) => <div>{item}</div>;
+toString = (option) => option;
+formatter = ({option}) => <div>{option}</div>;
 
 filterItems = (filterOptions = (filterText, list) => {
   const filterRegExp = new RegExp(`^${filterText}`, 'i');
@@ -87,7 +87,7 @@ We provide an `<OptionSegent>` component for use in formatters to enable nice fe
 ```
 import { OptionSegment } from '@folio/stripes-components';
 
-formatter= ({item, searchTerm}) => <OptionSegment searchTerm={searchTerm} >{item}</OptionSegment>;
+formatter= ({option, searchTerm}) => <OptionSegment searchTerm={searchTerm} >{option}</OptionSegment>;
 
 //...rest of code...
 ```
@@ -98,11 +98,11 @@ addTag = ({ renderedItems, exactMatch, filterText }) => {
     ... logic to push new option with 'filterText' as its `label` key.
 }
 
-renderAddTag = ({ filterText, exactMatch }) => {
+renderAddTag = ({ filterValue, exactMatch }) => {
     if (exactMatch) {
       return null;
     } else { 
-      return <div>Add tag for &quot;{`${filterText}`}&quot;</div>;
+      return <div>Add tag for &quot;{`${filterValue}`}&quot;</div>;
     }
 }
 
