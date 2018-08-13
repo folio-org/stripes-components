@@ -40,7 +40,6 @@
 }
 
 .checkboxLabel {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   padding: 4px 5px;
   min-height: var(--controlHeight);
   display: flex;
@@ -53,6 +52,10 @@
     opacity: 0.65;
     cursor: not-allowed;
   }
+}
+
+.checkboxInteractionStyles {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
 }
 
 .labelFocused {
