@@ -13,6 +13,7 @@
   "showOrHideTimepicker": "Show/hide timepicker",
   "clearThisField": "Clear this field",
   "validatingInProcess": "Validating...",
+  "fieldIsDisabled": "Field is disabled",
   "fieldIsValid": "Field is valid",
   "fieldHasError": "Field has error",
   "addressLine1": "Address line 1",

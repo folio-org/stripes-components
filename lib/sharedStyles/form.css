@@ -62,7 +62,7 @@
   }
 
   &:disabled {
-    background-color: #ebebe4;
+    background-color: var(--color-fill-disabled);
     color: #777;
   }
 
