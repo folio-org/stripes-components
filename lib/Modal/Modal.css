@@ -83,14 +83,11 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-
-/**
- * Responsive changes
- */
 @media (--mediumUp) {
   .small {
     max-width: 550px;
   }
+
   .modal {
     top: 100px;
     max-height: calc(100% - 115px);
