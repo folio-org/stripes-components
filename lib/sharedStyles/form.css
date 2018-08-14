@@ -62,7 +62,7 @@
     margin-bottom: 0;
   }
 
-  &:disabled, &:read-only {
+  &:disabled, &:read-only:not(select):not(button) {
     background-color: var(--color-fill-disabled);
     color: var(--color-text-p2);
   }
