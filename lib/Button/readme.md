@@ -32,3 +32,24 @@ role | string | Adds [role-attribute](https://www.w3.org/wiki/PF/XTech/HTML5/Rol
 children | node / array of nodes | Adds child node(s) to button |
 buttonRef | string | Adds ref-attribute |
 autoFocus | bool | If this prop is `true`, component will automatically focus on mount | |
+
+## Styles
+
+Complete list of button colors and styles
+
+### Colors
+The color of the button can be modified by changing the buttonStyle-prop
+
+```
+<Button buttonStyle="danger">
+    Do something dangerous
+</Button>
+```
+
+Name | Type | Description
+--- | --- | ---
+default | string | This is the default color of the button component
+primary | string | |
+danger | string | |
+success | string | |
+warning | string | |

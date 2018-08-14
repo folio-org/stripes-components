@@ -1,20 +1,22 @@
 @import '../variables.css';
 
-.modalFooterButton {
-  flex-basis: 100%;
-  margin: 0;
+.modalFooterButtons {
+  align-items: center;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  margin: calc((var(--controlMarginBottom) / 2) * -1) 0;
   width: 100%;
+}
+
+.modalFooterButton {
+  flex: 1 1 auto;
+  margin: calc(var(--controlMarginBottom) / 2) 4px;
 
   & + .modalFooterButton {
-    margin: var(--controlMarginBottom) 0 0;
+    margin: calc(var(--controlMarginBottom) / 2) 4px;
   }
 
   @media (--mediumUp) {
-    flex-basis: auto;
-    width: auto;
-
-    & + .modalFooterButton {
-      margin: 0 4px;
-    }
+    flex: 0 1 auto;
   }
 }
