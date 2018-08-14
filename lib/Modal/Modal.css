@@ -22,10 +22,9 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   outline: 0;
-
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.35s, opacity 0.1s;  
+  transition: transform 0.35s, opacity 0.1s;
 }
 
 .modalHeader {
@@ -132,9 +131,10 @@
     transform: translateY(0);
     opacity: 1;
   }
+
   & .backdrop {
     opacity: 1;
-  }  
+  }
 }
 
 .exiting {
@@ -142,6 +142,7 @@
     transform: translateY(20px);
     opacity: 0;
   }
+
   & .backdrop {
     opacity: 0;
     transition-delay: 0.1s;
