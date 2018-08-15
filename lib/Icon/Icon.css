@@ -11,11 +11,6 @@
   }
 }
 
-/* .icon svg {
-  height: inherit;
-  width: inherit;
-} */
-
 :global .stripes__icon {
   fill: var(--color-icon);
 }
