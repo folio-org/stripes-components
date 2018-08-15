@@ -11,10 +11,10 @@
   }
 }
 
-.icon svg {
+/* .icon svg {
   height: inherit;
   width: inherit;
-}
+} */
 
 :global .stripes__icon {
   fill: var(--color-icon);
@@ -23,35 +23,47 @@
 /**
  * Coloring
  */
-.error {
-  fill: var(--error);
+.status-error {
+  color: var(--error);
+
+  & svg {
+    fill: var(--error);
+  }
 }
 
-.warn {
-  fill: var(--warn);
+.status-warn {
+  color: var(--warn);
+
+  & svg {
+    fill: var(--warn);
+  }
 }
 
-.success {
-  fill: var(--success);
+.status-success {
+  color: var(--success);
+
+  & svg {
+    fill: var(--success);
+  }
 }
 
 /**
  * Sizing
  */
 
-.small {
+.small svg {
   height: 14px;
   width: 14px;
   min-width: 14px;
 }
 
-.medium {
+.medium svg {
   height: 24px;
   width: 24px;
   min-width: 24px;
 }
 
-.large {
+.large svg {
   height: 28px;
   width: 28px;
   min-width: 28px;
@@ -84,4 +96,16 @@
 
 :global([dir="rtl"]) .icon.flippable svg {
   transform: rotate(180deg);
+}
+
+/**
+ * Label positioning
+ */
+
+.icon-position-start svg {
+  order: 0;
+}
+
+.icon-position-end svg {
+  order: 1;
 }
