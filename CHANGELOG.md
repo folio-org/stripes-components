@@ -8,7 +8,7 @@
 * Added "tag"-icon to list of icons
 * Adjust <ModalFooter> button CSS
 
-## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0)
+## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0) (2018-07-11)
 
 * In `<Datepicker>`, added a new `ignoreLocalOffset` prop that ignores the tenant timezone and treats the date as UTC to display the date. Fixes UIORG-55
 * Adjust address read only view. Fixes STCOM-152.
