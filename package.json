@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -75,6 +75,7 @@
     "@folio/stripes-react-hotkeys": "^1.0.0",
     "classnames": "^2.2.5",
     "dom-helpers": "^3.2.1",
+    "json2csv": "^4.2.1",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "moment-range": "^3.0.3",
