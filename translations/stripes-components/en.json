@@ -50,6 +50,7 @@
   "tableColumnCount": "Table with {count} columns",
   "button.edit": "Edit",
   "button.new": "+ New",
+  "exportToCsv": "Export to CSV",
   "selection.emptyList": "List is empty",
   "selection.noMatches": "No matching options",
   "selection.filterOptionsLabel": "{label} options filter",
