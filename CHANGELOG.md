@@ -1,16 +1,19 @@
 # Change history for stripes-components
 
-## 4.0.0 (IN PROGRESS)
+## 3.1.0 (IN PROGRESS)
+
 * Expose `Settings` nav pane width via `navPaneWidth` prop.
 * Rename `errorText` and `warningText` props to `error` and `warning` for consistency. Fixes STCOM-314
 * Change button relationship margins
 * Add min-height to expanded Accordion CSS
 * Added "tag"-icon to list of icons
 * Adjust <ModalFooter> button CSS
-* Added example for <Selection>
-* Added `csvShowButton` prop to <MultiColumnList>. [UIU-459](https://issues.folio.org/browse/UIU-459) Available from v3.0.7
+* Added example for `<Selection>`
+* `makeQueryFunction` once more correctly handles relation modifiers, fixing a regression introduced in commit 1bf498d3. Fixes STCOM-321. Available from v3.0.7.
+* Added `csvShowButton` prop to <MultiColumnList>. [UIU-459](https://issues.folio.org/browse/UIU-459) Available from v3.0.8
 
-## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0)
+## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0) (2018-07-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v2.0.0...v3.0.0)
 
 * In `<Datepicker>`, added a new `ignoreLocalOffset` prop that ignores the tenant timezone and treats the date as UTC to display the date. Fixes UIORG-55
 * Adjust address read only view. Fixes STCOM-152.
