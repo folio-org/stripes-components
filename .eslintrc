@@ -26,6 +26,7 @@
     "no-console": ["error", {
       "allow": ["warn", "error"]
     }],
+    "operator-linebreak": ["off"],
     "react/sort-prop-types": ["error"],
     "react/destructuring-assignment": ["off"]
   }
