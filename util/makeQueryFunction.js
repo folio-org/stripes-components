@@ -38,7 +38,7 @@ function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOn
       if (t.length === 1) {
         cql = `${qindex}="${query}*"`;
       } else {
-        cql = `${t[0]} =\${t[1]} "${query}*"`;
+        cql = `${t[0]} =\/${t[1]} "${query}*"`;
       }
     } else if (query) {
       cql = compilePathTemplate(queryTemplate, nsQueryParams, pathComponents, { query: resourceQuery });
