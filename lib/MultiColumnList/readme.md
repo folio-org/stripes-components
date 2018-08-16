@@ -57,6 +57,8 @@ Name | type | description | default | required
 `rowFormatter`  | func | function of shape `<name>({rowIndex, rowClass, rowData, cells, rowProps}){return <reactElement>}` that can be used to supply custom row layout. Forking [defaultRowFormatter](defaultRowFormatter.js) is a good place to start if you need to use this. | `defaultRowFormatter` |
 `interactive` | bool | Applies a "pointer" cursor when the mouse hovers over a row | `true` |
 `headerRowClass` | string | Applies a css class to the header row of the list. | |
+`csvShowButton` | bool | Displays the "Export to CSV" button
+`csvExcludeKeys` | array of strings | List of columns in the data that should be excluded in the CSV
 
 ## Usability: Clickable Rows vs clickable cells
 Using both types of interaction is not good for users or developers, so it's best to simply use one or the other. For clickable cell content, place clickable elements within `formatter`s. Clickable rows are easily created by using the `onRowClick` prop.

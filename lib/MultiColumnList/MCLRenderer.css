@@ -149,3 +149,9 @@
 .emptyMessage {
   padding: 15px;
 }
+
+.actionBarContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
