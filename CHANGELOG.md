@@ -7,6 +7,7 @@
 * Add min-height to expanded Accordion CSS
 * Added "tag"-icon to list of icons
 * Adjust <ModalFooter> button CSS
+* Added example for <Selection>
 * Added `csvShowButton` prop to <MultiColumnList>. [UIU-459](https://issues.folio.org/browse/UIU-459) Available from v3.0.7
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0)
