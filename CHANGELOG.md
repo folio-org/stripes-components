@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 4.0.0 (IN PROGRESS)
+## 3.1.0 (IN PROGRESS)
 
 * Expose `Settings` nav pane width via `navPaneWidth` prop.
 * Rename `errorText` and `warningText` props to `error` and `warning` for consistency. Fixes STCOM-314
