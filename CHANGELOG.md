@@ -8,6 +8,7 @@
 * Add min-height to expanded Accordion CSS
 * Added "tag"-icon to list of icons
 * Adjust <ModalFooter> button CSS
+* Added example for `<Selection>`
 * `makeQueryFunction` once more correctly handles relation modifiers, fixing a regression introduced in commit 1bf498d3. Fixes STCOM-321. Available from v3.0.7.
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0) (2018-07-11)
