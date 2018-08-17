@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "3.0.4",
+  "version": "3.0.8",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -13,7 +13,8 @@
     "eslint": "eslint ./",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -31,7 +32,7 @@
   "devDependencies": {
     "@bigtest/interactor": "^0.7.2",
     "@bigtest/mocha": "^0.5.0",
-    "@folio/eslint-config-stripes": "^2.0.0",
+    "@folio/eslint-config-stripes": "^3.0.0",
     "@folio/stripes-cli": "^1.2.0",
     "@storybook/addon-actions": "^3.2.16",
     "@storybook/addon-knobs": "^3.3.11",
@@ -48,7 +49,7 @@
     "babel-preset-stage-2": "^6.18.0",
     "babel-runtime": "^6.26.0",
     "chai": "^3.5.0",
-    "eslint": "^4.8.0",
+    "eslint": "^5.3.0",
     "file-loader": "^1.1.5",
     "jest-mock": "23.2.0",
     "mocha": "^4.0.1",
@@ -75,6 +76,7 @@
     "classnames": "^2.2.5",
     "dom-helpers": "^3.2.1",
     "downshift": "^2.0.16",
+    "json2csv": "^4.2.1",
     "lodash": "^4.17.4",
     "memoize-one": "^4.0.0",
     "moment": "^2.17.1",
