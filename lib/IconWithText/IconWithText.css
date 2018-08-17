@@ -1,0 +1,65 @@
+/**
+ * IconWithText
+ */
+
+.iconWithText {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+/**
+ * Block
+ */
+.block {
+  display: flex;
+}
+
+/**
+ * Padding
+ */
+.padding-start,
+[dir=rtl] .padding-end {
+  padding: 0 0 0 6px;
+}
+
+.padding-end,
+[dir=rtl] .padding-start {
+  padding: 0 6px 0 0;
+}
+
+.padding-both {
+  padding: 0 6px;
+}
+
+/**
+ * Regular Icon
+ */
+.regularIcon {
+  display: relative;
+}
+
+/**
+ * Icon Placement
+ */
+
+/* Start placement (left on ltr / right on rtl) */
+.iconPlacementStart .icon {
+  order: 0;
+}
+
+/* End placement (right on ltr / left on rtl) */
+.iconPlacementEnd .icon {
+  order: 2;
+}
+
+/* Specific for app icon */
+[dir=rtl] .iconPlacementStart .appIcon,
+.iconPlacementEnd .appIcon {
+  margin: 0 0 0 0.4em;
+}
+
+[dir=rtl] .iconPlacementEnd .appIcon,
+.iconPlacementStart .appIcon {
+  margin: 0 0.4em 0 0;
+}
