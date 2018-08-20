@@ -62,7 +62,9 @@
     margin-bottom: 0;
   }
 
-  &:disabled, &.disabled, &.readOnly {
+  &:disabled,
+  &.disabled,
+  &.readOnly {
     background-color: var(--color-fill-disabled);
     color: var(--color-text-p2);
   }
