@@ -23,6 +23,7 @@ dataOptions | array | Array of objects for options in the shape of `{value:<stri
 autoFocus | bool | If this prop is `true`, `<select>` will automatically focus on mount | `false` | false
 placeHolder | string | Sets a disabled first option in the options list. |  | false
 required | bool | Sets the required attribute on the select field. | false | false
+readOnly | bool | Sets the select field as read only. | false | false
 marginBottom0 | bool | Styles the input with no bottom margin. | false | false
 fullWidth | bool | Styles input to a width of 100% of its container. | | false
 validationEnabled | bool | Controls whether or not the select displays validation icons. | true | false
