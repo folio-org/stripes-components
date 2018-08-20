@@ -1,3 +1,4 @@
+import React, { Component, Fragment } from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import { initializeRTL } from 'storybook-addon-rtl';
@@ -57,7 +58,37 @@ setIntlConfig({
 
 addDecorator(withIntl);
 
+/**
+ * RTL
+ */
 initializeRTL();
+
+/**
+ * Add OverlayContainer to all stories
+ * Popovers, Modals etc. mount to this element in the real system
+ */
+
+ class AddOverlayContainer extends Component {
+  constructor(props) {
+    super(props);
+    const name = 'OverlayContainer';
+    if (!document.getElementById('OverlayContainer')) {
+      var OverlayContainerEl = document.createElement("div");
+      OverlayContainerEl.id = name;
+      document.body.appendChild(OverlayContainerEl);
+    }
+  }
+  
+  render() {
+    return (
+      <Fragment>
+        {this.props.children}
+      </Fragment>
+    )
+  }
+ }
+
+addDecorator(storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>);
 
 /**
  * Set options
