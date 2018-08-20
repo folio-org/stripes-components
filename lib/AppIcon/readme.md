@@ -5,8 +5,6 @@ Displays an app's icon in various sizes.
 ## Usage
 AppIcon supports different ways of loading icons.
 
-Option 1 is the recommended implementation but if needed (edge case) option 1 and 2 can be used.
-
 ***1. Use context (recommended)***
 ```js
   import AppIcon from '@folio/stripes-components/lib/AppIcon';
@@ -30,10 +28,10 @@ Option 1 is the recommended implementation but if needed (edge case) option 1 an
   <AppIcon icon={icon} />
   ```
 
-***3. Pass img as child***
+**Add a label to the icon by passing it as a child**
   ```js
   <AppIcon>
-    <img src="/static/my-icon.png" alt="My icon" />
+    Users
   </AppIcon>
 ```
 
@@ -47,4 +45,4 @@ size | string | Determines the size of the icon. (small, medium, large)
 style | object | For adding custom style to component
 className | string | For adding custom class to component
 tag | string | Choose HTML-element (defaults to a span element)
-children | element | Optionally add icon as child element (img)
+children | element | Add content next to the icon - e.g. a label
