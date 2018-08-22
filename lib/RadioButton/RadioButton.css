@@ -91,3 +91,30 @@
     background-color: #fff;
   }
 }
+
+/**
+ * Feedback
+ */
+.hasWarning {
+  & .radioFeedback {
+    color: var(--warn);
+  }
+
+  & .labelCheck {
+    border-color: var(--warn);
+  }
+}
+
+.hasError {
+  & .radioFeedback {
+    color: var(--error);
+  }
+
+  & .labelCheck {
+    border-color: var(--error);
+  }
+}
+
+.radioFeedback {
+  font-size: 12px;
+}
