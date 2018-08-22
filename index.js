@@ -12,6 +12,7 @@ export { default as TabButton } from './lib/TabButton';
 export { default as TextArea } from './lib/TextArea';
 export { default as TextField } from './lib/TextField';
 export { default as Timepicker } from './lib/Timepicker';
+export { default as MultiSelection } from './lib/MultiSelection';
 
 /* data containers */
 export { default as KeyValue } from './lib/KeyValue';

@@ -1,0 +1,171 @@
+@import '../variables.css';
+
+.multiSelectContainer {
+  width: 100%;
+}
+
+.multiSelectControlWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.multiSelectControl {
+  composes: input from '../sharedStyles/form.css';
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.multiSelectFocused {
+  border: 1px solid var(--primary);
+  box-shadow: inset 0 0 0 2px rgba(37, 118, 195, 0.3);
+}
+
+.multiSelectControlGroup {
+  display: flex;
+  flex: 2 0 90%;
+  flex-wrap: wrap;
+}
+
+.multiSelectSelectedList {
+  margin: 2px;
+  padding: 0;
+  list-style: none;
+}
+
+.multiSelectRemoveItem {
+  cursor: pointer;
+}
+
+.multiSelectInput {
+  margin: 2px;
+  background-color: transparent;
+  padding: 0 4px;
+  height: var(--controlHeight);
+  border-width: 0;
+  outline: 0;
+}
+
+.multiSelectValueListContainer {
+  display: flex;
+  flex: 0 1 auto;
+}
+
+.multiSelectValueList {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+}
+
+.multiSelectLabel {
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.multiSelectMenu {
+  composes: selectionListRoot from '../Selection/Selection.css';
+  margin-top: 4px;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  &.untethered {
+    margin-top: -7px;
+    position: absolute;
+  }
+}
+
+.multiSelectOptionList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.multiSelectToggleButton {
+  min-width: 22px;
+  min-height: 30px;
+}
+
+.multiSelectOption {
+  composes: option from '../Selection/Selection.css';
+}
+
+.optionSelected {
+  composes: selected from '../Selection/Selection.css';
+}
+
+.optionCursor {
+  composes: cursor from '../Selection/Selection.css';
+}
+
+.multiSelectError {
+  composes: feedbackError from '../sharedStyles/form.css';
+}
+
+.multiSelectWarning {
+  composes: feedbackWarning from '../sharedStyles/form.css';
+}
+
+.multiSelectEmptyMessage {
+  composes: feedbackBlock from '../sharedStyles/form.css';
+  font-weight: bold;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.multiSelectFeedback {
+  padding: 4px 0;
+}
+
+.mobileBackdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  pointer-events: all;
+  top: 0;
+  left: 0;
+}
+
+.mobileContainer {
+  width: 80vw;
+  margin: 16px auto;
+  position: relative;
+}
+
+.valueChipRoot { /* root of ValueChip */
+  margin: 2px;
+  display: inline-block;
+  border: 1px solid var(--color-border);
+  background-color: #efefef;
+}
+
+.valueChipGroup { /* container for remove button and label */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  list-style: none;
+
+  &.valueChipSelected {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: #00c;
+
+    & svg {
+      fill: #fff;
+    }
+  }
+}
+
+.valueChipValue {
+  display: flex;
+  padding: 0 2px;
+  align-items: center;
+  justify-content: space-between;
+}
