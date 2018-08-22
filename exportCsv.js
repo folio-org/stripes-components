@@ -14,8 +14,10 @@ function triggerDownload(csv, fileTitle) {
       link.setAttribute('download', exportedFilename);
       link.style.visibility = 'hidden';
       document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      window.setTimeout(() => {
+        link.click();
+        document.body.removeChild(link);
+      }, 50); // Need to debounce this click event from others (Pane actionMenuItems dropdown)
     } else {
       console.error('Failed to trigger download for CSV data'); // eslint-disable-line no-console
     }
