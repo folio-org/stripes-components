@@ -66,7 +66,7 @@ The child function allows for its returned JSX to be of any shape to suite the r
 
 ## Prop-getter function
 
-Prop-getter functions return an object of bundled props that can be easily applied to a component via spread attribtes. For example: `<Component {...propGetter()}>`. `<DateRangeWrapper>`'s prop-getters accept a `props` object. The keys of that object are composed in with the internally supplied props/handlers. If you pass an `onChange` handler to the prop-getter function, it will be called **before** the `<DateRangeWrapper>`'s internal onChange handler.
+Prop-getter functions return an object of bundled props that can be easily applied to a component via spread attributes. For example: `<Component {...propGetter()}>`. `<DateRangeWrapper>`'s prop-getters accept a `props` object. The keys of that object are composed in with the internally supplied props/handlers. If you pass an `onChange` handler to the prop-getter function, it will be called **before** the `<DateRangeWrapper>`'s internal onChange handler.
 
 ### Render-props for the child function
 Name | type | description 
@@ -77,8 +77,20 @@ Name | type | description
 `getStartInputProps` | function(props: <object>) | Prop-getter function Similar to `getEndInputProps`.
 
 ## Behavior overrides
-If the internal excluder functions or value getters don't work for some reason, you can supply your own function to take care of the task. This helps the component be flexible for any scenario. Internally, the Wrapper simply stores the value parameter from onChange in its state, but this parameter might be an event where you'd want `e.target.value` to be stored instead. So you can use the `end` and `startValueGetter` props.
+If the internal excluder functions or value getters don't work for some reason, you can supply your own function to take care of the task. This helps the component be flexible for any scenario. Internally, the Wrapper simply stores the value parameter from onChange in its state, but this parameter might be an event where you'd want `e.target.value` to be stored instead. So you can use the `end` and `startValueGetter` props like so:
+```
+// our value-getter to suite our needs:
+const getter = (e) => e.target.value;
+
+// in render...
+<DateRangeWrapper
+  startValueGetter={getter}
+  endValueGetter={getter}
+>
+// ...jsx continued
+```
 
 ## Reference
-For more information/examples of the patterns used in this prop, see the following:
+For more information/examples of the patterns used in this component, see the following:
+
 [Prop-Getters](https://blog.kentcdodds.com/how-to-give-rendering-control-to-users-with-prop-getters-549eaef76acf)
