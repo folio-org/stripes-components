@@ -2,56 +2,27 @@
 
 Primitive for setting up two Datepickers to assemble a date range structure. Dates outside of the range (before the start date or after the end date) are excluded. Makes use of render props and prop getters to allow for variable layouts of the components within.
 
-## Basic Usage
-```
-import { DateRangeWrapper, Datepicker } from '@folio/stripes-components'
-
-// the only child is a function, mentioned later as the 'child function'
-<DateRangeWrapper>
-  {({
-    getStartInputProps,
-    getEndInputProps,
-    endDateExclude,
-    startDateExclude,
-  }) => (
-    <div>
-      <Datepicker
-        label="Start date"
-        exclude={startDateExclude}
-        input={{
-          ...getStartInputProps({
-            onChange: this.startDateOnChange, // your app's own onChange handler.
-            value: this.state.startDate, // start date form your application.
-          }),
-        }}
-      />
-      <Datepicker
-        label="End date"
-        exclude={endDateExclude}
-        input={{
-            ...getEndInputProps({
-              onChange: this.endDateOnChange, // custom props similar to above
-              value: this.state.endDate
-            }),
-        }}
-      />
-    </div>
-    )
-  }
-</DateRangeWrapper>
-```
-## With Redux-form
-
+## With Redux-form Fields
+While it can certainly be used with vanilla Datepickers, a common use-case of FOLIO forms will be redux-form.
 Used with Redux-form, we need to apply a custom value getter. Here's what that code looks like.
 ```
+  import { DateRangeWrapper, Datepicker } from '@folio/stripes-components'
+
     // with redux-form, best value comes in the 2nd param...
     const getter = (e, value) => {
       return value;
     };
 
+    // bring in redux-form's initialValues to get initial dates, if there are any.
+    const {
+      initialValues
+    } = this.props;
+
     return (
       <form>
         <DateRangeWrapper
+          initialStartDate={initialValues.rangeStartDate}
+          initialEndDate={initialValues.rangeEndDate}
           startValueGetter={getter}
           endValueGetter={getter}
         >
