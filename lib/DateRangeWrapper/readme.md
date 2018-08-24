@@ -40,6 +40,47 @@ import { DateRangeWrapper, Datepicker } from '@folio/stripes-components'
   }
 </DateRangeWrapper>
 ```
+## With Redux-form
+
+Used with Redux-form, we need to apply a custom value getter. Here's what that code looks like.
+```
+    // with redux-form, best value comes in the 2nd param...
+    const getter = (e, value) => {
+      return value;
+    };
+
+    return (
+      <form>
+        <DateRangeWrapper
+          startValueGetter={getter}
+          endValueGetter={getter}
+        >
+          {({
+            getStartInputProps,
+            getEndInputProps,
+            endDateExclude,
+            startDateExclude,
+          }) => (
+            <div>
+              <Field
+                name="rangeStartDate"
+                label="Start date"
+                component={Datepicker}
+                exclude={startDateExclude}
+                {...getStartInputProps()}
+              />
+              <Field
+                name="rangeEndDate"
+                label="End date"
+                component={Datepicker}
+                exclude={endDateExclude}
+                {...getEndInputProps()}
+              />
+            </div>
+            )
+          }
+        </DateRangeWrapper>
+```
 
 ## Common Props
 Name | type | description | default | required
@@ -51,8 +92,8 @@ Name | type | description | default | required
 ## Behavior override props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-`endValueGetter` | function(<any>) | Used in the internal onChange handler to get a date value from the 'end' Datepicker. | `(value) => value` | 
-`startValueGetter` | function(param <any>) | Similar to `endValueGetter`. Applied to the start date field. | `(value) => value` | 
+`endValueGetter` | function(<...any>) | Used in the internal onChange handler to get a date value from the 'end' Datepicker. | `(value) => value` | 
+`startValueGetter` | function(param <...any>) | Similar to `endValueGetter`. Applied to the start date field. | `(value) => value` | 
 `endExcluder` | function(day <any>) | Used to substitute default excluder logic. Internally, `<DateRangeWrapper>` uses `moment.isBefore()` to exclude dates that come before its internal `startDate` so these will not be available in the picker. | | 
 `startExcluder` | function(day <any>) | Similar to `startExcluder`. Uses `moment.isAfter()` for its test. | | 
 
