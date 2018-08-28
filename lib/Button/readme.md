@@ -26,6 +26,7 @@ marginBottom0 | bool | Remove bottom margin |
 paddingSide0 | bool | Remove padding on the sides |
 fullWidth | fullWidth | Forces the button width to 100% |
 href | string | Returns an anchor-tag with an href-attribute |
+to | string | Returns an instance of react-router-dom's <Link> |
 allowAnchorClick | bool | Allow anchor click |
 onClick | function | Adds an onClick handler |
 role | string | Adds [role-attribute](https://www.w3.org/wiki/PF/XTech/HTML5/RoleAttribute) to the button |,
