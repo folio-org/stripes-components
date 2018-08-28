@@ -73,6 +73,7 @@
     "@folio/stripes-connect": "^3.1.3",
     "@folio/stripes-form": "^0.8.2",
     "@folio/stripes-react-hotkeys": "^1.0.0",
+    "@folio/stripes-util": "^1.0.1",
     "classnames": "^2.2.5",
     "dom-helpers": "^3.2.1",
     "downshift": "^2.0.16",
