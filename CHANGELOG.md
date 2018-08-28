@@ -2,6 +2,7 @@
 
 ## 4.0.0 (IN PROGRESS)
 
+* Update `<RadioButton>` and `<RadioButtonGroup>` to work independently of Redux Form
 
 ## [3.3.0](https://github.com/folio-org/stripes-components/tree/v3.3.0) (2018-10-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.2.0...v3.3.0)
