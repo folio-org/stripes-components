@@ -1,15 +1,19 @@
-.right {
+/**
+ * Float
+ */
+.right,
+[dir="rtl"] .left {
   float: right;
 }
 
-.left {
+.left,
+[dir="rtl"] .right {
   float: left;
 }
 
-.centered {
-  margin: auto;
-}
-
+/**
+ * Text Alignment
+ */
 .textCentered {
   text-align: center;
 }
@@ -18,26 +22,76 @@
   text-align: right;
 }
 
+/**
+ * Flexbox
+ */
+
 .flex {
   display: flex;
   align-items: center;
-
+  
   &.centerContent {
     justify-content: center;
   }
-
+  
   &.justified {
     justify-content: space-between;
   }
 }
 
+.display-inline-flex {
+  display: inline-flex;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-align-items-start {
+  align-items: start;
+}
+
+.flex-align-items-end {
+  align-items: end;
+}
+
+/**
+ * Sizing
+ */
 .full {
   width: 100%;
 }
 
+/**
+ * Padding
+ */
 .indent {
   padding-left: 0.4rem;
   padding-right: 0.4rem;
+}
+
+/**
+ * Margin
+ */
+.margin-auto-both,
+.centered {
+  margin: auto;
+}
+
+.margin-start-auto,
+[dir="rtl"] .margin-end-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.margin-end-auto,
+[dir="rtl"] .margin-start-auto {
+  margin-right: auto;
+  margin-left: 0;
 }
 
 .marginTopHalf {
@@ -51,14 +105,4 @@
 /* class for aligning buttons or other non-labeled elements with labeled text inputs, selects, etc */
 .marginTopLabelSpacer {
   margin-top: 21px;
-}
-
-[dir="rtl"] {
-  & .right {
-    float: left;
-  }
-
-  & .left {
-    float: right;
-  }
 }
