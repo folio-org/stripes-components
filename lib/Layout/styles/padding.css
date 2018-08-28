@@ -1,0 +1,29 @@
+/**
+ * Padding
+ */
+
+.indent {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+  
+  /* Gutter padding */
+  .padding-all-gutter {
+    padding: var(--gutter);
+  }
+  
+  .padding-top-gutter {
+    padding-top: var(--gutter);
+  }
+  
+  .padding-bottom-gutter {
+    padding-bottom: var(--gutter);
+  }
+  
+  .padding-start-gutter {
+    padding-left: var(--gutter);
+  }
+  
+  .padding-end-gutter {
+    padding-left: var(--gutter);
+  }

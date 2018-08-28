@@ -1,0 +1,14 @@
+/**
+ * Text
+ */
+
+/**
+ * Alignment
+ */
+.textCentered {
+    text-align: center;
+}
+
+.textRight {
+    text-align: right;
+}
