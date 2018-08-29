@@ -5,7 +5,7 @@ Renders a vertical navigation list in conjunction with NavListSection
 ## Basic Usage
 NavList uses `<NavListSection>` to add one or more sections to your navigation.
 
-You can use the `<NavListItem>` component to add links/buttons to your NavListSection. By using the "to"-prop it will render a react-router `<Link>`-component, using the "href"-prop will render a regular <a> and the "onClick"-prop will render a button. The component will accept any valid props that these HTML elements accepts.
+You can use the `<NavListItem>` component to add links/buttons to your NavListSection. By using the "to"-prop it will render a react-router `<Link>`-component, using the "href"-prop will render a regular <a> and the "onClick"-prop will render a button. The component will accept any valid props that these HTML elements accepts. Optional: You can add an icon next to the label by passing an icon string to the `icon`-prop.
 
 ```
   import NavList from '@folio/stripes-components/lib/NavList';
@@ -18,6 +18,7 @@ You can use the `<NavListItem>` component to add links/buttons to your NavListSe
       <NavListItem onClick={onClickHandler}>Users</NavListItem>
       <NavListItem href="#organization">Organization</NavListItem>
       <NavListItem to="circulation">Circulation</NavListItem>
+      <NavListItem icon="edit" to="circulation">Edit</NavListItem>
     </NavListSection>
   </NavList>
 ```
