@@ -12,6 +12,7 @@
 * `makeQueryFunction` once more correctly handles relation modifiers, fixing a regression introduced in commit 1bf498d3. Fixes STCOM-321. Available from v3.0.7.
 * Added `csvShowButton` prop to <MultiColumnList>. [UIU-459](https://issues.folio.org/browse/UIU-459) Available from v3.0.8
 * Added `<MultiSelection>` component. [STCOM-263](https://issues.folio.org/browse/STCOM-263)
+* Deprecate `passThroughValue` prop on `Datepicker` and `Timepicker`
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0) (2018-07-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v2.0.0...v3.0.0)
