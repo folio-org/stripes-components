@@ -18,14 +18,10 @@ Name | type | description | default | required
 `useFocus` | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
 `autoFocus` | bool | If this prop is `true`, component will automatically focus on mount | |
 `disabled` | bool | if true, field will be disabled for focus or entry. | false | false
-`ignoreLocalOffset` (deprecated)  | bool | if true, ignores the time zone setting and treats the date as UTC to display the date.
-| false | false. See below for more explanation
 `readOnly` | bool | if true, field will be readonly. 'Calendar' and 'clear' buttons will be omitted. | false | false
 `value` | string | date to be displayed in the textfield. In forms, this is supplied by the initialValues prop supplied to the form | "" | false
 `onChange` | func | Event handler to handle updates to the datefield text. | | false
 `screenReaderMessage` | string | Additional message to be read by screenreaders when textfield is focused in addition to the label and format - which are always read. | | false
-`excludeDates` (deprecated)  | array, string or Moment object | Disables supplied dates from being selected in the calendar. | | false
-`passThroughValue` (deprecated) | string | Can be used to set dynamic values up to the form - values should be inspected/adjusted in a handler at submission time (like a button click that calls `submit()`.) See below for usage example. |  |
 `timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
 
