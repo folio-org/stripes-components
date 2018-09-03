@@ -42,7 +42,7 @@ In Short, `<Field>` requires a `name` and a `component` prop. The `name` is the 
 See the [redux-form website](https://redux-form.com/7.2.0/) for more information.
 
 ```
-import Select from '@folio/stripes-components/lib/Select';
+import { Select } from '@folio/stripes/components';
 
 ...
 

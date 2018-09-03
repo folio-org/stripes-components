@@ -5,7 +5,7 @@ Display key value with a label. Often used in combination with a grid to display
 ## Basic Usage
 
 ```
-import KeyValue from '@folio/stripes-components/lib/KeyValue';
+import { KeyValue } from '@folio/stripes/components';
 
 <KeyValue
   label="Some label"

@@ -3,8 +3,7 @@ The default modal footer for the Modal-component.
 
 ### Usage
 ```js
-import Modal from '@folio/stripes-components/lib/Modal';
-import ModalFooter from '@folio/stripes-components/lib/ModalFooter';
+import { Modal, ModalFooter } from '@folio/stripes/components';
 
 const footer = (
   <ModalFooter

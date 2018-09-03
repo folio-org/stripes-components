@@ -7,7 +7,7 @@ AppIcon supports different ways of loading icons.
 
 ***1. Use context (recommended)***
 ```js
-  import AppIcon from '@folio/stripes-components/lib/AppIcon';
+  import { AppIcon } from '@folio/stripes/components';
 
   // Note: Make sure that the AppIcon has "stripes" in context as it relies on stripes.metadata.
   <AppIcon app="users" size="small" />
@@ -29,7 +29,7 @@ AppIcon supports different ways of loading icons.
 
 ***3. Pass src and alt as props***
 ```js
-  <AppIcon 
+  <AppIcon
     src="/static/some-icon.png"
     alt="My Icon"
   />

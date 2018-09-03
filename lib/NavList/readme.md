@@ -8,9 +8,7 @@ NavList uses `<NavListSection>` to add one or more sections to your navigation.
 You can use the `<NavListItem>` component to add links/buttons to your NavListSection. By using the "to"-prop it will render a react-router `<Link>`-component, using the "href"-prop will render a regular <a> and the "onClick"-prop will render a button. The component will accept any valid props that these HTML elements accepts.
 
 ```
-  import NavList from '@folio/stripes-components/lib/NavList';
-  import NavListSection from '@folio/stripes-components/lib/NavListSection';
-  import NavListItem from '@folio/stripes-components/lib/NavListItem';
+  import { NavList, NavListItem, NavListSection } from '@folio/stripes/components';
   import Link from 'react-router-dom/Link';
 
   <NavList>

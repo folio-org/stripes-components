@@ -4,7 +4,7 @@ Renders a square button with a centered icon.
 
 ## Basic Usage
 ```
-  import IconButton from '@folio/stripes-components/lib/IconButton';
+  import { IconButton } from '@folio/stripes/components';
 
   <IconButton
     icon="comment"

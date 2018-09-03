@@ -6,7 +6,7 @@
 
 
 ```js
-import { HotKeys } from '@folio/stripes-components/lib/HotKeys';
+import { HotKeys } from '@folio/stripes/components';
 //..
 const keys = {
   'delete' : ['delete','backspace'],
@@ -27,14 +27,14 @@ const handlers = {
 Components can be wrapped to give them the necessary props/functionality to respond to keyboard shortcuts.
 
 ```js
-import { HotKeysHOC } from '@folio/stripes-components/lib/HotKeys';
+import { HotKeys } from '@folio/stripes/components';
 
 class MyComponent extends React.Component {
   // typical component internals... constructor(), render(), etc.
 }
 
 // wrap component with HOC...
-export default HotKeysHOC(MyComponent);
+export default HotKeys(MyComponent);
 ```
 You can then use the component as normal, supplying appropriate `keyMap` and `handlers` props.
 

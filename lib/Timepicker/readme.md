@@ -2,7 +2,7 @@
 Form element for selecting a time.
 ## Usage
 ```
-import Timepicker from '@folio/stripes-components/lib/Timepicker';
+import { Timepicker } from '@folio/stripes/components';
 
 // later in your JSX....
 <Timepicker />
