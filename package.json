@@ -62,6 +62,9 @@
     "postcss-nesting": "^4.2.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-form": "^7.0.3",
     "storybook-addon-intl": "^2.3.0",
     "storybook-addon-rtl": "^0.1.1",
     "storybook-readme": "^3.2.0",
@@ -70,8 +73,6 @@
     "webpack": "^4.10.2"
   },
   "dependencies": {
-    "@folio/stripes-connect": "^3.1.3",
-    "@folio/stripes-form": "^0.8.2",
     "@folio/stripes-react-hotkeys": "^1.0.0",
     "@folio/stripes-util": "^1.0.1",
     "classnames": "^2.2.5",
@@ -91,12 +92,9 @@
     "react-highlighter": "^0.4.2",
     "react-intl": "^2.4.0",
     "react-overlays": "^0.8.3",
-    "react-redux": "^5.0.2",
     "react-router-dom": "^4.1.1",
     "react-tether": "^1.0.1",
     "react-transition-group": "^2.2.1",
-    "redux": "^3.6.0",
-    "redux-form": "^7.0.3",
     "typeface-source-sans-pro": "^0.0.44"
   },
   "peerDependencies": {

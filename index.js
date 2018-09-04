@@ -51,20 +51,13 @@ export { default as MenuItem } from './lib/MenuItem';
 export { default as MetaSection } from './lib/MetaSection';
 export { default as NavList } from './lib/NavList';
 export { default as NavListSection } from './lib/NavListSection';
-export { default as Pluggable } from './lib/Pluggable';
 export { default as Popover } from './lib/Popover';
 export { default as Selection, OptionSegment } from './lib/Selection';
-export { default as Settings } from './lib/Settings';
 export { default as SRStatus } from './lib/SRStatus';
 
 /* structures */
-export { default as AddressEdit } from './lib/AddressFieldGroup/AddressEdit';
-export { default as AddressList } from './lib/AddressFieldGroup/AddressList';
-export { default as AddressView } from './lib/AddressFieldGroup/AddressView';
 export { default as ConfirmationModal } from './lib/ConfirmationModal';
-export { default as EditableList } from './lib/EditableList';
 export { default as InfoPopover } from './lib/InfoPopover';
-export { default as RepeatableField } from './lib/RepeatableField';
 export { default as SearchField } from './lib/SearchField';
 
 /* specific use */
