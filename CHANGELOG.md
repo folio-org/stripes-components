@@ -4,6 +4,12 @@
 
 * Update `<RadioButton>` and `<RadioButtonGroup>` to work independently of Redux Form
 * Remove child.type checks
+* Remove `<AddressFieldGroup>`;  it's now in `stripes-smart-components`
+* Remove `<EditableList>`; it's now in `stripes-smart-components`
+* Remove `<Pluggable>`; it's now in `stripes-core`
+* Remove `<Settings>`; it's now in `stripes-smart-components`
+* Remove deprecated util functions
+* Remove old version of `<RepeatableField>`
 
 ## [3.3.0](https://github.com/folio-org/stripes-components/tree/v3.3.0) (2018-10-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.2.0...v3.3.0)
