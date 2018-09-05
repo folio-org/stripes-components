@@ -27,9 +27,9 @@ It's also possible to use helper classes in your CSS files by utilizing Post CSS
   }
 ```
 
-This will automatically apply the additional helper classes into your HTML.
+This will automatically apply the additional helper classes into your compiled HTML without adding additional CSS to the bundle.
 
-Note: You can only use the `composes` feature on a single class name that's not nested.
+Note: You can only use the `composes` feature on a single non-nested CSS selector. Read more about composition [here](https://github.com/css-modules/css-modules#composition).
 
 ## Props
 Any valid React props can be applied to this component. Below are the props that vary from any default props.
