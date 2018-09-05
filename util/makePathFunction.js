@@ -1,6 +1,8 @@
 import { filters2cql } from '../lib/FilterGroups';
 
 function makePathFunction(basePath, findAll, queryTemplate, sortMap, filterConfig) {
+  console.warn('makePathFunction() deprecated; instead use makeQueryFunction()');
+
   return (queryParams, _pathComponents, _resourceValues, logger) => {
     const { query, filters, sort } = queryParams || {};
 
