@@ -7,7 +7,28 @@
 /**
  * Icon
  */
+
 .appIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/**
+ * Label
+ */
+
+.label {
+  margin: 0 0 0 0.35em;
+}
+
+:global([dir="rtl"]) .label {
+  margin: 0 0.35em 0 0;
+}
+
+/**
+ * Icon
+ */
+.icon {
   display: inline-block;
   position: relative;
   box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
@@ -37,19 +58,19 @@
 /**
  * Sizes
  */
-.appIcon.large {
+.large .icon {
   height: 48px;
   min-width: 48px;
   width: 48px;
 }
 
-.appIcon.medium {
+.medium .icon {
   width: 24px;
   min-width: 24px;
   height: 24px;
 }
 
-.appIcon.small {
+.small .icon {
   width: 14px;
   min-width: 14px;
   height: 14px;

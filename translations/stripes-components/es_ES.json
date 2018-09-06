@@ -47,5 +47,18 @@
     "metaSection.source": "Fuente: {source}",
     "metaSection.recordCreated": "Registro creado: {date} {time}",
     "metaSection.recordLastUpdated": "Grabar la última actualización: {date} {time}",
-    "tableColumnCount": "Tabla con {count} columnas"
+    "tableColumnCount": "Tabla con {count} columnas",
+    "selection.emptyList": "La lista está vacía",
+    "selection.noMatches": "No hay opciones de coincidencia",
+    "selection.filterOptionsLabel": "{label} opciones de filtro",
+    "selection.filterOptionsPlaceholder": "Lista de opciones de filtro",
+    "selection.filterResultFeedback": "{length} elementos encontrados, {label} seleccionado",
+    "exportToCsv": "Exportar a CSV",
+    "button.edit": "Edit",
+    "button.new": "+ New",
+    "multiSelection.defaultEmptyMessage": "No matching items found!",
+    "multiSelection.filterPlaceholder": "filter option list",
+    "multiSelection.controlDescription": "Contains a list of any selected values, followed by a combobox for selecting additional values.",
+    "multiSelection.removeSelectedButtonDescription": "Press enter or spacebar to remove item from selection list. Home and end keys navigate to the first or last items.",
+    "multiSelection.removeSelectedButtonLabel": "remove value"
 }

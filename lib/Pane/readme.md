@@ -64,7 +64,7 @@ const actionMenuItems = [
   {
     label: 'Edit',
     onClick: () => { console.log('Clicked!') }, // Using "onClick" will render a <button>
-    id="some-id" // Other keys such as id, className, title etc. will be spread on each action menu item
+    id: 'some-id' // Other keys such as id, className, title etc. will be spread on each action menu item
   },
   {
     label: 'Jump to section',
