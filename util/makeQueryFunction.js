@@ -10,6 +10,8 @@ import { removeNsKeys } from './nsQueryFunctions';
 // For compatibility, false and true may be used for 0 and 1 respectively.
 //
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition, nsParams) {
+  console.warn('Warning: Update path to stripes-smart-components/lib/SearchAndSort/makeQueryFunction');
+
   return (queryParams, pathComponents, resourceValues, logger) => {
     const resourceQuery = removeNsKeys(resourceValues.query, nsParams);
     const nsQueryParams = removeNsKeys(queryParams, nsParams);
