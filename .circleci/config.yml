@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   checkout-and-install:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:10
     steps:
       - checkout
       - restore_cache:
@@ -21,33 +21,55 @@ jobs:
 
   eslint:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:10
     steps:
       - attach_workspace:
           at: ~/
       - run:
           name: Lint JS
-          command: yarn eslint --max-warnings=0
+          command:
+            yarn eslint
+            --max-warnings=0
+            --format junit
+            --output-file ./artifacts/eslint/eslint.xml
+      - store_test_results:
+          path: ./artifacts
+      - store_artifacts:
+          path: ./artifacts
 
   stylelint:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:10
     steps:
       - attach_workspace:
           at: ~/
       - run:
+          name: Set up artifacts directory
+          command: mkdir -p artifacts/stylelint
+      - run:
           name: Lint CSS
-          command: yarn stylelint
+          command:
+            yarn --silent stylelint
+            --custom-formatter './node_modules/stylelint-junit-formatter' > ./artifacts/stylelint/stylelint.xml
+      - store_test_results:
+          path: ./artifacts
+      - store_artifacts:
+          path: ./artifacts
 
   test-chrome:
     docker:
-      - image: circleci/node:latest-browsers
+      - image: circleci/node:10-browsers
     steps:
       - attach_workspace:
           at: ~/
       - run:
           name: Run tests
-          command: yarn test --karma.singleRun --karma.browsers=Chrome
+          command:
+            yarn test
+            --karma.singleRun
+            --karma.browsers=Chrome
+            --karma.reporters mocha junit BrowserStack
+            --karma.junitReporter.outputDir artifacts/junit/karma
       - store_test_results:
           path: ./artifacts/junit
       - store_artifacts:
@@ -56,6 +78,67 @@ jobs:
       - store_artifacts:
           name: Store code coverage report
           path: ./artifacts/coverage/lcov.txt
+
+  test-firefox:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Run tests
+          command:
+            yarn test
+            --karma.singleRun
+            --karma.browsers=Firefox
+            --karma.reporters mocha junit BrowserStack
+            --karma.junitReporter.outputDir artifacts/junit/karma
+      - store_test_results:
+          path: ./artifacts/junit
+      - store_artifacts:
+          name: Store junit test report
+          path: ./artifacts/junit
+      - store_artifacts:
+          name: Store code coverage report
+          path: ./artifacts/coverage/lcov.txt
+
+  test-safari:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Run tests
+          command:
+            yarn test
+            --karma.singleRun
+            --karma.browsers=bs_safari_11
+            --karma.reporters mocha junit BrowserStack
+            --karma.junitReporter.outputDir artifacts/junit/karma
+      - store_test_results:
+          path: ./artifacts/junit
+      - store_artifacts:
+          path: ./artifacts
+
+  test-edge:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Run tests
+          command:
+            yarn test
+            --karma.singleRun
+            --karma.browsers=bs_ieEdge_windows
+            --karma.reporters mocha junit BrowserStack
+            --karma.junitReporter.outputDir artifacts/junit/karma
+      - store_test_results:
+          path: ./artifacts/junit
+      - store_artifacts:
+          path: ./artifacts
 
 workflows:
   version: 2
@@ -69,5 +152,14 @@ workflows:
           requires:
             - checkout-and-install
       - test-chrome:
+          requires:
+            - checkout-and-install
+      - test-firefox:
+          requires:
+            - checkout-and-install
+      - test-safari:
+          requires:
+            - checkout-and-install
+      - test-edge:
           requires:
             - checkout-and-install
