@@ -12,6 +12,8 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 * [Patterns - UI Recipes](#patterns)
 * [Testing](#testing)
 * [FAQ](#faq)
+* [Migration Paths](MIGRATIONPATHS.md)
+* [Change Management](CHANGEMANAGEMENT.md)
 * [To be documented](#to-be-documented)
 * [Additional information](#additional-information)
 
@@ -136,7 +138,6 @@ tests locally in the Chrome browser.
 
 See our [testing documentation](docs/Testing.md) for more information
 on writing tests.
-
 
 ## FAQ
 Check our [Frequently asked questions for Module developers page](FAQ.md)
