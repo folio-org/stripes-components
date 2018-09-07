@@ -21,8 +21,13 @@ If they cannot be released in parallel, new changes may live in a separate branc
 ## Example scenario
 ### Moving Components
 We may see fit to move components from one core repo to another so to adequately support that component's dependencies. Say, for example, we're at version 3.0.10 and It's decided that we will move `<XReduxyExampleComponent>` (`<XREC>`) component to another core repo.
+
 **Step 1:** We copy the component to its new home and merge those changes to the master of that repo. Changes are logged at the new repo.
+
 **Step 2:** We place a console warning (as mentioned above) that the path to `<XREC>` should be updated. Migration is additionally documented in our [Migration document](MIGRATION.md) and the change is logged as a deprecation warning in our [change log](CHANGELOG.md). We bump our Minor version for this release. We're `v3.1.0` now.
+
 **Step 3:** The changes are released and exist in parallel for a release cycle, giving ample time for developers to perform updates.
+
 **Step 4:** Developers make the necessary changes and the console warnings no longer appear when importing `<XREC>` from its new path...
+
 **Step 5:** `<XREC>` is removed from `stripes-components` in a new major version.  `4.0.0`
