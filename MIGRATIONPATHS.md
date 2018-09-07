@@ -3,6 +3,7 @@
 [Some Components and utilities have moved](#some-components-and-utilities-have-moved)
 ### Some Components and utilities have moved
 We've provided console warnings for these items. If you've used these in your module with a `stripes-components` path, you'll simply have to update your import path:
+
 Component/Util | New path
 -- | --
 `<AddressList>` | `@folio/stripes-smart-components/lib/AddressFieldGroup/AddressList`
