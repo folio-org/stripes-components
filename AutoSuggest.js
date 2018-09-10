@@ -52,9 +52,9 @@ class AutoSuggest extends React.Component {
     this.autoSuggestId = `list-dropdown-${this.testId}`;
   }
 
-  getInputWidth() {
+  getInputWidth() { // eslint-disable-line consistent-return
     if (this.textfield.current) {
-      const { input : { current : { offsetWidth }}} = this.textfield.current;
+      const { input : { current : { offsetWidth } } } = this.textfield.current;
       return offsetWidth;
     }
   }
@@ -83,74 +83,75 @@ class AutoSuggest extends React.Component {
     };
 
     return (
-        <Downshift
-          style={{ display: 'inline-block', position: 'relative' }}
-          itemToString={item => (item ? item.value : '')}
-          onChange={selectedItem => onChange(selectedItem.value)}
-          onStateChange={({ inputValue }) => onChange(inputValue)}
-          selectedItem={value}
-          inputValue={value}
-        >
-          {({
-              getInputProps,
-              getItemProps,
-              getMenuProps,
-              selectedItem,
-              highlightedIndex,
-              isOpen,
-              inputValue,
-            }) => (
-              <div className={css.downshift}>
-                <TetherComponent {...mergedTetherProps}>
-                  <div
-                    className={css.TextFieldDiv}
-                    ref={(ref) => { this.container = ref; }}
-                    aria-live="assertive"
-                    aria-relevant="additions"
-                  >
-                    <TextField {...getInputProps(
-                        { ...inputProps,
-                          onBlur: onBlur,
-                        }
-                      )}
-                    />
-                  </div>
-                  <ul className={css.AutoSuggest} {...getMenuProps({
-                        refKey: 'innerRef',
-                        id: autoSuggestId,
-                        style: { width: `${listWidth}px` }
-                      }, {suppressRefError: true})}
-                  >
-                    {isOpen
-                      ? items
-                        .filter(item => !inputValue || item.value.includes(inputValue))
-                        .map((item, index) => (
-                          <li
-                            {...getItemProps({
-                              key: item.value,
-                              index,
-                              item,
-                              style: {
-                                padding: '5px',
-                                cursor: 'default',
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                backgroundColor:
-                                  highlightedIndex === index ? 'lightgray' : 'white',
-                                  fontWeight: selectedItem === item ? 'bold' : 'normal',
-                              },
-                            })}
-                          >
-                            {item.value}
-                          </li>
-                        ))
-                    : null}
-                  </ul>
-                </TetherComponent>
+      <Downshift
+        style={{ display: 'inline-block', position: 'relative' }}
+        itemToString={item => (item ? item.value : '')}
+        onChange={selectedItem => onChange(selectedItem.value)}
+        onStateChange={({ inputValue }) => onChange(inputValue)}
+        selectedItem={value}
+        inputValue={value}
+      >
+        {({
+          getInputProps,
+          getItemProps,
+          getMenuProps,
+          selectedItem,
+          highlightedIndex,
+          isOpen,
+          inputValue,
+        }) => (
+          <div className={css.downshift}>
+            <TetherComponent {...mergedTetherProps}>
+              <div
+                className={css.TextFieldDiv}
+                ref={(ref) => { this.container = ref; }}
+                aria-live="assertive"
+                aria-relevant="additions"
+              >
+                <TextField {...getInputProps(
+                  { ...inputProps,
+                    onBlur }
+                )}
+                />
               </div>
-              )
+              <ul
+                className={css.AutoSuggest}
+                {...getMenuProps({
+                  refKey: 'innerRef',
+                  id: autoSuggestId,
+                  style: { width: `${listWidth}px` }
+                }, { suppressRefError: true })}
+              >
+                {isOpen
+                  ? items
+                    .filter(item => !inputValue || item.value.includes(inputValue))
+                    .map((item, index) => (
+                      <li
+                        {...getItemProps({
+                          key: item.value,
+                          index,
+                          item,
+                          style: {
+                            padding: '5px',
+                            cursor: 'default',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            backgroundColor:
+                                highlightedIndex === index ? 'lightgray' : 'white',
+                            fontWeight: selectedItem === item ? 'bold' : 'normal',
+                          },
+                        })}
+                      >
+                        {item.value}
+                      </li>
+                    ))
+                  : null}
+              </ul>
+            </TetherComponent>
+          </div>
+        )
             }
-        </Downshift>
+      </Downshift>
     );
   }
 }
