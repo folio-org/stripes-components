@@ -4,7 +4,7 @@ Helper component that allows for easily accessing a set of helper CSS classes. U
 ## Basic Usage
 
 ### JSX
-Apply any of the available class names to the `className` prop. Any additional custom class names will be combined with any matching helper classes.
+Apply any of the available class names to the `className` prop. Any additional custom class names will be combined with any matching helper classes. You can modify the root element by passing a string or a component to the "element"-prop.
 ```js
   import Layout from '@folio/stripes-components/lib/Layout';
 
@@ -19,7 +19,7 @@ Apply any of the available class names to the `className` prop. Any additional c
 ```
 
 ### CSS
-It's also possible to use helper classes in your CSS files by utilizing Post CSS's `composes` feature.
+It's also possible to use helper classes in your CSS files by utilizing PostCSS's `composes` feature.
 
 ```css
   .myCustomClass {
