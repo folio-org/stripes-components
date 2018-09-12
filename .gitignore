@@ -8,3 +8,4 @@ artifacts
 .npmrc
 .out
 /storybook-static/
+.vscode
