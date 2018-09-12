@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 3.1.0 (IN PROGRESS)
+## [3.1.0](https://github.com/folio-org/stripes-components/tree/v3.1.0) (2018-09-13)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.0.0...v3.1.0)
 
 * Expose `Settings` nav pane width via `navPaneWidth` prop.
 * Rename `errorText` and `warningText` props to `error` and `warning` for consistency. Fixes STCOM-314
@@ -13,6 +14,7 @@
 * Added `<MultiSelection>` component. [STCOM-263](https://issues.folio.org/browse/STCOM-263)
 * Deprecate `passThroughValue` prop on `Datepicker` and `Timepicker`
 * Update stripes-react-hotkeys dependency to support current versions of React.
+* Deprecate `makePathFunction()`, `makeQueryFunction()`, `Pluggable`, `Settings`, `EditableList`, and `AddressFieldGroup`
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0) (2018-07-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v2.0.0...v3.0.0)
