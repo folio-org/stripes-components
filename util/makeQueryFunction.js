@@ -10,7 +10,11 @@ import { removeNsKeys } from './nsQueryFunctions';
 // For compatibility, false and true may be used for 0 and 1 respectively.
 //
 function makeQueryFunction(findAll, queryTemplate, sortMap, filterConfig, failOnCondition, nsParams) {
-  console.warn('Warning: Update path to stripes-smart-components/lib/SearchAndSort/makeQueryFunction');
+  console.warn(
+    '\nWarning: makeQueryFunction() is deprecated and will be removed in the\n' +
+      'next major version of @folio/stripes-components.\n\n' +
+      'makeQueryFunction() is now available from @folio/stripes-smart-components.\n'
+  );
 
   return (queryParams, pathComponents, resourceValues, logger) => {
     const resourceQuery = removeNsKeys(resourceValues.query, nsParams);
