@@ -61,7 +61,8 @@
     margin-bottom: 0;
   }
 
-  &:disabled {
+  &:disabled,
+  &.isDisabled {
     background-color: #ebebe4;
     color: #777;
   }
@@ -100,7 +101,8 @@
 /**
  * Specific <input> style
  */
-input.input {
+input.input,
+.input input {
   height: var(--controlHeightSmall);
   min-height: var(--controlHeightSmall);
   padding: var(--input-horizontal-padding) var(--input-vertical-padding);
@@ -150,7 +152,8 @@ textarea.input {
  * Wider screens
  */
 @media (--mediumUp) {
-  input.input {
+  input.input,
+  .input input {
     height: var(--controlHeight);
     min-height: var(--controlHeight);
   }
