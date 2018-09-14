@@ -1,64 +1,7 @@
-.right {
-  float: right;
-}
-
-.left {
-  float: left;
-}
-
-.centered {
-  margin: auto;
-}
-
-.textCentered {
-  text-align: center;
-}
-
-.textRight {
-  text-align: right;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-
-  &.centerContent {
-    justify-content: center;
-  }
-
-  &.justified {
-    justify-content: space-between;
-  }
-}
-
-.full {
-  width: 100%;
-}
-
-.indent {
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
-}
-
-.marginTopHalf {
-  margin-top: 0.5rem;
-}
-
-.marginTop1 {
-  margin-top: 1rem;
-}
-
-/* class for aligning buttons or other non-labeled elements with labeled text inputs, selects, etc */
-.marginTopLabelSpacer {
-  margin-top: 21px;
-}
-
-[dir="rtl"] {
-  & .right {
-    float: left;
-  }
-
-  & .left {
-    float: right;
-  }
-}
+@import "../variables";
+@import "./styles/padding";
+@import "./styles/margin";
+@import "./styles/flexbox";
+@import "./styles/width";
+@import "./styles/text";
+@import "./styles/float";
