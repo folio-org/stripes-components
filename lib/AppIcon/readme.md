@@ -28,6 +28,15 @@ AppIcon supports different ways of loading icons.
   <AppIcon icon={icon} />
   ```
 
+***3. Pass src, alt and title as props***
+```js
+  <AppIcon 
+    src="/static/some-icon.png"
+    alt="My Icon"
+    title="My Icon" 
+  />
+  ```
+
 **Add a label to the icon by passing it as a child**
   ```js
   <AppIcon>
@@ -39,12 +48,13 @@ AppIcon supports different ways of loading icons.
 Name | Type | Description
 -- | -- | --
 app | string | The lowercased name of an app, e.g. "users" or "inventory". It will get the icon from metadata located in the stripes-object which should be available in React Context.
+alt | string | Adds an 'alt'-attribute on the img-tag.
+children | node | Add content next to the icon - e.g. a label
+className | string | For adding custom class to component
 iconKey | string | A specific icon-key for apps with multiple icons. Defaults to "app" which corresponds to the required default app-icon of an app.
 icon | object | Icon in form of an object
 size | string | Determines the size of the icon. (small, medium, large)
+src | string | Manually set the 'src'-attribute on the img-tag
 style | object | For adding custom style to component
-className | string | For adding custom class to component
 tag | string | Choose HTML-element (defaults to a span element)
-children | node | Add content next to the icon - e.g. a label
-alt | string | Adds an 'alt'-attribute on the img-tag.
 title | string | Adds a 'title'-attribute on the img-tag
