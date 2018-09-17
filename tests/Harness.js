@@ -28,7 +28,7 @@ class Harness extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <IntlProvider locale="en" key="en" messages={prefixKeys(translations)}>
+        <IntlProvider locale="en" key="en" timeZone="UTC" messages={prefixKeys(translations)}>
           {this.props.children}
         </IntlProvider>
       </Provider>

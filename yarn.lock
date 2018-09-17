@@ -180,7 +180,7 @@
   dependencies:
     "@bigtest/convergence" "^0.10.0"
 
-"@folio/eslint-config-stripes@^3.2.0":
+"@folio/eslint-config-stripes@^3.2.1":
   version "3.2.1"
   resolved "https://repository.folio.org/repository/npm-folio/@folio/eslint-config-stripes/-/eslint-config-stripes-3.2.1.tgz#25a07fdebaf16610d5af0e0da1d12b0a1a340a3d"
   dependencies:
@@ -198,7 +198,7 @@
   dependencies:
     sanitize-html "1.18.2"
 
-"@folio/stripes-cli@^1.3.1":
+"@folio/stripes-cli@^1.4.0":
   version "1.4.0"
   resolved "https://repository.folio.org/repository/npm-folio/@folio/stripes-cli/-/stripes-cli-1.4.0.tgz#187185ed56f6978b3bbd85ab592f3c1d27b76ef2"
   dependencies:
