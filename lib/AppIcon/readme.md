@@ -40,6 +40,7 @@ Name | Type | Description
 -- | -- | --
 app | string | The lowercased name of an app, e.g. "users" or "inventory". It will get the icon from metadata located in the stripes-object which should be available in React Context.
 iconKey | string | A specific icon-key for apps with multiple icons. Defaults to "app" which corresponds to the required default app-icon of an app.
+iconAriaHidden | bool | Applies aria-hidden to the icon element
 icon | object | Icon in form of an object
 size | string | Determines the size of the icon. (small, medium, large)
 style | object | For adding custom style to component
