@@ -83,6 +83,7 @@ Component | doc | categories
 [`<Modal>`](lib/Modal) | [doc](lib/Modal/readme.md) | container
 [`<ModalFooter>`](lib/ModalFooter) | [doc](lib/ModalFooter/readme.md) | container
 [`<MultiColumnList>`](lib/MultiColumnList) | [doc](lib/MultiColumnList/readme.md) | data-display
+[`<MultiSelection>`](lib/MultiSelection) | [doc](lib/MultiSelection/readme.md) | control
 [`<NavList>`](lib/NavList) | [doc](lib/NavList/readme.md) | control
 [`<NavListItem>`](lib/NavListItem) | | control
 [`<NavListSection>`](lib/NavListSection) | | control

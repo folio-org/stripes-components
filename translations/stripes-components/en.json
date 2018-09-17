@@ -56,5 +56,10 @@
   "selection.noMatches": "No matching options",
   "selection.filterOptionsLabel": "{label} options filter",
   "selection.filterOptionsPlaceholder": "Filter options list",
-  "selection.filterResultFeedback": "{length} items found, {label} selected"
+  "selection.filterResultFeedback": "{length} items found, {label} selected",
+  "multiSelection.defaultEmptyMessage": "No matching items found!",
+  "multiSelection.filterPlaceholder": "filter option list",
+  "multiSelection.controlDescription": "Contains a list of any selected values, followed by a combobox for selecting additional values.",
+  "multiSelection.removeSelectedButtonDescription": "Press enter or spacebar to remove item from selection list. Home and end keys navigate to the first or last items.",
+  "multiSelection.removeSelectedButtonLabel": "remove value"
 }

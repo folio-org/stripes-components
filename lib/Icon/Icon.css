@@ -94,13 +94,31 @@
 }
 
 /**
- * Label positioning
+ * Label
  */
 
+/* Positioning */
 .icon-position-start svg {
   order: 0;
 }
 
 .icon-position-end svg {
   order: 1;
+}
+
+/**
+Spacing
+Note: Using pseudo elements to add spacing for RTL support
+**/
+
+.label::before,
+.label::after {
+  content: '';
+  display: none;
+  width: 0.22em;
+}
+
+.icon-position-start .label::before,
+.icon-position-end .label::after {
+  display: inline-block;
 }
