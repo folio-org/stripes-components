@@ -5,15 +5,28 @@
   width: 100%;
 }
 
+.inputGroup {
+  display: flex;
+
+  & input {
+    margin: 0;
+    height: auto;
+    width: 100%;
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+  }
+}
+
 .startControls,
 .endControls {
   pointer-events: none;
   height: 100%;
-  position: absolute;
-  top: 0;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+  flex: 0;
 }
 
 .startControls {

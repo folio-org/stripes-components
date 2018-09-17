@@ -65,6 +65,8 @@ jobs:
       - run:
           name: Build storybook bundle
           command: yarn storybook-build
+      - store_artifacts:
+          path: ./.out
 
   test-chrome:
     docker:
@@ -76,18 +78,15 @@ jobs:
           name: Run tests
           command:
             yarn test
+            --coverage
             --karma.singleRun
             --karma.browsers=Chrome
-            --karma.reporters mocha junit BrowserStack
+            --karma.reporters mocha junit
             --karma.junitReporter.outputDir artifacts/junit/karma
       - store_test_results:
           path: ./artifacts/junit
       - store_artifacts:
-          name: Store junit test report
-          path: ./artifacts/junit
-      - store_artifacts:
-          name: Store code coverage report
-          path: ./artifacts/coverage/lcov.txt
+          path: ./artifacts
 
   test-firefox:
     docker:
@@ -101,16 +100,12 @@ jobs:
             yarn test
             --karma.singleRun
             --karma.browsers=Firefox
-            --karma.reporters mocha junit BrowserStack
+            --karma.reporters mocha junit
             --karma.junitReporter.outputDir artifacts/junit/karma
       - store_test_results:
           path: ./artifacts/junit
       - store_artifacts:
-          name: Store junit test report
-          path: ./artifacts/junit
-      - store_artifacts:
-          name: Store code coverage report
-          path: ./artifacts/coverage/lcov.txt
+          path: ./artifacts
 
   test-safari:
     docker:
