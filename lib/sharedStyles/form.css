@@ -44,6 +44,10 @@
   letter-spacing: 0.4px;
   border-radius: 0;
 
+  &::-ms-clear {
+    display: none;
+  }
+
   &:focus,
   &.isFocused {
     border: 1px solid var(--primary);
@@ -66,10 +70,6 @@
   &.isDisabled {
     background-color: #ebebe4;
     color: #777;
-  }
-
-  &::-ms-clear {
-    display: none;
   }
 
   /**

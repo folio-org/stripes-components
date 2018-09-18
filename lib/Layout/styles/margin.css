@@ -8,16 +8,24 @@
   margin: auto;
 }
 
-.margin-start-auto,
-[dir="rtl"] .margin-end-auto {
+.margin-start-auto {
   margin-left: auto;
   margin-right: 0;
 }
 
-.margin-end-auto,
 [dir="rtl"] .margin-start-auto {
   margin-right: auto;
   margin-left: 0;
+}
+
+.margin-end-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+[dir="rtl"] .margin-end-auto {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* Gutter */

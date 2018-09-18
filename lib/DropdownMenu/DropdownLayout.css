@@ -7,16 +7,16 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-
-  & + .dropdownBody {
-    height: calc(100% - 44px);
-  }
 }
 
 .dropdownBody {
   position: relative;
   display: flex;
   height: 100%;
+}
+
+.dropdownHeader + .dropdownBody {
+  height: calc(100% - 44px);
 }
 
 .dropdownColumn {

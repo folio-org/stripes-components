@@ -77,26 +77,6 @@
 /**
  * Checkbox feedback
  */
-.hasWarning {
-  & .checkboxFeedback {
-    color: var(--warn);
-  }
-
-  & .labelCheck {
-    border-color: var(--warn);
-  }
-}
-
-.hasError {
-  & .checkboxFeedback {
-    color: var(--error);
-  }
-
-  & .labelCheck {
-    border-color: var(--error);
-  }
-}
-
 .checkboxFeedback {
   font-size: 12px;
 }
@@ -107,9 +87,6 @@
 input.checkboxInput {
   margin: 0 9px;
   margin-bottom: 2px;
-}
-
-input.checkboxInput {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   z-index: -1;
@@ -133,6 +110,27 @@ input.checkboxInput {
     & path {
       stroke: #000;
     }
+  }
+}
+
+/* Warning and error states */
+.hasWarning {
+  & .checkboxFeedback {
+    color: var(--warn);
+  }
+
+  & .labelCheck {
+    border-color: var(--warn);
+  }
+}
+
+.hasError {
+  & .checkboxFeedback {
+    color: var(--error);
+  }
+
+  & .labelCheck {
+    border-color: var(--error);
   }
 }
 

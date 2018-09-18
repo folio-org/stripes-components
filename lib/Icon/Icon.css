@@ -85,15 +85,6 @@
 }
 
 /**
- * Flippable
- * Icon should flip on dir="rtl"
- */
-
-:global([dir="rtl"]) .icon.flippable svg {
-  transform: rotate(180deg);
-}
-
-/**
  * Label
  */
 
@@ -104,6 +95,15 @@
 
 .icon-position-end svg {
   order: 1;
+}
+
+/**
+ * Flippable
+ * Icon should flip on dir="rtl"
+ */
+
+:global([dir="rtl"]) .icon.flippable svg {
+  transform: rotate(180deg);
 }
 
 /**
