@@ -3,6 +3,8 @@
  * @variables-needs-updating
  */
 
+/* stylelint-disable no-descending-specificity  */
+
 @import '../variables.css';
 
 :root {
