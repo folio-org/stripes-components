@@ -15,6 +15,7 @@
 * Deprecate `passThroughValue` prop on `Datepicker` and `Timepicker`
 * Update stripes-react-hotkeys dependency to support current versions of React.
 * Deprecate `makePathFunction()`, `makeQueryFunction()`, `Pluggable`, `Settings`, `EditableList`, and `AddressFieldGroup`
+* Removed text capitalization from MCH column headers so that sentence casing can be controlled elsewhere (STCOM-337)
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0) (2018-07-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v2.0.0...v3.0.0)
