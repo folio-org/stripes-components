@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## ## 3.2.0 (IN PROGRESS) 
+
+* Update `stripes-form` dependency to v1.0.0
+
 ## [3.1.0](https://github.com/folio-org/stripes-components/tree/v3.1.0) (2018-09-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.0.0...v3.1.0)
 
