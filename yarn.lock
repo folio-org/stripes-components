@@ -385,17 +385,6 @@
     react-router "^4.1.1"
     redux-form "^7.0.3"
 
-"@folio/stripes-form@^1.0.0":
-  version "1.0.0"
-  resolved "https://repository.folio.org/repository/npm-folio/@folio/stripes-form/-/stripes-form-1.0.0.tgz#c66af5f94cf8de7a0c6e768c118f39fd67e4435a"
-  dependencies:
-    "@folio/stripes-components" "^3.0.0"
-    flat "^4.0.0"
-    prop-types "^15.5.10"
-    react-intl "^2.4.0"
-    react-router "^4.1.1"
-    redux-form "^7.0.3"
-
 "@folio/stripes-logger@^0.0.2":
   version "0.0.2"
   resolved "https://repository.folio.org/repository/npm-folio/@folio/stripes-logger/-/stripes-logger-0.0.2.tgz#7ca7bb45c6c3eea7c81f65abb93a45d1566b0ebb"
