@@ -3,5 +3,6 @@
 */
 
 .filterGroupLabel {
-  composes: boxOffsetStartMedium hasDot focusDotPositionStart focusDotOffsetSmall from "../sharedStyles/interactionStyles.css";
+  composes: boxOffsetStartLarge hasDot focusDotPositionStart focusDotOffsetSmall from "../sharedStyles/interactionStyles.css";
+  padding-left: 9px !important;
 }

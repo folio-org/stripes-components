@@ -134,7 +134,7 @@
  * Filter set header
  */
 .filterSetHeader {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartSmall from "../sharedStyles/interactionStyles.css";
   composes: header;
   border-radius: var(--radius 4px);
   min-height: var(--controlHeight 24px);
@@ -150,6 +150,10 @@
 
   &:focus {
     outline: none;
+  }
+
+  & .labelArea {
+    padding-left: 4px;
   }
 }
 
