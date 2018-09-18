@@ -146,7 +146,6 @@
   width: 100%;
   line-height: 120%;
   text-align: left;
-  color: var(--color-text-p2);
 
   &:focus {
     outline: none;
@@ -154,7 +153,12 @@
 
   & .labelArea {
     padding-left: 4px;
+    color: var(--color-text-p1);
   }
+}
+
+svg.filterSetHeaderIcon {
+  fill: var(--color-text-p2);
 }
 
 .clearButtonVisible {
