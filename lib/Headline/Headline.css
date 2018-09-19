@@ -42,31 +42,31 @@
  */
 
 .sizeXxsmall { /* default browser h6 proportion */
-  font-size: 0.67em;
+  font-size: 0.67rem;
 }
 
 .sizeXsmall { /* default browser h5 proportion */
-  font-size: 0.83em;
+  font-size: 0.83rem;
 }
 
 .sizeDefault { /* default browser h4 proportion */
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-.sizeSmall { /* default browser h3 proportion */
-  font-size: 1.17em;
+.sizeSmall {
+  font-size: 1rem;
 }
 
-.sizeMedium { /* default browser h2 proportion */
-  font-size: 1.5em;
+.sizeMedium {
+  font-size: 1.28rem;
 }
 
-.sizeLarge { /* default browser h1 proportion */
-  font-size: 2em;
+.sizeLarge {
+  font-size: 1.71rem;
 }
 
 .sizeXlarge {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 /**
