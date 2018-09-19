@@ -37,18 +37,20 @@
 
 /**
  * Size
+ * Follows HTML5 headline specs
+ * https://www.w3.org/TR/html5/rendering.html#sections-and-headings
  */
 
-.sizeSmall {
-  font-size: 14px;
+.sizeSmall { /* default browser h3 proportion */
+  font-size: 1.17rem;
 }
 
-.sizeMedium {
-  font-size: 18px;
+.sizeMedium { /* default browser h2 proportion */
+  font-size: 1.5rem;
 }
 
-.sizeLarge {
-  font-size: 24px;
+.sizeLarge { /* default browser h1 proportion */
+  font-size: 2rem;
 }
 
 /**
@@ -60,13 +62,13 @@
 }
 
 .marginSmall {
-  margin-bottom: 8px;
+  margin-bottom: 1em;
 }
 
 .marginMedium {
-  margin-bottom: 12px;
+  margin-bottom: 0.83em;
 }
 
 .marginLarge {
-  margin-bottom: 14px;
+  margin-bottom: 0.67em;
 }
