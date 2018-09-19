@@ -4,11 +4,6 @@
 
 @import "../variables";
 
-:root {
-  --input-horizontal-padding: 4px;
-  --input-vertical-padding: 8px;
-}
-
 /**
  * Input Group
  */
@@ -102,33 +97,6 @@
 }
 
 /**
- * Specific <input> style
- */
-input.input,
-.input input {
-  height: var(--control-height-small);
-  min-height: var(--control-height-small);
-  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
-}
-
-/**
- * Specific <select> style
- */
-select.input {
-  height: var(--control-height-small);
-  padding: 0 20px 0 var(--input-vertical-padding);
-  appearance: none;
-}
-
-/**
- * Sepcific <textarea> style
- */
-textarea.input {
-  min-height: var(--control-height-small);
-  padding: var(--input-horizontal-padding) var(--input-vertical-padding);
-}
-
-/**
  * Feedback block
  */
 
@@ -149,23 +117,4 @@ textarea.input {
 .feedbackWarning {
   composes: feedbackBlock;
   color: var(--warn);
-}
-
-/**
- * Wider screens
- */
-@media (--medium-up) {
-  input.input,
-  .input input {
-    height: var(--control-height);
-    min-height: var(--control-height);
-  }
-
-  select.input {
-    height: var(--control-height);
-  }
-
-  textarea.input {
-    min-height: var(--control-height);
-  }
 }

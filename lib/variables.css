@@ -29,6 +29,8 @@
   --gutter: 15px;
   --control-height-small: 44px;
   --control-height-touch: var(--control-height-small);
+  --input-horizontal-padding: 4px;
+  --input-vertical-padding: 8px;
 
   /**
    * Font-size

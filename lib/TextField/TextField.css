@@ -3,6 +3,12 @@
 .textField {
   position: relative;
   width: 100%;
+
+  & input {
+    height: var(--controlHeightSmall);
+    min-height: var(--controlHeightSmall);
+    padding: var(--input-horizontal-padding) var(--input-vertical-padding);
+  }
 }
 
 .inputGroup {
@@ -74,6 +80,11 @@
 }
 
 @media (--medium-up) {
+  .textField input {
+    height: var(--controlHeight);
+    min-height: var(--controlHeight);
+  }
+
   .controlGroup {
     height: var(--control-height);
   }
