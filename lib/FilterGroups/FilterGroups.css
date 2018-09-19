@@ -2,7 +2,7 @@
  * Filter Groups
 */
 
-.interactionStyles {
+.filterGroupLabelInteractionStyles {
   composes: boxOffsetStartLarge hasDot focusDotPositionStart focusDotOffsetSmall from "../sharedStyles/interactionStyles.css";
 }
 
