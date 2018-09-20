@@ -49,6 +49,7 @@ class FieldList {
     });
     return this;
   }
+
   ensureToInclude = (includedFields = []) => {
     includedFields.forEach((field) => {
       const index = this.list.indexOf(field);
