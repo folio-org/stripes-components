@@ -37,18 +37,36 @@
 
 /**
  * Size
+ * Follows HTML5 headline specs
+ * https://www.w3.org/TR/html5/rendering.html#sections-and-headings
  */
 
+.sizeXxsmall { /* default browser h6 proportion */
+  font-size: 0.67rem;
+}
+
+.sizeXsmall { /* default browser h5 proportion */
+  font-size: 0.83rem;
+}
+
+.sizeDefault { /* default browser h4 proportion */
+  font-size: 1rem;
+}
+
 .sizeSmall {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .sizeMedium {
-  font-size: 18px;
+  font-size: 1.28rem;
 }
 
 .sizeLarge {
-  font-size: 24px;
+  font-size: 1.71rem;
+}
+
+.sizeXlarge {
+  font-size: 2.5rem;
 }
 
 /**
@@ -59,14 +77,30 @@
   margin-bottom: 0;
 }
 
+.marginXxsmall {
+  margin-bottom: 2.33em;
+}
+
+.marginXsmall {
+  margin-bottom: 1.67em;
+}
+
+.marginDefault {
+  margin-bottom: 1.33em;
+}
+
 .marginSmall {
-  margin-bottom: 8px;
+  margin-bottom: 1.33em;
 }
 
 .marginMedium {
-  margin-bottom: 12px;
+  margin-bottom: 0.83em;
 }
 
 .marginLarge {
-  margin-bottom: 14px;
+  margin-bottom: 0.67em;
+}
+
+.marginXlarge {
+  margin-bottom: 0.5em;
 }

@@ -58,35 +58,6 @@ fieldset {
   padding: 0;
 }
 
-legend {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-h1 {
-  font-size: 1.9rem;
-}
-
-h2 {
-  font-size: 1.7rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.3rem;
-}
-
-h5 {
-  font-size: 1.1rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
-
 ul {
   margin: 0 0 14px;
 }
