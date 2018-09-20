@@ -35,25 +35,47 @@ const keyify = (obj, prefix = '') => Object.keys(obj).reduce((res, el) => {
   }
 }, []);
 
-// Returns the first list with the values of the second list omitted
-const omitFields = (allFields, excludedFields) => {
-  excludedFields.forEach((field) => {
-    const index = allFields.indexOf(field);
-    if (index !== -1) {
-      allFields.splice(index, 1);
-    }
-  });
-  return allFields;
-};
+class FieldList {
+  constructor(objectArray, onlyFields = []) {
+    this.list = onlyFields.length ? onlyFields : keyify(objectArray[0]);
+  }
 
-export default function exportToCsv(objectArray, excludedFields = []) {
+  omit = (excludedFields = []) => {
+    excludedFields.forEach((field) => {
+      const index = this.list.indexOf(field);
+      if (index !== -1) {
+        this.list.splice(index, 1);
+      }
+    });
+    return this;
+  }
+  ensureToInclude = (includedFields = []) => {
+    includedFields.forEach((field) => {
+      const index = this.list.indexOf(field);
+      if (index === -1) {
+        this.list.push(field);
+      }
+    });
+    return this;
+  }
+}
+export default function exportToCsv(objectArray, options) {
   if (!(objectArray && objectArray.length > 0)) {
     // console.debug('No data to export');
     return;
   }
+  const {
+    excludeFields,           // do not include these fields
+    explicitlyIncludeFields, // ensure to include these fields
+    onlyFields               // only use these fields
+  } = options;
 
-  const allFields = keyify(objectArray[0]);
-  const fields = omitFields(allFields, excludedFields);
+  // The default behavior is to use the keys on the first object as the list of fields
+
+  const fields = new FieldList(objectArray, onlyFields)
+    .omit(excludeFields)
+    .ensureToInclude(explicitlyIncludeFields).list;
+
   const parser = new Parser({ fields });
   const csv = parser.parse(objectArray);
   triggerDownload(csv);
