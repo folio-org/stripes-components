@@ -60,11 +60,16 @@ class FieldList {
     return this;
   }
 }
-export default function exportToCsv(objectArray, options) {
+export default function exportToCsv(objectArray, opts) {
   if (!(objectArray && objectArray.length > 0)) {
     // console.debug('No data to export');
     return;
   }
+  let options = opts;
+  if (opts.isArray) { // backwards-compatiblity
+    options = { excludeFields: opts };
+  }
+
   const {
     excludeFields,           // do not include these fields
     explicitlyIncludeFields, // ensure to include these fields
