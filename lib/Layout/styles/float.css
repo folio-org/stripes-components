@@ -2,12 +2,18 @@
  * Float
  */
 
-.right,
-[dir="rtl"] .left {
+.right {
   float: right;
 }
 
-.left,
 [dir="rtl"] .right {
   float: left;
+}
+
+.left {
+  float: left;
+}
+
+[dir="rtl"] .left {
+  float: right;
 }
