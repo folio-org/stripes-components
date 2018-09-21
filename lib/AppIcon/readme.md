@@ -45,16 +45,17 @@ AppIcon supports different ways of loading icons.
 ```
 
 ## Props
-Name | Type | Description
--- | -- | --
-app | string | The lowercased name of an app, e.g. "users" or "inventory". It will get the icon from metadata located in the stripes-object which should be available in React Context.
-alt | string | Adds an 'alt'-attribute on the img-tag.
-children | node | Add content next to the icon - e.g. a label
-className | string | For adding custom class to component
-iconKey | string | A specific icon-key for apps with multiple icons. Defaults to "app" which corresponds to the required default app-icon of an app.
-icon | object | Icon in form of an object
-size | string | Determines the size of the icon. (small, medium, large)
-src | string | Manually set the 'src'-attribute on the img-tag
-style | object | For adding custom style to component
-tag | string | Choose HTML-element (defaults to a span element)
-title | string | Adds a 'title'-attribute on the img-tag
+Name | Type | Description | default
+-- | -- | -- | --
+alt | string | Adds an 'alt'-attribute on the img-tag. | undefined
+app | string | The lowercased name of an app, e.g. "users" or "inventory". It will get the icon from metadata located in the stripes-object which should be available in React Context. Read more [here](https://github.com/folio-org/stripes-core/blob/master/doc/app-metadata.md#icons). | undefined
+children | node | Add content next to the icon - e.g. a label | undefined
+className | string | For adding custom class to component | undefined
+icon | object | Icon in form of an object. E.g. { src, alt, title } | undefined
+iconAriaHidden | bool | Applies aria-hidden to the icon element. Since `<AppIcon>`'s mostly are rendered in proximity of a label or inside an element with a label (e.g. a button), we set aria-hidden to true per default to avoid screen readers reading the alt/title attributes of the icon | true
+iconKey | string | A specific icon-key for apps with multiple icons. Defaults to "app" which corresponds to the required default app-icon of an app. | app
+size | string | Determines the size of the icon. (small, medium, large) | medium
+src | string | Manually set the 'src'-attribute on the img-tag | undefined
+style | object | For adding custom style to component | undefined
+tag | string | Changes the rendered root HTML-element | span
+title | string | Adds a 'title'-attribute on the img-tag | undefined
