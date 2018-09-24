@@ -55,6 +55,7 @@ strong {
 
 fieldset {
   border: none;
+  padding: 0;
 }
 
 legend {
@@ -137,11 +138,6 @@ button {
   float: right !important;
 }
 
-:global(body[dir="rtl"] .floatEnd),
-:global(html[dir="rtl"] .floatEnd) {
-  float: left !important;
-}
-
 :global(.sr-only) {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -152,4 +148,9 @@ button {
 
 :global(.tether-element) {
   z-index: 9999;
+}
+
+:global(body[dir="rtl"] .floatEnd),
+:global(html[dir="rtl"] .floatEnd) {
+  float: left !important;
 }

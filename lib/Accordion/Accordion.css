@@ -13,19 +13,11 @@
   padding-left: var(--gutter);
   width: calc(100% + (2 * var(--gutter)));
   background-color: var(--color-fill-disabled);
-
-  & .header {
-    opacity: 0.5;
-  }
 }
 
 /**
  * Header
  */
-
-.hasSeparator .headerWrapper {
-  border-top: 1px solid var(--color-border-p2);
-}
 
 .headerWrapper {
   width: 100%;
@@ -50,10 +42,18 @@
   }
 }
 
+.hasSeparator .headerWrapper {
+  border-top: 1px solid var(--color-border-p2);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.disabled .header {
+  opacity: 0.5;
 }
 
 /**
@@ -134,7 +134,7 @@
  * Filter set header
  */
 .filterSetHeader {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartSmall from "../sharedStyles/interactionStyles.css";
   composes: header;
   border-radius: var(--radius 4px);
   min-height: var(--controlHeight 24px);
@@ -146,11 +146,19 @@
   width: 100%;
   line-height: 120%;
   text-align: left;
-  color: var(--color-text-p2);
 
   &:focus {
     outline: none;
   }
+
+  & .labelArea {
+    padding-left: 4px;
+    color: var(--color-text-p1);
+  }
+}
+
+svg.filterSetHeaderIcon {
+  fill: var(--color-text-p2);
 }
 
 .clearButtonVisible {

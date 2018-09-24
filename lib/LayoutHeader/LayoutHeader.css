@@ -35,14 +35,14 @@
   padding: 4px 0;
 
   & button {
+    & :global .stripes__icon {
+      transition: fill 0.3s;
+    }
+
     &:hover {
       & :global .stripes__icon {
         fill: #333;
       }
-    }
-
-    & :global .stripes__icon {
-      transition: fill 0.3s;
     }
   }
 }

@@ -45,7 +45,12 @@
   letter-spacing: 0.4px;
   border-radius: 0;
 
-  &:focus {
+  &::-ms-clear {
+    display: none;
+  }
+
+  &:focus,
+  &.isFocused {
     border: 1px solid var(--primary);
     box-shadow: inset 0 0 0 2px rgba(37, 118, 195, 0.3);
   }
@@ -63,14 +68,10 @@
   }
 
   &:disabled,
-  &.disabled,
-  &.readOnly {
-    background-color: var(--color-fill-disabled);
-    color: var(--color-text-p2);
-  }
-
-  &::-ms-clear {
-    display: none;
+  &.readOnly,
+  &.isDisabled {
+    background-color: #ebebe4;
+    color: #777;
   }
 
   /**
@@ -103,7 +104,8 @@
 /**
  * Specific <input> style
  */
-input.input {
+input.input,
+.input input {
   height: var(--controlHeightSmall);
   min-height: var(--controlHeightSmall);
   padding: var(--input-horizontal-padding) var(--input-vertical-padding);
@@ -153,7 +155,8 @@ textarea.input {
  * Wider screens
  */
 @media (--mediumUp) {
-  input.input {
+  input.input,
+  .input input {
     height: var(--controlHeight);
     min-height: var(--controlHeight);
   }
