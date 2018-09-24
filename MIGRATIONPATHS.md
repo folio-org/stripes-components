@@ -14,6 +14,3 @@ Component/Util | New path
 `<Settings>` | `@folio/stripes-smart-components/lib/Settings`
 `<Pluggable>`  | `@folio/stripes-core/lib/Pluggable`
 `makeQueryFunction()` | `@folio/stripes-smart-components/lib/SearchAndSort/makeQueryFunction`
-
-
-
