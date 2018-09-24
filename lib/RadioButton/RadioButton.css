@@ -95,12 +95,16 @@
 /**
  * Feedback
  */
+.radioFeedback {
+  font-size: 12px;
+}
+
 .hasWarning {
   & .radioFeedback {
     color: var(--warn);
   }
 
-  & .labelCheck {
+  & .input {
     border-color: var(--warn);
   }
 }
@@ -110,11 +114,7 @@
     color: var(--error);
   }
 
-  & .labelCheck {
+  & .input {
     border-color: var(--error);
   }
-}
-
-.radioFeedback {
-  font-size: 12px;
 }
