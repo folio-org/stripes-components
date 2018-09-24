@@ -4,12 +4,20 @@
   border-radius: 999px;
   font-weight: 700;
   display: inline-block;
-  color: var(--color-text-p2);
   text-align: center;
 }
 
+/**
+ * Label
+ */
 .label {
   padding: 0 6px;
+  color: #fff;
+}
+
+/* Force prevent color from changing on default badge when inside button/anchor with :active styles */
+.default .label {
+  color: var(--color-text-p2) !important;
 }
 
 /**
@@ -17,17 +25,14 @@
  */
 .default {
   background-color: var(--bgHover);
-  color: var(--color-text-p2);
 }
 
 .red {
-  color: #fff;
   background-color: var(--error);
 }
 
 .primary {
   background-color: var(--primary);
-  color: #fff;
 }
 
 /**
