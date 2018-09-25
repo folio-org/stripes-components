@@ -1,16 +1,16 @@
 # Breaking Changes and Deprecations
 Change happens. We learn more, we find better ways to do things. We clean house and beautify API's, improve user experience, accessibility, and developer experience. 
-Through the RFC(Request for comment) process, modifications to the component library are proposed and agreed upon by the community of FOLIO developers. The outcome of this process is an iterative plan to accomplish the proposed goal. The changes are weighed against NFR's - not limited to maintainability, platform stability, testability, extent of migration effort - with breaking change as final resort.
+Through the Request for comment (RFC) process, modifications to the component library are proposed and agreed upon by the community of FOLIO developers. The outcome of this process is an iterative plan to accomplish the proposed goal. The changes are weighed against non-functional requirements's (NFR's) - not limited to maintainability, platform stability, testability, extent of migration effort - with breaking change as final resort.
 ## Break as softly as possible.
 Through adequate release planning and up-front migration development, we aim to facilitate platform stability and reduce development stress, providing adequate timelines for migration to new code.
 ## Semver
-We use the Semver versioning system where changes to the Major number(the first one) represent a present backwards incompatibility.
+We use the Semver versioning system where changes to the Major number (the first one) represent a present backwards incompatibility.
 Some examples of how we determine version number changes:
 * **Patch Version -** fully compatible bug fixes, minor improvements. ex: `3.0.9` to `3.0.10`.
 * **Minor Version -** new props, components, capabilities. ex: `3.0.10` to `3.1.0`.
 * **Major Version -** an incompatible change is present in the system. Removal of a component or component props with no co-existing replacement. ex: `3.1.0` to `4.0.0`.
 ## Console Warnings
-Whenever possible, the release of breaking changes is proceeded by console warnings. These may appear months prior to the actual breaking change, depending on the extent of migration effort.
+Whenever possible, the release of breaking changes is preceded by console warnings. These may appear months prior to the actual breaking change, depending on the extent of migration effort.
 ## Available migration
 The new ways of doing things should be available for developers at their announcement. These may exist as parallel release, or in updated branches.
 ### Parallel release
