@@ -73,3 +73,4 @@ export { default as FilterPane } from './lib/FilterPane';
 export { default as FilterGroups } from './lib/FilterGroups';
 export { default as FilterControlGroup } from './lib/FilterControlGroup';
 export { default as FilterPaneSearch } from './lib/FilterPaneSearch';
+export { default as ExportCsv } from './lib/ExportCsv';
