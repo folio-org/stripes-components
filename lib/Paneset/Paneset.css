@@ -3,18 +3,14 @@
 .paneset {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
   display: block;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
   will-change: transform;
   overflow: hidden;
 
   & .paneset,
   &.nested {
     position: relative;
-    flex-grow: 2;
   }
 
   &.static {
@@ -25,6 +21,8 @@
 @media (--mediumUp) {
   .paneset {
     display: flex;
-    position: absolute;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
   }
 }
