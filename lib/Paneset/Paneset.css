@@ -4,20 +4,25 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
+  display: block;
   will-change: transform;
   overflow: hidden;
 
   & .paneset,
   &.nested {
     position: relative;
-    flex-grow: 2;
   }
 
   &.static {
     position: static;
+  }
+}
+
+@media (--mediumUp) {
+  .paneset {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
   }
 }
