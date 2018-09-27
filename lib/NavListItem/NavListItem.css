@@ -3,11 +3,6 @@
  */
 @import '../variables.css';
 
-/* if stripped styles is activated in NavList */
-.stripped .NavListItem:nth-child(odd):not(.isActive):not(:hover):not(:active) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
 .NavListItem {
   composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
   display: block;
@@ -44,4 +39,10 @@
 
 .NavListItemInner {
   display: flex;
+}
+
+/* if stripped styles is activated in NavList */
+.stripped .NavListItem:nth-child(odd):not(.isActive):not(:hover):not(:active),
+.NavListItem.odd:not(.isActive):not(:hover):not(:active) {
+  background-color: var(--color-fill-table-row-odd);
 }

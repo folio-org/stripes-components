@@ -16,9 +16,6 @@ const postCssMediaMinMax = require('postcss-media-minmax');
 const postCssColorFunction = require('postcss-color-function');
 
 module.exports = {
-  entry: [
-    'typeface-source-sans-pro'
-  ],
   plugins: [
     // your custom plugins
   ],
@@ -88,7 +85,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff2?)$/,
+        test: /\.(eot|ttf|woff|woff2?)$/,
         loader: 'file-loader?name=fonts/[name].[hash].[ext]',
       }
     ],

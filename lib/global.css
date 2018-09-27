@@ -34,7 +34,7 @@ html {
     メイリオ    Meiryo,
     "ＭＳ Ｐゴシック",
     sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-text);
   letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
@@ -55,11 +55,7 @@ strong {
 
 fieldset {
   border: none;
-}
-
-legend {
-  font-size: 1.3em;
-  font-weight: bold;
+  padding: 0;
 }
 
 h1 {
@@ -137,11 +133,6 @@ button {
   float: right !important;
 }
 
-:global(body[dir="rtl"] .floatEnd),
-:global(html[dir="rtl"] .floatEnd) {
-  float: left !important;
-}
-
 :global(.sr-only) {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -152,4 +143,9 @@ button {
 
 :global(.tether-element) {
   z-index: 9999;
+}
+
+:global(body[dir="rtl"] .floatEnd),
+:global(html[dir="rtl"] .floatEnd) {
+  float: left !important;
 }

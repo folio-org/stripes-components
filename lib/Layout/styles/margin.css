@@ -1,0 +1,56 @@
+/**
+ * Margin
+ */
+
+/** Auto */
+.margin-both-auto,
+.centered {
+  margin: auto;
+}
+
+.margin-start-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+[dir="rtl"] .margin-start-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.margin-end-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+[dir="rtl"] .margin-end-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Gutter */
+.margin-start-gutter {
+  margin-left: var(--gutter);
+}
+
+.margin-end-gutter {
+  margin-right: var(--gutter);
+}
+
+.margin-both-gutter {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+}
+
+.marginTopHalf {
+  margin-top: 0.5rem;
+}
+
+.marginTop1 {
+  margin-top: 1rem;
+}
+
+/* class for aligning buttons or other non-labeled elements with labeled text inputs, selects, etc */
+.marginTopLabelSpacer {
+  margin-top: 21px;
+}
