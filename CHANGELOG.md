@@ -7,6 +7,7 @@
 * Change global base font size from 14px to 16px
 * Expose legend as tag for `<Headline>`
 * Adjust headline sizes
+* Expose `<Headline>` ref
 
 ## [3.1.0](https://github.com/folio-org/stripes-components/tree/v3.1.0) (2018-09-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.0.0...v3.1.0)
