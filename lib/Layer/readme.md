@@ -25,9 +25,9 @@ Name | type | description | default | required
 `isOpen` | bool | Control rendering of the layer's child components within a div with role "dialog" (A full-module modal). | | required
 `container` | node | DOM element or component where the rendered elements should reside. Appends content to the root of the ascendant `Paneset` by default. | |
 `contentLabel` | string | applied as the `aria-label` attribute on the `<Layer>`'s containing div. Warns if not applied. | | 
-afterClose | func | Callback for after the `<Layer>` has closed. Handle focus management for accessible code here! | `()=>{}` | 
-afterOpen | func | Callback for after the `<Layer>` has opened. | `()=>{}` | 
-enforceFocus | bool | Whether or not the modal should trap focus within itself (best for accessibility) | `true` | 
+`afterClose` | func | Callback for after the `<Layer>` has closed. Handle focus management for accessible code here! | `()=>{}` | 
+`afterOpen` | func | Callback for after the `<Layer>` has opened. | `()=>{}` | 
+`enforceFocus` | bool | Whether or not the modal should trap focus within itself (best for accessibility) | `true` | 
 
 ### A11y practices
 The `<Layer>` is very similar to a modal dialog and focus management should be accounted for accordingly. When opened, focus will move to the rendered content div (unless a child element has already assumed focus via `autoFocus` or some other means.) Focus should be managed appropriately by the application when the `<Layer>` is closed. The `afterClose` prop can be used for this.
