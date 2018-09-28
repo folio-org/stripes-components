@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 3.2.0 (IN PROGRESS)
+## [3.2.0](https://github.com/folio-org/stripes-components/tree/v3.2.0) (2018-09-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.1.0...v3.2.0)
 
 * Update `stripes-form` dependency to v1.0.0
 * Fix paneset CSS behavior on narrow screens
