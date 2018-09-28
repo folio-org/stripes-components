@@ -27,6 +27,7 @@
   position: relative;
   line-height: 120%;
   display: flex;
+  align-items: baseline;
   min-height: 24px;
   cursor: pointer;
   flex-grow: 2;
@@ -60,7 +61,6 @@
   border-radius: 999px;
   background: #fff;
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
 .labelPseudo::after {
