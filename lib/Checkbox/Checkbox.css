@@ -44,6 +44,7 @@
   padding: 4px 5px;
   min-height: var(--controlHeight);
   display: flex;
+  align-items: baseline;
   cursor: pointer;
   flex-grow: 2;
   position: relative;
@@ -102,7 +103,6 @@ input.checkboxInput {
   display: flex;
   overflow: hidden;
   flex-shrink: 0;
-  margin-top: 2px;
 
   & svg {
     opacity: 0;
