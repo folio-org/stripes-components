@@ -8,6 +8,5 @@ We've provided console warnings for these items. If you've used these in your mo
 Component/Util | New path
 -- | --
 `<AddressList>`, `<AddressEditList>`, `<EditableList>`, `<Settings>`  | `import { ... } from '@folio/stripes-smart-components'`
-`<EmbeddedAddressForm>` | `@folio/stripes-smart-components/AddressFieldGroup/AddressEdit/EmbeddedAddressForm` 
 `<Pluggable>`  | `@folio/stripes-core/lib/Pluggable`
 `makeQueryFunction()` | `import { makeQueryFunction } from '@folio/stripes-smart-components'`
