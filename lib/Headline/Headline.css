@@ -10,8 +10,8 @@
 
 .headline {
   margin-top: 0;
-  color: var(--color-text);
   font-weight: var(--text-weight-headline);
+  line-height: 1.4;
 
   /* Faded */
   &.isFaded {
@@ -41,15 +41,31 @@
  * https://www.w3.org/TR/html5/rendering.html#sections-and-headings
  */
 
-.sizeSmall { /* default browser h3 proportion */
+.sizeXxSmall { /* default browser h6 proportion */
+  font-size: 0.67rem;
+}
+
+.sizeXSmall {
+  font-size: 0.75rem;
+}
+
+.sizeSmall { /* default browser h5 proportion */
+  font-size: 0.83rem;
+}
+
+.sizeMedium { /* default browser h4 proportion */
+  font-size: 1rem;
+}
+
+.sizeLarge { /* default browser h3 proportion */
   font-size: 1.17rem;
 }
 
-.sizeMedium { /* default browser h2 proportion */
-  font-size: 1.5rem;
+.sizeXLarge { /* default browser h2 proportion */
+  font-size: 1.50rem;
 }
 
-.sizeLarge { /* default browser h1 proportion */
+.sizeXxLarge { /* default browser h1 proportion */
   font-size: 2rem;
 }
 
@@ -61,14 +77,30 @@
   margin-bottom: 0;
 }
 
+.marginXxSmall {
+  margin-bottom: 2.33em;
+}
+
+.marginXSmall {
+  margin-bottom: 2em;
+}
+
 .marginSmall {
-  margin-bottom: 1em;
+  margin-bottom: 1.67em;
 }
 
 .marginMedium {
-  margin-bottom: 0.83em;
+  margin-bottom: 1.33em;
 }
 
 .marginLarge {
+  margin-bottom: 1em;
+}
+
+.marginXLarge {
+  margin-bottom: 0.83em;
+}
+
+.marginXxLarge {
   margin-bottom: 0.67em;
 }
