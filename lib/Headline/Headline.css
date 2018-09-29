@@ -11,7 +11,7 @@
 .headline {
   margin-top: 0;
   font-weight: var(--text-weight-headline);
-  line-height: 1.4;
+  line-height: var(--lineHeight);
 
   /* Faded */
   &.isFaded {
@@ -42,31 +42,31 @@
  */
 
 .sizeXxSmall { /* default browser h6 proportion */
-  font-size: 0.67rem;
+  font-size: var(--xxSmallFontSize);
 }
 
 .sizeXSmall {
-  font-size: 0.75rem;
+  font-size: var(--xSmallFontSize);
 }
 
 .sizeSmall { /* default browser h5 proportion */
-  font-size: 0.83rem;
+  font-size: var(--smallFontSize);
 }
 
 .sizeMedium { /* default browser h4 proportion */
-  font-size: 1rem;
+  font-size: var(--mediumFontSize);
 }
 
 .sizeLarge { /* default browser h3 proportion */
-  font-size: 1.17rem;
+  font-size: var(--largeFontSize);
 }
 
 .sizeXLarge { /* default browser h2 proportion */
-  font-size: 1.50rem;
+  font-size: var(--xLargeFontSize);
 }
 
 .sizeXxLarge { /* default browser h1 proportion */
-  font-size: 2rem;
+  font-size: var(--xxLargeFontSize);
 }
 
 /**
