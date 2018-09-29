@@ -33,6 +33,7 @@
   flex-grow: 2;
   color: var(--color-text-p2);
   border-radius: var(--radius);
+  font-size: var(--smallFontSize);
 
   &.error {
     color: var(--error);

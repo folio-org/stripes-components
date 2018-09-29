@@ -248,7 +248,7 @@
     max-height: 16rem;
     height: 16rem;
     color: #fff;
-    font-size: 2rem;
+    font-size: var(--xxLargeFontSize);
     border-radius: 0;
   }
 }

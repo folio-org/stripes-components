@@ -40,14 +40,14 @@
  */
 
 .small {
-  font-size: 10px;
+  font-size: var(--xxSmallFontSize);
   height: 18px;
   min-width: 18px;
   line-height: 18px;
 }
 
 .medium {
-  font-size: 14px;
+  font-size: var(--smallFontSize);
   height: 22px;
   min-width: 22px;
   line-height: 22px;

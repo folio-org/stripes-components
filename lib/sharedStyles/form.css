@@ -21,7 +21,9 @@
  */
 .label {
   display: block;
-  margin-bottom: 6px;
+  font-size: var(--smallFontSize);
+  line-height: var(--lineHeight);
+  margin-bottom: 0.5em;
   color: var(--color-text);
 
   &.required::after {
@@ -132,7 +134,7 @@ textarea.input {
 
 .feedbackBlock {
   padding: 0 var(--input-vertical-padding);
-  font-size: 0.9em;
+  font-size: var(--smallFontSize);
 
   &:last-child {
     margin-bottom: var(--controlMarginBottom);

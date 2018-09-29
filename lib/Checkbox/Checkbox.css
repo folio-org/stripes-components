@@ -49,6 +49,7 @@
   flex-grow: 2;
   position: relative;
   border-radius: var(--radius);
+  font-size: var(--smallFontSize);
 
   &.disabledLabel {
     opacity: 0.65;
@@ -79,7 +80,7 @@
  * Checkbox feedback
  */
 .checkboxFeedback {
-  font-size: 12px;
+  font-size: var(--xSmallFontSize);
 }
 
 /**

@@ -3,6 +3,7 @@
 ## 3.3.0 (IN PROGRESS)
 
 * Use input type="search" for `<SearchField>`
+* Create wider type stack
 
 ## [3.2.0](https://github.com/folio-org/stripes-components/tree/v3.2.0) (2018-09-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.1.0...v3.2.0)
