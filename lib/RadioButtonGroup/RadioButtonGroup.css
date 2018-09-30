@@ -6,7 +6,7 @@
 
 .groupLabel {
   display: block;
-  font-size: var(--mediumFontSize);
+  font-size: var(--smallFontSize);
   font-weight: var(--text-weight-basis);
   color: var(--color-text);
 

@@ -49,7 +49,7 @@
   flex-grow: 2;
   position: relative;
   border-radius: var(--radius);
-  font-size: var(--smallFontSize);
+  font-size: var(--mediumFontSize);
 
   &.disabledLabel {
     opacity: 0.65;
