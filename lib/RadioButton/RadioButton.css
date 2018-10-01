@@ -32,7 +32,7 @@
   cursor: pointer;
   flex-grow: 2;
   border-radius: var(--radius);
-  font-size: var(--mediumFontSize);
+  font-size: var(--font-size-medium);
 
   &.error {
     color: var(--error);

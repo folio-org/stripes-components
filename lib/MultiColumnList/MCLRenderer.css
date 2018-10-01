@@ -88,7 +88,7 @@
   padding: 0.5em;
   font-weight: 600;
   color: var(--color-text-p2);
-  font-size: var(--smallFontSize);
+  font-size: var(--font-size-small);
 
   &.clickable {
     cursor: pointer;

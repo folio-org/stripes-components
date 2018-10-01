@@ -56,7 +56,7 @@
   overflow: auto;
   width: 100%;
   max-height: calc(100% - 44px - 2rem);
-  line-height: var(--lineHeight);
+  line-height: var(--line-height);
 }
 
 .modalControls {

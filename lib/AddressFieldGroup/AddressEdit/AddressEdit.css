@@ -8,7 +8,7 @@
 .legend {
   display: block;
   width: 100%;
-  font-size: var(--xLargeFontSize);
+  font-size: var(--font-size-x-large);
   color: #333;
   border: 0;
   margin-bottom: 6px;
@@ -17,7 +17,7 @@
 
 .subLegend {
   composes: legend;
-  font-size: var(--largeFontSize);
+  font-size: var(--font-size-large);
   color: #777;
 }
 
@@ -107,7 +107,7 @@
 .primaryToggle {
   padding: 4px 8px;
   color: #555;
-  font-size: var(--xSmallFontSize);
+  font-size: var(--font-size-x-small);
   cursor: pointer;
   margin-bottom: 0;
 

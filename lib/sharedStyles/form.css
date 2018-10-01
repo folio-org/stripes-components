@@ -21,8 +21,8 @@
  */
 .label {
   display: block;
-  font-size: var(--smallFontSize);
-  line-height: var(--lineHeight);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height);
   margin-bottom: 0.5em;
   color: var(--color-text);
 
@@ -134,7 +134,7 @@ textarea.input {
 
 .feedbackBlock {
   padding: 0 var(--input-vertical-padding);
-  font-size: var(--smallFontSize);
+  font-size: var(--font-size-small);
 
   &:last-child {
     margin-bottom: var(--controlMarginBottom);

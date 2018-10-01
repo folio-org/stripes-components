@@ -35,14 +35,14 @@
    * Size ratios from Fonts Module Level 3
    * https://www.w3.org/TR/css-fonts-3/#propdef-font-size
    */
-  --lineHeight: 1.5;
-  --xxSmallFontSize: 0.67rem;
-  --xSmallFontSize: 0.75rem;
-  --smallFontSize: 0.83rem;
-  --mediumFontSize: 1rem;
-  --largeFontSize: 1.17rem;
-  --xLargeFontSize: 1.5rem;
-  --xxLargeFontSize: 2rem;
+  --line-height: 1.5;
+  --font-size-xx-small: 0.67rem;
+  --font-size-x-small: 0.75rem;
+  --font-size-small: 0.83rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.17rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-xx-large: 2rem;
 
   /**
    * Font-weights

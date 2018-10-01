@@ -27,6 +27,6 @@
 }
 
 .iconGridItem p {
-  font-size: var(--xSmallFontSize);
+  font-size: var(--font-size-x-small);
   margin-top: 6px;
 }
