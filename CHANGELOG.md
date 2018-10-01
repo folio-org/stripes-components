@@ -1,10 +1,12 @@
 # Change history for stripes-components
 
-## 3.3.0 (IN PROGRESS)
+## [3.3.0](https://github.com/folio-org/stripes-components/tree/v3.3.0) (2018-10-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.2.0...v3.3.0)
 
 * Use input type="search" for `<SearchField>`
 * Create wider type stack
 * Add padding to accordion content
+* Layer focus management
 
 ## [3.2.0](https://github.com/folio-org/stripes-components/tree/v3.2.0) (2018-09-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.1.0...v3.2.0)
