@@ -73,7 +73,7 @@
 .content {
   max-height: 0; /* hidden */
   overflow: hidden;
-  padding: 0.5em 0 1em 1.5em;
+  margin: 0.5em 0 1em 1.5em;
   transition: max-height 0.25s ease;
 
   &.expanded {
