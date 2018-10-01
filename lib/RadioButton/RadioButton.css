@@ -31,8 +31,8 @@
   min-height: 24px;
   cursor: pointer;
   flex-grow: 2;
-  color: var(--color-text-p2);
   border-radius: var(--radius);
+  font-size: var(--font-size-medium);
 
   &.error {
     color: var(--error);

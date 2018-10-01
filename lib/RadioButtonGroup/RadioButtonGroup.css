@@ -6,7 +6,7 @@
 
 .groupLabel {
   display: block;
-  font-size: 14px;
+  font-size: var(--font-size-small);
   font-weight: var(--text-weight-basis);
   color: var(--color-text);
 
@@ -24,7 +24,7 @@ legend.groupLabel {
 
 .groupFeedback {
   padding: 0 0.4rem;
-  font-size: 0.8rem;
+  font-size: var(--font-size-x-small);
 
   &:last-child {
     margin-bottom: var(--controlMarginBottom);

@@ -5,6 +5,8 @@
   font-weight: var(--text-weight-basis);
   margin-bottom: 2px;
   color: var(--color-text-p2);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height);
 }
 
 .kvRoot {

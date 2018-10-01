@@ -83,6 +83,7 @@
 .selectedMonth {
   display: block;
   text-align: center;
+  font-size: var(--font-size-small);
 }
 
 .nav {
@@ -103,6 +104,6 @@
 }
 
 .weekday {
-  font-size: 0.9rem;
+  font-size: var(--font-size-medium);
   text-align: center;
 }

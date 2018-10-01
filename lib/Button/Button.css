@@ -34,6 +34,7 @@
   box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
   opacity: 1;
   font-weight: var(--text-weight-button);
+  font-size: var(--font-size-small);
 
   &.slim {
     padding: 5px 2px;
@@ -248,7 +249,7 @@
     max-height: 16rem;
     height: 16rem;
     color: #fff;
-    font-size: 2rem;
+    font-size: var(--font-size-xx-large);
     border-radius: 0;
   }
 }

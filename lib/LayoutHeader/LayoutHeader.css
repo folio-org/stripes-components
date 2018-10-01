@@ -9,24 +9,27 @@
   min-height: 34px;
 
   & h1 {
-    font-size: 1.3rem;
+    font-size: var(--font-size-xx-large);
   }
 
   & h2 {
-    font-size: 1.2 rem;
+    font-size: var(--font-size-x-large);
   }
 
   & h3 {
-    font-size: 1rem;
+    font-size: var(--font-size-large);
   }
 
   & h4 {
-    font-size: 0.9rem;
+    font-size: var(--font-size-medium);
   }
 
-  & h5,
+  & h5 {
+    font-size: var(--font-size-small);
+  }
+
   & h6 {
-    font-size: 0.8rem;
+    font-size: var(--font-size-x-small);
   }
 }
 

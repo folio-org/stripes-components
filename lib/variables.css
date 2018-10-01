@@ -23,24 +23,26 @@
   --danger: #900;
   --warn: #e27c3e;
   --success: #070;
-  --controlMarginBottom: 12px;
+  --controlMarginBottom: 1rem;
   --controlHeight: 24px;
   --radius: 6px;
-  --gutter: 15px;
+  --gutter: 1rem;
   --controlHeightSmall: 44px;
   --controlHeightTouch: var(--controlHeightSmall);
 
   /**
-   * Deprecated
+   * Font-size
+   * Size ratios from Fonts Module Level 3
+   * https://www.w3.org/TR/css-fonts-3/#propdef-font-size
    */
-  --bodyColor: var(--color-text);
-  --subLabelColor: var(--color-text-p2);
-  --labelColor: var(--color-text-p2);
-  --inputBorderColor: var(--color-border-p2);
-  --minor-divider-color: var(--color-border-p2);
-  --major-padding: var(--gutter);
-  --linkColor: var(--color-link);
-  --linkColorVisited: var(--color-link-visited);
+  --line-height: 1.5;
+  --font-size-xx-small: 0.67rem;
+  --font-size-x-small: 0.75rem;
+  --font-size-small: 0.83rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.17rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-xx-large: 2rem;
 
   /**
    * Font-weights
@@ -54,6 +56,18 @@
   --text-weight-headline: calc(var(--text-weight-headline-basis) + ( var(--text-weight-headline-addition-factor) * var(--text-weights-are-bolder)));
   --text-weight-button: var(--text-weight);
   --text-weight-button-primary: calc(var(--text-weight-headline-basis) + ( var(--text-weight-headline-addition-factor) * var(--text-weights-are-bolder)));
+
+  /**
+   * Deprecated
+   */
+  --bodyColor: var(--color-text);
+  --subLabelColor: var(--color-text-p2);
+  --labelColor: var(--color-text-p2);
+  --inputBorderColor: var(--color-border-p2);
+  --minor-divider-color: var(--color-border-p2);
+  --major-padding: var(--gutter);
+  --linkColor: var(--color-link);
+  --linkColorVisited: var(--color-link-visited);
 }
 
 /* Lean on min-width queries to create mobile-first CSS. */

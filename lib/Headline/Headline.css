@@ -10,8 +10,8 @@
 
 .headline {
   margin-top: 0;
-  color: var(--color-text);
   font-weight: var(--text-weight-headline);
+  line-height: var(--line-height);
 
   /* Faded */
   &.isFaded {
@@ -41,16 +41,32 @@
  * https://www.w3.org/TR/html5/rendering.html#sections-and-headings
  */
 
-.sizeSmall { /* default browser h3 proportion */
-  font-size: 1.17rem;
+.sizeXxSmall { /* default browser h6 proportion */
+  font-size: var(--font-size-xx-small);
 }
 
-.sizeMedium { /* default browser h2 proportion */
-  font-size: 1.5rem;
+.sizeXSmall {
+  font-size: var(--font-size-x-small);
 }
 
-.sizeLarge { /* default browser h1 proportion */
-  font-size: 2rem;
+.sizeSmall { /* default browser h5 proportion */
+  font-size: var(--font-size-small);
+}
+
+.sizeMedium { /* default browser h4 proportion */
+  font-size: var(--font-size-medium);
+}
+
+.sizeLarge { /* default browser h3 proportion */
+  font-size: var(--font-size-large);
+}
+
+.sizeXLarge { /* default browser h2 proportion */
+  font-size: var(--font-size-x-large);
+}
+
+.sizeXxLarge { /* default browser h1 proportion */
+  font-size: var(--font-size-xx-large);
 }
 
 /**
@@ -61,14 +77,30 @@
   margin-bottom: 0;
 }
 
+.marginXxSmall {
+  margin-bottom: 2.33em;
+}
+
+.marginXSmall {
+  margin-bottom: 2em;
+}
+
 .marginSmall {
-  margin-bottom: 1em;
+  margin-bottom: 1.67em;
 }
 
 .marginMedium {
-  margin-bottom: 0.83em;
+  margin-bottom: 1.33em;
 }
 
 .marginLarge {
+  margin-bottom: 1em;
+}
+
+.marginXLarge {
+  margin-bottom: 0.83em;
+}
+
+.marginXxLarge {
   margin-bottom: 0.67em;
 }

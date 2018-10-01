@@ -64,7 +64,7 @@
 
 /* Pane title */
 .paneTitle {
-  font-size: inherit;
+  font-size: var(--font-size-small);
   font-weight: 600;
   align-items: center;
   letter-spacing: 0.04em;
@@ -79,7 +79,7 @@
 /* Pane sub */
 .paneSub {
   color: var(--color-text-p2);
-  font-size: 11px;
+  font-size: var(--font-size-x-small);
   line-height: 1.2;
 }
 
