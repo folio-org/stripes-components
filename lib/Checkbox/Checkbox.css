@@ -42,7 +42,7 @@
 .checkboxLabel {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   padding: 4px 5px;
-  min-height: var(--controlHeight);
+  min-height: var(--control-height);
   display: flex;
   align-items: baseline;
   cursor: pointer;

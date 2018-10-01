@@ -14,6 +14,6 @@
 
 .addressItemContent {
   padding: 14px;
-  background-color: color(var(--bg) blend(var(--bgHover) 20%));
+  background-color: color(var(--bg) blend(var(--bg-hover) 20%));
   width: 100%;
 }

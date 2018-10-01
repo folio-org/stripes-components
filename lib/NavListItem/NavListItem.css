@@ -8,15 +8,15 @@
   display: block;
   width: 100%;
   padding: 5px 10px;
-  color: var(--bodyColor);
+  color: var(--body-color);
   border-radius: var(--radius);
-  min-height: var(--controlHeight);
+  min-height: var(--control-height);
   text-align: left;
   outline: 0;
 
   /* for anchor tags */
   &:visited {
-    color: var(--bodyColor);
+    color: var(--body-color);
   }
 
   &.isActive {

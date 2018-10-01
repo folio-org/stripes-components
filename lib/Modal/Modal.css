@@ -89,7 +89,7 @@
   transition: opacity 0.3s;
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .small {
     max-width: 550px;
   }
@@ -100,13 +100,13 @@
   }
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .medium {
     max-width: 750px;
   }
 }
 
-@media (--largeUp) {
+@media (--large-up) {
   .large {
     max-width: 1100px;
   }

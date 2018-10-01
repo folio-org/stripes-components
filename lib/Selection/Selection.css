@@ -30,7 +30,7 @@
 }
 
 .selectionControl {
-  height: var(--controlHeight);
+  height: var(--control-height);
   padding: 0 8px;
   width: 100%;
   display: flex;
@@ -164,7 +164,7 @@
   width: 100%;
   border-width: 0;
   padding: 2px 4px;
-  height: var(--controlHeight);
+  height: var(--control-height);
 }
 
 .selectionMultiSelected {

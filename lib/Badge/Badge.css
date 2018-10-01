@@ -24,7 +24,7 @@
  * Colors
  */
 .default {
-  background-color: var(--bgHover);
+  background-color: var(--bg-hover);
 }
 
 .red {
