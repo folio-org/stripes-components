@@ -18,7 +18,7 @@
   }
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .paneset {
     display: flex;
     flex-direction: row;

@@ -38,13 +38,13 @@
   }
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .DropdownMenuTether {
     min-width: 40vw;
   }
 }
 
-@media (--largeUp) {
+@media (--large-up) {
   .DropdownMenuTether {
     min-width: 20vw;
   }

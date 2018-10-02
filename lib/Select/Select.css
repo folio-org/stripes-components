@@ -27,7 +27,7 @@
   pointer-events: none;
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .selectIcon {
     top: 0;
   }

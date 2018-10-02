@@ -72,14 +72,14 @@ It is subject to change.
 ### Media Queries
 `stripes-components` provides [pre-set breakpoints](../lib/variables.css) that you can use to adjust styles at different browser window widths.
 ```
-@media (--mediumUp) {
+@media (--medium-up) {
   .button {
     height: 2em;
   }
 }
 ```
 
-Use `min-width` breakpoints like `smallUp`, `mediumUp`, and `largeUp` when possible. There are `max-width` breakpoints available, but the cases for their use should be rare. Leaning on `min-width` promotes a mobile-first CSS workflow, where the narrowest screen size is the default. Layout can gradually be added as the width increases.
+Use `min-width` breakpoints like `--small-up`, `--medium-up`, and `--large-up` when possible. There are `max-width` breakpoints available, but the cases for their use should be rare. Leaning on `min-width` promotes a mobile-first CSS workflow, where the narrowest screen size is the default. Layout can gradually be added as the width increases.
 
 This:
 ```
