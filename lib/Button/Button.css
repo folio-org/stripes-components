@@ -13,7 +13,7 @@
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   padding: 0 10px;
-  height: var(--controlHeightSmall);
+  height: var(--control-height-small);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
@@ -23,7 +23,7 @@
   background-color: transparent;
   border: transparent;
   margin: 0 0 var(--gutter);
-  max-height: var(--controlHeightSmall);
+  max-height: var(--control-height-small);
   white-space: nowrap;
   line-height: 100%;
   display: inline-flex;
@@ -133,7 +133,7 @@
 
     &:hover,
     &:focus {
-      background-color: var(--bgHover);
+      background-color: var(--bg-hover);
       outline: none;
     }
   }
@@ -146,8 +146,8 @@
     background-color: transparent;
     border: 1px solid transparent;
     margin: 0;
-    max-height: var(--controlHeightTouch);
-    height: var(--controlHeightTouch);
+    max-height: var(--control-height-touch);
+    height: var(--control-height-touch);
     border-radius: 0;
     padding: 8px;
 
@@ -159,7 +159,7 @@
       &:focus,
       &:hover {
         outline: none;
-        border-bottom: 4px solid var(--bgHover);
+        border-bottom: 4px solid var(--bg-hover);
       }
 
       &.selected {
@@ -225,7 +225,7 @@
   &.fieldControl {
     background-color: transparent;
     margin: 0;
-    height: var(--controlHeight);
+    height: var(--control-height);
     padding: 0;
   }
 
@@ -267,9 +267,9 @@
   }
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .button {
-    height: var(--controlHeight);
-    max-height: var(--controlHeight);
+    height: var(--control-height);
+    max-height: var(--control-height);
   }
 }

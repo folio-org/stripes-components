@@ -37,15 +37,15 @@
  */
 
 .medium {
-  width: var(--controlHeightTouch);
-  height: var(--controlHeightTouch);
-  min-width: var(--controlHeightTouch);
+  width: var(--control-height-touch);
+  height: var(--control-height-touch);
+  min-width: var(--control-height-touch);
   padding: 0 10px;
 }
 
 .small {
-  width: var(--controlHeight);
-  height: var(--controlHeight);
-  min-width: var(--controlHeight);
+  width: var(--control-height);
+  height: var(--control-height);
+  min-width: var(--control-height);
   padding: 0 5px;
 }

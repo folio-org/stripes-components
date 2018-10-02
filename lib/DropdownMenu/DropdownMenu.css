@@ -25,13 +25,13 @@
   }
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .DropdownMenu {
     min-width: 40vw;
   }
 }
 
-@media (--largeUp) {
+@media (--large-up) {
   .DropdownMenu {
     min-width: 20vw;
   }

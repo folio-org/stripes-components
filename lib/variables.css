@@ -16,19 +16,19 @@
   --color-fill-active: var(--primary);
   --shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.24);
   --bg: #fcfcfc;
-  --bgHover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
+  --bg-hover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
   --primary: #2b75bb;
   --secondary: #999;
   --error: #900;
   --danger: #900;
   --warn: #e27c3e;
   --success: #070;
-  --controlMarginBottom: 1rem;
-  --controlHeight: 24px;
+  --control-margin-bottom: 12px;
+  --control-height: 24px;
   --radius: 6px;
-  --gutter: 1rem;
-  --controlHeightSmall: 44px;
-  --controlHeightTouch: var(--controlHeightSmall);
+  --gutter: 15px;
+  --control-height-small: 44px;
+  --control-height-touch: var(--control-height-small);
 
   /**
    * Font-size
@@ -60,26 +60,26 @@
   /**
    * Deprecated
    */
-  --bodyColor: var(--color-text);
-  --subLabelColor: var(--color-text-p2);
-  --labelColor: var(--color-text-p2);
-  --inputBorderColor: var(--color-border-p2);
+  --body-color: var(--color-text);
+  --sub-label-color: var(--color-text-p2);
+  --label-color: var(--color-text-p2);
+  --input-border-color: var(--color-border-p2);
   --minor-divider-color: var(--color-border-p2);
   --major-padding: var(--gutter);
-  --linkColor: var(--color-link);
-  --linkColorVisited: var(--color-link-visited);
+  --link-color: var(--color-link);
+  --link-color-visited: var(--color-link-visited);
 }
 
 /* Lean on min-width queries to create mobile-first CSS. */
-@custom-media --smallUp (min-width: 321px);
-@custom-media --mediumUp (min-width: 641px);
-@custom-media --largeUp (min-width: 1025px);
-@custom-media --xlargeUp (min-width: 1441px);
-@custom-media --xxlargeUp (min-width: 1921px);
+@custom-media --small-up (min-width: 321px);
+@custom-media --medium-up (min-width: 641px);
+@custom-media --large-up (min-width: 1025px);
+@custom-media --x-large-up (min-width: 1441px);
+@custom-media --xx-large-up (min-width: 1921px);
 
 /* Use these max-width queries as infrequently as possible. */
 @custom-media --small (max-width: 640px);
-@custom-media --mediumDown (max-width: 1024px);
+@custom-media --medium-down (max-width: 1024px);
 @custom-media --medium (min-width: 641px) and (max-width: 1024px);
 @custom-media --large (min-width: 1025px) and (max-width: 1440px);
-@custom-media --xlarge (min-width: 1441px) and (max-width: 1920px);
+@custom-media --x-large (min-width: 1441px) and (max-width: 1920px);

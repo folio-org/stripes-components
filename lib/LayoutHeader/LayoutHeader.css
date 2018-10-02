@@ -1,7 +1,7 @@
 @import '../variables.css';
 
 .sectionHeader {
-  background-color: var(--bgHover);
+  background-color: var(--bg-hover);
   display: flex;
   justify-content: flex-start;
   align-items: center;

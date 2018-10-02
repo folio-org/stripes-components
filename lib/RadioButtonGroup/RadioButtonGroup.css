@@ -1,7 +1,7 @@
 @import '../variables.css';
 
 .groupRoot {
-  margin-bottom: var(--controlMarginBottom);
+  margin-bottom: var(--control-margin-bottom);
 }
 
 .groupLabel {
@@ -27,7 +27,7 @@ legend.groupLabel {
   font-size: var(--font-size-x-small);
 
   &:last-child {
-    margin-bottom: var(--controlMarginBottom);
+    margin-bottom: var(--control-margin-bottom);
   }
 }
 

@@ -44,7 +44,7 @@
 
 .controlGroup {
   pointer-events: all;
-  height: var(--controlHeightSmall);
+  height: var(--control-height-small);
   display: flex;
   align-items: center;
 }
@@ -73,8 +73,8 @@
   align-items: center;
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .controlGroup {
-    height: var(--controlHeight);
+    height: var(--control-height);
   }
 }
