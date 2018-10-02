@@ -20,6 +20,11 @@ Example with redux-form `<Field>` component:
 ## Props
 Name | type | description | default | required |
 --- | --- | --- | --- | --- |
-selectedValue | string | Sets default value for radio button set - **Not necessary for redux-form - will use the form's initialValues prop instead** | | |
 children | node or array of nodes | Set of `<RadioButton>`s for usage. Can include other tags (headers, spans, etc.) | | &#10004;|
+error | string | | | |
 label | string or node | Content to render in the `<legend>` tag of the created `<fieldset>`. | | |
+`onBlur` | func |  | |
+`onChange` | func | | |
+`onFocus` | func | | |
+value | string | Sets default value for radio button set - **Not necessary for redux-form - will use the form's initialValues prop instead** | | |
+warning | string | | | |
