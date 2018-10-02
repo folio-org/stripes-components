@@ -1,7 +1,11 @@
 import { filters2cql } from '../lib/FilterGroups';
 
 function makePathFunction(basePath, findAll, queryTemplate, sortMap, filterConfig) {
-  console.warn('makePathFunction() deprecated; instead use makeQueryFunction()');
+  console.warn(
+    '\nWarning: makePathFunction() is deprecated and will be removed in the\n' +
+      'next major version of @folio/stripes-components.\n\n' +
+      'Instead, use makeQueryFunction() from @folio/stripes-smart-components.\n'
+  );
 
   return (queryParams, _pathComponents, _resourceValues, logger) => {
     const { query, filters, sort } = queryParams || {};
