@@ -1,0 +1,26 @@
+.AutoSuggest {
+  position: relative;
+  top: 100%;
+  width: '100%';
+  right: 0;
+  padding: 0;
+  z-index: 1000;
+  margin-top: -7px;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.textFieldDiv {
+  position: 'relative';
+  width: '100%';
+}
+
+.downshift {
+  display: 'inline-block';
+  position: 'relative';
+}
