@@ -1,4 +1,6 @@
 # Change history for stripes-components
+## 4.1.0
+* fix issue with `<Datepicker>` calendar not applying the chosen value to its `<TextField>`.
 
 ## 4.1.0 (IN PROGRESS)
 
