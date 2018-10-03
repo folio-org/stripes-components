@@ -47,6 +47,7 @@ Component | doc | categories
 [`<Accordion>`](lib/Accordion) | [doc](lib/Accordion/readme.md) | structure
 [`<AddressFieldGroup>`](lib/AddressFieldGroup) | [doc](lib/AddressFieldGroup/readme.md) | control, prefab
 [`<AppIcon>`](lib/AppIcon) | [doc](lib/AppIcon/readme.md) | design
+[`<AutoSuggest>`](lib/AutoSuggest) | [doc](lib/AutoSuggest/readme.md) | control
 [`<Avatar>`](lib/Avatar) | [doc](lib/Avatar/readme.md) | data-display
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
 [`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) | control
