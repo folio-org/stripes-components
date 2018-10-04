@@ -71,7 +71,10 @@ export { default as SearchField } from './lib/SearchField';
 
 /* specific use */
 export { default as FilterPane } from './lib/FilterPane';
-export { default as FilterGroups } from './lib/FilterGroups';
+export { default as FilterGroups, filterState, filters2cql, onChangeFilter } from './lib/FilterGroups';
 export { default as FilterControlGroup } from './lib/FilterControlGroup';
 export { default as FilterPaneSearch } from './lib/FilterPaneSearch';
 export { default as ExportCsv } from './lib/ExportCsv';
+
+/* utilities */
+export { default as omitProps } from './util/omitProps';
