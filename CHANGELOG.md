@@ -1,11 +1,11 @@
 # Change history for stripes-components
-## 4.1.0
-* fix issue with `<Datepicker>` calendar not applying the chosen value to its `<TextField>`.
 
 ## 4.1.0 (IN PROGRESS)
 
 * Deprecate craftLayerUrl()
 * Create new `<RepeatableField>`
+* Fix issue with `<Datepicker>` calendar not applying the chosen value to its `<TextField>`.
+* Export `<DefaultAccordionHeader>`
 
 ## [4.0.0](https://github.com/folio-org/stripes-components/tree/v4.0.0) (2018-10-02)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.3.0...v4.0.0)

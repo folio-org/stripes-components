@@ -31,7 +31,14 @@ export { Grid, Row, Col } from './lib/LayoutGrid';
 export { default as Layout } from './lib/Layout';
 export { default as LayoutBox } from './lib/LayoutBox';
 export { default as LayoutHeader } from './lib/LayoutHeader';
-export { Accordion, AccordionSet, FilterAccordionHeader, ExpandAllButton, expandAllFunction } from './lib/Accordion';
+export {
+  Accordion,
+  AccordionSet,
+  DefaultAccordionHeader,
+  FilterAccordionHeader,
+  ExpandAllButton,
+  expandAllFunction
+} from './lib/Accordion';
 
 /* misc */
 export { default as Icon } from './lib/Icon';
