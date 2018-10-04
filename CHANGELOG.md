@@ -1,7 +1,8 @@
 # Change history for stripes-components
 
-## 4.1.0 (IN PROGRESS)
-
+## [4.1.0](https://github.com/folio-org/stripes-components/tree/v4.1.0) (2018-10-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.0.0...v4.1.0)
+* Add additional top layer exports for `filterState`, `filters2cql`, `onChangeFilter`, and `omitProps`.
 * Deprecate craftLayerUrl()
 * Create new `<RepeatableField>`
 * Fix issue with `<Datepicker>` calendar not applying the chosen value to its `<TextField>`.
