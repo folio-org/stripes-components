@@ -70,4 +70,3 @@ export { default as ExportCsv } from './lib/ExportCsv';
 
 /* utilities */
 export { default as omitProps } from './util/omitProps';
-export { default as craftLayerUrl } from './util/craftLayerUrl';
