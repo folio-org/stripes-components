@@ -49,6 +49,7 @@
   "metaSection.recordLastUpdated": "Record last updated: {date} {time}",
   "tableColumnCount": "Table with {count} columns",
   "button.edit": "Edit",
+  "button.copy": "Copy",
   "button.new": "+ New",
   "exportToCsv": "Export to CSV",
   "selection.emptyList": "List is empty",
