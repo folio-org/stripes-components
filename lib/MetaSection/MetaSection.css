@@ -4,11 +4,13 @@
   border-radius: 4px;
   background-color: var(--color-fill);
   margin-bottom: 10px;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height);
 }
 
 .metaSectionContent {
-  margin-top: -6px;
-  padding: 0 0 4px 27px;
+  margin-top: -0.5rem;
+  padding: 0.5rem 0 0.5rem 0.33rem;
   color: var(--color-text);
 }
 
