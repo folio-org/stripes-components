@@ -41,7 +41,6 @@
   margin: 2px;
   background-color: transparent;
   padding: 0 4px;
-  height: var(--control-height);
   border-width: 0;
   outline: 0;
 }

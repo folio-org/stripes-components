@@ -11,10 +11,10 @@
   --focus-dot-offset-default: 4px;
   --focus-dot-offset-small: -5px;
   --focus-dot-offset-medium: -10px;
-  --focus-dot-offset-large: -15px;
+  --focus-dot-offset-large: -1rem;
   --box-offset-small: -5px;
   --box-offset-medium: -10px;
-  --box-offset-large: -15px;
+  --box-offset-large: -1rem;
 }
 
 .interactionStyles {

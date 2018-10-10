@@ -4,6 +4,7 @@
 
 * Add clone option to EntrySelector. Fixes STCOM-364.
 * Shrink `<MetaSection>` font sizes
+* Polish form control sizing
 
 ## [4.1.0](https://github.com/folio-org/stripes-components/tree/v4.1.0) (2018-10-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.0.0...v4.1.0)

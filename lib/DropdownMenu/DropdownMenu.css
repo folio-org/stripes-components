@@ -16,8 +16,8 @@
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 
   & ul {
     list-style: none;

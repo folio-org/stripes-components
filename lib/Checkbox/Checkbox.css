@@ -8,6 +8,7 @@
   display: flex;
   position: relative;
   color: var(--color-text);
+  line-height: var(--line-height);
 
   &.fullWidth {
     width: 100%;
@@ -41,8 +42,7 @@
 
 .checkboxLabel {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 4px 5px;
-  min-height: var(--control-height);
+  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   display: flex;
   align-items: baseline;
   cursor: pointer;
@@ -99,7 +99,7 @@ input.checkboxInput {
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: var(--radius);
   background: var(--color-fill-form-element);
   display: flex;
   overflow: hidden;

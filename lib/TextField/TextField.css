@@ -5,9 +5,8 @@
   width: 100%;
 
   & input {
-    height: var(--controlHeightSmall);
-    min-height: var(--controlHeightSmall);
-    padding: var(--input-horizontal-padding) var(--input-vertical-padding);
+    line-height: var(--line-height);
+    padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   }
 }
 
@@ -28,7 +27,8 @@
 .startControls,
 .endControls {
   pointer-events: none;
-  height: 100%;
+  padding: 0 0.125em;
+  height: 1.75em;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -36,21 +36,15 @@
 }
 
 .startControls {
-  padding-left: 2px;
-  height: 100%;
   justify-content: flex-start;
 }
 
 .endControls {
-  padding-right: 2px;
-  height: 100%;
-  width: 100%;
   justify-content: flex-end;
 }
 
 .controlGroup {
   pointer-events: all;
-  height: var(--control-height-small);
   display: flex;
   align-items: center;
 }
@@ -77,15 +71,6 @@
 .textFieldIcon {
   display: flex;
   align-items: center;
-}
-
-@media (--medium-up) {
-  .textField input {
-    height: var(--controlHeight);
-    min-height: var(--controlHeight);
-  }
-
-  .controlGroup {
-    height: var(--control-height);
-  }
+  height: 1.75em;
+  padding: 0 0.25rem;
 }

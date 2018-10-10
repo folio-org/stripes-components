@@ -23,12 +23,11 @@
 
 .radioLabel {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 4px 5px;
+  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   position: relative;
-  line-height: 120%;
+  line-height: var(--line-height);
   display: flex;
   align-items: baseline;
-  min-height: 24px;
   cursor: pointer;
   flex-grow: 2;
   border-radius: var(--radius);
