@@ -1,9 +1,12 @@
 # Change history for stripes-components
 
-## 4.2.0 (IN PROGRESS)
+## [4.2.0](https://github.com/folio-org/stripes-components/tree/v4.2.0) (2018-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.1.0...v4.2.0)
 
 * Add clone option to EntrySelector. Fixes STCOM-364.
+* Export `<RepeatableField>`
 * Shrink `<MetaSection>` font sizes
+* Decouple form element styles
 * Polish form control sizing
 
 ## [4.1.0](https://github.com/folio-org/stripes-components/tree/v4.1.0) (2018-10-01)
