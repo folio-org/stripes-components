@@ -9,13 +9,7 @@
   }
 
   & textarea {
-    min-height: var(--controlHeightSmall);
-    padding: var(--input-horizontal-padding) var(--input-vertical-padding);
-  }
-}
-
-@media (--mediumUp) {
-  .textArea textarea {
-    min-height: var(--controlHeight);
+    line-height: var(--line-height);
+    padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   }
 }

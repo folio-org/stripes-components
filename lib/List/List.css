@@ -31,8 +31,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 6px;
-    border-radius: 4px;
-    margin-bottom: 4px;
+    border-radius: var(--radius);
+    margin-bottom: 0.25rem;
   }
 }
 

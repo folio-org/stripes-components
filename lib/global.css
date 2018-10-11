@@ -73,6 +73,7 @@ textarea,
 select {
   font-size: inherit;
   font-family: inherit;
+  letter-spacing: inherit;
 }
 
 button {

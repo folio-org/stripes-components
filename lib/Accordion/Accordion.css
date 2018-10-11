@@ -23,7 +23,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  min-height: calc(var(--control-height) + 4px);
 
   /* transition: background-color 0.3s; */
 
@@ -111,9 +110,8 @@
   outline: none;
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: calc(var(--input-vertical-padding) * 4) var(--input-horizontal-padding);
   background-color: transparent;
-  min-height: 44px;
   width: 100%;
   color: var(--color-text);
 
@@ -136,15 +134,14 @@
 .filterSetHeader {
   composes: interactionStyles boxOffsetStartSmall from "../sharedStyles/interactionStyles.css";
   composes: header;
-  border-radius: var(--radius 4px);
-  min-height: var(--control-height 24px);
+  border-radius: var(--radius);
   appearance: none;
   background: none;
   border: none;
   font-size: inherit;
-  padding: 2px 0;
+  padding: var(--input-vertical-padding) 0;
   width: 100%;
-  line-height: 120%;
+  line-height: var(--line-height);
   text-align: left;
 
   &:focus {
