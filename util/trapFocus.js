@@ -5,10 +5,12 @@ const getDefaultExceptions = () => [
   ...document.querySelectorAll('.tether-element'),
 ];
 
-export default function trapFocus(container, exceptions = getDefaultExceptions()) {
-  if (container && !contains(container, document.activeElement)) {
-    if (exceptions.filter((e) => contains(e, document.activeElement)).length === 0) {
-      container.focus();
+export default function trapFocus(container, exceptions) {
+  if (container && container.className !== document.activeElement.className) {
+    if (!contains(container, document.activeElement)) {
+      if ([...getDefaultExceptions(), ...exceptions].filter((e) => contains(e, document.activeElement)).length === 0) {
+        container.focus();
+      }
     }
   }
 }
