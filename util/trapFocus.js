@@ -2,7 +2,7 @@ import contains from 'dom-helpers/query/contains';
 
 const getDefaultExceptions = () => [
   document.getElementById('OverlayContainer'),
-  ...document.querySelectorAll('.tether-element')
+  ...document.querySelectorAll('.tether-element'),
 ];
 
 export default function trapFocus(container, exceptions) {
