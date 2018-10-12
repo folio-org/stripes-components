@@ -18,7 +18,7 @@
   display: block;
   font-size: var(--font-size-small);
   line-height: var(--line-height);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25rem;
   color: var(--color-text);
 
   &.required::after {
