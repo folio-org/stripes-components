@@ -7,7 +7,7 @@ const getDefaultExceptions = () => [
 
 export default function trapFocus(container, exceptions) {
   if (container && container.className !== document.activeElement.className) {
-    if (container && !contains(container, document.activeElement)) {
+    if (!contains(container, document.activeElement)) {
       if ([...getDefaultExceptions(), ...exceptions].filter((e) => contains(e, document.activeElement)).length === 0) {
         container.focus();
       }
