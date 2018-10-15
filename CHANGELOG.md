@@ -1,9 +1,11 @@
 # Change history for stripes-components
 
-## 4.3.1 (IN PROGRESS)
+## 4.3.0 (IN PROGRESS)
 
 * Make label margins consistent
 * Add ability to filter items in EntrySelector. Fixes STCOM-367.
+* Resolve issue recursion issue with `trapFocus` with multiple `<Layer>`s. STCOM-366.
+* Clear console noise from `<Selection>`/`<SelectList>`. STCOM-369.
 
 ## [4.2.0](https://github.com/folio-org/stripes-components/tree/v4.2.0) (2018-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.1.0...v4.2.0)
