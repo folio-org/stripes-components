@@ -99,7 +99,7 @@ input.checkboxInput {
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: 25%;
   background: var(--color-fill-form-element);
   display: flex;
   overflow: hidden;
