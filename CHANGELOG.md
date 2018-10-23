@@ -1,8 +1,62 @@
 # Change history for stripes-components
 
-## ## 3.2.0 (IN PROGRESS) 
+## 4.3.0 (IN PROGRESS)
+
+* Make label margins consistent
+* Add ability to filter items in EntrySelector. Fixes STCOM-367.
+* Resolve issue recursion issue with `trapFocus` with multiple `<Layer>`s. STCOM-366.
+* Clear console noise from `<Selection>`/`<SelectList>`. STCOM-369.
+* Removed title attribute from AppIcon (STCOR-268) and minor line-height fix
+* Fixed `<Layout>`'s `padding-end-gutter` rule.
+
+## [4.2.0](https://github.com/folio-org/stripes-components/tree/v4.2.0) (2018-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.1.0...v4.2.0)
+
+* Add clone option to EntrySelector. Fixes STCOM-364.
+* Export `<RepeatableField>`
+* Shrink `<MetaSection>` font sizes
+* Decouple form element styles
+* Polish form control sizing
+
+## [4.1.0](https://github.com/folio-org/stripes-components/tree/v4.1.0) (2018-10-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.0.0...v4.1.0)
+* Add additional top layer exports for `filterState`, `filters2cql`, `onChangeFilter`, and `omitProps`.
+* Deprecate craftLayerUrl()
+* Create new `<RepeatableField>`
+* Fix issue with `<Datepicker>` calendar not applying the chosen value to its `<TextField>`.
+* Export `<DefaultAccordionHeader>`
+
+## [4.0.0](https://github.com/folio-org/stripes-components/tree/v4.0.0) (2018-10-02)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.3.0...v4.0.0)
+
+* Kebab case all css variables
+* Update `<RadioButton>` and `<RadioButtonGroup>` to work independently of Redux Form
+* Remove child.type checks
+* Remove `<AddressFieldGroup>`;  it's now in `stripes-smart-components`
+* Remove `<EditableList>`; it's now in `stripes-smart-components`
+* Remove `<Pluggable>`; it's now in `stripes-core`
+* Remove `<Settings>`; it's now in `stripes-smart-components`
+* Remove deprecated util functions
+* Remove old version of `<RepeatableField>`
+* Remove deprecated props from `<Datepicker>`
+
+## [3.3.0](https://github.com/folio-org/stripes-components/tree/v3.3.0) (2018-10-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.2.0...v3.3.0)
+
+* Use input type="search" for `<SearchField>`
+* Create wider type stack
+* Add padding to accordion content
+* Layer focus management
+
+## [3.2.0](https://github.com/folio-org/stripes-components/tree/v3.2.0) (2018-09-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.1.0...v3.2.0)
 
 * Update `stripes-form` dependency to v1.0.0
+* Fix paneset CSS behavior on narrow screens
+* Change global base font size from 14px to 16px
+* Expose legend as tag for `<Headline>`
+* Adjust headline sizes
+* Expose `<Headline>` ref
 
 ## [3.1.0](https://github.com/folio-org/stripes-components/tree/v3.1.0) (2018-09-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.0.0...v3.1.0)

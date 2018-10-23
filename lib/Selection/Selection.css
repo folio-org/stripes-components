@@ -7,9 +7,8 @@
 .selectionListRoot {
   z-index: 9999;
   background-color: #fff;
-  border-radius: 4px;
   border: 1px solid #ccc;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: var(--shadow);
 }
 
 .selectionListStatus {
@@ -30,8 +29,8 @@
 }
 
 .selectionControl {
-  height: var(--controlHeight);
-  padding: 0 8px;
+  line-height: var(--line-height);
+  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -44,7 +43,7 @@
 }
 
 .selectionFilterContainer {
-  padding: 4px;
+  padding: 0.5rem;
 }
 
 .selectionEndControls {
@@ -60,7 +59,6 @@
 }
 
 .selectionFilter {
-  border-radius: var(--radius, 4px);
   width: 100%;
   padding: 4px 8px;
   border-style: solid;
@@ -97,32 +95,31 @@
 /* Selection List Options */
 
 .option {
-  padding: 6px;
+  padding: 0.5rem;
   cursor: default;
   display: flex;
   justify-content: space-between;
 
   &.selected {
-    background: var(--primary, #0c577f);
+    background: var(--color-fill-current);
     color: #fff;
     transition: all 0.2s;
 
     &:hover {
-      background-color: rgb(0, 95, 146);
+      background-color: var(--color-fill-current);
     }
 
     &.cursor {
-      color: #fff;
-      background-color: rgb(0, 95, 146);
+      background-color: var(--color-fill-current);
     }
   }
 
   &.cursor {
-    background-color: var(--hover, #ccc);
+    background-color: var(--color-fill-hover);
   }
 
   &:hover {
-    background-color: #ccc;
+    background-color: var(--color-fill-hover);
   }
 
   &.optionCentered {
@@ -164,7 +161,6 @@
   width: 100%;
   border-width: 0;
   padding: 2px 4px;
-  height: var(--controlHeight);
 }
 
 .selectionMultiSelected {

@@ -1,7 +1,7 @@
 @import '../variables.css';
 
 .dropdownHeader {
-  padding: 0 15px;
+  padding: 0 1rem;
   height: 44px;
   border-bottom: 1px solid #ccc;
   font-weight: 600;
@@ -22,7 +22,7 @@
 .dropdownColumn {
   height: 100%;
   overflow: auto;
-  padding: 15px;
+  padding: 1rem;
 
   & + .dropdownColumn {
     border-left: 1px solid #ccc;

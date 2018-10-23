@@ -7,4 +7,9 @@
   &.fullWidth {
     width: 100%;
   }
+
+  & textarea {
+    line-height: var(--line-height);
+    padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+  }
 }

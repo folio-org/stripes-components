@@ -3,6 +3,11 @@
 .textField {
   position: relative;
   width: 100%;
+
+  & input {
+    line-height: var(--line-height);
+    padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+  }
 }
 
 .inputGroup {
@@ -22,7 +27,8 @@
 .startControls,
 .endControls {
   pointer-events: none;
-  height: 100%;
+  padding: 0 0.125em;
+  height: 1.75em;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -30,21 +36,15 @@
 }
 
 .startControls {
-  padding-left: 2px;
-  height: 100%;
   justify-content: flex-start;
 }
 
 .endControls {
-  padding-right: 2px;
-  height: 100%;
-  width: 100%;
   justify-content: flex-end;
 }
 
 .controlGroup {
   pointer-events: all;
-  height: var(--controlHeightSmall);
   display: flex;
   align-items: center;
 }
@@ -71,10 +71,6 @@
 .textFieldIcon {
   display: flex;
   align-items: center;
-}
-
-@media (--mediumUp) {
-  .controlGroup {
-    height: var(--controlHeight);
-  }
+  height: 1.75em;
+  padding: 0 0.25rem;
 }

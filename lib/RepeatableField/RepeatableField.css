@@ -1,3 +1,22 @@
-.RFLegend {
-  margin-bottom: 6px;
+@import "../variables.css";
+
+.repeatableField {
+  margin: 1em 0;
+  padding: 0;
+}
+
+.repeatableFieldList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.repeatableFieldItem {
+  display: flex;
+  align-items: flex-start;
+}
+
+.repeatableFieldRemoveItem {
+  flex: 0 0 3em;
+  margin-top: 1.75em;
+  text-align: center;
 }

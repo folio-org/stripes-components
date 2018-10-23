@@ -28,9 +28,9 @@ The containing div of the list is focusable. By default, the list's rows are tab
 At the time of this writing, the list will scroll its content horizontally if there isn't enough horizontal room to display all of the columns. This is likely to change in the near future.
 
 ### Column mapping
-MultiColumnList supports column header mapping via. the `columnMapping`-prop. This allows for mapping column headers to alternative strings. This is very useful for translating column headers. 
+MultiColumnList supports column header mapping via. the `columnMapping`-prop. This allows for mapping column headers to alternative strings. This is very useful for translating column headers.
 
-Note: The recommended text casing for column headers is _sentence casing_. Read more about language rules [here](https://ux.folio.org/docs/guidelines/style/language-rules). 
+Note: The recommended text casing for column headers is _sentence casing_. Read more about language rules [here](https://ux.folio.org/docs/guidelines/style/language-rules).
 
 Here's an example from the Users-module:
 ```js
@@ -38,11 +38,11 @@ Here's an example from the Users-module:
     contentData={...}
     visibleColumns={['actionDate', 'action', 'dueDate', 'itemStatus', 'source']}
     columnMapping={{
-    action: intl.formatMessage({ id: 'ui-users.loans.columns.action' }),
-    actionDate: intl.formatMessage({ id: 'ui-users.loans.columns.actionDate' }),
-    dueDate: intl.formatMessage({ id: 'ui-users.loans.columns.dueDate' }),
-    itemStatus: intl.formatMessage({ id: 'ui-users.loans.columns.itemStatus' }),
-    source: intl.formatMessage({ id: 'ui-users.loans.columns.source' }),
+    action: formatMessage({ id: 'ui-users.loans.columns.action' }),
+    actionDate: formatMessage({ id: 'ui-users.loans.columns.actionDate' }),
+    dueDate: formatMessage({ id: 'ui-users.loans.columns.dueDate' }),
+    itemStatus: formatMessage({ id: 'ui-users.loans.columns.itemStatus' }),
+    source: formatMessage({ id: 'ui-users.loans.columns.source' }),
     }}
   />
 ```

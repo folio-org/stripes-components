@@ -8,15 +8,14 @@
   display: block;
   width: 100%;
   padding: 5px 10px;
-  color: var(--bodyColor);
+  color: var(--body-color);
   border-radius: var(--radius);
-  min-height: var(--controlHeight);
   text-align: left;
   outline: 0;
 
   /* for anchor tags */
   &:visited {
-    color: var(--bodyColor);
+    color: var(--body-color);
   }
 
   &.isActive {
@@ -42,6 +41,7 @@
 }
 
 /* if stripped styles is activated in NavList */
-.stripped .NavListItem:nth-child(odd):not(.isActive):not(:hover):not(:active) {
-  background-color: rgba(0, 0, 0, 0.05);
+.stripped .NavListItem:nth-child(odd):not(.isActive):not(:hover):not(:active),
+.NavListItem.odd:not(.isActive):not(:hover):not(:active) {
+  background-color: var(--color-fill-table-row-odd);
 }

@@ -10,7 +10,7 @@
 }
 
 .multiSelectControl {
-  composes: input from '../sharedStyles/form.css';
+  composes: formControl from '../sharedStyles/form.css';
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,6 @@
   margin: 2px;
   background-color: transparent;
   padding: 0 4px;
-  height: var(--controlHeight);
   border-width: 0;
   outline: 0;
 }

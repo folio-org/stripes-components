@@ -24,7 +24,7 @@
  * Colors
  */
 .default {
-  background-color: var(--bgHover);
+  background-color: var(--bg-hover);
 }
 
 .red {
@@ -40,14 +40,14 @@
  */
 
 .small {
-  font-size: 10px;
+  font-size: var(--font-size-xx-small);
   height: 18px;
   min-width: 18px;
   line-height: 18px;
 }
 
 .medium {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   height: 22px;
   min-width: 22px;
   line-height: 22px;
