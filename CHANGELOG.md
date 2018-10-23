@@ -6,6 +6,7 @@
 * Add ability to filter items in EntrySelector. Fixes STCOM-367.
 * Resolve issue recursion issue with `trapFocus` with multiple `<Layer>`s. STCOM-366.
 * Clear console noise from `<Selection>`/`<SelectList>`. STCOM-369.
+* Removed title attribute from AppIcon (STCOR-268) and minor line-height fix
 * Fixed `<Layout>`'s `padding-end-gutter` rule.
 
 ## [4.2.0](https://github.com/folio-org/stripes-components/tree/v4.2.0) (2018-10-11)
