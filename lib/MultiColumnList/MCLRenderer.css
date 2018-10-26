@@ -32,8 +32,8 @@
   border-radius: var(--radius);
   color: var(--color-text);
   text-decoration: none;
-  margin-left: calc(var(--gutter) / 3);
-  margin-right: calc(var(--gutter) / 3);
+  margin-left: calc(var(--gutter) * 0.3333333);
+  margin-right: calc(var(--gutter) * 0.3333333);
   outline: none;
 
   &:visited {
