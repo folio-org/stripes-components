@@ -8,6 +8,7 @@
 * Clear console noise from `<Selection>`/`<SelectList>`. STCOM-369.
 * Removed title attribute from AppIcon (STCOR-268) and minor line-height fix
 * Fixed `<Layout>`'s `padding-end-gutter` rule.
+* Use a CSS class to indicate whether `<EntrySelector>` has any entries. Available from v4.2.2.
 
 ## [4.2.0](https://github.com/folio-org/stripes-components/tree/v4.2.0) (2018-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.1.0...v4.2.0)
