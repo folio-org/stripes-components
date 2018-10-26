@@ -25,7 +25,7 @@
   --success: #070;
   --control-margin-bottom: 1rem;
   --radius: 6px;
-  --gutter: 1rem;
+  --gutter: 0.9375rem; /* Computes to 15px when body font-size is 16px */
   --input-horizontal-padding: 0.5rem;
   --input-vertical-padding: 0.125rem;
 
