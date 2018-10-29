@@ -23,6 +23,10 @@
   display: flex;
 }
 
+.flex-direction-column {
+  flex-direction: column;
+}
+
 /**
  * Wrap
  */
@@ -43,4 +47,23 @@
 
 .flex-align-items-end {
   align-items: end;
+}
+
+/**
+ * Justification
+ */
+.flex-justify-end {
+  justify-content: flex-end;
+}
+
+.flex-justify-center {
+  justify-content: flex-center;
+}
+
+.flex-justify-space-between {
+  justify-content: flex-space-between;
+}
+
+.flex-justify-space-evenly {
+  justify-content: flex-space-evenly;
 }
