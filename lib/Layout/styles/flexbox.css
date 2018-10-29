@@ -57,13 +57,13 @@
 }
 
 .flex-justify-center {
-  justify-content: flex-center;
+  justify-content: center;
 }
 
 .flex-justify-space-between {
-  justify-content: flex-space-between;
+  justify-content: space-between;
 }
 
 .flex-justify-space-evenly {
-  justify-content: flex-space-evenly;
+  justify-content: space-evenly;
 }
