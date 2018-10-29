@@ -60,5 +60,8 @@
     "multiSelection.filterPlaceholder": "választó lista szűrése",
     "multiSelection.controlDescription": "A kiválasztott értékek listáját tartalmazza, majd egy legördülő menüből választhatók ki a további értékek.",
     "multiSelection.removeSelectedButtonDescription": "Nyomja meg az entert vagy a szóközt a tétel eltávolításához a kiválasztási listából! A Home és End billentyűk az első vagy utolsó tételhez visznek.",
-    "multiSelection.removeSelectedButtonLabel": "érték eltávolítása"
+    "multiSelection.removeSelectedButtonLabel": "érték eltávolítása",
+    "button.copy": "Copy",
+    "endOfList": "End of list",
+    "button.duplicate": "Duplicate"
 }
