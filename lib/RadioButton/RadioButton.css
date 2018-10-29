@@ -81,7 +81,7 @@
 }
 
 .input:checked + .labelPseudo {
-  background-color: #FFF;
+  background-color: #fff;
 
   &::after {
     opacity: 1;
