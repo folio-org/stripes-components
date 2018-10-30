@@ -9,6 +9,7 @@
   min-height: 2.75em;
   position: relative;
   will-change: transform;
+  padding: 0 0.5em;
 }
 
 /**

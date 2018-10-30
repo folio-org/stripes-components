@@ -60,5 +60,8 @@
     "multiSelection.filterPlaceholder": "lista de opções de filtro",
     "multiSelection.controlDescription": "Contém uma lista de todos os valores selecionados, seguidos por uma caixa de combinação para selecionar valores adicionais.",
     "multiSelection.removeSelectedButtonDescription": "Digite enter ou espaço para remover o item da lista de seleção. Tecla Home e End te ajuda a navegar para os primeiros e últimos item.",
-    "multiSelection.removeSelectedButtonLabel": "remover o valor"
+    "multiSelection.removeSelectedButtonLabel": "remover o valor",
+    "button.copy": "Copiar",
+    "endOfList": "Fim da lista",
+    "button.duplicate": "Duplicar"
 }
