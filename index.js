@@ -60,6 +60,7 @@ export { default as IfPermission } from './lib/IfPermission';
 export { default as MenuItem } from './lib/MenuItem';
 export { default as MetaSection } from './lib/MetaSection';
 export { default as NavList } from './lib/NavList';
+export { default as NavListItem } from './lib/NavListItem';
 export { default as NavListSection } from './lib/NavListSection';
 export { default as Popover } from './lib/Popover';
 export { default as Selection, OptionSegment } from './lib/Selection';
