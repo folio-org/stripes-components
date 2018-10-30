@@ -15,7 +15,6 @@
   border-radius: 0;
   background: none;
   color: var(--color-icon);
-  margin: 0 0.5em;
 
   /* Let the button expand in width if we have a badge */
   &.hasBadge {
