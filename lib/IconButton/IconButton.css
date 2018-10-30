@@ -14,10 +14,15 @@
   transition: opacity 0.4s;
   border-radius: 0;
   background: none;
+  color: var(--color-icon);
 
   /* Let the button expand in width if we have a badge */
   &.hasBadge {
     width: auto;
+  }
+
+  & + .iconButton {
+    margin-left: 0.25em;
   }
 }
 
@@ -26,26 +31,22 @@
   display: flex;
   align-items: center;
   pointer-events: none;
-}
-
-.mediumOffset {
-  composes: boxOffsetSmall from "../sharedStyles/interactionStyles.css";
+  padding: 0.25em;
 }
 
 /**
  * Size
  */
 
-.medium {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  padding: 0 10px;
+.small {
+  font-size: var(--font-size-small);
 }
 
-.small {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  padding: 0 5px;
+[dir="rtl"] {
+  & .iconButton {
+    & + .iconButton {
+      margin-left: 0;
+      margin-right: 0.25em;
+    }
+  }
 }
