@@ -20,6 +20,10 @@
   &.hasBadge {
     width: auto;
   }
+
+  & + .iconButton {
+    margin-left: 0.25em;
+  }
 }
 
 .iconButtonInner {
@@ -27,7 +31,7 @@
   display: flex;
   align-items: center;
   pointer-events: none;
-  padding: 0.5em;
+  padding: 0.25em;
 }
 
 /**
@@ -36,4 +40,13 @@
 
 .small {
   font-size: var(--font-size-small);
+}
+
+[dir="rtl"] {
+  & .iconButton {
+    & + .iconButton {
+      margin-left: 0;
+      margin-right: 0.25em;
+    }
+  }
 }
