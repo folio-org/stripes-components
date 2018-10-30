@@ -15,6 +15,10 @@
   justify-content: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .display-inline-flex {
   display: inline-flex;
 }
@@ -47,23 +51,4 @@
 
 .flex-align-items-end {
   align-items: end;
-}
-
-/**
- * Justification
- */
-.flex-justify-end {
-  justify-content: flex-end;
-}
-
-.flex-justify-center {
-  justify-content: center;
-}
-
-.flex-justify-space-between {
-  justify-content: space-between;
-}
-
-.flex-justify-space-evenly {
-  justify-content: space-evenly;
 }
