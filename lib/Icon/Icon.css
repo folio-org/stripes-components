@@ -10,24 +10,28 @@
   &:focus {
     outline: none;
   }
-
-  &.small {
-    font-size: 0.83em;
-  }
-
-  &.medium {
-    font-size: 1em;
-  }
-
-  &.large {
-    font-size: 1.17em;
-  }
 }
 
 :global .stripes__icon {
   fill: currentColor;
   height: 1em;
   width: 1em;
+}
+
+/**
+ * Sizes
+ */
+
+.small {
+  font-size: 0.83em;
+}
+
+.medium {
+  font-size: 1em;
+}
+
+.large {
+  font-size: 1.17em;
 }
 
 /**
@@ -85,7 +89,7 @@ Note: Using pseudo elements to add spacing for RTL support
 .label::after {
   content: '';
   display: none;
-  width: 0.22em;
+  width: 0.35em;
 }
 
 .icon-position-start .label::before,
