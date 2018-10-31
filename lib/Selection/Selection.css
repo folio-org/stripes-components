@@ -38,7 +38,7 @@
 
   &.marginBottom0 {
     /* stylelint-disable-next-line length-zero-no-unit */
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 

@@ -16,11 +16,6 @@
   background: none;
   color: var(--color-icon);
 
-  /* Let the button expand in width if we have a badge */
-  &.hasBadge {
-    width: auto;
-  }
-
   & + .iconButton {
     margin-left: 0.25em;
   }
@@ -49,4 +44,20 @@
       margin-right: 0.25em;
     }
   }
+}
+
+/**
+ * With badge
+ */
+
+/* Let the button expand in width if we have a badge */
+.iconButton.hasBadge {
+  width: auto;
+}
+
+/* Add spacing between icon and badge */
+.hasBadge .icon::after {
+  content: '';
+  width: 0.3em;
+  display: inline-block;
 }
