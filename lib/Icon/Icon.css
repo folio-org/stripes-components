@@ -89,7 +89,7 @@ Note: Using pseudo elements to add spacing for RTL support
 .label::after {
   content: '';
   display: none;
-  width: 0.22em;
+  width: 0.35em;
 }
 
 .icon-position-start .label::before,
