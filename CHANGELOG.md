@@ -11,6 +11,7 @@
 * Use a CSS class to indicate whether `<EntrySelector>` has any entries. Available from v4.2.2.
 * Added more flexbox classes to `<Layout>`. Available from v4.2.4.
 * Resize icons
+* Export `<NavListItem>`
 
 ## [4.2.0](https://github.com/folio-org/stripes-components/tree/v4.2.0) (2018-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.1.0...v4.2.0)
