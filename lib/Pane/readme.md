@@ -5,8 +5,7 @@ Primary staple of layout for FOLIO modules.
 ### Sizing
 A Pane requires a `defaultWidth` prop to tell its parent `<Paneset>` how it should be sized. The following example has a first pane with a static width of 20% and a second pane with dynamic width (supplied `"fill"` for its `defaultWidth`) that will occupy the remaining width of the paneset.
 ```js
-import Paneset from '@folio/stripes-components/lib/Paneset';
-import Pane from '@folio/stripes-components/lib/Pane';
+import { Pane, Paneset } from '@folio/stripes/components';
 
 <Paneset>
     <Pane defaultWidth="20%" paneTitle="Filters">

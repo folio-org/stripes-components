@@ -13,8 +13,6 @@ When doing this:
 ## Usage
 To normalize the `input` and `meta` props injected by Redux Form:
 ```jsx
-import reduxFormField from '@folio/stripes-components/lib/ReduxFormField';
-
 function ExampleComponent({ value, onChange, warning, error }) => (
   <div>{warning}</div>
 );

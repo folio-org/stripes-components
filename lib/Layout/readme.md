@@ -6,15 +6,15 @@ Helper component that allows for easily accessing a set of helper CSS classes. U
 ### JSX
 Apply any of the available class names to the `className` prop. Any additional custom class names will be combined with any matching helper classes. You can modify the root element by passing a string or a component to the "element"-prop.
 ```js
-  import Layout from '@folio/stripes-components/lib/Layout';
+  import { Layout } from '@folio/stripes/components';
 
   <Layout className="display-flex flex-align-items-start">
     <Layout element="span" className="padding-start-gutter">
       1st column
-    </Layout>  
+    </Layout>
     <Layout element="span" className=`padding-end-gutter ${css.myCustomClass}`>
       2nd column
-    </Layout>  
+    </Layout>
   </Layout>
 ```
 

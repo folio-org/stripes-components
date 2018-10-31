@@ -5,7 +5,7 @@ Universal search field component.
 ## Basic Usage
 
 ```
-  import SearchField from '@folio/stripes-components/lib/SearchField';
+  import { SearchField } from '@folio/stripes/components';
 
   <SearchField
     onChange={...}
@@ -19,7 +19,7 @@ Universal search field component.
 The component supports adding an array of searchable indexes which adds a select field to the component.
 
 ```
-  import SearchField from '@folio/lib/SearchField';
+  import SearchField from '@folio/stripes/components';
 
   const searchableIndexes = [
     { label: 'ID', value: 'id' },

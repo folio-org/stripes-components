@@ -5,7 +5,7 @@ The classic button, in different styles and sizes
 ## Basic Usage
 
 ```
-import { Button } from '@folio/stripes-components/lib/Button';
+import { Button } from '@folio/stripes/components';
 
 ...
 <Button>

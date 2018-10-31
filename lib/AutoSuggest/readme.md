@@ -3,7 +3,7 @@ Displays a dropdown with a list of suggestions based on the entered string in th
 
 ## Usage
 ```
-import AutoSuggest from '../../lib/AutoSuggest';
+import { AutoSuggest } from '@folio/stripes/components';
 
 // later in your JSX....
 <AutoSuggest items={items} />

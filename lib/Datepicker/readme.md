@@ -2,7 +2,7 @@
 ### Usage
 
 ```js
-import Datepicker from '@folio/stripes-components/lib/Datepicker';
+import { Datepicker } from '@folio/stripes/components';
 //..
 <Datepicker />
 //or pass as component within a form...

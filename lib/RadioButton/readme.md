@@ -40,7 +40,7 @@ warning | string | | | false
 
 ## Use with Redux Form
 ```
-import { RadioButton } from '@folio/stripes-components';
+import { RadioButton } from '@folio/stripes/components';
 
 ...
 
