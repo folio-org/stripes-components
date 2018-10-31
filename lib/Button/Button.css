@@ -227,7 +227,7 @@
   &[disabled] {
     background-color: #ccc;
     border-color: #ccc;
-    color: #888;
+    color: var(--color-text-p2);
     transition: opacity ease-in-out 500ms;
 
     &:hover {
