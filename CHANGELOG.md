@@ -1,9 +1,11 @@
 # Change history for stripes-components
 
-## 4.4.0 (IN PROGRESS)
+## [4.3.1](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-11-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.0...v4.3.1)
 
 * `color` chokes on rgb/rgba; use hex values instead.
 * Validate presence of `props.onClick()` before calling it.
+* Allow node prop types for labels and validation messages
 
 ## [4.3.0](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-10-31)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.2.0...v4.3.0)
