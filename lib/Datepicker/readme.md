@@ -1,5 +1,5 @@
 # Datepicker
-### Usage
+## Usage
 
 ```js
 import { Datepicker } from '@folio/stripes/components';
@@ -9,7 +9,7 @@ import { Datepicker } from '@folio/stripes/components';
 <Field component={Datepicker} />
 ```
 
-### Props
+## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 `label` | string | visible field label | | false
@@ -27,9 +27,22 @@ Name | type | description | default | required
 
 <!-- dateFormat | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false-->
 
+## Working with Dates
 
-### Features
-#### Keyboard Navigation
+Using a `value` that does not include any time or timezone
+information, such as `12/01`, the date is assumed by `moment()` to be
+in the local timezone. When the local timezone is east of UTC, such as
+`+03:00`, and converted to UTC for internationalization formatting,
+the offset will be subtracted from the date. So `12/01` will appear as
+`11/30` in timezones east of UTC.
+
+When comparing or manipulating dates, it is safest to operate in UTC
+mode and leave display formatting to internationalization helpers. If
+using moment, this can be done via
+[`moment.utc()`](http://momentjs.com/docs/#/parsing/utc/).
+
+## Features
+### Keyboard Navigation
 * **Up arrow** - Move cursor up in the calendar (backwards 1 week)
 * **Down arrow** - Move cursor down in the calendar (forwards 1 week)
 * **Left arrow** - Move cursor left 1 day in the calendar (backwards 1 day)
