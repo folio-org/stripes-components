@@ -1,5 +1,5 @@
 # Breaking Changes and Deprecations
-Change happens. We learn more, we find better ways to do things. We clean house and beautify API's, improve user experience, accessibility, and developer experience. 
+Change happens. We learn more, we find better ways to do things. We clean house and beautify API's, improve user experience, accessibility, and developer experience.
 Through the Request for comment (RFC) process, modifications to the component library are proposed and agreed upon by the community of FOLIO developers. The outcome of this process is an iterative plan to accomplish the proposed goal. The changes are weighed against non-functional requirements's (NFR's) - not limited to maintainability, platform stability, testability, extent of migration effort - with breaking change as final resort.
 ## Break as softly as possible.
 Through adequate release planning and up-front migration development, we aim to facilitate platform stability and reduce development stress, providing adequate timelines for migration to new code.
@@ -20,7 +20,7 @@ If they cannot be released in parallel, new changes may live in a separate branc
 
 ## Example scenario
 ### Moving Components
-We may see fit to move components from one core repo to another so to adequately support that component's dependencies. Say, for example, we're at version 3.0.10 and It's decided that we will move `<XReduxyExampleComponent>` (`<XREC>`) component to another core repo.
+We may see fit to move components from one core repo to another so to adequately support that component's dependencies. Say, for example, we're at version 3.0.10 and It's decided that we will move `<XExampleComponent>` (`<XREC>`) component to another core repo.
 
 **Step 1:** We copy the component to its new home and merge those changes to the master of that repo. Changes are logged at the new repo.
 

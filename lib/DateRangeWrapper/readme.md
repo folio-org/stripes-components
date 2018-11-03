@@ -2,18 +2,18 @@
 
 Primitive for setting up two Datepickers to assemble a date range structure. Dates outside of the range (before the start date or after the end date) are excluded. Makes use of render props and prop getters to allow for variable layouts of the components within.
 
-## With Redux-form Fields
-While it can certainly be used with vanilla Datepickers, a common use-case of FOLIO forms will be redux-form.
-Used with Redux-form, we need to apply a custom value getter. Here's what that code looks like.
+## With Final Form Fields
+While it can certainly be used with vanilla Datepickers, a common use-case of FOLIO forms will be `react-final-form`.
+Used with Final Form, we need to apply a custom value getter. Here's what that code looks like.
 ```
   import { DateRangeWrapper, Datepicker } from '@folio/stripes/components'
 
-    // with redux-form, best value comes in the 2nd param...
+    // with react-final-form, best value comes in the 2nd param...
     const getter = (e, value) => {
       return value;
     };
 
-    // bring in redux-form's initialValues to get initial dates, if there are any.
+    // bring in react-final-form's initialValues to get initial dates, if there are any.
     const {
       initialValues
     } = this.props;

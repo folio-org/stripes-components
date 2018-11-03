@@ -4,7 +4,7 @@ Convenient wrapper component for sets of radio buttons. Will pass `name` prop as
 The component will automatically render radio buttons within a `<FieldGroup>` with the value for the `label` prop applied as a `<legend>`. Non-`<RadioButton>` children can also be passed for alternative layouts, but **RadioButtons should still be direct descendants**.
 
 ## Usage
-Example with redux-form `<Field>` component:
+Example with `react-final-form` `<Field>` component:
 
 ```
 <Field label="Acting as" name="subGroup" component={RadioButtonGroup}>
@@ -26,5 +26,5 @@ label | string or node | Content to render in the `<legend>` tag of the created 
 `onBlur` | func |  | |
 `onChange` | func | | |
 `onFocus` | func | | |
-value | string | Sets default value for radio button set - **Not necessary for redux-form - will use the form's initialValues prop instead** | | |
+value | string | Sets default value for radio button set - **Not necessary for react-final-form - will use the form's initialValues prop instead** | | |
 warning | string | | | |

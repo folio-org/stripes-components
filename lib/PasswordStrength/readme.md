@@ -6,7 +6,7 @@ Password strength component is a wrapper around `TextField`, which indicates pas
 
 ### Properties
 
-Properties are the same as in `TextField`. But it also uses three own properties: 
+Properties are the same as in `TextField`. But it also uses three own properties:
   * inputColProps: PropTypes.object,
   > Properties for column that includes `TextField`
   * passwordMeterColProps: PropTypes.object,
@@ -19,8 +19,8 @@ The following code shows how to use password strength meter.
 
 ```javascript
 import { PasswordStrength } from '@folio/stripes-components';
-import { Field } from 'redux-form';
- 
+import { Field } from 'react-final-form';
+
  <Field
     component={PasswordStrength}
     type="password"

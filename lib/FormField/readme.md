@@ -31,7 +31,7 @@ For an example, see [`<Checkbox>`](../Checkbox).
 ## Props
 Name | type | description | required
 --- | --- | --- | ---
-`WrappedComponent` | node | Component to `redux-form`-ify | Yes
+`WrappedComponent` | node | Component to `react-final-form`-ify | Yes
 `config` | function | If provided, will map logic from `props.input` and `props.meta` to props on the `WrappedComponent` | No
 
 ## Learning

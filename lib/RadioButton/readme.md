@@ -32,14 +32,14 @@ labelStyle | string | | | false
 marginBottom0 | bool | Styles the input with no bottom margin. | false | false
 name | string | | | false
 onBlur | func | | | false
-onChange | func | Event handler for the input's `onChange` event. **This prop isn't necessary if part of a redux-form (see below)** | | false
+onChange | func | Event handler for the input's `onChange` event. **This prop isn't necessary if part of a react-final-form (see below)** | | false
 onFocus | func | | | false
 readOnly | bool | Renders the field as "read only" | | false
-value | string | Sets the selected value for the input. **This prop isn't necessary if part of a redux-form (see below)** | | false
+value | string | Sets the selected value for the input. **This prop isn't necessary if part of a react-final-form (see below)** | | false
 warning | string | | | false
 
 
-## Use with Redux Form
+## Use with React Final Form
 ```
 import { RadioButton } from '@folio/stripes/components';
 
@@ -62,4 +62,4 @@ import { RadioButton } from '@folio/stripes/components';
   />
 ```
 
-[`<RadioButtonGroup>`](../RadioButtonGroup) makes working with Redux Form easier.
+[`<RadioButtonGroup>`](../RadioButtonGroup) makes working with React Final Form easier.

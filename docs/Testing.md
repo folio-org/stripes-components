@@ -242,16 +242,16 @@ import { selectorFromClassnameString } from '../../../tests/helpers';
 const btnClass = selectorFromClassnameString(`.${css.button}`);
 ```
 
-### "I need the `stripes`/`redux`/`intl` context"
+### "I need the `stripes`/`intl` context"
 
 **Components should be able to be tested in complete isolation.**
 
 Components are meant to be reusable and composable. By having a
 component rely on any context, they lose their reusability and make it
 more difficult to compose them without the required context. A prime
-example of this are the various `redux-form` reliant field
+example of this are the various `react-final-form` reliant field
 components. It was _impossible_ to use many of these components
-outside of a `redux-form` connected HOC, [until
+outside of a `react-final-form` connected HOC, [until
 recently](https://issues.folio.org/browse/STCOM-269).
 
 In fact, React is [deprecating the previously experimental context

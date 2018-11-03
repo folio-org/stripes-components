@@ -17,7 +17,7 @@ Form component for rendering arrays of editable data.
 />
 ```
 
-### With Redux Form
+### With React Final Form Arrays
 ```
 <FieldArray
   addLabel="+ Add author"
