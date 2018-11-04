@@ -30,24 +30,26 @@
 .modalHeader {
   position: relative;
   border-bottom: 1px solid var(--color-border-p2);
-  flex: 0, 0, 42px;
+  min-height: 2.75rem;
+  display: flex;
+  padding: 0.5em;
+  flex-direction: row-reverse;
 }
 
 .modalFooter {
   border-top: 1px solid var(--color-border-p2);
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   flex-flow: row-reverse wrap;
 }
 
 .modalLabel {
+  align-items: center;
+  padding: 0 1em;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  min-height: 2.75em;
-  padding: 0 1em;
+  text-align: center;
 }
 
 .modalContent {
@@ -60,21 +62,12 @@
 }
 
 .modalControls {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
+  flex: 1;
   display: flex;
-  width: 100%;
-  pointer-events: none;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: end;
 }
 
 .closeModal {
-  background-color: transparent;
-  border: 0;
-  padding: 0;
   pointer-events: all;
 }
 

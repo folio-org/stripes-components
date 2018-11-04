@@ -12,7 +12,7 @@
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 0.125rem 1rem;
+  padding: var(--input-vertical-padding) 0.75em;
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
@@ -21,9 +21,9 @@
   transition: background-color 0.25s, color 0.25s, opacity 0.07s;
   background-color: transparent;
   border: transparent;
-  margin: 0 0 var(--gutter);
+  margin: 0;
   white-space: nowrap;
-  line-height: 1.85;
+  line-height: var(--line-height);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,9 @@
   outline: 0;
   opacity: 1;
   font-weight: var(--text-weight-button);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
+  min-height: 1.75em;
+  vertical-align: middle;
 
   &.block {
     display: block;
@@ -117,6 +119,21 @@
     background-color: var(--danger);
     border: 1px solid var(--danger);
     color: #fff;
+  }
+
+  /**
+  * Button style plain
+  */
+
+  &.plain {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--color-icon);
+
+    &:hover {
+      background-color: var(--color-fill-hover);
+      border: 1px solid var(--color-border);
+    }
   }
 
   &.dropdownActive {
@@ -241,6 +258,38 @@
 
   &.slim {
     padding: 0.125rem 0.5rem;
+  }
+
+  /**
+   * Sizes
+   */
+
+  &.xx-small {
+    font-size: var(--font-size-xx-small);
+  }
+
+  &.x-small {
+    font-size: var(--font-size-x-small);
+  }
+
+  &.small {
+    font-size: var(--font-size-small);
+  }
+
+  &.medium {
+    font-size: var(--font-size-medium);
+  }
+
+  &.large {
+    font-size: var(--font-size-large);
+  }
+
+  &.x-large {
+    font-size: var(--font-size-x-large);
+  }
+
+  &.xx-large {
+    font-size: var(--font-size-xx-large);
   }
 }
 

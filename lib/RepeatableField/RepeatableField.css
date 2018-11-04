@@ -16,7 +16,7 @@
 }
 
 .repeatableFieldRemoveItem {
-  flex: 0 0 3em;
-  margin-top: 1.75em;
+  flex: 0 0 4em;
+  margin-top: calc(var(--font-size-small) * var(--line-height) + 0.25rem);
   text-align: center;
 }
