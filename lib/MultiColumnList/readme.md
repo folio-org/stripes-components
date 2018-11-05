@@ -38,11 +38,11 @@ Here's an example from the Users-module:
     contentData={...}
     visibleColumns={['actionDate', 'action', 'dueDate', 'itemStatus', 'source']}
     columnMapping={{
-    action: formatMessage({ id: 'ui-users.loans.columns.action' }),
-    actionDate: formatMessage({ id: 'ui-users.loans.columns.actionDate' }),
-    dueDate: formatMessage({ id: 'ui-users.loans.columns.dueDate' }),
-    itemStatus: formatMessage({ id: 'ui-users.loans.columns.itemStatus' }),
-    source: formatMessage({ id: 'ui-users.loans.columns.source' }),
+      action: <FormattedMessage id="ui-users.loans.columns.action" />,
+      actionDate: <FormattedMessage id="ui-users.loans.columns.actionDate" />,
+      dueDate: <FormattedMessage id="ui-users.loans.columns.dueDate" />,
+      itemStatus: <FormattedMessage id="ui-users.loans.columns.itemStatus" />,
+      source: <FormattedMessage id="ui-users.loans.columns.source" />,
     }}
   />
 ```
