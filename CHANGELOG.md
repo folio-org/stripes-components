@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 4.6.0 (In Progress)
+## 5.0.0 (IN PROGRESS)
 
 * Add `inputRef` prop to `<TextField>`. Part of STCOM-372.
 * Deprecate `getInput()` and `focusInput()` methods of `TextField`. Part of STCOM-372.
