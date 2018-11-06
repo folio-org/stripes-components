@@ -73,7 +73,6 @@ Component | doc | categories
 [`<IfInterface>`](lib/IfInterface) | [doc](lib/IfInterface/readme.md) | utility
 [`<IfPermission>`](lib/IfPermission) | [doc](lib/IfPermission/readme.md) | utility
 [`<InfoPopover>`](lib/InfoPopover) | [doc](lib/InfoPopover/readme.md) | control, prefab
-[`<InjectIntl>`](lib/InjectIntl) | [doc](lib/InjectIntl/readme.md) | utility
 [`<KeyValue>`](lib/KeyValue) | [doc](lib/KeyValue/readme.md) | data-display
 [`<Layer>`](lib/Layer) | [doc](lib/Layer/readme.md) | structure
 [`<Layout>`](lib/Layout) | | structure
