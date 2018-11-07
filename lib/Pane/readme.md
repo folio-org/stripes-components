@@ -57,25 +57,18 @@ const searchHeader = <FilterPaneSearch id="SearchField" {...otherProps} />;
 ```
 
 ### Pane Action Menu
-Activate the Pane Action Menu by supplying an array of objects to the `actionMenuItems` prop.
-```js
-const actionMenuItems = [
-  {
-    label: 'Edit',
-    onClick: () => { console.log('Clicked!') }, // Using "onClick" will render a <button>
-    id: 'some-id' // Other keys such as id, className, title etc. will be spread on each action menu item
-  },
-  {
-    label: 'Jump to section',
-    href: '#section-id', // Using "href" will render a <a>
-  },
-  {
-    label: 'Go to user',
-    to: '/user/xxx', // Using "to" will render the react-router's <Link>
-  },
-];
+Activate the Pane Action Menu by passing a function that returns a compponent to the `actionMenu`-prop.
 
-<Pane defaultWidth="20%" paneTitle="My title" actionMenuItems={actionMenuItems}>
+```js
+
+const myActionMenu = ({ onToggle }) => (
+    <div>
+        Your content..
+        <button onClick={onToggle}>Close</button>
+    </div>
+);
+
+<Pane defaultWidth="20%" paneTitle="My title" actionMenu={myActionMenu}>
     // Pane Content
 </Pane>
 ```
@@ -84,12 +77,12 @@ const actionMenuItems = [
 ### Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
+actionMenu | func | Activates the action menu dropdown. Expects a function that returns a component or node. | undefined |
 defaultWidth | string percentage or `"fill"` | Tells the pane the percentage of the paneset that it should occupy. A string percentage (`"25%"`) will render a pane with a width of 25% of its containing element. The string `"fill"` will cause the pane to occupy any remaining space in the paneset after percentage-sized panes are accounted for. |  | &#10004;
 height | string | css-value representation of a custom pane height. The maximum height of a Pane is 100% of the viewport (vh unit) - the height of the universal FOLIO header. A situation where you may need this is if the Pane (or Paneset) is wrapped in an unstyled element without any width/max-width set.  |  |
 dismissible | bool or "last"| If true, pane will render a close (&times;) button in its firstMenu. If "last" is supplied, the button will render in the lastMenu. | false |
 firstMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the beginning of the header. |  |
 lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the far end of the header. |  |
-actionMenuItems | array | Array of objects that will form an action menu which can be toggled by clicking on the pane header title |  |
 onClose | func | Callback fired when the pane is closed using its dismiss button. |  |
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  |
 paneTitleRef | func | function to set a ref to title element - great for managing focus when new panes are shown/updated. | |
