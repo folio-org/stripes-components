@@ -4,6 +4,7 @@
 
 * Remove `injectIntl()` fork
 * Simplify `ReduxFormField` usage
+* Updated Pane/PaneHeader to accept a `actionMenu`-prop. Added deprecation warning for the `actionMenuItems`-prop (STCOM-388)
 
 ## [4.3.1](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-11-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.0...v4.3.1)

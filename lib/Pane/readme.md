@@ -57,7 +57,9 @@ const searchHeader = <FilterPaneSearch id="SearchField" {...otherProps} />;
 ```
 
 ### Pane Action Menu
-Activate the Pane Action Menu by passing a function that returns a compponent to the `actionMenu`-prop.
+Activate the Pane Action Menu by passing a function that returns a component/node to the `actionMenu`-prop.
+
+The necessary props for closing the dropdown (onToggle) etc. will be passed into the function.
 
 ```js
 
