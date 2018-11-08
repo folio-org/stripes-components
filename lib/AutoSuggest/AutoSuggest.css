@@ -7,6 +7,8 @@
   right: 0;
   padding: 0;
   z-index: 1000;
+  max-height: 400px;
+  overflow: scroll;
   margin-top: -7px;
   text-align: left;
   list-style: none;
