@@ -11,6 +11,7 @@
 * `color` chokes on rgb/rgba; use hex values instead.
 * Validate presence of `props.onClick()` before calling it.
 * Allow node prop types for labels and validation messages
+* `<AutoSuggest>` updated with custom search and render functionality.
 
 ## [4.3.0](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-10-31)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.2.0...v4.3.0)
