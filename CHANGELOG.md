@@ -4,6 +4,7 @@
 
 * Remove `injectIntl()` fork
 * Simplify `ReduxFormField` usage
+* Don't pass `onSelectItem` to components that don't use it. Fixes STCOR-280. Available from 4.3.2.
 
 ## [4.3.1](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-11-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.0...v4.3.1)
