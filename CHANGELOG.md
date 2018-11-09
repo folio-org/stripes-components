@@ -4,6 +4,7 @@
 
 * Remove `injectIntl()` fork
 * Simplify `ReduxFormField` usage
+* Include `data-total-count` in `<MultiColumnList>'. Available from v4.3.2.
 
 ## [4.3.1](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-11-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.0...v4.3.1)
