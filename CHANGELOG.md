@@ -5,6 +5,8 @@
 * Remove `injectIntl()` fork
 * Simplify `ReduxFormField` usage
 * Updated Pane/PaneHeader to accept a `actionMenu`-prop. Added deprecation warning for the `actionMenuItems`-prop (STCOM-388)
+* Include `data-total-count` in `<MultiColumnList>'. Available from v4.3.2.
+* Don't pass `onSelectItem` to components that don't use it. Fixes STCOR-280. Available from 4.3.2.
 
 ## [4.3.1](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-11-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.0...v4.3.1)
@@ -12,6 +14,7 @@
 * `color` chokes on rgb/rgba; use hex values instead.
 * Validate presence of `props.onClick()` before calling it.
 * Allow node prop types for labels and validation messages
+* `<AutoSuggest>` updated with custom search and render functionality.
 
 ## [4.3.0](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-10-31)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.2.0...v4.3.0)
