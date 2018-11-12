@@ -3,8 +3,7 @@ Basic component for rendering a modal pop-up.
 ### Usage
 
 ```js
-import Modal from '@folio/stripes-components/lib/Modal';
-import Button from '@folio/stripes-components/lib/Button';
+import { Button, Modal } from '@folio/stripes/components';
 
 // Add a footer to the modal (optional)
 const footer = (

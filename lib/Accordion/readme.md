@@ -5,7 +5,7 @@ Make parts of the UI collapsible using this component.
 ## Basic Usage
 
 ```
-import { AccordionSet, Accordion } from '@folio/stripes-components/lib/Accordion';
+import { AccordionSet, Accordion } from '@folio/stripes/components';
 
 ...
 <AccordionSet>
@@ -42,7 +42,7 @@ Keyboard support comes packaged with use of the `<AccordionSet>`. The keys are a
 Accordions can, of course, be controlled by state or local resource. Simply include an object with a list of keys for each accordion's `id` set to a boolean value that will be passed through to the corresponding accordion's `open` prop. This object should be passed to the `<AccordionSet>`'s `accordionStatus` prop. An `onToggle` handler will also need to be provided for proper state interaction. Passed to the `<AccordionSet>`'s `onToggle` prop, it will receive both the label and id of the target accordion, either of which could be used for additional interactions as needed.
 
 ```
-import { AccordionSet, Accordion } from '@folio/stripes-components/lib/Accordion';
+import { AccordionSet, Accordion } from '@folio/stripes/components';
 
 ... // state or manifest/local resource.
 

@@ -149,13 +149,18 @@
   }
 
   & .labelArea {
-    padding-left: 4px;
+    padding-left: 0.25em;
     color: var(--color-text-p2);
   }
 }
 
-svg.filterSetHeaderIcon {
-  fill: var(--color-text-p2);
+.defaultHeaderIcon {
+  color: var(--color-icon);
+  padding: 0.25em;
+}
+
+.filterSetHeaderIcon {
+  fill: var(--color-icon);
 }
 
 .clearButtonVisible {

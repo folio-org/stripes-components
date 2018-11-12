@@ -8,7 +8,7 @@ Dropdown makes use of [react-tether](https://github.com/souporserious/react-teth
 This basic version sets up a dropdown with it's open/closed status controlled by state. Note that the `onToggle` handler is passed to both the `<Dropdown>` component and the `<DropdownMenu>` component. `<DropdownMenu>` sets up listeners so that the `onToggle` function will be called if the user clicks anywhere outside of the menu in the DOM.
 
 ```
-import { Dropdown } from '@folio/stripes-components/lib/Dropdown';
+import { Dropdown } from '@folio/stripes/components';
 
 //...
 
@@ -83,8 +83,7 @@ If the module is unable to keep track of the `<Dropdown>`'s open/closed status w
 Note :Adding `<MenuItem itemMeta={{metaData:'data' }}>` for the children in the `<DropdownMenu>` will have an ability to close the dropdown on clicking the menuItems element and be able to pass in any meta data specific to the items.
 
 ```
-import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
-import MenuItem from '@folio/stripes-components/lib/MenuItem';
+import { MenuItem, UncontrolledDropdown } from '@folio/stripes/components';
 
   <UncontrolledDropdown
       id="uniqueid"
@@ -135,11 +134,11 @@ Replace imports and make sure to update following props
 
 1) Change
 ```
-import {Dropdown} from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 ```
 To
 ```
-import {Dropdown} from '@folio/stripes-components/lib/Dropdown';
+import { Dropdown } from '@folio/stripes/components';
 
 ```
 

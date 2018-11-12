@@ -6,7 +6,7 @@ Component to render a small pop-up "tip" once a trigger element is clicked. Clic
 
 Similar to `<Dropdown>`, `<Popover>` requires at least two children - their roles are defined by setting their `data-role` attributes to `target` or `popover`.
 ```
-import Popover from '@folio/stripes-components/lib/Popover';
+import { Popover } from '@folio/stripes/components';
 <Popover>
   <Button data-role="target">Test Popover</Button>
   <p data-role="popover">Lorem ipsum delor sit amet...</p>

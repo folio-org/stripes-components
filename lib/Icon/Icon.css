@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  vertical-align: -0.125em;
 
   &:focus {
     outline: none;
@@ -12,7 +13,25 @@
 }
 
 :global .stripes__icon {
-  fill: var(--color-icon);
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+}
+
+/**
+ * Sizes
+ */
+
+.small {
+  font-size: 0.83em;
+}
+
+.medium {
+  font-size: 1em;
+}
+
+.large {
+  font-size: 1.17em;
 }
 
 /**
@@ -20,68 +39,23 @@
  */
 .status-error {
   color: var(--error);
-
-  & svg {
-    fill: var(--error);
-  }
 }
 
 .status-warn {
   color: var(--warn);
-
-  & svg {
-    fill: var(--warn);
-  }
 }
 
 .status-success {
   color: var(--success);
-
-  & svg {
-    fill: var(--success);
-  }
-}
-
-/**
- * Sizing
- */
-
-.small svg {
-  height: 14px;
-  width: 14px;
-  min-width: 14px;
-}
-
-.medium svg {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-}
-
-.large svg {
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
 }
 
 /**
  * Specific styling for spinner
  * (Spinner is likely to be deprecated later on)
  */
-
-.iconSpinner.small {
-  width: 40px;
-  height: 20px;
-}
-
-.iconSpinner.medium {
-  width: 60px;
-  height: 30px;
-}
-
-.iconSpinner.large {
-  width: 100px;
-  height: 50px;
+.iconSpinner {
+  width: 1em;
+  height: 0.5em;
 }
 
 /**
@@ -115,7 +89,7 @@ Note: Using pseudo elements to add spacing for RTL support
 .label::after {
   content: '';
   display: none;
-  width: 0.22em;
+  width: 0.35em;
 }
 
 .icon-position-start .label::before,

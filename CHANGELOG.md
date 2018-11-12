@@ -1,6 +1,22 @@
 # Change history for stripes-components
 
-## 4.3.0 (IN PROGRESS)
+## 4.4.0 (IN PROGRESS)
+
+* Remove `injectIntl()` fork
+* Simplify `ReduxFormField` usage
+* Include `data-total-count` in `<MultiColumnList>'. Available from v4.3.2.
+* Don't pass `onSelectItem` to components that don't use it. Fixes STCOR-280. Available from 4.3.2.
+
+## [4.3.1](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-11-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.0...v4.3.1)
+
+* `color` chokes on rgb/rgba; use hex values instead.
+* Validate presence of `props.onClick()` before calling it.
+* Allow node prop types for labels and validation messages
+* `<AutoSuggest>` updated with custom search and render functionality.
+
+## [4.3.0](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-10-31)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.2.0...v4.3.0)
 
 * Make label margins consistent
 * Add ability to filter items in EntrySelector. Fixes STCOM-367.
@@ -9,6 +25,9 @@
 * Removed title attribute from AppIcon (STCOR-268) and minor line-height fix
 * Fixed `<Layout>`'s `padding-end-gutter` rule.
 * Use a CSS class to indicate whether `<EntrySelector>` has any entries. Available from v4.2.2.
+* Added more flexbox classes to `<Layout>`. Available from v4.2.4.
+* Resize icons
+* Export `<NavListItem>`
 
 ## [4.2.0](https://github.com/folio-org/stripes-components/tree/v4.2.0) (2018-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.1.0...v4.2.0)

@@ -3,7 +3,7 @@ Renders headlines in different sizes and with different tags, margins and styles
 
 ### Basic Usage
 ```
-  import Headline from '@folio/stripes-components/lib/Headline';
+  import { Headline } from '@folio/stripes/components';
 
   <Headline size="large" margin="medium" tag="h3">
     My headline

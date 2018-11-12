@@ -15,12 +15,20 @@
   justify-content: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .display-inline-flex {
   display: inline-flex;
 }
 
 .display-flex {
   display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
 }
 
 /**

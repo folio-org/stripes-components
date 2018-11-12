@@ -98,13 +98,13 @@
 }
 
 .input:checked + .labelPseudo {
-  background-color: #000;
+  background-color: #fff;
 
   &::after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
-    background-color: #fff;
+    background-color: #000;
   }
 }
 

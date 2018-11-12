@@ -18,9 +18,7 @@ A `<Row>` is a container that spans the width of its parent element. It nests on
 
 ```
 import React from 'react';
-import Paneset from '@folio/stripes-components/lib/Paneset';
-import Pane from '@folio/stripes-components/lib/Pane';
-import { Row, Col } from '@folio/stripes-components/lib/LayoutGrid';
+import { Col, Pane, Paneset, Row } from '@folio/stripes/components';
 
 class LayoutExample extends React.Component {
   render() {

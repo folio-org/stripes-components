@@ -34,6 +34,6 @@ import { Row, Col } from 'react-bootstrap';
 ```
 To
 ```
-import { Row, Col } from '@folio/stripes-components/lib/LayoutGrid';
+import { Row, Col } from '@folio/stripes/components';
 
 ```

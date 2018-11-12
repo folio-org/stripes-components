@@ -11,19 +11,15 @@ When doing this:
 `input` is mostly events, and `meta` is mostly computed properties of the form field.
 
 ## Usage
-To normalize the `input` and `meta` props injected by Redux Form:
+`reduxFormField()` will pass along the `input` props as-is. To normalize the `meta` props injected by Redux Form:
 ```jsx
-import reduxFormField from '@folio/stripes-components/lib/ReduxFormField';
-
 function ExampleComponent({ value, onChange, warning, error }) => (
   <div>{warning}</div>
 );
 
 export default reduxFormField(
   ExampleComponent,
-  ({ input, meta }) => ({
-    value: input.value,
-    onChange: input.onChange,
+  ({ meta }) => ({
     warning: (meta.touched && meta.warning ? meta.warning : ''),
     error: (meta.touched && meta.error ? meta.error : '')
   })

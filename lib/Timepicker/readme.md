@@ -2,7 +2,7 @@
 Form element for selecting a time.
 ## Usage
 ```
-import Timepicker from '@folio/stripes-components/lib/Timepicker';
+import { Timepicker } from '@folio/stripes/components';
 
 // later in your JSX....
 <Timepicker />
@@ -18,6 +18,20 @@ Name | type | description | default | required
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
+
+## Working with Times
+
+Using a `value` that does not include any timezone information, the
+time is assumed by `moment()` to be in the local timezone. When the
+local timezone is east of UTC, such as `+03:00`, and converted to UTC
+for internationalization formatting, the offset will be subtracted
+from the time. For example, a value of `12:00` will appear as `9:00`
+UTC when viewed in the EEST timezone.
+
+When comparing or manipulating dates, it is safest to operate in UTC
+mode and leave display formatting to internationalization helpers. If
+using moment, this can be done via
+[`moment.utc()`](http://momentjs.com/docs/#/parsing/utc/).
 
 ## Usage in Redux-form
 Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.

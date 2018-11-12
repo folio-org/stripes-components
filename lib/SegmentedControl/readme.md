@@ -4,7 +4,7 @@ Creates a split button set that can be used for filters, tabs, and other subnavi
 ## Usage
 `<SegmentedControl>` will accept one or more `<Button>` components as children. **Each child button should have its own unique `id` prop.**
 ```
-import SegmentedControl from '@folio/stripes-components/lib/SegmentedControl';
+import { SegmentedControl } from '@folio/stripes/components';
 // ...
 /* define a handler for activation.
 * It should accept an object containing an 'id' key.

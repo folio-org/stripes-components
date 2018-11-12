@@ -3,7 +3,7 @@ Display a small information icon which can be toggled by clicking on it.
 
 ## Basic Usage
 ```
-  import InfoPopover from '@folio/stripes-components/lib/InfoPopover';
+  import { InfoPopover } from '@folio/stripes/components';
 
   <InfoPopover
     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
