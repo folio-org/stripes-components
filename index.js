@@ -65,6 +65,7 @@ export { default as NavListSection } from './lib/NavListSection';
 export { default as Popover } from './lib/Popover';
 export { default as Selection, OptionSegment } from './lib/Selection';
 export { default as SRStatus } from './lib/SRStatus';
+export { default as PasswordStrength } from './lib/PasswordStrength';
 
 /* structures */
 export { default as ConfirmationModal } from './lib/ConfirmationModal';
