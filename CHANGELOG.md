@@ -10,6 +10,7 @@
 * Introduce `tagName` prop on `<Pane>`
 * Update `<Modal>` `propTypes`
 * Cancel `<Callout>`'s timers on unmount.
+* Upgrade dependency on `stripes-react-hotkeys` to version 2.0.0.
 
 ## [4.3.1](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-11-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.0...v4.3.1)
