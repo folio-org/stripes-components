@@ -60,7 +60,8 @@ class FieldList {
     return this;
   }
 }
-export default function exportToCsv(objectArray, opts) {
+
+export default function exportToCsv(objectArray, intl, opts) {
   if (!(objectArray && objectArray.length > 0)) {
     // console.debug('No data to export');
     return;
@@ -73,16 +74,28 @@ export default function exportToCsv(objectArray, opts) {
   const {
     excludeFields,           // do not include these fields
     explicitlyIncludeFields, // ensure to include these fields
-    onlyFields               // only use these fields
   } = options;
 
-  // The default behavior is to use the keys on the first object as the list of fields
+  let { onlyFields } = options;
 
+  // if columnHeaders and module name both are passed in onlyFields, then use translations to build the column headers
+  const { columnHeaders, module } = onlyFields;
+
+  if (columnHeaders && module) {
+    onlyFields = columnHeaders.map(item => {
+      return {
+        label: intl.formatMessage({ id: `${module}.${item}` }),
+        value: item
+      };
+    });
+  }
+
+  // The default behavior is to use the keys on the first object as the list of fields
   const fields = new FieldList(objectArray, onlyFields)
     .omit(excludeFields)
     .ensureToInclude(explicitlyIncludeFields).list;
 
-  const parser = new Parser({ fields });
+  const parser = new Parser({ fields, flatten: true });
   const csv = parser.parse(objectArray);
   triggerDownload(csv);
 }
