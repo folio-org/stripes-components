@@ -456,6 +456,16 @@
     mousetrap "^1.6.1"
     prop-types "^15.5.10"
 
+"@folio/stripes-react-hotkeys@^2.0.0":
+  version "2.0.0"
+  resolved "https://repository.folio.org/repository/npm-folio/@folio/stripes-react-hotkeys/-/stripes-react-hotkeys-2.0.0.tgz#5b30a6f59b6e45c6c5862e98532a60905fabdf98"
+  integrity sha512-ABCVncX8Kr8CYbfgqKeQW1bvaN5j8uY21zWrTtC68OLVs+/9nCQqWDmccHn/UK37gjKaIVR//oqgjodQQwmCTw==
+  dependencies:
+    create-react-class "^15.5.3"
+    lodash "^4.17.4"
+    mousetrap "^1.6.1"
+    prop-types "^15.5.10"
+
 "@folio/stripes-testing@^1.0.0":
   version "1.0.1"
   resolved "https://repository.folio.org/repository/npm-folio/@folio/stripes-testing/-/stripes-testing-1.0.1.tgz#a84977a8a8aaadb66e82f44f27938fbc2718404f"
@@ -5442,6 +5452,11 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
+faker@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/faker/-/faker-4.1.0.tgz#1e45bbbecc6774b3c195fad2835109c6d748cc3f"
+  integrity sha1-HkW7vsxndLPBlfrSg1EJxtdIzD8=
+
 fast-deep-equal@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz#c053477817c86b51daa853c81e059b733d023614"
@@ -6438,14 +6453,7 @@ hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0, hoist-non-react-
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
 
-hoist-non-react-statics@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.1.0.tgz#42414ccdfff019cd2168168be998c7b3bd5245c0"
-  integrity sha512-MYcYuROh7SBM69xHGqXEwQqDux34s9tz+sCnxJmN18kgWh6JFdTw/5YdZtqsOdZJXddE/wUpCzfEdDrJj8p0Iw==
-  dependencies:
-    react-is "^16.3.2"
-
-hoist-non-react-statics@^3.1.0:
+hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.1.0.tgz#42414ccdfff019cd2168168be998c7b3bd5245c0"
   integrity sha512-MYcYuROh7SBM69xHGqXEwQqDux34s9tz+sCnxJmN18kgWh6JFdTw/5YdZtqsOdZJXddE/wUpCzfEdDrJj8p0Iw==
@@ -13021,6 +13029,11 @@ table@^5.0.0, table@^5.0.2:
     lodash "^4.17.10"
     slice-ansi "1.0.0"
     string-width "^2.1.1"
+
+tai-password-strength@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/tai-password-strength/-/tai-password-strength-1.1.1.tgz#24e086fb841bafaf040ed3eb5225a7ba637bfe04"
+  integrity sha512-TWegb9WLAaU0Sx4cxpwpUSIGE+Jz8+VJCQBvXYoeOWDUZ6aobyvzQbPEqwEkleZ9AE3JfX6G3ytRbo4OHZbjog==
 
 tapable@^0.1.8:
   version "0.1.10"
