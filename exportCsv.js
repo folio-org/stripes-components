@@ -61,7 +61,7 @@ class FieldList {
   }
 }
 
-export default function exportToCsv(objectArray, intl, opts) {
+export default function exportToCsv(objectArray, opts, intl) {
   if (!(objectArray && objectArray.length > 0)) {
     // console.debug('No data to export');
     return;
@@ -79,12 +79,11 @@ export default function exportToCsv(objectArray, intl, opts) {
   let { onlyFields } = options;
 
   // if columnHeaders and module name both are passed in onlyFields, then use translations to build the column headers
-  const { columnHeaders, module } = onlyFields;
 
-  if (columnHeaders && module) {
-    onlyFields = columnHeaders.map(item => {
+  if (onlyFields && onlyFields.columnHeaders && onlyFields.module) {
+    onlyFields = onlyFields.columnHeaders.map(item => {
       return {
-        label: intl.formatMessage({ id: `${module}.${item}` }),
+        label: intl.formatMessage({ id: `${onlyFields.module}.${item}` }),
         value: item
       };
     });
