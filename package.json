@@ -100,8 +100,8 @@
     "react-router-dom": "^4.1.1",
     "react-tether": "^1.0.1",
     "react-transition-group": "^2.2.1",
-    "typeface-source-sans-pro": "^0.0.44",
-    "tai-password-strength": "^1.1.1"
+    "tai-password-strength": "^1.1.1",
+    "typeface-source-sans-pro": "^0.0.44"
   },
   "peerDependencies": {
     "@folio/stripes-core": "^2.13.0"
