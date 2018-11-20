@@ -64,5 +64,12 @@
   "multiSelection.removeSelectedButtonDescription": "Press enter or spacebar to remove item from selection list. Home and end keys navigate to the first or last items.",
   "multiSelection.removeSelectedButtonLabel": "remove value",
   "readonly": "Read-only",
-  "endOfList": "End of list"
+  "endOfList": "End of list",
+  "passwordStrength.veryWeak": "Your password is very weak.",
+  "passwordStrength.weak": "Your password is too weak.",
+  "passwordStrength.reasonable": "Your password is reasonable.",
+  "passwordStrength.strong": "Your password is strong.",
+  "passwordStrength.veryStrong": "Your password is very strong.",
+  "passwordStrength.infoPopoverText": "Include digits/symbols or make your password longer and more random",
+  "passwordStrength.label": "Password strength:"
 }
