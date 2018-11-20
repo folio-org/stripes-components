@@ -256,7 +256,7 @@
  */
 
 /* No margin on dropdownItem's */
-.button.dropdownItem { 
+.button.dropdownItem {
   margin: 0;
 }
 
@@ -273,5 +273,4 @@
   &:focus {
     outline: none;
   }
-} 
-
+}
