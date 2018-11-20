@@ -1,5 +1,10 @@
 @import '../variables.css';
 
+:root {
+  --button-default-vertical-padding: 0.125rem;
+  --button-default-horizontal-padding: var(--gutter);
+}
+
 /**
 * Default styling
 */
@@ -12,7 +17,7 @@
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 0.125rem 1rem;
+  padding: var(--button-default-vertical-padding) var(--button-default-horizontal-padding);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
@@ -125,20 +130,6 @@
       border: 1px solid var(--danger);
     }
 
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &.dropdownItem {
-    margin: 0;
-    background-color: transparent;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    &:hover,
     &:focus {
       outline: none;
     }
@@ -259,3 +250,28 @@
     }
   }
 }
+
+/**
+ * Dropdown Item style
+ */
+
+/* No margin on dropdownItem's */
+.button.dropdownItem { 
+  margin: 0;
+}
+
+.dropdownItem {
+  composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
+  padding: var(--button-default-vertical-padding) 0;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+} 
+
