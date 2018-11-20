@@ -19,10 +19,11 @@
 
 .labelText {
   margin: 0 6px;
+  display: flex;
+  align-items: center;
 }
 
 .radioLabel {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   position: relative;
   line-height: var(--line-height);
@@ -42,14 +43,12 @@
   }
 }
 
-.labelFocused {
-  composes: isFocused from "../sharedStyles/interactionStyles.css";
+.labelInteractionStyles {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
 }
 
-.input {
-  position: absolute;
-  z-index: -1;
-  clip: rect(1px, 1px, 1px, 1px);
+.labelFocused {
+  composes: isFocused from "../sharedStyles/interactionStyles.css";
 }
 
 .labelPseudo {
@@ -72,6 +71,24 @@
   left: 2px;
   border-radius: 999px;
   transition: all 0.2s ease;
+}
+
+.labelDisabled {
+  color: var(--color-text-p2);
+
+  &:hover {
+    cursor: not-allowed;
+  }
+
+  & .labelPseudo {
+    opacity: 0.5;
+  }
+}
+
+.input {
+  position: absolute;
+  z-index: -1;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .input:not(:checked) + .labelPseudo::after {

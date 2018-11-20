@@ -10,7 +10,7 @@
   --color-fill-table-row-odd: rgba(0, 0, 0, 0.05);
   --color-fill-form-element: var(--color-fill);
   --color-fill-current: rgba(0, 0, 0, 0.62);
-  --color-fill-disabled: rgba(0, 0, 0, 0.05);
+  --color-fill-disabled: rgba(0, 0, 0, 0.15);
   --color-fill-hover: rgba(37, 118, 195, 0.2);
   --color-fill-focus: rgba(37, 118, 195, 0.3);
   --color-fill-active: var(--primary);

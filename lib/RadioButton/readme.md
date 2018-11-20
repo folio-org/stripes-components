@@ -34,6 +34,7 @@ name | string | | | false
 onBlur | func | | | false
 onChange | func | Event handler for the input's `onChange` event. **This prop isn't necessary if part of a redux-form (see below)** | | false
 onFocus | func | | | false
+readOnly | bool | Renders the field as "read only" | | false
 value | string | Sets the selected value for the input. **This prop isn't necessary if part of a redux-form (see below)** | | false
 warning | string | | | false
 
