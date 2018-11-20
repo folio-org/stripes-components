@@ -51,6 +51,7 @@ export { default as Avatar } from './lib/Avatar';
 export { default as Callout, CalloutElement } from './lib/Callout';
 export { Dropdown, UncontrolledDropdown } from './lib/Dropdown';
 export { default as DropdownMenu } from './lib/DropdownMenu';
+export { default as MenuSection } from './lib/MenuSection';
 export { default as EntrySelector } from './lib/EntrySelector';
 export { default as FocusLink } from './lib/FocusLink';
 export { default as Headline } from './lib/Headline';
