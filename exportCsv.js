@@ -61,7 +61,7 @@ class FieldList {
   }
 }
 
-export default function exportToCsv(objectArray, opts, intl) {
+export default function exportToCsv(objectArray, opts) {
   if (!(objectArray && objectArray.length > 0)) {
     // console.debug('No data to export');
     return;
@@ -74,20 +74,8 @@ export default function exportToCsv(objectArray, opts, intl) {
   const {
     excludeFields,           // do not include these fields
     explicitlyIncludeFields, // ensure to include these fields
+    onlyFields,              // Only Fields to be included
   } = options;
-
-  let { onlyFields } = options;
-
-  // if columnHeaders and module name both are passed in onlyFields, then use translations to build the column headers
-
-  if (onlyFields && onlyFields.columnHeaders && onlyFields.module) {
-    onlyFields = onlyFields.columnHeaders.map(item => {
-      return {
-        label: intl.formatMessage({ id: `${onlyFields.module}.${item}` }),
-        value: item
-      };
-    });
-  }
 
   // The default behavior is to use the keys on the first object as the list of fields
   const fields = new FieldList(objectArray, onlyFields)
