@@ -66,6 +66,10 @@ export { default as Popover } from './lib/Popover';
 export { default as Selection, OptionSegment } from './lib/Selection';
 export { default as SRStatus } from './lib/SRStatus';
 export { default as PasswordStrength } from './lib/PasswordStrength';
+export {
+  CommandList,
+  HasCommand
+} from './lib/Commander';
 
 /* structures */
 export { default as ConfirmationModal } from './lib/ConfirmationModal';
