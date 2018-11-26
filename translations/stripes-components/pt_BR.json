@@ -63,5 +63,14 @@
     "multiSelection.removeSelectedButtonLabel": "remover o valor",
     "button.copy": "Copiar",
     "endOfList": "Fim da lista",
-    "button.duplicate": "Duplicar"
+    "button.duplicate": "Duplicar",
+    "passwordStrength.veryWeak": "Sua senha é muito fraca.",
+    "passwordStrength.weak": "Sua senha é fraca.",
+    "passwordStrength.reasonable": "Sua senha é razoável.",
+    "passwordStrength.strong": "Sua senha é forte.",
+    "passwordStrength.veryStrong": "Sua senha é muito forte.",
+    "passwordStrength.infoPopoverText": "Inclua dígitos/símbolos ou torne sua senha mais longa e aleatória",
+    "passwordStrength.label": "Força da senha:",
+    "fieldIsDisabled": "Campo desativado",
+    "readonly": "Somente leitura"
 }
