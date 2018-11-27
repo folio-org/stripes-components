@@ -3,6 +3,7 @@
 ## 4.5.0 (IN PROGRESS)
 
 * Deprecate `<EntrySelector>`
+* Introduce `showUserLink` prop on `<MetaSection>`
 * Deprecate `<IfInterface>` and `<IfPermission>`, STCOM-357
 
 ## [4.4.0](https://github.com/folio-org/stripes-components/tree/v4.4.0) (2018-11-19)
