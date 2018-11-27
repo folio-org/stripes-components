@@ -12,11 +12,11 @@
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 0.125rem 1rem;
+  padding: 0.125rem var(--gutter);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
-  color: #555;
+  color: var(--color-text);
   border-radius: var(--radius);
   transition: background-color 0.25s, color 0.25s, opacity 0.07s;
   background-color: transparent;
@@ -126,22 +126,6 @@
     }
 
     &:focus {
-      outline: none;
-    }
-  }
-
-  &.dropdownItem {
-    text-align: left;
-    margin-bottom: 0;
-    background-color: transparent;
-    border: 1px solid transparent;
-    width: 100%;
-    display: block;
-    color: #555;
-
-    &:hover,
-    &:focus {
-      background-color: var(--bg-hover);
       outline: none;
     }
   }
@@ -259,5 +243,29 @@
     &.textAlignStart {
       text-align: right;
     }
+  }
+}
+
+/**
+ * Dropdown Item style
+ */
+
+/* No margin on dropdownItem's */
+.button.dropdownItem {
+  margin: 0;
+}
+
+.dropdownItem {
+  composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
+  padding: 0.125rem 0;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &:hover,
+  &:focus {
+    outline: none;
   }
 }

@@ -54,3 +54,12 @@ primary | string | |
 danger | string | |
 success | string | |
 warning | string | |
+
+### dropdownItem
+The 'dropdownItem' buttonStyle is useful for adding a list of buttons inside of dropdown menu's.
+
+```
+<Button buttonStyle="dropdownItem">
+    <Icon icon="duplicate">Duplicate</Icon>
+</Button>
+```
