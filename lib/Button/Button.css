@@ -1,10 +1,5 @@
 @import '../variables.css';
 
-:root {
-  --button-default-vertical-padding: 0.125rem;
-  --button-default-horizontal-padding: var(--gutter);
-}
-
 /**
 * Default styling
 */
@@ -17,7 +12,7 @@
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: var(--button-default-vertical-padding) var(--button-default-horizontal-padding);
+  padding: 0.125rem var(--gutter);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
@@ -262,7 +257,7 @@
 
 .dropdownItem {
   composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
-  padding: var(--button-default-vertical-padding) 0;
+  padding: 0.125rem 0;
   background-color: transparent;
   width: 100%;
   display: flex;
