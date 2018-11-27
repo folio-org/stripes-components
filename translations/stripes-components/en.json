@@ -65,6 +65,7 @@
   "multiSelection.removeSelectedButtonLabel": "remove value",
   "readonly": "Read-only",
   "endOfList": "End of list",
+  "readMore": "Read more",
   "passwordStrength.veryWeak": "Your password is very weak.",
   "passwordStrength.weak": "Your password is too weak.",
   "passwordStrength.reasonable": "Your password is reasonable.",
