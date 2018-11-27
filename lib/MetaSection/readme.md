@@ -1,5 +1,5 @@
 # MetaSection
-Simple component for displaying record metadata such as the last date/time a record was modified.
+Component for displaying record metadata such as the last date/time a record was modified.
 
 ## Usage
 ```
@@ -20,3 +20,4 @@ createdDate: | string | Date/time a record was created. |  |
 createdBy: | string/object | Name/record of the user who created the record. |  |
 id: | string | HTML id attribute assigned to accordion's root. |  |
 contentId: | string | HTML id attribute assigned to accordion's content |  |
+showUserLink | boolean | Should the user name link to the user record? Pass in permission | false |
