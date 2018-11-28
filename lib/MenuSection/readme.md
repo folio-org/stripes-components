@@ -2,9 +2,9 @@
 Define menu sections with labels. Useful for creating multisectioned dropdown menu's.
 
 ## Basic Usage
-`<MenuSection>` can be used to compose menus with a combination of various components passed as children. 
+`<MenuSection>` can be used to compose menus with a combination of various components passed as children.
 
-```js 
+```js
 import { MenuSection } from '@folio/stripes/components';
 
 <MenuSection id="menu-layout" label="Layout" labelTag="h3">
@@ -21,7 +21,7 @@ import { MenuSection } from '@folio/stripes/components';
 
 <MenuSection id="menu-actions" label="Actions" labelTag="h3">
   <Button buttonStyle="dropdownItem">
-    <Icon icon="trashBin">Delete</Icon>
+    <Icon icon="trash">Delete</Icon>
   </Button>
   <Button buttonStyle="dropdownItem">
     <Icon icon="edit">Batch edit</Icon>
