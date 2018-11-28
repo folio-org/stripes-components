@@ -51,7 +51,6 @@ Name | type | description | default | required
 `dirty` | bool | Apply a specific style when the value has changed. | false |
 `error` | string | Text to display as inline validation feedback for the user. A truthy value here will also apply validation styling to the control. | |
 `isValid` | bool | Whether or not field is valid. When true, specific styles are applied. | |
-`touched` | bool | Prop that controls application of validation styles. Redux-form applies this prop automatically. This defaults to false. | false |
 `validationEnabled` | bool | Controls whether or not validation styles are rendered. | false |
 `warning` | string | Text to display as inline validation feedback for the user. A truthy value here will also apply validation styling to the control. | |
 
