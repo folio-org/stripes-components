@@ -72,5 +72,6 @@
     "passwordStrength.infoPopoverText": "Include digits/symbols or make your password longer and more random",
     "passwordStrength.label": "Password strength:",
     "fieldIsDisabled": "Field is disabled",
-    "readonly": "Read-only"
+    "readonly": "Read-only",
+    "readMore": "Read more"
 }
