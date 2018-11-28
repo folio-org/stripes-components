@@ -6,6 +6,7 @@
 * Introduce `showUserLink` prop on `<MetaSection>`
 * Deprecate `<IfInterface>` and `<IfPermission>`, STCOM-357
 * Extend InfoPopover with new props (UIDATIMP-5).
+* Consistently name icons
 
 ## [4.4.0](https://github.com/folio-org/stripes-components/tree/v4.4.0) (2018-11-19)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.1...v4.4.0)

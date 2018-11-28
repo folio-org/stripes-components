@@ -14,7 +14,7 @@ import { Icon } from '@folio/stripes/components';
 // With a label:
 
 <Icon
-  icon="trashBin"
+  icon="trash"
   iconPosition="end"
 >
   Delete
