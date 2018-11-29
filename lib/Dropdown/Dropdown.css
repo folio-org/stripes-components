@@ -19,17 +19,17 @@
   display: none;
   float: left;
   min-width: 90vw;
-  font-size: 14px;
+  font-size: var(--font-size-medium);
   text-align: left;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 
   &.hasPadding {
-    padding: 15px;
+    padding: 1rem;
   }
 
   & ul {
@@ -38,13 +38,13 @@
   }
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .DropdownMenuTether {
     min-width: 40vw;
   }
 }
 
-@media (--largeUp) {
+@media (--large-up) {
   .DropdownMenuTether {
     min-width: 20vw;
   }

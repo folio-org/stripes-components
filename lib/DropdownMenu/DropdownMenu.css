@@ -10,14 +10,14 @@
   min-width: 90vw;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 14px;
+  font-size: var(--font-size-medium);
   text-align: left;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 
   & ul {
     list-style: none;
@@ -25,13 +25,13 @@
   }
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .DropdownMenu {
     min-width: 40vw;
   }
 }
 
-@media (--largeUp) {
+@media (--large-up) {
   .DropdownMenu {
     min-width: 20vw;
   }

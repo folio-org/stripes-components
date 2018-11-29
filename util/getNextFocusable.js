@@ -11,7 +11,7 @@ import contains from 'dom-helpers/query/contains';
 export default function getNextFocusable(currentElement, containing = true) { // eslint-disable-line consistent-return
   // add all elements we want to include in our selection
   // eslint-disable-next-line max-len
-  const focusableElements = 'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
+  const focusableElements = 'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
   let focusable = Array.prototype.filter.call(document.querySelectorAll(focusableElements),
     (element) => {
       // check for visibility while always include the current activeElement

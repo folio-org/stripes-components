@@ -1,0 +1,19 @@
+/**
+ * Float
+ */
+
+.right {
+  float: right;
+}
+
+[dir="rtl"] .right {
+  float: left;
+}
+
+.left {
+  float: left;
+}
+
+[dir="rtl"] .left {
+  float: right;
+}

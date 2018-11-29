@@ -1,6 +1,7 @@
 @import '../variables.css';
 
 .pane {
+  background: var(--bg);
   border-right: 1px solid var(--color-border);
   height: 100%;
   max-height: calc(100vh - 44px);
@@ -38,7 +39,7 @@
   }
 }
 
-@media (--mediumUp) {
+@media (--medium-up) {
   .pane {
     position: relative;
   }

@@ -2,7 +2,7 @@
 Select-style dropdown box with a filterable options list.
 ## Usage
 ```
-import Selection from '@folio/stripes-components/lib/Selection';
+import { Selection } from '@folio/stripes/components';
 
 // the dataOptions prop takes an array of objects with 'label' and 'value' keys
 const countriesOptions = [
@@ -29,8 +29,7 @@ const countriesOptions = [
 The `formatter` prop can be used to pass through a functional component that will be used to render the content of each of the options in the list as well as the selected value. The `<OptionSegment>` component allows control over the search highlighting of the string. The formatter should be prepared to accept an option (item from `dataOptions`) and the entered `searchTerm`. If no term is entered, `''` is passed. In this contrived example, both value and option strings are rendered in each option.
 
 ```
-import Selection from '@folio/stripes-components/lib/Selection';
-import { OptionSegment } from '@folio/stripes-components/lib/Selection';
+import { Selection, OptionSegment } from '@folio/stripes/components';
 
 const options = [
   { value: '', label: 'None' },

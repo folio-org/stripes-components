@@ -14,20 +14,19 @@
 
 .base {
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: var(--radius);
   background-color: #fff;
   width: 35%;
   pointer-events: all;
   position: relative;
   transition: all 0.2s ease;
   display: flex;
-  box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.39);
+  box-shadow: var(--shadow);
 
   &.error {
     background-color: color(var(--error, #900) tint(25%));
     border-color: var(--error);
     color: #fff;
-    box-shadow: 0 4px 19px 0 rgba(153, 0, 0, 0.39);
 
     & :global .stripes__icon {
       fill: #fff;
@@ -38,7 +37,6 @@
     background-color: color(var(--success, #060) tint(25%));
     border-color: var(--success);
     color: #fff;
-    box-shadow: 0 4px 19px 0 rgba(0, 112, 0, 0.39);
 
     & :global .stripes__icon {
       fill: #fff;
@@ -71,7 +69,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-radius: var(--radius, 4px);
+  border-radius: var(--radius);
   margin-bottom: 4px;
 
   & .message {

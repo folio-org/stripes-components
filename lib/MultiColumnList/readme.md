@@ -15,17 +15,37 @@ const catalogResults = [
 
 You can also specify a formatter object to control exactly how the data is rendered: see below.
 
-### Infinite Scroll
+### Infinite scroll
 For large lists of data the boolean prop `virtualize` can be turned on to efficiently display only the table rows that are visible to the user within the scrollable body of the list.
 
-### height and `autosize` props
+### Height and `autosize` props
 For efficiency, virtualization of list items requires a static `height` value (not percentage-based). If you're unsure how large the list's containing element will be, you can set the `autosize` prop to true - this will make the grid dynamically fill the space that it has, automatically using the resulting static width and height. This is ideal for the content of results panes.
 
-### keyboard controls
+### Keyboard controls
 The containing div of the list is focusable. By default, the list's rows are tab-able. If tabbing among the list items, the <kbd> `` ` `` </kbd> (above <kbd>Tab</kbd>) will get you back out, and <kbd>shift</kbd>+<kbd> `` ` `` </kbd> will skip to the next focusable element **after** the list.
 
-### horizontal scroll
+### Horizontal scroll
 At the time of this writing, the list will scroll its content horizontally if there isn't enough horizontal room to display all of the columns. This is likely to change in the near future.
+
+### Column mapping
+MultiColumnList supports column header mapping via. the `columnMapping`-prop. This allows for mapping column headers to alternative strings. This is very useful for translating column headers.
+
+Note: The recommended text casing for column headers is _sentence casing_. Read more about language rules [here](https://ux.folio.org/docs/guidelines/style/language-rules).
+
+Here's an example from the Users-module:
+```js
+  <MultiColumnList
+    contentData={...}
+    visibleColumns={['actionDate', 'action', 'dueDate', 'itemStatus', 'source']}
+    columnMapping={{
+      action: <FormattedMessage id="ui-users.loans.columns.action" />,
+      actionDate: <FormattedMessage id="ui-users.loans.columns.actionDate" />,
+      dueDate: <FormattedMessage id="ui-users.loans.columns.dueDate" />,
+      itemStatus: <FormattedMessage id="ui-users.loans.columns.itemStatus" />,
+      source: <FormattedMessage id="ui-users.loans.columns.source" />,
+    }}
+  />
+```
 
 ## Properties
 

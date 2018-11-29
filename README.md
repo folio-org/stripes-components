@@ -12,6 +12,8 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 * [Patterns - UI Recipes](#patterns)
 * [Testing](#testing)
 * [FAQ](#faq)
+* [Migration Paths](MIGRATIONPATHS.md)
+* [Change Management](CHANGEMANAGEMENT.md)
 * [To be documented](#to-be-documented)
 * [Additional information](#additional-information)
 
@@ -45,6 +47,7 @@ Component | doc | categories
 [`<Accordion>`](lib/Accordion) | [doc](lib/Accordion/readme.md) | structure
 [`<AddressFieldGroup>`](lib/AddressFieldGroup) | [doc](lib/AddressFieldGroup/readme.md) | control, prefab
 [`<AppIcon>`](lib/AppIcon) | [doc](lib/AppIcon/readme.md) | design
+[`<AutoSuggest>`](lib/AutoSuggest) | [doc](lib/AutoSuggest/readme.md) | control
 [`<Avatar>`](lib/Avatar) | [doc](lib/Avatar/readme.md) | data-display
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
 [`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) | control
@@ -70,7 +73,6 @@ Component | doc | categories
 [`<IfInterface>`](lib/IfInterface) | [doc](lib/IfInterface/readme.md) | utility
 [`<IfPermission>`](lib/IfPermission) | [doc](lib/IfPermission/readme.md) | utility
 [`<InfoPopover>`](lib/InfoPopover) | [doc](lib/InfoPopover/readme.md) | control, prefab
-[`<InjectIntl>`](lib/InjectIntl) | [doc](lib/InjectIntl/readme.md) | utility
 [`<KeyValue>`](lib/KeyValue) | [doc](lib/KeyValue/readme.md) | data-display
 [`<Layer>`](lib/Layer) | [doc](lib/Layer/readme.md) | structure
 [`<Layout>`](lib/Layout) | | structure
@@ -136,7 +138,6 @@ tests locally in the Chrome browser.
 
 See our [testing documentation](docs/Testing.md) for more information
 on writing tests.
-
 
 ## FAQ
 Check our [Frequently asked questions for Module developers page](FAQ.md)

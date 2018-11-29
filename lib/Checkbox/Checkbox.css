@@ -8,6 +8,7 @@
   display: flex;
   position: relative;
   color: var(--color-text);
+  line-height: var(--line-height);
 
   &.fullWidth {
     width: 100%;
@@ -39,44 +40,34 @@
   }
 }
 
-.checkboxLabel {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 4px 5px;
-  min-height: var(--controlHeight);
-  display: flex;
-  cursor: pointer;
-  flex-grow: 2;
+.labelCheck {
   position: relative;
-  border-radius: var(--radius);
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border: 1px solid var(--color-border);
+  border-radius: 25%;
+  background: var(--color-fill-form-element);
+  display: flex;
+  overflow: hidden;
+  flex-shrink: 0;
 
-  &.disabledLabel {
-    opacity: 0.65;
-    cursor: not-allowed;
+  & svg {
+    opacity: 0;
+
+    & path {
+      stroke: #000;
+    }
   }
-}
-
-.labelFocused {
-  composes: isFocused from "../sharedStyles/interactionStyles.css";
-}
-
-.formLabel {
-  composes: checkboxLabel;
-  font-weight: bold;
-  text-transform: Uppercase;
-}
-
-.labelText {
-  margin: 0 6px;
-}
-
-/* fix for shrinkage issues with checkbox as a flex-child */
-:global input[type='checkbox'] {
-  min-width: 16px;
 }
 
 /**
  * Checkbox feedback
  */
+.checkboxFeedback {
+  font-size: var(--font-size-x-small);
+}
+
+/* Warning and error states */
 .hasWarning {
   & .checkboxFeedback {
     color: var(--warn);
@@ -97,8 +88,50 @@
   }
 }
 
-.checkboxFeedback {
-  font-size: 12px;
+.checkboxLabel {
+  min-height: var(--controlHeight);
+  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  flex-grow: 2;
+  position: relative;
+  border-radius: var(--radius);
+  font-size: var(--font-size-medium);
+
+  &.disabledLabel {
+    cursor: not-allowed;
+    color: var(--color-text-p2);
+
+    & .labelCheck {
+      opacity: 0.5;
+    }
+  }
+}
+
+.checkboxInteractionStyles {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+}
+
+.labelFocused {
+  composes: isFocused from "../sharedStyles/interactionStyles.css";
+}
+
+.formLabel {
+  composes: checkboxLabel;
+  font-weight: bold;
+  text-transform: Uppercase;
+}
+
+.labelText {
+  margin: 0 6px;
+  display: flex;
+  align-items: center;
+}
+
+/* fix for shrinkage issues with checkbox as a flex-child */
+:global input[type='checkbox'] {
+  min-width: 16px;
 }
 
 /**
@@ -107,33 +140,9 @@
 input.checkboxInput {
   margin: 0 9px;
   margin-bottom: 2px;
-}
-
-input.checkboxInput {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   z-index: -1;
-}
-
-.labelCheck {
-  position: relative;
-  width: var(--checkbox-size);
-  height: var(--checkbox-size);
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  background: var(--color-fill-form-element);
-  display: flex;
-  overflow: hidden;
-  flex-shrink: 0;
-  margin-top: 2px;
-
-  & svg {
-    opacity: 0;
-
-    & path {
-      stroke: #000;
-    }
-  }
 }
 
 /* disabled styles */

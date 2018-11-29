@@ -12,39 +12,48 @@
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 0 10px;
-  height: var(--controlHeightSmall);
+  padding: 0.125rem var(--gutter);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
-  color: #555;
-  border-radius: 6px;
-  transition: background-color 0.25s, color 0.25s, opacity 0.07s, box-shadow 0s;
+  color: var(--color-text);
+  border-radius: var(--radius);
+  transition: background-color 0.25s, color 0.25s, opacity 0.07s;
   background-color: transparent;
   border: transparent;
   margin: 0 0 var(--gutter);
-  max-height: var(--controlHeightSmall);
   white-space: nowrap;
-  line-height: 100%;
+  line-height: 1.85;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   outline: 0;
-  box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
   opacity: 1;
   font-weight: var(--text-weight-button);
-
-  &.slim {
-    padding: 5px 2px;
-  }
+  font-size: var(--font-size-small);
 
   &.block {
     display: block;
   }
 
   & + .button {
-    margin-left: 4px;
+    margin-left: 0.25rem;
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.fieldControl {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+
+  & + .button.fullWidth,
+  & + .button.fieldControl {
+    margin-left: 0;
   }
 
   /**
@@ -121,22 +130,6 @@
     }
   }
 
-  &.dropdownItem {
-    text-align: left;
-    margin-bottom: 0;
-    background-color: transparent;
-    border: 1px solid transparent;
-    width: 100%;
-    display: block;
-    color: #555;
-
-    &:hover,
-    &:focus {
-      background-color: var(--bgHover);
-      outline: none;
-    }
-  }
-
   &.textAlignStart {
     text-align: left;
   }
@@ -145,8 +138,6 @@
     background-color: transparent;
     border: 1px solid transparent;
     margin: 0;
-    max-height: var(--controlHeightTouch);
-    height: var(--controlHeightTouch);
     border-radius: 0;
     padding: 8px;
 
@@ -158,7 +149,7 @@
       &:focus,
       &:hover {
         outline: none;
-        border-bottom: 4px solid var(--bgHover);
+        border-bottom: 4px solid var(--bg-hover);
       }
 
       &.selected {
@@ -178,7 +169,7 @@
   }
 
   &.paneHeaderNewButton {
-    margin-right: 15px;
+    margin-right: 0.5rem;
   }
 
   &.noRadius {
@@ -204,7 +195,7 @@
     border: 1px solid transparent;
     cursor: pointer;
     color: var(--primary);
-    padding: 4px;
+    padding: 0.25em;
   }
 
   &.bottomMargin0,
@@ -217,21 +208,10 @@
     padding-right: 0;
   }
 
-  &.fullWidth {
-    width: 100%;
-  }
-
-  &.fieldControl {
-    background-color: transparent;
-    margin: 0;
-    height: var(--controlHeight);
-    padding: 0;
-  }
-
   &[disabled] {
     background-color: #ccc;
     border-color: #ccc;
-    color: #888;
+    color: var(--color-text-p2);
     transition: opacity ease-in-out 500ms;
 
     &:hover {
@@ -239,17 +219,12 @@
     }
   }
 
-  &:not(.fullWidth, .fieldControl) + .button {
-    margin: 0 4px;
+  &.mega {
+    font-size: var(--font-size-large);
   }
 
-  &.mega {
-    width: 100%;
-    max-height: 16rem;
-    height: 16rem;
-    color: #fff;
-    font-size: 2rem;
-    border-radius: 0;
+  &.slim {
+    padding: 0.125rem 0.5rem;
   }
 }
 
@@ -257,7 +232,12 @@
   & .button {
     & + .button {
       margin-left: 0;
-      margin-right: 4px;
+      margin-right: 0.25rem;
+    }
+
+    & + .button.fullWidth,
+    & + .button.fieldControl {
+      margin-right: 0;
     }
 
     &.textAlignStart {
@@ -266,9 +246,26 @@
   }
 }
 
-@media (--mediumUp) {
-  .button {
-    height: var(--controlHeight);
-    max-height: var(--controlHeight);
+/**
+ * Dropdown Item style
+ */
+
+/* No margin on dropdownItem's */
+.button.dropdownItem {
+  margin: 0;
+}
+
+.dropdownItem {
+  composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
+  padding: 0.125rem 0;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &:hover,
+  &:focus {
+    outline: none;
   }
 }

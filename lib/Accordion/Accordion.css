@@ -13,25 +13,16 @@
   padding-left: var(--gutter);
   width: calc(100% + (2 * var(--gutter)));
   background-color: var(--color-fill-disabled);
-
-  & .header {
-    opacity: 0.5;
-  }
 }
 
 /**
  * Header
  */
 
-.hasSeparator .headerWrapper {
-  border-top: 1px solid var(--color-border-p2);
-}
-
 .headerWrapper {
   width: 100%;
   display: flex;
   align-items: center;
-  min-height: calc(var(--controlHeight) + 4px);
 
   /* transition: background-color 0.3s; */
 
@@ -50,10 +41,18 @@
   }
 }
 
+.hasSeparator .headerWrapper {
+  border-top: 1px solid var(--color-border-p2);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.disabled .header {
+  opacity: 0.5;
 }
 
 /**
@@ -73,6 +72,7 @@
 .content {
   max-height: 0; /* hidden */
   overflow: hidden;
+  margin: 0.5em 0 1em 1.5em;
   transition: max-height 0.25s ease;
 
   &.expanded {
@@ -110,10 +110,8 @@
   outline: none;
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: calc(var(--input-vertical-padding) * 4) var(--input-horizontal-padding);
   background-color: transparent;
-  font-size: 18px;
-  min-height: 44px;
   width: 100%;
   color: var(--color-text);
 
@@ -134,23 +132,35 @@
  * Filter set header
  */
 .filterSetHeader {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartSmall from "../sharedStyles/interactionStyles.css";
   composes: header;
-  border-radius: var(--radius 4px);
-  min-height: var(--controlHeight 24px);
+  border-radius: var(--radius);
   appearance: none;
   background: none;
   border: none;
   font-size: inherit;
-  padding: 2px 0;
+  padding: var(--input-vertical-padding) 0;
   width: 100%;
-  line-height: 120%;
+  line-height: var(--line-height);
   text-align: left;
-  color: var(--color-text-p2);
 
   &:focus {
     outline: none;
   }
+
+  & .labelArea {
+    padding-left: 0.25em;
+    color: var(--color-text-p2);
+  }
+}
+
+.defaultHeaderIcon {
+  color: var(--color-icon);
+  padding: 0.25em;
+}
+
+.filterSetHeaderIcon {
+  fill: var(--color-icon);
 }
 
 .clearButtonVisible {

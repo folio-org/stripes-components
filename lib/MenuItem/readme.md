@@ -7,8 +7,7 @@ Example use case is when using UncontrolledDropdown.
 This basic usage is for UncontrolledDropdown sets up a dropdown closed status when selected  any items inside the DropdownMenu
 
 ```js
-import {UncontrolledDropdown} from '@folio/stripes-components/lib/Dropdown';
-import MenuItem from '@folio/stripes-components/lib/MenuItem';
+import { MenuItem, UncontrolledDropdown } from '@folio/stripes/components';
 
   <UncontrolledDropdown
       id="uniqueid"

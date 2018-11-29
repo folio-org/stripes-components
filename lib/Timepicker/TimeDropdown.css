@@ -3,38 +3,16 @@
 .timepickerContainer {
   position: relative;
   background: #fff;
-  border-radius: 4px;
+  border-radius: var(--radius);
   border: 1px solid #bcbcbc;
-  padding: 4px 8px;
+  padding: 0.5rem;
   width: 230px;
-  box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.39);
+  box-shadow: var(--shadow);
   z-index: 9999;
 }
 
 .center {
   text-align: center;
-}
-
-.timepickerDropdownInput {
-  padding: 0 10px;
-  font-size: 1.3rem;
-  width: 100%;
-  margin-bottom: 0;
-  text-align: center;
-
-  /* suppress weird stylind in firefox */
-  border: 1px solid var(--color-border);
-  -moz-appearance: textfield;
-
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  &:focus {
-    border-color: var(--primary, #2b75bb);
-  }
 }
 
 .srOnly {

@@ -30,8 +30,8 @@
  */
 .icon {
   display: inline-block;
+  line-height: 1;
   position: relative;
-  box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);
   opacity: 1;
   transition: none;
   border-radius: 25%;
