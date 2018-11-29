@@ -2,7 +2,7 @@
 Form element for selecting a time.
 ## Usage
 ```
-import Timepicker from '@folio/stripes-components/lib/Timepicker';
+import { Timepicker } from '@folio/stripes/components';
 
 // later in your JSX....
 <Timepicker />
@@ -14,19 +14,26 @@ Name | type | description | default | required
 `label` | string | If provided, will render a `<label>` tag with an `htmlFor` attribute directed at the provided `id` prop. | |
 `value` | string | Sets the value for the control. **Not necessary if using redux-form.** | |
 `onChange` | function | Callback function that will receive the control's current value and the onChange event object. `fn(e, value)` **Not necessary if using redux-form**, but it will still work if callback from a change is needed. |  |
-`passThroughValue` | string | Can be used to set dynamic values up to the form - values should be inspected/adjusted in a handler at submission time (like a button click that calls `submit()`.) See below for usage example. |  |
+`passThroughValue` (deprecated) | string | Can be used to set dynamic values up to the form - values should be inspected/adjusted in a handler at submission time (like a button click that calls `submit()`.) See below for usage example. |  |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
+
+## Working with Times
+
+Using a `value` that does not include any timezone information, the
+time is assumed by `moment()` to be in the local timezone. When the
+local timezone is east of UTC, such as `+03:00`, and converted to UTC
+for internationalization formatting, the offset will be subtracted
+from the time. For example, a value of `12:00` will appear as `9:00`
+UTC when viewed in the EEST timezone.
+
+When comparing or manipulating dates, it is safest to operate in UTC
+mode and leave display formatting to internationalization helpers. If
+using moment, this can be done via
+[`moment.utc()`](http://momentjs.com/docs/#/parsing/utc/).
 
 ## Usage in Redux-form
 Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.
 ```
 <Field name="exampleTimeReturned" label="Time returned" id="timeReturnTP" placeholder="Select Time" component={Timepicker} />
-
-```
-## Passthrough value
-Using the prop `passThroughValue` means that you expect a non-time string to be passed as a value, and want to use that to derive the time value that you do want submitted. An example of this would be to pass through "Now" and actually submit the current time (whenever the submit button is pressed.) "Now" can be set as an initial value, or the user can enter "Now".
-```
-<Field name="exampleTimeReturned" label="Time returned" id="timeReturnTP" placeholder="Select Time" component={Timepicker} passThroughValue="Now"/>
-```

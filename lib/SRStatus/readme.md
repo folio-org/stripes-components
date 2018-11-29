@@ -7,7 +7,7 @@ This component is ideal for when React's frequent updates/re-renders do not suit
 SRStatus works via a method call against a ref to an instance of it.
 
 ```
-import SRStatus from '@folio/stripes-components/lib/SRStatus';
+import { SRStatus } from '@folio/stripes/components';
 
 // in constructor
 this.srsRef = null;

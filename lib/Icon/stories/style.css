@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .iconGrid {
   padding: 0;
   margin: 0;
@@ -8,7 +10,7 @@
 }
 
 .iconGridItem {
-  margin: 15px;
+  margin: 1rem;
   text-align: center;
   flex-basis: 130px;
   display: flex;
@@ -27,7 +29,6 @@
 }
 
 .iconGridItem p {
-  font-size: 12px;
+  font-size: var(--font-size-x-small);
   margin-top: 6px;
 }
-

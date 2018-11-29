@@ -1,6 +1,6 @@
 .subheader {
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  border-radius: var(--radius);
   padding: 8px;
   margin: 4px;
 }

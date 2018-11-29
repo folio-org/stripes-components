@@ -3,35 +3,48 @@
 .textField {
   position: relative;
   width: 100%;
+
+  & input {
+    line-height: var(--line-height);
+    padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+  }
+}
+
+.inputGroup {
+  display: flex;
+
+  & input {
+    margin: 0;
+    height: auto;
+    width: 100%;
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+  }
 }
 
 .startControls,
 .endControls {
   pointer-events: none;
-  height: 100%;
-  position: absolute;
-  top: 0;
+  padding: 0 0.125em;
+  height: 1.75em;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+  flex: 0;
 }
 
 .startControls {
-  padding-left: 2px;
-  height: 100%;
   justify-content: flex-start;
 }
 
 .endControls {
-  padding-right: 2px;
-  height: 100%;
-  width: 100%;
   justify-content: flex-end;
 }
 
 .controlGroup {
   pointer-events: all;
-  height: var(--controlHeightSmall);
   display: flex;
   align-items: center;
 }
@@ -56,12 +69,9 @@
  * Text Field Icon
  */
 .textFieldIcon {
+  color: var(--color-icon);
   display: flex;
   align-items: center;
-}
-
-@media (--mediumUp) {
-  .controlGroup {
-    height: var(--controlHeight);
-  }
+  height: 1.75em;
+  padding: 0 0.25rem;
 }

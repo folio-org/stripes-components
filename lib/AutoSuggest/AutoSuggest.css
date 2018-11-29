@@ -1,0 +1,29 @@
+@import '../variables.css';
+
+.AutoSuggest {
+  position: relative;
+  top: 100%;
+  width: '100%';
+  right: 0;
+  padding: 0;
+  z-index: 1000;
+  max-height: 400px;
+  overflow: scroll;
+  margin-top: -7px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.textFieldDiv {
+  position: 'relative';
+  width: '100%';
+}
+
+.downshift {
+  display: 'inline-block';
+  position: 'relative';
+}

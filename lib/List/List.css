@@ -31,12 +31,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 6px;
-    border-radius: 4px;
-    margin-bottom: 4px;
-
-    &:nth-child(odd) {
-      background-color: var(--color-fill);
-    }
+    border-radius: var(--radius);
+    margin-bottom: 0.25rem;
   }
 }
 
@@ -57,4 +53,8 @@ ul.listStyleBullets ul {
   & li {
     margin-bottom: 4px;
   }
+}
+
+.listStyleDefault:nth-child(odd) {
+  background-color: var(--color-fill);
 }

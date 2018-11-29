@@ -7,6 +7,10 @@
 }
 
 .selectControl {
+  appearance: none;
+  line-height: var(--line-height);
+  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+
   &.placeholder {
     color: #888;
 
@@ -21,14 +25,9 @@
 }
 
 .selectIcon {
+  color: var(--color-icon);
   position: absolute;
-  right: 0;
-  top: 10px;
+  right: 0.4em;
+  top: 0.4em;
   pointer-events: none;
-}
-
-@media (--mediumUp) {
-  .selectIcon {
-    top: 0;
-  }
 }

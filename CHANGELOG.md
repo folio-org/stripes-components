@@ -1,6 +1,100 @@
 # Change history for stripes-components
 
-## 3.1.0 (IN PROGRESS)
+## [4.5.0](https://github.com/folio-org/stripes-components/tree/v4.5.0) (2018-11-29)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v4.5.0)
+
+* Deprecate `<EntrySelector>`
+* Introduce `showUserLink` prop on `<MetaSection>`
+* Deprecate `<IfInterface>` and `<IfPermission>`, STCOM-357
+* Extend InfoPopover with new props (UIDATIMP-5).
+* Consistently name icons
+
+## [4.4.0](https://github.com/folio-org/stripes-components/tree/v4.4.0) (2018-11-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.1...v4.4.0)
+
+* Remove `injectIntl()` fork
+* Simplify `ReduxFormField` usage
+* Updated Pane/PaneHeader to accept a `actionMenu`-prop. Added deprecation warning for the `actionMenuItems`-prop (STCOM-388)
+* Include `data-total-count` in `<MultiColumnList>'. Available from v4.3.2.
+* Don't pass `onSelectItem` to components that don't use it. Fixes STCOR-280. Available from 4.3.2.
+* Introduce `tagName` prop on `<Pane>`
+* Update `<Modal>` `propTypes`
+* Cancel `<Callout>`'s timers on unmount.
+* Upgrade dependency on `stripes-react-hotkeys` to version 2.0.0.
+
+## [4.3.1](https://github.com/folio-org/stripes-components/tree/v4.3.1) (2018-11-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.3.0...v4.3.1)
+
+* `color` chokes on rgb/rgba; use hex values instead.
+* Validate presence of `props.onClick()` before calling it.
+* Allow node prop types for labels and validation messages
+* `<AutoSuggest>` updated with custom search and render functionality.
+
+## [4.3.0](https://github.com/folio-org/stripes-components/tree/v4.3.0) (2018-10-31)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.2.0...v4.3.0)
+
+* Make label margins consistent
+* Add ability to filter items in EntrySelector. Fixes STCOM-367.
+* Resolve issue recursion issue with `trapFocus` with multiple `<Layer>`s. STCOM-366.
+* Clear console noise from `<Selection>`/`<SelectList>`. STCOM-369.
+* Removed title attribute from AppIcon (STCOR-268) and minor line-height fix
+* Fixed `<Layout>`'s `padding-end-gutter` rule.
+* Use a CSS class to indicate whether `<EntrySelector>` has any entries. Available from v4.2.2.
+* Added more flexbox classes to `<Layout>`. Available from v4.2.4.
+* Resize icons
+* Export `<NavListItem>`
+
+## [4.2.0](https://github.com/folio-org/stripes-components/tree/v4.2.0) (2018-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.1.0...v4.2.0)
+
+* Add clone option to EntrySelector. Fixes STCOM-364.
+* Export `<RepeatableField>`
+* Shrink `<MetaSection>` font sizes
+* Decouple form element styles
+* Polish form control sizing
+
+## [4.1.0](https://github.com/folio-org/stripes-components/tree/v4.1.0) (2018-10-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.0.0...v4.1.0)
+* Add additional top layer exports for `filterState`, `filters2cql`, `onChangeFilter`, and `omitProps`.
+* Deprecate craftLayerUrl()
+* Create new `<RepeatableField>`
+* Fix issue with `<Datepicker>` calendar not applying the chosen value to its `<TextField>`.
+* Export `<DefaultAccordionHeader>`
+
+## [4.0.0](https://github.com/folio-org/stripes-components/tree/v4.0.0) (2018-10-02)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.3.0...v4.0.0)
+
+* Kebab case all css variables
+* Update `<RadioButton>` and `<RadioButtonGroup>` to work independently of Redux Form
+* Remove child.type checks
+* Remove `<AddressFieldGroup>`;  it's now in `stripes-smart-components`
+* Remove `<EditableList>`; it's now in `stripes-smart-components`
+* Remove `<Pluggable>`; it's now in `stripes-core`
+* Remove `<Settings>`; it's now in `stripes-smart-components`
+* Remove deprecated util functions
+* Remove old version of `<RepeatableField>`
+* Remove deprecated props from `<Datepicker>`
+
+## [3.3.0](https://github.com/folio-org/stripes-components/tree/v3.3.0) (2018-10-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.2.0...v3.3.0)
+
+* Use input type="search" for `<SearchField>`
+* Create wider type stack
+* Add padding to accordion content
+* Layer focus management
+
+## [3.2.0](https://github.com/folio-org/stripes-components/tree/v3.2.0) (2018-09-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.1.0...v3.2.0)
+
+* Update `stripes-form` dependency to v1.0.0
+* Fix paneset CSS behavior on narrow screens
+* Change global base font size from 14px to 16px
+* Expose legend as tag for `<Headline>`
+* Adjust headline sizes
+* Expose `<Headline>` ref
+
+## [3.1.0](https://github.com/folio-org/stripes-components/tree/v3.1.0) (2018-09-13)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v3.0.0...v3.1.0)
 
 * Expose `Settings` nav pane width via `navPaneWidth` prop.
 * Rename `errorText` and `warningText` props to `error` and `warning` for consistency. Fixes STCOM-314
@@ -11,6 +105,10 @@
 * Added example for `<Selection>`
 * `makeQueryFunction` once more correctly handles relation modifiers, fixing a regression introduced in commit 1bf498d3. Fixes STCOM-321. Available from v3.0.7.
 * Added `<MultiSelection>` component. [STCOM-263](https://issues.folio.org/browse/STCOM-263)
+* Deprecate `passThroughValue` prop on `Datepicker` and `Timepicker`
+* Update stripes-react-hotkeys dependency to support current versions of React.
+* Deprecate `makePathFunction()`, `makeQueryFunction()`, `Pluggable`, `Settings`, `EditableList`, and `AddressFieldGroup`
+* Removed text capitalization from MCH column headers so that sentence casing can be controlled elsewhere (STCOM-337)
 
 ## [3.0.0](https://github.com/folio-org/stripes-components/tree/v3.0.0) (2018-07-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v2.0.0...v3.0.0)

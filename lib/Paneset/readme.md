@@ -3,8 +3,7 @@ Container/Manager for for `<Pane>` components and a pillar of layout for FOLIO m
 ### Usage
 
 ```js
-import Paneset from '@folio/stripes-components/lib/Paneset';
-import Pane from '@folio/stripes-components/lib/Pane';
+import { Pane, Paneset } from '@folio/stripes/components';
 //..
 <Paneset>
     <Pane defaultWidth="33%">

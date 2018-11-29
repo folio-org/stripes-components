@@ -5,7 +5,7 @@ The classic button, in different styles and sizes
 ## Basic Usage
 
 ```
-import { Button } from '@folio/stripes-components/lib/Button';
+import { Button } from '@folio/stripes/components';
 
 ...
 <Button>
@@ -54,3 +54,12 @@ primary | string | |
 danger | string | |
 success | string | |
 warning | string | |
+
+### dropdownItem
+The 'dropdownItem' buttonStyle is useful for adding a list of buttons inside of dropdown menu's.
+
+```
+<Button buttonStyle="dropdownItem">
+    <Icon icon="duplicate">Duplicate</Icon>
+</Button>
+```

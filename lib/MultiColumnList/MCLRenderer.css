@@ -29,11 +29,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  border-radius: 7px;
+  border-radius: var(--radius);
   color: var(--color-text);
   text-decoration: none;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0 calc(var(--gutter) / 2);
   outline: none;
 
   &:visited {
@@ -69,11 +68,9 @@
 .headerRow {
   display: flex;
   justify-content: flex-start;
+  margin: 0 calc(var(--gutter) / 2);
   overflow: hidden;
-  width: calc(100% - 22px);
-
-  /* header columns has padding of their own and we need a total of 15px from edge to text */
-  padding: 6px 10px 0;
+  width: 100%;
 
   &.hScroll {
     overflow: auto;
@@ -85,10 +82,10 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 6px 5px;
+  padding: calc(var(--gutter) / 2);
   font-weight: 600;
   color: var(--color-text-p2);
-  text-transform: capitalize;
+  font-size: var(--font-size-small);
 
   &.clickable {
     cursor: pointer;
@@ -112,7 +109,8 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 5px 10px;
+  line-height: var(--line-height);
+  padding: calc(var(--gutter) / 4) calc(var(--gutter) / 2);
   overflow: hidden;
 
   &.showOverflow {
@@ -140,12 +138,12 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  height: 25px;
-  width: 45px;
-  padding: 4px 6px 0 0;
+  height: 1.5rem;
+  width: 3rem;
+  padding: 0.25rem 0.5rem 0 0;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .emptyMessage {
-  padding: 15px;
+  padding: 1rem;
 }

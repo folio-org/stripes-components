@@ -38,7 +38,7 @@ The simple delete action configuration looks like this:
 ```
 [
   { title: 'Delete',
-    icon: 'trashBin',
+    icon: 'trash',
     handler: props.onDelete,
   },
 ]

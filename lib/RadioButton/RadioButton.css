@@ -19,19 +19,20 @@
 
 .labelText {
   margin: 0 6px;
+  display: flex;
+  align-items: center;
 }
 
 .radioLabel {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 4px 5px;
+  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   position: relative;
-  line-height: 120%;
+  line-height: var(--line-height);
   display: flex;
-  min-height: 24px;
+  align-items: baseline;
   cursor: pointer;
   flex-grow: 2;
-  color: var(--color-text-p2);
   border-radius: var(--radius);
+  font-size: var(--font-size-medium);
 
   &.error {
     color: var(--error);
@@ -42,14 +43,12 @@
   }
 }
 
-.labelFocused {
-  composes: isFocused from "../sharedStyles/interactionStyles.css";
+.labelInteractionStyles {
+  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
 }
 
-.input {
-  position: absolute;
-  z-index: -1;
-  clip: rect(1px, 1px, 1px, 1px);
+.labelFocused {
+  composes: isFocused from "../sharedStyles/interactionStyles.css";
 }
 
 .labelPseudo {
@@ -60,7 +59,6 @@
   border-radius: 999px;
   background: #fff;
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
 .labelPseudo::after {
@@ -75,6 +73,24 @@
   transition: all 0.2s ease;
 }
 
+.labelDisabled {
+  color: var(--color-text-p2);
+
+  &:hover {
+    cursor: not-allowed;
+  }
+
+  & .labelPseudo {
+    opacity: 0.5;
+  }
+}
+
+.input {
+  position: absolute;
+  z-index: -1;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .input:not(:checked) + .labelPseudo::after {
   opacity: 0;
   -webkit-transform: scale(0);
@@ -82,12 +98,39 @@
 }
 
 .input:checked + .labelPseudo {
-  background-color: #000;
+  background-color: #fff;
 
   &::after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
-    background-color: #fff;
+    background-color: #000;
+  }
+}
+
+/**
+ * Feedback
+ */
+.radioFeedback {
+  font-size: 12px;
+}
+
+.hasWarning {
+  & .radioFeedback {
+    color: var(--warn);
+  }
+
+  & .input {
+    border-color: var(--warn);
+  }
+}
+
+.hasError {
+  & .radioFeedback {
+    color: var(--error);
+  }
+
+  & .input {
+    border-color: var(--error);
   }
 }
