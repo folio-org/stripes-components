@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 4.5.0 (IN PROGRESS)
+## [4.5.0](https://github.com/folio-org/stripes-components/tree/v4.5.0) (2018-11-29)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v4.5.0)
 
 * Deprecate `<EntrySelector>`
 * Introduce `showUserLink` prop on `<MetaSection>`
