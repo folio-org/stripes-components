@@ -46,7 +46,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-  pointer-events: none;
 
   /*  If paneTitle is wrapped in a div
       we add display:flex and vertcially centers the content */
