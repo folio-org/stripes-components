@@ -4,12 +4,6 @@
 * Default styling
 */
 
-.buttonInner {
-  display: flex;
-  align-items: center;
-  pointer-events: none;
-}
-
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   padding: 0.125rem var(--gutter);
