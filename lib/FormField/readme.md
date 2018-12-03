@@ -1,7 +1,7 @@
-# Redux Form Field
-Higher-order component for making a component easy to use in a [Redux Form](https://redux-form.com/7.3.0/) [`Field`](https://redux-form.com/7.3.0/docs/api/field.md/).
+# Form Field
+Higher-order component for making a component easy to use in a [Redux Form](https://github.com/erikras/redux-form) or [React Final Form](https://github.com/final-form/react-final-form) `<Field>`.
 
-When passing a component into the `component` prop of a `Field`, Redux Form will inject `input` and `meta` props.
+When passing a component into the `component` prop of a `Field`, React Final Form and Redux Form will inject `input` and `meta` props.
 
 When doing this:
 ```jsx
@@ -11,16 +11,16 @@ When doing this:
 `input` is mostly events, and `meta` is mostly computed properties of the form field.
 
 ## Usage
-`reduxFormField()` will pass along the `input` props as-is. To normalize the `meta` props injected by Redux Form:
+`formField()` will pass along the `input` props as-is. To normalize the `meta` props:
 ```jsx
 function ExampleComponent({ value, onChange, warning, error }) => (
   <div>{warning}</div>
 );
 
-export default reduxFormField(
+export default formField(
   ExampleComponent,
   ({ meta }) => ({
-    warning: (meta.touched && meta.warning ? meta.warning : ''),
+    dirty: meta.dirty,
     error: (meta.touched && meta.error ? meta.error : '')
   })
 );
@@ -36,4 +36,5 @@ Name | type | description | required
 
 ## Learning
 - [React Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
-- [Redux Form `Field`](https://redux-form.com/7.3.0/docs/api/field.md/#instance-api)
+- [Redux Form `Field`](https://github.com/erikras/redux-form/blob/master/docs/api/Field.md)
+- [React Final Form `Field`](https://github.com/final-form/react-final-form#fieldprops)
