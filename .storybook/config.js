@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withOptions } from '@storybook/addon-options';
 import { initializeRTL } from 'storybook-addon-rtl';
-import { checkA11y } from '@storybook/addon-a11y';
 import 'typeface-source-sans-pro';
 import '../lib/global.css';
 
@@ -86,12 +85,6 @@ addDecorator(withIntl);
 initializeRTL();
 
 /**
- * a11y
- */
-
-addDecorator(checkA11y);
-
-/**
  * Add OverlayContainer to all stories
  * Popovers, Modals etc. mount to this element in the real system
  */
@@ -121,11 +114,12 @@ addDecorator(storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>);
 /**
  * Set options
  */
-withOptions({
+addDecorator(withOptions({
   name: 'FOLIO Stripes',
-  hierarchySeparator: /\//,
+  // sortStoriesByKind:
+  hierarchySeparator: /\|/,
   hierarchyRootSeparator: /\|/,
-});
+}));
 
 const req = require.context('../lib', true, /\.stories\.js$/);
 
