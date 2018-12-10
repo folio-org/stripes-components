@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { configure, addDecorator } from '@storybook/react';
-import { setOptions } from '@storybook/addon-options';
+import { withOptions } from '@storybook/addon-options';
 import { initializeRTL } from 'storybook-addon-rtl';
 import { checkA11y } from '@storybook/addon-a11y';
 import 'typeface-source-sans-pro';
@@ -121,7 +121,7 @@ addDecorator(storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>);
 /**
  * Set options
  */
-setOptions({
+withOptions({
   name: 'FOLIO Stripes',
   hierarchySeparator: /\//,
   hierarchyRootSeparator: /\|/,
