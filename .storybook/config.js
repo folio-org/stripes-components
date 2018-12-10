@@ -116,6 +116,8 @@ addDecorator(storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>);
  */
 setOptions({
   name: 'FOLIO Stripes',
+  hierarchySeparator: /\//,
+  hierarchyRootSeparator: /\|/,
 });
 
 const req = require.context('../lib', true, /\.stories\.js$/);
