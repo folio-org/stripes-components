@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import { initializeRTL } from 'storybook-addon-rtl';
+import { checkA11y } from '@storybook/addon-a11y';
 import 'typeface-source-sans-pro';
 import '../lib/global.css';
 
@@ -83,6 +84,12 @@ addDecorator(withIntl);
  * RTL
  */
 initializeRTL();
+
+/**
+ * a11y
+ */
+
+addDecorator(checkA11y);
 
 /**
  * Add OverlayContainer to all stories
