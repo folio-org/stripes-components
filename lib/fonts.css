@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Roman.woff2') format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Roman.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Roman.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Roman.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Roman.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Roman.woff2') format('woff2');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Italic.woff2') format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Italic.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Italic.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Italic.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Italic.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Italic.woff2') format('woff2');
+  font-weight: 900;
+}
