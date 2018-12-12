@@ -1,0 +1,60 @@
+@import '../variables.css';
+
+.buttonGroup {
+  display: inline-flex;
+  justify-content: space-between;
+
+  &.fullWidth {
+    width: 100%;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+  & > :first-child,
+  & > :first-child::before {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & > :last-child,
+  & > :last-child::before {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  & > :not(:first-child) {
+    margin-left: -1px;
+  }
+
+  & > :not(:first-child):not(:last-child),
+  & > :not(:first-child):not(:last-child)::before {
+    border-radius: 0;
+  }
+}
+
+[dir="rtl"] {
+  & .buttonGroup {
+    & > :first-child,
+    & > :first-child::before {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+    }
+
+    & > :last-child,
+    & > :last-child::before {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: var(--radius);
+      border-bottom-left-radius: var(--radius);
+    }
+
+    & > :not(:first-child) {
+      margin-left: 0;
+      margin-right: -1px;
+    }
+  }
+}
