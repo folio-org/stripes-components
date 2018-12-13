@@ -1,4 +1,4 @@
-# Password Strength
+# PasswordStrength
 
 ## Introduction
 

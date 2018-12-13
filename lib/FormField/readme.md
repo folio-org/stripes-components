@@ -1,4 +1,4 @@
-# Form Field
+# FormField
 Higher-order component for making a component easy to use in a [Redux Form](https://github.com/erikras/redux-form) or [React Final Form](https://github.com/final-form/react-final-form) `<Field>`.
 
 When passing a component into the `component` prop of a `Field`, React Final Form and Redux Form will inject `input` and `meta` props.

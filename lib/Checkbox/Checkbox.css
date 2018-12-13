@@ -89,7 +89,6 @@
 }
 
 .checkboxLabel {
-  min-height: var(--controlHeight);
   padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   display: flex;
   align-items: baseline;

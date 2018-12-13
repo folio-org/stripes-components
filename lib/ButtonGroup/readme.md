@@ -1,4 +1,4 @@
-# Button Group
+# ButtonGroup
 Creates a split button set that can be used for filters, tabs, and or groups of actions.
 
 ## Usage
