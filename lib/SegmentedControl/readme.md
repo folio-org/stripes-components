@@ -1,4 +1,4 @@
-# SegmentedControl
+# SegmentedControl (DEPRECATED)
 Creates a split button set that can be used for filters, tabs, and other subnavigation.
 
 ## Usage
