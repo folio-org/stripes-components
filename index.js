@@ -2,6 +2,7 @@
 export { default as AutoSuggest } from './lib/AutoSuggest';
 export { default as Badge } from './lib/Badge';
 export { default as Button } from './lib/Button';
+export { default as ButtonGroup } from './lib/ButtonGroup';
 export { default as Checkbox } from './lib/Checkbox';
 export { default as Datepicker, Calendar } from './lib/Datepicker';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
