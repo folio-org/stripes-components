@@ -1,0 +1,19 @@
+@import '../variables.css';
+
+.paneCloseLink {
+  display: inline-flex;
+}
+
+.paneCloseLinkX {
+  display: none;
+}
+
+@media (--medium-up) {
+  .paneCloseLinkArrow {
+    display: none;
+  }
+
+  .paneCloseLinkX {
+    display: inline-flex;
+  }
+}

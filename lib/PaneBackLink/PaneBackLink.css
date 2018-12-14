@@ -1,0 +1,7 @@
+@import '../variables.css';
+
+.paneBackLink {
+  @media (--medium-up) {
+    display: none;
+  }
+}
