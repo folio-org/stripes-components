@@ -3,19 +3,20 @@ The default modal footer for the Modal-component.
 
 ### Usage
 ```js
-import { Modal, ModalFooter } from '@folio/stripes/components';
+import { Modal, ModalFooter, Button } from '@folio/stripes/components';
 
 const footer = (
-  <ModalFooter
-    primaryButton={{
-      label: 'Save',
+  <ModalFooter>
+    <Button
+      buttonStyle="primary"
       onClick={() => {...}}
-    }}
-    secondaryButton={{
-      label: 'Cancel',
-      onClick={() => {...}}
-    }}
-  />
+    >
+      Save
+    </Button>
+    <Button onClick={() => {...}}>
+      Cancel
+    </Button>
+  </ModalFooter>
 );
 
 <Modal
@@ -30,5 +31,4 @@ const footer = (
 ### Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-primaryButton | object | Props for the primary button. In addition to the "label"-key it will accept all available [`<Button>`](/?selectedKind=Button) props. | undefined | false
-secondaryButton | object | Props for the secondary button. In addition to the "label"-key it will accept all available [`<Button>`](/?selectedKind=Button) props. | undefined | false
+children | | Set of `<Button>`s. |  |
