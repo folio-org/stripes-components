@@ -19,6 +19,7 @@
 
 .label {
   margin: 0 0 0 0.35em;
+  font-size: var(--font-size-medium);
 }
 
 :global([dir="rtl"]) .label {

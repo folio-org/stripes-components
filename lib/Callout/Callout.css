@@ -74,6 +74,7 @@
 
   & .message {
     flex-grow: 2;
+    font-size: var(--font-size-medium);
     padding: 0 6px;
   }
 

@@ -2,6 +2,7 @@
 
 .list {
   margin-bottom: 1rem;
+  font-size: var(--font-size-medium);
 
   &.marginBottom0 {
     margin-bottom: 0;
@@ -12,6 +13,7 @@
  * Is empty message
  */
 .isEmptyMessage {
+  font-size: var(--font-size-medium);
   color: var(--color-text-p2);
 }
 

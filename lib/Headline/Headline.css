@@ -42,11 +42,11 @@
  */
 
 .sizeXxSmall { /* default browser h6 proportion */
-  font-size: var(--font-size-xx-small);
+  font-size: var(--font-size-small);
 }
 
 .sizeXSmall {
-  font-size: var(--font-size-x-small);
+  font-size: var(--font-size-small);
 }
 
 .sizeSmall { /* default browser h5 proportion */

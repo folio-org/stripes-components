@@ -15,6 +15,11 @@
   text-align: center;
 }
 
+.colon {
+  font-size: var(--font-size-medium);
+  line-height: 1.6em;
+}
+
 .srOnly {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* old IE */

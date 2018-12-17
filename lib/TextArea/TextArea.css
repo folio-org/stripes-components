@@ -3,6 +3,7 @@
 .textArea {
   position: relative;
   max-width: 100%;
+  font-size: var(--font-size-medium);
 
   &.fullWidth {
     width: 100%;

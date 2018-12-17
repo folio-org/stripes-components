@@ -43,6 +43,7 @@
   padding: 0 4px;
   border-width: 0;
   outline: 0;
+  font-size: var(--font-size-medium);
 }
 
 .multiSelectValueListContainer {

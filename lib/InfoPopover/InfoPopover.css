@@ -10,6 +10,7 @@
 
 .content {
   text-align: center;
+  font-size: var(--font-size-medium);
 }
 
 .icon:hover svg,

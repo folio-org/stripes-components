@@ -24,7 +24,7 @@ legend.groupLabel {
 
 .groupFeedback {
   padding: 0 0.4rem;
-  font-size: var(--font-size-x-small);
+  font-size: var(--font-size-small);
 
   &:last-child {
     margin-bottom: var(--control-margin-bottom);

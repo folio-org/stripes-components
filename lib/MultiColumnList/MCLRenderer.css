@@ -109,6 +109,7 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
+  font-size: var(--font-size-medium);
   line-height: var(--line-height);
   padding: calc(var(--gutter) / 4) calc(var(--gutter) / 2);
   overflow: hidden;
