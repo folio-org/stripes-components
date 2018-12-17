@@ -2,6 +2,7 @@
 
 .select {
   font-size: var(--font-size-medium);
+
   &.fullWidth {
     width: 100%;
   }
