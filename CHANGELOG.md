@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 4.6.0 (In Progress)
+## [4.6.0](https://github.com/folio-org/stripes-components/tree/v4.6.0) (2018-12-18)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.5.0...v4.6.0)
 
 * Add `inputRef` prop to `<TextField>`. Part of STCOM-372.
 * Deprecate `getInput()` and `focusInput()` methods of `TextField`. Part of STCOM-372.
@@ -8,6 +9,10 @@
 * Add `document` icon
 * Replace `<SegmentedControl>` with `<ButtonGroup>`
 * Fix broken focus management of `<Selection>` on small screens. Fixes STCOM-433.
+* Introduce `<PaneBackLink>` and `<PaneCloseLink>`
+* Render `<ModalFooter>` children
+* Remove stripes-util dependency
+* STCOM-414: adjust font sizes
 
 ## [4.5.0](https://github.com/folio-org/stripes-components/tree/v4.5.0) (2018-11-29)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v4.5.0)
