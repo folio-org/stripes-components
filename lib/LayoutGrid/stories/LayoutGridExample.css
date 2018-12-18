@@ -1,0 +1,23 @@
+/**
+ * LayoutGrid example CSS
+ */
+
+@import "../../variables";
+
+.headline:not(:first-child) {
+  margin-top: 30px;
+}
+
+.col {
+  margin-bottom: 20px;
+
+  & div {
+    background-color: var(--color-fill-focus);
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
