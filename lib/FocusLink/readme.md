@@ -11,9 +11,13 @@ Proper focus control is very import for keyboard navigation. If this aspect of U
 <FocusLink target={thingToFocus}>Focus on target</FocusLink>
 ```
 To make a listing component 'skippable', use `<FocusLink>` with a `ref` to the component's outer element supplied to the `targetNextAfter` prop.
-```
-<div ref={(ref) = {this.container = ref;}}>
-  <FocusLink targetNextAfter={this.container}>Skip this list</FocusLink>
+```js
+// In constructor
+this.containerRef = React.createRef();
+
+// JSX
+<div ref={this.containerRef}>
+  <FocusLink targetNextAfter={this.containerRef.current}>Skip this list</FocusLink>
   {/* rest of lengthy list component... */}
 </div>
 ```
