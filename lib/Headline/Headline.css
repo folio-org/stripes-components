@@ -41,14 +41,6 @@
  * https://www.w3.org/TR/html5/rendering.html#sections-and-headings
  */
 
-.sizeXxSmall { /* default browser h6 proportion */
-  font-size: var(--font-size-small);
-}
-
-.sizeXSmall {
-  font-size: var(--font-size-small);
-}
-
 .sizeSmall { /* default browser h5 proportion */
   font-size: var(--font-size-small);
 }
