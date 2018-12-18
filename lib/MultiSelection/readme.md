@@ -34,6 +34,7 @@ Name | type | description | default | required
 `id` | string | Sets the `id` attribute for the control. Other interior id's are generated using this string as a prefix. | |
 `itemToString` | <string>func | Function used to return a single string representation of its value. For example, option objects with a shape of `{label:<string>, value:<object>}` would use `item => (item ? item.label : '')` for their toString function. This is used to generate strings so that values can accurately be announced for screen readers. | `item => (item ? item.label : '')` |
 `label` | string | Used as the form label for the field. Appropriate label/field relationship for accessibility is automatically set up by the component. | |
+`marginBottom0` | bool | Applies a style with zero-bottom-margin to the control | | 
 `maxHeight` | number | The maximum height of the options menu in pixels. This does not include the heigh of any validation messages that may also appear with the menu. | `168` |
 `onBlur` | func | Blur event handler for when the user blurs the filter field | |
 `onChange` | func | Change event handler for when internal state changes. `selectedItems` is passed as parameter to function. | |
