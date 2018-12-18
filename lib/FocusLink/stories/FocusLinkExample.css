@@ -18,6 +18,7 @@
 .skippableContent {
   padding: 20px;
   height: 200px;
-  margin: 20px 0 0 0;
+  margin: 15px 0;
   background-color: var(--color-fill);
+  color: var(--color-text-p2);
 }
