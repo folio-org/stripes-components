@@ -21,3 +21,9 @@
     justify-content: center;
   }
 }
+
+.button {
+  padding: 20px 40px;
+  font-size: 20px;
+  margin-top: 30px;
+}
