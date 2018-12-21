@@ -35,7 +35,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  font-size: var(--font-size-medium);
 
   &.marginBottom0 {
     /* stylelint-disable-next-line length-zero-no-unit */
@@ -64,7 +63,6 @@
   padding: 4px 8px;
   border-style: solid;
   border-color: var(--color-border);
-  font-size: var(--font-size-medium);
 
   &:focus {
     outline: none;
@@ -102,7 +100,6 @@
   cursor: default;
   display: flex;
   justify-content: space-between;
-  font-size: var(--font-size-medium);
 
   &.selected {
     background: var(--color-fill-current);

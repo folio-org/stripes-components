@@ -11,7 +11,6 @@
   color: var(--body-color);
   border-radius: var(--radius);
   text-align: left;
-  font-size: var(--font-size-medium);
   outline: 0;
 
   /* for anchor tags */

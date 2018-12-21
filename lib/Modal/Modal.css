@@ -56,7 +56,6 @@
   overflow: auto;
   width: 100%;
   max-height: calc(100% - 44px - 2rem);
-  font-size: var(--font-size-medium);
   line-height: var(--line-height);
 }
 

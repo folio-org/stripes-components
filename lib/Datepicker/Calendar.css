@@ -38,7 +38,6 @@
     border: 2px solid transparent;
     width: 38px;
     height: 38px;
-    font-size: var(--font-size-medium);
     cursor: pointer;
 
     &:hover {

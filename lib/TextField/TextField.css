@@ -3,7 +3,6 @@
 .textField {
   position: relative;
   width: 100%;
-  font-size: var(--font-size-medium);
 
   & input {
     line-height: var(--line-height);
