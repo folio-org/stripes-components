@@ -4,19 +4,15 @@
   align-items: center;
   display: flex;
   flex-flow: row-reverse wrap;
-  margin: calc((var(--control-margin-bottom) / 2) * -1) 0;
+  margin: calc((var(--control-margin-bottom) / 4) * -1) 0;
   width: 100%;
-}
 
-.modalFooterButton {
-  flex: 1 1 auto;
-  margin: calc(var(--control-margin-bottom) / 2) 4px;
+  & > * {
+    flex: 1 1 auto;
+    margin: calc(var(--control-margin-bottom) / 4);
 
-  & + .modalFooterButton {
-    margin: calc(var(--control-margin-bottom) / 2) 4px;
-  }
-
-  @media (--medium-up) {
-    flex: 0 1 auto;
+    @media (--medium-up) {
+      flex: 0 1 auto;
+    }
   }
 }

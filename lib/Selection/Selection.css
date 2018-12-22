@@ -85,6 +85,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   padding-top: 48px;
   align-items: flex-start;
+  pointer-events: all;
 }
 
 .singleValue {

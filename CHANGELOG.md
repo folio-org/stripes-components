@@ -7,6 +7,7 @@
 * Add [documentation](lib/TextField/Readme.md) for `<TextField>`.
 * Add `document` icon
 * Replace `<SegmentedControl>` with `<ButtonGroup>`
+* Fix broken focus management of `<Selection>` on small screens. Fixes STCOM-433.
 
 ## [4.5.0](https://github.com/folio-org/stripes-components/tree/v4.5.0) (2018-11-29)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v4.5.0)
