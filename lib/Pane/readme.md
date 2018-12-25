@@ -2,7 +2,7 @@
 
 Primary staple of layout for FOLIO modules.
 
-### Sizing
+## Sizing
 A Pane requires a `defaultWidth` prop to tell its parent `<Paneset>` how it should be sized. The following example has a first pane with a static width of 20% and a second pane with dynamic width (supplied `"fill"` for its `defaultWidth`) that will occupy the remaining width of the paneset.
 ```js
 import { Pane, Paneset } from '@folio/stripes/components';
@@ -18,7 +18,7 @@ import { Pane, Paneset } from '@folio/stripes/components';
 ```
 
 
-#### Dismissible
+## Dismissible
 To make a pane dismissible, simply supply the `dismissible` prop and a module-level handler to the `onClose` prop.
 ```js
     // set up boolean for rendering the pane...
@@ -38,7 +38,7 @@ To make a pane dismissible, simply supply the `dismissible` prop and a module-le
     }
 ```
 
-### Props
+## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 actionMenu | func | Activates the action menu dropdown. Expects a function that returns a component or node. | undefined |
