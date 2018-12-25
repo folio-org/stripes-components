@@ -3,36 +3,6 @@ A default `<Pane>` builds a simple header that includes centered title text (sup
 
 Add an `<AppIcon />`-component to the pane header by providing an `appIcon`-prop that matches the key of an installed FOLIO app. Providing the `appIconKey`-prop will display a specific icon that is bundled with the app with they key of `appIcon` (optional). See example below.
 
-## PaneMenu
-```js
-import { IconButton, PaneMenu, PaneCloseLink } from '@folio/stripes/components';
-
-const lastMenu = (
-  <PaneMenu>
-    <IconButton
-      icon="bookmark"
-    />
-  </PaneMenu>
-);
-
-const firstMenu = (
-  <PaneMenu>
-    <PaneCloseLink />
-  </PaneMenu>
-);
-
-<Pane 
-  paneTitle="Example"
-  defaultWidth="50%" 
-  lastMenu={lastMenu}
-  firstMenu={firstMenu}
-  appIcon="instances"
-  appIconKey="items"
->
-    // Pane Content...
-</Pane>
-```
-
 ## Custom Header
 If the header needs functionality, the `header` prop will accept a component to render instead of the default pane header.
 ```js
