@@ -40,7 +40,7 @@
  */
 
 .small {
-  font-size: var(--font-size-xx-small);
+  font-size: var(--font-size-small);
   height: 18px;
   min-width: 18px;
   line-height: 18px;

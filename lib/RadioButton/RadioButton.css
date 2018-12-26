@@ -112,7 +112,7 @@
  * Feedback
  */
 .radioFeedback {
-  font-size: 12px;
+  font-size: var(--font-size-small);
 }
 
 .hasWarning {
