@@ -118,6 +118,7 @@
   background-color: transparent;
   width: 100%;
   color: var(--color-text);
+  font-size: var(--font-size-large);
 
   &:hover,
   &:focus {
@@ -160,7 +161,11 @@
 
 .defaultHeaderIcon {
   color: var(--color-icon);
-  padding: 0.3rem 0.25rem 0.3rem 0;
+  padding: 0.25rem 0.25rem 0.25rem 0;
+}
+
+[dir="rtl"] .defaultHeaderIcon {
+  padding: 0.25rem 0 0.25rem 0.25rem;
 }
 
 .filterSetHeaderIcon {
