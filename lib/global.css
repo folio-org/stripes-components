@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 87.5%;
+}
+
 body,
 html {
   height: 100%;
@@ -35,7 +39,6 @@ html {
     メイリオ    Meiryo,
     "ＭＳ Ｐゴシック",
     sans-serif;
-  font-size: 100%;
   color: var(--color-text);
   letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
