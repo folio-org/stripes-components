@@ -29,6 +29,7 @@ this.containerRef = React.createRef();
 ## Properties
 Name | type | description | default | required
 --- | --- | --- | --- | ---
+className | string | Applies custom className to FocusLink |
 target | `ref` | Reference to DOM element that should be focused when link is activated. | |
 targetNextAfter | `ref` | If FocusLink is used in a list of inputs, pass a ref to the list component's outer element. When activated, focus will pass to the next focusable DOM element. | |
 showOnFocus | bool | If true, `<FocusLink>` will be hidden from view until it is focused via tab-order. Good for adding accessibilty controls without cluttering up the UI.| false |
