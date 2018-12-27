@@ -20,6 +20,11 @@ this.containerRef = React.createRef();
   <FocusLink targetNextAfter={this.containerRef.current}>Skip this list</FocusLink>
   {/* rest of lengthy list component... */}
 </div>
+
+// Use the 'target'-prop to send focus to a specific target
+<FocusLink target={this.myTarget.current}>
+  Go to target
+</FocusLink>
 ```
 ## Properties
 Name | type | description | default | required
