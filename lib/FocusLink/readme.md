@@ -7,24 +7,18 @@ Proper focus control is very import for keyboard navigation. If this aspect of U
 ## Usage
 `<FocusLink>` can be passed a `ref` to a DOM element as the `target` prop's value.
 [How to use/obtain refs](https://facebook.github.io/react/docs/refs-and-the-dom.html)
-```
-<FocusLink target={thingToFocus}>Focus on target</FocusLink>
-```
-To make a listing component 'skippable', use `<FocusLink>` with a `ref` to the component's outer element supplied to the `targetNextAfter` prop.
 ```js
 // In constructor
 this.containerRef = React.createRef();
 
-// JSX
+<FocusLink target={this.containerRef.current}>Focus on target</FocusLink>
+```
+To make a listing component 'skippable', use `<FocusLink>` with a `ref` to the component's outer element supplied to the `targetNextAfter` prop.
+```js
 <div ref={this.containerRef}>
   <FocusLink targetNextAfter={this.containerRef.current}>Skip this list</FocusLink>
   {/* rest of lengthy list component... */}
 </div>
-
-// Use the 'target'-prop to send focus to a specific target
-<FocusLink target={this.myTarget.current}>
-  Go to target
-</FocusLink>
 ```
 ## Properties
 Name | type | description | default | required
