@@ -99,6 +99,7 @@
     "react-router-dom": "^4.1.1",
     "react-tether": "^1.0.1",
     "react-transition-group": "^2.2.1",
+    "sinon": "^7.2.2",
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {
