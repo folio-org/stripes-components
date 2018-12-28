@@ -85,7 +85,6 @@
   padding: calc(var(--gutter) / 2);
   font-weight: 600;
   color: var(--color-text-p2);
-  font-size: var(--font-size-small);
 
   &.clickable {
     cursor: pointer;
