@@ -9,6 +9,14 @@
   width: 230px;
   box-shadow: var(--shadow);
   z-index: 9999;
+
+  /* WebKit desktop browsers add little up down arrows 
+  to number inputs called spinners. Here we remove them. */
+  & input[type=number]::-webkit-inner-spin-button,
+  & input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0;
+  }
 }
 
 .center {
@@ -26,4 +34,9 @@
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.input {
+  background-color: green;
+  width: 200px;
 }
