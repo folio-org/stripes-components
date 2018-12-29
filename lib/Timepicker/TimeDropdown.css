@@ -27,8 +27,13 @@
   text-align: center;
 }
 
+.submitButton {
+  margin-top: 0.35rem;
+}
+
 .colon {
-  vertical-align: middle;
+  height: 100%;
+  font-weight: bold;
 }
 
 .srOnly {
