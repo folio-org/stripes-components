@@ -64,7 +64,7 @@
  * Checkbox feedback
  */
 .checkboxFeedback {
-  font-size: var(--font-size-x-small);
+  font-size: var(--font-size-small);
 }
 
 /* Warning and error states */

@@ -25,7 +25,7 @@
     "editThisAddress": "Editar este endereço",
     "primaryAddress": "Endereço principal",
     "alternateAddress": "Endereço alternativo",
-    "addNew": "Novo",
+    "addNew": "+ Novo",
     "showMoreAddresses": "Mostrar mais endereços",
     "showLessAddresses": "Mostrar menos",
     "addressSection": "Seção de endereço",
@@ -36,7 +36,7 @@
     "editThisItem": "Editar este item",
     "deleteThisItem": "Excluir este item",
     "removeFields": "remover campos para {item} {num}",
-    "addNewField": "Adicionar {item}",
+    "addNewField": "+ Adicionar {item}",
     "closePane": "Fechar painel",
     "closeItem": "Fechar {item}",
     "dismissModal": "Fechar modal",
@@ -55,7 +55,7 @@
     "selection.filterResultFeedback": "{length} itens encontrados, {label} selecionados",
     "exportToCsv": "Exportar para CSV",
     "button.edit": "Editar",
-    "button.new": "Novo",
+    "button.new": "+ Novo",
     "multiSelection.defaultEmptyMessage": "Nenhum item correspondente encontrado!",
     "multiSelection.filterPlaceholder": "lista de opções de filtro",
     "multiSelection.controlDescription": "Contém uma lista de todos os valores selecionados, seguidos por uma caixa de combinação para selecionar valores adicionais.",
@@ -73,5 +73,6 @@
     "passwordStrength.label": "Força da senha:",
     "fieldIsDisabled": "Campo desativado",
     "readonly": "Somente leitura",
-    "readMore": "Leia Mais"
+    "readMore": "Leia Mais",
+    "tableEmpty": "A lista não contém itens"
 }

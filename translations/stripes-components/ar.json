@@ -25,7 +25,7 @@
     "editThisAddress": "تحرير هذا العنوان",
     "primaryAddress": "العنوان الرئيسي",
     "alternateAddress": "العنوان البديل",
-    "addNew": "جديد",
+    "addNew": "+ جديد",
     "showMoreAddresses": "عرض المزيد من العناوين",
     "showLessAddresses": "عرض أقل",
     "addressSection": "قسم العنوان",
@@ -36,7 +36,7 @@
     "editThisItem": "تحرير هذه المادة",
     "deleteThisItem": "حذف هذه المادة",
     "removeFields": "إزالة الحقول لـ {item} {num}",
-    "addNewField": "إضافة {item}",
+    "addNewField": "+ إضافة {item}",
     "closePane": "إغلاق الجزء",
     "closeItem": "إغلاق {item}",
     "dismissModal": "رفض مشروط",
@@ -55,7 +55,7 @@
     "selection.filterResultFeedback": "تم العثور على {length} مواد، تم تحديد {label} ",
     "exportToCsv": "تصدير إلى ملف CSV",
     "button.edit": "تحرير",
-    "button.new": "جديد",
+    "button.new": "+ جديد",
     "multiSelection.defaultEmptyMessage": "لم يتم العثور على مواد مطابقة!",
     "multiSelection.filterPlaceholder": "قائمة خيار التنقيح",
     "multiSelection.controlDescription": "يحتوي على قائمة بالقيم المحددة، متبوعًا بمربع خيارات منسدلة لتحديد قيم إضافية ",
@@ -73,5 +73,6 @@
     "passwordStrength.label": "قوة كلمة المرور:",
     "fieldIsDisabled": "تم إيقاف الحقل",
     "readonly": "للقراءة فقط",
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "tableEmpty": "The list contains no items"
 }
