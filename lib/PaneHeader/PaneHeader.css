@@ -64,7 +64,7 @@
 
 /* Pane title */
 .paneTitle {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
   font-weight: 600;
   align-items: center;
   letter-spacing: 0.04em;
