@@ -10,4 +10,5 @@
 
 .kvRoot {
   margin-bottom: var(--control-margin-bottom);
+  font-size: var(--font-size-medium);
 }
