@@ -25,7 +25,7 @@
     "editThisAddress": "Edit this address",
     "primaryAddress": "Primary address",
     "alternateAddress": "Alternate address",
-    "addNew": "New",
+    "addNew": "+ New",
     "showMoreAddresses": "Show more addresses",
     "showLessAddresses": "Show less",
     "addressSection": "Address Section",
@@ -36,7 +36,7 @@
     "editThisItem": "Edit this item",
     "deleteThisItem": "Delete this item",
     "removeFields": "remove fields for {item} {num}",
-    "addNewField": "Add {item}",
+    "addNewField": "+ Add {item}",
     "closePane": "Close pane",
     "closeItem": "Close {item}",
     "dismissModal": "Dismiss modal",
@@ -55,7 +55,7 @@
     "selection.filterResultFeedback": "{length} items found, {label} selected",
     "exportToCsv": "Export to CSV",
     "button.edit": "Edit",
-    "button.new": "New",
+    "button.new": "+ New",
     "multiSelection.defaultEmptyMessage": "No matching items found!",
     "multiSelection.filterPlaceholder": "filter option list",
     "multiSelection.controlDescription": "Contains a list of any selected values, followed by a combobox for selecting additional values.",
@@ -73,5 +73,6 @@
     "passwordStrength.label": "Password strength:",
     "fieldIsDisabled": "Field is disabled",
     "readonly": "Read-only",
-    "readMore": "Per saperne di più"
+    "readMore": "Per saperne di più",
+    "tableEmpty": "The list contains no items"
 }
