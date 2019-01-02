@@ -84,8 +84,8 @@
   flex-grow: 0;
   padding: calc(var(--gutter) / 2);
   font-weight: 600;
+  font-size: var(--font-size-medium);
   color: var(--color-text-p2);
-  font-size: var(--font-size-small);
 
   &.clickable {
     cursor: pointer;

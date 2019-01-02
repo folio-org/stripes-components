@@ -38,6 +38,7 @@
 
 .NavListItemInner {
   display: flex;
+  font-size: var(--font-size-medium);
 }
 
 /* if stripped styles is activated in NavList */

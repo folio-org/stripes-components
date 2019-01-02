@@ -7,9 +7,10 @@
 }
 
 .selectControl {
-  appearance: none;
-  line-height: var(--line-height);
   padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+  appearance: none;
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height);
 
   &.placeholder {
     color: #888;

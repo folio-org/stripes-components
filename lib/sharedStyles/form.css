@@ -103,7 +103,7 @@
 
 .feedbackBlock {
   padding: 0 var(--input-vertical-padding);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
 
   &:last-child {
     margin-bottom: var(--control-margin-bottom);

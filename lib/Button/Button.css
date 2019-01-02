@@ -25,7 +25,7 @@
   outline: 0;
   opacity: 1;
   font-weight: var(--text-weight-button);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
 
   &.block {
     display: block;

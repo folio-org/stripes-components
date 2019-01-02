@@ -9,14 +9,31 @@
   width: 230px;
   box-shadow: var(--shadow);
   z-index: 9999;
+
+  /* WebKit desktop browsers add little up down arrows
+  to number inputs called spinners. Here we remove them to preserve space. */
+  & input[type=number]::-webkit-inner-spin-button,
+  & input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  & input {
+    text-align: center;
+  }
 }
 
 .center {
   text-align: center;
 }
 
+.submitButton {
+  margin-top: 0.35rem;
+}
+
 .colon {
-  vertical-align: middle;
+  height: 100%;
+  font-weight: bold;
 }
 
 .srOnly {

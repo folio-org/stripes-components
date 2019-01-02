@@ -139,11 +139,11 @@
   appearance: none;
   background: none;
   border: none;
-  font-size: inherit;
   padding: var(--input-vertical-padding) 0;
   width: 100%;
   line-height: var(--line-height);
   text-align: left;
+  font-size: var(--font-size-medium);
 
   &:focus {
     outline: none;
