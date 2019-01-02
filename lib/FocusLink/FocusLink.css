@@ -1,3 +1,16 @@
+/**
+ * FocusLink
+ */
+@import "../variables.css";
+
+.focusLink {
+  outline: 0;
+
+  &:focus {
+    color: var(--link-color);
+  }
+}
+
 .showOnFocus {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
