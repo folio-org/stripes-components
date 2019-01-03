@@ -63,14 +63,27 @@ The necessary props for closing the dropdown (onToggle) etc. will be passed into
 
 ```js
 
-const myActionMenu = ({ onToggle }) => (
-    <div>
-        Your content..
-        <button onClick={onToggle}>Close</button>
-    </div>
+const getActionMenu = ({ onToggle }) => (
+    <Fragment>
+        <Button buttonStyle="dropdownItem">
+            <Icon icon="duplicate">
+                Duplicate
+            </Icon>
+        </Button>
+        <Button buttonStyle="dropdownItem">
+            <Icon icon="edit">
+                Edit
+            </Icon>
+        </Button>
+        <Button buttonStyle="dropdownItem">
+            <Icon icon="bookmark">
+                Bookmark
+            </Icon>
+        </Button>
+    </Fragment>
 );
 
-<Pane defaultWidth="20%" paneTitle="My title" actionMenu={myActionMenu}>
+<Pane defaultWidth="20%" paneTitle="My title" actionMenu={getActionMenu}>
     // Pane Content
 </Pane>
 ```

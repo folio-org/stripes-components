@@ -71,6 +71,8 @@
     "passwordStrength.veryStrong": "كلمة المرور قوية جداً.",
     "passwordStrength.infoPopoverText": "قم بإدراج أرقام/رموز أو اجعل كلمة مرورك أكثر طولًا وأكثر عشوائية",
     "passwordStrength.label": "قوة كلمة المرور:",
-    "fieldIsDisabled": "Field is disabled",
-    "readonly": "Read-only"
+    "fieldIsDisabled": "تم إيقاف الحقل",
+    "readonly": "للقراءة فقط",
+    "readMore": "Read more",
+    "tableEmpty": "The list contains no items"
 }

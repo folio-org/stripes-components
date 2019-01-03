@@ -1,4 +1,4 @@
-# Repeatable Field
+# RepeatableField
 Form component for rendering arrays of editable data.
 
 ## Usage

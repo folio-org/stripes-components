@@ -64,7 +64,7 @@
  * Checkbox feedback
  */
 .checkboxFeedback {
-  font-size: var(--font-size-x-small);
+  font-size: var(--font-size-small);
 }
 
 /* Warning and error states */
@@ -89,7 +89,6 @@
 }
 
 .checkboxLabel {
-  min-height: var(--controlHeight);
   padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   display: flex;
   align-items: baseline;

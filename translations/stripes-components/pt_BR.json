@@ -72,5 +72,7 @@
     "passwordStrength.infoPopoverText": "Inclua dígitos/símbolos ou torne sua senha mais longa e aleatória",
     "passwordStrength.label": "Força da senha:",
     "fieldIsDisabled": "Campo desativado",
-    "readonly": "Somente leitura"
+    "readonly": "Somente leitura",
+    "readMore": "Leia Mais",
+    "tableEmpty": "A lista não contém itens"
 }

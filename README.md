@@ -6,16 +6,15 @@ This software is distributed under the terms of the Apache License,
 Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 
 <!-- md2toc -l 2 README.md -->
-* [Introduction](#introduction)
-* [Component categories](#component-categories)
-* [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
-* [Patterns - UI Recipes](#patterns)
-* [Testing](#testing)
-* [FAQ](#faq)
-* [Migration Paths](MIGRATIONPATHS.md)
-* [Change Management](CHANGEMANAGEMENT.md)
-* [To be documented](#to-be-documented)
-* [Additional information](#additional-information)
+- [stripes-components](#stripes-components)
+  - [Introduction](#introduction)
+  - [Component categories](#component-categories)
+  - [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
+  - [Patterns](#patterns)
+  - [Testing](#testing)
+  - [FAQ](#faq)
+  - [To be documented](#to-be-documented)
+  - [Additional information](#additional-information)
 
 
 ## Introduction
@@ -108,7 +107,7 @@ Component | doc | categories
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) | accessibility, user-feedback
 [`<TabButton>`](lib/TabButton) | | control
 [`<TextArea>`](lib/TextArea) | | control
-[`<TextField>`](lib/TextField) | | control
+[`<TextField>`](lib/TextField) | [doc](lib/TextField/readme.md) | control
 [`<Timepicker>`](lib/Timepicker) | [doc](lib/Timepicker/readme.md) | control
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).

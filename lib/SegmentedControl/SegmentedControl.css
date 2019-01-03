@@ -1,22 +1,3 @@
 .segmentedControl {
-  display: flex;
-  justify-content: space-between;
-}
-
-.segment {
-  flex-grow: 2;
-}
-
-.segment:first-child button::before {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.segment:last-child button::before {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.segment:not(:first-child):not(:last-child) button::before {
-  border-radius: 0;
+  width: 100%;
 }

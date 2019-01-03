@@ -14,8 +14,8 @@
 
 :global .stripes__icon {
   fill: currentColor;
-  height: 1em;
-  width: 1em;
+  height: 1.1429em;
+  width: 1.1429em;
 }
 
 /**

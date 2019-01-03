@@ -2,6 +2,7 @@
 export { default as AutoSuggest } from './lib/AutoSuggest';
 export { default as Badge } from './lib/Badge';
 export { default as Button } from './lib/Button';
+export { default as ButtonGroup } from './lib/ButtonGroup';
 export { default as Checkbox } from './lib/Checkbox';
 export { default as Datepicker, Calendar } from './lib/Datepicker';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
@@ -23,6 +24,8 @@ export { default as List } from './lib/List';
 
 /* layout containers */
 export { default as Pane } from './lib/Pane';
+export { default as PaneBackLink } from './lib/PaneBackLink';
+export { default as PaneCloseLink } from './lib/PaneCloseLink';
 export { default as PaneHeader } from './lib/PaneHeader';
 export { default as PaneSubheader } from './lib/PaneSubheader';
 export { default as PaneMenu } from './lib/PaneMenu';
@@ -51,6 +54,7 @@ export { default as Avatar } from './lib/Avatar';
 export { default as Callout, CalloutElement } from './lib/Callout';
 export { Dropdown, UncontrolledDropdown } from './lib/Dropdown';
 export { default as DropdownMenu } from './lib/DropdownMenu';
+export { default as MenuSection } from './lib/MenuSection';
 export { default as EntrySelector } from './lib/EntrySelector';
 export { default as FocusLink } from './lib/FocusLink';
 export { default as Headline } from './lib/Headline';

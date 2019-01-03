@@ -68,7 +68,7 @@ Name | type | description | default | required
 `columnWidths` | object | Set custom column widths, e.g. {email: '40%'}. Component will automatically measure any columns that are unspecified. | |
 `selectedClass` | string | override class for the default style applied to selected rows. | built-in |
 `sortedClass` | string | override class for the default style applied to headers of sorted columns. | built-in |
-`isEmptyMessage` | string | Message to display when the supplied contentData array is empty. | 'The list contains no items' |
+`isEmptyMessage` | string, object, node, arrayOf(node) | Message to display when the supplied contentData array is empty. | <FormattedMessage id="stripes-components.tableEmpty" /> |
 `onNeedMoreData` | func | Callback for fetching more data | |
 `virtualize` | bool | Employs virtualization for performant rendering of large sets of data. | |
 `loading` | bool | If true, will display an animated loading icon. | |

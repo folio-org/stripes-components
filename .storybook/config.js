@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { configure, addDecorator } from '@storybook/react';
-import { setOptions } from '@storybook/addon-options';
+import { withOptions } from '@storybook/addon-options';
 import { initializeRTL } from 'storybook-addon-rtl';
-import 'typeface-source-sans-pro';
 import '../lib/global.css';
 
 
@@ -114,9 +113,12 @@ addDecorator(storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>);
 /**
  * Set options
  */
-setOptions({
+addDecorator(withOptions({
   name: 'FOLIO Stripes',
-});
+  // sortStoriesByKind:
+  hierarchySeparator: /\|/,
+  hierarchyRootSeparator: /\|/,
+}));
 
 const req = require.context('../lib', true, /\.stories\.js$/);
 
