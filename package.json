@@ -78,7 +78,6 @@
   },
   "dependencies": {
     "@folio/stripes-react-hotkeys": "^2.0.0",
-    "@folio/stripes-util": "^1.0.0",
     "classnames": "^2.2.5",
     "dom-helpers": "^3.2.1",
     "downshift": "^2.0.16",
