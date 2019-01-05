@@ -35,6 +35,11 @@
         height: auto;
         padding: 6px;
         margin: 0;
+
+        &:before {
+          left: 0;
+          right: 0;
+        }
       }
     }
   }
@@ -89,7 +94,7 @@
 }
 
 .checkboxLabel {
-  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+  padding: var(--input-vertical-padding) 0;
   display: flex;
   align-items: baseline;
   cursor: pointer;
@@ -109,7 +114,7 @@
 }
 
 .checkboxInteractionStyles {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
 }
 
 .labelFocused {
@@ -123,9 +128,10 @@
 }
 
 .labelText {
-  margin: 0 6px;
+  margin: 0 calc(var(--gutter-static) / 3);
   display: flex;
   align-items: center;
+  min-height: var(--control-min-height-small);
 }
 
 /* fix for shrinkage issues with checkbox as a flex-child */
