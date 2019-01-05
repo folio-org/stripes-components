@@ -29,7 +29,7 @@
   box-shadow: var(--shadow);
 
   &.hasPadding {
-    padding: 1rem;
+    padding: var(--gutter-static);
   }
 
   & ul {
