@@ -29,8 +29,8 @@
   --radius: 6px;
   --gutter: 1rem;
   --gutter-static: 15px;
-  --input-horizontal-padding: 0.5rem;
-  --input-vertical-padding: 0.125rem;
+  --input-horizontal-padding: var(--gutter-static);
+  --input-vertical-padding: 0;
 
   /**
    * Font-size
