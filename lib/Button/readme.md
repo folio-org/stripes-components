@@ -26,7 +26,7 @@ marginBottom0 | bool | Remove bottom margin |
 paddingSide0 | bool | Remove padding on the sides |
 fullWidth | fullWidth | Forces the button width to 100% |
 href | string | Returns an anchor-tag with an href-attribute |
-to | string | Returns an instance of react-router-dom's <Link> |
+to | string | Returns an instance of react-router-dom's `<Link>` |
 allowAnchorClick | bool | Allow anchor click |
 onClick | function | Adds an onClick handler |
 role | string | Adds [role-attribute](https://www.w3.org/wiki/PF/XTech/HTML5/RoleAttribute) to the button |,
@@ -39,7 +39,7 @@ autoFocus | bool | If this prop is `true`, component will automatically focus on
 Complete list of button colors and styles
 
 ### Colors
-The color of the button can be modified by changing the buttonStyle-prop
+The color of the button can be modified by changing the `buttonStyle`-prop
 
 ```
 <Button buttonStyle="danger">
@@ -56,7 +56,7 @@ success | string | |
 warning | string | |
 
 ### dropdownItem
-The 'dropdownItem' buttonStyle is useful for adding a list of buttons inside of dropdown menu's.
+The `dropdownItem` buttonStyle is useful for adding a list of buttons inside of dropdown menus.
 
 ```
 <Button buttonStyle="dropdownItem">
