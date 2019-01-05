@@ -32,3 +32,8 @@
   top: 0.4em;
   pointer-events: none;
 }
+
+[dir="rtl"] .selectIcon {
+  left: 0.4em;
+  right: auto;
+}
