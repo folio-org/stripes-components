@@ -9,7 +9,8 @@
   min-height: 2.75em;
   position: relative;
   will-change: transform;
-  padding: 0 0.5em;
+  padding: 0 var(--gutter-static);
+  min-height: var(--control-min-height-large);
 }
 
 /**
