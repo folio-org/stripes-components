@@ -28,7 +28,6 @@
 .startControls,
 .endControls {
   pointer-events: none;
-  padding: 0 0.125em;
   height: 1.75em;
   display: flex;
   justify-content: flex-start;
@@ -38,10 +37,20 @@
 
 .startControls {
   justify-content: flex-start;
+  padding: 0 0 0 var(--input-horizontal-padding);
+}
+
+[dir="rtl"] .startControls {
+  padding: 0 var(--input-horizontal-padding) 0 0;
 }
 
 .endControls {
   justify-content: flex-end;
+  padding: 0 var(--input-horizontal-padding) 0 0;
+}
+
+[dir="rtl"] .endControls {
+  padding: 0 0 0 var(--input-horizontal-padding);
 }
 
 .controlGroup {
