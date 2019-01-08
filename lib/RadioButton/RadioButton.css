@@ -18,13 +18,13 @@
 }
 
 .labelText {
-  margin: 0 6px;
+  margin: 0 calc(var(--gutter-static) / 3);
   display: flex;
   align-items: center;
+  min-height: var(--control-min-height-small);
 }
 
 .radioLabel {
-  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   position: relative;
   line-height: var(--line-height);
   display: flex;
@@ -44,7 +44,7 @@
 }
 
 .labelInteractionStyles {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
 }
 
 .labelFocused {
