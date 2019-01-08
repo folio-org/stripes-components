@@ -36,7 +36,7 @@
         padding: 6px;
         margin: 0;
 
-        &:before {
+        &::before {
           left: 0;
           right: 0;
         }
