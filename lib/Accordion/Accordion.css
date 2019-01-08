@@ -137,7 +137,7 @@
  * Filter set header
  */
 .filterSetHeader {
-  composes: interactionStyles boxOffsetStartSmall from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartMedium from "../sharedStyles/interactionStyles.css";
   composes: header;
   border-radius: var(--radius);
   appearance: none;
@@ -148,6 +148,7 @@
   line-height: var(--line-height);
   text-align: left;
   font-size: var(--font-size-medium);
+  min-height: var(--control-min-height-small);
 
   &:focus {
     outline: none;
@@ -170,6 +171,10 @@
 
 .filterSetHeaderIcon {
   fill: var(--color-icon);
+}
+
+[dir="rtl"] .filterSetHeaderIcon {
+  margin-left: 0.35em;
 }
 
 .clearButtonVisible {
