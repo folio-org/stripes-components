@@ -10,6 +10,11 @@
   will-change: transform;
   padding: 0 var(--gutter-static);
   min-height: var(--control-min-height-large);
+
+  & button {
+    z-index: 2;
+    position: relative;
+  }
 }
 
 /**
