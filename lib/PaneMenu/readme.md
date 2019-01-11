@@ -1,5 +1,5 @@
 # PaneMenu
-Render pane menus in the header of a [`<Pane>`](/?selectedKind=Pane)-component by passing the `firstMenu`- and `lastMenu`-props to either [`<PaneHeader>`](/?selectedKind=Pane&selectedStory=PaneHeader) or [`<Pane>`](/?selectedKind=Pane).
+Render pane menus in the header of a `<Pane>`-component by passing the `firstMenu`- and `lastMenu`-props to either `<PaneHeader>` or `<Pane>`.
 
 ```js
 import { IconButton, PaneMenu, PaneCloseLink } from '@folio/stripes/components';

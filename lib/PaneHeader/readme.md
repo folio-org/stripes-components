@@ -1,8 +1,8 @@
 # PaneHeader
-A default [`<Pane />`](/?selectedKind=Pane) builds a simple header that includes centered title text (supplied in the `paneTitle` prop) with customizable menus at either end (`firstMenu`, `lastMenu` props). When the page is rendered in a right-to-left language, the menus will automatically switch placement.
+A default `<Pane>` builds a simple header that includes centered title text (supplied in the `paneTitle` prop) with customizable menus at either end (`firstMenu`, `lastMenu` props). When the page is rendered in a right-to-left language, the menus will automatically switch placement.
 
 ## Basic Usage
-PaneHeader-props can be passed directly to the [`<Pane>`](/?selectedKind=Pane)-component.
+PaneHeader-props can be passed directly to the `<Pane>`-component.
 
 ```js
 import { Pane } from '@folio/stripes/components';
