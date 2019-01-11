@@ -114,7 +114,7 @@
   outline: none;
   display: flex;
   align-items: center;
-  padding: calc(var(--input-vertical-padding) * 4) 0;
+  padding: calc(var(--gutter-static) / 3) 0;
   background-color: transparent;
   width: 100%;
   color: var(--color-text);
