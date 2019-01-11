@@ -23,7 +23,7 @@ import { Pane } from '@folio/stripes/components';
 ```
 
 ## App icon
-Render an [`<AppIcon />`](/?selectedKind=AppIcon) in the pane header by passing an object to the `appIcon`-prop. The object should contain a key of `app` that matches a FOLIO app – e.g. "users" or "inventory". Pass an optional `key` to render a specific icon (the default app icon will be rendered if none is provided). See [`<AppIcon />`](/?selectedKind=AppIcon) for more information.
+Render an `<AppIcon />` in the pane header by passing an object to the `appIcon`-prop. The object should contain a key of `app` that matches a FOLIO app – e.g. "users" or "inventory". Pass an optional `key` to render a specific icon (the default app icon will be rendered if none is provided). See `<AppIcon />` for more information.
 
 ```js
 <Pane appIcon={{
