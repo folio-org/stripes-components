@@ -128,7 +128,7 @@
 }
 
 .labelText {
-  margin: 0 calc(var(--gutter-static) / 3);
+  margin: 0 var(--gutter-static-one-third);
   display: flex;
   align-items: center;
   min-height: var(--control-min-height-small);
