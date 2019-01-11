@@ -29,7 +29,7 @@
   --radius: 6px;
   --gutter: 1rem;
   --gutter-static: 15px;
-  --gutter-static-one-third: calc(var(--gutter) / 3);
+  --gutter-static-one-third: calc(var(--gutter-static) / 3);
   --gutter-static-two-thirds: calc(var(--gutter-static-one-third) * 2);
   --input-horizontal-padding: var(--gutter-static-one-third);
   --input-vertical-padding: 0;
