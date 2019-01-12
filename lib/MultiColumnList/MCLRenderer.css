@@ -110,7 +110,8 @@
   flex-shrink: 0;
   flex-grow: 0;
   line-height: var(--line-height);
-  padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
+  padding: 0 var(--gutter-static-two-thirds);
+  min-height: var(--control-min-height-small);
   overflow: hidden;
 
   &.showOverflow {
