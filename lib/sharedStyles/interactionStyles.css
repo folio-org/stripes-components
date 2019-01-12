@@ -64,7 +64,7 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  transform: translateY(-50%) scale(1);
+  transform: translateY(-50%) translateX(-50%) scale(1);
   min-width: 4px;
   width: 4px;
   height: 4px;
