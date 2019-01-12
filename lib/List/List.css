@@ -32,9 +32,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 6px;
+    padding: var(--gutter-static-one-third) 0;
     border-radius: var(--radius);
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--gutter-static-one-third);
   }
 }
 
@@ -44,17 +44,23 @@
 ul.listStyleBullets,
 ul.listStyleBullets ul {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-left: var(--gutter-static);
 
   & ul {
-    margin-top: 4px;
+    margin-top: var(--gutter-static-one-third);
     list-style-type: circle;
-    margin-bottom: 8px;
+    margin-bottom: var(--gutter-static-two-thirds);
   }
 
   & li {
-    margin-bottom: 4px;
+    margin-bottom: var(--gutter-static-one-third);
   }
+}
+
+[dir="rtl"] ul.listStyleBullets,
+[dir="rtl"] ul.listStyleBullets ul {
+  padding-left: 0;
+  padding-right: var(--gutter-static);
 }
 
 .listStyleDefault:nth-child(odd) {
