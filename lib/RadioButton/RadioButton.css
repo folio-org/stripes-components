@@ -59,6 +59,7 @@
   border-radius: 999px;
   background: #fff;
   flex-shrink: 0;
+  top: 1px;
 }
 
 .labelPseudo::after {

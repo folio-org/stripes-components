@@ -55,6 +55,7 @@
   display: flex;
   overflow: hidden;
   flex-shrink: 0;
+  top: 1px;
 
   & svg {
     opacity: 0;

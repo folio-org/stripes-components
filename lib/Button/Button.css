@@ -6,7 +6,7 @@
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 0.125rem var(--gutter);
+  padding: 0 var(--gutter-static-two-thirds);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
@@ -17,7 +17,7 @@
   border: transparent;
   margin: 0 0 var(--gutter);
   white-space: nowrap;
-  line-height: 1.85;
+  line-height: var(--line-height);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -26,9 +26,10 @@
   opacity: 1;
   font-weight: var(--text-weight-button);
   font-size: var(--font-size-medium);
+  min-height: var(--control-min-height-small);
 
   &.block {
-    display: block;
+    display: flex;
   }
 
   & + .button {
