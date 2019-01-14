@@ -2,7 +2,7 @@
 
 Primary staple of layout for FOLIO modules.
 
-### Sizing
+## Sizing
 A Pane requires a `defaultWidth` prop to tell its parent `<Paneset>` how it should be sized. The following example has a first pane with a static width of 20% and a second pane with dynamic width (supplied `"fill"` for its `defaultWidth`) that will occupy the remaining width of the paneset.
 ```js
 import { Pane, Paneset } from '@folio/stripes/components';
@@ -18,7 +18,7 @@ import { Pane, Paneset } from '@folio/stripes/components';
 ```
 
 
-#### Dismissible
+## Dismissible
 To make a pane dismissible, simply supply the `dismissible` prop and a module-level handler to the `onClose` prop.
 ```js
     // set up boolean for rendering the pane...
@@ -37,59 +37,8 @@ To make a pane dismissible, simply supply the `dismissible` prop and a module-le
         </Pane>
     }
 ```
-### Pane Header
-A default `<Pane>` builds a simple header that includes centered title text (supplied in the `paneTitle` prop) with customizable menus at either end (`firstMenu`, `lastMenu` props). When the page is rendered in a right-to-left language, the menus will automatically switch placement.
 
-Add an `<AppIcon />`-component to the pane header by providing an `appIcon`-prop that matches the key of an installed FOLIO app. Providing the `appIconKey`-prop will display a specific icon that is bundled with the app with they key of `appIcon` (optional). See example below.
-```js
-const paneStartMenu = <PaneMenu><button><Icon icon="bookmark" /></button></PaneMenu>
-<Pane defaultWidth="50%" paneTitle="Example First Menu" firstMenu={paneStartMenu} appIcon="instances" appIconKey="items">
-    // Pane Content...
-</Pane>
-```
-### Custom Header
-If the header needs functionality, the `header` prop will accept a component to render instead of the default pane header.
-```js
-const searchHeader = <FilterPaneSearch id="SearchField" {...otherProps} />;
-<Pane defaultWidth="20%" header={searchHeader}>
-    // Pane Content
-</Pane>
-```
-
-### Pane Action Menu
-Activate the Pane Action Menu by passing a function that returns a component/node to the `actionMenu`-prop.
-
-The necessary props for closing the dropdown (onToggle) etc. will be passed into the function.
-
-```js
-
-const getActionMenu = ({ onToggle }) => (
-    <Fragment>
-        <Button buttonStyle="dropdownItem">
-            <Icon icon="duplicate">
-                Duplicate
-            </Icon>
-        </Button>
-        <Button buttonStyle="dropdownItem">
-            <Icon icon="edit">
-                Edit
-            </Icon>
-        </Button>
-        <Button buttonStyle="dropdownItem">
-            <Icon icon="bookmark">
-                Bookmark
-            </Icon>
-        </Button>
-    </Fragment>
-);
-
-<Pane defaultWidth="20%" paneTitle="My title" actionMenu={getActionMenu}>
-    // Pane Content
-</Pane>
-```
-
-
-### Props
+## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 actionMenu | func | Activates the action menu dropdown. Expects a function that returns a component or node. | undefined |
