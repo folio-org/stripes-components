@@ -26,7 +26,7 @@
   opacity: 1;
   font-weight: var(--text-weight-button);
   font-size: var(--font-size-medium);
-  min-height: var(--control-min-height-desktop);
+  min-height: var(--control-min-size-desktop);
 
   &.block {
     display: flex;

@@ -111,7 +111,7 @@
   flex-grow: 0;
   line-height: var(--line-height);
   padding: 0 var(--gutter-static-two-thirds);
-  min-height: var(--control-min-height-desktop);
+  min-height: var(--control-min-size-desktop);
   overflow: hidden;
 
   &.showOverflow {

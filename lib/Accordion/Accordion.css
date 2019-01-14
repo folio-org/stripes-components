@@ -148,7 +148,7 @@
   line-height: var(--line-height);
   text-align: left;
   font-size: var(--font-size-medium);
-  min-height: var(--control-min-height-desktop);
+  min-height: var(--control-min-size-desktop);
 
   &:focus {
     outline: none;

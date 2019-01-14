@@ -9,7 +9,7 @@
   align-items: center;
   position: relative;
   padding: 0.2rem 0;
-  min-height: var(--control-min-height-desktop);
+  min-height: var(--control-min-size-desktop);
 
   &::after {
     content: '';

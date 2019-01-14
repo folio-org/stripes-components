@@ -132,7 +132,7 @@
   margin: 0 var(--gutter-static-one-third);
   display: flex;
   align-items: center;
-  min-height: var(--control-min-height-desktop);
+  min-height: var(--control-min-size-desktop);
 }
 
 /* fix for shrinkage issues with checkbox as a flex-child */

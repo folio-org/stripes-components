@@ -41,7 +41,7 @@
   outline: 0;
   letter-spacing: 0.4px;
   border-radius: 0;
-  min-height: var(--control-min-height-desktop);
+  min-height: var(--control-min-size-desktop);
   display: flex;
   align-items: center;
 
