@@ -21,7 +21,7 @@
   margin: 0 var(--gutter-static-one-third);
   display: flex;
   align-items: center;
-  min-height: var(--control-min-height-small);
+  min-height: var(--control-min-height-desktop);
 }
 
 .radioLabel {

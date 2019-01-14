@@ -9,7 +9,7 @@
   position: relative;
   will-change: transform;
   padding: 0 var(--gutter-static);
-  min-height: var(--control-min-height-large);
+  min-height: var(--control-min-height-touch);
 
   & button {
     z-index: 2;

@@ -24,8 +24,8 @@
   --warn: #e27c3e;
   --success: #070;
   --control-margin-bottom: 1rem;
-  --control-min-height-large: 44px;
-  --control-min-height-small: 24px;
+  --control-min-height-touch: 44px;
+  --control-min-height-desktop: 24px;
   --radius: 6px;
   --gutter: 1rem;
   --gutter-static: 15px;
