@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 5.0.0 (IN PROGRESS)
+## [5.0.0](https://github.com/folio-org/stripes-components/tree/v5.0.0) (2019-01-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v5.0.0)
 
 * Add `inputRef` prop to `<TextField>`. Part of STCOM-372.
 * Deprecate `getInput()` and `focusInput()` methods of `TextField`. Part of STCOM-372.
