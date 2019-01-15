@@ -27,6 +27,5 @@ href | string | Turns the button into a link (instead of using an onClick handle
 to | string or object | accepts `to` prop similar to `<Link>` from `react-router` [Details for `<Link>`](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/Link.md).
 badgeCount | string / number | Display a small number badge on the IconButton
 id | string | Adds an id attribute to the button
-title | string | Adds a title attribute to the button
 ariaLabel | string | Adds an aria label to the button
 autoFocus | bool | If this prop is `true`, component will automatically focus on mount | |

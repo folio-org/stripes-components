@@ -26,7 +26,7 @@ Name | type | description | default |
 --- | --- | --- | ---
 icon | string | Sets icon to be rendered. See icon list for possible options | default
 size | string | Sets the icon size (small, medium, large) | medium
-title | string | Text that appears in a browser-native tooltip when icon is hovered |
+ariaLabel | string | Applies aria-label attribute to icon |
 iconRootClass | string | Applies a custom css class to the component's internal div. This is useful for applying custom hover interaction. |
 iconClassName | string | Applies a custom css class name directly to icon | stripes__icon
 children | node, string | Adds content next to the icon. Useful for adding a label to an icon. | undefined
