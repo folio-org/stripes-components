@@ -58,7 +58,6 @@ Component | doc | categories
 [`<DropdownMenu>`](lib/DropdownMenu) | | control
 [`<EditableList>`](lib/EditableList) | [doc](lib/EditableList/readme.md) | control, prefab
 [`<EmptyMessage>`](lib/EmptyMessage) | [doc](lib/EmptyMessage/readme.md) | structure
-[`<EntrySelector>`](lib/EntrySelector) | | control
 [`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
 [`<FilterControlGroup>`](lib/FilterControlGroup) | | control
 [`<FilterGroups>`](lib/FilterGroups) | [doc](lib/FilterGroups/readme.md) | control
@@ -69,8 +68,6 @@ Component | doc | categories
 [`<HotKeys>`](lib/HotKeys) | [doc](lib/HotKeys/readme.md) | utility
 [`<Icon>`](lib/Icon) | [doc](lib/Icon/readme.md) | design
 [`<IconButton>`](lib/IconButton) | [doc](lib/IconButton/readme.md) | control
-[`<IfInterface>`](lib/IfInterface) | [doc](lib/IfInterface/readme.md) | utility
-[`<IfPermission>`](lib/IfPermission) | [doc](lib/IfPermission/readme.md) | utility
 [`<InfoPopover>`](lib/InfoPopover) | [doc](lib/InfoPopover/readme.md) | control, prefab
 [`<KeyValue>`](lib/KeyValue) | [doc](lib/KeyValue/readme.md) | data-display
 [`<Layer>`](lib/Layer) | [doc](lib/Layer/readme.md) | structure
@@ -105,7 +102,6 @@ Component | doc | categories
 [`<Selection>`](lib/Selection) | [doc](lib/Selection/readme.md) | control
 [`<Settings>`](lib/Settings) | [doc](lib/Settings/readme.md) | prefab
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) | accessibility, user-feedback
-[`<TabButton>`](lib/TabButton) | | control
 [`<TextArea>`](lib/TextArea) | | control
 [`<TextField>`](lib/TextField) | [doc](lib/TextField/readme.md) | control
 [`<Timepicker>`](lib/Timepicker) | [doc](lib/Timepicker/readme.md) | control
