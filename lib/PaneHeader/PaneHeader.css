@@ -97,7 +97,6 @@
   margin: 0 auto 0 0;
 }
 
-
 /* Pane action menu */
 .paneHeaderCenterButton {
   composes: interactionStyles from '../sharedStyles/interactionStyles.css';
