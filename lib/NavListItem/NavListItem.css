@@ -8,14 +8,14 @@
   display: block;
   width: 100%;
   padding: 5px 10px;
-  color: var(--body-color);
+  color: var(--color-text);
   border-radius: var(--radius);
   text-align: left;
   outline: 0;
 
   /* for anchor tags */
   &:visited {
-    color: var(--body-color);
+    color: var(--color-text);
   }
 
   &.isActive {

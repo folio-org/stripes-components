@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 4.6.0 (In Progress)
+## [5.0.0](https://github.com/folio-org/stripes-components/tree/v5.0.0) (2019-01-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v5.0.0)
 
 * Add `inputRef` prop to `<TextField>`. Part of STCOM-372.
 * Deprecate `getInput()` and `focusInput()` methods of `TextField`. Part of STCOM-372.
@@ -8,6 +9,15 @@
 * Add `document` icon
 * Replace `<SegmentedControl>` with `<ButtonGroup>`
 * Fix broken focus management of `<Selection>` on small screens. Fixes STCOM-433.
+* Remove `craftLayerUrl()` util
+* Remove deprecated CSS variables
+* Remove deprecated `title` props
+* Remove deprecated `excludeKeys` prop for `exportCsv`
+* Delete `<TabButton>`
+* Remove `<IfPermission>` and `<IfInterface>`
+* Remove deprecated icon names
+* Delete moved `<EntrySelector>`
+
 
 ## [4.5.0](https://github.com/folio-org/stripes-components/tree/v4.5.0) (2018-11-29)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v4.5.0)
