@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -102,6 +102,6 @@
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {
-    "@folio/stripes-core": "^2.13.0"
+    "@folio/stripes-core": "^3.0.0"
   }
 }
