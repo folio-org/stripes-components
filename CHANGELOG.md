@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [5.0.1](https://github.com/folio-org/stripes-components/tree/v5.0.1) (2019-01-16)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.0...v5.0.1)
+
+* Bump `stripes-core` peer dependency
+
 ## [5.0.0](https://github.com/folio-org/stripes-components/tree/v5.0.0) (2019-01-15)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v5.0.0)
 
@@ -17,7 +22,6 @@
 * Remove `<IfPermission>` and `<IfInterface>`
 * Remove deprecated icon names
 * Delete moved `<EntrySelector>`
-
 
 ## [4.5.0](https://github.com/folio-org/stripes-components/tree/v4.5.0) (2018-11-29)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v4.4.0...v4.5.0)
