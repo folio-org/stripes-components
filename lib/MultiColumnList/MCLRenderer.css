@@ -147,3 +147,7 @@
 .emptyMessage {
   padding: 1rem;
 }
+
+.endOfList {
+  margin: 1rem 0;
+}
