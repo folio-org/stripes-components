@@ -149,5 +149,7 @@
 }
 
 .endOfList {
-  margin: 1rem 0;
+  padding: 7px 0;
+  position: sticky;
+  left: 0;
 }
