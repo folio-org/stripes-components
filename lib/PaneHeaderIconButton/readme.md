@@ -5,7 +5,7 @@ A modified version of `<IconButton>` made specifically for the `<PaneHeader>`-co
 Below is a basic example of how to use the `<PaneHeaderIconButton>`-component. For more examples, please see the readme for `<PaneHeader>`.
 
 ```js
-  import { Pane, PaneHeaderIconButton } from '@folio/stripes/components';
+  import { Pane, PaneMenu, PaneHeaderIconButton } from '@folio/stripes/components';
 
   <Pane
     firstMenu={
