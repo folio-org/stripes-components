@@ -59,18 +59,6 @@
   --text-weight-headline: calc(var(--text-weight-headline-basis) + ( var(--text-weight-headline-addition-factor) * var(--text-weights-are-bolder)));
   --text-weight-button: var(--text-weight);
   --text-weight-button-primary: calc(var(--text-weight-headline-basis) + ( var(--text-weight-headline-addition-factor) * var(--text-weights-are-bolder)));
-
-  /**
-   * Deprecated
-   */
-  --body-color: var(--color-text);
-  --sub-label-color: var(--color-text-p2);
-  --label-color: var(--color-text-p2);
-  --input-border-color: var(--color-border-p2);
-  --minor-divider-color: var(--color-border-p2);
-  --major-padding: var(--gutter);
-  --link-color: var(--color-link);
-  --link-color-visited: var(--color-link-visited);
 }
 
 /* Lean on min-width queries to create mobile-first CSS. */

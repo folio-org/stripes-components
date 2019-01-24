@@ -7,7 +7,7 @@
   outline: 0;
 
   &:focus {
-    color: var(--link-color);
+    color: var(--color-link);
   }
 }
 

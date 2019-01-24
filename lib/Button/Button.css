@@ -264,3 +264,19 @@
     outline: none;
   }
 }
+
+/**
+ * Alignment
+ */
+
+.align-start {
+  justify-content: flex-start;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-end {
+  justify-content: flex-end;
+}

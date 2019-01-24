@@ -27,15 +27,15 @@
   composes: interactionStyles hasDot focusDotPositionStart focusDotOffsetSmall boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
   display: block;
   width: 100%;
+  color: var(--color-text);
   border-radius: var(--radius);
   text-align: left;
   outline: 0;
   font-size: var(--font-size-medium);
-  color: var(--body-color);
 
   /* for anchor tags */
   &:visited {
-    color: var(--body-color);
+    color: var(--color-text);
   }
 
   &.isActive {

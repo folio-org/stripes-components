@@ -90,12 +90,16 @@
 
 /* Last content area */
 .paneContentLastArea {
-  margin-left: auto;
+  margin: 0 0 0 auto;
 
   /* Control close icon position with order. Useful for when changing dir to rtl */
   & .paneHeaderCloseIcon {
     order: 99;
   }
+}
+
+[dir="rtl"] .paneContentLastArea {
+  margin: 0 auto 0 0;
 }
 
 /* Pane action menu */
