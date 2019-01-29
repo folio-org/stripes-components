@@ -1,8 +1,0 @@
-.dropdownButton {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dropdownButton__content {
-  margin-right: 0.5em;
-}
