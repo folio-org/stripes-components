@@ -147,3 +147,9 @@
 .emptyMessage {
   padding: 1rem;
 }
+
+.endOfList {
+  padding: 7px 0;
+  position: sticky;
+  left: 0;
+}

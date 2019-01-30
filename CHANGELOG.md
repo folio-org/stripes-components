@@ -2,6 +2,7 @@
 
 ## 5.1.0 (IN PROGRESS)
 
+* Add EndOfList component to MCL component. Part of UIDATIMP-105.
 * In `<MultiColumnList>`, use columns' static keys, not translated aliases, for sorting. Refs STSMACOM-93.
 
 ## [5.0.2](https://github.com/folio-org/stripes-components/tree/v5.0.2) (2019-01-17)
