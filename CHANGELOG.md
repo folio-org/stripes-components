@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## [5.0.3](https://github.com/folio-org/stripes-components/tree/v5.0.3) (IN-PROGRESS)
+
+* Add EndOfList component to MCL component. Part of UIDATIMP-105.
+
 ## [5.0.2](https://github.com/folio-org/stripes-components/tree/v5.0.2) (2019-01-17)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.1...v5.0.2)
 
