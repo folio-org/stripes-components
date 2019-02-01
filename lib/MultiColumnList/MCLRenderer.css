@@ -6,11 +6,11 @@
   }
 }
 
-.heightSpacer {
+.mclHeightSpacer {
   position: relative;
 }
 
-.rowContainer {
+.mclRowContainer {
   position: absolute;
   min-width: 100%;
 
@@ -21,11 +21,11 @@
 }
 
 /* Row is interactive (clickable, hoverable and focusable etc.) */
-.isInteractive {
+.mclIsInteractive {
   composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
 }
 
-.row {
+.mclRow {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -40,12 +40,12 @@
   }
 
   /* Different bg on odd rows */
-  &.isOdd:not(.selected) {
+  &.mclIsOdd:not(.selected) {
     background-color: var(--color-fill-table-row-odd);
   }
 
   /* Selected style */
-  &.selected {
+  &.mclSelected {
     color: #fff;
     background-color: var(--color-fill-current);
 
@@ -56,7 +56,7 @@
   }
 }
 
-.rowsBody {
+.mclRowsBody {
   padding: 0 6px 3px;
 
   /* Use monospaced numbers, aka Tabular Numerals (tnum) */
@@ -65,19 +65,19 @@
   -moz-font-feature-settings: 'tnum';
 }
 
-.headerRow {
+.mclHeaderRow {
   display: flex;
   justify-content: flex-start;
   margin: 0 calc(var(--gutter) / 2);
   overflow: hidden;
   width: 100%;
 
-  &.hScroll {
+  &.mclHScroll {
     overflow: auto;
   }
 }
 
-.header {
+.mclHeader {
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -87,24 +87,24 @@
   font-size: var(--font-size-medium);
   color: var(--color-text-p2);
 
-  &.clickable {
+  &.mclClickable {
     cursor: pointer;
   }
 
-  &.sorted {
+  &.mclSorted {
     text-decoration: underline;
   }
 
-  &.ascending::after {
+  &.mclAscending::after {
     content: "↑";
   }
 
-  &.descending::after {
+  &.mclDescending::after {
     content: "↓";
   }
 }
 
-.cell {
+.mclCell {
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -118,13 +118,13 @@
   }
 }
 
-.scrollable {
+.mclScrollable {
   position: relative;
   overflow: auto;
   width: 100%;
 }
 
-.contentLoadingRow {
+.mclContentLoadingRow {
   width: 100%;
   display: flex;
   position: absolute;
@@ -134,7 +134,7 @@
   pointer-events: none;
 }
 
-.contentLoading {
+.mclContentLoading {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -144,11 +144,11 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.emptyMessage {
+.mclEmptyMessage {
   padding: 1rem;
 }
 
-.endOfList {
+.mclEndOfList {
   padding: 7px 0;
   position: sticky;
   left: 0;
