@@ -6,6 +6,7 @@ export { default as ButtonGroup } from './lib/ButtonGroup';
 export { default as Checkbox } from './lib/Checkbox';
 export { default as Datepicker, Calendar } from './lib/Datepicker';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
+export { default as Label } from './lib/Label';
 export { default as RadioButton } from './lib/RadioButton';
 export { default as RadioButtonGroup } from './lib/RadioButtonGroup';
 export { default as SegmentedControl } from './lib/SegmentedControl';
