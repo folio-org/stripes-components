@@ -1,0 +1,11 @@
+/**
+ * Asterisk
+ */
+
+@import "../../../variables";
+
+.asterisk {
+  color: var(--error);
+  font-weight: bold;
+  padding: 0 0.1rem;
+}
