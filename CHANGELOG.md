@@ -4,6 +4,7 @@
 
 * Update ARIA roles for MCL. STCOM-365
 * Add EndOfList component to MCL component. Part of UIDATIMP-105.
+* Added asterisk for required form fields. STCOM-469
 
 ## [5.0.2](https://github.com/folio-org/stripes-components/tree/v5.0.2) (2019-01-17)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.1...v5.0.2)
