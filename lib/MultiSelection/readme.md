@@ -125,3 +125,13 @@ Sometimes if a list of potential options is very large, it may be handled by the
     dataOptions={this.state.options}
   />
 ```
+
+## Usage as a part of the field for _redux-form_
+In that case make sure to provide `onBlur` callback like below as built-in one for _redux-form_ may reset values on blur event
+```
+  <Field
+    component={asyncFiltering}
+    onBlur={e => { e.preventDefault(); }}
+    ...
+   />
+```
