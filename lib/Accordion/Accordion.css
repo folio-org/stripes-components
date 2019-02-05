@@ -25,9 +25,8 @@
   align-items: center;
   border-top: 1px solid transparent;
 
-  /* transition: background-color 0.3s; */
-
   & button,
+  & a,
   & h1,
   & h2,
   & h3,
@@ -73,7 +72,7 @@
 .content {
   max-height: 0; /* hidden */
   overflow: hidden;
-  margin: 0.5em 0 1em 1.5em;
+  margin: 0 0 1em 0;
   transition: max-height 0.25s ease;
 
   &.expanded {
@@ -101,7 +100,11 @@
 .headerDefaultContentRight {
   flex-grow: 2;
   flex-shrink: 0;
-  padding: 0 4px;
+  padding: 0 0 0 1.2rem;
+}
+
+[dir="rtl"] .headerDefaultContentRight {
+  padding: 0 1.2rem 0 0;
 }
 
 .defaultCollapseButton {
@@ -111,10 +114,11 @@
   outline: none;
   display: flex;
   align-items: center;
-  padding: calc(var(--input-vertical-padding) * 4) var(--input-horizontal-padding);
+  padding: var(--gutter-static-one-third) 0;
   background-color: transparent;
   width: 100%;
   color: var(--color-text);
+  font-size: var(--font-size-large);
 
   &:hover,
   &:focus {
@@ -123,7 +127,7 @@
 }
 
 .headerInner {
-  composes: interactionStyles from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
   width: 100%;
   display: flex;
   align-items: center;
@@ -133,7 +137,7 @@
  * Filter set header
  */
 .filterSetHeader {
-  composes: interactionStyles boxOffsetStartSmall from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartMedium from "../sharedStyles/interactionStyles.css";
   composes: header;
   border-radius: var(--radius);
   appearance: none;
@@ -144,6 +148,7 @@
   line-height: var(--line-height);
   text-align: left;
   font-size: var(--font-size-medium);
+  min-height: var(--control-min-size-desktop);
 
   &:focus {
     outline: none;
@@ -157,11 +162,19 @@
 
 .defaultHeaderIcon {
   color: var(--color-icon);
-  padding: 0.25em;
+  padding: 0.25rem 0.25rem 0.25rem 0;
+}
+
+[dir="rtl"] .defaultHeaderIcon {
+  padding: 0.25rem 0 0.25rem 0.25rem;
 }
 
 .filterSetHeaderIcon {
   fill: var(--color-icon);
+}
+
+[dir="rtl"] .filterSetHeaderIcon {
+  margin-left: 0.35em;
 }
 
 .clearButtonVisible {

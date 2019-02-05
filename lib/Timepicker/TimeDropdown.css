@@ -5,8 +5,8 @@
   background: #fff;
   border-radius: var(--radius);
   border: 1px solid #bcbcbc;
-  padding: 0.5rem;
-  width: 230px;
+  padding: var(--gutter-static);
+  min-width: 260px;
   box-shadow: var(--shadow);
   z-index: 9999;
 

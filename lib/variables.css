@@ -24,10 +24,15 @@
   --warn: #e27c3e;
   --success: #070;
   --control-margin-bottom: 1rem;
+  --control-min-size-touch: 44px;
+  --control-min-size-desktop: 24px;
   --radius: 6px;
   --gutter: 1rem;
-  --input-horizontal-padding: 0.5rem;
-  --input-vertical-padding: 0.125rem;
+  --gutter-static: 15px;
+  --gutter-static-one-third: calc(var(--gutter-static) / 3);
+  --gutter-static-two-thirds: calc(var(--gutter-static-one-third) * 2);
+  --input-horizontal-padding: var(--gutter-static-one-third);
+  --input-vertical-padding: 0;
 
   /**
    * Font-size

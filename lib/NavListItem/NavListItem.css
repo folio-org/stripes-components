@@ -3,15 +3,35 @@
  */
 @import '../variables.css';
 
+.NavListItemInner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.2rem 0;
+  min-height: var(--control-min-size-desktop);
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: calc(var(--gutter-static-two-thirds) * -1);
+    right: calc(var(--gutter-static-two-thirds) * -1);
+    top: 0;
+    bottom: 0;
+    border-radius: var(--radius);
+    z-index: -1;
+  }
+}
+
 .NavListItem {
-  composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles hasDot focusDotPositionStart focusDotOffsetSmall boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
   display: block;
   width: 100%;
-  padding: 5px 10px;
   color: var(--color-text);
   border-radius: var(--radius);
   text-align: left;
   outline: 0;
+  font-size: var(--font-size-medium);
 
   /* for anchor tags */
   &:visited {
@@ -19,10 +39,6 @@
   }
 
   &.isActive {
-    background-color: var(--color-fill-current);
-    color: #fff;
-    text-decoration: none;
-
     /* Make sure child elements has
     white text color when item is active */
     & * {
@@ -33,16 +49,24 @@
     &::after {
       background-color: #fff;
     }
+
+    & .NavListItemInner {
+      color: #fff;
+
+      &::after {
+        background-color: var(--color-fill-current);
+        text-decoration: none;
+      }
+    }
   }
 }
 
-.NavListItemInner {
-  display: flex;
-  font-size: var(--font-size-medium);
-}
-
 /* if stripped styles is activated in NavList */
+/* stylelint-disable */
 .stripped .NavListItem:nth-child(odd):not(.isActive):not(:hover):not(:active),
 .NavListItem.odd:not(.isActive):not(:hover):not(:active) {
-  background-color: var(--color-fill-table-row-odd);
+  & .NavListItemInner::after {
+    background-color: var(--color-fill-table-row-odd);
+  }
 }
+/* stylelint-enable */

@@ -8,13 +8,13 @@
 @import '../variables.css';
 
 :root {
-  --focus-dot-offset-default: 4px;
-  --focus-dot-offset-small: -5px;
-  --focus-dot-offset-medium: -10px;
-  --focus-dot-offset-large: -1rem;
-  --box-offset-small: -5px;
-  --box-offset-medium: -10px;
-  --box-offset-large: -1rem;
+  --focus-dot-offset-default: var(--gutter-static-one-third);
+  --focus-dot-offset-small: calc(var(--gutter-static-one-third) * -1);
+  --focus-dot-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
+  --focus-dot-offset-large: calc(var(--gutter-static) * -1);
+  --box-offset-small: calc(var(--gutter-static-one-third) * -1);
+  --box-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
+  --box-offset-large: calc(var(--gutter-static) * -1);
 }
 
 .interactionStyles {
@@ -64,7 +64,7 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  transform: translateY(-50%) scale(1);
+  transform: translateY(-50%) translateX(-50%) scale(1);
   min-width: 4px;
   width: 4px;
   height: 4px;

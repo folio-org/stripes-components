@@ -61,7 +61,7 @@
   position: relative;
   pointer-events: all;
   background-color: #fff;
-  padding: 2px 6px;
+  padding: var(--gutter-static);
   opacity: 0;
   transition: left 0.4s, right 0.4s, opacity 0.4s;
   border: 1px solid transparent;
