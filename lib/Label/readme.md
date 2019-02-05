@@ -1,7 +1,7 @@
 # Label
-Renders a simple <label> with a few optional additions
+Renders a simple `<label>` with a few optional additions
 
-**Note:** Most form elements has already labels implemented directly – activated by the "label"-prop. This component is only relevant in special circumstances – e.g. when creating a new form component.
+**Note:** Most form components have already labels implemented directly – activated by the "label"-prop. This component is only relevant in special circumstances – e.g. when creating a new form component.
 
 ## Basic Usage
 ```js
