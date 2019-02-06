@@ -1,6 +1,9 @@
 /**
  * Note: Variable fonts disabled for now 
- * due to causing multiple rendering problems
+ * because it's causing several problems
+ * 
+ * https://issues.folio.org/browse/STCOM-461
+ * https://issues.folio.org/browse/STCOM-434
  */
 
 /* @font-face {
