@@ -53,6 +53,8 @@
   &.isDisabled {
     background-color: #ebebe4;
     color: #777;
+    border: 1px solid var(--color-border);
+    box-shadow: none;
   }
 
   /**
