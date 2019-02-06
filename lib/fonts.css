@@ -1,4 +1,9 @@
-@font-face {
+/**
+ * Note: Variable fonts disabled for now 
+ * due to causing multiple rendering problems
+ */
+
+/* @font-face {
   font-family: 'Source Sans Pro Variable';
   font-style: normal;
   src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Roman.woff2') format('woff2-variations');
@@ -80,7 +85,7 @@
   font-style: italic;
   src: url('../assets/fonts/SourceSansPro/SourceSansVariable-Italic.woff2') format('woff2-variations');
   font-weight: 900;
-}
+} */
 
 /* fallbacks */
 @font-face {
