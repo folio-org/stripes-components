@@ -6,11 +6,11 @@
   }
 }
 
-.heightSpacer {
+.mclHeightSpacer {
   position: relative;
 }
 
-.rowContainer {
+.mclRowContainer {
   position: absolute;
   min-width: 100%;
 
@@ -21,18 +21,18 @@
 }
 
 /* Row is interactive (clickable, hoverable and focusable etc.) */
-.isInteractive {
+.mclIsInteractive {
   composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
 }
 
-.row {
+.mclRow {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   border-radius: var(--radius);
   color: var(--color-text);
   text-decoration: none;
-  margin: 0 calc(var(--gutter) / 2);
+  margin: 0 var(--gutter-static-one-third);
   outline: none;
 
   &:visited {
@@ -40,12 +40,12 @@
   }
 
   /* Different bg on odd rows */
-  &.isOdd:not(.selected) {
+  &.mclIsOdd:not(.mclSelected) {
     background-color: var(--color-fill-table-row-odd);
   }
 
   /* Selected style */
-  &.selected {
+  &.mclSelected {
     color: #fff;
     background-color: var(--color-fill-current);
 
@@ -56,7 +56,7 @@
   }
 }
 
-.rowsBody {
+.mclRowsBody {
   padding: 0 6px 3px;
 
   /* Use monospaced numbers, aka Tabular Numerals (tnum) */
@@ -65,52 +65,53 @@
   -moz-font-feature-settings: 'tnum';
 }
 
-.headerRow {
+.mclHeaderRow {
   display: flex;
   justify-content: flex-start;
-  margin: 0 calc(var(--gutter) / 2);
+  padding: 0 var(--gutter-static-two-thirds);
   overflow: hidden;
   width: 100%;
 
-  &.hScroll {
+  &.mclHScroll {
     overflow: auto;
   }
 }
 
-.header {
+.mclHeader {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: calc(var(--gutter) / 2);
+  padding: var(--gutter-static-two-thirds) var(--gutter-static-one-third) var(--gutter-static-one-third) var(--gutter-static-one-third);
   font-weight: 600;
   font-size: var(--font-size-medium);
   color: var(--color-text-p2);
 
-  &.clickable {
+  &.mclClickable {
     cursor: pointer;
   }
 
-  &.sorted {
+  &.mclSorted {
     text-decoration: underline;
   }
 
-  &.ascending::after {
+  &.mclAscending::after {
     content: "↑";
   }
 
-  &.descending::after {
+  &.mclDescending::after {
     content: "↓";
   }
 }
 
-.cell {
+.mclCell {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
   line-height: var(--line-height);
-  padding: calc(var(--gutter) / 4) calc(var(--gutter) / 2);
+  padding: 0 var(--gutter-static-two-thirds);
+  min-height: var(--control-min-size-desktop);
   overflow: hidden;
 
   &.showOverflow {
@@ -118,13 +119,13 @@
   }
 }
 
-.scrollable {
+.mclScrollable {
   position: relative;
   overflow: auto;
   width: 100%;
 }
 
-.contentLoadingRow {
+.mclContentLoadingRow {
   width: 100%;
   display: flex;
   position: absolute;
@@ -134,7 +135,7 @@
   pointer-events: none;
 }
 
-.contentLoading {
+.mclContentLoading {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -144,6 +145,12 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.emptyMessage {
+.mclEmptyMessage {
   padding: 1rem;
+}
+
+.mclEndOfList {
+  padding: 7px 0;
+  position: sticky;
+  left: 0;
 }

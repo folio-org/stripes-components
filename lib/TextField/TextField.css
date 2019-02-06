@@ -28,8 +28,7 @@
 .startControls,
 .endControls {
   pointer-events: none;
-  padding: 0 0.125em;
-  height: 1.75em;
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -38,10 +37,20 @@
 
 .startControls {
   justify-content: flex-start;
+  padding: 0 0 0 var(--input-horizontal-padding);
+}
+
+[dir="rtl"] .startControls {
+  padding: 0 var(--input-horizontal-padding) 0 0;
 }
 
 .endControls {
   justify-content: flex-end;
+  padding: 0 var(--input-horizontal-padding) 0 0;
+}
+
+[dir="rtl"] .endControls {
+  padding: 0 0 0 var(--input-horizontal-padding);
 }
 
 .controlGroup {
@@ -73,6 +82,6 @@
   color: var(--color-icon);
   display: flex;
   align-items: center;
-  height: 1.75em;
+  height: 100%;
   padding: 0 0.25rem;
 }

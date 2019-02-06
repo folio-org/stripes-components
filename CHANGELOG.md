@@ -1,5 +1,13 @@
 # Change history for stripes-components
 
+## [5.0.3](https://github.com/folio-org/stripes-components/tree/v5.0.3) (IN-PROGRESS)
+
+* Update ARIA roles for MCL. STCOM-365
+* Add EndOfList component to MCL component. Part of UIDATIMP-105.
+* Added asterisk for required form fields. STCOM-469
+* Add EndOfList component to MCL component. Part of UIDATIMP-105
+* Handle on blur issue for `MultiSelect` when it is part of `redux-form`. See [docs](lib/MultiSelection/readme.md#usage-as-a-part-of-the-field-for-redux-form). Part of UIDATIMP-56
+
 ## [5.0.2](https://github.com/folio-org/stripes-components/tree/v5.0.2) (2019-01-17)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.1...v5.0.2)
 
