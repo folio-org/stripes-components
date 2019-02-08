@@ -54,14 +54,14 @@
     "selection.filterOptionsPlaceholder": "Lista de opções de filtros",
     "selection.filterResultFeedback": "{length} itens encontrados, {label} selecionados",
     "exportToCsv": "Export to CSV",
-    "button.edit": "Edit",
-    "button.new": "New",
+    "button.edit": "Editar",
+    "button.new": "Novo",
     "multiSelection.defaultEmptyMessage": "No matching items found!",
     "multiSelection.filterPlaceholder": "filter option list",
     "multiSelection.controlDescription": "Contains a list of any selected values, followed by a combobox for selecting additional values.",
     "multiSelection.removeSelectedButtonDescription": "Press enter or spacebar to remove item from selection list. Home and end keys navigate to the first or last items.",
     "multiSelection.removeSelectedButtonLabel": "remove value",
-    "button.copy": "Copy",
+    "button.copy": "Copiar",
     "endOfList": "End of list",
     "button.duplicate": "Duplicate",
     "passwordStrength.veryWeak": "Your password is very weak.",
@@ -74,5 +74,5 @@
     "fieldIsDisabled": "Field is disabled",
     "readonly": "Read-only",
     "readMore": "Read more",
-    "tableEmpty": "The list contains no items"
+    "tableEmpty": "A lista não contém itens"
 }
