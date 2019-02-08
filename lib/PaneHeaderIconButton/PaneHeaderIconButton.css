@@ -2,10 +2,23 @@
  * PaneHeaderIconButton
  */
 
-.PaneHeaderIconButton__button {
+@import "../variables";
 
+.PaneHeaderIconButton__button {
+  min-width: var(--control-min-size-touch);
+  min-height: var(--control-min-size-touch);
+}
+
+/* Overwrite IconButton's margin for stacked buttons */
+.PaneHeaderIconButton__button + .PaneHeaderIconButton__button {
+  margin: 0;
 }
 
 .PaneHeaderIconButton__inner {
-  
+  padding: 0;
+  min-width: var(--control-min-size-desktop);
+  min-height: var(--control-min-size-desktop);
+  justify-content: center;
+  align-items: center;
+  composes: boxOffsetSmall from "../sharedStyles/interactionStyles.css";
 }
