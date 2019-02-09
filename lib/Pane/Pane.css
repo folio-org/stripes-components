@@ -15,10 +15,14 @@
   overflow: hidden;
   position: absolute;
   will-change: transform;
+}
 
-  &:last-child {
-    border-right: none;
-  }
+[dir="ltr"] .pane:last-child {
+  border-right: none;
+}
+
+[dir="rtl"] .pane:last-child {
+  border-left: none;
 }
 
 /**
