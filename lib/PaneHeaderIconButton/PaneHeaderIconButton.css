@@ -4,14 +4,9 @@
 
 @import "../variables";
 
-.PaneHeaderIconButton__button {
+.PaneHeaderIconButton {
   min-width: var(--control-min-size-touch);
   min-height: var(--control-min-size-touch);
-}
-
-/* Overwrite IconButton's margin for stacked buttons */
-.PaneHeaderIconButton__button + .PaneHeaderIconButton__button {
-  margin: 0;
 }
 
 .PaneHeaderIconButton__inner {

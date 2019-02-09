@@ -6,3 +6,19 @@
   position: relative;
   z-index: 2;
 }
+
+.paneMenu .paneMenuIconButton {
+  margin: 0;
+}
+
+[dir="rtl"] .paneMenu:first-child .paneMenuIconButton:first-child,
+.paneMenu .paneMenuIconButton + .paneMenuIconButton:last-child {
+  margin-right: calc(var(--gutter-static) * -1);
+  margin-left: 0;
+}
+
+[dir=rtl] .paneMenu .paneMenuIconButton + .paneMenuIconButton:last-child,
+.paneMenu:first-child .paneMenuIconButton:first-child {
+  margin-left: calc(var(--gutter-static) * -1);
+  margin-right: 0;
+}
