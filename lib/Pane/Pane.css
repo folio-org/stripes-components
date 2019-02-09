@@ -21,6 +21,10 @@
   border-right: none;
 }
 
+[dir="rtl"] .pane:first-child {
+  border-right: none;
+}
+
 [dir="rtl"] .pane:last-child {
   border-left: none;
 }
