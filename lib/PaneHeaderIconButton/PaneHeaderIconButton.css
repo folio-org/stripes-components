@@ -5,7 +5,8 @@
 @import "../variables";
 
 .PaneHeaderIconButton {
-  min-width: var(--control-min-size-touch);
+  /* min-width: var(--control-min-size-touch); */
+  padding: 0 var(--gutter-static-one-third);
   min-height: var(--control-min-size-touch);
 }
 

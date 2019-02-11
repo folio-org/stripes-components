@@ -1,28 +1,8 @@
 @import "../variables.css";
-/* stylelint-disable */
 
 .paneMenu {
   display: flex;
   align-items: center;
   position: relative;
   z-index: 2;
-}
-
-/* Reset IconButton margin */
-.paneMenu .paneMenuIconButton {
-  margin: 0;
-}
-
-/* Pull first pane icon button to the left */
-.paneMenu:first-child .paneMenuIconButton:first-child,
-[dir=rtl] .paneMenu .paneMenuIconButton + .paneMenuIconButton:last-child {
-  margin-left: calc(var(--gutter-static) * -1);
-  margin-right: 0;
-}
-
-/* Pull last pane icon button to the right */
-.paneMenu .paneMenuIconButton + .paneMenuIconButton:last-child,
-[dir="rtl"] .paneMenu:first-child .paneMenuIconButton:first-child {
-  margin-right: calc(var(--gutter-static) * -1);
-  margin-left: 0;
 }
