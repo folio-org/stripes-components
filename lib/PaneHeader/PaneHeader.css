@@ -89,6 +89,11 @@
 }
 
 /* Pane button areas */
+.paneHeaderButtonsArea {
+  position: relative;
+  z-index: 1;
+}
+
 .paneHeaderButtonsArea:last-child {
   margin: 0 0 0 auto;
 }
