@@ -73,6 +73,6 @@
     "passwordStrength.label": "قوة كلمة المرور:",
     "fieldIsDisabled": "تم إيقاف الحقل",
     "readonly": "للقراءة فقط",
-    "readMore": "Read more",
-    "tableEmpty": "The list contains no items"
+    "readMore": "قراءة المزيد",
+    "tableEmpty": "لا تحتوي القائمة على مواد"
 }
