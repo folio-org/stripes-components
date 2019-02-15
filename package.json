@@ -89,6 +89,7 @@
     "moment-range": "^3.0.3",
     "moment-timezone": "^0.5.14",
     "normalize.css": "^7.0.0",
+    "popper.js": "^1.14.6",
     "prop-types": "^15.5.10",
     "prop-types-extra": "^1.1.0",
     "query-string": "^6.1.0",
