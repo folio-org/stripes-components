@@ -16,4 +16,5 @@
  */
 .menuSection__label {
   margin-bottom: calc(var(--gutter) / 3);
+  display: flex;
 }
