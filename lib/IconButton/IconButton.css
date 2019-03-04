@@ -21,6 +21,11 @@
   }
 }
 
+/* To avoid global :visited color on anchor tags */
+a.iconButton {
+  color: var(--color-icon);
+}
+
 .iconButtonInner {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   display: flex;

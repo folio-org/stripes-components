@@ -42,7 +42,7 @@ To make a pane dismissible, simply supply the `dismissible` prop and a module-le
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 actionMenu | func | Activates the action menu dropdown. Expects a function that returns a component or node. | undefined |
-appIcon | object | Render an app icon in the PaneHeader by passing an `<AppIcon>` from stripes-core. |  | undefined
+appIcon | element | Render an app icon in the PaneHeader by passing an `<AppIcon>` from stripes-core. |  | undefined
 defaultWidth | string percentage or `"fill"` | Tells the pane the percentage of the paneset that it should occupy. A string percentage (`"25%"`) will render a pane with a width of 25% of its containing element. The string `"fill"` will cause the pane to occupy any remaining space in the paneset after percentage-sized panes are accounted for. |  | &#10004;
 height | string | css-value representation of a custom pane height. The maximum height of a Pane is 100% of the viewport (vh unit) - the height of the universal FOLIO header. A situation where you may need this is if the Pane (or Paneset) is wrapped in an unstyled element without any width/max-width set.  |  |
 dismissible | bool or "last"| If true, pane will render a close (&times;) button in its firstMenu. If "last" is supplied, the button will render in the lastMenu. | false |
