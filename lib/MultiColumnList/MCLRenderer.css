@@ -34,6 +34,7 @@
   text-decoration: none;
   margin: 0 var(--gutter-static-one-third);
   outline: none;
+  background-color: rgba(0, 0, 0, 0.01);
 
   &:visited {
     color: var(--color-text);
