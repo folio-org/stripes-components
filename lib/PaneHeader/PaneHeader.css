@@ -88,17 +88,17 @@
   line-height: 1.2;
 }
 
-/* Last content area */
-.paneContentLastArea {
-  margin: 0 0 0 auto;
-
-  /* Control close icon position with order. Useful for when changing dir to rtl */
-  & .paneHeaderCloseIcon {
-    order: 99;
-  }
+/* Pane button areas */
+.paneHeaderButtonsArea {
+  position: relative;
+  z-index: 1;
 }
 
-[dir="rtl"] .paneContentLastArea {
+.paneHeaderButtonsArea.last {
+  margin: 0 0 0 auto;
+}
+
+[dir="rtl"] .paneHeaderButtonsArea.last {
   margin: 0 auto 0 0;
 }
 
@@ -109,4 +109,25 @@
   max-width: 100%;
   padding: 2px 5px;
   border-radius: var(--radius);
+}
+
+/* stylelint-disable no-descending-specificity */
+
+/* Reset IconButton margin */
+.paneHeader .paneHeaderIconButton {
+  margin: 0;
+}
+
+/* Pull first pane icon button to the left/start */
+.paneHeaderButtonsArea.first .paneHeaderIconButton:first-child,
+[dir=rtl] .paneHeaderButtonsArea.last .paneHeaderIconButton:last-child {
+  margin-left: calc(var(--gutter-static-two-thirds) * -1);
+  margin-right: 0;
+}
+
+/* Pull last pane icon button to the right/end */
+.paneHeaderButtonsArea.last .paneHeaderIconButton:last-child,
+[dir="rtl"] .paneHeaderButtonsArea.first .paneHeaderIconButton:first-child {
+  margin-right: calc(var(--gutter-static-two-thirds) * -1);
+  margin-left: 0;
 }

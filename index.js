@@ -25,6 +25,7 @@ export { default as List } from './lib/List';
 
 /* layout containers */
 export { default as Pane } from './lib/Pane';
+export { default as PaneHeaderIconButton } from './lib/PaneHeaderIconButton';
 export { default as PaneBackLink } from './lib/PaneBackLink';
 export { default as PaneCloseLink } from './lib/PaneCloseLink';
 export { default as PaneHeader } from './lib/PaneHeader';

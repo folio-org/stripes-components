@@ -1,0 +1,20 @@
+/**
+ * PaneHeaderIconButton
+ */
+
+@import "../variables";
+
+.PaneHeaderIconButton {
+  /* min-width: var(--control-min-size-touch); */
+  padding: 0 var(--gutter-static-one-third);
+  min-height: var(--control-min-size-touch);
+}
+
+.PaneHeaderIconButton__inner {
+  padding: 0;
+  min-width: var(--control-min-size-desktop);
+  min-height: var(--control-min-size-desktop);
+  justify-content: center;
+  align-items: center;
+  composes: boxOffsetSmall from "../sharedStyles/interactionStyles.css";
+}

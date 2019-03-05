@@ -2,7 +2,7 @@
 Render pane menus in the header of a `<Pane>`-component by passing the `firstMenu`- and `lastMenu`-props to either `<PaneHeader>` or `<Pane>`.
 
 ```js
-import { IconButton, PaneMenu, PaneCloseLink } from '@folio/stripes/components';
+import { PaneHeaderIconButton, PaneMenu, PaneCloseLink } from '@folio/stripes/components';
 
 const firstMenu = (
   <PaneMenu>
@@ -12,7 +12,7 @@ const firstMenu = (
 
 const lastMenu = (
   <PaneMenu>
-    <IconButton
+    <PaneHeaderIconButton
       icon="bookmark"
     />
   </PaneMenu>
