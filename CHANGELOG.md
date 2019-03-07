@@ -2,6 +2,7 @@
 
 ## 5.1.0 (IN-PROGRESS)
 
+* Use `moment.tz()` to display the presentedValue in Datepicker, fixes UIREQ-207.
 * Update ARIA roles for MCL. STCOM-365
 * Add EndOfList component to MCL component. Part of UIDATIMP-105.
 * Added asterisk for required form fields. STCOM-469
