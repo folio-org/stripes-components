@@ -15,6 +15,7 @@
 * Fixed bug where `<Selection>` wouldn't update the selected item when a new `dataOptions` was passed in.
 * Added 1% opaque black for even rows in the MCL (UX-276)
 * Updated end of list icon on MCL to use color-text-p2 variable (UXPROD-1570)
+* Changed `MetaSection` component's PropTypes for internationalization support (UIDATIMP-156)
 
 ## [5.0.2](https://github.com/folio-org/stripes-components/tree/v5.0.2) (2019-01-17)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.1...v5.0.2)
