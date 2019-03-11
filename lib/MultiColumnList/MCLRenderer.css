@@ -151,6 +151,7 @@
 }
 
 .mclEndOfList {
+  color: var(--color-text-p2);
   padding: 7px 0;
   position: sticky;
   left: 0;
