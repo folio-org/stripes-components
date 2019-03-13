@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 5.0.3 (IN-PROGRESS)
+## [5.0.3](https://github.com/folio-org/stripes-components/tree/v5.0.3) (2019-03-13)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.2...v5.0.3)
 
 * Fixed bug where `<Selection>` wouldn't update the selected item when a new `dataOptions` was passed in.
 
