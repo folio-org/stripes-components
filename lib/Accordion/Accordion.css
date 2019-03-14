@@ -98,6 +98,8 @@
 }
 
 .headerDefaultContentRight {
+  display: flex;
+  align-items: center;
   flex-grow: 2;
   flex-shrink: 0;
   padding: 0 0 0 1.2rem;
