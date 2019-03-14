@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 5.1.0 (IN-PROGRESS)
+## [5.1.0](https://github.com/folio-org/stripes-components/tree/v5.1.0) (2019-03-14)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.2...v5.1.0)
 
 * Use `moment.tz()` to display the presentedValue in Datepicker, fixes UIREQ-207.
 * Update ARIA roles for MCL. STCOM-365
@@ -14,6 +15,7 @@
 * Add deprecation warning for objects passed to appIcon. Made it possible to pass an <AppIcon> instead. (STCOM-473)
 * Fixed bug where `<Selection>` wouldn't update the selected item when a new `dataOptions` was passed in.
 * Added 1% opaque black for even rows in the MCL (UX-276)
+* Updated end of list icon on MCL to use color-text-p2 variable (UXPROD-1570)
 * Changed `MetaSection` component's PropTypes for internationalization support (UIDATIMP-156)
 
 ## [5.0.2](https://github.com/folio-org/stripes-components/tree/v5.0.2) (2019-01-17)
