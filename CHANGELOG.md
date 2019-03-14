@@ -4,6 +4,7 @@
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.2...v5.1.0)
 
 * Use `moment.tz()` to display the presentedValue in Datepicker, fixes UIREQ-207.
+* Consider timezone in Datepicker for values containing a time offset. fixes STCOM-484.
 * Update ARIA roles for MCL. STCOM-365
 * Add EndOfList component to MCL component. Part of UIDATIMP-105.
 * Added asterisk for required form fields. STCOM-469
