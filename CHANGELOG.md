@@ -4,6 +4,7 @@
 
 ## [5.1.1](https://github.com/folio-org/stripes-components/tree/v5.1.1) (2019-03-14)
 * Consider timezone in Datepicker for values containing a time offset. fixes STCOM-484.
+* Check for ref existence within MultiSelection before calling `focus()`. fixes STCOM-485.
 
 ## [5.1.0](https://github.com/folio-org/stripes-components/tree/v5.1.0) (2019-03-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.0.2...v5.1.0)
