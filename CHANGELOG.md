@@ -1,4 +1,7 @@
 # Change history for stripes-components
+## [5.1.2](https://github.com/folio-org/stripes-components/tree/v5.1.2) (2019-03-20)
+* `<AccordionSet>` consideres `closedByDefault` prop when setting up initial state for child accordions. Fixes STCOM-480.
+
 ## [5.1.1](https://github.com/folio-org/stripes-components/tree/v5.1.1) (2019-03-14)
 * Consider timezone in Datepicker for values containing a time offset. fixes STCOM-484.
 
