@@ -53,6 +53,7 @@ Component | doc | categories
 [`<Callout>`](lib/Callout) | [doc](lib/Callout/readme.md) | user-feedback
 [`<Checkbox>`](lib/Checkbox) | | control
 [`<ConfirmationModal>`](lib/ConfirmationModal) | [doc](lib/ConfirmationModal/readme.md) | control, prefab
+[`<Col>`](lib/LayoutGrid) | [doc](lib/LayoutGrid/readme.md) | structure
 [`<Datepicker>`](lib/Datepicker) | [doc](lib/Datepicker/readme.md) | control
 [`<Dropdown>`](lib/Dropdown) | [doc](lib/Dropdown/readme.md) | control
 [`<DropdownMenu>`](lib/DropdownMenu) | | control
@@ -96,6 +97,7 @@ Component | doc | categories
 [`<RadioButtonGroup>`](lib/RadioButtonGroup) | [doc](lib/RadioButtonGroup/readme.md) | control
 [`<ReduxFormField>`](lib/ReduxFormField) | [doc](lib/ReduxFormField/readme.md) | control
 [`<RepeatableField>`](lib/RepeatableField) | [doc](lib/RepeatableField/readme.md) | control, prefab
+[`<Row>`](lib/LayoutGrid) | [doc](lib/LayoutGrid/readme.md) | structure
 [`<SearchField>`](lib/SearchField) | [doc](lib/SearchField/readme.md) | control, prefab
 [`<SegmentedControl>`](lib/SegmentedControl) | [doc](lib/SegmentedControl/readme.md) | control
 [`<Select>`](lib/Select) | [doc](lib/Select/readme.md) | control
