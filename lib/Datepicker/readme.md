@@ -27,6 +27,46 @@ Name | type | description | default | required
 
 <!-- dateFormat | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false-->
 
+## Controlled Datepicker example
+```
+...
+state = {
+  day1: 11/03/1980
+}
+...
+
+handleDateChange = (e) => {
+  const newDate = e.target.value;
+  this.setState({
+    day1: newDate,
+  });
+}
+
+<Datepicker
+  label="Date"
+  value={this.state.day1}
+  onChange={handleDateChange}
+/>
+```
+
+## Redux-form/Final Form usage
+
+```
+<Field component={Datepicker} name="date" label="date" />
+```
+### Value manipulation into/out of the field...
+To adjust the value from the redux store before passing it to the component, use the `<Field>`'s `format` prop:
+```
+const formatField = value => (value ? moment.utc(value) : '');
+<Field component={Datepicker} name="date" label="date" format={formatField} />
+```
+To adjust the set value, prior to storing it in the redux-store, use `parse`
+```
+const parseField = value => (value ? moment.utc(value) : '');
+<Field component={Datepicker} name="date" label="date" parse={parseField} />
+```
+You can read more about value lifecycles in `redux-form` here: https://redux-form.com/7.4.2/docs/valuelifecycle.md/
+
 ## Working with Dates
 
 Using a `value` that does not include any time or timezone
