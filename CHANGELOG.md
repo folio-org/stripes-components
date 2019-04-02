@@ -1,4 +1,8 @@
 # Change history for stripes-components
+
+## 5.1.3 (IN-PROGRESS)
+* Fix `<Datepicker>` for non-redux-form usage. Fixes STCOM-493
+
 ## [5.1.2](https://github.com/folio-org/stripes-components/tree/v5.1.2) (2019-03-20)
 * `<AccordionSet>` consideres `closedByDefault` prop when setting up initial state for child accordions. Fixes STCOM-480.
 
@@ -12,7 +16,7 @@
 * Use `moment.tz()` to display the presentedValue in Datepicker, fixes UIREQ-207.
 * Update ARIA roles for MCL. STCOM-365
 * Add EndOfList component to MCL component. Part of UIDATIMP-105.
-* Added asterisk for required form fields. STCOM-469
+* Added asterisk for required form fields. STCOM-46
 * Add EndOfList component to MCL component. Part of UIDATIMP-105
 * Handle on blur issue for `MultiSelect` when it is part of `redux-form`. See [docs](lib/MultiSelection/readme.md#usage-as-a-part-of-the-field-for-redux-form). Part of UIDATIMP-56
 * Disable variable fonts. Fixes STCOM-461 and STCOM-434
