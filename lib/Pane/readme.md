@@ -55,3 +55,78 @@ paneTitleAutoFocus | bool | If this prop is `true`, the pane title will automati
 padContent | bool | Adds default padding to the Pane | true |
 noOverflow | bool | set to true if the Pane content is not expected to scroll. This can cure issues with flashing scrollbars on search result Panes. | false |
 subheader | node | Render a component below the Pane's header. |  | false
+
+## Pane title
+The `paneTitle` and `paneSub` props contribute to the title contents of the `<Pane>`. `paneTitle` renders the large text - `paneSub` renders smaller text below it. The two are rendered within an `H2` heading to support the accessiblity hierarchy of the UI. The `appIcon` prop renders the supplied `appIcon` next to the text.
+```
+<Pane
+  defaultWidth="fill"
+  paneTitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  paneSub="121 results found"
+>
+  Some content..
+</Pane>
+```
+
+## Menus
+`<Pane>`s have the 3 menues that can be added in the header - `firstMenu`, `lastMenu`, and `actionMenu`. `firstMenu` is (in ltr languages) the upper left corner of the window. By convention, this is usually a close or dismiss action - something that references the previous `Pane` in a multi-pane layout. `lastMenu` is rendered in the ltr-upper right corner. The prop accepts a `<PaneMenu>` with the necessary children.
+
+### FirstMenu and lastMenu example
+```
+const firstMenu = (
+  <PaneMenu>
+    <PaneHeaderIconButton key="icon-search" icon="search" />
+  </PaneMenu>
+);
+
+const lastMenu = (
+  <PaneMenu>
+    <PaneHeaderIconButton key="icon-comment" icon="comment" />
+    <PaneHeaderIconButton key="icon-edit" icon="edit" />
+  </PaneMenu>
+);
+
+<Pane
+  firstMenu={firstMenu}
+  lastMenu={lastMenu}
+  defaultWidth="fill"
+  paneTitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+>
+  Some content..
+</Pane>
+
+```
+
+## Action menu
+The action menu creates a dropdown off of the pane title. The prop accepts a function that returns the rendered contents of the menu.
+```
+const actionMenu = ({ onToggle }) => ( // eslint-disable-line
+  <Fragment>
+    <MenuSection label="Actions">
+      <Button buttonStyle="dropdownItem" onClick={onToggle}>
+        <Icon size="small" icon="eye-open">
+          View
+        </Icon>
+      </Button>
+      <Button buttonStyle="dropdownItem" onClick={onToggle}>
+        <Icon size="small" icon="edit">
+          Edit
+        </Icon>
+      </Button>
+      <Button buttonStyle="dropdownItem" onClick={onToggle}>
+        <Icon size="small" icon="duplicate">
+          Duplicate
+        </Icon>
+      </Button>
+    </MenuSection>
+  </Fragment>
+);
+
+<Pane
+  actionMenu={actionMenu}
+  defaultWidth="fill"
+  paneTitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+>
+  Some content..
+</Pane>
+```
