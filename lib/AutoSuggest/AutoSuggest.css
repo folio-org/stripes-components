@@ -1,6 +1,6 @@
 @import '../variables.css';
 
-.AutoSuggest {
+.autoSuggest {
   position: relative;
   top: 100%;
   width: '100%';
@@ -8,8 +8,7 @@
   padding: 0;
   z-index: 1000;
   max-height: 400px;
-  overflow: scroll;
-  margin-top: -7px;
+  overflow: hidden;
   text-align: left;
   list-style: none;
   background-color: #fff;
