@@ -28,6 +28,12 @@
   font-size: var(--font-size-medium);
   min-height: var(--control-min-size-desktop);
 
+  /* Minor update to avoid a small gap between
+    the button and the focus/active styles */
+  &::before {
+    border-radius: calc(var(--radius) - 1px);
+  }
+
   &.block {
     display: flex;
   }
