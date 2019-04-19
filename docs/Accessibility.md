@@ -33,3 +33,15 @@ Productivity is key. The UI that allows users to work faster and increase effici
 Focus is the key to the context of assistive technology. The focused element can be the text-input where a user is entering a value, a highlighted radio-button, or an outlined link that's awaiting a press of the enter key to help the user travel to another page. Stripes-components manage focus where necessary, making assurance that the User's focus indicator is where it needs to be when it needs to be there. Triggered actions might move focus to a different control on the page to save the user from having to navigate across numerous tabbable elements to get to the location in the UI where a change needs to be made. `<FocusLink>` is a component that can be used to make sections of content "skip-able" if so desired. This works well for skipping sets of filters after a search field and shifting focus directly to the results listing.
 
 See the patterns documentation [Accessible Routing in FOLIO](patterns/AccessibleRouting.md) to implement accessible focus management for your application's routing.
+
+## Testing 
+### Keyboard:
+Try navigating through the the app using the tab key - be sure that the controls are focused in the correct order and that none are skipped!
+### Static analysis
+Tools like Axe extension for Chrome are easy to use and can help you produce a good baseline of accessible code. It will advise on the "programmatic legibility" of your app - checking if all the form inputs have labels and if the appropriate roles/aria attributes are used. You can get the Chrome extension here: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
+### Screen reader:
+Mentioned earlier in the document, screen readers are the primary tool used by vision-impaired users for browsing the web. We typically test the web application in the same browser that your sighted users will use - it's a great idea to test in a screen reader for the vision-impaired - and ultimately the best mechanism for determining the accessibility level of your module. Mac users have Voiceover as a standard part of MacOS. Windows users can download NVDA or a demo of JAWS - NVDA: (free) https://www.nvaccess.org/ JAWS: (demo available) https://support.freedomscientific.com/Downloads/JAWS
+As with any new piece of software, it takes some learning to master a screen reader, but the knowledge/experience of using one is highly beneficial for understanding the context of sight-impaired users.
+Some help with getting started can be found here:
+- [Using JAWS to Evaluate Web Accessibility](https://webaim.org/articles/jaws/)
+- [Using NVDA to Evaluate Web Accessibility](https://webaim.org/articles/nvda/)
