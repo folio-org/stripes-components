@@ -4,6 +4,7 @@
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
+  "sideEffects": ["*.css"],
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
   },
