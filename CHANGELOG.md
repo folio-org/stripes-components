@@ -4,6 +4,7 @@
 * Fix `<Datepicker>` for non-redux-form usage. Fixes STCOM-493
 * Fix issue with `<AutoSuggest>` not using refs correctly. Fixes STCOM-489
 * Use minimumRowHeight in `<MultiColumnList>` instead of averageHeight for row rendering/loading. Relates to UIIN-319.
+* Added 'iconStyle'-prop for <Icon> and added an 'action'-style. STCOM-510.
 
 ## [5.1.2](https://github.com/folio-org/stripes-components/tree/v5.1.2) (2019-03-20)
 * `<AccordionSet>` consideres `closedByDefault` prop when setting up initial state for child accordions. Fixes STCOM-480.
