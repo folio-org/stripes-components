@@ -31,3 +31,4 @@ iconRootClass | string | Applies a custom css class to the component's internal 
 iconClassName | string | Applies a custom css class name directly to icon | stripes__icon
 children | node, string | Adds content next to the icon. Useful for adding a label to an icon. | undefined
 iconPosition | string | Sets the the position of the icon. Can be set to "start" and "end". Note: This is only relevant when the "children"-prop is utilized. | start
+iconStyle | string | Changes the style of the icon. Currently, the only style available is "action" | undefined

@@ -72,6 +72,21 @@
 }
 
 /**
+ * Icon styles
+ */
+
+/* Action icon style */
+.icon.action svg {
+  fill: #fff;
+  background-color: var(--color-fill-current);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  padding: 0.1rem;
+}
+
+/**
  * Flippable
  * Icon should flip on dir="rtl"
  */
@@ -81,8 +96,8 @@
 }
 
 /**
-Spacing
-Note: Using pseudo elements to add spacing for RTL support
+  Spacing
+  Note: Using pseudo elements to add spacing for RTL support
 **/
 
 .label::before,
