@@ -46,9 +46,9 @@
 }
 
 .flex-align-items-start {
-  align-items: start;
+  align-items: flex-start;
 }
 
 .flex-align-items-end {
-  align-items: end;
+  align-items: flex-end;
 }
