@@ -45,6 +45,18 @@
   }
 }
 
+
+/* Apply spacing between inline checkboxes when stacked */
+.inline + .inline {
+  margin-left: var(--gutter-static-two-thirds);
+  margin-right: 0;
+}
+
+[dir="rtl"] .inline + .inline {
+  margin-right: var(--gutter-static-two-thirds);
+  margin-left: 0;
+}
+
 .labelCheck {
   position: relative;
   width: var(--checkbox-size);
@@ -116,7 +128,7 @@
 }
 
 .checkboxInteractionStyles {
-  composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartSmall boxOffsetEndSmall from "../sharedStyles/interactionStyles.css";
 }
 
 .labelFocused {
@@ -130,10 +142,14 @@
 }
 
 .labelText {
-  margin: 0 var(--gutter-static-one-third);
+  margin: 0 0 0 var(--gutter-static-one-third);
   display: flex;
   align-items: center;
   min-height: var(--control-min-size-desktop);
+}
+
+[dir="rtl"] .labelText {
+  margin: 0 var(--gutter-static-one-third) 0 0;
 }
 
 /* fix for shrinkage issues with checkbox as a flex-child */
