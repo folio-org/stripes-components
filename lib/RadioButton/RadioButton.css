@@ -32,11 +32,20 @@
   }
 }
 
+[dir="rtl"] .inline + .inline {
+  margin-right: var(--gutter-static-two-thirds);
+  margin-left: 0;
+}
+
 .labelText {
-  margin: 0 var(--gutter-static-one-third);
+  margin: 0 0 0 var(--gutter-static-one-third);
   display: flex;
   align-items: center;
   min-height: var(--control-min-size-desktop);
+}
+
+[dir="rtl"] .labelText {
+  margin: 0 var(--gutter-static-one-third) 0 0;
 }
 
 .radioLabel {
