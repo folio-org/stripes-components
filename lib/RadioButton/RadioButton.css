@@ -7,13 +7,24 @@
 .radioButton {
   display: flex;
   align-items: center;
-
-  &.inline {
-    display: inline-flex;
-  }
-
+  
   &.marginBottom0 {
     margin-bottom: 0;
+  }
+}
+
+/**
+ * Inline radio button
+ */
+.inline {
+  display: inline-flex;
+
+  & .radioLabel {
+    align-items: center;
+  }
+
+  & + .inline {
+    margin-left: var(--gutter-static-two-thirds);
   }
 }
 
@@ -34,6 +45,7 @@
   border-radius: var(--radius);
   font-size: var(--font-size-medium);
   margin-bottom: 0;
+  min-height: var(--control-min-size-desktop);
 
   &.error {
     color: var(--error);
