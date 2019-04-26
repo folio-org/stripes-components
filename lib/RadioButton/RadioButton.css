@@ -7,34 +7,10 @@
 .radioButton {
   display: flex;
   align-items: center;
-  
+
   &.marginBottom0 {
     margin-bottom: 0;
   }
-}
-
-/**
- * Inline radio button
- */
-.inline {
-  display: inline-flex;
-
-  & .radioLabel {
-    align-items: center;
-  }
-
-  & .labelPseudo {
-    top: 0;
-  }
-
-  & + .inline {
-    margin-left: var(--gutter-static-two-thirds);
-  }
-}
-
-[dir="rtl"] .inline + .inline {
-  margin-right: var(--gutter-static-two-thirds);
-  margin-left: 0;
 }
 
 .labelText {
@@ -110,6 +86,30 @@
   & .labelPseudo {
     opacity: 0.5;
   }
+}
+
+/**
+ * Inline radio button
+ */
+.inline {
+  display: inline-flex;
+
+  & .radioLabel {
+    align-items: center;
+  }
+
+  & .labelPseudo {
+    top: 0;
+  }
+
+  & + .inline {
+    margin-left: var(--gutter-static-two-thirds);
+  }
+}
+
+[dir="rtl"] .inline + .inline {
+  margin-right: var(--gutter-static-two-thirds);
+  margin-left: 0;
 }
 
 .input {

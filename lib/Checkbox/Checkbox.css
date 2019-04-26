@@ -45,7 +45,6 @@
   }
 }
 
-
 /* Apply spacing between inline checkboxes when stacked */
 .inline + .inline {
   margin-left: var(--gutter-static-two-thirds);
