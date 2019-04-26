@@ -23,6 +23,10 @@
     align-items: center;
   }
 
+  & .labelPseudo {
+    top: 0;
+  }
+
   & + .inline {
     margin-left: var(--gutter-static-two-thirds);
   }
