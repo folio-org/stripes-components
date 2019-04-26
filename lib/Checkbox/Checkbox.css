@@ -103,6 +103,7 @@
   position: relative;
   border-radius: var(--radius);
   font-size: var(--font-size-medium);
+  margin-bottom: 0;
 
   &.disabledLabel {
     cursor: not-allowed;

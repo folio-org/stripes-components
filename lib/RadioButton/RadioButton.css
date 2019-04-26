@@ -33,6 +33,7 @@
   flex-grow: 2;
   border-radius: var(--radius);
   font-size: var(--font-size-medium);
+  margin-bottom: 0;
 
   &.error {
     color: var(--error);
