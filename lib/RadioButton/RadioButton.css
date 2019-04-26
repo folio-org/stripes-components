@@ -57,7 +57,7 @@
 }
 
 .labelInteractionStyles {
-  composes: interactionStyles boxOffsetStartMedium boxOffsetEndMedium from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles boxOffsetStartSmall boxOffsetEndSmall from "../sharedStyles/interactionStyles.css";
 }
 
 .labelFocused {
