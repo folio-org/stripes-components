@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 5.1.3 (IN-PROGRESS)
+## [5.2.0](https://github.com/folio-org/stripes-components/tree/v5.2.0) (2019-04-25)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.1.0...v5.2.0)
+
 * Fix `<Datepicker>` for non-redux-form usage. Fixes STCOM-493
 * Fix issue with `<AutoSuggest>` not using refs correctly. Fixes STCOM-489
 * Use minimumRowHeight in `<MultiColumnList>` instead of averageHeight for row rendering/loading. Relates to UIIN-319.
