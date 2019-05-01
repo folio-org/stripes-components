@@ -247,6 +247,11 @@
   }
 }
 
+.inner {
+  display: flex;
+  align-items: center;
+}
+
 /**
  * Dropdown Item style
  */

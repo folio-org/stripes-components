@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
+## 5.3.0 (IN PROGRESS)
 * Create common WYSIWYG editor. STSMACOM-190
+* Additional props validation in `<MultiColumnList>`. Fixes STCOM-515.
 
 ## [5.2.0](https://github.com/folio-org/stripes-components/tree/v5.2.0) (2019-04-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.1.0...v5.2.0)
