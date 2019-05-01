@@ -1,5 +1,7 @@
 # Editor
-WYSIWYG HTML Editor component with label and validation controls.
+
+WYSIWYG HTML Editor component to wrap the react-quill (see https://github.com/zenoamaro/react-quill#the-unprivileged-editor) with label and validation controls.
+
 
 ## Common Usage with a form framework...
 Form state frameworks such as `react-final-form` provide `<Field>` components that manage form state. `<Field>` components often automatically apply particular props such as `onChange` and `value` under the hood, so you don't have to.
@@ -60,7 +62,7 @@ Name | type | description | default | required
 `dirty` | bool | Mark 'true' when value has changes. | |
 `error` | node | Error string to display after textfield in case of validation error. | |
 `valid` | bool | Applies success validation style to `<Editor>` | | 
-`validStylesEnabled` | bool | When set to false, `<Editor>` will not display validation styles. | `true` | 
+`validStylesEnabled` | bool | When set to false, `<Editor>` will not display validation styles. | `false` | 
 `warning` | node | Validation warning. Renders node below `<Editor>` with warning styling. | | 
 
 ## Style Props

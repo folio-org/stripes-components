@@ -1,5 +1,7 @@
 # Change history for stripes-components
 
+* Create common WYSIWYG editor. STSMACOM-190
+
 ## [5.2.0](https://github.com/folio-org/stripes-components/tree/v5.2.0) (2019-04-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.1.0...v5.2.0)
 
