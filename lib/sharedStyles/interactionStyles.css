@@ -179,9 +179,9 @@
 /**
  * Active
  */
-.isActive,
-.interactionStylesControl:active > .interactionStyles,
-.interactionStyles:active {
+.isActive:not(:disabled),
+.interactionStylesControl:active:not(:disabled) > .interactionStyles,
+.interactionStyles:active:not(:disabled) {
   color: #fff;
   & * { color: #fff; }
   & svg { fill: #fff; }
