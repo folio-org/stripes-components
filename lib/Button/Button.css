@@ -209,17 +209,17 @@
     padding-right: 0;
   }
 
+  &[disabled] {
+    &:hover {
+      cursor: initial;
+    }
+  }
+
   &[disabled]:not(.dropdownItem) {
     background-color: #ccc;
     border-color: #ccc;
     color: var(--color-text-p2);
     transition: opacity ease-in-out 500ms;
-  }
-
-  &[disabled] {
-    &:hover {
-      cursor: initial;
-    }
   }
 
   &.mega {

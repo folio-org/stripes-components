@@ -3,6 +3,7 @@
 ## 5.3.0 (IN PROGRESS)
 
 * Additional props validation in `<MultiColumnList>`. Fixes STCOM-515.
+* Removed gray background color for disabled Buttons with the "dropdownItem"-style. Fixes STCOM-516.
 
 ## [5.2.0](https://github.com/folio-org/stripes-components/tree/v5.2.0) (2019-04-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.1.0...v5.2.0)
