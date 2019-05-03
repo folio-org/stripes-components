@@ -37,9 +37,7 @@ Name | type | description | default | required
 
 `inputRef` | object or func | Supplies a ref to the rendered `<Editor>` | | 
 `tabIndex` | number | The order in which the editor becomes focused, among other controls in the page, during keyboard navigation. | |
-`style` | object | An object with custom CSS rules to apply on the editor's container. Rules should be in React's "camelCased" naming style. | | 
-
-
+`disableEditorTab` | bool | Disable editor tab handling to improve accessibility. | true |
 `required` | bool | Apply `required` attribute to `<input>` | | 
 `startControl` | element |  Element to render as a leading control to the textfield. | | 
 `type` | string | Type attribute of `<input>` | "text" | 
