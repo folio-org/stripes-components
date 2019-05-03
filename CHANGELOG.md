@@ -1,7 +1,7 @@
 # Change history for stripes-components
 
 ## 5.3.0 (IN PROGRESS)
-
+* Create common WYSIWYG editor. STSMACOM-190
 * Additional props validation in `<MultiColumnList>`. Fixes STCOM-515.
 * Removed gray background color for disabled Buttons with the "dropdownItem"-style. Fixes STCOM-516.
 
