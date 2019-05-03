@@ -4,7 +4,9 @@
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
   },
@@ -98,6 +100,7 @@
     "react-highlighter": "^0.4.2",
     "react-intl": "^2.5.0",
     "react-overlays": "^0.8.3",
+    "react-quill": "^1.3.3",
     "react-router-dom": "^4.1.1",
     "react-tether": "^1.0.1",
     "react-transition-group": "^2.2.1",
