@@ -210,16 +210,14 @@
   }
 
   &[disabled] {
-    &:hover {
-      cursor: initial;
-    }
-  }
-
-  &[disabled]:not(.dropdownItem) {
     background-color: #ccc;
     border-color: #ccc;
     color: var(--color-text-p2);
     transition: opacity ease-in-out 500ms;
+
+    &:hover {
+      cursor: initial;
+    }
   }
 
   &.mega {
@@ -271,6 +269,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  &[disabled] {
+    background-color: transparent;
+    border: 0;
+  }
 
   &:hover,
   &:focus {
