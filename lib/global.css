@@ -146,7 +146,7 @@ button {
 }
 
 :global(.sr-only) {
-  position: absolute;
+  position: fixed;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   clip-path: inset(50%);
