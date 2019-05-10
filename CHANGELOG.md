@@ -4,6 +4,7 @@
 * Create common WYSIWYG editor. STSMACOM-190
 * Additional props validation in `<MultiColumnList>`. Fixes STCOM-515.
 * Panes/Panesets `defaultWidth` supports css-units outside of percent. Fixes STCOM-521.
+* Panes/Panesets `dataTest` provides a test hook without a wrapper div. Fixes STCOM-527, refs UIORG-166.
 
 ## [5.2.0](https://github.com/folio-org/stripes-components/tree/v5.2.0) (2019-04-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.1.0...v5.2.0)
