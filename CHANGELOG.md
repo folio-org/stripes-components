@@ -1,9 +1,12 @@
 # Change history for stripes-components
 
-## 5.3.0 (IN PROGRESS)
+## [5.3.0](https://github.com/folio-org/stripes-components/tree/v5.3.0) (2019-05-10)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.2.0...v5.3.0)
+
 * Create common WYSIWYG editor. STSMACOM-190
 * Additional props validation in `<MultiColumnList>`. Fixes STCOM-515.
 * Panes/Panesets `defaultWidth` supports css-units outside of percent. Fixes STCOM-521.
+* `<Paneset>` spreads `data-` attributes to its container, so it no longer needs a wrapper for testing. Fixes STCOM-527, refs UIORG-166.
 
 ## [5.2.0](https://github.com/folio-org/stripes-components/tree/v5.2.0) (2019-04-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.1.0...v5.2.0)
