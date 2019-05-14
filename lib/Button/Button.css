@@ -214,10 +214,7 @@
     border-color: #ccc;
     color: var(--color-text-p2);
     transition: opacity ease-in-out 500ms;
-
-    &:hover {
-      cursor: initial;
-    }
+    pointer-events: none;
   }
 
   &.mega {
@@ -250,7 +247,6 @@
 .inner {
   display: flex;
   align-items: center;
-  pointer-events: none;
 }
 
 /**
