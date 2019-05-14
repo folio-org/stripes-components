@@ -5,6 +5,7 @@
 
 * Create common WYSIWYG editor. STSMACOM-190
 * Additional props validation in `<MultiColumnList>`. Fixes STCOM-515.
+* Removed gray background color for disabled Buttons with the "dropdownItem"-style. Fixes STCOM-516.
 * Panes/Panesets `defaultWidth` supports css-units outside of percent. Fixes STCOM-521.
 * `<Paneset>` spreads `data-` attributes to its container, so it no longer needs a wrapper for testing. Fixes STCOM-527, refs UIORG-166.
 
