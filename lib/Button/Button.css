@@ -214,10 +214,7 @@
     border-color: #ccc;
     color: var(--color-text-p2);
     transition: opacity ease-in-out 500ms;
-
-    &:hover {
-      cursor: initial;
-    }
+    pointer-events: none;
   }
 
   &.mega {
@@ -269,6 +266,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  &[disabled] {
+    background-color: transparent;
+    border: 0;
+  }
 
   &:hover,
   &:focus {
