@@ -26,6 +26,7 @@
   --control-margin-bottom: 1rem;
   --control-min-size-touch: 44px;
   --control-min-size-desktop: 24px;
+  --control-label-margin-bottom: 0.25rem;
   --radius: 6px;
   --gutter: 1rem;
   --gutter-static: 15px;

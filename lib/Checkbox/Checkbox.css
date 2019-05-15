@@ -4,11 +4,12 @@
   --checkbox-size: 12px;
 }
 
-.checkbox {
+.root {
   display: flex;
   position: relative;
   color: var(--color-text);
   line-height: var(--line-height);
+  margin-bottom: 0;
 
   &.fullWidth {
     width: 100%;
@@ -17,31 +18,77 @@
   &.marginBottom0 {
     margin-bottom: 0;
   }
+}
 
-  /**
-   * Inline checkbox
-   */
-  &.inline {
-    display: inline-flex;
+/**
+ * Custom checkbox styling
+ */
+.checkboxIcon {
+  position: relative;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border: 1px solid var(--color-border);
+  border-radius: 25%;
+  background: var(--color-fill-form-element);
+  display: flex;
+  overflow: hidden;
+  flex-shrink: 0;
 
-    /**
-     * If we only render the checkbox (no label)
-     */
+  & svg {
+    opacity: 0;
+  }
+}
 
-    &.noLabel {
-      height: auto;
+.checkbox {
+  min-height: var(--control-min-size-desktop);
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  flex-grow: 2;
+  position: relative;
+  border-radius: var(--radius);
+  font-size: var(--font-size-medium);
+}
 
-      & label.checkboxLabel {
-        height: auto;
-        padding: 6px;
-        margin: 0;
+/**
+ * Label text
+ */
+.labelText {
+  margin: 0 0 0 var(--gutter-static-one-third);
+  display: flex;
+  align-items: center;
+  min-height: var(--control-min-size-desktop);
+}
 
-        &::before {
-          left: 0;
-          right: 0;
-        }
-      }
-    }
+[dir="rtl"] .labelText {
+  margin: 0 var(--gutter-static-one-third) 0 0;
+}
+
+/**
+ * Vertical label alignment
+ */
+.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+
+  & .labelText {
+    margin: 0 0 var(--control-label-margin-bottom) 0;
+    min-height: 0;
+  }
+
+  & .checkbox {
+    align-items: center;
+  }
+}
+
+/**
+ * Inline checkbox
+ */
+.inline {
+  display: inline-flex;
+
+  &.noLabel .checkbox {
+    align-items: center;
   }
 }
 
@@ -56,27 +103,6 @@
   margin-left: 0;
 }
 
-.labelCheck {
-  position: relative;
-  width: var(--checkbox-size);
-  height: var(--checkbox-size);
-  border: 1px solid var(--color-border);
-  border-radius: 25%;
-  background: var(--color-fill-form-element);
-  display: flex;
-  overflow: hidden;
-  flex-shrink: 0;
-  top: 1px;
-
-  & svg {
-    opacity: 0;
-
-    & path {
-      stroke: #000;
-    }
-  }
-}
-
 /**
  * Checkbox feedback
  */
@@ -84,13 +110,12 @@
   font-size: var(--font-size-small);
 }
 
-/* Warning and error states */
 .hasWarning {
   & .checkboxFeedback {
     color: var(--warn);
   }
 
-  & .labelCheck {
+  & .checkboxIcon {
     border-color: var(--warn);
   }
 }
@@ -100,30 +125,16 @@
     color: var(--error);
   }
 
-  & .labelCheck {
+  & .checkboxIcon {
     border-color: var(--error);
   }
 }
 
-.checkboxLabel {
-  padding: var(--input-vertical-padding) 0;
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  flex-grow: 2;
-  position: relative;
-  border-radius: var(--radius);
-  font-size: var(--font-size-medium);
-  margin-bottom: 0;
-
-  &.disabledLabel {
-    cursor: not-allowed;
-    color: var(--color-text-p2);
-
-    & .labelCheck {
-      opacity: 0.5;
-    }
-  }
+/**
+ * Interaction styles (hover, focus, active)
+ */
+.checkboxInteractionStylesControl {
+  composes: interactionStylesControl from "../sharedStyles/interactionStyles.css";
 }
 
 .checkboxInteractionStyles {
@@ -134,48 +145,24 @@
   composes: isFocused from "../sharedStyles/interactionStyles.css";
 }
 
-.formLabel {
-  composes: checkboxLabel;
-  font-weight: bold;
-  text-transform: Uppercase;
-}
-
-.labelText {
-  margin: 0 0 0 var(--gutter-static-one-third);
-  display: flex;
-  align-items: center;
-  min-height: var(--control-min-size-desktop);
-}
-
-[dir="rtl"] .labelText {
-  margin: 0 var(--gutter-static-one-third) 0 0;
-}
-
-/* fix for shrinkage issues with checkbox as a flex-child */
-:global input[type='checkbox'] {
-  min-width: 16px;
-}
-
 /**
- * Custom input styling
+ * Disabled
  */
-input.checkboxInput {
-  margin: 0 9px;
-  margin-bottom: 2px;
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  z-index: -1;
-}
+.disabled {
+  & .checkboxIcon {
+    opacity: 0.5;
+  }
 
-/* disabled styles */
-.checkboxInput:disabled .labelCheck {
-  opacity: 0.65;
+  &:hover .checkbox {
+    cursor: default;
+  }
 }
 
 /**
  * Checked state
  */
-.checkboxInput:checked + .labelCheck {
+
+.checkboxInput:checked + .checkboxIcon {
   background-color: #000;
 
   & svg {
