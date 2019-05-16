@@ -8,6 +8,7 @@
 * Removed gray background color for disabled Buttons with the "dropdownItem"-style. Fixes STCOM-516.
 * Panes/Panesets `defaultWidth` supports css-units outside of percent. Fixes STCOM-521.
 * `<Paneset>` spreads `data-` attributes to its container, so it no longer needs a wrapper for testing. Fixes STCOM-527, refs UIORG-166.
+* Added padding on the scrolling element of the MultiColumnList component to prevent the scrollbar from blocking the content (STCOM-530)
 
 ## [5.2.0](https://github.com/folio-org/stripes-components/tree/v5.2.0) (2019-04-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.1.0...v5.2.0)
