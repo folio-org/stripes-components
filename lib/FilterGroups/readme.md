@@ -83,6 +83,10 @@ filter groups. Each group is represented by an object with four keys:
   query clause is always included. (See
   [STCOM-204](https://issues.folio.org/browse/STCOM-204) for
   rationale.)
+* `isRange` -- The flag that is used to build range cql query. By default `false`.
+* `isIncludingStart` -- The flag is used only with `isRange: true` to include boundary value from the start. By default `true`.
+* `isIncludingEnd` -- The flag is used only with `isRange: true` to include boundary value from the end. By default `true`.
+* `rangeSeparator` -- The string is used only with `isRange: true` to break range value to `start` and `end` values. By default `:`.
 
 Each of the `values` is typically represented by a simple string, which
 is used both to display on the page and as the value to use in
