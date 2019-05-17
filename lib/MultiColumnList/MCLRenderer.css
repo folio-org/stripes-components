@@ -124,6 +124,7 @@
   position: relative;
   overflow: auto;
   width: 100%;
+  padding-bottom: 15px; /* Prevents bottom scrollbar from blocking content */
 }
 
 .mclContentLoadingRow {
