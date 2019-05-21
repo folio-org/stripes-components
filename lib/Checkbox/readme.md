@@ -37,7 +37,6 @@ id | string | HTML id attribute applied to input - will also set the HtmlFor att
 inline | bool | Renders the checkbox inline | | false
 label | string | Renders a label for the checkbox | | false
 labelClass | string | | | false
-marginBottom0 | bool | Styles the input with no bottom margin. | false | false
 name | string | | | false
 onBlur | func | | | false
 onChange | func | Event handler for the input's `onChange` event. | | false
