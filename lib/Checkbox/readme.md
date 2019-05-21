@@ -14,7 +14,7 @@ Renders a basic HTML checkbox.
 ```
 
 ## Usage with external label
-The Checkbox component automatically renders a `<label>` when a `label`-prop is present but it is also possible to render it with an external label – as long as you remember to provide a `for`-attribute for the label that matches the ID of the Checkbox.
+The Checkbox component automatically renders a `<label>` when a `label`-prop is present but it is also possible to render it with an external label – as long as you remember to provide a `htmlFor`-attribute for the label that matches the ID of the Checkbox.
 
 ```js
 <fieldset>
@@ -51,7 +51,7 @@ vertical | bool | Renders the label vertically (above the checkbox) | | false
 warning | string | | | false
 
 
-## Use with Redux Form
+## Use with React Final Form
 ```
 import { Checkbox } from '@folio/stripes/components';
 
