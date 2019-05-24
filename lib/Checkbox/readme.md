@@ -35,6 +35,7 @@ error | string | | | false
 fullWidth | bool | Styles input to a width of 100% of its container. | | false
 id | string | HTML id attribute applied to input - will also set the HtmlFor attribute of the `<label>`-element if a label-prop is set. |  | false
 inline | bool | Renders the checkbox inline | | false
+inputRef | object or func | Supplies a ref to the rendered `<input>` | | 
 label | string | Renders a label for the checkbox | | false
 labelClass | string | | | false
 name | string | | | false
