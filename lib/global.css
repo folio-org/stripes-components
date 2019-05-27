@@ -151,6 +151,8 @@ button {
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
+  height: 0;
+  width: 0;
 }
 
 :global(.tether-element) {
