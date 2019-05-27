@@ -6,6 +6,7 @@
 
 .root {
   display: flex;
+  flex-direction: column;
   position: relative;
   color: var(--color-text);
   line-height: var(--line-height);
@@ -18,6 +19,13 @@
   &.marginBottom0 {
     margin-bottom: 0;
   }
+}
+
+/**
+ * Label
+ */
+.label {
+  margin-bottom: 0;
 }
 
 /**
@@ -67,7 +75,7 @@
 /**
  * Vertical label alignment
  */
-.vertical {
+.vertical .label {
   flex-direction: column;
   align-items: flex-start;
 
@@ -107,7 +115,7 @@
  * Checkbox feedback
  */
 .checkboxFeedback {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
 }
 
 .hasWarning {
