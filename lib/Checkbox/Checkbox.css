@@ -4,7 +4,7 @@
   --checkbox-size: 12px;
 }
 
-.root {
+.checkbox {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -47,7 +47,7 @@
   }
 }
 
-.checkbox {
+.inner {
   min-height: var(--control-min-size-desktop);
   display: flex;
   align-items: baseline;
@@ -84,7 +84,7 @@
     min-height: 0;
   }
 
-  & .checkbox {
+  & .inner {
     align-items: center;
   }
 }
@@ -95,7 +95,7 @@
 .inline {
   display: inline-flex;
 
-  &.noLabel .checkbox {
+  &.noLabel .inner {
     align-items: center;
   }
 }
@@ -161,7 +161,7 @@
     opacity: 0.5;
   }
 
-  &:hover .checkbox {
+  &:hover .inner {
     cursor: default;
   }
 }

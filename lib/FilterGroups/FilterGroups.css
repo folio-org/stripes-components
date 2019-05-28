@@ -2,12 +2,9 @@
  * Filter Groups
 */
 
-.filterGroupLabelInteractionStyles {
-  composes: boxOffsetStartMedium hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
-}
-
 .filterGroupLabel {
   padding: 0 0 0 1.3em;
+  composes: boxOffsetStartMedium hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
 }
 
 [dir="rtl"] .filterGroupLabel {
