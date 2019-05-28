@@ -9,6 +9,7 @@
 * Prevent Mac OS from accumulating the scroll value at its margins. UIDATIMP-200.
 * Prevent closing of modal when clicking the background. Fixes STCOM-460.
 * Implement currency select menu. Refs STSMACOM-205.
+* Added `Card` component. STCOM-534
 
 ## [5.3.0](https://github.com/folio-org/stripes-components/tree/v5.3.0) (2019-05-10)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.2.0...v5.3.0)
