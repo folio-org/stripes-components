@@ -15,10 +15,6 @@
   &.fullWidth {
     width: 100%;
   }
-
-  &.marginBottom0 {
-    margin-bottom: 0;
-  }
 }
 
 /**
