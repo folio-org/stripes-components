@@ -1,5 +1,15 @@
 # Change history for stripes-components
 
+## 5.4.0 (IN PROGRESS)
+
+* Use container-width to size panes.
+* Be careful when using container-width to size a pane. Refs UIDATIMP-198.
+* Avoid scrollbar overlap in accordions. Fixes STCOM-530.
+* Filter groups support range queries. Refs UIOR-206.
+* Prevent Mac OS from accumulating the scroll value at its margins. UIDATIMP-200.
+* Prevent closing of modal when clicking the background. Fixes STCOM-460.
+* Implement currency select menu. Refs STSMACOM-205.
+
 ## [5.3.0](https://github.com/folio-org/stripes-components/tree/v5.3.0) (2019-05-10)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.2.0...v5.3.0)
 
@@ -9,6 +19,7 @@
 * Panes/Panesets `defaultWidth` supports css-units outside of percent. Fixes STCOM-521.
 * `<Paneset>` spreads `data-` attributes to its container, so it no longer needs a wrapper for testing. Fixes STCOM-527, refs UIORG-166.
 * Added padding on the scrolling element of the MultiColumnList component to prevent the scrollbar from blocking the content (STCOM-530)
+* Fixed "closeOnBackgroundClick" behaviour for <Modal> (STCOM-460)
 
 ## [5.2.0](https://github.com/folio-org/stripes-components/tree/v5.2.0) (2019-04-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.1.0...v5.2.0)
