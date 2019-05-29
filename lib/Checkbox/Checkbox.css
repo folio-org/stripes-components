@@ -73,6 +73,20 @@
 }
 
 /**
+ * Input
+ */
+.input {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.noLabel .input {
+  transform: scale(1.9);
+}
+
+/**
  * Vertical label alignment
  */
 .vertical .label {
@@ -170,7 +184,7 @@
  * Checked state
  */
 
-.checkboxInput:checked + .checkboxIcon {
+.input:checked + .checkboxIcon {
   background-color: #000;
 
   & svg {
