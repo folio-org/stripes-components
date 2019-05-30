@@ -25,12 +25,15 @@ The `default` card style is selected automatically. Optionally, you can set the 
 | Name | Type | Required | Note |
 --- | --- | --- | --- |
 | `bodyClass` | string | |
-| `bottomMargin0` | bool | | Default is `false`
 | `cardClass` | string | |
-| `cardStyle` | string | | Must be one of `default`, `lookupEmpty`, or `lookupPreview`
+| `cardStyle` | string | | Must be undefined or one of `default`, `negative`, or `positive`. These generally affect the background of the card.
 | `children` | node | Yes |
+| `hasMargin` | bool | | Turns on a `margin-bottom` for spacing.
 | `headerClass` | string | |
-| `headerEnd` | node | Yes |
-| `headerStart` | node | Yes |
+| `headerComponent` | node, string, func | DefaultCardHeader | Pass a React Component (or node-type name) to fully customize the rendering of the header.
+| `headerEnd` | node, string | Yes |
+| `headerProps` | object | | Props to pass to the header and destructure upon the element/component.
+| `headerStart` | node, string | Yes |
+| `roundedBorder` | bool | | Apply a border-radius to the card for rounded borders.
 | _rest_ | | | Other props will be applied to the top-level card `div`. |
 
