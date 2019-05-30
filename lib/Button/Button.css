@@ -28,6 +28,10 @@
   font-size: var(--font-size-medium);
   min-height: var(--control-min-size-desktop);
 
+  &:visited {
+    color: inherit;
+  }
+
   /* Minor update to avoid a small gap between
     the button and the focus/active styles */
   &::before {
