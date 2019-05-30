@@ -2,70 +2,34 @@
 
 .card {
   width: 100%;
-  border-color: var(--color-border-p2);
-  border-style: solid;
-  border-width: 1px;
-  margin-bottom: var(--gutter);
-
-  &.default {
-    border-width: 1px 1px 0;
-    margin-bottom: 0;
-
-    &:last-of-type {
-      border-bottom: 1px solid var(--color-border-p2);
-      margin-bottom: 4px;
-    }
-  }
-
-  &.lookupEmpty,
-  &.lookupPreview {
-    border-radius: var(--radius);
-  }
-
-  &.marginBottom0: {
-    margin-bottom: 0;
-  }
-}
-
-.header {
-  background-color: var(--bg-hover);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 8px var(--gutter);
-
-  &.lookupPreview {
-    background-color: var(--bg);
-    border-bottom: 1px solid var(--color-border-p2);
-  }
-
-  &.lookupEmpty,
-  &.lookupPreview {
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
-  }
-}
-
-.headerEnd {
-  margin: 0 0 0 auto;
+  background-color: color(var(--bg) blend(var(--bg-hover) 20%));
+  border: 1px solid var(--color-border-p2);
+  overflow: hidden;
 }
 
 .body {
-  padding: 14px;
-  background-color: color(var(--bg) blend(var(--bg-hover) 20%));
   width: 100%;
+  padding: var(--gutter-static);
+}
 
-  &.lookupPreview {
-    background-color: var(--bg);
-  }
+/* Card Styles */
+.default + .default {
+  border-top: 0;
+}
 
-  &.lookupEmpty {
-    background-color: var(--bg-hover);
-  }
+.positive {
+  background-color: var(--bg);
+}
 
-  &.lookupEmpty,
-  &.lookupPreview {
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
-  }
+.negative {
+  background-color: var(--bg-hover);
+}
+
+/* Prop Styles */
+.roundedBorder {
+  border-radius: var(--radius);
+}
+
+.hasMargin {
+  margin-bottom: var(--gutter);
 }
