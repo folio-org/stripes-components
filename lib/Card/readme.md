@@ -16,6 +16,14 @@ The component itself only sets up the styling of the card and the contents are c
 </Card>
 ```
 
+## Styling
+
+Cards are used throughout FOLIO in a variety of styles. These styles can be achieved by applying a set of props to the `Card` component.
+
+### `cardStyle`
+
+The `cardStyle` prop changes the background colors of the card and header (assuming no custom `headerComponent` is used). A `default` style is used if the prop is not provided which is useful for repeating card layouts. `"positive"` and `"negative"` may be passed as the prop value to change the coloring to use FOLIO defaults for different background colors. Because colors could be inverted (a dark mode) or changed altogether, it's difficult to talk in terms of "light" or "dark" foregrounds, but a `positive`-ly colored background will match the default FOLIO background, while a `negative` background will be a contrasting color. Both should still support default, dark text rendered onto them.
+
 ## Props
 
 | Name | Type | Required | Note |
