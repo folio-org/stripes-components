@@ -1,6 +1,6 @@
 # Card
 
-Renders a card with a header and body content. Different styles can be selected using the `cardStyle` prop.
+Renders a card with a header and body content. Different styles can be applied using a combination of the `cardStyle`, `hasMargin` and `roundedBorder` props. Classes can be applied using the various classname props.
 
 ## Basic Usage
 
@@ -13,12 +13,8 @@ The component itself only sets up the styling of the card and the contents are c
   headerStart={<span className="my-card-header">My Header</span>}
 >
   <div>This is my card body content!</div>
-</Card>ma
+</Card>
 ```
-
-## `cardStyle`
-
-The `default` card style is selected automatically. Optionally, you can set the `cardStyle` prop to `lookupPreview` and `lookupEmpty` for easy application of the styles required for a remote resource lookup pattern.
 
 ## Props
 
