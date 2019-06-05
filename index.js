@@ -21,6 +21,7 @@ export { default as MultiSelection } from './lib/MultiSelection';
 export { default as RepeatableField } from './lib/RepeatableField';
 
 /* data containers */
+export { default as Card } from './lib/Card';
 export { default as KeyValue } from './lib/KeyValue';
 export { default as MultiColumnList } from './lib/MultiColumnList';
 export { default as List } from './lib/List';
