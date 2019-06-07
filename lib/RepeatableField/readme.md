@@ -37,6 +37,8 @@ Form component for rendering arrays of editable data.
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 addLabel | string | Text for add field row button |
+canAdd | boolean | Flag to enable/disable add button | true
+canRemove | boolean | Flag to enable/disable remove button | true
 emptyMessage | string | Text for when there are no rows; can be left blank |
 fields | array or object | Values that go with field rows | &#10004;
 legend | node or string | Legend text that accompanies the fieldset; can be left blank |
