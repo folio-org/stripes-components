@@ -1,12 +1,30 @@
 import * as currencies from 'currency-codes/data';
 
-export const currenciesByCode = currencies.reduce((map, c) => (Object.assign(map, { [c.code]: c })), {});
+// filter out uncommon values like currency-baskets and precious metals:
+// XUA ADB Unit of Account
+// XBA Bond Markets Unit European Composite Unit (EURCO)
+// XBB Bond Markets Unit European Monetary Unit (E.M.U.-6)
+// XBD Bond Markets Unit European Unit of Account 17 (E.U.A.-17)
+// XBC Bond Markets Unit European Unit of Account 9 (E.U.A.-9)
+// XTS Codes specifically reserved for testing purposes
+// XAU Gold
+// XPD Palladium
+// XPT Platinum
+// XDR SDR (Special Drawing Right)
+// XAG Silver
+// XSU Sucre
+// XXX The codes assigned for transactions where no currency is involved
 
-export const currenciesByName = currencies.reduce((map, c) => (Object.assign(map, { [c.currency]: c })), {});
+const hiddenCurrencies = ['XUA', 'XBA', 'XBB', 'XBD', 'XBC', 'XTS', 'XAU', 'XPD', 'XPT', 'XDR', 'XAG', 'XSU', 'XXX'];
+export const filteredCurrencies = currencies.filter(c => hiddenCurrencies.indexOf(c.code) === -1);
 
-export const currenciesByNumber = currencies.reduce((map, c) => (Object.assign(map, { [c.number]: c })), {});
+export const currenciesByCode = filteredCurrencies.reduce((map, c) => (Object.assign(map, { [c.code]: c })), {});
 
-export const currenciesOptions = currencies.map(c => ({
+export const currenciesByName = filteredCurrencies.reduce((map, c) => (Object.assign(map, { [c.currency]: c })), {});
+
+export const currenciesByNumber = filteredCurrencies.reduce((map, c) => (Object.assign(map, { [c.number]: c })), {});
+
+export const currenciesOptions = filteredCurrencies.map(c => ({
   label: `${c.currency} (${c.code})`,
   value: c.code,
 })).sort((a, b) => a.label.localeCompare(b.label));
