@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 5.4.0 (IN PROGRESS)
+## [5.4.0](https://github.com/folio-org/stripes-components/tree/v5.4.0) (2019-06-07)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.3.0...v5.4.0)
 
 * Use container-width to size panes.
 * Be careful when using container-width to size a pane. Refs UIDATIMP-198.
