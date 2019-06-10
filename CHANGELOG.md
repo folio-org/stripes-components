@@ -1,5 +1,11 @@
 # Change history for stripes-components
 
+## [5.4.1](https://github.com/folio-org/stripes-components/tree/v5.4.1) (2019-06-10)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.0...v5.4.1)
+
+* `<AppIcon>` is no longer cropped in the presence of a long title. 
+* `<Checkbox>` includes prop-type for `innerClass`.
+
 ## [5.4.0](https://github.com/folio-org/stripes-components/tree/v5.4.0) (2019-06-07)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.3.0...v5.4.0)
 
