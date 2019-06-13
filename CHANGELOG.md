@@ -1,9 +1,9 @@
 # Change history for stripes-components
 
-## 5.4.2 (IN PROGRESS)
+## [5.4.2](https://github.com/folio-org/stripes-components/tree/v5.4.2) (2019-06-12)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.1...v5.4.2)
 
 * Exclude additional currencies. Refs UIU-1076.
-
 
 ## [5.4.1](https://github.com/folio-org/stripes-components/tree/v5.4.1) (2019-06-10)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.0...v5.4.1)
