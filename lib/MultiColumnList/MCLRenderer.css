@@ -124,6 +124,7 @@
   position: relative;
   overflow: auto;
   width: 100%;
+  padding-bottom: 15px; /* Prevents bottom scrollbar from blocking content */
 }
 
 .mclContentLoadingRow {
@@ -152,7 +153,7 @@
 
 .mclEndOfList {
   color: var(--color-text-p2);
-  padding: 7px 0;
-  position: absolute;
+  padding: var(--gutter-static-two-thirds) 0;
+  position: relative;
   left: 0;
 }
