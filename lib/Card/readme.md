@@ -74,7 +74,7 @@ After a resource is selected, it's information is shown in a slightly differentl
 | `bodyClass` | string | |
 | `cardClass` | string | |
 | `cardStyle` | string | | Must be undefined or one of `default`, `negative`, or `positive`. These generally affect the background of the card.
-| `children` | node | Yes |
+| (children) | node | Yes |
 | `hasMargin` | bool | | Turns on a `margin-bottom` for spacing.
 | `headerClass` | string | |
 | `headerComponent` | node, string, func | DefaultCardHeader | Pass a React Component (or node-type name) to fully customize the rendering of the header.
