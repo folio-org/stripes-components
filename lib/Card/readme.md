@@ -78,7 +78,7 @@ After a resource is selected, it's information is shown in a slightly differentl
 | `hasMargin` | bool | | Turns on a `margin-bottom` for spacing.
 | `headerClass` | string | |
 | `headerComponent` | node, string, func | DefaultCardHeader | Pass a React Component (or node-type name) to fully customize the rendering of the header.
-| `headerEnd` | node, string | Yes |
+| `headerEnd` | node, string | |
 | `headerProps` | object | | Props to pass to the header and destructure upon the element/component.
 | `headerStart` | node, string | Yes |
 | `roundedBorder` | bool | | Apply a border-radius to the card for rounded borders.
