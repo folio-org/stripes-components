@@ -15,6 +15,10 @@
   align-items: flex-start;
 }
 
+.repeatableFieldItemContent {
+  flex: 1;
+}
+
 .repeatableFieldRemoveItem {
   flex: 0 0 3em;
   margin-top: 1.75em;
