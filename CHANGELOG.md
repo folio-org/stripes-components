@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 5.4.3 (IN PROGRESS)
+
+* Extend `FilterGroups` component to support optional `displayName` prop for the `values` object for the intl purposes. Refs UIU-894.
+
 ## [5.4.2](https://github.com/folio-org/stripes-components/tree/v5.4.2) (2019-06-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.1...v5.4.2)
 
