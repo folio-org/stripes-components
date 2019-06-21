@@ -24,3 +24,7 @@
   margin-top: 1.75em;
   text-align: center;
 }
+
+.emptyMessage {
+  margin-bottom: var(--gutter-static);
+}
