@@ -41,10 +41,17 @@ import { RepeatableField } from '@folio/stripes/components';
 />
 ```
 
-### Redux Form
+### With Redux Form or React Final Form
 ```js
 import { RepeatableField } from '@folio/stripes/components';
-import { FieldArray } from 'redux-form';
+
+// Redux Form
+import { FieldArray, Field } from 'redux-form';
+
+// React Final Form
+// More information: https://github.com/final-form/react-final-form-arrays
+import { Field } from 'react-final-form';
+import { FieldArray } from 'react-final-form-arrays';
 
 <FieldArray
   addLabel="Add author"
