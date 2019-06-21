@@ -2,7 +2,9 @@
 Form component for rendering arrays of editable data.
 
 ## Usage
-```
+```js
+import { RepeatableField } from '@folio/stripes/components';
+
 <RepeatableField
   addLabel="Add author"
   legend="Authors"
@@ -16,10 +18,34 @@ Form component for rendering arrays of editable data.
     />
   )}
 />
+
+// With multiple fields
+<FieldArray
+  ...
+  renderField={(field, index) => (
+    <Row>
+      <Col xs>
+        <Field
+          component={TextField}
+          label="Name"
+        />
+      </Col>
+      <Col xs>
+        <Field
+          component={TextField}
+          label="Occupation"
+        />
+      </Col>
+    </Row>
+  )}
+/>
 ```
 
-### With Redux Form
+### Redux Form
 ```js
+import { RepeatableField } from '@folio/stripes/components';
+import { FieldArray } from 'redux-form';
+
 <FieldArray
   addLabel="Add author"
   legend="Authors"
@@ -57,6 +83,18 @@ Form component for rendering arrays of editable data.
     </Row>
   )}
 />
+
+// With custom "onRemove"-callback
+<FieldArray
+  ...
+  onRemove={(fields, index) => fields.remove(index)}
+/>
+
+// Hide remove button
+<FieldArray
+  ...
+  onRemove={false}
+/>
 ```
 
 ## Props
@@ -70,5 +108,5 @@ fields | array or object | Values that go with field rows | &#10004;
 id | string | Adds an ID for the root element and prefixed ID's for the default add button |
 legend | node or string | Legend text that accompanies the fieldset; can be left blank |
 onAdd | func | Callback fired when the add button is clicked |  | &#10004;
-onRemove | func | Callback fired when the remove row button is clicked |  |
+onRemove | func | Callback fired when the remove row button is clicked. For redux forms: Pass `false` to hide remove buttons. A custom `onRemove`-callback can be passed if needed (`fields` and `index` will be passed as parameters). |  |
 renderField | func | Render function for each field row |  | &#10004;
