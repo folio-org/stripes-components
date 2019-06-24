@@ -130,3 +130,17 @@ const actionMenu = ({ onToggle }) => ( // eslint-disable-line
   Some content..
 </Pane>
 ```
+## AppIcons
+AppIcon's can be applied to the panetitle in this way. Migration Note: if your app has `deprecation warnings ` for `<AppIcon>`, switch to using the appIcon prop in the following way: 
+
+```js
+import { Pane } from '@folio/stripes/components';
+import { AppIcon } from '@folio/stripes/core';
+
+<Pane
+    ...
+    appIcon={<AppIcon app="inventory" iconKey="holdings" />}
+>
+    Content here..
+</Pane>
+```
