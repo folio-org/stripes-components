@@ -6,7 +6,7 @@ PaneHeader-props can be passed directly to the `<Pane>`-component.
 
 ```js
 import { Pane } from '@folio/stripes/components';
-import { AppIcon } from '@folio/stripes-core';
+import { AppIcon } from '@folio/stripes/core';
 
 <Pane
     paneTitle="Pane header title"
@@ -24,7 +24,7 @@ import { AppIcon } from '@folio/stripes-core';
 Pass an `<AppIcon />` to the appIcon-prop to render an app icon in the pane header. The AppIcon-component can be found in stripes-core.
 
 ```js
-import { AppIcon } from '@folio/stripes-core';
+import { AppIcon } from '@folio/stripes/core';
 
 <PaneHeader appIcon={<AppIcon app="inventory" iconKey="holdings" />} />
 ```
