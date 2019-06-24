@@ -3,6 +3,7 @@
 ## 5.4.3 (IN PROGRESS)
 
 * Extend `FilterGroups` component to support optional `displayName` prop for the `values` object for the intl purposes. Refs UIU-894.
+* Replace Autosizer component with third-party equivalent [react-virtualized-auto-sizer](https://github.com/bvaughn/react-virtualized-auto-sizer). Refs STCOM-543.
 
 ## [5.4.2](https://github.com/folio-org/stripes-components/tree/v5.4.2) (2019-06-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.1...v5.4.2)
