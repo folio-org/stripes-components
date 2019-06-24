@@ -12,3 +12,4 @@ A uniform way of rendering an empty state - e.g. no results found in a list.
 Name | Type | Description
 -- | -- | --
 children | node | Render the empty message by passing it as a child
+className | string | Adds a custom class name
