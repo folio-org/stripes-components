@@ -164,38 +164,3 @@ anchoredRowFormatter(
   rowFormatter={this.anchoredRowFormatter}
 />
 ```
-
-## Clickable content within cells
-Some cases may warrant a click action on the contents of a cell that differs from a click action on the row. To handle this, you can use a combination of the `formatter` prop for the cell content, and a call to `event.stopPropagation()` in the click handler. In the following example, the items of data contain `title` and `reference` fields - the `reference` field is used and passed to its sub-cell click handler. 
-```
-searchClickHandler = (e, info) => {
-    // this will stop the click from reaching the 'row'
-    e.stopPropagation();
-
-   //...rest of the code to perform actions with the info 
-    alert(info);
-  }
-
-  render() {
-    const formatter = {
-      accessPoint: (item) => (
-        <div>
-          <span>{item.title}</span>
-          <Button
-            buttonStyle="none"
-            onClick={(e) => { this.searchClickHandler(e, item.reference); }}
-            style={{ fontWeight: 'bold' }}
-            aria-label={`Search for ${item.reference}`}
-          >
-            {`See: ${item.reference}`}
-          </Button>
-        </div>
-      )
-    };
-
-...
-<MultiColumList
-   formatter = {formatter}
-   ...
-/>
-```

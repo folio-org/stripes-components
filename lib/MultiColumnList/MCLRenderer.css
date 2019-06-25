@@ -1,6 +1,8 @@
 @import '../variables.css';
 
 .mclContainer {
+  display: flex;
+  flex-direction: column;
   &:focus {
     outline: none;
   }
@@ -23,6 +25,10 @@
 /* Row is interactive (clickable, hoverable and focusable etc.) */
 .mclIsInteractive {
   composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
+}
+
+.mclRowWrap {
+  position: absolute;
 }
 
 .mclRow {
@@ -66,13 +72,19 @@
   -moz-font-feature-settings: 'tnum';
 }
 
+.mclHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
 .mclHeaderRow {
   display: flex;
   justify-content: flex-start;
-  padding: 0 var(--gutter-static-two-thirds);
-  overflow: hidden;
-  width: 100%;
-
+  margin: 0 var(--gutter-static-two-thirds);
   &.mclHScroll {
     overflow: auto;
   }
@@ -110,6 +122,7 @@
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
+  flex-basis: auto;
   line-height: var(--line-height);
   padding: 0 var(--gutter-static-two-thirds);
   min-height: var(--control-min-size-desktop);
@@ -122,9 +135,10 @@
 
 .mclScrollable {
   position: relative;
+  flex-grow: 1;
+  flex-shrink: 0;
   overflow: auto;
   width: 100%;
-  padding-bottom: 15px; /* Prevents bottom scrollbar from blocking content */
 }
 
 .mclContentLoadingRow {
@@ -156,4 +170,25 @@
   padding: var(--gutter-static-two-thirds) 0;
   position: relative;
   left: 0;
+}
+
+/* loader rows */
+.mclLoaderRow {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.mclRowPlaceholder {
+  content: &nbsp;
+  border-radius: 2px;
+  background-color: var(--color-fill-table-row-odd);
+  width: 100%;
+  height: 1rem;
+}
+
+/* MCL offCanvasRow - used for column measuring */
+.mclOffCanvasRow {
+  display: flex;
+  position: absolute;
+  top: 100%;
 }
