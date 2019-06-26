@@ -18,22 +18,44 @@ import { RepeatableField } from '@folio/stripes/components';
     />
   )}
 />
+```
 
-// With multiple fields
-<FieldArray
-  ...
+### With multiple fields
+```js
+<RepeatableField
+  legend="People"
+  addLabel="Add person"
+  fields={fields}
+  onAdd={this.handleAdd}
+  onRemove={this.handleRemove}
   renderField={(field, index) => (
     <Row>
       <Col xs>
-        <Field
-          component={TextField}
+        <TextField
+          autoFocus
           label="Name"
+          name={`people[${index}].name`}
+          id={`people-input-name-${index}`}
+          onChange={this.handleChange('name', index)} 
+          value={field.name}
         />
       </Col>
       <Col xs>
-        <Field
-          component={TextField}
+        <TextField
+          label="Age"
+          name={`people[${index}].age`}
+          id={`people-input-age-${index}`}
+          onChange={this.handleChange('age', index)}  
+          value={field.age}
+        />
+      </Col>
+      <Col xs>
+        <TextField
           label="Occupation"
+          name={`people[${index}].occupation`}
+          id={`people-input-occupation-${index}`}
+          onChange={this.handleChange('occupation', index)}  
+          value={field.occupation}
         />
       </Col>
     </Row>
