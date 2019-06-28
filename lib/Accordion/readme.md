@@ -31,12 +31,13 @@ The `<AccordionSet>` sets up keyboard navigation and conveniently controls state
 ```
 ## Keyboard Navigation
 Keyboard support comes packaged with use of the `<AccordionSet>`. The keys are active when an accordion header is in focus. Bindings are as follows:
+
 | key | function |
 | -- | -- |
-`up` | Navigate to the previous accordion header. If the first accordion header is focused, the focus will jump to the last accordion. |
-`down` | Navigate to the next accordion header. If the last accordion header is focused, the focus will jump to the first accordion. |
-`home` | Navigate to the first accordion in the set. |
-`end` | Navigate to the last accordion in the set. |
+| `up` | Navigate to the previous accordion header. If the first accordion header is focused, the focus will jump to the last accordion. |
+| `down` | Navigate to the next accordion header. If the last accordion header is focused, the focus will jump to the first accordion. |
+| `home` | Navigate to the first accordion in the set. |
+| `end` | Navigate to the last accordion in the set. |
 
 ## Controlled
 Accordions can, of course, be controlled by state or local resource. Simply include an object with a list of keys for each accordion's `id` set to a boolean value that will be passed through to the corresponding accordion's `open` prop. This object should be passed to the `<AccordionSet>`'s `accordionStatus` prop. An `onToggle` handler will also need to be provided for proper state interaction. Passed to the `<AccordionSet>`'s `onToggle` prop, it will receive both the label and id of the target accordion, either of which could be used for additional interactions as needed.
