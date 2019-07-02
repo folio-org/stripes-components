@@ -29,7 +29,7 @@ When adding custom icons please make sure that:
 _Since these icons are meant to be monochrome and simple, it should be possible to expand and unite the contents of the vector before exporting. This removes extraneous attributes, strokes, paths, inline styles etc. If you are using e.g. illustrator, you can find more information here: https://helpx.adobe.com/illustrator/using/combining-objects.html._
 
 - **The SVG is cleaned** <br />
-_When exported from e.g. Adobe Illustrator, SVG files often have unneeded attributes such as id, class etc. These should be removed. You can use a tool like https://www.svgminify.com to clean your SVG-files._
+_When exported from e.g. Adobe Illustrator, SVG files often have unneeded attributes such as id, class etc. These should be removed. You can use a tool like https://jakearchibald.github.io/svgomg to minify and clean your SVG-files._
 
 - **The SVG has a viewBox of "0 0 32 32"** <br />
 _This ensures a persistent look and feel of the rendered icons. This prop will automatically be applied when the props are spread onto the `<svg>`-element_
