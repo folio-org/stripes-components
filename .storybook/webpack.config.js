@@ -46,7 +46,6 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        exclude: /(?<=icon-)(.*)(?=.svg)/i, // Exclude SVG icons used in <Icon>
         loader: "file-loader"
       },
       {
