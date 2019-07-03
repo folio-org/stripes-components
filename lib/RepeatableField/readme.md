@@ -30,7 +30,7 @@ import { RepeatableField } from '@folio/stripes/components';
   onRemove={this.handleRemove}
   renderField={(field, index) => (
     <Row>
-      <Col xs>
+      <Col xs={6} sm={4}>
         <TextField
           autoFocus
           label="Name"
@@ -40,7 +40,7 @@ import { RepeatableField } from '@folio/stripes/components';
           value={field.name}
         />
       </Col>
-      <Col xs>
+      <Col xs={6} sm={4}>
         <TextField
           label="Age"
           name={`people[${index}].age`}
@@ -49,7 +49,7 @@ import { RepeatableField } from '@folio/stripes/components';
           value={field.age}
         />
       </Col>
-      <Col xs>
+      <Col xs={12} sm={4}>
         <TextField
           label="Occupation"
           name={`people[${index}].occupation`}
