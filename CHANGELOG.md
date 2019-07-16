@@ -4,6 +4,7 @@
 
 * Extend `FilterGroups` component to support optional `displayName` prop for the `values` object for the intl purposes. Refs UIU-894.
 * Replace Autosizer component with third-party equivalent [react-virtualized-auto-sizer](https://github.com/bvaughn/react-virtualized-auto-sizer). Refs STCOM-543.
+* `<ExpandAllButton>` now accepts an optional `id` prop to set on the `<Button>`.
 
 ## [5.4.2](https://github.com/folio-org/stripes-components/tree/v5.4.2) (2019-06-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.1...v5.4.2)
@@ -13,7 +14,7 @@
 ## [5.4.1](https://github.com/folio-org/stripes-components/tree/v5.4.1) (2019-06-10)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.0...v5.4.1)
 
-* `<AppIcon>` is no longer cropped in the presence of a long title. 
+* `<AppIcon>` is no longer cropped in the presence of a long title.
 * `<Checkbox>` includes prop-type for `innerClass`.
 
 ## [5.4.0](https://github.com/folio-org/stripes-components/tree/v5.4.0) (2019-06-07)
