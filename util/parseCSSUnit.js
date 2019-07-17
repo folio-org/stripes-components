@@ -1,4 +1,7 @@
 export default function parseCSSUnit(str) {
+  if (typeof str === 'number') {
+    return 'px';
+  }
   const testString = str.toLowerCase();
   if (/%$/.test(testString)) return 'percent';
   if (/px$/.test(testString)) return 'px';

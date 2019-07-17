@@ -27,8 +27,9 @@
   composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
 }
 
-.mclRowWrap {
+.mclRowMeasurer {
   position: absolute;
+  width: 100%;
 }
 
 .mclRow {
@@ -60,6 +61,10 @@
     &::after {
       background-color: #fff;
     }
+  }
+
+  &.mclWrappedCells {
+    flex-wrap: wrap;
   }
 }
 
@@ -175,20 +180,14 @@
 /* loader rows */
 .mclLoaderRow {
   width: 100%;
-  padding: 0.5rem;
+  position: absolute;
+  top: 100%;
 }
 
 .mclRowPlaceholder {
-  content: &nbsp;
+  content: "&nbsp;";
   border-radius: 2px;
   background-color: var(--color-fill-table-row-odd);
   width: 100%;
   height: 1rem;
-}
-
-/* MCL offCanvasRow - used for column measuring */
-.mclOffCanvasRow {
-  display: flex;
-  position: absolute;
-  top: 100%;
 }
