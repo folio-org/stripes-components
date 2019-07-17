@@ -70,29 +70,29 @@
 }
 
 .marginXxSmall {
-  margin-bottom: 2.33em;
+  margin-bottom: 0.67rem;
 }
 
 .marginXSmall {
-  margin-bottom: 2em;
+  margin-bottom: 0.83rem;
 }
 
 .marginSmall {
-  margin-bottom: 1.67em;
+  margin-bottom: 1rem;
 }
 
 .marginMedium {
-  margin-bottom: 1.33em;
+  margin-bottom: 1.33rem;
 }
 
 .marginLarge {
-  margin-bottom: 1em;
+  margin-bottom: 1.67rem;
 }
 
 .marginXLarge {
-  margin-bottom: 0.83em;
+  margin-bottom: 2rem;
 }
 
 .marginXxLarge {
-  margin-bottom: 0.67em;
+  margin-bottom: 2.33rem;
 }

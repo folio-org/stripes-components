@@ -93,7 +93,8 @@ is used both to display on the page and as the value to use in
 queries. However, each value may optionally instead be an object
 containing two keys:
 
-* `name` -- the name used to display the filter on the page.
+* `name` -- the name used internally for the filter checkbox for `name` attribute.
+* `displayName` -- optional display name used to display the filter on the page (helpful for intl support). By default equals to the `name`.
 * `cql` -- the value used when generating CQL queries.
 * `hidden` -- hide the value in the UI and always apply the filter
 
