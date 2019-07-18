@@ -74,5 +74,8 @@
     "fieldIsDisabled": "Campo desativado",
     "readonly": "Somente leitura",
     "readMore": "Leia Mais",
-    "tableEmpty": "A lista não contém itens"
+    "tableEmpty": "A lista não contém itens",
+    "metaSection.sourceNoData": "Fonte: Processamento automatizado",
+    "metaSection.recordCreatedNoData": "Registro criado: Desconhecido",
+    "metaSection.recordLastUpdatedNoData": "Última atualização do registro: Desconhecido"
 }

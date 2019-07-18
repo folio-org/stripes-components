@@ -74,5 +74,8 @@
     "fieldIsDisabled": "Field is disabled",
     "readonly": "Read-only",
     "readMore": "Read more",
-    "tableEmpty": "A lista não contém itens"
+    "tableEmpty": "A lista não contém itens",
+    "metaSection.sourceNoData": "Source: Automated process",
+    "metaSection.recordCreatedNoData": "Record created: Unknown",
+    "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown"
 }
