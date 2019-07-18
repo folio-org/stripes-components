@@ -74,5 +74,8 @@
     "fieldIsDisabled": "字段已禁用",
     "readonly": "只读",
     "readMore": "了解更多",
-    "tableEmpty": "该列表不包含任何项目"
+    "tableEmpty": "该列表不包含任何项目",
+    "metaSection.sourceNoData": "Source: Automated process",
+    "metaSection.recordCreatedNoData": "Record created: Unknown",
+    "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown"
 }
