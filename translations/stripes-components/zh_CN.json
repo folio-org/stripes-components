@@ -74,5 +74,8 @@
     "fieldIsDisabled": "字段已禁用",
     "readonly": "只读",
     "readMore": "了解更多",
-    "tableEmpty": "该列表不包含任何项目"
+    "tableEmpty": "该列表不包含任何项目",
+    "metaSection.sourceNoData": "来源：自动化流程",
+    "metaSection.recordCreatedNoData": "记录创建：未知",
+    "metaSection.recordLastUpdatedNoData": "记录最近更新：未知"
 }
