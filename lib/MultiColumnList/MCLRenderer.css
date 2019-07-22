@@ -3,6 +3,7 @@
 .mclContainer {
   display: flex;
   flex-direction: column;
+
   &:focus {
     outline: none;
   }
@@ -90,6 +91,7 @@
   display: flex;
   justify-content: flex-start;
   margin: 0 var(--gutter-static-two-thirds);
+
   &.mclHScroll {
     overflow: auto;
   }
