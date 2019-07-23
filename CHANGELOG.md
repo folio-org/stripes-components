@@ -1,10 +1,16 @@
 # Change history for stripes-components
 
-## 5.4.3 (IN PROGRESS)
+## [5.5.0](https://github.com/folio-org/stripes-components/tree/v5.5.0) (2019-07-22)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.2...v5.5.0)
 
+* Allow `<RepeatableField>`'s add and remove buttons to be disabled. Refs UIOR-294.
 * Extend `FilterGroups` component to support optional `displayName` prop for the `values` object for the intl purposes. Refs UIU-894.
 * Replace Autosizer component with third-party equivalent [react-virtualized-auto-sizer](https://github.com/bvaughn/react-virtualized-auto-sizer). Refs STCOM-543.
 * `<ExpandAllButton>` now accepts an optional `id` prop to set on the `<Button>`.
+* `<Icon>` may receive custom icons. Refs STCOM-542.
+* Correctly set `<Accordion>`'s `id`. Refs STCOM-551. 
+* `<MetaSection>` elegantly handles missing metadata. Refs STCOM-538.
+* `<Datepicker>` cleanup: better i18n, issues with untouched fields.
 
 ## [5.4.2](https://github.com/folio-org/stripes-components/tree/v5.4.2) (2019-06-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.1...v5.4.2)
