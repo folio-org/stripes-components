@@ -13,6 +13,7 @@
 }
 
 :global .stripes__icon {
+  flex-shrink: 0;
   fill: currentColor;
   height: 1.1429em;
   width: 1.1429em;

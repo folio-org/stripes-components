@@ -74,5 +74,8 @@
     "fieldIsDisabled": "تم إيقاف الحقل",
     "readonly": "للقراءة فقط",
     "readMore": "قراءة المزيد",
-    "tableEmpty": "لا تحتوي القائمة على مواد"
+    "tableEmpty": "لا تحتوي القائمة على مواد",
+    "metaSection.sourceNoData": "المصدر: عملية مؤتمتة",
+    "metaSection.recordCreatedNoData": "تم إنشاء التسجيلة في: غير معروف",
+    "metaSection.recordLastUpdatedNoData": "أخر تحديث للتسجيلة: غير معروف"
 }

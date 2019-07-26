@@ -9,6 +9,6 @@
   align-items: center;
   font-size: var(--font-size-medium);
   line-height: var(--line-height);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--control-label-margin-bottom);
   color: var(--color-text);
 }
