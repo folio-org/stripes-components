@@ -90,7 +90,7 @@
 
 .singleValue {
   display: flex;
-  width: 80%;
+  width: 90%;
 }
 
 /* Selection List Options */
@@ -142,6 +142,7 @@
 
 .optionSegment {
   padding: 0 2px;
+  text-align: initial;
 }
 
 .optionMatchedSubstring {
