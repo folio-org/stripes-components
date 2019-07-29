@@ -20,7 +20,7 @@
 
   /* Bold */
   &.isBold {
-    font-weight: 600;
+    font-weight: var(--text-weight-headline);
   }
 
   /* Flex */
