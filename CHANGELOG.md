@@ -11,6 +11,7 @@
 * Correctly set `<Accordion>`'s `id`. Refs STCOM-551. 
 * `<MetaSection>` elegantly handles missing metadata. Refs STCOM-538.
 * `<Datepicker>` cleanup: better i18n, issues with untouched fields.
+* Add an optional `footer` prop for `Pane` component for fixed footer feature. Refs STCOM-429.
 
 ## [5.4.2](https://github.com/folio-org/stripes-components/tree/v5.4.2) (2019-06-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.1...v5.4.2)
