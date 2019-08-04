@@ -51,7 +51,8 @@
   /**
    * Font-weights
    */
-  --text-weight-bold: 900;
+  --text-weight-black: 900;
+  --text-weight-bold: 700;
   --text-weight-medium: 500;
   --text-weight-regular: 400;
   --text-weights-are-bolder: 0;
