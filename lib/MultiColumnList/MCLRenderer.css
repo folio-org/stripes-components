@@ -34,7 +34,7 @@
   text-decoration: none;
   margin: 0 var(--gutter-static-one-third);
   outline: none;
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: var(--color-fill-table-row-even);
 
   &:visited {
     color: var(--color-text);
@@ -72,6 +72,7 @@
   padding: 0 var(--gutter-static-two-thirds);
   overflow: hidden;
   width: 100%;
+  border-bottom: 5px solid var(--primary);
 
   &.mclHScroll {
     overflow: auto;
@@ -114,6 +115,11 @@
   padding: 0 var(--gutter-static-two-thirds);
   min-height: var(--control-min-size-desktop);
   overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:last-child {
+    border-right: 0;
+  }
 
   &.showOverflow {
     overflow: visible;
