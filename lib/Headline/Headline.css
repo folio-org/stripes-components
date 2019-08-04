@@ -18,11 +18,6 @@
     color: var(--color-text-p2);
   }
 
-  /* Bold */
-  &.isBold {
-    font-weight: var(--text-weight-headline);
-  }
-
   /* Flex */
   &.flex {
     display: flex;
@@ -95,4 +90,24 @@
 
 .marginXxLarge {
   margin-bottom: 2.33rem;
+}
+
+/**
+ * Font weight
+ */
+
+.font-weight-regular {
+  font-weight: var(--text-weight-regular);
+}
+
+.font-weight-medium {
+  font-weight: var(--text-weight-medium);
+}
+
+.font-weight-bold {
+  font-weight: var(--text-weight-bold);
+}
+
+.font-weight-black {
+  font-weight: var(--text-weight-black);
 }

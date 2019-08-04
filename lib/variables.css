@@ -53,7 +53,7 @@
    */
   --text-weight-black: 900;
   --text-weight-bold: 700;
-  --text-weight-medium: 500;
+  --text-weight-medium: 600;
   --text-weight-regular: 400;
   --text-weights-are-bolder: 0;
   --text-weight-basis: var(--text-weight-regular);
