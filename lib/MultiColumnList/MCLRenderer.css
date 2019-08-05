@@ -44,6 +44,10 @@
     background-color: var(--color-fill-table-row-odd);
   }
 
+  &::before {
+    border-radius: 0;
+  }
+
   /* Selected style */
   &.mclSelected {
     color: #fff;
