@@ -68,21 +68,9 @@
 .mclHeaderRow {
   display: flex;
   justify-content: flex-start;
-  padding: 0 var(--gutter-static-two-thirds) var(--gutter-static-one-third) var(--gutter-static-two-thirds);
+  padding: 0 var(--gutter-static-two-thirds);
   overflow: hidden;
   width: 100%;
-  position: relative;
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: var(--gutter-static-one-third);
-    bottom: 0;
-    right: var(--gutter-static-one-third);
-    left: var(--gutter-static-one-third);
-    background-color: var(--primary);
-  }
 
   &.mclHScroll {
     overflow: auto;
