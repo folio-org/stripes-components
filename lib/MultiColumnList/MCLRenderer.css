@@ -29,7 +29,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  border-radius: var(--radius);
   color: var(--color-text);
   text-decoration: none;
   margin: 0 var(--gutter-static-one-third);
@@ -69,10 +68,21 @@
 .mclHeaderRow {
   display: flex;
   justify-content: flex-start;
-  padding: 0 var(--gutter-static-two-thirds);
+  padding: 0 var(--gutter-static-two-thirds) var(--gutter-static-one-third) var(--gutter-static-two-thirds);
   overflow: hidden;
   width: 100%;
-  border-bottom: 5px solid var(--primary);
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: var(--gutter-static-one-third);
+    bottom: 0;
+    right: var(--gutter-static-one-third);
+    left: var(--gutter-static-one-third);
+    background-color: var(--primary);
+  }
 
   &.mclHScroll {
     overflow: auto;
