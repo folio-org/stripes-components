@@ -32,10 +32,8 @@
     color: inherit;
   }
 
-  /* Minor update to avoid a small gap between
-    the button and the focus/active styles */
   &::before {
-    border-radius: calc(var(--radius) - 1px);
+    border-radius: 999px;
   }
 
   &.block {
