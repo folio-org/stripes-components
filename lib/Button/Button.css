@@ -6,7 +6,7 @@
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
-  padding: 0 var(--gutter-static-two-thirds);
+  padding: 0 var(--gutter-static);
   text-align: center;
   -webkit-appearance: none;
   cursor: pointer;
