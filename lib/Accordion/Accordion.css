@@ -61,7 +61,7 @@
 .labelArea {
   display: flex;
   flex-grow: 2;
-  font-weight: var(--text-weight-black);
+  font-weight: var(--text-weight-bold);
   justify-content: flex-start;
   color: var(--color-text);
 }
@@ -185,7 +185,6 @@
 }
 
 .filterSetlabel {
-  font-weight: var(--text-weight-black);
   color: var(--color-text);
   pointer-events: none;
   user-select: none;
