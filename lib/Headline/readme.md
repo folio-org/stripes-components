@@ -18,4 +18,4 @@ size | string | The size of the headline | xx-small, x-small, small, medium, lar
 margin | string | The bottom margin of the component. Automatically matches the size-prop. | xx-small, x-small, small, medium, large, x-large, xx-large, none | medium
 tag | string | The tag of the headline | h1, h2, h3, h4, h5, h6, p, div, legend | div
 faded | boolean | Adds faded style to headline (gray color) | true/false | false
-bold | boolean | Adds bold style to headline | true/false | true
+weight | string | Changes the font-weight of the `<Headline>` | regular, medium, bold, black | bold
