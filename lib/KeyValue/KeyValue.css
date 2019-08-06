@@ -2,9 +2,10 @@
 
 .kvLabel {
   display: block;
-  font-weight: var(--text-weight-basis);
+  font-weight: var(--text-weight-bold);
+  font-size: 1.05rem;
   margin-bottom: 0.25rem;
-  color: var(--color-text-p2);
+  color: var(--color-text);
   line-height: var(--line-height);
 }
 
