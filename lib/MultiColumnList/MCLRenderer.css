@@ -141,7 +141,6 @@
 }
 
 .mclScrollable {
-  position: relative;
   flex-grow: 1;
   flex-shrink: 0;
   overflow: auto;
