@@ -47,6 +47,7 @@ defaultWidth | string percentage or `"fill"` | Tells the pane the percentage of 
 height | string | css-value representation of a custom pane height. The maximum height of a Pane is 100% of the viewport (vh unit) - the height of the universal FOLIO header. A situation where you may need this is if the Pane (or Paneset) is wrapped in an unstyled element without any width/max-width set.  |  |
 dismissible | bool or "last"| If true, pane will render a close (&times;) button in its firstMenu. If "last" is supplied, the button will render in the lastMenu. | false |
 firstMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the beginning of the header. |  |
+footer | node | Render a component at the bottom of the Pane containing a form. |  |
 lastMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the far end of the header. |  |
 onClose | func | Callback fired when the pane is closed using its dismiss button. |  |
 paneTitle | string or node | Text or text-rendering elements to appear in the pane header. |  |
