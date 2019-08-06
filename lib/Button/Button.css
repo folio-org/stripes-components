@@ -84,7 +84,6 @@
   &.primary {
     background-color: var(--primary);
     border: 1px solid var(--primary);
-    font-weight: var(--text-weight-button-primary);
     color: #fff;
 
     &:hover {
