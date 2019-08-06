@@ -51,8 +51,9 @@
   /**
    * Font-weights
    */
-  --text-weight-bold: 900;
-  --text-weight-medium: 500;
+  --text-weight-black: 900;
+  --text-weight-bold: 700;
+  --text-weight-medium: 600;
   --text-weight-regular: 400;
   --text-weights-are-bolder: 0;
   --text-weight-basis: var(--text-weight-regular);
@@ -61,8 +62,7 @@
   --text-weight-headline-addition-factor: 100;
   --text-weight: calc(var(--text-weight-basis) + ( var(--text-weight-addition-factor) * var(--text-weights-are-bolder)));
   --text-weight-headline: var(--text-weight-bold);
-  --text-weight-button: var(--text-weight);
-  --text-weight-button-primary: calc(var(--text-weight-headline-basis) + ( var(--text-weight-headline-addition-factor) * var(--text-weights-are-bolder)));
+  --text-weight-button: var(--text-weight-bold);
 }
 
 /* Lean on min-width queries to create mobile-first CSS. */
