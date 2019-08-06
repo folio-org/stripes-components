@@ -85,7 +85,7 @@ a {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: var(--text-weight-bold);
 }
 
 fieldset {

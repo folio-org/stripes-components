@@ -70,7 +70,7 @@
 /* Pane title */
 .paneTitle {
   font-size: var(--font-size-medium);
-  font-weight: 600;
+  font-weight: var(--text-weight-bold);
   align-items: center;
   letter-spacing: 0.04em;
   color: var(--color-text);
