@@ -1,0 +1,20 @@
+@import '../variables.css';
+
+.paneFooter {
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+  min-height: var(--control-min-size-touch);
+  padding: var(--gutter-static);
+}
+
+.paneFooterButtons {
+  width: 50em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: var(--gutter-static-one-third);
+  margin-right: var(--gutter-static);
+}

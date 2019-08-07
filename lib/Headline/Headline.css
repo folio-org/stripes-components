@@ -7,7 +7,6 @@
 /**
  * Root styling
  */
-
 .headline {
   margin-top: 0;
   font-weight: var(--text-weight-headline);
@@ -16,11 +15,6 @@
   /* Faded */
   &.isFaded {
     color: var(--color-text-p2);
-  }
-
-  /* Bold */
-  &.isBold {
-    font-weight: var(--text-weight-headline);
   }
 
   /* Flex */
@@ -40,24 +34,23 @@
  * Follows HTML5 headline specs
  * https://www.w3.org/TR/html5/rendering.html#sections-and-headings
  */
-
-.sizeSmall { /* default browser h5 proportion */
+.size-small { /* default browser h5 proportion */
   font-size: var(--font-size-small);
 }
 
-.sizeMedium { /* default browser h4 proportion */
+.size-medium { /* default browser h4 proportion */
   font-size: var(--font-size-medium);
 }
 
-.sizeLarge { /* default browser h3 proportion */
+.size-large { /* default browser h3 proportion */
   font-size: var(--font-size-large);
 }
 
-.sizeXLarge { /* default browser h2 proportion */
+.size-x-large { /* default browser h2 proportion */
   font-size: var(--font-size-x-large);
 }
 
-.sizeXxLarge { /* default browser h1 proportion */
+.size-xx-large { /* default browser h1 proportion */
   font-size: var(--font-size-xx-large);
 }
 
@@ -65,34 +58,53 @@
  * Margin
  */
 
-.marginNone {
+.margin-none {
   margin-bottom: 0;
 }
 
-.marginXxSmall {
+.margin-xx-small {
   margin-bottom: 0.67rem;
 }
 
-.marginXSmall {
+.margin-x-small {
   margin-bottom: 0.83rem;
 }
 
-.marginSmall {
+.margin-small {
   margin-bottom: 1rem;
 }
 
-.marginMedium {
+.margin-medium {
   margin-bottom: 1.33rem;
 }
 
-.marginLarge {
+.margin-large {
   margin-bottom: 1.67rem;
 }
 
-.marginXLarge {
+.margin-x-large {
   margin-bottom: 2rem;
 }
 
-.marginXxLarge {
+.margin-xx-large {
   margin-bottom: 2.33rem;
+}
+
+/**
+ * Font weight
+ */
+.font-weight-regular {
+  font-weight: var(--text-weight-regular);
+}
+
+.font-weight-medium {
+  font-weight: var(--text-weight-medium);
+}
+
+.font-weight-bold {
+  font-weight: var(--text-weight-bold);
+}
+
+.font-weight-black {
+  font-weight: var(--text-weight-black);
 }
