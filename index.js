@@ -32,6 +32,7 @@ export { default as PaneHeaderIconButton } from './lib/PaneHeaderIconButton';
 export { default as PaneBackLink } from './lib/PaneBackLink';
 export { default as PaneCloseLink } from './lib/PaneCloseLink';
 export { default as PaneHeader } from './lib/PaneHeader';
+export { default as PaneFooter } from './lib/PaneFooter';
 export { default as PaneSubheader } from './lib/PaneSubheader';
 export { default as PaneMenu } from './lib/PaneMenu';
 export { default as Paneset } from './lib/Paneset';
