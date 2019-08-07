@@ -77,5 +77,6 @@
     "tableEmpty": "L'elenco non contiene elementi",
     "metaSection.sourceNoData": "Source: Automated process",
     "metaSection.recordCreatedNoData": "Record created: Unknown",
-    "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown"
+    "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown",
+    "saveAndClose": "Save & close"
 }
