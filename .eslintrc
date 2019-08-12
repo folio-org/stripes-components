@@ -17,12 +17,16 @@
       }
     }
   ],
+  "plugins": [
+    "no-only-tests"
+  ],
   "parser": "babel-eslint",
   "rules": {
     "max-len": ["warn", { "code": 120 }],
     "no-console": ["error", {
       "allow": ["warn", "error"]
     }],
-    "react/sort-prop-types": ["error"]
+    "react/sort-prop-types": ["error"],
+    "no-only-tests/no-only-tests": "error"
   }
 }
