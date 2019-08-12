@@ -111,6 +111,10 @@
     cursor: pointer;
   }
 
+  &.mclSorted .mclHeaderInner{
+   text-decoration:underline;
+  }
+
   &.mclAscending .mclHeaderInner::after {
     content: '';
     height: var(--gutter-static);
