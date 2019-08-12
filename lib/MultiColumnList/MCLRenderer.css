@@ -111,8 +111,15 @@
     cursor: pointer;
   }
 
-  &.mclSorted .mclHeaderInner{
-   text-decoration:underline;
+  & .mclHeaderInner {
+    display: flex;
+    padding: 2px 0;
+    align-items: center;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
   }
 
   &.mclAscending .mclHeaderInner::after {
@@ -132,18 +139,14 @@
     background-repeat: no-repeat;
     margin: 0 2px;
   }
-}
 
-.mclHeaderInner {
-  display: flex;
-  padding: 2px 0;
-  align-items: center;
-  &:active, &:focus {
-    outline: none;
+  &.mclSorted .mclHeaderInner {
+    text-decoration: underline;
   }
 }
 
-.mclHeaderOuter:active, .mclHeaderOuter:focus {
+.mclHeaderOuter:active,
+.mclHeaderOuter:focus {
   outline: none;
 }
 
