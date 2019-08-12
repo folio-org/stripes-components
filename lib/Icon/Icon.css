@@ -51,15 +51,6 @@
 }
 
 /**
- * Specific styling for spinner
- * (Spinner is likely to be deprecated later on)
- */
-.iconSpinner {
-  width: 1em;
-  height: 0.5em;
-}
-
-/**
  * Label
  */
 
