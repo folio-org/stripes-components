@@ -63,8 +63,7 @@
   --text-weight-headline-addition-factor: 100;
   --text-weight: calc(var(--text-weight-basis) + ( var(--text-weight-addition-factor) * var(--text-weights-are-bolder)));
   --text-weight-headline: var(--text-weight-bold);
-  --text-weight-button: var(--text-weight);
-  --text-weight-button-primary: calc(var(--text-weight-headline-basis) + ( var(--text-weight-headline-addition-factor) * var(--text-weights-are-bolder)));
+  --text-weight-button: var(--text-weight-bold);
 }
 
 /* Lean on min-width queries to create mobile-first CSS. */

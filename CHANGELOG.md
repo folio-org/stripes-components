@@ -1,5 +1,11 @@
 # Change history for stripes-components
 
+## 5.6.0 (IN PROGRESS)
+
+* Update font-weights and colors to increase scanability. Refs UX-313, STCOM-563, STCOM-565
+* Implement fixed-to-bottom `<PaneFooter>` component. Refs STCOM-429.
+* Display `<Button>`s as pills (circular/rounded sides). Refs STCOM-564.
+
 ## [5.5.0](https://github.com/folio-org/stripes-components/tree/v5.5.0) (2019-07-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.2...v5.5.0)
 
@@ -11,6 +17,7 @@
 * Correctly set `<Accordion>`'s `id`. Refs STCOM-551. 
 * `<MetaSection>` elegantly handles missing metadata. Refs STCOM-538.
 * `<Datepicker>` cleanup: better i18n, issues with untouched fields.
+* Add an optional `footer` prop for `Pane` component for fixed footer feature. Refs STCOM-429.
 
 ## [5.4.2](https://github.com/folio-org/stripes-components/tree/v5.4.2) (2019-06-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.1...v5.4.2)

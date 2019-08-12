@@ -77,5 +77,6 @@
     "tableEmpty": "A lista não contém itens",
     "metaSection.sourceNoData": "Fonte: Processamento automatizado",
     "metaSection.recordCreatedNoData": "Registro criado: Desconhecido",
-    "metaSection.recordLastUpdatedNoData": "Última atualização do registro: Desconhecido"
+    "metaSection.recordLastUpdatedNoData": "Última atualização do registro: Desconhecido",
+    "saveAndClose": "Salvar e fechar"
 }
