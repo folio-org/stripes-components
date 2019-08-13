@@ -37,12 +37,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  border-radius: var(--radius);
   color: var(--color-text);
   text-decoration: none;
   margin: 0 var(--gutter-static-one-third);
   outline: none;
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: var(--color-fill-table-row-even);
 
   &:visited {
     color: var(--color-text);
@@ -51,6 +50,10 @@
   /* Different bg on odd rows */
   &.mclIsOdd:not(.mclSelected) {
     background-color: var(--color-fill-table-row-odd);
+  }
+
+  &::before {
+    border-radius: 0;
   }
 
   /* Selected style */
@@ -160,6 +163,11 @@
   padding: 0 var(--gutter-static-two-thirds);
   min-height: var(--control-min-size-desktop);
   overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:last-child {
+    border-right: 0;
+  }
 
   &.showOverflow {
     overflow: visible;
