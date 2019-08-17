@@ -116,6 +116,12 @@
     padding: 2px 0;
     align-items: center;
 
+    &::after {
+      content: '';
+      width: var(--gutter-static);
+      margin: 0 2px;
+    }
+
     &:active,
     &:focus {
       outline: none;
