@@ -169,7 +169,7 @@
   flex-grow: 0;
   flex-basis: auto;
   line-height: var(--line-height);
-  padding: 0 var(--gutter-static-two-thirds);
+  padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
   min-height: var(--control-min-size-desktop);
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
