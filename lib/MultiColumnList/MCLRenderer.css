@@ -28,7 +28,7 @@
   composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
 }
 
-.mclRowMeasurer {
+.mclRowFormatterContainer {
   position: absolute;
   width: 100%;
 }
