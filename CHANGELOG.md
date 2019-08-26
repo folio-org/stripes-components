@@ -1,10 +1,13 @@
 # Change history for stripes-components
 
-## 5.6.0 (IN PROGRESS)
+## [5.6.0](https://github.com/folio-org/stripes-components/tree/v5.6.0) (2019-08-21)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.5.0...v5.6.0)
 
-* Update font-weights and colors to increase scanability. Refs UX-313, STCOM-563, STCOM-565
+* Update font-weights and colors to increase scanability. Refs UX-313, STCOM-563, STCOM-565, STCOM-561.
 * Implement fixed-to-bottom `<PaneFooter>` component. Refs STCOM-429.
 * Display `<Button>`s as pills (circular/rounded sides). Refs STCOM-564.
+* Correctly pass `ref`s to `<MultiSelection>` internal components. Refs STCOM-554.
+* Better `<KeyValue>` test infrastructure.
 
 ## [5.5.0](https://github.com/folio-org/stripes-components/tree/v5.5.0) (2019-07-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.2...v5.5.0)

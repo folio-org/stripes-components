@@ -75,8 +75,8 @@
     "readonly": "Sola lettura",
     "readMore": "Per saperne di più",
     "tableEmpty": "L'elenco non contiene elementi",
-    "metaSection.sourceNoData": "Source: Automated process",
-    "metaSection.recordCreatedNoData": "Record created: Unknown",
-    "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown",
-    "saveAndClose": "Save & close"
+    "metaSection.sourceNoData": "Fonte: processo automatizzato",
+    "metaSection.recordCreatedNoData": "Record creato: sconosciuto",
+    "metaSection.recordLastUpdatedNoData": "Ultimo aggiornamento del record: sconosciuto",
+    "saveAndClose": "Salva e chiudi"
 }
