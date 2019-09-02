@@ -1,21 +1,45 @@
 # PaneFooter
-Render pane footer at the bottom of the `<Pane>`-component containing a form.
+Renders pane footer at the bottom of the `<Pane>`-component containing a form.
 
-### Usage
+### Basic (Default) Usage
+
+The component itself only sets up the styling of the footer and the contents (`renderStart` and `renderEnd` props) are completely up to the developer.
+```js
+import { Pane, PaneFooter } from '@folio/stripes/components';
+
+const footer = (
+  <PaneFooter
+    renderStart={<Button>Cancel</Button>}
+    renderEnd={<Button>Save</Button>}
+    className={css.paneFooterClass}
+    innerClassName={css.paneFooterContentClass}
+  />
+);
+
+<Pane footer={footer} ... >
+  Pane Content
+</Pane>
+```
+
+### Advanced (Customized) Usage
+
+The component styling and content are completely up to the developer.
 ```js
 import { Pane, PaneFooter, Button } from '@folio/stripes/components';
 
 const footer = (
-  <PaneFooter>
-    <Button onClick={() => {...}}>
-      Cancel
-    </Button>
-    <Button
-      buttonStyle="primary"
-      type="submit"
-    >
-      Save
-    </Button>
+  <PaneFooter footerClass={css.paneFooter}>
+    <div className={css.paneFooterContent}>
+      <Button onClick={() => {...}}>
+        Cancel
+      </Button>
+      <Button
+        buttonStyle="primary"
+        type="submit"
+      >
+        Save
+      </Button>
+    </div>
   </PaneFooter>
 );
 
@@ -27,4 +51,8 @@ const footer = (
 ### Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-children | | Set of `<Button>`s. |  |
+children | node |  |  |
+className | string | Adds a className to the `PaneFooter`. Optional. |  |
+innerClassName | string | Adds a className to the `PaneFooter` content. Optional. |  |
+renderEnd | node |  |  |
+renderStart | node |  |  |
