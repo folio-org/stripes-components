@@ -8,6 +8,7 @@
 * Display `<Button>`s as pills (circular/rounded sides). Refs STCOM-564.
 * Correctly pass `ref`s to `<MultiSelection>` internal components. Refs STCOM-554.
 * Better `<KeyValue>` test infrastructure.
+* Allow [lodash templates](https://lodash.com/docs/4.17.15#template) in `<FilterGroup>`. Refs UIIN-199.
 
 ## [5.5.0](https://github.com/folio-org/stripes-components/tree/v5.5.0) (2019-07-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.2...v5.5.0)
