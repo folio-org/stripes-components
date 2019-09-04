@@ -1,6 +1,9 @@
 @import '../variables.css';
 
 .mclContainer {
+  display: flex;
+  flex-direction: column;
+
   &:focus {
     outline: none;
   }
@@ -23,6 +26,11 @@
 /* Row is interactive (clickable, hoverable and focusable etc.) */
 .mclIsInteractive {
   composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
+}
+
+.mclRowFormatterContainer {
+  position: absolute;
+  width: 100%;
 }
 
 .mclRow {
@@ -58,6 +66,10 @@
       background-color: #fff;
     }
   }
+
+  &.mclWrappedCells {
+    flex-wrap: wrap;
+  }
 }
 
 .mclRowsBody {
@@ -69,12 +81,19 @@
   -moz-font-feature-settings: 'tnum';
 }
 
+.mclHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
 .mclHeaderRow {
   display: flex;
   justify-content: flex-start;
-  padding: 0 var(--gutter-static-two-thirds);
-  overflow: hidden;
-  width: 100%;
+  margin: 0 var(--gutter-static-two-thirds);
 
   &.mclHScroll {
     overflow: auto;
@@ -95,26 +114,62 @@
     cursor: pointer;
   }
 
-  &.mclSorted {
+  & .mclHeaderInner {
+    display: flex;
+    padding: 2px 0;
+    align-items: center;
+
+    &::after {
+      content: '';
+      flex: 1 0 var(--gutter-static);
+      width: var(--gutter-static);
+      margin: 0 2px;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.mclAscending .mclHeaderInner::after {
+    content: '';
+    flex: 1 0 var(--gutter-static);
+    height: var(--gutter-static);
+    width: var(--gutter-static);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20class%3D%22stripes__icon%22%20d%3D%22M7%202.9l5.77%206.92-1.54%201.28L7%206.02%202.77%2011.1%201.23%209.82%207%202.9z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    margin: 0 2px;
+  }
+
+  &.mclDescending .mclHeaderInner::after {
+    content: '';
+    flex: 1 0 var(--gutter-static);
+    height: var(--gutter-static);
+    width: var(--gutter-static);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20class%3D%22stripes__icon%22%20d%3D%22M7%2011.1L1.23%204.18%202.77%202.9%207%207.98l4.23-5.08%201.54%201.28L7%2011.1z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    margin: 0 2px;
+  }
+
+  &.mclSorted .mclHeaderInner {
     text-decoration: underline;
   }
+}
 
-  &.mclAscending::after {
-    content: "↑";
-  }
-
-  &.mclDescending::after {
-    content: "↓";
-  }
+.mclHeaderOuter:active,
+.mclHeaderOuter:focus {
+  outline: none;
 }
 
 .mclCell {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-shrink: 0;
   flex-grow: 0;
+  flex-basis: auto;
   line-height: var(--line-height);
-  padding: 0 var(--gutter-static-two-thirds);
+  padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
   min-height: var(--control-min-size-desktop);
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -129,10 +184,10 @@
 }
 
 .mclScrollable {
-  position: relative;
+  flex-grow: 1;
+  flex-shrink: 0;
   overflow: auto;
   width: 100%;
-  padding-bottom: 15px; /* Prevents bottom scrollbar from blocking content */
 }
 
 .mclContentLoadingRow {
@@ -164,4 +219,20 @@
   padding: var(--gutter-static-two-thirds) 0;
   position: relative;
   left: 0;
+}
+
+/* loader rows */
+.mclLoaderRow {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  overflow: hidden;
+}
+
+.mclRowPlaceholder {
+  content: "&nbsp;";
+  border-radius: 2px;
+  background-color: var(--color-fill-table-row-odd);
+  width: 100%;
+  height: 1rem;
 }
