@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [5.7.0](https://github.com/folio-org/stripes-components/tree/v5.7.0) (2019-09-09)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.6.0...v5.7.0)
+
+* Total refactor of rendering of `<MultiColumnList>`. Refs STCOM-363.
+
 ## [5.6.0](https://github.com/folio-org/stripes-components/tree/v5.6.0) (2019-08-21)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.5.0...v5.6.0)
 
