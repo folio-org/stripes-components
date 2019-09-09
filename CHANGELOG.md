@@ -13,6 +13,7 @@
 * Display `<Button>`s as pills (circular/rounded sides). Refs STCOM-564.
 * Correctly pass `ref`s to `<MultiSelection>` internal components. Refs STCOM-554.
 * Better `<KeyValue>` test infrastructure.
+* Update `<PaneFooter>`: consolidate into a single div with adding CSS classes. Refs STCOM-521.
 
 ## [5.5.0](https://github.com/folio-org/stripes-components/tree/v5.5.0) (2019-07-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.4.2...v5.5.0)
