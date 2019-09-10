@@ -81,6 +81,8 @@ Be aware that both the `aria-label` and `aria-labelledby` will override the visi
 ## Usage with external ref
 It is possible to pass your own ref to the `triggerRef`-prop if you don't want to use the provided ref for the tooltip trigger.
 
+The ref external ref replaces the default ref and will be passed down using the render-prop pattern. It also allows for separating the trigger component and the tooltip. E.g.:
+
 ```js
   import { Tooltip } from '@folio/stripes/components';
 
