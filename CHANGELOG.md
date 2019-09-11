@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [5.7.1](https://github.com/folio-org/stripes-components/tree/v5.7.1) (2019-09-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.7.0...v5.7.1)
+
+* Provide more render options within `<PaneFooter>`. Refs STCOM-571.
+
 ## [5.7.0](https://github.com/folio-org/stripes-components/tree/v5.7.0) (2019-09-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.6.0...v5.7.0)
 
