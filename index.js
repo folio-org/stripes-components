@@ -16,6 +16,7 @@ export { default as Select } from './lib/Select';
 export { default as TextArea } from './lib/TextArea';
 export { default as TextField } from './lib/TextField';
 export { default as Timepicker } from './lib/Timepicker';
+export { default as Tooltip } from './lib/Tooltip';
 export { default as Editor } from './lib/Editor';
 export { default as MultiSelection } from './lib/MultiSelection';
 export { default as RepeatableField } from './lib/RepeatableField';
