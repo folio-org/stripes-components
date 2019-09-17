@@ -37,3 +37,9 @@ export function mountWithContext(component) {
 export function selectorFromClassnameString(str) {
   return str.replace(/\s/, '.');
 }
+
+export function computedStyle(selector) {
+  return computed( function () { // eslint-disable-line
+    return getComputedStyle(this.$(selector));
+  });
+}
