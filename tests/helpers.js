@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Harness from './Harness';
 import { computed } from '@bigtest/interactor';
+import Harness from './Harness';
 
 import '../lib/global.css';
 
