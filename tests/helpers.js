@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Harness from './Harness';
+import { computed } from '@bigtest/interactor';
 
 import '../lib/global.css';
 
@@ -38,8 +39,11 @@ export function selectorFromClassnameString(str) {
   return str.replace(/\s/, '.');
 }
 
-export function computedStyle(selector) {
+export function computedStyle(selector, styleProperty) {
   return computed( function () { // eslint-disable-line
+    if (styleProperty) {
+      return getComputedStyle(this.$(selector))[styleProperty];
+    }
     return getComputedStyle(this.$(selector));
   });
 }
