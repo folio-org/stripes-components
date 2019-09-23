@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 5.8.0 (IN PROGRESS)
+
+* Update react-router-dom and move it to a peerDependency (STCOM-581)
+
 ## [5.7.1](https://github.com/folio-org/stripes-components/tree/v5.7.1) (2019-09-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.7.0...v5.7.1)
 
