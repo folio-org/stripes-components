@@ -34,7 +34,7 @@ Passing the same string for both the `<Tooltip>` text prop and the `aria-label` 
 
 ```js
 const label = 'Delete';
-  
+
 <Tooltip
   title={label}
   id="my-tooltip"
@@ -127,6 +127,6 @@ Name | Type | Description | Required | Default
 children | func | Renders the toggle using the render-prop pattern. The passed function receives an object with the `ref` that will be passed to the trigger. It also provides the prefixed aria ID's which can be used to associate the tooltip with the trigger component for screen reader users. | |
 id | string | Serves as a prefix for the aria ID's that will be used to associate the tooltip with the trigger component for screen reader users | true |
 placement | string | Defines the placements for the tooltip. See available placements above | | bottom
-text | string | The label of the tooltip | true |
-sub | string | Renders an optional sub-title below the label |
+text | node | The label of the tooltip | true |
+sub | node | Renders an optional sub-title below the label |
 triggerRef | func | Pass a custom ref instead of using the internal ref | |
