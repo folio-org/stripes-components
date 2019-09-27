@@ -10,7 +10,7 @@
   "extends": "@folio/eslint-config-stripes",
   "overrides": [
     {
-      "files": ["lib/**/tests/*"],
+      "files": ["lib/**/tests/*", "util/tests/*"],
       "rules": {
         "no-unused-expressions": "off",
         "func-names": "off"
