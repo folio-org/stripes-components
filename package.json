@@ -111,6 +111,7 @@
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {
-    "@folio/stripes-core": "^3.0.0"
+    "@folio/stripes-core": "^3.0.0",
+    "react-hot-loader": "^4.0.0"
   }
 }

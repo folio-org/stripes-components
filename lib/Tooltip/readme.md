@@ -25,6 +25,8 @@ Renders a small tooltip on hover or focus to provide additional context for the 
 ## Accessibility
 It is very important to ensure that every part of a UI is accessible for all users – regardless of how they may operate the system.
 
+Content of Tooltips should be kept very simple, thus, we only allow for simple strings or `<FormattedMessages>` to be passed in as the `text` and `sub` props. If complex markup is passed to a tooltip, it may be left unannounced by assistive technology.
+
 The `<Tooltip>` won't be 100% accessible out of the box – it's up to you as a developer to provide the relevant information in an accessible way. This can be achieved in several ways and it must be tailored to the specific implementation of a given UI.
 
 Using aria-attributes, you can provide the same information for all users. Here's some examples:
@@ -34,7 +36,7 @@ Passing the same string for both the `<Tooltip>` text prop and the `aria-label` 
 
 ```js
 const label = 'Delete';
-  
+
 <Tooltip
   title={label}
   id="my-tooltip"
@@ -127,6 +129,6 @@ Name | Type | Description | Required | Default
 children | func | Renders the toggle using the render-prop pattern. The passed function receives an object with the `ref` that will be passed to the trigger. It also provides the prefixed aria ID's which can be used to associate the tooltip with the trigger component for screen reader users. | |
 id | string | Serves as a prefix for the aria ID's that will be used to associate the tooltip with the trigger component for screen reader users | true |
 placement | string | Defines the placements for the tooltip. See available placements above | | bottom
-text | string | The label of the tooltip | true |
-sub | string | Renders an optional sub-title below the label |
+text | string or `<FormattedMessage>` | The label of the tooltip | true |
+sub | string or `<FormattedMessage>` | Renders an optional sub-title below the label |
 triggerRef | func | Pass a custom ref instead of using the internal ref | |
