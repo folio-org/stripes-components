@@ -4,7 +4,7 @@ import ChildrenOfChild from './ChildrenOfChild';
 
 const ChildrenOfComponent = ({ ...props }) => (
   <div>
-    { props }
+    { [...props] }
   </div>
 );
 
