@@ -20,6 +20,7 @@ export { default as Tooltip } from './lib/Tooltip';
 export { default as Editor } from './lib/Editor';
 export { default as MultiSelection } from './lib/MultiSelection';
 export { default as RepeatableField } from './lib/RepeatableField';
+export { default as Popper } from './lib/Popper';
 
 /* data containers */
 export { default as Card } from './lib/Card';
