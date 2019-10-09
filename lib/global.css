@@ -159,6 +159,10 @@ button {
   z-index: 9999;
 }
 
+:global(.editor-preview *) {
+  margin: 0;
+}
+
 :global(body[dir="rtl"] .floatEnd),
 :global(html[dir="rtl"] .floatEnd) {
   float: left !important;
