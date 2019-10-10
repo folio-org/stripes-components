@@ -4,7 +4,7 @@ Displays an data only -- with no time component -- in UTC.
 
 ## Usage
 
-When you would normally use `react-intl`'s `<FormattedDate>` to display a date-time field in the local timezone, `<FormattedUTCDate>` can instead be used to render the date part only. In such cases, UTC is used both for storage and display, so that the displayed date does not vary when crossing timezones.
+When you would normally use `react-intl`'s `<FormattedDate>` to display a date field interpreted according to the local timezone, `<FormattedUTCDate>` can instead be used to render it interpreted as UTC -- i.e., showing precisely what is actually stored in the back-end. This is appropriate when recording only a date without an associated time, as for example the expiry date of a loan. For this, UTC is used both for storage and display, so that the displayed date does not vary when crossing timezones.
 
 ## Props
 
