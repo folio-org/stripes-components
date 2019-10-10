@@ -1,6 +1,6 @@
 # FormattedUTCDate
 
-Displays an data only -- with no time component -- in UTC.
+Displays a date only -- with no time component -- in UTC.
 
 ## Usage
 
