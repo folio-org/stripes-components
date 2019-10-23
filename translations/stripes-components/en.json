@@ -57,6 +57,7 @@
   "button.duplicate": "Duplicate",
   "button.new": "New",
   "exportToCsv": "Export to CSV",
+  "searchField.placeholder": "Search for {label}",
   "selection.emptyList": "List is empty",
   "selection.noMatches": "No matching options",
   "selection.filterOptionsLabel": "{label} options filter",
