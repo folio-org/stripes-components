@@ -1,6 +1,7 @@
 # MessageBanner
 Display a message to the user. The message banner has short and clear content with key information in bold.
 
+## Basic Usage
 ```js
 import { MessageBanner } from '@folio/stripes/components';
 
@@ -8,20 +9,19 @@ import { MessageBanner } from '@folio/stripes/components';
 <MessageBanner appearance="success">Success</MessageBanner>
 <MessageBanner appearance="error">Error</MessageBanner>
 <MessageBanner appearance="warning">Warning</MessageBanner>
+```
 
-// Dismissable MessageBanner
-<MessageBanner 
-  appearance="info" 
-  dismissable
-  onExit={() => console.log('Will exit now')}
-  onExited={() => console.log('Has exited')}
->
+## Dismissible
+Setting the `dismissble`-prop enables the option for the user to hide the `<MessageBanner>`. It is also possible to control the visibility externally by using the `show`-prop. See an example below this section.
+
+```js
+<MessageBanner dismissable>
   I'm dismissable
 </MessageBanner>
 ```
 
 ## Controlled
-Passing the `show`-prop makes it possible to control the visibility externally. This also enables enter/exit transitioning.
+Passing the `show`-prop makes it possible to control the visibility externally. This also enables enter/exit transitions.
 
 ```js
 const [show, setShow] = useState(false);
@@ -56,4 +56,4 @@ element | string, element, func | Changes the root element of the `<MessageBanne
 show | boolean | Control the visiblity externally. Using the show-prop will enable the `<MessageBanner>` to transition in and out. | true/false | |
 
 
-The rest of the props passed to `<MessageBanner>` will be spread onto the root element of the component. This component also accepts a `ref`.
+The remaining props passed to `<MessageBanner>` will be spread onto the root element of the component. This component also accepts a `ref`.
