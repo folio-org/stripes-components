@@ -55,6 +55,7 @@ export {
 /* misc */
 export { default as Icon } from './lib/Icon';
 export { default as IconButton } from './lib/IconButton';
+export { default as MessageBanner } from './lib/MessageBanner';
 export { default as Modal } from './lib/Modal';
 export { default as ModalFooter } from './lib/ModalFooter';
 export { default as AppIcon } from './lib/AppIcon';
