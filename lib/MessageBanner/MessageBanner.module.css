@@ -8,6 +8,7 @@
   --message-banner-font-size: var(--font-size-medium);
   --message-banner-padding-small: var(--gutter-static-one-third);
   --message-banner-padding-large: var(--gutter-static-two-thirds);
+  --message-banner-stacked-margin-top: var(--gutter-static);
   --message-banner-border-radius: var(--radius);
   --message-banner-min-height: 32px;
   --message-banner-line-height: 1.25;
@@ -41,6 +42,12 @@
   border: 1px solid;
 }
 
+/**
+ * MessageBanner
+ */
+.root + .root {
+  margin-top: var(--message-banner-stacked-margin-top);
+}
 
 /**
  * Content
