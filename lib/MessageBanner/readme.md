@@ -6,9 +6,9 @@ Display a message to the user. The message banner has short and clear content wi
 import { MessageBanner } from '@folio/stripes/components';
 
 <MessageBanner>Default</MessageBanner>
-<MessageBanner appearance="success">Success</MessageBanner>
-<MessageBanner appearance="error">Error</MessageBanner>
-<MessageBanner appearance="warning">Warning</MessageBanner>
+<MessageBanner type="success">Success</MessageBanner>
+<MessageBanner type="error">Error</MessageBanner>
+<MessageBanner type="warning">Warning</MessageBanner>
 ```
 
 ## Dismissible
@@ -43,10 +43,10 @@ const [show, setShow] = useState(false);
 ## Props
 Name | Type | Description | Options | Default
 -- | -- | -- | -- | --
-appearance | string | Sets the style of the `<MessageBanner>` | default, error, success, warning | default
+type | string | Sets the style of the `<MessageBanner>` | default, error, success, warning | default
 children | node | Renders the contents of the `<MessageBanner>` | |
 dismissable | boolean | Adds a close icon and makes the `<MessageBanner>` dismissable | true/false | false
-icon | string | Renders an icon next to the message. Supports all icons available for the [`<Icon>`](/?selectedKind=Icon)-component. When the `appearance`-prop is set to either "success", "error" and "warning" the `<MessageBanner>` will have icons by default but these too can be overwritten by using the `icon`-prop. If you want to remove the icon entirely you can simply set `icon` to `null` | |
+icon | string | Renders an icon next to the message. Supports all icons available for the [`<Icon>`](/?selectedKind=Icon)-component. When the `type`-prop is set to either "success", "error" and "warning" the `<MessageBanner>` will have icons by default but these too can be overwritten by using the `icon`-prop. If you want to remove the icon entirely you can simply set `icon` to `null` | |
 onEnter | func | Callback when the `<MessageBanner>` enters | |
 onEntered | func | Callback when the `<MessageBanner>` has entered | |
 onExit | func | Callback when the `<MessageBanner>` exits | |
