@@ -12,19 +12,15 @@
   --message-banner-border-radius: var(--radius);
   --message-banner-min-height: 32px;
   --message-banner-line-height: 1.25;
-
   --message-banner-default-fill: #000;
-  --message-banner-default-color: #FFF;
+  --message-banner-default-color: #fff;
   --message-banner-default-border-color: #000;
-
   --message-banner-error-fill: var(--error-fill);
   --message-banner-error-color: var(--error);
   --message-banner-error-border-color: var(--error);
-
   --message-banner-success-fill: var(--success-fill);
   --message-banner-success-color: var(--success);
   --message-banner-success-border-color: var(--success);
-
   --message-banner-warning-fill: var(--warn-fill);
   --message-banner-warning-color: var(--warn);
   --message-banner-warning-border-color: var(--warn);
@@ -71,7 +67,6 @@
   margin: 0 var(--message-banner-padding-large) 0;
 }
 
-
 /**
  * Dismiss button
  */
@@ -96,7 +91,7 @@
   border-color: var(--message-banner-default-border-color);
 
   & .dismissButton {
-    color: #FFF;
+    color: #fff;
   }
 }
 
