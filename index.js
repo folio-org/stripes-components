@@ -8,6 +8,7 @@ export { default as CurrencySelect } from './lib/CurrencySelect';
 export { default as Datepicker, Calendar } from './lib/Datepicker';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as EmptyMessage } from './lib/EmptyMessage';
+export { default as FormattedUTCDate } from './lib/FormattedUTCDate';
 export { default as Label } from './lib/Label';
 export { default as RadioButton } from './lib/RadioButton';
 export { default as RadioButtonGroup } from './lib/RadioButtonGroup';
