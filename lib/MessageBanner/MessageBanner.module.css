@@ -94,6 +94,10 @@
   background-color: var(--message-banner-default-fill);
   color: var(--message-banner-default-color);
   border-color: var(--message-banner-default-border-color);
+
+  & .dismissButton {
+    color: #FFF;
+  }
 }
 
 .type-error {
@@ -120,6 +124,7 @@
 
 .enter {
   opacity: 0;
+  transform: translateY(-10px);
 }
 
 .enterActive {
