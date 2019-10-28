@@ -46,6 +46,8 @@ Name | Type | Description | Options | Default
 type | string | Sets the style of the `<MessageBanner>` | default, error, success, warning | default
 children | node | Renders the contents of the `<MessageBanner>` | |
 dismissable | boolean | Adds a close icon and makes the `<MessageBanner>` dismissable | true/false | false
+dismissButtonAriaLabel | string | Adds an aria-label attribute for the dismiss `<IconButton>`. | | "Hide message"
+dismissButtonProps | object | Add custom props for the dismiss button. This can be useful for e.g. adding a custom class name for the internal `<IconButton>`. | | {}
 icon | string | Renders an icon next to the message. Supports all icons available for the [`<Icon>`](/?selectedKind=Icon)-component. When the `type`-prop is set to either "success", "error" and "warning" the `<MessageBanner>` will have icons by default but these too can be overwritten by using the `icon`-prop. If you want to remove the icon entirely you can simply set `icon` to `null` | |
 onEnter | func | Callback when the `<MessageBanner>` enters | |
 onEntered | func | Callback when the `<MessageBanner>` has entered | |
