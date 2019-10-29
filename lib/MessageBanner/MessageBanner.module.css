@@ -26,7 +26,11 @@
   --message-banner-warning-border-color: var(--warn);
 }
 
-.root {
+.root + .root {
+  margin-top: var(--message-banner-stacked-margin-top);
+}
+
+.inner {
   min-height: var(--message-banner-min-height);
   font-size: var(--message-banner-font-size);
   display: flex;
@@ -36,13 +40,6 @@
   text-align: left;
   border-radius: var(--message-banner-border-radius);
   border: 1px solid;
-}
-
-/**
- * MessageBanner
- */
-.root + .root {
-  margin-top: var(--message-banner-stacked-margin-top);
 }
 
 /**
