@@ -11,6 +11,22 @@ import { MessageBanner } from '@folio/stripes/components';
 <MessageBanner type="warning">Warning</MessageBanner>
 ```
 
+## Accessibility
+For accessibility reasons we want the `<MessageBanner>` to remain in the DOM so that screen readers will update and read out the contents of the component as it changes.
+
+If you need the `<MessageBanner>` to enter and exit the UI then you should use the `show`-prop to handle this. Using this prop will ensure that the screen reader related DOM element remains in the DOM after the visual part of the component exits.
+
+**Example:**
+```js
+// Bad
+{ !!message && <MessageBanner>{message}</MessageBanner>}
+
+// Good
+<MessageBanner show={!!message}>{message}</MessageBanner>
+```
+
+You can further improve the screen reader experience by adding a more specific dismiss button aria-label. For this purpose you can use the `dismissButtonAriaLabel`-prop to change the message that will be read out load. This label defaults to `"Hide message"`.
+
 ## Dismissible
 Setting the `dismissble`-prop enables the option for the user to hide the `<MessageBanner>`. It is also possible to control the visibility externally by using the `show`-prop. See an example below this section.
 
