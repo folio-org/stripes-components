@@ -2,6 +2,7 @@
 ## 5.9.0 (IN-PROGRESS)
 
 * Export the `<Popper>` component at top level.
+* Added `<MessageBanner>` component (STCOM-592)
 
 ## [5.8.0](https://github.com/folio-org/stripes-components/tree/v5.8.0) (2019-09-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.7.1...v5.8.0)
