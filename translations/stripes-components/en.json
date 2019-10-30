@@ -76,5 +76,6 @@
   "passwordStrength.strong": "Your password is strong.",
   "passwordStrength.veryStrong": "Your password is very strong.",
   "passwordStrength.infoPopoverText": "Include digits/symbols or make your password longer and more random",
-  "passwordStrength.label": "Password strength:"
+  "passwordStrength.label": "Password strength:",
+  "MessageBanner.dismissButtonAriaLabel": "Hide message"
 }
