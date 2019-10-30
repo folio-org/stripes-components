@@ -54,7 +54,19 @@ In the example above, `<Dropdown>` renders its trigger internally as a `<Button>
         {permissionsDD}
       </DropdownMenu>
   </Dropdown>
-```                                   
+```                     
+## Props
+Name | type | description | default | required
+--- | --- | --- | --- | ---
+`label` | node | label for button | | false
+`id` | string | id for trigger. | | false
+`disabled` | bool | if true, dropdown will not open. | false | false
+`renderTrigger` | func | see [renderTrigger] section for a description of this function used to render custom triggers. | | false
+`buttonProps` | object | If you're not using `renderTrigger`, this is an object of props that are spread onto the default `<DropdownButton>` | |
+`open` | bool | required for controlled usage only. A boolean to tell `<Dropdown>` to display its menu or not. | | controlled-only
+`onToggle` | func | callback for updating the open/closed state for controlled use. | | controlled-only
+`usePortal` | bool | whether or not the internal `Popper` component should render the menu to the `#OverlayContainer` or not. | true | 
+
 ### Migration from past versions.
 - Previously, `<Dropdown>` accepted a `tether` prop that allowed for finer control over the `react-tether` library. Popper.js has its own API for adjusting the positioning behavior.
 - Previously, the API for dropdown used `data-role` attributes on children to identify which element to use as the trigger for the dropdown and which to use as a menu. This worked, but it wasn't great practice to inspect the children and augment their props. Previous `data-role="toggle"` components can be moved out to a `renderTrigger` function, or possibly omitted if the `label` and `buttonProps` props are adequate.
