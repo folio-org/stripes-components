@@ -19,7 +19,7 @@ If you need the `<MessageBanner>` to enter and exit the UI then you should use t
 **Example:**
 ```js
 // Bad
-{ !!message && <MessageBanner>{message}</MessageBanner>}
+{ message && <MessageBanner>{message}</MessageBanner>}
 
 // Good
 <MessageBanner show={!!message}>{message}</MessageBanner>
