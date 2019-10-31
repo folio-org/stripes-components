@@ -31,37 +31,41 @@ import { Dropdown } from '@folio/stripes/components';
   </Dropdown>
 ```
 
-## Slightly more advanced usage
+## `renderTrigger` and `renderMenu` props.
 
-In the example above, `<Dropdown>` renders its trigger internally as a `<Button>`, passing all the appropriate handlers. If more custom control is necessary, it provides a `renderTrigger` prop - a function to render the button that's provided all of the handlers and even `aria-` attributes. 
+In the example above, `<Dropdown>` renders its trigger internally as a `<Button>`, passing all the appropriate handlers. The menu was simply handled by the children. If more custom control is necessary, it provides both a `renderTrigger` and `renderMenu` props for render functions. These provide statuses, handlers and even `aria-` attributes
 
 ```
-  const trigger = (triggerRef, toggleMenu, ariaProps, keyHandler) => (
+  const trigger = ({ triggerRef, toggleMenu, ariaProps, keyHandler }) => (
     <Button autoFocus ref={triggerRef} onClick={toggleMenu} onKeyDown={keyHandler} {...ariaProps}>
       Trigger
     </Button>
   );
 
+  const menu = ({open, onToggle, keyHandler}) => {
+    <DropdownMenu
+      aria-label="available permissions"
+      onToggle={this.onToggleAddPermDD}
+    >
+      <Button buttonStyle="menuItem" onClick={ () => {this.selectMethod(onToggle)}}>Select All</Button>
+    </DropdownMenu>
+  }
+
   <Dropdown
     id="AddPermissionDropdown"
     renderTrigger={this.trigger}
-    >
-      <DropdownMenu
-        data-role="menu"
-        aria-label="available permissions"
-        onToggle={this.onToggleAddPermDD}
-       >
-        {permissionsDD}
-      </DropdownMenu>
-  </Dropdown>
-```                     
+    renderMenu={this.menu}
+  />
+```
+
 ## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 `label` | node | label for button | | false
 `id` | string | id for trigger. | | false
 `disabled` | bool | if true, dropdown will not open. | false | false
-`renderTrigger` | func | see [renderTrigger] section for a description of this function used to render custom triggers. | | false
+`renderTrigger` | func | see [renderTrigger] section for a description of this function used to render custom triggers. | | 
+`renderMenu` | func | see [renderTrigger] section for a description of this function used to render menus. | | 
 `buttonProps` | object | If you're not using `renderTrigger`, this is an object of props that are spread onto the default `<DropdownButton>` | |
 `open` | bool | required for controlled usage only. A boolean to tell `<Dropdown>` to display its menu or not. | | controlled-only
 `onToggle` | func | callback for updating the open/closed state for controlled use. | | controlled-only
@@ -69,4 +73,4 @@ Name | type | description | default | required
 
 ### Migration from past versions.
 - Previously, `<Dropdown>` accepted a `tether` prop that allowed for finer control over the `react-tether` library. Popper.js has its own API for adjusting the positioning behavior.
-- Previously, the API for dropdown used `data-role` attributes on children to identify which element to use as the trigger for the dropdown and which to use as a menu. This worked, but it wasn't great practice to inspect the children and augment their props. Previous `data-role="toggle"` components can be moved out to a `renderTrigger` function, or possibly omitted if the `label` and `buttonProps` props are adequate.
+- Previously, the API for dropdown used `data-role` attributes on children to identify which element to use as the trigger for the dropdown and which to use as a menu. This worked, but it wasn't great practice to inspect the children and augment their props. Previous `data-role="toggle"` components can be moved out to a `renderTrigger` function, or possibly omitted if the `label` and `buttonProps` props are adequate. The `data-role="menu"` element can be rendered using the `renderMenu` prop.
