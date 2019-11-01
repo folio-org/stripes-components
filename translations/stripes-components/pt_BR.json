@@ -76,5 +76,6 @@
     "metaSection.sourceNoData": "Fonte: Processamento automatizado",
     "metaSection.recordCreatedNoData": "Registro criado: Desconhecido",
     "metaSection.recordLastUpdatedNoData": "Última atualização do registro: Desconhecido",
-    "saveAndClose": "Salvar e fechar"
+    "saveAndClose": "Salvar e fechar",
+    "MessageBanner.dismissButtonAriaLabel": "Ocultar mensagem"
 }
