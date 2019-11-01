@@ -27,6 +27,7 @@
   border: 1px solid #ccc;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  pointer-events: all;
 
   &.hasPadding {
     padding: var(--gutter-static);
