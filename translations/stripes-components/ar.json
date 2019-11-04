@@ -76,5 +76,6 @@
     "metaSection.sourceNoData": "المصدر: عملية مؤتمتة",
     "metaSection.recordCreatedNoData": "تم إنشاء التسجيلة في: غير معروف",
     "metaSection.recordLastUpdatedNoData": "أخر تحديث للتسجيلة: غير معروف",
-    "saveAndClose": "حفظ وإغلاق"
+    "saveAndClose": "حفظ وإغلاق",
+    "MessageBanner.dismissButtonAriaLabel": "إخفاء الرسالة"
 }
