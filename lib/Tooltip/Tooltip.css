@@ -9,7 +9,7 @@
   justify-content: center;
   flex-direction: column;
   min-height: 36px;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
   margin-top: var(--gutter-static-one-third);
   border-radius: 4px;
@@ -20,6 +20,7 @@
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.1s;
+  font-size: var(--font-size-small);
 }
 
 .text {
