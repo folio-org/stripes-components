@@ -14,6 +14,7 @@ export { default as RadioButton } from './lib/RadioButton';
 export { default as RadioButtonGroup } from './lib/RadioButtonGroup';
 export { default as SegmentedControl } from './lib/SegmentedControl';
 export { default as Select } from './lib/Select';
+export { default as Spinner } from './lib/Spinner';
 export { default as TextArea } from './lib/TextArea';
 export { default as TextField } from './lib/TextField';
 export { default as Timepicker } from './lib/Timepicker';
