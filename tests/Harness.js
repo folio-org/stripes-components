@@ -16,19 +16,26 @@ const reducer = combineReducers(reducers);
 const store = createStore(reducer);
 
 // mimics the StripesTranslationPlugin in @folio/stripes-core
-function prefixKeys(obj) {
+function prefixKeys(obj, prefix) {
   const res = {};
   for (const key of Object.keys(obj)) {
-    res[`stripes-components.${key}`] = obj[key];
+    res[`${prefix}.${key}`] = obj[key];
   }
   return res;
 }
 
 class Harness extends React.Component {
   render() {
+    const t = prefixKeys(translations, 'stripes-components');
+    if (this.props.translations) {
+      this.props.translations.forEach(tx => {
+        Object.assign(t, prefixKeys(tx.translations, tx.prefix));
+      });
+    }
+
     return (
       <Provider store={store}>
-        <IntlProvider locale="en" key="en" timeZone="UTC" messages={prefixKeys(translations)}>
+        <IntlProvider locale="en" key="en" timeZone="UTC" messages={t}>
           {this.props.children}
         </IntlProvider>
       </Provider>
@@ -38,6 +45,12 @@ class Harness extends React.Component {
 
 Harness.propTypes = {
   children: PropTypes.node,
+  translations: PropTypes.arrayOf(
+    PropTypes.shape({
+      prefix: PropTypes.string,
+      translations: PropTypes.object,
+    })
+  ),
 };
 
 export default Harness;
