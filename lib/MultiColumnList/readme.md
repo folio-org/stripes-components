@@ -27,7 +27,7 @@ The list will scroll its content horizontally if there isn't enough horizontal r
 ### Column mapping
 MultiColumnList supports column header mapping via. the `columnMapping`-prop. This allows for mapping column headers to alternative strings. This is very useful for translating column headers.
 
-Note: The recommended text casing for column headers is _sentence casing_. Read more about language rules [here](https://ux.folio.org/docs/guidelines/style/language-rules).
+Note: The recommended text casing for column headers is _sentence casing_. Read more about language rules [here](https://ux.folio.org/docs/guidelines/language-rules/).
 
 Here's an example from the Users-module:
 ```js
