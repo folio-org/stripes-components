@@ -64,7 +64,7 @@ Harness.propTypes = {
   ),
 };
 
-Harness.propTypes = {
+Harness.defaultProps = {
   translations: [],
 };
 
