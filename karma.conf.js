@@ -1,3 +1,5 @@
+const karmaViewport = require('karma-viewport');
+
 module.exports = (config) => {
   const configuration = {
     browserStack: {
@@ -24,12 +26,10 @@ module.exports = (config) => {
         os: 'Windows',
         os_version: '10'
       }
-    }
+    },
+    frameworks: [...config.frameworks, 'viewport'],
+    plugins: [...config.plugins, karmaViewport, 'karma-browserstack-launcher'],
   };
-
-  // BrowserStack launcher isn't automatically added by Stripes CLI
-  configuration.plugins = config.plugins;
-  configuration.plugins.push('karma-browserstack-launcher');
 
   config.set(configuration);
 };
