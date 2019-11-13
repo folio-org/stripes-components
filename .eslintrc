@@ -12,8 +12,9 @@
     {
       "files": ["lib/**/tests/*"],
       "rules": {
+        "func-names": "off",
         "no-unused-expressions": "off",
-        "func-names": "off"
+        "react/prop-types": "off"
       }
     }
   ],
