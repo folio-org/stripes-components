@@ -14,6 +14,7 @@
       "files": ["lib/**/tests/*", "util/tests/*"],
       "rules": {
         "func-names": "off",
+        "max-len": "off",
         "no-unused-expressions": "off",
         "react/prop-types": "off"
       }
