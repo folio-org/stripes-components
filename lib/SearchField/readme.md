@@ -23,7 +23,7 @@ The component supports adding an array of searchable indexes which adds a select
 
   const searchableIndexes = [
     { label: 'ID', value: 'id' },
-    { label: 'Title', value: 'title' },
+    { label: 'Title', value: 'title', placeholder: 'Search by Title' },
     { label: 'Identifier', value: 'identifier', localOnly: true },
   ];
 

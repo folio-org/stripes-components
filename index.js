@@ -8,11 +8,13 @@ export { default as CurrencySelect } from './lib/CurrencySelect';
 export { default as Datepicker, Calendar } from './lib/Datepicker';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as EmptyMessage } from './lib/EmptyMessage';
+export { default as FormattedUTCDate } from './lib/FormattedUTCDate';
 export { default as Label } from './lib/Label';
 export { default as RadioButton } from './lib/RadioButton';
 export { default as RadioButtonGroup } from './lib/RadioButtonGroup';
 export { default as SegmentedControl } from './lib/SegmentedControl';
 export { default as Select } from './lib/Select';
+export { default as Spinner } from './lib/Spinner';
 export { default as TextArea } from './lib/TextArea';
 export { default as TextField } from './lib/TextField';
 export { default as Timepicker } from './lib/Timepicker';
@@ -20,6 +22,7 @@ export { default as Tooltip } from './lib/Tooltip';
 export { default as Editor } from './lib/Editor';
 export { default as MultiSelection } from './lib/MultiSelection';
 export { default as RepeatableField } from './lib/RepeatableField';
+export { default as Popper } from './lib/Popper';
 
 /* data containers */
 export { default as Card } from './lib/Card';
@@ -54,6 +57,7 @@ export {
 /* misc */
 export { default as Icon } from './lib/Icon';
 export { default as IconButton } from './lib/IconButton';
+export { default as MessageBanner } from './lib/MessageBanner';
 export { default as Modal } from './lib/Modal';
 export { default as ModalFooter } from './lib/ModalFooter';
 export { default as AppIcon } from './lib/AppIcon';

@@ -47,7 +47,6 @@
     "metaSection.source": "Forrás: {source}",
     "metaSection.recordCreated": "Rekord létrehozva: {date} {time}",
     "metaSection.recordLastUpdated": "Rekord utoljára módosítva: {date} {time}",
-    "tableColumnCount": "Táblázat {count} oszloppal",
     "selection.emptyList": "A lista üres",
     "selection.noMatches": "Nincs megfelelő opció",
     "selection.filterOptionsLabel": "{label} opció szűrő",
@@ -61,7 +60,6 @@
     "multiSelection.controlDescription": "A kiválasztott értékek listáját tartalmazza, majd egy legördülő menüből választhatók ki a további értékek.",
     "multiSelection.removeSelectedButtonDescription": "Nyomja meg az entert vagy a szóközt a tétel eltávolításához a kiválasztási listából! A Home és End billentyűk az első vagy utolsó tételhez visznek.",
     "multiSelection.removeSelectedButtonLabel": "érték eltávolítása",
-    "button.copy": "Copy",
     "endOfList": "End of list",
     "button.duplicate": "Duplicate",
     "passwordStrength.veryWeak": "Jelszava nagyon gyenge.",
@@ -78,5 +76,6 @@
     "metaSection.sourceNoData": "Source: Automated process",
     "metaSection.recordCreatedNoData": "Record created: Unknown",
     "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown",
-    "saveAndClose": "Save & close"
+    "saveAndClose": "Save & close",
+    "MessageBanner.dismissButtonAriaLabel": "Hide message"
 }

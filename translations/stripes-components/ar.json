@@ -47,7 +47,6 @@
     "metaSection.source": "المصدر: {source}",
     "metaSection.recordCreated": "تم إنشاء التسجيلة في: {date} {time} ",
     "metaSection.recordLastUpdated": "أخر تحديث للتسجيلة: {date} {time}",
-    "tableColumnCount": " جدول بـ  {count} عمود",
     "selection.emptyList": "القائمة فارغة",
     "selection.noMatches": "لا توجد خيارات مطابقة",
     "selection.filterOptionsLabel": "منقح خيارات {label} ",
@@ -61,9 +60,8 @@
     "multiSelection.controlDescription": "يحتوي على قائمة بالقيم المحددة، متبوعًا بمربع خيارات منسدلة لتحديد قيم إضافية ",
     "multiSelection.removeSelectedButtonDescription": "قم بالضغط على زر الإدخال أو مفتاح المسافة لإزالة المادة من قائمة التحديد. يمكن الانتقال إلى أول أو آخر بمادة باستخدام مفتاح البداية والنهاية.",
     "multiSelection.removeSelectedButtonLabel": "إزالة القيمة",
-    "button.copy": "نسخ",
     "endOfList": "نهاية القائمة",
-    "button.duplicate": "مكرر",
+    "button.duplicate": "تكرار",
     "passwordStrength.veryWeak": "كلمة المرور ضعيفة جدًا.",
     "passwordStrength.weak": "كلمة المرور ضعيفة للغاية.",
     "passwordStrength.reasonable": "كلمة المرور متوسطة.",
@@ -78,5 +76,6 @@
     "metaSection.sourceNoData": "المصدر: عملية مؤتمتة",
     "metaSection.recordCreatedNoData": "تم إنشاء التسجيلة في: غير معروف",
     "metaSection.recordLastUpdatedNoData": "أخر تحديث للتسجيلة: غير معروف",
-    "saveAndClose": "حفظ وإغلاق"
+    "saveAndClose": "حفظ وإغلاق",
+    "MessageBanner.dismissButtonAriaLabel": "إخفاء الرسالة"
 }

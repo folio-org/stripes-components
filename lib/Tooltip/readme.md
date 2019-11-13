@@ -25,36 +25,24 @@ Renders a small tooltip on hover or focus to provide additional context for the 
 ## Accessibility
 It is very important to ensure that every part of a UI is accessible for all users – regardless of how they may operate the system.
 
+Content of Tooltips should be kept very simple, thus, we only allow for simple strings or `<FormattedMessages>` to be passed in as the `text` and `sub` props. If complex markup is passed to a tooltip, it may be left unannounced by assistive technology.
+
 The `<Tooltip>` won't be 100% accessible out of the box – it's up to you as a developer to provide the relevant information in an accessible way. This can be achieved in several ways and it must be tailored to the specific implementation of a given UI.
 
-Using aria-attributes, you can provide the same information for all users. Here's some examples:
-
-### Using aria-label
-Passing the same string for both the `<Tooltip>` text prop and the `aria-label` of the trigger component will ensure that the contents of the tooltip is available for all users.
-
-```js
-const label = 'Delete';
-  
-<Tooltip
-  title={label}
-  id="my-tooltip"
->
-  {({ ref, ariaIds }) => (
-    <IconButton
-      icon="trash"
-      ref={ref}
-      aria-label={label}
-    />
-  )}
-</Tooltip>
-```
+Using aria-attributes, you can provide the same information for all users.
 
 ### Using aria-labelledby and aria-describedby
 If you want to render a tooltip with both a text and a sub, you can use `aria-labelledby` and `aria-describedby` to make the information available for screen reader users.
 
-**Note:** `aria-labelledby` is announced by screen readers first, followed by `aria-describedby`. In some cases `aria-describedby` is made optional depending on the browser/screen reader combination. The `aria-label` trumps the `aria-labelledby` so if you want to announce both the text and the sub then you should either use `aria-labelledby` or a combination of `aria-labelledby` and `aria-describedby`.
+**Note** 
+
+`aria-labelledby` is announced by screen readers first, followed by `aria-describedby`. In some cases `aria-describedby` is made optional depending on the browser/screen reader combination. The `aria-label` trumps the `aria-labelledby` so if you want to announce both the text and the sub then you should either use `aria-labelledby` or a combination of `aria-labelledby` and `aria-describedby`.
 
 Be aware that both the `aria-label` and `aria-labelledby` will override the visible text for certain elements, such as links and buttons.
+
+**Validation**
+
+The `<Tooltip>`-component has built in a11y validation which will apply a <span style="padding: 2px;color:#FFF;background-color:red;">red</span> background color on your trigger element if you haven't applied the neccessary aria-attributes.
 
 ```js
 <Tooltip
@@ -68,8 +56,8 @@ Be aware that both the `aria-label` and `aria-labelledby` will override the visi
       ref={ref}
 
       // Option 1 - this will read out the text first and then the sub afterwards
-      aria-labelledby={ariaIds.text} // The primary information
-      aria-describedby={ariaIds.sub} // The secondary information
+      aria-labelledby={ariaIds.text} // The ID for the primary information (my-tooltip-text)
+      aria-describedby={ariaIds.sub} // The ID for the secondary information (my-tooltip-sub)
 
       // Option 2 - this will read out both text and sub immidiately when the trigger is focused
       aria-labelledby={`${ariaIds.text} ${ariaIds.sub}`}
@@ -91,15 +79,15 @@ The ref external ref replaces the default ref and will be passed down using the 
 
   // Pass ref to trigger
   <IconButton
-    aria-label="Delete"
+    aria-labelledby="tooltip-example-text"
     icon="trash"
     ref={ref}
   />
 
   // Pass ref to the "triggerRef"-prop
   // Important: Place the <Tooltip> after your trigger component
-  // Note: The "label" matches the aria-label on the trigger element, making it accessible for screen reader users
   <Tooltip
+    id="tooltip-example"
     text="Delete"
     triggerRef={ref}
   />
@@ -127,6 +115,6 @@ Name | Type | Description | Required | Default
 children | func | Renders the toggle using the render-prop pattern. The passed function receives an object with the `ref` that will be passed to the trigger. It also provides the prefixed aria ID's which can be used to associate the tooltip with the trigger component for screen reader users. | |
 id | string | Serves as a prefix for the aria ID's that will be used to associate the tooltip with the trigger component for screen reader users | true |
 placement | string | Defines the placements for the tooltip. See available placements above | | bottom
-text | string | The label of the tooltip | true |
-sub | string | Renders an optional sub-title below the label |
+text | string or `<FormattedMessage>` | The label of the tooltip | true |
+sub | string or `<FormattedMessage>` | Renders an optional sub-title below the label |
 triggerRef | func | Pass a custom ref instead of using the internal ref | |

@@ -5,12 +5,13 @@
     "shallow":true,
     "spy":true,
     "it":true,
-    "mount":true
+    "mount":true,
+    "viewport": true
   },
   "extends": "@folio/eslint-config-stripes",
   "overrides": [
     {
-      "files": ["lib/**/tests/*"],
+      "files": ["lib/**/tests/*", "util/tests/*"],
       "rules": {
         "func-names": "off",
         "no-unused-expressions": "off",

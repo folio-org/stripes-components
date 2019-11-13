@@ -29,9 +29,20 @@ export function mount(component) {
   });
 }
 
-export function mountWithContext(component) {
+/**
+ * Mount the given component under a context with redux-store's Provider
+ * and react-intl's IntlProvider.
+ *
+ * @param {*} component the component to mount
+ * @param {*} translations an array of {translations, prefix} objects
+ */
+export function mountWithContext(component, translations) {
   return new Promise(resolve => {
-    ReactDOM.render(<Harness>{component}</Harness>, getCleanTestingRoot(), resolve);
+    ReactDOM.render(
+      <Harness translations={translations}>{component}</Harness>,
+      getCleanTestingRoot(),
+      resolve,
+    );
   });
 }
 

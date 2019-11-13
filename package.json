@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "5.7.1",
+  "version": "5.9.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -56,6 +56,7 @@
     "faker": "^4.1.0",
     "file-loader": "^2.0.0",
     "jest-mock": "23.2.0",
+    "karma-viewport": "^1.0.4",
     "mocha": "^5.2.0",
     "postcss": "^7.0.2",
     "postcss-calc": "^6.0.1",
@@ -111,6 +112,7 @@
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {
-    "@folio/stripes-core": "^3.0.0"
+    "@folio/stripes-core": "^3.0.0",
+    "react-hot-loader": "^4.0.0"
   }
 }
