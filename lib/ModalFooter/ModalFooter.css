@@ -4,6 +4,7 @@
   align-items: center;
   display: flex;
   flex-flow: row-reverse wrap;
+  justify-content: space-between;
   margin: calc((var(--control-margin-bottom) / 4) * -1) 0;
   width: 100%;
 
