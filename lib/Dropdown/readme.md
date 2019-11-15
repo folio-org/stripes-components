@@ -80,3 +80,4 @@ Name | type | description | default | required
 ### Migration from past versions.
 - Previously, `<Dropdown>` accepted a `tether` prop that allowed for finer control over the `react-tether` library. Popper.js has its own API for adjusting the positioning behavior.
 - Previously, the API for dropdown used `data-role` attributes on children to identify which element to use as the trigger for the dropdown and which to use as a menu. This worked, but it wasn't great practice to inspect the children and augment their props. Previous `data-role="toggle"` components can be moved out to a `renderTrigger` function, or possibly omitted if the `label` and `buttonProps` props are adequate. The `data-role="menu"` element can be rendered using the `renderMenu` prop.
+- `<UncontrolledDropdown>` is deprecated and will be removed with the next major release since `<Dropdown>` can be controlled or uncontrolled.
