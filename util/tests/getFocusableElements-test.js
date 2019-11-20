@@ -1,9 +1,9 @@
 import React from 'react';
-import { describe, beforeEach, afterEach, it } from '@bigtest/mocha';
+import { describe, beforeEach, it } from '@bigtest/mocha';
 import { expect } from 'chai';
 
 import FocusableHarness from './FocusableHarness/FocusableHarness';
-import FocusableInteractor from './FocusableHarness/interactor';
+import FocusableInteractor from './FocusableHarness/FocusableInteractor';
 import { getNextFocusable, getPreviousFocusable } from '../getFocusableElements';
 import { mount } from '../../tests/helpers';
 
