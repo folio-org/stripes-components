@@ -4,6 +4,7 @@
 * Export the `<Popper>` component at top level.
 * Added `<MessageBanner>` component (STCOM-592)
 * Optionally include translations in `mountWithContext` test helper.
+* Support `ref` in `<Tooltip>` via `forwardRef`.
 
 ## [5.8.0](https://github.com/folio-org/stripes-components/tree/v5.8.0) (2019-09-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.7.1...v5.8.0)
@@ -40,7 +41,7 @@
 * Replace Autosizer component with third-party equivalent [react-virtualized-auto-sizer](https://github.com/bvaughn/react-virtualized-auto-sizer). Refs STCOM-543.
 * `<ExpandAllButton>` now accepts an optional `id` prop to set on the `<Button>`.
 * `<Icon>` may receive custom icons. Refs STCOM-542.
-* Correctly set `<Accordion>`'s `id`. Refs STCOM-551. 
+* Correctly set `<Accordion>`'s `id`. Refs STCOM-551.
 * `<MetaSection>` elegantly handles missing metadata. Refs STCOM-538.
 * `<Datepicker>` cleanup: better i18n, issues with untouched fields.
 * Add an optional `footer` prop for `Pane` component for fixed footer feature. Refs STCOM-429.
