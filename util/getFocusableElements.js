@@ -20,7 +20,7 @@ import contains from 'dom-helpers/query/contains';
 function getVisibleFocusableElements(container = document) {
   if (container.querySelectorAll) {
     // eslint-disable-next-line max-len
-    const focusableSelector = 'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
+    const focusableSelector = 'a:not([disabled]), button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
     const focusableElements = Array.from(container.querySelectorAll(focusableSelector))
       .filter((element) => {
         // check for visibility while always include the current activeElement
