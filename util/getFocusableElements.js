@@ -84,3 +84,13 @@ export function getPreviousFocusable(currentElement, includeContaining = true, s
   }
   return null;
 }
+
+export function getLastFocusable(container) {
+  const focusable = getVisibleFocusableElements(container);
+  return focusable.length > 0 ? focusable[focusable.length - 1] : null;
+}
+
+export function getFirstFocusable(container) {
+  const focusable = getVisibleFocusableElements(container);
+  return focusable.length > 0 ? focusable[0] : null;
+}
