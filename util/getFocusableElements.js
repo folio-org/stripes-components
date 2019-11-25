@@ -16,6 +16,7 @@
 */
 
 import contains from 'dom-helpers/query/contains';
+import matches from 'dom-helpers/query/matches';
 
 function getVisibleFocusableElements(container = document) {
   if (container.querySelectorAll) {
@@ -23,8 +24,13 @@ function getVisibleFocusableElements(container = document) {
     const focusableSelector = 'a:not([disabled]), button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
     const focusableElements = Array.from(container.querySelectorAll(focusableSelector))
       .filter((element) => {
+        if (matches(element, '[data-focus-exclude]')) {
+          return false;
+        }
         // check for visibility while always include the current activeElement
-        return element.offsetWidth > 0 || element.offsetHeight > 0 || element === document.activeElement;
+        return element.offsetWidth > 0 ||
+        element.offsetHeight > 0 ||
+        element === document.activeElement;
       });
     return focusableElements;
   }

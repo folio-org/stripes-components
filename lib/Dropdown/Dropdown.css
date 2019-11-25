@@ -12,6 +12,10 @@
 
 .dropdown {
   display: inline-block;
+
+  &.relative {
+    position: relative;
+  }
 }
 
 button + .dropdown {
