@@ -18,7 +18,8 @@
   }
 }
 
-button + .dropdown, .dropdown + .dropdown {
+button + .dropdown,
+.dropdown + .dropdown {
   padding: 0 0.25rem;
 }
 
