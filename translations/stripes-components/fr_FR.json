@@ -1,6 +1,6 @@
 {
-    "expandAll": "Développer tout",
-    "collapseAll": "Réduire tout",
+    "expandAll": "Tout développer",
+    "collapseAll": "Tout réduire",
     "goToPreviousYear": "Aller à l'année précédente",
     "goToPreviousMonth": "Aller au mois précédent",
     "goToNextYear": "Aller à l'année suivante",
@@ -59,8 +59,8 @@
     "multiSelection.filterPlaceholder": "filter option list",
     "multiSelection.controlDescription": "Contains a list of any selected values, followed by a combobox for selecting additional values.",
     "multiSelection.removeSelectedButtonDescription": "Press enter or spacebar to remove item from selection list. Home and end keys navigate to the first or last items.",
-    "multiSelection.removeSelectedButtonLabel": "remove value",
-    "endOfList": "End of list",
+    "multiSelection.removeSelectedButtonLabel": "Supprimer la valeur",
+    "endOfList": "Fin de liste",
     "button.duplicate": "Duplicate",
     "passwordStrength.veryWeak": "Your password is very weak.",
     "passwordStrength.weak": "Your password is too weak.",
@@ -72,10 +72,10 @@
     "fieldIsDisabled": "Field is disabled",
     "readonly": "Read-only",
     "readMore": "Read more",
-    "tableEmpty": "The list contains no items",
-    "metaSection.sourceNoData": "Source: Automated process",
+    "tableEmpty": "La liste ne contient aucun élément",
+    "metaSection.sourceNoData": "Source: processus automatisé",
     "metaSection.recordCreatedNoData": "Record created: Unknown",
     "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown",
-    "saveAndClose": "Save & close",
+    "saveAndClose": "Sauvegarder et fermer",
     "MessageBanner.dismissButtonAriaLabel": "Hide message"
 }
