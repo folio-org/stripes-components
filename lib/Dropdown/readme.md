@@ -44,10 +44,11 @@ In the example above, `<Dropdown>` renders its trigger internally as a `<Button>
 
   const menu = ({open, onToggle, keyHandler}) => {
     <DropdownMenu
+      role="menu"
       aria-label="available permissions"
       onToggle={this.onToggleAddPermDD}
     >
-      <Button buttonStyle="menuItem" onClick={ () => {this.selectMethod(onToggle)}}>Select All</Button>
+      <Button buttonStyle="menuItem" role="menuitem" onClick={ () => {this.selectMethod(onToggle)}}>Select All</Button>
     </DropdownMenu>
   }
 
@@ -57,6 +58,9 @@ In the example above, `<Dropdown>` renders its trigger internally as a `<Button>
     renderMenu={this.menu}
   />
 ```
+
+## Keep A11y in mind!
+The above examples illustrate two different use-cases for dropdowns... the first (containing ul/li's/links) is a navigational dropdown - it would be used as **part of a top-level navigation** or **rendered within a nav element**. Under these circumstances, menu aria is unneccessary as it can present some redundancy for assistive technology users. The second example (containing a button) is an application menu, containing functional actions - it's not part of some table-of-contents or structural organization, as the first example would be. The `role="menu"` and `role="menuitem"` attributes **are necessary here**. They'll announce important information over a screen reader to let them know when they've entered/exited the menu.
 
 ## Props
 Name | type | description | default | required
