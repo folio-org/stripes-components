@@ -71,11 +71,8 @@ Name | type | description | default | required
 `onToggle` | func | callback for updating the open/closed state for controlled use. | | controlled-only
 `usePortal` | bool | whether or not the internal `Popper` component should render the menu to the `#OverlayContainer` or not. | true |
 `placement` | string | string representing one of several different placements... "cardinal" positions: `top`, `bottom`, `left`, `right` with hyphenated cross-axis `start` and `end`. (`bottom-start` for lower-right renders dropdown below trigger, aligned with the flex-start side. This accounds for proper rtl positioning). | `bottom` | 
-`modifiers` | object | `Popper.js` uses a collection of modifiers which ultimately define the location of the menu element. This prop can be used to make small adjustments to positioning or affect behavior in overflow situations (`flip` modifier). For more details, please, go to https://popper.js.org/popper-documentation.html#modifiers. | `{
-    flip: { boundariesElement: 'scrollParent', padding: 10 },
-    preventOverflow: { boundariesElement: 'scrollParent', padding: 10 }
-  }` | 
-
+`modifiers` | object | `Popper.js` uses a collection of modifiers which ultimately define the location of the menu element. This prop can be used to make small adjustments to positioning or affect behavior in overflow situations (`flip` modifier). For more details, please, go to https://popper.js.org/popper-documentation.html#modifiers. | `{flip: { boundariesElement: 'scrollParent', padding: 10 }, preventOverflow: { boundariesElement: 'scrollParent', padding: 10 }}` | 
+`relativePosition` | in [some cases](https://stackoverflow.com/questions/54984952/popper-js-and-flex-end-causing-body-overflow), Popper.js requires relative positioning on the parent element of the anchor to adequately prevent overflow |
 
 ### Migration from past versions.
 - Previously, `<Dropdown>` accepted a `tether` prop that allowed for finer control over the `react-tether` library. Popper.js has its own API for adjusting the positioning behavior.
