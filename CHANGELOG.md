@@ -5,6 +5,7 @@
 * Added `<MessageBanner>` component (STCOM-592)
 * Optionally include translations in `mountWithContext` test helper.
 * Support `ref` in `<Tooltip>` via `forwardRef`.
+* Validate shape of arguments before accessing them in `<FilterGroups>`. Refs STCOM-623.
 
 ## [5.8.0](https://github.com/folio-org/stripes-components/tree/v5.8.0) (2019-09-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.7.1...v5.8.0)
