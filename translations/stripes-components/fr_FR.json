@@ -31,7 +31,7 @@
     "addressSection": "Section Adresse",
     "cancel": "Annuler",
     "submit": "Envoyer",
-    "saveChangesToThisItem": "Save changes to this item",
+    "saveChangesToThisItem": "Enregistrer les modifications apportées à cet élément",
     "cancelEditingThisItem": "Annuler la modification de cet élément",
     "editThisItem": "Modifier cet élément",
     "deleteThisItem": "Supprimer cet élément",
@@ -46,7 +46,7 @@
     "expandSection": "Expand section",
     "metaSection.source": "Source: {source}",
     "metaSection.recordCreated": "Record created: {date} {time}",
-    "metaSection.recordLastUpdated": "Record last updated: {date} {time}",
+    "metaSection.recordLastUpdated": "Dernière mise à jour: {date} {time}",
     "selection.emptyList": "List is empty",
     "selection.noMatches": "No matching options",
     "selection.filterOptionsLabel": "{label} options filter",
@@ -75,7 +75,7 @@
     "tableEmpty": "La liste ne contient aucun élément",
     "metaSection.sourceNoData": "Source: processus automatisé",
     "metaSection.recordCreatedNoData": "Record created: Unknown",
-    "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown",
+    "metaSection.recordLastUpdatedNoData": "Dernière mise à jour de l'enregistrement: Inconnue",
     "saveAndClose": "Sauvegarder et fermer",
-    "MessageBanner.dismissButtonAriaLabel": "Hide message"
+    "MessageBanner.dismissButtonAriaLabel": "Masquer le message"
 }
