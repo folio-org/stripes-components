@@ -91,6 +91,7 @@
 /* Pane button areas */
 .paneHeaderButtonsArea {
   position: relative;
+  display: flex;
   z-index: 1;
 }
 
@@ -103,19 +104,8 @@
 }
 
 /* Pane action menu */
-.paneHeaderCenterButton {
-  composes: interactionStyles from '../sharedStyles/interactionStyles.css';
-  outline: 0;
-  max-width: 100%;
-  padding: 2px 5px;
-  border-radius: var(--radius);
-}
-
-/* stylelint-disable no-descending-specificity */
-
-/* Reset IconButton margin */
-.paneHeader .paneHeaderIconButton {
-  margin: 0;
+button.actionMenuToggle {
+  margin: 0 var(--gutter-static-one-third);
 }
 
 /* Pull first pane icon button to the left/start */
