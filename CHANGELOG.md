@@ -1,6 +1,9 @@
 # Change history for stripes-components
 ## 5.9.0 (IN-PROGRESS)
 
+* Add keyboard navigation to `<Dropdown>`. fixes STCOR-383 and STCOR-382
+* Test coverage for `<Dropdown>` at > 80%. STCOM-609
+* Convert `<Dropdown>` to use `<Popper>`. STCOM-320.
 * Export the `<Popper>` component at top level.
 * Added `<MessageBanner>` component (STCOM-592)
 * Optionally include translations in `mountWithContext` test helper.
