@@ -99,16 +99,16 @@ button.actionMenuToggle {
   margin: 0 var(--gutter-static-one-third);
 }
 
-/* Pull first pane icon button to the left/start */
-.paneHeaderButtonsArea.first .paneHeaderIconButton:first-child,
-[dir=rtl] .paneHeaderButtonsArea.last .paneHeaderIconButton:last-child {
-  margin-left: calc(var(--gutter-static-two-thirds) * -1);
-  margin-right: 0;
-}
-
 /* Pull last pane icon button to the right/end */
 .paneHeaderButtonsArea.last .paneHeaderIconButton:last-child,
 [dir="rtl"] .paneHeaderButtonsArea.first .paneHeaderIconButton:first-child {
   margin-right: calc(var(--gutter-static-two-thirds) * -1);
   margin-left: 0;
+}
+
+/* Pull first pane icon button to the left/start */
+.paneHeaderButtonsArea.first .paneHeaderIconButton:first-child,
+[dir=rtl] .paneHeaderButtonsArea.last .paneHeaderIconButton:last-child {
+  margin-left: calc(var(--gutter-static-two-thirds) * -1);
+  margin-right: 0;
 }
