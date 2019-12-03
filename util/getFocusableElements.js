@@ -3,10 +3,10 @@
 *   Params:
 *     currentElement
 *       (object) DOM element - starting element for search. Returns next focused element AFTER this element.
-*     includeContaining
+*     includeContained
 *       (bool) Default: true. Will return the next focusable item within the current element. If false, returned
 *       element will be outside of the container,
-*      strict
+*      onlyContained
 *       (bool) Default: false. If true and includeContaining is true, the search is limited only to
 *        elements within the container.
 *     loop
@@ -17,16 +17,28 @@
 
 import contains from 'dom-helpers/query/contains';
 import matches from 'dom-helpers/query/matches';
+import first from 'lodash/first';
+import last from 'lodash/last';
 
-function getVisibleFocusableElements(container = document) {
+function getVisibleFocusableElements(container = document, includeContained, currentElement) {
   if (container.querySelectorAll) {
     // eslint-disable-next-line max-len
     const focusableSelector = 'a:not([disabled]), button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
     const focusableElements = Array.from(container.querySelectorAll(focusableSelector))
       .filter((element) => {
+        if (!includeContained) {
+          if (element === currentElement) {
+            return true;
+          }
+          if (currentElement && contains(currentElement, element)) {
+            return false;
+          }
+        }
+
         if (matches(element, '[data-focus-exclude]')) {
           return false;
         }
+
         // check for visibility while always include the current activeElement
         return element.offsetWidth > 0 ||
         element.offsetHeight > 0 ||
@@ -37,7 +49,7 @@ function getVisibleFocusableElements(container = document) {
   return [];
 }
 
-function getItem(collection, current, loop, next) {
+function getNextorPrevious(collection, current, loop, next) {
   let index = collection.indexOf(current);
   if (index === -1) {
     index = collection.indexOf(document.activeElement);
@@ -53,50 +65,27 @@ function getItem(collection, current, loop, next) {
     collection[index - 1] || collection[0];
 }
 
-export function getNextFocusable(currentElement, includeContaining = true, strict = false, loop = true) {
-  const container = includeContaining && strict ? currentElement : document;
-  let focusable = getVisibleFocusableElements(container);
-  if (!includeContaining) {
-    const outside = focusable.filter((element) => {
-      if (element === currentElement) {
-        return element;
-      }
-      return !contains(currentElement, element);
-    });
-    focusable = outside;
-  }
-
+function getFocusableElement(next, currentElement, includeContained = true, onlyContained = false, loop = true) {
+  const container = includeContained && onlyContained ? currentElement : document;
+  const focusable = getVisibleFocusableElements(container, includeContained, currentElement);
   if (focusable.length > 0) {
-    return getItem(focusable, currentElement, loop, true);
+    return getNextorPrevious(focusable, currentElement, loop, next);
   }
   return null;
 }
 
-export function getPreviousFocusable(currentElement, includeContaining = true, strict = false, loop = true) {
-  const container = includeContaining && strict ? currentElement : document;
-  let focusable = getVisibleFocusableElements(container);
-  if (!includeContaining) {
-    const outside = focusable.filter((element) => {
-      if (element === currentElement) {
-        return element;
-      }
-      return !contains(currentElement, element);
-    });
-    focusable = outside;
-  }
+export function getNextFocusable(...args) {
+  return getFocusableElement(true, ...args);
+}
 
-  if (focusable.length > 0) {
-    return getItem(focusable, currentElement, loop, false);
-  }
-  return null;
+export function getPreviousFocusable(...args) {
+  return getFocusableElement(false, ...args);
 }
 
 export function getLastFocusable(container) {
-  const focusable = getVisibleFocusableElements(container);
-  return focusable.length > 0 ? focusable[focusable.length - 1] : null;
+  return last(getVisibleFocusableElements(container));
 }
 
 export function getFirstFocusable(container) {
-  const focusable = getVisibleFocusableElements(container);
-  return focusable.length > 0 ? focusable[0] : null;
+  return first(getVisibleFocusableElements(container));
 }
