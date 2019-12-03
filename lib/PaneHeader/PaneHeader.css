@@ -23,14 +23,12 @@
 
 /* Centered content in pane */
 .paneHeaderCenter {
-  position: absolute;
+  flex: 1;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 44px;
-  padding: 0 5px;
-  left: 0;
-  right: 0;
+  padding: 0 var(--gutter-static-one-third);
 }
 
 /* Inner part of pane header
@@ -91,16 +89,9 @@
 /* Pane button areas */
 .paneHeaderButtonsArea {
   position: relative;
+  align-items: center;
   display: flex;
   z-index: 1;
-}
-
-.paneHeaderButtonsArea.last {
-  margin: 0 0 0 auto;
-}
-
-[dir="rtl"] .paneHeaderButtonsArea.last {
-  margin: 0 auto 0 0;
 }
 
 /* Pane action menu */
