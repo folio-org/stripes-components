@@ -61,7 +61,7 @@
     "multiSelection.removeSelectedButtonDescription": "Premere invio o barra spaziatrice per rimuovere l'elemento dall'elenco di selezione. I tasti Home e Fine consentono di raggiungere il primo o l'ultimo elemento.",
     "multiSelection.removeSelectedButtonLabel": "rimuovi valore",
     "endOfList": "Fine della lista",
-    "button.duplicate": "Duplicare",
+    "button.duplicate": "Duplica",
     "passwordStrength.veryWeak": "La tua password è molto debole.",
     "passwordStrength.weak": "La tua password è troppo debole.",
     "passwordStrength.reasonable": "La tua password è ragionevolmente sicura",
