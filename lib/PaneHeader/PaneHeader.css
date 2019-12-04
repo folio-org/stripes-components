@@ -99,6 +99,7 @@ button.actionMenuToggle {
   margin: 0 var(--gutter-static-one-third);
 }
 
+/* stylelint-disable */
 /* Pull last pane icon button to the right/end */
 .paneHeaderButtonsArea.last .paneHeaderIconButton:last-child,
 [dir="rtl"] .paneHeaderButtonsArea.first .paneHeaderIconButton:first-child {
@@ -112,3 +113,4 @@ button.actionMenuToggle {
   margin-left: calc(var(--gutter-static-two-thirds) * -1);
   margin-right: 0;
 }
+/* stylelint-enable */
