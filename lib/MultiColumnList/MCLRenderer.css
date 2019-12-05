@@ -215,11 +215,19 @@
   padding: 1rem;
 }
 
+.mclEndOfListContainer {
+  position: absolute;
+  overflow: hidden;
+}
+
+.mclCenteredContainer {
+  position: relative;
+  left: 0;
+}
+
 .mclEndOfList {
   color: var(--color-text-p2);
   padding: var(--gutter-static-two-thirds) 0;
-  position: relative;
-  left: 0;
 }
 
 /* loader rows */
