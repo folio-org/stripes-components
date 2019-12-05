@@ -1,4 +1,8 @@
 # Change history for stripes-components
+## 5.9.1 IN Progress
+
+* Hotfix for dropdowns: clicks to menu whitespace will not propagate to container.
+* include `header` in exceptions for focus-trapping.
 
 ## [5.9.0](https://github.com/folio-org/stripes-components/tree/v5.9.0) (2019-12-04)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.8.0...v5.9.0)
