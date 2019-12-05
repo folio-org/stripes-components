@@ -3,8 +3,8 @@ import contains from 'dom-helpers/query/contains';
 const getDefaultExceptions = () => [
   document.getElementById('OverlayContainer'),
   ...document.querySelectorAll('.tether-element'),
-  document.querySelector('header'), // fix for main navigation dropdowns when <Layer> is open.
-];
+  document.querySelector('header'), // fix for main navigation dropdowns
+];                                  // which depend on having focus when <Layer> is open.
 
 export default function trapFocus(container, exceptions) {
   if (container && container.className !== document.activeElement.className) {
