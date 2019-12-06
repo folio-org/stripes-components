@@ -1,6 +1,7 @@
 # Change history for stripes-components
 ## 5.9.1 IN Progress
 
+* Support ref in Modal via forwardRef. Refs ERM-620
 * Hotfix for dropdowns: clicks to menu whitespace will not propagate to container.
 * include `header` in exceptions for focus-trapping.
 
