@@ -1,5 +1,12 @@
 # Change history for stripes-components
-## 5.9.0 (IN-PROGRESS)
+## 5.9.1 IN Progress
+
+* Support ref in Modal via forwardRef. Refs ERM-620
+* Hotfix for dropdowns: clicks to menu whitespace will not propagate to container.
+* include `header` in exceptions for focus-trapping.
+
+## [5.9.0](https://github.com/folio-org/stripes-components/tree/v5.9.0) (2019-12-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.8.0...v5.9.0)
 
 * Add keyboard navigation to `<Dropdown>`. fixes STCOR-383 and STCOR-382
 * Test coverage for `<Dropdown>` at > 80%. STCOM-609
@@ -9,6 +16,8 @@
 * Optionally include translations in `mountWithContext` test helper.
 * Support `ref` in `<Tooltip>` via `forwardRef`.
 * Validate shape of arguments before accessing them in `<FilterGroups>`. Refs STCOM-623.
+* Export the `<Spinner>` component, cribbed from stripes-erm-components, at the top level.
+* Export the `<FormattedUTCDate>` component at the top level; provides time-independent formatting for e.g. birthdays.
 
 ## [5.8.0](https://github.com/folio-org/stripes-components/tree/v5.8.0) (2019-09-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.7.1...v5.8.0)
