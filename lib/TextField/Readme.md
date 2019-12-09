@@ -27,7 +27,7 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 `ariaLabel` | string | Applies an `aria-label` attribute - prefer visible `label` prop. Use only if the labeling case warrants. | |
 `ariaLabelledBy` | string | Applies an `aria-labelledBy` attribute to the `<input>` - prefer visible `label` prop. Use only as the labeling case may warrant. | |
-`autoComplete` | string | Applies `on`|`off` value. 
+`autoComplete` | string | Applies `on` or `off` value. 
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `clearFieldId` | string | Id to apply to clear field button. | | 
 `disabled` | bool | Disables the TextField. | |
