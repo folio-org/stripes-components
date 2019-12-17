@@ -91,6 +91,7 @@
 .multiSelectOption {
   composes: option from '../Selection/Selection.css';
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
