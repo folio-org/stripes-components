@@ -106,3 +106,9 @@ export {
   currenciesByNumber,
   currenciesOptions
 } from './util/currencies';
+
+export {
+  default as countries,
+  countriesByCode,
+  countryCodes,
+} from './util/countries';
