@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 5.10.0 (IN PROGRESS)
+
+* Add `aria-labelledby` functionality to `<MultiSelection>`. fixes STCOM-627.
+
 ## [5.9.1](https://github.com/folio-org/stripes-components/tree/v5.9.1) (2019-12-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.0...v5.9.1)
 
