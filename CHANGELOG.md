@@ -1,9 +1,14 @@
 # Change history for stripes-components
 
+## [5.9.2](https://github.com/folio-org/stripes-components/tree/v5.9.2) (2019-12-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.1...v5.9.2)
+
+* Export `countries`, `countriesByCode`, `countryCodes`, and localizable country names. Refs UICHKIN-146.
+
 ## [5.9.1](https://github.com/folio-org/stripes-components/tree/v5.9.1) (2019-12-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.0...v5.9.1)
 
-* Support `ref` in Modal via `forwardRef``. Refs ERM-620
+* Support `ref` in Modal via `forwardRef`. Refs ERM-620
 * Hotfix for dropdowns: clicks to menu whitespace will not propagate to container.
 * include `header` in exceptions for focus-trapping.
 
