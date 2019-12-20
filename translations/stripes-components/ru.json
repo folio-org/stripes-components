@@ -57,7 +57,7 @@
     "button.new": "Новый",
     "multiSelection.defaultEmptyMessage": "Соответствующие элементы не найдены!",
     "multiSelection.filterPlaceholder": "filter option list",
-    "multiSelection.controlDescription": "Contains a list of any selected values, followed by a combobox for selecting additional values.",
+    "multiSelection.controlDescription": "Contains a list of any selected values, followed by an autocomplete textfield for selecting additional values.",
     "multiSelection.removeSelectedButtonDescription": "Press enter or spacebar to remove item from selection list. Home and end keys navigate to the first or last items.",
     "multiSelection.removeSelectedButtonLabel": "удалить значение",
     "endOfList": "Конец списка",
