@@ -78,6 +78,7 @@
   "passwordStrength.infoPopoverText": "Include digits/symbols or make your password longer and more random",
   "passwordStrength.label": "Password strength:",
   "MessageBanner.dismissButtonAriaLabel": "Hide message",
+  "noValue.noValueSet": "No value set",
   "countries.AF": "Afghanistan",
   "countries.AX": "Aland Islands",
   "countries.AL": "Albania",
