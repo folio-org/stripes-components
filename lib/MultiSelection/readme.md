@@ -42,7 +42,7 @@ Name | type | description | default | required
 `renderToOverlay` | bool | For use in situations where the dropdown may be cut off due to a containing dom element's `overflow: hidden/auto` css attribute. | false |
 `tether` | object | Override settings for the tether when `renderToOverlay` is used. | default tether object provided. |
 `value` | array | Array of selected objects. | |
-
+`ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | | 
 ## Validation props
 These are props that could be applicable if setting up your own validation system. These would probably best be handled within `onChange` and `onBlur` event handlers.
 
