@@ -324,5 +324,6 @@
     "countries.EH": "الصحراء الغربية",
     "countries.YE": "اليمن",
     "countries.ZM": "زامبيا",
-    "countries.ZW": "زيمبابوي"
+    "countries.ZW": "زيمبابوي",
+    "noValue.noValueSet": "لم يتم ضبط قيمة"
 }
