@@ -325,5 +325,7 @@
     "countries.YE": "Iêmen",
     "countries.ZM": "Zâmbia",
     "countries.ZW": "Zimbábue",
-    "noValue.noValueSet": "Nenhum valor definido"
+    "noValue.noValueSet": "Nenhum valor definido",
+    "mcl.loadMore": "Carregue mais",
+    "mcl.itemsRequestedMessage": "Solicitando mais resultados, o foco será na próxima linha quando chegarem"
 }
