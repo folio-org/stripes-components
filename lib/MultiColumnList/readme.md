@@ -76,7 +76,7 @@ Name | type | description | default | required
 `selectedClass` | string | override class for the default style applied to selected rows. | built-in |
 `sortedClass` | string | override class for the default style applied to headers of sorted columns. | built-in |
 `isEmptyMessage` | string, object, node, arrayOf(node) | Message to display when the supplied contentData array is empty. | <FormattedMessage id="stripes-components.tableEmpty" /> |
-`onNeedMoreData` | func | Callback for fetching more data | |
+`onNeedMoreData` | func(`askAmount`, `index`) | Callback for fetching more data. If this prop is provided and a `totalCount` prop is provided, but un-reached by the count of loaded data items, `askAmount` will ask for the remainder of items or the `pageAmount` prop, whichever is less. This can be used to fulfill `limit` query parameters. `rowIndex` can be used to fulfill an `offset` query parameter. | |
 `virtualize` | bool | Employs virtualization for performant rendering of large sets of data. | |
 `loading` | bool | If true, will display an animated loading icon. | |
 `onScroll` | func | Callback for scrolling of list body. | `noop` |
@@ -85,6 +85,9 @@ Name | type | description | default | required
 `interactive` | bool | Applies a "pointer" cursor when the mouse hovers over a row | `true` |
 `headerRowClass` | string | Applies a css class to the header row of the list. | |
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |
+`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. | `"scroll"` | 
+`dataEndReached` | bool | Used in conjuction with `pagingType="click"`, `dataEndReached` can be used if a suitable `totalCount` prop cannot be obtained. Setting this to `true` will render the "end-of-list" marker rather than the load button. | `false` | 
+`pageAmount` | number | The base amount of data to pass as the `askAmount` parameter for the `onNeedMoreData` prop | `30` | 
 
 ## Usability: Clickable Rows vs clickable cells
 Using both types of interaction is not good for users or developers, so it's best to simply use one or the other. For clickable cell content, place clickable elements within `formatter`s. Clickable rows are easily created by using the `onRowClick` prop.
