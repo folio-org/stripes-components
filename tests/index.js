@@ -1,4 +1,5 @@
-require('@babel/polyfill');
+require('core-js/stable');
+require('regenerator-runtime/runtime');
 
 // require all test files matching 'lib/**/tests/*-test'
 const requireTest = require.context('../lib/', true, /(.*?)\/tests\/(.*?)-test/);
