@@ -325,5 +325,7 @@
     "countries.YE": "Yemen",
     "countries.ZM": "Zambia",
     "countries.ZW": "Zimbabue",
-    "noValue.noValueSet": "No value set"
+    "noValue.noValueSet": "No value set",
+    "mcl.loadMore": "Load more",
+    "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive"
 }

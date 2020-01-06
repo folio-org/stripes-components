@@ -325,5 +325,7 @@
     "countries.YE": "اليمن",
     "countries.ZM": "زامبيا",
     "countries.ZW": "زيمبابوي",
-    "noValue.noValueSet": "لم يتم ضبط قيمة"
+    "noValue.noValueSet": "لم يتم ضبط قيمة",
+    "mcl.loadMore": "Load more",
+    "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive"
 }
