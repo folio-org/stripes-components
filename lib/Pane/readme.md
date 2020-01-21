@@ -145,3 +145,22 @@ import { AppIcon } from '@folio/stripes/core';
     Content here..
 </Pane>
 ```
+
+## Sub-header
+
+using the `subheader` prop allows you to render content below the pane's header, but outside of the scrollable container of the pane's content. Wrap your content if the `<PaneSubHeader>` component if your content needs some padding to align it with the content of the `<Pane>`.
+
+```
+const sbh = (
+      <PaneSubheader>
+        <SegmentedControl activeId="instanceLevel">
+          <Button id="instanceLevel">Instance</Button>
+          <Button id="holdingsLevel">Holdings</Button>
+          <Button id="itemsLevel">Items</Button>
+        </SegmentedControl>
+      </PaneSubheader>
+    );
+
+...
+<Pane id="pane-instancedetails" subheader={sbh} > ...
+```
