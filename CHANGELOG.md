@@ -1,8 +1,17 @@
 # Change history for stripes-components
 
+## 5.10.0 (IN PROGRESS)
+
+* Add `aria-labelledby` functionality to `<MultiSelection>`. fixes STCOM-627.
+* Test coverage for `<FilterGroups>` at > 80%. Refs STCOM-610.
+* Provide `<NoValue>` to show a `-` and handle `aria-label` correctly. Fixes STCOM-634.
+* MCL percentage column widths summing to 100% no longer cause overflow. Fixes STCOM-633.
+* Improve accessibility, add attribute `aria-label` to `nav` tag. Replace redundant tag `nav` with `div`. Refs UICAL-85.   
+
 ## [5.9.1](https://github.com/folio-org/stripes-components/tree/v5.9.1) (2019-12-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.0...v5.9.1)
 
+* Change `autocomplete` attribute description in README.md. Refs UIU-1374.
 * Support `ref` in Modal via `forwardRef``. Refs ERM-620
 * Hotfix for dropdowns: clicks to menu whitespace will not propagate to container.
 * include `header` in exceptions for focus-trapping.
