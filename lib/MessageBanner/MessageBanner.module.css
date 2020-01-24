@@ -51,6 +51,10 @@
   padding: var(--message-banner-padding-small) var(--message-banner-padding-large);
 }
 
+[dir="rtl"] .content {
+  text-align: right;
+}
+
 /**
  * Icon
  */
