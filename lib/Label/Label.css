@@ -7,7 +7,8 @@
 .label {
   display: flex;
   align-items: center;
-  font-size: var(--font-size-medium);
+  font-weight: var(--text-weight-bold);
+  font-size: 1.05rem;
   line-height: var(--line-height);
   margin-bottom: var(--control-label-margin-bottom);
   color: var(--color-text);
