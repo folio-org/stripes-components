@@ -10,6 +10,7 @@
   will-change: transform;
   padding: 0 var(--gutter-static);
   min-height: var(--control-min-size-touch);
+  background-color: var(--color-fill);
 
   & button {
     z-index: 2;
