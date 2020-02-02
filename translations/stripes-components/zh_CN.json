@@ -327,5 +327,6 @@
     "countries.ZW": "津巴布韦",
     "noValue.noValueSet": "没有设定值",
     "mcl.loadMore": "载入更多",
-    "mcl.itemsRequestedMessage": "请求更多结果，将在到达时重点关注下一行"
+    "mcl.itemsRequestedMessage": "请求更多结果，将在到达时重点关注下一行",
+    "paneMenuActionsToggleLabel": "Actions"
 }
