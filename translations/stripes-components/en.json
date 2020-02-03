@@ -39,6 +39,7 @@
   "deleteThisItem": "Delete this item",
   "removeFields": "remove fields for {item} {num}",
   "addNewField": "Add {item}",
+  "paneMenuActionsToggleLabel": "Actions",
   "closePane": "Close pane",
   "closeItem": "Close {item}",
   "dismissModal": "Dismiss modal",
