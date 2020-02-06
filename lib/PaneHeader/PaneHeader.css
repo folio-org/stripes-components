@@ -10,6 +10,7 @@
   will-change: transform;
   padding: 0 var(--gutter-static);
   min-height: var(--control-min-size-touch);
+  background-color: var(--color-fill);
 
   & button {
     z-index: 2;
@@ -23,14 +24,12 @@
 
 /* Centered content in pane */
 .paneHeaderCenter {
-  position: absolute;
+  flex: 1;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 44px;
-  padding: 0 5px;
-  left: 0;
-  right: 0;
+  padding: 0 var(--gutter-static-one-third);
 }
 
 /* Inner part of pane header
@@ -91,31 +90,22 @@
 /* Pane button areas */
 .paneHeaderButtonsArea {
   position: relative;
+  align-items: center;
+  display: flex;
   z-index: 1;
 }
 
-.paneHeaderButtonsArea.last {
-  margin: 0 0 0 auto;
-}
-
-[dir="rtl"] .paneHeaderButtonsArea.last {
-  margin: 0 auto 0 0;
-}
-
 /* Pane action menu */
-.paneHeaderCenterButton {
-  composes: interactionStyles from '../sharedStyles/interactionStyles.css';
-  outline: 0;
-  max-width: 100%;
-  padding: 2px 5px;
-  border-radius: var(--radius);
+button.actionMenuToggle {
+  margin: 0 var(--gutter-static-one-third);
 }
 
-/* stylelint-disable no-descending-specificity */
-
-/* Reset IconButton margin */
-.paneHeader .paneHeaderIconButton {
-  margin: 0;
+/* stylelint-disable */
+/* Pull last pane icon button to the right/end */
+.paneHeaderButtonsArea.last .paneHeaderIconButton:last-child,
+[dir="rtl"] .paneHeaderButtonsArea.first .paneHeaderIconButton:first-child {
+  margin-right: calc(var(--gutter-static-two-thirds) * -1);
+  margin-left: 0;
 }
 
 /* Pull first pane icon button to the left/start */
@@ -124,10 +114,4 @@
   margin-left: calc(var(--gutter-static-two-thirds) * -1);
   margin-right: 0;
 }
-
-/* Pull last pane icon button to the right/end */
-.paneHeaderButtonsArea.last .paneHeaderIconButton:last-child,
-[dir="rtl"] .paneHeaderButtonsArea.first .paneHeaderIconButton:first-child {
-  margin-right: calc(var(--gutter-static-two-thirds) * -1);
-  margin-left: 0;
-}
+/* stylelint-enable */
