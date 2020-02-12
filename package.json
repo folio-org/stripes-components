@@ -91,7 +91,7 @@
     "webpack": "^4.10.2"
   },
   "dependencies": {
-    "@folio/stripes-react-hotkeys": "^2.0.0",
+    "@folio/stripes-react-hotkeys": "^3.0.2",
     "classnames": "^2.2.5",
     "currency-codes": "^1.5.0",
     "dom-helpers": "^3.2.1",
