@@ -10,6 +10,7 @@ import { KeyValue } from '@folio/stripes/components';
 <KeyValue
   label="Some label"
   value="Some value"
+  sub="Some sub value"
 />
 ```
 
@@ -21,3 +22,11 @@ The "value" can also be a node, passed as children. This version is useful for a
 ```
 
 If the `value` prop is set and children exist, the `value` prop is ignored.
+
+## Props
+Name | Type | Description
+-- | -- | --
+children | node | Renders the value of the component if no value-prop is provided
+label | node | Renders the label of the component
+sub | node | Renders a sub below the value
+value | node | Renders the value of the component
