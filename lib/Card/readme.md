@@ -1,6 +1,6 @@
 # Card
 
-Renders a card with a header and body content. Different styles can be applied using a combination of the `cardStyle`, `hasMargin` and `roundedBorder` props. Classes can be applied using the various classname props.
+Renders a card with a header and body content. Different styles can be applied using a combination of the `cardStyle` and `roundedBorder` props. Classes can be applied using the various classname props.
 
 ## Basic Usage
 
@@ -43,7 +43,6 @@ Some apps can link their resources to resources provided by other apps. When add
 ```js
 <Card
   cardStyle="negative"
-  hasMargin
   headerStart="Organization"
   headerEnd={<Button onClick={addOrg()}>Add organization</Button>}
   roundedBorder
@@ -57,7 +56,6 @@ After a resource is selected, it's information is shown in a slightly differentl
 ```js
 <Card
   cardStyle="positive"
-  hasMargin
   headerStart={org.name}
   headerEnd={<Button onClick={unlinkOrg()}>Unlink organization</Button>}
   roundedBorder
@@ -75,12 +73,12 @@ After a resource is selected, it's information is shown in a slightly differentl
 | `cardClass` | string | |
 | `cardStyle` | string | | Must be undefined or one of `default`, `negative`, or `positive`. These generally affect the background of the card.
 | `children` | node | Yes |
-| `hasMargin` | bool | | Turns on a `margin-bottom` for spacing.
 | `headerClass` | string | |
 | `headerComponent` | node, string, func | DefaultCardHeader | Pass a React Component (or node-type name) to fully customize the rendering of the header.
 | `headerEnd` | node, string | |
 | `headerProps` | object | | Props to pass to the header and destructure upon the element/component.
 | `headerStart` | node, string | Yes |
+| `marginBottom0` | bool | Remove bottom margin |
 | `roundedBorder` | bool | | Apply a border-radius to the card for rounded borders.
 | _rest_ | | | Other props will be applied to the top-level card `div`. |
 
