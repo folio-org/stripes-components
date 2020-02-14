@@ -2,11 +2,12 @@
 
 ## 5.10.0 (IN PROGRESS)
 
+* Add deprecation warning for `hasMargin` prop passed to Card. Margin bottom is added by default now. Styling prop `marginBottom0` added to `<Card>` to remove the margin bottom if needed. (STCOM-626)
 * Add `aria-labelledby` functionality to `<MultiSelection>`. fixes STCOM-627.
 * Test coverage for `<FilterGroups>` at > 80%. Refs STCOM-610.
 * Provide `<NoValue>` to show a `-` and handle `aria-label` correctly. Fixes STCOM-634.
 * MCL percentage column widths summing to 100% no longer cause overflow. Fixes STCOM-633.
-* Improve accessibility, add attribute `aria-label` to `nav` tag. Replace redundant tag `nav` with `div`. Refs UICAL-85.   
+* Improve accessibility, add attribute `aria-label` to `nav` tag. Replace redundant tag `nav` with `div`. Refs UICAL-85.
 * Test coverage for `<ExportCSV>` at > 80%. Refs STCOM-574.
 
 ## [5.9.1](https://github.com/folio-org/stripes-components/tree/v5.9.1) (2019-12-09)
