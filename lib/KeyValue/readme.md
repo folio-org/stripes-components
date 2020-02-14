@@ -10,7 +10,7 @@ import { KeyValue } from '@folio/stripes/components';
 <KeyValue
   label="Some label"
   value="Some value"
-  sub="Some sub value"
+  subValue="Some sub value"
 />
 ```
 
@@ -28,5 +28,5 @@ Name | Type | Description
 -- | -- | --
 children | node | Renders the value of the component if no value-prop is provided
 label | node | Renders the label of the component
-sub | node | Renders a sub below the value
+subValue | node | Renders a sub below the value
 value | node | Renders the value of the component
