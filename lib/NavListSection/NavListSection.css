@@ -1,0 +1,10 @@
+@import "../variables";
+
+.label {
+  padding: 0 var(--gutter-static-two-thirds);
+  margin-bottom: var(--gutter-static-one-third);
+}
+
+.content {
+  border-top: 5px solid var(--primary);
+}
