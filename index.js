@@ -49,6 +49,7 @@ export { default as LayoutHeader } from './lib/LayoutHeader';
 export {
   Accordion,
   AccordionSet,
+  AccordionStatus,
   DefaultAccordionHeader,
   FilterAccordionHeader,
   ExpandAllButton,
