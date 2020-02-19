@@ -1,9 +1,12 @@
 # Change history for stripes-components
 
-## 5.10.0 + 6.0.0 (IN PROGRESS)
+## 6.0.0 (IN PROGRESS)
 
 * Remove `<AppIcon>` and `SegmentedConrol` components.
 * Remove deprecated props from ModalFooter (`primaryButton`, `secondaryButton`) and PaneHeader (`AppIcon`).
+
+## 5.10.0 (IN PROGRESS)
+
 * Add `aria-labelledby` functionality to `<MultiSelection>`. fixes STCOM-627.
 * Test coverage for `<FilterGroups>` at > 80%. Refs STCOM-610.
 * Provide `<NoValue>` to show a `-` and handle `aria-label` correctly. Fixes STCOM-634.
