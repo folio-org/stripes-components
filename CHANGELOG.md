@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## 6.0.0 (IN PROGRESS)
+
+* Remove `<AppIcon>` and `SegmentedConrol` components.
+* Remove deprecated props from ModalFooter (`primaryButton`, `secondaryButton`) and PaneHeader (`AppIcon`).
+
 ## 5.10.0 (IN PROGRESS)
 
 * Add deprecation warning for `hasMargin` prop passed to Card. Margin bottom is added by default now. Styling prop `marginBottom0` added to `<Card>` to remove the margin bottom if needed. (STCOM-626)
