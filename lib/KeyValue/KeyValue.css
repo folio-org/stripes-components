@@ -17,3 +17,9 @@
 .kvValue {
   overflow-wrap: break-word;
 }
+
+.kvSub {
+  font-style: italic;
+  display: block;
+  margin-top: 0.35rem;
+}
