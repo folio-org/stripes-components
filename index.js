@@ -71,6 +71,7 @@ export { default as DropdownButton } from './lib/DropdownButton';
 export { default as MenuSection } from './lib/MenuSection';
 export { default as FocusLink } from './lib/FocusLink';
 export { default as Headline } from './lib/Headline';
+export { default as Highlighter } from './lib/Highlighter';
 export { HotKeys, FocusTrap, HotKeyMapMixin } from './lib/HotKeys';
 export { default as MenuItem } from './lib/MenuItem';
 export { default as MetaSection } from './lib/MetaSection';
