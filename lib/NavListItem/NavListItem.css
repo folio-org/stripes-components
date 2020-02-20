@@ -10,7 +10,7 @@
   color: var(--color-text);
   display: flex;
   font-size: var(--font-size-medium);
-  font-weight: var(--text-weight-bold);
+  font-weight: var(--text-weight-medium);
   line-height: var(--line-height);
   min-height: var(--control-min-size-desktop);
   outline: 0;

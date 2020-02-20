@@ -1,10 +1,34 @@
 @import "../variables";
 
-.label {
+.root + .root {
+  & .header {
+    min-height: 62px;
+  }
+}
+
+.header {
   padding: 0 var(--gutter-static-two-thirds);
+  display: flex;
+  align-items: flex-end;
+}
+
+.label {
   margin-bottom: var(--gutter-static-one-third);
+  font-size: var(--font-size-large);
+  color: var(--color-text-p2);
 }
 
 .content {
-  border-top: 5px solid var(--primary);
+  position: relative;
+  
+  &:focus-within:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: var(--primary);
+    top: -5px;
+  }
 }
