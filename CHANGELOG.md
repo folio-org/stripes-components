@@ -3,7 +3,9 @@
 ## 6.0.0 (IN PROGRESS)
 
 * Remove `<AppIcon>` and `SegmentedConrol` components.
-* Remove deprecated props from ModalFooter (`primaryButton`, `secondaryButton`) and PaneHeader (`AppIcon`).
+* Remove deprecated props from ModalFooter (`primaryButton`, `secondaryButton`)
+* Remove `AppIcon` prop usage as an object from `<PaneHeader>`.
+* Move `react-intl`, `react-router-dom` to peerDependencies.
 
 ## 5.10.0 (IN PROGRESS)
 
