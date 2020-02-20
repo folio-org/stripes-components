@@ -57,7 +57,7 @@
     "button.new": "Nouveau",
     "multiSelection.defaultEmptyMessage": "Aucun élément correspondant trouvé!",
     "multiSelection.filterPlaceholder": "Filtrer la liste des options",
-    "multiSelection.controlDescription": "Contains a list of any selected values, followed by an autocomplete textfield for selecting additional values.",
+    "multiSelection.controlDescription": "Contient une liste de toutes les valeurs sélectionnées, suivie d'un champ de texte de saisie semi-automatique pour sélectionner des valeurs supplémentaires.",
     "multiSelection.removeSelectedButtonDescription": "Press enter or spacebar to remove item from selection list. Home and end keys navigate to the first or last items.",
     "multiSelection.removeSelectedButtonLabel": "Supprimer la valeur",
     "endOfList": "Fin de liste",

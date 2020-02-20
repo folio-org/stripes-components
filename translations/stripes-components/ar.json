@@ -36,7 +36,7 @@
     "editThisItem": "تحرير هذه المادة",
     "deleteThisItem": "حذف هذه المادة",
     "removeFields": "إزالة الحقول لـ {item} {num}",
-    "addNewField": "إضافة {item}",
+    "addNewField": "إضافة مادة",
     "closePane": "إغلاق اللوحة",
     "closeItem": "إغلاق {item}",
     "dismissModal": "رفض مشروط",
