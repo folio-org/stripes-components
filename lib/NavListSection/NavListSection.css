@@ -13,9 +13,10 @@
 }
 
 .label {
-  margin-bottom: var(--gutter-static-one-third);
+  margin-bottom: var(--gutter-static-two-thirds);
   font-size: var(--font-size-large);
   color: var(--color-text-p2);
+  line-height: 1.2;
 }
 
 .content {
