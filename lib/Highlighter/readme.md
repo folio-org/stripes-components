@@ -21,4 +21,3 @@ searchWords | array | Array of search words. String search terms are automatical
 sanitize | func | Process each search word and text to highlight before comparing (eg remove accents); signature (text: string): string |
 style | object | Applies a style attribute on the wrapper element |
 text | string | Text to highlight matches in | true
-
