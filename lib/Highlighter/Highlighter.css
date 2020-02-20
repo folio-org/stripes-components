@@ -5,5 +5,5 @@
 @import '../variables.css';
 
 .mark {
-  background-color: #fc0;
+  background-color: var(--highlighter-fill);
 }
