@@ -3,3 +3,7 @@
  */
 
 @import '../variables.css';
+
+.mark {
+  background-color: #fc0;
+}

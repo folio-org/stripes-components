@@ -1,32 +1,24 @@
-# KeyValue
-
-Display key value with a label. Often used in combination with a grid to display relevant information about a certain content type - e.g. User Information.
+# Highlighter
+Utility component to highlight words within a larger body of text.
 
 ## Basic Usage
+```js
+import { Highlighter } from '@folio/stripes/components';
 
-```
-import { KeyValue } from '@folio/stripes/components';
-
-<KeyValue
-  label="Some label"
-  value="Some value"
-  subValue="Some sub value"
+<Highlighter
+  searchWords={['walking', 'specification', 'frozen']}
+  text="Walking on water and developing software from a specification are easy if both are frozen."
 />
 ```
 
-The "value" can also be a node, passed as children. This version is useful for acceptance testing.
-```
-<KeyValue label="Some label">
-  <span data-test-id="my-test-string">Some node</span>
-</KeyValue>
-```
-
-If the `value` prop is set and children exist, the `value` prop is ignored.
-
 ## Props
-Name | Type | Description
--- | -- | --
-children | node | Renders the value of the component if no value-prop is provided
-label | node | Renders the label of the component
-subValue | node | Renders a sub below the value
-value | node | Renders the value of the component
+Name | Type | Description | Required
+-- | -- | -- | --
+autoEscape | bool | Escape characters in `searchWords` which are meaningful in regular expressions |
+className | string | Applies a class name on the wrapper element |
+highlightClassName | string | Updates the highlight class name to enable custom styling of marked text |
+searchWords | array | Array of search words. String search terms are automatically cast to RegExps unless `autoEscape` is true. | true
+sanitize | func | Process each search word and text to highlight before comparing (eg remove accents); signature (text: string): string |
+style | object | Applies a style attribute on the wrapper element |
+text | string | Text to highlight matches in | true
+
