@@ -15,6 +15,7 @@
   --color-fill-hover: rgba(37, 118, 195, 0.2);
   --color-fill-focus: rgba(37, 118, 195, 0.3);
   --color-fill-active: var(--primary);
+  --highlighter-fill: #fc0;
   --shadow: 0 4px 32px rgba(0, 0, 0, 0.175);
   --bg: #fff;
   --bg-hover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
