@@ -9,3 +9,4 @@ artifacts
 .out
 /storybook-static/
 .vscode
+yarn.lock
