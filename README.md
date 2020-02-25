@@ -10,6 +10,7 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
   - [Introduction](#introduction)
   - [Component categories](#component-categories)
   - [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
+  - [Accessibility](#accessibility)
   - [Patterns](#patterns)
   - [Testing](#testing)
   - [FAQ](#faq)
