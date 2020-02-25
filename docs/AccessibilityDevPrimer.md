@@ -1,3 +1,5 @@
+## Accessibility primer for developers
+
 Accessibility and inclusive design mean that no permissable user is excluded from accessing data or performing tasks through a user interface. Any subjective design decision has potential to exclude users from functionality, but awareness of best accessibility practices can help filter out inaccessible approaches up front. It's a larger effort to make inaccessible code accessible after the fact.
 
 Adding inclusive design expands the typical accessibilty scope beyond assistive technology("A-T", aka screen readers) and includes format ideas like smaller screen sizes or touch displays.
