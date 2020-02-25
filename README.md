@@ -108,6 +108,10 @@ Component | doc | categories
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
+## Accessibility
+* [Accessibility overview](docs/AccessibilityOverview.md) - general overview of some utilities that stripes-components provides.
+* [Accessibility for developers](docs/AccessibilityDevPrimer.md) - dev-specific primer for accessibility. More direct code/component reference - a great intro for those who are unfamiliar to accessibility.
+
 ## Patterns
 Useful recipes for UI patterns appearing in FOLIO modules.
 

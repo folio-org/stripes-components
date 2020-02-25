@@ -76,22 +76,35 @@ Color contrast is an important aspect to ensure that the webpage is legible, eve
 ### Labeling
 Form controls require associated labels so that AT can convey the purpose of a text field, select box, radio-button, etc.([1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose)) While our components do encapsulate numerous accessibility features, labeling is one aspect where options are preserve due to the variance in techniques.
 
-Typical labeling of form elements is as follows (explicit labeling):
+Typical labeling of form elements is as follows (explicit labeling) our form controls set these up under the hood:
 ```jsx static
+<!-- general html controls -->
 <label for="inputid">username</label>
 <input type="text" id="inputid" />
+
+<!-- stripes-components controls -->
+<TextField label="username" />
 ```
+
 Given this, a screen reader will announce 'username edit blank' when the user tabs to the field. Without the `<label>`, it simply announces 'edit blank'.
 
 If visible labels are inadequate, `aria-label` can be used:
 ```jsx static
+<!-- general html controls -->
 <input type="text" aria-label="username" id="inputid" />
+
+<!-- stripes-components controls -->
+<TextField aria-label="username" />
 ```
 If the label is visible elsewhere in the page, its element can be associated with the input via `aria-labelledby`: 
 ```jsx static
+<!-- general html controls -->
 <div id="columnlabel">starting date</div>
 ...
 <input type="text" aria-labelledby="columnlabel" />
+
+<!-- stripes-components controls -->
+<TextField aria-labelledby="columnlabel" />
 ```
 
 Although form controls are a primary place where `aria-` attributes can be used, just about any focusable element can have a `aria-` labeling applied. 
@@ -108,9 +121,8 @@ In the following contrived example, we might have wanted the label to be 'userna
 The content of the `<span #label-elem>` will be announced, as well as the `title`. Focusing this input using NVDA will announce 'label element edit title name, blank'.
 ```jsx static
 <span id="label-elem">label element</span>
-<label for="precedence-input">username</label>
-<input
-  type="text"
+<TextField
+  label="username"
   id="precedence-input"
   aria-label="aria name"
   title="title name"
@@ -169,7 +181,7 @@ Sometimes content we need to relay to a screen reader that may be destracting or
 | :--- | :--- | :--- | :---
 | HTML | `aria-hidden` | displayed | hidden
 | HTML | `hidden` | hidden | hidden
-| HTML | class="sr-only" | hidden | announced
+| HTML | className="sr-only" | hidden | announced
 | CSS | `display: none` | hidden | hidden
 | CSS | `visibility: hidden` | hidden | hidden
 | HTML | `aria-disabled` | displayed | hidden
