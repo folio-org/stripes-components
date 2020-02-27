@@ -26,8 +26,8 @@ import { TextField } from '@folio/stripes/components';
 
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-`aria-label` | string | Applies an `aria-label` attribute - prefer visible `label` prop. Use only if the labeling case warrants. Camelcase `ariaLabel` is also supported. | |
-`aria-labelledby` | string | Applies an `aria-labelledby` attribute to the `<input>` - prefer visible `label` prop. Use only as the labeling case may warrant. Camelcase `ariaLabeledBy` is also supported. | |
+`aria-label` | string | Applies an `aria-label` attribute - prefer visible `label` prop. Use only if the labeling case warrants. Camel-case `ariaLabel` is also supported. | |
+`aria-labelledby` | string | Applies an `aria-labelledby` attribute to the `<input>` - prefer visible `label` prop. Use only as the labeling case may warrant. Camel-case `ariaLabelledBy` is also supported. | |
 `autoComplete` | string | Applies valid values for `autocomplete` attribute. | |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `clearFieldId` | string | Id to apply to clear field button. | | 
@@ -81,17 +81,17 @@ The most common use case for form labeling.
 ```
 <TextField label="Username" />
 ```
-### AriaLabel prop
+### aria-label prop
 If the design case requires a **visually hidden label**
 ```
-<TextField ariaLabel="Username" />
+<TextField aria-label="Username" />
 ```
 
-### AriaLabelledBy prop
+### aria-labelledby prop
 If the label is designed visible, but needs to exist outside of `<TextField>`'s root element.
 ```
 <div id="myLabel">Username</div>
-<TextField ariaLabelledBy="myLabel" />
+<TextField aria-labelledby="myLabel" />
 ```
 
 ## Focus Management
