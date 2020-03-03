@@ -29,6 +29,6 @@ someCallback() {
 # Props
 Name | Type | Description | Options | Default
 -- | -- | -- | -- | --
-ariaLive | string | Sets the aria-live attribute for the live region. This is used to set the priority with which screen reader should treat updates to live regions. | assertive, polite, off | assertive
-message | string | Pass a message that will be read out by the screen reader. This is an alternative to using the `sendMessage`-method. | |
-ref | func | Passing a ref for `<SRStatus>` allows for accessing the `sendMessage`-method as shown in the example above. | |
+`aria-live` | string | Sets the aria-live attribute for the live region. This is used to set the priority with which screen reader should treat updates to live regions. Camel-case `ariaLive` is also accepted.| 'assertive', 'polite', 'off' | 'assertive'
+`message` | string | Pass a message that will be read out by the screen reader. This is an alternative to using the `sendMessage`-method. | |
+`ref` | func | Passing a ref for `<SRStatus>` allows for accessing the `sendMessage`-method as shown in the example above. | |

@@ -49,7 +49,7 @@ placeholder | string | Adds a placeholder to the search input field
 id | string | Adds an ID to the input field
 className | string | Adds a className to the root element
 inputClass | string | Adds a className to the input
-ariaLabel | string | Adds an aria label to the input field
+aria-label | string | Adds an aria label to the input field. Camel-case `ariaLabel` is also accepted.
 value | string | The value of the input field
 loading | boolean | Adds a loading state to icon (on fetch etc.)
 onChange | function | On change handler for the input field
