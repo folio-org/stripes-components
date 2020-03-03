@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 5.10.0 (IN PROGRESS)
+## [5.10.0](https://github.com/folio-org/stripes-components/tree/v5.10.0) (2020-03-03)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.1...v5.10.0)
 
 * Add deprecation warning for `hasMargin` prop passed to Card. Margin bottom is added by default now. Styling prop `marginBottom0` added to `<Card>` to remove the margin bottom if needed. (STCOM-626)
 * Add `aria-labelledby` functionality to `<MultiSelection>`. fixes STCOM-627.
