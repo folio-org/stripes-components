@@ -1,5 +1,12 @@
 # Change history for stripes-components
 
+## 6.0.0 (IN PROGRESS)
+
+* Remove `<AppIcon>` and `SegmentedConrol` components.
+* Remove deprecated props from ModalFooter (`primaryButton`, `secondaryButton`)
+* Remove `AppIcon` prop usage as an object from `<PaneHeader>`.
+* Move `react-intl`, `react-router-dom` to peerDependencies.
+
 ## 5.10.0 (IN PROGRESS)
 
 * Add deprecation warning for `hasMargin` prop passed to Card. Margin bottom is added by default now. Styling prop `marginBottom0` added to `<Card>` to remove the margin bottom if needed. (STCOM-626)
@@ -10,6 +17,7 @@
 * Improve accessibility, add attribute `aria-label` to `nav` tag. Replace redundant tag `nav` with `div`. Refs UICAL-85.
 * Test coverage for `<ExportCSV>` at > 80%. Refs STCOM-574.
 * Introduce `bodyTag` prop on `<ConfirmationModal>`.
+* Added `house`-icon (UX-302)
 
 ## [5.9.1](https://github.com/folio-org/stripes-components/tree/v5.9.1) (2019-12-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.0...v5.9.1)
