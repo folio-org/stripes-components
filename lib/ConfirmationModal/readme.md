@@ -45,3 +45,4 @@ cancelLabel | string | String to render on the Cancel action. | "Cancel" |
 confirmLabel | string | String to render on the Submit action. | "Submit" |
 onConfirm | func | Callback fired when the Submit button is clicked |  | &#10004;
 onCancel | func | Callback fired when the Cancel button is clicked |  | &#10004;
+bodyTag | string | String to set the HTML tag used to wrap the modal message | "p" |
