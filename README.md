@@ -10,6 +10,7 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
   - [Introduction](#introduction)
   - [Component categories](#component-categories)
   - [Links to documentation of specific components and utilities](#links-to-documentation-of-specific-components-and-utilities)
+  - [Accessibility](#accessibility)
   - [Patterns](#patterns)
   - [Testing](#testing)
   - [FAQ](#faq)
@@ -45,7 +46,6 @@ Component | doc | categories
 --- | --- | ---
 [`<Accordion>`](lib/Accordion) | [doc](lib/Accordion/readme.md) | structure
 [`<AddressFieldGroup>`](lib/AddressFieldGroup) | [doc](lib/AddressFieldGroup/readme.md) | control, prefab
-[`<AppIcon>`](lib/AppIcon) | [doc](lib/AppIcon/readme.md) | design
 [`<AutoSuggest>`](lib/AutoSuggest) | [doc](lib/AutoSuggest/readme.md) | control
 [`<Avatar>`](lib/Avatar) | [doc](lib/Avatar/readme.md) | data-display
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
@@ -99,7 +99,6 @@ Component | doc | categories
 [`<RepeatableField>`](lib/RepeatableField) | [doc](lib/RepeatableField/readme.md) | control, prefab
 [`<Row>`](lib/LayoutGrid) | [doc](lib/LayoutGrid/readme.md) | structure
 [`<SearchField>`](lib/SearchField) | [doc](lib/SearchField/readme.md) | control, prefab
-[`<SegmentedControl>`](lib/SegmentedControl) | [doc](lib/SegmentedControl/readme.md) | control
 [`<Select>`](lib/Select) | [doc](lib/Select/readme.md) | control
 [`<Selection>`](lib/Selection) | [doc](lib/Selection/readme.md) | control
 [`<Settings>`](lib/Settings) | [doc](lib/Settings/readme.md) | prefab
@@ -109,6 +108,10 @@ Component | doc | categories
 [`<Timepicker>`](lib/Timepicker) | [doc](lib/Timepicker/readme.md) | control
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
+
+## Accessibility
+* [Accessibility overview](docs/AccessibilityOverview.md) - general overview of some utilities that stripes-components provides.
+* [Accessibility for developers](docs/AccessibilityDevPrimer.md) - dev-specific primer for accessibility. More direct code/component reference - a great intro for those who are unfamiliar to accessibility.
 
 ## Patterns
 Useful recipes for UI patterns appearing in FOLIO modules.

@@ -36,7 +36,7 @@ If you want to render a tooltip with both a text and a sub, you can use `aria-la
 
 **Note** 
 
-`aria-labelledby` is announced by screen readers first, followed by `aria-describedby`. In some cases `aria-describedby` is made optional depending on the browser/screen reader combination. The `aria-label` trumps the `aria-labelledby` so if you want to announce both the text and the sub then you should either use `aria-labelledby` or a combination of `aria-labelledby` and `aria-describedby`.
+`aria-labelledby` is announced by screen readers first, followed by `aria-describedby`. In some cases `aria-describedby` is made optional depending on the browser/screen reader combination. The `aria-label` may also trump the `aria-labelledby` so if you want to announce both the text and the sub then you should either use `aria-labelledby` or a combination of `aria-labelledby` and `aria-describedby`.
 
 Be aware that both the `aria-label` and `aria-labelledby` will override the visible text for certain elements, such as links and buttons.
 

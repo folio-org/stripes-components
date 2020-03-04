@@ -13,7 +13,6 @@ export { default as Label } from './lib/Label';
 export { Loading, LoadingPane, LoadingView } from './lib/Loading';
 export { default as RadioButton } from './lib/RadioButton';
 export { default as RadioButtonGroup } from './lib/RadioButtonGroup';
-export { default as SegmentedControl } from './lib/SegmentedControl';
 export { default as Select } from './lib/Select';
 export { default as Spinner } from './lib/Spinner';
 export { default as TextArea } from './lib/TextArea';
@@ -49,6 +48,7 @@ export { default as LayoutHeader } from './lib/LayoutHeader';
 export {
   Accordion,
   AccordionSet,
+  AccordionStatus,
   DefaultAccordionHeader,
   FilterAccordionHeader,
   ExpandAllButton,
@@ -61,7 +61,6 @@ export { default as IconButton } from './lib/IconButton';
 export { default as MessageBanner } from './lib/MessageBanner';
 export { default as Modal } from './lib/Modal';
 export { default as ModalFooter } from './lib/ModalFooter';
-export { default as AppIcon } from './lib/AppIcon';
 export { default as Avatar } from './lib/Avatar';
 export { default as Callout, CalloutElement } from './lib/Callout';
 export { Dropdown, UncontrolledDropdown } from './lib/Dropdown';
@@ -70,7 +69,8 @@ export { default as DropdownButton } from './lib/DropdownButton';
 export { default as MenuSection } from './lib/MenuSection';
 export { default as FocusLink } from './lib/FocusLink';
 export { default as Headline } from './lib/Headline';
-export { HotKeys, FocusTrap, HotKeyMapMixin } from './lib/HotKeys';
+export { HotKeys, FocusTrap } from './lib/HotKeys';
+export { default as Highlighter } from './lib/Highlighter';
 export { default as MenuItem } from './lib/MenuItem';
 export { default as MetaSection } from './lib/MetaSection';
 export { default as NavList } from './lib/NavList';

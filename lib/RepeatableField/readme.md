@@ -146,7 +146,7 @@ const headLabels = (
   renderField={() => (
     <TextField
       name="author"
-      ariaLabelledBy="authorLabel"
+      aria-labelledby="authorLabel"
     />
   )}
 />
