@@ -3,7 +3,7 @@ import Button from '../../../lib/Button';
 
 /* eslint-disable */
 export default () => (
-  <React.Fragment>
+  <>
     <Button id="test1">test1</Button>
     <Button id="test2">test2</Button>
     
@@ -14,6 +14,6 @@ export default () => (
     </div>
     <Button id="test5">test5</Button>
     <Button style={{ display: 'none' }} id="test6">test6</Button>
-  </React.Fragment>
+  </>
 );
 /* eslint-enable */
