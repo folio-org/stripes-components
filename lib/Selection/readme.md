@@ -42,10 +42,10 @@ const options = [
 
 customFormatter = ({ option, searchTerm }) => {
   return (
-    <React.Fragment key={option.value}>
+    < key={option.value}>
       <OptionSegment searchTerm={searchTerm !== '' ? option.value : ''}>{option.value}</OptionSegment>
       <OptionSegment searchTerm={searchTerm}>{option.label}</OptionSegment>
-    </React.Fragment>
+    </>
   );
 }
 

@@ -72,6 +72,17 @@ const initial = {
     ...
 ```
 
+## Open render-prop
+Accordions can pass a their open status to their children via a functional child: 
+
+```
+<Accordion label="Lazy content">
+  { open => (
+    <List contentData={open ? data : []} />
+  )}
+</Accordion>
+```
+
 ## Controlled
 Accordions can, of course, be controlled by state or local resource. Simply include an object with a list of keys for each accordion's `id` set to a boolean value that will be passed through to the corresponding accordion's `open` prop. This object should be passed to the `<AccordionSet>`'s `accordionStatus` prop. An `onToggle` handler will also need to be provided for proper state interaction. Passed to the `<AccordionSet>`'s `onToggle` prop, it will receive both the label and id of the target accordion, either of which could be used for additional interactions as needed.
 

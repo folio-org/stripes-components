@@ -53,7 +53,7 @@ Name | type | description | default |
 --- | --- | --- | ---
 icon | string, func | Sets icon to be rendered. See icon list for possible options. You can render a custom icon by passing a function that returns a `<svg>`. Read more about this in the "Custom icon" section above | default
 size | string | Sets the icon size (small, medium, large) | medium
-ariaLabel | string | Applies aria-label attribute to icon |
+aria-label | string | Applies aria-label attribute to icon. Camel-case `ariaLabel` is also supported |
 iconRootClass | string | Applies a custom css class to the component's internal div. This is useful for applying custom hover interaction. |
 iconClassName | string | Applies a custom css class name directly to icon | stripes__icon
 children | node, string | Adds content next to the icon. Useful for adding a label to an icon. | undefined

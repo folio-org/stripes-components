@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 5.10.0 (IN PROGRESS)
+## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.2...v6.0.0)
 
 * Add deprecation warning for `hasMargin` prop passed to Card. Margin bottom is added by default now. Styling prop `marginBottom0` added to `<Card>` to remove the margin bottom if needed. (STCOM-626)
 * Add `aria-labelledby` functionality to `<MultiSelection>`. fixes STCOM-627.
@@ -9,7 +10,17 @@
 * MCL percentage column widths summing to 100% no longer cause overflow. Fixes STCOM-633.
 * Improve accessibility, add attribute `aria-label` to `nav` tag. Replace redundant tag `nav` with `div`. Refs UICAL-85.
 * Test coverage for `<ExportCSV>` at > 80%. Refs STCOM-574.
+* Introduce `bodyTag` prop on `<ConfirmationModal>`.
 * Added `house`-icon (UX-302)
+* Remove `<AppIcon>` and `SegmentedConrol` components.
+* Remove deprecated props from ModalFooter (`primaryButton`, `secondaryButton`)
+* Remove `AppIcon` prop usage as an object from `<PaneHeader>`.
+* Move `react-intl`, `react-router-dom` to peerDependencies.
+
+## [5.9.2](https://github.com/folio-org/stripes-components/tree/v5.9.2) (2019-12-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.1...v5.9.2)
+
+* Export `countries`, `countriesByCode`, `countryCodes`, and localizable country names. Refs UICHKIN-146.
 
 ## [5.9.1](https://github.com/folio-org/stripes-components/tree/v5.9.1) (2019-12-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.0...v5.9.1)
