@@ -244,3 +244,16 @@
   width: 100%;
   height: 1rem;
 }
+
+/**
+ * Has margin
+ * This is mostly relevant in results lists to achieve 
+ * the correct spacing inside the pane without having blank areas around the MCL
+ */
+
+.hasMargin {
+  & .mclHeaderRow, 
+  & .mclRow {
+    margin: 0 var(--gutter-static);
+  }
+}
