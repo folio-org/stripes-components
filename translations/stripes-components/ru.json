@@ -7,7 +7,7 @@
     "goToNextMonth": "Перейти к следующему месяцу",
     "selectDay": "Выберите {dayOfWeek} , {date}",
     "dateSelected": "{date} выбрана",
-    "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
+    "screenReaderLabel": " Формат {метка} -  это {форматчтениясэкрана}, используйте клавиши со стрелками для управления датами. Введите ключ для подтверждения. {cообщениепрограммы длячтениясэкрана}",
     "clearFieldValue": "Очистить значение поля",
     "showOrHideDatepicker": "Показать/скрыть календарь",
     "showOrHideTimepicker": "Показать/скрыть таймер",
