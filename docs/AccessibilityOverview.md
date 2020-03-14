@@ -1,4 +1,5 @@
 # Accessibility in Stripes
+This document is an overview of accessibility in the stripes-components libraries... for more developer-centric documentation, please refer to our [Accessibility Primer for Developers](AccessibilityDevPrimer.md)
 
 Accessibility involves the navigability, legibility, and general usability of the web application. Conversations around accessibility typically involve the engagement of users that have impaired vision, motor-skills or a learning disability, but it can have great and positive impact on the experience of fully capable users as well. Much of the time it involves how assistive technology (screen readers, etc.) interact with the content of the web page - but other areas involve the color contrast of styling, font choices/sizes, lack of input segregation (mouse vs touch vs keyboard-only navigation).
 

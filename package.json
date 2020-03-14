@@ -46,7 +46,7 @@
     "@babel/register": "^7.0.0",
     "@bigtest/interactor": "^0.7.2",
     "@bigtest/mocha": "^0.5.0",
-    "@folio/eslint-config-stripes": "^4.2.0",
+    "@folio/eslint-config-stripes": "^5.2.0",
     "@folio/stripes-cli": "^1.6.0",
     "@storybook/addon-actions": "^4.0.12",
     "@storybook/addon-knobs": "^4.0.12",
@@ -60,7 +60,7 @@
     "babel-plugin-remove-jsx-attributes": "^0.0.2",
     "chai": "^4.1.2",
     "core-js": "^3.6.1",
-    "eslint": "^5.5.0",
+    "eslint": "^6.2.1",
     "faker": "^4.1.0",
     "file-loader": "^2.0.0",
     "jest-mock": "23.2.0",
@@ -78,6 +78,8 @@
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-redux": "^5.0.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "redux": "^3.6.0",
     "redux-form": "^7.0.3",
     "regenerator-runtime": "^0.13.3",
@@ -88,7 +90,7 @@
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-junit-formatter": "^0.2.1",
-    "webpack": "^4.10.2"
+    "webpack": "^4.41.2"
   },
   "dependencies": {
     "@folio/stripes-react-hotkeys": "^3.0.5",
