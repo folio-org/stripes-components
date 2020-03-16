@@ -1,10 +1,36 @@
 @import "../variables";
 
-.label {
+.root + .root {
+  & .header {
+    min-height: 62px;
+  }
+}
+
+.header {
   padding: 0 var(--gutter-static-two-thirds);
-  margin-bottom: var(--gutter-static-one-third);
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.label {
+  margin-bottom: var(--gutter-static-two-thirds);
+  font-size: var(--font-size-large);
+  color: var(--color-text-p2);
+  line-height: 1.2;
 }
 
 .content {
-  border-top: 5px solid var(--primary);
+  position: relative;
+  
+  &:focus-within:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: var(--primary);
+    top: -5px;
+  }
 }
