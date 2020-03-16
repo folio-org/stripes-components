@@ -1,7 +1,10 @@
 # Change history for stripes-components
 
-## [6.0.1] IN PROGRESS
+## [6.1.0] IN PROGRESS
 
+* Handle various different expand-all scenarios for `AccordionSet`. Refs STCOM-635.
+* Provide `allocate`, `cart`, `drag-drop`, `receive`, and `transfer`icons.
+* Correctly specify `SelectList` proptypes.
 * Introduce a new filter config function called `parse`. Part of STCOM-654.
 
 ## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
