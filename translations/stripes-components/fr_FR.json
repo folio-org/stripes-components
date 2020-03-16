@@ -327,6 +327,6 @@
     "countries.ZW": "Zimbabwe",
     "noValue.noValueSet": "Aucune valeur définie",
     "mcl.loadMore": "Charger plus",
-    "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive",
+    "mcl.itemsRequestedMessage": "Demander plus de résultats se concentrera sur la ligne suivante à leur arrivée",
     "paneMenuActionsToggleLabel": "Actions"
 }
