@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## [6.0.1] IN PROGRESS
+
+* Introduce a new filter config function called `parse`. Part of STCOM-654.
+
 ## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.2...v6.0.0)
 
