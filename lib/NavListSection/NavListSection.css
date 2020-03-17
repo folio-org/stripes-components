@@ -38,14 +38,14 @@
   }
 }
 
-  
-  .root:focus-within {
-    & .label {
-      color: #000;
-    }
-    & .content:after {
-      opacity: 1;
-      height: 5px;
-      top: -5px;
-    }
+/* Show border to indicate that focus is inside nav list section */
+.root:focus-within {
+  & .label {
+    color: #000;
   }
+  & .content:after {
+    opacity: 1;
+    height: 5px;
+    top: -5px;
+  }
+}
