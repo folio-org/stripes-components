@@ -35,7 +35,7 @@
 /* Show border to indicate that focus is inside nav list section */
 .root:focus-within {
   & .label {
-    color: #000;
+    color: var(--color-text);
   }
 
   & .content::after {
