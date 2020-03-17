@@ -1,11 +1,5 @@
 @import "../variables";
 
-.root + .root {
-  & .header {
-    min-height: 62px;
-  }
-}
-
 .header {
   padding: 0 var(--gutter-static-two-thirds);
   display: flex;
@@ -23,8 +17,8 @@
 
 .content {
   position: relative;
-  
-  &:after {
+
+  &::after {
     content: '';
     display: block;
     position: absolute;
@@ -43,9 +37,17 @@
   & .label {
     color: #000;
   }
-  & .content:after {
+
+  & .content::after {
     opacity: 1;
     height: 5px;
     top: -5px;
+  }
+}
+
+/* Set height of header to add spacing when stacking NavListSections */
+.root + .root {
+  & .header {
+    min-height: 62px;
   }
 }
