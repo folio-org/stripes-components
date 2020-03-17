@@ -7,6 +7,7 @@
 * Provide `allocate`, `cart`, `drag-drop`, `receive`, and `transfer`icons.
 * Correctly specify `SelectList` proptypes.
 * Introduce a new filter config function called `parse`. Part of STCOM-654.
+* Introduce `ariaLabel` prop on `<NoValue>`. Refs UIEH-832.
 
 ## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.2...v6.0.0)
