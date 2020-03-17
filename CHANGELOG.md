@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## [6.1.0] IN PROGRESS
+## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
 
 * Handle various different expand-all scenarios for `AccordionSet`. Refs STCOM-635.
 * Provide `allocate`, `cart`, `drag-drop`, `receive`, and `transfer`icons.
