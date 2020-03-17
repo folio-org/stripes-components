@@ -18,19 +18,34 @@
   font-size: var(--font-size-large);
   color: var(--color-text-p2);
   line-height: 1.2;
+  transition: color 0.07s;
 }
 
 .content {
   position: relative;
   
-  &:focus-within:after {
+  &:after {
     content: '';
     display: block;
     position: absolute;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 0;
     background-color: var(--primary);
-    top: -5px;
+    top: 0;
+    opacity: 0;
+    transition: height 200ms, top 200ms, opacity 500ms;
   }
 }
+
+  
+  .root:focus-within {
+    & .label {
+      color: #000;
+    }
+    & .content:after {
+      opacity: 1;
+      height: 5px;
+      top: -5px;
+    }
+  }
