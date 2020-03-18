@@ -45,7 +45,26 @@
   }
 }
 
-/* Set height of header to add spacing when stacking NavListSections */
+/* 
+  Set height of header to add spacing when stacking NavList's 
+  with one or more NavListSection's as children:
+
+  <NavList>
+    <NavListSection>
+  </NavList>
+  <-- create spacing -->
+  <NavList>
+    <NavListSection>
+  </NavList>
+
+  ...and when NavListSections are stacked in general:
+  <NavList>
+    <NavListSection>
+    <NavListSection>
+    <NavListSection>
+  </NavList>
+ */
+.navListSectionControl + .navListSectionControl,
 .root + .root {
   & .header {
     min-height: 62px;
