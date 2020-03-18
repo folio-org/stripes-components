@@ -15,15 +15,6 @@
   z-index: 9999;
 }
 
-.srOnly {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* old IE */
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
 .calendarInner {
   & td {
     vertical-align: middle;
