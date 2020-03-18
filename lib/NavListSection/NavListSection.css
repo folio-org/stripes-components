@@ -45,8 +45,8 @@
   }
 }
 
-/* 
-  Set height of header to add spacing when stacking NavList's 
+/*
+  Set height of header to add spacing when stacking NavList's
   with one or more NavListSection's as children:
 
   <NavList>
