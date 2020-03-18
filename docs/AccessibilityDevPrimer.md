@@ -75,7 +75,6 @@ Color is a great tool for meaning - but it should never be the *only* indicator 
 
 Color contrast is an important aspect to ensure that the webpage is legible, even for users with color-blindness or other sight disabilities. WCAG 2.0 AA standard requires that elements on a page have a sufficient color contrast of 4.5:1 for normal text and 3:1 for large or bold text.([1.4.3](https://www.w3.org/TR/WCAG21/#contrast-minimum)) Check out the links below for a color contrast checking tool.
 
-
 **Not the issue**: When the contrast checker tool checks the icons which have a default/placeholder background color and a text color but there aren't actually any text – it's rendering an icon, so there's no issue.
 
 ### Labeling
