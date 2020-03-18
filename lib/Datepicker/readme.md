@@ -12,18 +12,20 @@ import { Datepicker } from '@folio/stripes/components';
 ## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-`label` | string | visible field label | | false
-`backendDateStandard` | string | parses to/from ISO 8601 standard by default before committing value. | "ISO 8601" | false
-`id` | string | id for date field - used in the "id" attribute of the text input | | false
-`useFocus` | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
 `autoFocus` | bool | If this prop is `true`, component will automatically focus on mount | |
+`backendDateStandard` | string | parses to/from ISO 8601 standard by default before committing value. | "ISO 8601" | false
 `disabled` | bool | if true, field will be disabled for focus or entry. | false | false
-`readOnly` | bool | if true, field will be readonly. 'Calendar' and 'clear' buttons will be omitted. | false | false
-`value` | string | date to be displayed in the textfield. In forms, this is supplied by the initialValues prop supplied to the form | "" | false
+`id` | string | id for date field - used in the "id" attribute of the text input | | false
+`label` | string | visible field label | | false
+`locale` | string | Overrides the locale provided by context. | "en" | false
 `onChange` | func | Event handler to handle updates to the datefield text. | | false
+`placement` | string | Determines the position of the date picker overlay. See available options in the [Popper documentation](/?selectedKind=Popper). | bottom | false
+`modifiers` | object | Passes modifiers for the internal [Popper](/?selectedKind=Popper) -component which handles the positioning of the date picker overlay. | | false
+`readOnly` | bool | if true, field will be readonly. 'Calendar' and 'clear' buttons will be omitted. | false | false
 `screenReaderMessage` | string | Additional message to be read by screenreaders when textfield is focused in addition to the label and format - which are always read. | | false
 `timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
-`locale` | string | Overrides the locale provided by context. | "en" | false
+`useFocus` | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
+`value` | string | date to be displayed in the textfield. In forms, this is supplied by the initialValues prop supplied to the form | "" | false
 
 <!-- dateFormat | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false-->
 
