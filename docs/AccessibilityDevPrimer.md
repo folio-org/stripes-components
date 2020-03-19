@@ -24,7 +24,7 @@ Each link within this list is a link to part of this document.
 - [ ] Ensure adequate [color contrast](#color) ratios for styles and be sure that any meaningful color is accompanied by text that also relays the meaning.
 
 ### HTML5 semantic tags, roles, and ARIA.
-Tags such as `<header>`, `<nav>` and `<dialog>` invoke special behaviors with assistive technology as opposed to their generic counterparts (`<div>` and `<span>`.) When the content of these semantic elements is initially focused, screen readers will announce specifically announce them, saying 'header', 'navigation', 'dialog' respectively and give AT users context about where their focus/cursor is located within the body of the page. See [W3Schools Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) for a nice reference list of available tags.
+Tags such as `<header>`, `<nav>` and `<dialog>` invoke special behaviors with assistive technology as opposed to their generic counterparts (`<div>` and `<span>`.) When the content of these semantic elements is initially focused, screen readers will specifically announce them, saying 'header', 'navigation', 'dialog' respectively and give AT users context about where their focus/cursor is located within the body of the page. See [W3Schools Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) for a nice reference list of available tags.
 
 In situations where semantic tagnames are inadequate, the `role` attribute can be used, but care must be taken to ensure that familiar functionality does carry over.
 **The `role` attribute is like a contract with the screen reader, promising that all the functionality it would normally have from the semantic element is present on the element receiving the role.** For example, `role="button"` makes the promise that an element handles clicks as well as keyboard presses when it is in focus. ARIA (Accessible Rich Internet Applications) attributes are a third layer of control over how screen readers announce a webpage. Both semantic tags and 'role's essentially apply `aria-` attributes under the hood.
@@ -74,6 +74,8 @@ HTML elements have a `tabindex` or (or `tabIndex` in React) that will set its po
 Color is a great tool for meaning - but it should never be the *only* indicator of meaning. Color should always be used in conjunction with text - even in the verbiage of a page. **Bad**: "Press the blue button" **Good**: "Press the blue 'Submit' button."
 
 Color contrast is an important aspect to ensure that the webpage is legible, even for users with color-blindness or other sight disabilities. WCAG 2.0 AA standard requires that elements on a page have a sufficient color contrast of 4.5:1 for normal text and 3:1 for large or bold text.([1.4.3](https://www.w3.org/TR/WCAG21/#contrast-minimum)) Check out the links below for a color contrast checking tool.
+
+**Known false positive**:  When the contrast checker tool checks the icons which have a default/placeholder background color and a text color with no visible text – it's only rendering an icon, so there's no issue.
 
 ### Labeling
 Form controls require associated labels so that AT can convey the purpose of a text field, select box, radio-button, etc.([1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose)) While our components do encapsulate numerous accessibility features, labeling is one aspect where options are preserve due to the variance in techniques.
