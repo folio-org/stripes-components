@@ -39,7 +39,7 @@
     "addNewField": "Добавить {item}",
     "closePane": "Закрыть панель",
     "closeItem": "Закрыть {item}",
-    "dismissModal": "Dismiss modal",
+    "dismissModal": "Закрыть диалоговое окно",
     "removeSelection": "Удалить выбор",
     "addSelection": "Добавить выбор",
     "collapseSection": "Свернуть раздел",
