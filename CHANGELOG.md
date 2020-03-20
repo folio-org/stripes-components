@@ -1,8 +1,17 @@
 # Change history for stripes-components
 
-## [6.0.1] IN PROGRESS
+## 6.1.1 (IN-PROGRESS)
 
+* Fix issue with `initialStatus` prop on Accordions not working.
+
+## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
+
+* Handle various different expand-all scenarios for `AccordionSet`. Refs STCOM-635.
+* Provide `allocate`, `cart`, `drag-drop`, `receive`, and `transfer`icons.
+* Correctly specify `SelectList` proptypes.
 * Introduce a new filter config function called `parse`. Part of STCOM-654.
+* Introduce `ariaLabel` prop on `<NoValue>`. Refs UIEH-832.
 
 ## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.2...v6.0.0)
