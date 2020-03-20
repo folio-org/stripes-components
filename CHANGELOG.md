@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 6.1.1 (IN-PROGRESS)
+
+* Fix issue with `initialStatus` prop on Accordions not working.
+
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
 
@@ -9,6 +13,7 @@
 * Introduce a new filter config function called `parse`. Part of STCOM-654.
 * Introduce `ariaLabel` prop on `<NoValue>`. Refs UIEH-832.
 * Fix accessibility issues. Refs UICHKOUT-602.
+* Converted `<Datepicker>` to use `<Popper>` instead of react-tether. STCOM-382.
 
 ## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.2...v6.0.0)
