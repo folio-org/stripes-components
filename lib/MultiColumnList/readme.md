@@ -64,6 +64,7 @@ Name | type | description | default | required
 `maxHeight` | number | the maximum height that the list should grow to before scrolling its list body in pixels. | |
 `onRowClick` | function | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | |
 `rowMetadata` | object | arbitrary data that is passed as a metadata object to the `onRowClick` handler - useful for passing in data that may exist outside of the realm of the rendered MCL. | |
+`hasMargin` | bool | Applies horizontal margin on rows and header. This is primarily used to achieve the correct spacing within result panes. | |
 `headerMetadata` | object | Object with data to include with the | |
 `formatter`  | object mapping names to functions | see separate section | |
 `selectedRow` | object | **legacy API** Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | |
