@@ -39,7 +39,6 @@
   align-items: stretch;
   color: var(--color-text);
   text-decoration: none;
-  margin: 0 var(--gutter-static-one-third);
   outline: none;
   background-color: var(--color-fill-table-row-even);
 
@@ -93,7 +92,6 @@
 .mclHeaderRow {
   display: flex;
   justify-content: flex-start;
-  margin: 0 var(--gutter-static-one-third);
   border-bottom: 5px solid var(--primary);
 
   &.mclHScroll {
@@ -245,4 +243,17 @@
   background-color: var(--color-fill-table-row-odd);
   width: 100%;
   height: 1rem;
+}
+
+/**
+ * Has margin
+ * This is mostly relevant in results lists to achieve
+ * the correct spacing inside the pane without having blank areas around the MCL
+ */
+
+.hasMargin {
+  & .mclHeaderRow,
+  & .mclRow {
+    margin: 0 var(--gutter-static);
+  }
 }
