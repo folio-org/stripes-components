@@ -69,6 +69,7 @@
   padding: 4px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  pointer-events: all;
 
   &.untethered {
     margin-top: -7px;
@@ -164,7 +165,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  white-space: nowrap;
   list-style: none;
 
   &.valueChipSelected {
