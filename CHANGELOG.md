@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [5.9.3](https://github.com/folio-org/stripes-components/tree/v5.9.3) (2020-03-26)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.2...v5.9.3)
+
+* MCL “Load more” button as an alternative to infinite scroll. Refs STCOM-622.
+
 ## [5.9.2](https://github.com/folio-org/stripes-components/tree/v5.9.2) (2019-12-19)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.1...v5.9.2)
 
