@@ -1,0 +1,22 @@
+.cursor {
+  position: absolute;
+  left: xpos;
+  height: 100%;
+  width: 1px;
+  cursor: col-resize;
+  pointer-events: all;
+  border-right: 1px dashed #666;
+}
+
+.handle {
+  position: absolute;
+  height: 100%;
+  width: 6px;
+  cursor: col-resize;
+  pointer-events: all;
+  background-color: transparent;
+  transition: background-color 0.2s;
+  &:hover, &.active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
