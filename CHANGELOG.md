@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 6.1.1 (IN-PROGRESS)
+## [6.1.1](https://github.com/folio-org/stripes-components/tree/v6.1.1) (2020-03-31)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v6.1.1)
 
 * Introduce a new filter config property called `operator`. Refs STCOM-662.
 * `<MultiSelection>` fix click-to-select interaction. Refs UIU-1539.
