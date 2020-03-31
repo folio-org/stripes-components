@@ -69,6 +69,7 @@
   padding: 4px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  pointer-events: all;
 
   &.untethered {
     margin-top: -7px;

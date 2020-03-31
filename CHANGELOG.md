@@ -3,6 +3,7 @@
 ## 6.1.1 (IN-PROGRESS)
 
 * Introduce a new filter config property called `operator`. Refs STCOM-662.
+* `<MultiSelection>` fix click-to-select interaction. Refs UIU-1539.
 
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
