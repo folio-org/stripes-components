@@ -87,7 +87,8 @@ filter groups. Each group is represented by an object with four keys:
 * `isIncludingStart` -- The flag is used only with `isRange: true` to include boundary value from the start. By default `true`.
 * `isIncludingEnd` -- The flag is used only with `isRange: true` to include boundary value from the end. By default `true`.
 * `rangeSeparator` -- The string is used only with `isRange: true` to break range value to `start` and `end` values. By default `:`.
-* `parse` -- an optional function which can be used to convert filter values into a CQL manually
+* `parse` -- An optional function which can be used to convert filter values into a CQL manually.
+* `operator` -- An optional string which can be used to change matching operator. By default `=`.
 
 Each of the `values` is typically represented by a simple string, which
 is used both to display on the page and as the value to use in
