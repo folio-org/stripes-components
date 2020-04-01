@@ -1,6 +1,7 @@
 :root {
   --color-text: #000;
   --color-text-p2: rgba(0, 0, 0, 0.62);
+  --color-border-form: rgba(0, 0, 0, 0.42);
   --color-border: rgba(0, 0, 0, 0.2);
   --color-border-p2: rgba(0, 0, 0, 0.1);
   --color-icon: rgba(0, 0, 0, 0.62);
