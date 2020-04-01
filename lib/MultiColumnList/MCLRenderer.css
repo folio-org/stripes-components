@@ -180,14 +180,17 @@
     content: '';
     position: absolute;
     right: 0;
-    top: 5px;
-    bottom: 5px;
+    top: var(--gutter-static-one-third);
+    bottom: var(--gutter-static-one-third);
     width: 1px;
     background-color: var(--color-border-p2);
   }
 
   &:last-child {
-    border-right: 0;
+    &::after {
+      content: '';
+      display: none;
+    }
   }
 
   &.showOverflow {
@@ -198,7 +201,6 @@
 .mclScrollable {
   flex-grow: 1;
   flex-shrink: 0;
-  overflow: auto;
   width: 100%;
 }
 
