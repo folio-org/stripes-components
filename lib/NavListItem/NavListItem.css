@@ -53,4 +53,11 @@
       background-color: #fff;
     }
   }
+
+  &.isDisabled {
+    border-color: #ccc;
+    color: var(--color-text-p2);
+    transition: opacity ease-in-out 500ms;
+    pointer-events: none;
+  }
 }
