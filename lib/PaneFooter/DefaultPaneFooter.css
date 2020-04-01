@@ -1,7 +1,7 @@
 @import '../variables.css';
 
 .paneFooterContent {
-  max-width: var(--container-width);
+  max-width: var(--container-max-width);
   width: 100%;
   display: flex;
   justify-content: flex-start;
