@@ -39,6 +39,7 @@
   --gutter-static-two-thirds: calc(var(--gutter-static-one-third) * 2);
   --input-horizontal-padding: var(--gutter-static-one-third);
   --input-vertical-padding: 0;
+  --container-width: 80rem;
 
   /**
    * Font-size
