@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [6.1.2](https://github.com/folio-org/stripes-components/tree/v6.1.2) (2020-04-05)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.1...v6.1.2)
+
+* `<MultiSelection>` handled long values poorly, until now. Refs UIU-1537.
+
 ## [6.1.1](https://github.com/folio-org/stripes-components/tree/v6.1.1) (2020-03-31)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v6.1.1)
 
