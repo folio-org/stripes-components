@@ -19,8 +19,8 @@ Name | type | description | default | required
 `label` | string | visible field label | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
 `onChange` | func | Event handler to handle updates to the datefield text. | | false
-`placement` | string | Determines the position of the date picker overlay. See available options in the [Popper documentation](/?selectedKind=Popper). | bottom | false
-`modifiers` | object | Passes modifiers for the internal [Popper](/?selectedKind=Popper) -component which handles the positioning of the date picker overlay. | | false
+`placement` | string | Determines the position of the date picker overlay. See available options in the <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper documentation</a>. | bottom | false
+`modifiers` | object | Passes modifiers for the internal <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper</a>-component which handles the positioning of the date picker overlay. | | false
 `readOnly` | bool | if true, field will be readonly. 'Calendar' and 'clear' buttons will be omitted. | false | false
 `screenReaderMessage` | string | Additional message to be read by screenreaders when textfield is focused in addition to the label and format - which are always read. | | false
 `timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
