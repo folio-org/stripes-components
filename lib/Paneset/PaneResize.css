@@ -16,7 +16,9 @@
   pointer-events: all;
   background-color: transparent;
   transition: background-color 0.2s;
-  &:hover, &.active {
+
+  &:hover,
+  &.active {
     background-color: rgba(0, 0, 0, 0.1);
   }
 }
