@@ -180,8 +180,8 @@
     content: '';
     position: absolute;
     right: 0;
-    top: var(--gutter-static-one-third);
-    bottom: var(--gutter-static-one-third);
+    top: 0;
+    bottom: 0;
     width: 1px;
     background-color: var(--color-border-p2);
   }
@@ -193,6 +193,13 @@
     }
   }
 
+  &.borderWithGaps {
+    &::after {
+      top: var(--gutter-static-one-third);
+      bottom: var(--gutter-static-one-third);
+    }
+  }
+
   &.showOverflow {
     overflow: visible;
   }
@@ -201,6 +208,7 @@
 .mclScrollable {
   flex-grow: 1;
   flex-shrink: 0;
+  overflow: auto;
   width: 100%;
 }
 
