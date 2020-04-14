@@ -1,11 +1,22 @@
-.cursor {
+/* widened hover area to keep mouse cursor from flickering */
+.cursorHover {
   position: absolute;
-  left: xpos;
+  height: 100%;
+  width: 20px;
+  pointer-events: all;
+  cursor: col-resize;
+}
+
+.cursorActive {
+  display: flex;
+  justify-content: center;
+}
+
+.cursor {
   height: 100%;
   width: 1px;
-  cursor: col-resize;
-  pointer-events: all;
-  border-right: 1px dashed #666;
+  border-right: 2px dashed rgba(0, 0, 0, 0.2);
+  align-self: stretch;
 }
 
 .handle {
