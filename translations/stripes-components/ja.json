@@ -53,7 +53,7 @@
     "selection.filterOptionsPlaceholder": "Filter options list",
     "selection.filterResultFeedback": "{length} items found, {label} selected",
     "exportToCsv": "CSVにエクスポート",
-    "button.edit": "Edit",
+    "button.edit": "編集",
     "button.new": "新規",
     "multiSelection.defaultEmptyMessage": "No matching items found!",
     "multiSelection.filterPlaceholder": "filter option list",
@@ -72,7 +72,7 @@
     "fieldIsDisabled": "Field is disabled",
     "readonly": "Read-only",
     "readMore": "Read more",
-    "tableEmpty": "The list contains no items",
+    "tableEmpty": "リストにアイテムがありません",
     "metaSection.sourceNoData": "Source: Automated process",
     "metaSection.recordCreatedNoData": "Record created: Unknown",
     "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown",
@@ -328,5 +328,5 @@
     "noValue.noValueSet": "No value set",
     "mcl.loadMore": "Load more",
     "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive",
-    "paneMenuActionsToggleLabel": "Actions"
+    "paneMenuActionsToggleLabel": "操作"
 }
