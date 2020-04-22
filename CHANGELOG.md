@@ -5,6 +5,8 @@
 * Fix issue with `initialStatus` prop on Accordions not working.
 * Fix bug with impossibility to use mouse to set Associated Service Point for Fee/Fine Owner. Refs UIU-1539.
 * Introduce a new filter config property called `operator`. Refs STCOM-662.
+* Expose `FILTER_GROUP_SEPARATOR` and `FILTER_SEPARATOR` for splitting/joing filters. Refs STCOM-670.
+* a11y improvements for form components and update primary color. Refs STCOM-658.
 
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
