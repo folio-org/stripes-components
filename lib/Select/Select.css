@@ -1,5 +1,9 @@
 @import '../variables.css';
 
+:root {
+  --select-icon-width: 1.9rem;
+}
+
 .select {
   &.fullWidth {
     width: 100%;
@@ -7,7 +11,7 @@
 }
 
 .selectControl {
-  padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+  padding: var(--input-vertical-padding) var(--select-icon-width) var(--input-vertical-padding) var(--input-horizontal-padding);
   appearance: none;
   font-size: var(--font-size-medium);
   line-height: var(--line-height);
@@ -19,6 +23,10 @@
       color: #444;
     }
   }
+}
+
+[dir="rtl"] .selectControl {
+  padding: var(--input-vertical-padding) var(--input-horizontal-padding) var(--input-vertical-padding) var(--select-icon-width);
 }
 
 .selectWrap {
