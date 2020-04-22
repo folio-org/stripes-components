@@ -16,6 +16,7 @@
   outline: 0;
   padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
   width: 100%;
+  background-color: var(--color-fill-table-row-even);
 
   &::before {
     border-radius: 0;
@@ -32,10 +33,6 @@
 
   &.striped:nth-child(odd):not(.isActive) {
     background-color: var(--color-fill-table-row-odd);
-  }
-
-  &.striped:nth-child(even):not(.isActive) {
-    background-color: var(--color-fill-table-row-even);
   }
 
   &.isActive {
