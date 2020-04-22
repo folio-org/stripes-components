@@ -74,7 +74,7 @@ Name | type | description | default | required
 actionMenu | func | Activates the action menu dropdown. Expects a function that returns a component or node. | undefined |
 appIcon | element | Render an app icon in the PaneHeader by passing an `<AppIcon>` from stripes-core. |  | undefined
 defaultWidth | string percentage or `"fill"` | Tells the pane the percentage of the paneset that it should occupy. A string percentage (`"25%"`) will render a pane with a width of 25% of its containing element. The string `"fill"` will cause the pane to occupy any remaining space in the paneset after percentage-sized panes are accounted for. |  | &#10004;
-containerize | bool | Wraps the content of the pane in a container that has a max-width. This can be useful when rendering forms or preview panes where you don't want the content to take up the entire width of a very wide pane. | |
+centerContent | bool | Wraps the content of the pane in a centered container. This can be useful when rendering forms or preview panes where you don't want the content to take up the entire width of a potentially very wide pane. | |
 dismissible | bool or "last"| If true, pane will render a close (&times;) button in its firstMenu. If "last" is supplied, the button will render in the lastMenu. | false |
 firstMenu | node | Component (typically an instance of `<PaneMenu>`) to render buttons or icons at the beginning of the header. |  |
 footer | node | Render a component at the bottom of the Pane containing a form. |  |
