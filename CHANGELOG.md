@@ -5,6 +5,7 @@
 * Fix issue with `initialStatus` prop on Accordions not working.
 * Fix bug with impossibility to use mouse to set Associated Service Point for Fee/Fine Owner. Refs UIU-1539.
 * Introduce a new filter config property called `operator`. Refs STCOM-662.
+* Expose `FILTER_GROUP_SEPARATOR` and `FILTER_SEPARATOR` for splitting/joing filters. Refs STCOM-670.
 * a11y improvements for form components and update primary color. Refs STCOM-658.
 * Fixed text overflow bug on `<Select>`. Refs UX-341.
 
