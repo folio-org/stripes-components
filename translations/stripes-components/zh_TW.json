@@ -46,7 +46,7 @@
     "expandSection": "展開區塊",
     "metaSection.source": "来源： {source}",
     "metaSection.recordCreated": "记录创建:{date}{time}",
-    "metaSection.recordLastUpdated": "记录的最近更新:{date}{time}",
+    "metaSection.recordLastUpdated": "上次更新紀錄的時間：{date} {time}",
     "selection.emptyList": "清单为空",
     "selection.noMatches": "没有匹配的选项",
     "selection.filterOptionsLabel": "{label}选项筛选",
