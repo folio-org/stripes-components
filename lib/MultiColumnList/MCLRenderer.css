@@ -168,12 +168,19 @@
   flex-shrink: 0;
   flex-grow: 0;
   flex-basis: auto;
-  line-height: var(--line-height);
-  padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
-  min-height: var(--control-min-size-desktop);
   overflow: hidden;
   text-align: left;
   word-break: break-word;
+
+  &.showOverflow {
+    overflow: visible;
+  }
+}
+
+.mclCellStyle {
+  line-height: var(--line-height);
+  padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
+  min-height: var(--control-min-size-desktop);
   position: relative;
 
   &::after {
@@ -193,15 +200,11 @@
     }
   }
 
-  &.borderWithGaps {
+  &.mclEditableCell {
     &::after {
       top: var(--gutter-static-one-third);
       bottom: var(--gutter-static-one-third);
     }
-  }
-
-  &.showOverflow {
-    overflow: visible;
   }
 }
 
