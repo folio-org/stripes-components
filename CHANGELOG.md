@@ -10,6 +10,8 @@
 * Fix aria-labelledby assignment on `<Multiselection>`. Refs UIREQ-437. 
 * Fixed text overflow bug on `<Select>`. Refs UX-341.
 * Added `centerContent `-prop for `<Pane>`. Refs STCOM-618.
+* Allowed `to`, `href` and `labelStrings` props to be passed as functions to `defaultRowFormatter`. Refs STDTC-8.
+* Pane resizing is suppressed when Panes are overlapped. Fixes STCOM-673, STCOM-674.
 
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
