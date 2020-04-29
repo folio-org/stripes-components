@@ -37,6 +37,7 @@
   height: 100%;
   width: 100%;
   overflow: auto;
+  outline: 0;
 
   &.hasPadding {
     padding: var(--gutter-static);
@@ -45,6 +46,11 @@
   &.noOverflow {
     overflow: hidden;
   }
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: auto;
 }
 
 @media (--medium-up) {
