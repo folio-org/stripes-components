@@ -2,6 +2,12 @@
  * Sizing
  */
 
+@import "../../variables";
+
 .full {
   width: 100%;
+}
+
+.max-width-container {
+  max-width: var(--container-max-width);
 }

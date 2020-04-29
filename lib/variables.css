@@ -1,6 +1,7 @@
 :root {
   --color-text: #000;
   --color-text-p2: rgba(0, 0, 0, 0.62);
+  --color-border-form: rgba(0, 0, 0, 0.42);
   --color-border: rgba(0, 0, 0, 0.2);
   --color-border-p2: rgba(0, 0, 0, 0.1);
   --color-icon: rgba(0, 0, 0, 0.62);
@@ -19,7 +20,7 @@
   --shadow: 0 4px 32px rgba(0, 0, 0, 0.175);
   --bg: #fff;
   --bg-hover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
-  --primary: #2b75bb;
+  --primary: #1960a4;
   --secondary: #999;
   --error: #900;
   --error-fill: rgba(149, 29, 18, 0.2);
@@ -39,6 +40,7 @@
   --gutter-static-two-thirds: calc(var(--gutter-static-one-third) * 2);
   --input-horizontal-padding: var(--gutter-static-one-third);
   --input-vertical-padding: 0;
+  --container-max-width: 80rem;
 
   /**
    * Font-size

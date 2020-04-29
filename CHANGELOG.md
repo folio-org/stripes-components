@@ -5,6 +5,12 @@
 * Fix issue with `initialStatus` prop on Accordions not working.
 * Fix bug with impossibility to use mouse to set Associated Service Point for Fee/Fine Owner. Refs UIU-1539.
 * Introduce a new filter config property called `operator`. Refs STCOM-662.
+* Expose `FILTER_GROUP_SEPARATOR` and `FILTER_SEPARATOR` for splitting/joing filters. Refs STCOM-670.
+* a11y improvements for form components and update primary color. Refs STCOM-658.
+* Fixed text overflow bug on `<Select>`. Refs UX-341.
+* Added `centerContent `-prop for `<Pane>`. Refs STCOM-618.
+* Allowed `to`, `href` and `labelStrings` props to be passed as functions to `defaultRowFormatter`. Refs STDTC-8.
+* Pane resizing is suppressed when Panes are overlapped. Fixes STCOM-673, STCOM-674.
 
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
