@@ -7,6 +7,7 @@
 * Introduce a new filter config property called `operator`. Refs STCOM-662.
 * Expose `FILTER_GROUP_SEPARATOR` and `FILTER_SEPARATOR` for splitting/joing filters. Refs STCOM-670.
 * a11y improvements for form components and update primary color. Refs STCOM-658.
+* Fix aria-labelledby assignment on `<Multiselection>`. Refs UIREQ-437. 
 * Fixed text overflow bug on `<Select>`. Refs UX-341.
 * Updated `<Timepicker>` to use `<Popper>` instead of react-tether. Refs STCOM-381.
 * Added `centerContent `-prop for `<Pane>`. Refs STCOM-618.
