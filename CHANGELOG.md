@@ -9,6 +9,7 @@
 * a11y improvements for form components and update primary color. Refs STCOM-658.
 * Fix aria-labelledby assignment on `<Multiselection>`. Refs UIREQ-437. 
 * Fixed text overflow bug on `<Select>`. Refs UX-341.
+* Updated `<Timepicker>` to use `<Popper>` instead of react-tether. Refs STCOM-381.
 * Added `centerContent `-prop for `<Pane>`. Refs STCOM-618.
 * Allowed `to`, `href` and `labelStrings` props to be passed as functions to `defaultRowFormatter`. Refs STDTC-8.
 * Pane resizing is suppressed when Panes are overlapped. Fixes STCOM-673, STCOM-674.
