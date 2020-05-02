@@ -125,5 +125,8 @@
     "react-hot-loader": "^4.0.0",
     "react-intl": "^2.5.0",
     "react-router-dom": "^4.1.1"
+  },
+  "resolutions": {
+    "moment": "~2.24.0"
   }
 }
