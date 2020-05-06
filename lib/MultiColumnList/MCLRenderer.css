@@ -161,6 +161,9 @@
   outline: none;
 }
 
+/**
+* Functional cell styles
+*/
 .mclCell {
   display: flex;
   align-items: center;
@@ -177,34 +180,26 @@
   }
 }
 
+/**
+* Default cell styles
+*/
 .mclCellStyle {
   line-height: var(--line-height);
   padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
   min-height: var(--control-min-size-desktop);
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background-color: var(--color-border-p2);
-  }
+  border-right: 1px solid var(--color-border-p2);
 
   &:last-child {
-    &::after {
-      content: '';
-      display: none;
-    }
+    border-right: 0;
   }
+}
 
-  &.mclEditableCell {
-    &::after {
-      top: var(--gutter-static-one-third);
-      bottom: var(--gutter-static-one-third);
-    }
+[dir="rtl"] .mclCellStyle {
+  border-right: 0;
+  border-left: 1px solid var(--color-border-p2);
+
+  &:last-child {
+    border-left: 0;
   }
 }
 
