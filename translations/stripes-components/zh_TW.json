@@ -76,7 +76,7 @@
     "metaSection.sourceNoData": "来源：自动化流程",
     "metaSection.recordCreatedNoData": "记录创建：未知",
     "metaSection.recordLastUpdatedNoData": "记录最近更新：未知",
-    "saveAndClose": "保存并关闭",
+    "saveAndClose": "儲存並關閉",
     "MessageBanner.dismissButtonAriaLabel": "Hide message",
     "countries.AF": "Afghanistan",
     "countries.AX": "Aland Islands",
@@ -326,7 +326,7 @@
     "countries.ZM": "Zambia",
     "countries.ZW": "Zimbabwe",
     "noValue.noValueSet": "No value set",
-    "mcl.loadMore": "Load more",
+    "mcl.loadMore": "繼續載入",
     "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive",
     "paneMenuActionsToggleLabel": "Actions"
 }
