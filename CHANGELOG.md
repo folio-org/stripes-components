@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 7.0.0 (IN PROGRESS)
+
+* `react-hot-loader` is not provided by the platform.
+
 ## 6.2.0 (IN-PROGRESS)
 
 * Fix issue with `initialStatus` prop on Accordions not working.
