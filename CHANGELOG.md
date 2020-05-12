@@ -14,6 +14,7 @@
 * Allowed `to`, `href` and `labelStrings` props to be passed as functions to `defaultRowFormatter`. Refs STDTC-8.
 * Pane resizing is suppressed when Panes are overlapped. Fixes STCOM-673, STCOM-674.
 * Pin `moment` at `~2.24.0`. Refs STRIPES-678.
+* Fix issue in tests with conflicting lists inside repeatable field. Refs UIDATIMP-442
 
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
