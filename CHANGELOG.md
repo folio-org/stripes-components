@@ -15,6 +15,7 @@
 * Pane resizing is suppressed when Panes are overlapped. Fixes STCOM-673, STCOM-674.
 * Pin `moment` at `~2.24.0`. Refs STRIPES-678.
 * Fix issue in tests with conflicting lists inside repeatable field. Refs UIDATIMP-442
+* Increase test coverage to 80% | Dropdown menu. Refs STCOM-667.
 * Increase test coverage to 80% | Selection. Refs STCOM-668.
 
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
