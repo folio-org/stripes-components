@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 6.2.0 (IN-PROGRESS)
+## [7.0.0](https://github.com/folio-org/stripes-components/tree/v7.0.0) (2020-05-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v7.0.0)
 
 * Fix issue with `initialStatus` prop on Accordions not working.
 * Fix bug with impossibility to use mouse to set Associated Service Point for Fee/Fine Owner. Refs UIU-1539.
