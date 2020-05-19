@@ -161,25 +161,45 @@
   outline: none;
 }
 
+/**
+* Functional cell styles
+*/
 .mclCell {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  align-self: stretch;
   flex-shrink: 0;
   flex-grow: 0;
   flex-basis: auto;
+  overflow: hidden;
+  text-align: left;
+  word-break: break-word;
+
+  &.showOverflow {
+    overflow: visible;
+  }
+}
+
+/**
+* Default cell styles
+*/
+.mclCellStyle {
   line-height: var(--line-height);
   padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
   min-height: var(--control-min-size-desktop);
-  overflow: hidden;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-  text-align: left;
+  border-right: 1px solid var(--color-border-p2);
 
   &:last-child {
     border-right: 0;
   }
+}
 
-  &.showOverflow {
-    overflow: visible;
+[dir="rtl"] .mclCellStyle {
+  border-right: 0;
+  border-left: 1px solid var(--color-border-p2);
+
+  &:last-child {
+    border-left: 0;
   }
 }
 
