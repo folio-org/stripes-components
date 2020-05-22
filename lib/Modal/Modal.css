@@ -14,9 +14,9 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 60px;
+  top: calc(var(--gutter-static) * 2);
   background-color: #fff;
-  max-height: calc(100% - 75px);
+  max-height: calc(100% - var(--gutter-static) * 3);
   width: calc(100% - (var(--gutter) * 2));
   overflow: hidden;
   border-radius: var(--radius);
@@ -96,11 +96,6 @@
   .small {
     max-width: 550px;
   }
-
-  .modal {
-    top: 100px;
-    max-height: calc(100% - 115px);
-  }
 }
 
 @media (--medium-up) {
@@ -111,7 +106,6 @@
 
 @media (--large-up) {
   .large {
-    top: 50px;
     max-width: 1100px;
   }
 }
@@ -120,10 +114,10 @@
  * Move the modal further towards the top
  * when the browser window is a bit smaller in height
  */
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 850px) {
   .modal {
-    top: 60px;
-    max-height: calc(100% - 75px);
+    top: var(--gutter-static);
+    max-height: calc(100% - var(--gutter-static) * 2);
   }
 }
 
