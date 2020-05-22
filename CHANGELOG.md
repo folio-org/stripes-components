@@ -19,6 +19,7 @@
 * Increase test coverage to 80% | Dropdown menu. Refs STCOM-667.
 * Increase test coverage to 80% | Selection. Refs STCOM-668.
 * Added `unregisterAccordion` method to `<AccordionSet>` and unregistering of `<Accordion>` when unmounted. Refs STSMACOM-267.
+* Tooltips now hides when hitting escape. Refs STCOM-679.
 
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
