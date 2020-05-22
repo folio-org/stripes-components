@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 7.1.0 (IN PROGRESS)
+
+* `react-hot-loader` is not provided by the platform.
+
 ## [7.0.0](https://github.com/folio-org/stripes-components/tree/v7.0.0) (2020-05-19)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v7.0.0)
 
