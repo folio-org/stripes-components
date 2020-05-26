@@ -32,6 +32,7 @@
 * Correctly specify `SelectList` proptypes.
 * Introduce a new filter config function called `parse`. Part of STCOM-654.
 * Introduce `ariaLabel` prop on `<NoValue>`. Refs UIEH-832.
+* Fix accessibility issues. Refs UICHKOUT-602.
 * Converted `<Datepicker>` to use `<Popper>` instead of react-tether. STCOM-382.
 
 ## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
