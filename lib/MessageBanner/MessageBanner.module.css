@@ -6,8 +6,8 @@
 
 :root {
   --message-banner-font-size: var(--font-size-medium);
-  --message-banner-padding-small: var(--gutter-static-one-third);
-  --message-banner-padding-large: var(--gutter-static-two-thirds);
+  --message-banner-padding-small: 0.6rem;
+  --message-banner-padding-large: 0.75rem;
   --message-banner-stacked-margin-top: var(--gutter-static);
   --message-banner-border-radius: var(--radius);
   --message-banner-min-height: 32px;
@@ -113,6 +113,21 @@
   color: var(--message-banner-warning-color);
   border-color: var(--message-banner-warning-border-color);
 }
+
+/**
+ * List
+ */
+
+.root ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  & li:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+
 
 /**
  * Transition
