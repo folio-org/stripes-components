@@ -23,7 +23,7 @@
 
 .multiSelectControlGroup {
   display: flex;
-  flex: 2 0 90%;
+  flex: 1;
   flex-wrap: wrap;
 }
 
