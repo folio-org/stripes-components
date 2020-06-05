@@ -62,5 +62,6 @@ import { RadioButton } from '@folio/stripes/components';
     value="ripe"
   />
 ```
+(When invoking a `<RadioButton>` as part of a react-final-form `<Field>`, it is necessary to explicitly pass `type="radio"` as well as `component={RadioButton}`, otherwise the form library does not understand how to interpret the value.)
 
 [`<RadioButtonGroup>`](../RadioButtonGroup) makes working with Redux Form easier.
