@@ -4,6 +4,7 @@
 
 * `react-hot-loader` is not provided by the platform.
 * Use `UNSAFE_` prefix for deprecated React methods. We know, we know. Refs STCOM-649.
+* `<PasswordStrength>` must not set state if unmounted.
 
 ## [7.0.0](https://github.com/folio-org/stripes-components/tree/v7.0.0) (2020-05-19)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v7.0.0)
