@@ -9,6 +9,15 @@ import { MessageBanner } from '@folio/stripes/components';
 <MessageBanner type="success">Success</MessageBanner>
 <MessageBanner type="error">Error</MessageBanner>
 <MessageBanner type="warning">Warning</MessageBanner>
+
+<MessageBanner type="error">
+  <ul>
+    <li><strong>Using an unordered HTML list</strong></li>
+    <li>Your password must include one numeric value</li>
+    <li>Your password must include one special charater</li>
+    <li>Your password must be at least 8 charaters</li>
+  </ul>
+</MessageBanner>
 ```
 
 ## Accessibility
@@ -59,6 +68,7 @@ const [show, setShow] = useState(false);
 ## Props
 Name | Type | Description | Options | Default
 -- | -- | -- | -- | --
+aria-live | string | Sets the `aria-live`-attribute for the root element. | off, polite, assertive | assertive
 autoFocusDismissButton | bool | Autofocuses the dismiss button when the `<MessageBanner>` enters the DOM. This requires that the `dismissable`-prop is set to true | | false
 type | string | Sets the style of the `<MessageBanner>` | default, error, success, warning | default
 children | node | Renders the contents of the `<MessageBanner>` | |
