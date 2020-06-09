@@ -1,9 +1,18 @@
 # Change history for stripes-components
 
-## 7.1.0 (IN PROGRESS)
+## [7.0.1](https://github.com/folio-org/stripes-components/tree/v7.0.1) (2020-06-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.0...v7.0.1)
 
+* Tweak `<Modal>` spacing so the top has better alignment. 
 * `react-hot-loader` is not provided by the platform.
+* `<MultiColumnList>` a11y improvements. Refs UICHKOUT-602. 
+* Tooltips now hides when hitting escape. Refs STCOM-679.
+* Changed focus proxy element in `<Popdown>` to a `div[tabIndex="0"]` instead of an `input`. Fixes STCOM-651.
 * Use `UNSAFE_` prefix for deprecated React methods. We know, we know. Refs STCOM-649.
+* `<MultiSelection>` handles small input fields more nicely. 
+* `<PasswordStrength>` must not set state if unmounted.
+* Remove spurious `role` attribute from `<NoValue>`.
+* Ensure `<TextField>` and `<TextArea>` are always associated with a `label`.
 
 ## [7.0.0](https://github.com/folio-org/stripes-components/tree/v7.0.0) (2020-05-19)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v7.0.0)
@@ -24,8 +33,6 @@
 * Increase test coverage to 80% | Dropdown menu. Refs STCOM-667.
 * Increase test coverage to 80% | Selection. Refs STCOM-668.
 * Added `unregisterAccordion` method to `<AccordionSet>` and unregistering of `<Accordion>` when unmounted. Refs STSMACOM-267.
-* Changed focus proxy element in `<Popdown>` to a `div[tabIndex="0"]` instead of an `input`. Fixes STCOM-651.
-* Tooltips now hides when hitting escape. Refs STCOM-679.
 
 ## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
