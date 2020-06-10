@@ -139,8 +139,12 @@ onToggleSection({label, id}) {
 </AccordionSet>
 ```
 
-## Custom Headers
-The default header suits many cases, but if it is not adequate, a custom header can be provided via `<Accordion>`'s `header` prop. A custom header component should take `ContentId` prop in order to appropriately apply aria-attributes to the custom header. Any props passed to `<Accordion>` will also be passed to its `header` component.
+## Header
+The `<Accordion>` comes with a default header component out of the box. The default header suits many cases, but if it is not adequate, a custom header can be provided via `<Accordion>`'s `header` prop.
+
+A custom header component should take `ContentId` prop in order to appropriately apply aria-attributes to the custom header. Any props passed to `<Accordion>` will also be passed to its `header` component.
+
+You can pass down additional props for the header component by using the `headerProps`-prop. This can be useful for e.g. changing the header element of the default accordion header via. the `headerElement`-prop (defaults to `h3`).
 
 ## Accordion Props
 
