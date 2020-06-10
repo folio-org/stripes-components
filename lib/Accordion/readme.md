@@ -144,7 +144,7 @@ The `<Accordion>` comes with a default header component out of the box. The defa
 
 A custom header component should take `ContentId` prop in order to appropriately apply aria-attributes to the custom header. Any props passed to `<Accordion>` will also be passed to its `header` component.
 
-You can pass down additional props for the header component by using the `headerProps`-prop. This can be useful for e.g. changing the header element of the default accordion header via. the `headerElement`-prop (defaults to `h3`).
+You can pass down additional props for the header component by using the `headerProps`-prop. This can be useful for e.g. changing the header level of the default accordion header via. the `headingLevel`-prop (defaults to `3`).
 
 ## Accordion Props
 
