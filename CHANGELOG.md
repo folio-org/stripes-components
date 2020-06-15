@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 7.1.0 (IN PROGRESS)
+
+* Provide `<CountrySelection>`. Fixes STCOM-291.
+
 ## [7.0.1](https://github.com/folio-org/stripes-components/tree/v7.0.1) (2020-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.0...v7.0.1)
 
