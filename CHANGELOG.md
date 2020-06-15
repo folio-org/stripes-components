@@ -1,15 +1,19 @@
 # Change history for stripes-components
 
+## 7.1.0 (IN PROGRESS)
+
+* Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
+
 ## [7.0.1](https://github.com/folio-org/stripes-components/tree/v7.0.1) (2020-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.0...v7.0.1)
 
-* Tweak `<Modal>` spacing so the top has better alignment. 
+* Tweak `<Modal>` spacing so the top has better alignment.
 * `react-hot-loader` is not provided by the platform.
-* `<MultiColumnList>` a11y improvements. Refs UICHKOUT-602. 
+* `<MultiColumnList>` a11y improvements. Refs UICHKOUT-602.
 * Tooltips now hides when hitting escape. Refs STCOM-679.
 * Changed focus proxy element in `<Popdown>` to a `div[tabIndex="0"]` instead of an `input`. Fixes STCOM-651.
 * Use `UNSAFE_` prefix for deprecated React methods. We know, we know. Refs STCOM-649.
-* `<MultiSelection>` handles small input fields more nicely. 
+* `<MultiSelection>` handles small input fields more nicely.
 * `<PasswordStrength>` must not set state if unmounted.
 * Remove spurious `role` attribute from `<NoValue>`.
 * Ensure `<TextField>` and `<TextArea>` are always associated with a `label`.
