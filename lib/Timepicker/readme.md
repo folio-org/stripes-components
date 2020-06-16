@@ -18,7 +18,7 @@ Name | type | description | default | required
 `modifiers` | object | Passes modifiers for the internal <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper</a>-component which handles the positioning of the date picker overlay. | | false
 `passThroughValue` (deprecated) | string | Can be used to set dynamic values up to the form - values should be inspected/adjusted in a handler at submission time (like a button click that calls `submit()`.) See below for usage example. |  |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
-`timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
+`timeZone` | string | Overrides the time zone provided by context. (Use `'UTC'` to force interpretation as an absolute time of day) | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
 
 ## Working with Times
