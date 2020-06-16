@@ -59,6 +59,7 @@ warning | string, node | Renders a warning message below the checkbox | `undefin
 
   <Field
     component={Checkbox}
+    type="checkbox"
     label="green"
     name="bananas"
     value="green"
@@ -66,8 +67,10 @@ warning | string, node | Renders a warning message below the checkbox | `undefin
 
   <Field
     component={Checkbox}
+    type="checkbox"
     label="ripe"
     name="bananas"
     value="ripe"
   />
 ```
+(When invoking a `<Checkbox>` as part of a react-final-form `<Field>`, it is necessary to explicitly pass `type="checkbox"` as well as `component={Checkbox}`, otherwise the form library does not understand how to interpret the value.)
