@@ -38,6 +38,7 @@
 }
 
 .multiSelectFilterField {
+  width: 100%;
   margin: 2px;
   background-color: transparent;
   padding: 0 4px;
