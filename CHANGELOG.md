@@ -2,6 +2,7 @@
 
 ## 7.1.0 (IN PROGRESS)
 
+* Provide `<CountrySelection>`. Fixes STCOM-291.
 * Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
 
 ## [7.0.1](https://github.com/folio-org/stripes-components/tree/v7.0.1) (2020-06-08)
