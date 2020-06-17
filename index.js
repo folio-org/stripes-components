@@ -85,6 +85,7 @@ export {
   CommandList,
   HasCommand
 } from './lib/Commander';
+export { default as SortableList } from './lib/SortableList';
 
 /* structures */
 export { default as ConfirmationModal } from './lib/ConfirmationModal';
