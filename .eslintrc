@@ -5,15 +5,19 @@
     "shallow":true,
     "spy":true,
     "it":true,
-    "mount":true
+    "mount":true,
+    "viewport": true
   },
   "extends": "@folio/eslint-config-stripes",
   "overrides": [
     {
-      "files": ["lib/**/tests/*", "util/tests/*"],
+      "files": ["lib/**/tests/**", "util/tests/*"],
       "rules": {
+        "func-names": "off",
+        "max-classes-per-file": "off",
+        "max-len": "off",
         "no-unused-expressions": "off",
-        "func-names": "off"
+        "react/prop-types": "off"
       }
     }
   ],
@@ -23,6 +27,8 @@
     "no-console": ["error", {
       "allow": ["warn", "error"]
     }],
+    "prefer-object-spread": "off",
+    "react/jsx-curly-brace-presence": "off",
     "react/sort-prop-types": ["error"]
   }
 }

@@ -1,7 +1,98 @@
 # Change history for stripes-components
-## 5.9.0 (IN-PROGRESS)
 
+## 7.1.0 (IN PROGRESS)
+
+* Provide `<CountrySelection>`. Fixes STCOM-291.
+* Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
+
+## [7.0.1](https://github.com/folio-org/stripes-components/tree/v7.0.1) (2020-06-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.0...v7.0.1)
+
+* Tweak `<Modal>` spacing so the top has better alignment.
+* `react-hot-loader` is not provided by the platform.
+* `<MultiColumnList>` a11y improvements. Refs UICHKOUT-602.
+* Tooltips now hides when hitting escape. Refs STCOM-679.
+* Changed focus proxy element in `<Popdown>` to a `div[tabIndex="0"]` instead of an `input`. Fixes STCOM-651.
+* Use `UNSAFE_` prefix for deprecated React methods. We know, we know. Refs STCOM-649.
+* `<MultiSelection>` handles small input fields more nicely.
+* `<PasswordStrength>` must not set state if unmounted.
+* Remove spurious `role` attribute from `<NoValue>`.
+* Ensure `<TextField>` and `<TextArea>` are always associated with a `label`.
+
+## [7.0.0](https://github.com/folio-org/stripes-components/tree/v7.0.0) (2020-05-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v7.0.0)
+
+* Fix issue with `initialStatus` prop on Accordions not working.
+* Fix bug with impossibility to use mouse to set Associated Service Point for Fee/Fine Owner. Refs UIU-1539.
+* Introduce a new filter config property called `operator`. Refs STCOM-662.
+* Expose `FILTER_GROUP_SEPARATOR` and `FILTER_SEPARATOR` for splitting/joing filters. Refs STCOM-670.
+* a11y improvements for form components and update primary color. Refs STCOM-658.
+* Fix aria-labelledby assignment on `<Multiselection>`. Refs UIREQ-437.
+* Fixed text overflow bug on `<Select>`. Refs UX-341.
+* Updated `<Timepicker>` to use `<Popper>` instead of react-tether. Refs STCOM-381.
+* Added `centerContent `-prop for `<Pane>`. Refs STCOM-618.
+* Allowed `to`, `href` and `labelStrings` props to be passed as functions to `defaultRowFormatter`. Refs STDTC-8.
+* Pane resizing is suppressed when Panes are overlapped. Fixes STCOM-673, STCOM-674.
+* Pin `moment` at `~2.24.0`. Refs STRIPES-678.
+* Fix issue in tests with conflicting lists inside repeatable field. Refs UIDATIMP-442
+* Increase test coverage to 80% | Dropdown menu. Refs STCOM-667.
+* Increase test coverage to 80% | Selection. Refs STCOM-668.
+* Added `unregisterAccordion` method to `<AccordionSet>` and unregistering of `<Accordion>` when unmounted. Refs STSMACOM-267.
+
+## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
+
+* Handle various different expand-all scenarios for `AccordionSet`. Refs STCOM-635.
+* Provide `allocate`, `cart`, `drag-drop`, `receive`, and `transfer`icons.
+* Correctly specify `SelectList` proptypes.
+* Introduce a new filter config function called `parse`. Part of STCOM-654.
+* Introduce `ariaLabel` prop on `<NoValue>`. Refs UIEH-832.
+* Fix accessibility issues. Refs UICHKOUT-602.
+* Converted `<Datepicker>` to use `<Popper>` instead of react-tether. STCOM-382.
+
+## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.2...v6.0.0)
+
+* Add deprecation warning for `hasMargin` prop passed to Card. Margin bottom is added by default now. Styling prop `marginBottom0` added to `<Card>` to remove the margin bottom if needed. (STCOM-626)
+* Add `aria-labelledby` functionality to `<MultiSelection>`. fixes STCOM-627.
+* Test coverage for `<FilterGroups>` at > 80%. Refs STCOM-610.
+* Provide `<NoValue>` to show a `-` and handle `aria-label` correctly. Fixes STCOM-634.
+* MCL percentage column widths summing to 100% no longer cause overflow. Fixes STCOM-633.
+* Improve accessibility, add attribute `aria-label` to `nav` tag. Replace redundant tag `nav` with `div`. Refs UICAL-85.
+* Test coverage for `<ExportCSV>` at > 80%. Refs STCOM-574.
+* Introduce `bodyTag` prop on `<ConfirmationModal>`.
+* Added `house`-icon (UX-302)
+* Remove `<AppIcon>` and `SegmentedConrol` components.
+* Remove deprecated props from ModalFooter (`primaryButton`, `secondaryButton`)
+* Remove `AppIcon` prop usage as an object from `<PaneHeader>`.
+* Move `react-intl`, `react-router-dom` to peerDependencies.
+
+## [5.9.2](https://github.com/folio-org/stripes-components/tree/v5.9.2) (2019-12-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.1...v5.9.2)
+
+* Export `countries`, `countriesByCode`, `countryCodes`, and localizable country names. Refs UICHKIN-146.
+
+## [5.9.1](https://github.com/folio-org/stripes-components/tree/v5.9.1) (2019-12-09)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.0...v5.9.1)
+
+* Change `autocomplete` attribute description in README.md. Refs UIU-1374.
+* Support `ref` in Modal via `forwardRef``. Refs ERM-620
+* Hotfix for dropdowns: clicks to menu whitespace will not propagate to container.
+* include `header` in exceptions for focus-trapping.
+
+## [5.9.0](https://github.com/folio-org/stripes-components/tree/v5.9.0) (2019-12-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.8.0...v5.9.0)
+
+* Add keyboard navigation to `<Dropdown>`. fixes STCOR-383 and STCOR-382
+* Test coverage for `<Dropdown>` at > 80%. STCOM-609
+* Convert `<Dropdown>` to use `<Popper>`. STCOM-320.
 * Export the `<Popper>` component at top level.
+* Added `<MessageBanner>` component (STCOM-592)
+* Optionally include translations in `mountWithContext` test helper.
+* Support `ref` in `<Tooltip>` via `forwardRef`.
+* Validate shape of arguments before accessing them in `<FilterGroups>`. Refs STCOM-623.
+* Export the `<Spinner>` component, cribbed from stripes-erm-components, at the top level.
+* Export the `<FormattedUTCDate>` component at the top level; provides time-independent formatting for e.g. birthdays.
 
 ## [5.8.0](https://github.com/folio-org/stripes-components/tree/v5.8.0) (2019-09-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.7.1...v5.8.0)
@@ -42,7 +133,7 @@
 * Replace Autosizer component with third-party equivalent [react-virtualized-auto-sizer](https://github.com/bvaughn/react-virtualized-auto-sizer). Refs STCOM-543.
 * `<ExpandAllButton>` now accepts an optional `id` prop to set on the `<Button>`.
 * `<Icon>` may receive custom icons. Refs STCOM-542.
-* Correctly set `<Accordion>`'s `id`. Refs STCOM-551. 
+* Correctly set `<Accordion>`'s `id`. Refs STCOM-551.
 * `<MetaSection>` elegantly handles missing metadata. Refs STCOM-538.
 * `<Datepicker>` cleanup: better i18n, issues with untouched fields.
 * Add an optional `footer` prop for `Pane` component for fixed footer feature. Refs STCOM-429.

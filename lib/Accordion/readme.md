@@ -39,6 +39,50 @@ Keyboard support comes packaged with use of the `<AccordionSet>`. The keys are a
 | `home` | Navigate to the first accordion in the set. |
 | `end` | Navigate to the last accordion in the set. |
 
+## AccordionStatus
+The `<AccordionStatus>` component can be used as a high-level parent for an uncontrolled setup to relay status and toggle functionality to `<AccordionSet>` children.
+```
+<AccordionStatus>
+  <ExpandAllButton />
+  <AccordionSet>
+    <Accordion label="AccordionStatus_one">
+      <p>first content</p>
+    </Accordion>
+    <Accordion label="AccordionStatus_two">
+      <p>second content</p>
+    </Accordion>
+  </AccordionSet>
+</AccordionStatus>
+```
+
+### Initializing AccordionStatus
+The `<AccordionStatus>` can be given an intial state via the initialStatus prop of `<AccordionSet>`. Like `accordionStatus` props,  keys of the `initialStatus` object should match the id's of the contained `<Accordions>`.
+
+```
+const initial = {
+  first: true,
+  second: false,
+  third: false
+};
+
+<AccordionStatus>
+  <ExpandAllButton />
+  <AccordionSet initialStatus={initial}>
+    <Accordion id="first" label="first Accordion">
+    ...
+```
+
+## Open render-prop
+Accordions can pass a their open status to their children via a functional child: 
+
+```
+<Accordion label="Lazy content">
+  { open => (
+    <List contentData={open ? data : []} />
+  )}
+</Accordion>
+```
+
 ## Controlled
 Accordions can, of course, be controlled by state or local resource. Simply include an object with a list of keys for each accordion's `id` set to a boolean value that will be passed through to the corresponding accordion's `open` prop. This object should be passed to the `<AccordionSet>`'s `accordionStatus` prop. An `onToggle` handler will also need to be provided for proper state interaction. Passed to the `<AccordionSet>`'s `onToggle` prop, it will receive both the label and id of the target accordion, either of which could be used for additional interactions as needed.
 

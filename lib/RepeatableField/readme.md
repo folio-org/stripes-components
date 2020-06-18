@@ -36,7 +36,7 @@ import { RepeatableField } from '@folio/stripes/components';
           label="Name"
           name={`people[${index}].name`}
           id={`people-input-name-${index}`}
-          onChange={this.handleChange('name', index)} 
+          onChange={this.handleChange('name', index)}
           value={field.name}
         />
       </Col>
@@ -126,6 +126,32 @@ import { FieldArray } from 'react-final-form-arrays';
 />
 ```
 
+### With `headLabels` property to display heading field labels
+```js
+import { RepeatableField, Label } from '@folio/stripes/components';
+
+const headLabels = (
+  <Label id="authorLabel">
+    Author
+  </Label>
+);
+
+<RepeatableField
+  addLabel="Add author"
+  legend="Authors"
+  headLabels={headLabels}
+  fields={fields}
+  onAdd={this.handleAdd}
+  onRemove={this.handleRemove}
+  renderField={() => (
+    <TextField
+      name="author"
+      aria-labelledby="authorLabel"
+    />
+  )}
+/>
+```
+
 ## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
@@ -134,6 +160,7 @@ canAdd | boolean | Flag to enable/disable add button | true
 canRemove | boolean | Flag to enable/disable remove button | true
 emptyMessage | string | Text for when there are no rows; can be left blank |
 fields | array or object | Values that go with field rows | &#10004;
+headLabels | node | Element that displays heading field labels. Developer should care about accessibility if this property is used (see an example).   |
 id | string | Adds an ID for the root element and prefixed ID's for the default add button |
 legend | node or string | Legend text that accompanies the fieldset; can be left blank |
 onAdd | func | Callback fired when the add button is clicked |  | &#10004;

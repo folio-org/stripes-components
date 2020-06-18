@@ -29,34 +29,20 @@ Content of Tooltips should be kept very simple, thus, we only allow for simple s
 
 The `<Tooltip>` won't be 100% accessible out of the box – it's up to you as a developer to provide the relevant information in an accessible way. This can be achieved in several ways and it must be tailored to the specific implementation of a given UI.
 
-Using aria-attributes, you can provide the same information for all users. Here's some examples:
-
-### Using aria-label
-Passing the same string for both the `<Tooltip>` text prop and the `aria-label` of the trigger component will ensure that the contents of the tooltip is available for all users.
-
-```js
-const label = 'Delete';
-
-<Tooltip
-  title={label}
-  id="my-tooltip"
->
-  {({ ref, ariaIds }) => (
-    <IconButton
-      icon="trash"
-      ref={ref}
-      aria-label={label}
-    />
-  )}
-</Tooltip>
-```
+Using aria-attributes, you can provide the same information for all users.
 
 ### Using aria-labelledby and aria-describedby
 If you want to render a tooltip with both a text and a sub, you can use `aria-labelledby` and `aria-describedby` to make the information available for screen reader users.
 
-**Note:** `aria-labelledby` is announced by screen readers first, followed by `aria-describedby`. In some cases `aria-describedby` is made optional depending on the browser/screen reader combination. The `aria-label` trumps the `aria-labelledby` so if you want to announce both the text and the sub then you should either use `aria-labelledby` or a combination of `aria-labelledby` and `aria-describedby`.
+**Note** 
+
+`aria-labelledby` is announced by screen readers first, followed by `aria-describedby`. In some cases `aria-describedby` is made optional depending on the browser/screen reader combination. The `aria-label` may also trump the `aria-labelledby` so if you want to announce both the text and the sub then you should either use `aria-labelledby` or a combination of `aria-labelledby` and `aria-describedby`.
 
 Be aware that both the `aria-label` and `aria-labelledby` will override the visible text for certain elements, such as links and buttons.
+
+**Validation**
+
+The `<Tooltip>`-component has built in a11y validation which will apply a <span style="padding: 2px;color:#FFF;background-color:red;">red</span> background color on your trigger element if you haven't applied the neccessary aria-attributes.
 
 ```js
 <Tooltip
@@ -70,8 +56,8 @@ Be aware that both the `aria-label` and `aria-labelledby` will override the visi
       ref={ref}
 
       // Option 1 - this will read out the text first and then the sub afterwards
-      aria-labelledby={ariaIds.text} // The primary information
-      aria-describedby={ariaIds.sub} // The secondary information
+      aria-labelledby={ariaIds.text} // The ID for the primary information (my-tooltip-text)
+      aria-describedby={ariaIds.sub} // The ID for the secondary information (my-tooltip-sub)
 
       // Option 2 - this will read out both text and sub immidiately when the trigger is focused
       aria-labelledby={`${ariaIds.text} ${ariaIds.sub}`}
@@ -93,15 +79,15 @@ The ref external ref replaces the default ref and will be passed down using the 
 
   // Pass ref to trigger
   <IconButton
-    aria-label="Delete"
+    aria-labelledby="tooltip-example-text"
     icon="trash"
     ref={ref}
   />
 
   // Pass ref to the "triggerRef"-prop
   // Important: Place the <Tooltip> after your trigger component
-  // Note: The "label" matches the aria-label on the trigger element, making it accessible for screen reader users
   <Tooltip
+    id="tooltip-example"
     text="Delete"
     triggerRef={ref}
   />

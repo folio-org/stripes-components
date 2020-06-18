@@ -12,7 +12,7 @@ You can use the `<NavListItem>` component to add links/buttons to your NavListSe
   import { Link } from 'react-router-dom';
 
   <NavList>
-    <NavListSection label="Some label (optional)" activeLink="/active-link-here">
+    <NavListSection label="Some label (optional)" activeLink="/active-link-here" striped>
       <NavListItem onClick={onClickHandler}>Users</NavListItem>
       <NavListItem href="#organization">Organization</NavListItem>
       <NavListItem to="circulation">Circulation</NavListItem>

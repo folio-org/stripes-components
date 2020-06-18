@@ -12,6 +12,15 @@
 
 .dropdown {
   display: inline-block;
+
+  &.relative {
+    position: relative;
+  }
+}
+
+button + .dropdown,
+.dropdown + .dropdown {
+  padding: 0 0.25rem;
 }
 
 .DropdownMenuTether {
@@ -27,6 +36,7 @@
   border: 1px solid #ccc;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  pointer-events: all;
 
   &.hasPadding {
     padding: var(--gutter-static);

@@ -143,10 +143,7 @@
 .optionSegment {
   padding: 0 2px;
   text-align: initial;
-}
-
-.optionMatchedSubstring {
-  font-weight: 700;
+  word-break: break-word;
 }
 
 .selectionMultiContainer {

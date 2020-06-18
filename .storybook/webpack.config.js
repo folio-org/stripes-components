@@ -38,10 +38,26 @@ module.exports = {
         options: {
           cacheDirectory: true,
           presets: [
-            [require.resolve('babel-preset-env'), { modules: false }],
-            [require.resolve('babel-preset-stage-2')],
-            [require.resolve('babel-preset-react')],
+            ['@babel/preset-env', {
+              'targets': '> 0.25%, not dead',
+            }],
+            ['@babel/preset-react'],
           ],
+          plugins: [
+            // Stage 2
+            ['@babel/plugin-proposal-decorators', { legacy: true }],
+            ['@babel/plugin-proposal-function-sent'],
+            ['@babel/plugin-proposal-export-namespace-from'],
+            ['@babel/plugin-proposal-numeric-separator'],
+            ['@babel/plugin-proposal-throw-expressions'],
+
+            // Stage 3
+            ['@babel/plugin-syntax-import-meta'],
+            ['@babel/plugin-proposal-class-properties', { loose: true }],
+
+            // Others
+            ['react-hot-loader/babel'],
+          ]
         },
       },
       {
@@ -53,9 +69,6 @@ module.exports = {
         use: [
           {
             loader: 'style-loader',
-            options: {
-              sourceMap: true,
-            },
           },
           {
             loader: 'css-loader',
