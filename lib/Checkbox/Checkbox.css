@@ -2,6 +2,7 @@
 
 :root {
   --checkbox-size: 12px;
+  --checkbox-disabled-color: #cecece;
 }
 
 .checkbox {
@@ -164,11 +165,18 @@
 }
 
 /**
- * Disabled
+ * Disabled or read-only
  */
-.disabled {
-  & .checkboxIcon {
-    opacity: 0.5;
+.disabled,
+.readOnly {
+  & .checkboxIcon,
+  & input:checked + .checkboxIcon {
+    background-color: var(--checkbox-disabled-color);
+    border-color: var(--checkbox-disabled-color);
+
+    & svg path {
+      stroke: #000;
+    }
   }
 
   &:hover .inner {
