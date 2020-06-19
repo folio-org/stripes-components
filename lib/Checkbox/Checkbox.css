@@ -2,7 +2,6 @@
 
 :root {
   --checkbox-size: 12px;
-  --checkbox-disabled-color: #cecece;
 }
 
 .checkbox {
@@ -12,6 +11,7 @@
   color: var(--color-text);
   line-height: var(--line-height);
   margin-bottom: 0;
+  cursor: pointer;
 
   &.fullWidth {
     width: 100%;
@@ -48,7 +48,6 @@
   min-height: var(--control-min-size-desktop);
   display: flex;
   align-items: baseline;
-  cursor: pointer;
   flex-grow: 2;
   position: relative;
   border-radius: var(--radius);
@@ -74,9 +73,9 @@
  */
 .input {
   position: absolute;
-  z-index: 10;
+  z-index: -1;
   opacity: 0;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .noLabel .input {
@@ -169,18 +168,12 @@
  */
 .disabled,
 .readOnly {
+  cursor: default;
+
   & .checkboxIcon,
   & input:checked + .checkboxIcon {
-    background-color: var(--checkbox-disabled-color);
-    border-color: var(--checkbox-disabled-color);
-
-    & svg path {
-      stroke: #000;
-    }
-  }
-
-  &:hover .inner {
-    cursor: default;
+    background-color: var(--checkable-disabled-fill);
+    border-color: var(--checkable-disabled-fill);
   }
 }
 
