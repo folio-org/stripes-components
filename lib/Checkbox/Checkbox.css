@@ -11,7 +11,6 @@
   color: var(--color-text);
   line-height: var(--line-height);
   margin-bottom: 0;
-  cursor: pointer;
 
   &.fullWidth {
     width: 100%;
@@ -168,7 +167,9 @@
  */
 .disabled,
 .readOnly {
-  cursor: default;
+  & .inner {
+    cursor: default;
+  }
 
   & .checkboxIcon,
   & input:checked + .checkboxIcon {
