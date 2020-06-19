@@ -1,4 +1,5 @@
 @import '../variables.css';
+/* stylelint-disable no-descending-specificity */
 
 :root {
   --radio-button-size: 12px;
@@ -88,7 +89,7 @@
     background-color: var(--checkable-disabled-fill);
     border-color: var(--checkable-disabled-fill);
 
-    &:after {
+    &::after {
       opacity: 0.5;
     }
   }
