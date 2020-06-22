@@ -328,5 +328,6 @@
     "noValue.noValueSet": "لم يتم ضبط قيمة",
     "mcl.loadMore": "تحميل المزيد",
     "mcl.itemsRequestedMessage": "طلب المزيد من النتائج، سوف يركز الصف التالي عند وصولها",
-    "paneMenuActionsToggleLabel": "الإجراءات"
+    "paneMenuActionsToggleLabel": "الإجراءات",
+    "searchFieldIndex": "فهرس حقل البحث"
 }
