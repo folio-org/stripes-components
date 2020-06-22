@@ -20,6 +20,7 @@
 * `<PasswordStrength>` must not set state if unmounted.
 * Remove spurious `role` attribute from `<NoValue>`.
 * Ensure `<TextField>` and `<TextArea>` are always associated with a `label`.
+* Make it possible to disable interactivity for some column headers (Refs. STCOM-685)
 
 ## [7.0.0](https://github.com/folio-org/stripes-components/tree/v7.0.0) (2020-05-19)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v7.0.0)
