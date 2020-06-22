@@ -45,7 +45,7 @@ name | string | Sets the name of the input | `undefined`
 onBlur | func | Event handler for the input's `onBlur` event | `undefined`
 onChange | func | Event handler for the input's `onChange` event | `undefined`
 onFocus | func | Event handler for the input's `onFocus` event | `undefined`
-readOnly | bool | Renders the field as "read only" | `false`
+readOnly | bool | Renders the field as "read only" (focusable but non-interactive) | `false`
 required | bool | Sets the field as required | `false`
 value | string | Sets the selected value for the input | `undefined`
 vertical | bool | Renders the label vertically (above the checkbox) | `false`
