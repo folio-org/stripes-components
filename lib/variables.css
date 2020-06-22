@@ -20,6 +20,7 @@
   --shadow: 0 4px 32px rgba(0, 0, 0, 0.175);
   --bg: #fff;
   --bg-hover: color(var(--bg) contrast(100%) blend(var(--bg) 90%));
+  --checkable-disabled-fill: #808080;
   --primary: #1960a4;
   --secondary: #999;
   --error: #900;
