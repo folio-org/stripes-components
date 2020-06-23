@@ -136,7 +136,7 @@
     "countries.CU": "Cuba",
     "countries.CY": "Cyprus",
     "countries.CZ": "Czech Republic",
-    "countries.DK": "Denmark",
+    "countries.DK": "Дания",
     "countries.DJ": "Djibouti",
     "countries.DM": "Dominica",
     "countries.DO": "Dominican Republic",
@@ -328,5 +328,6 @@
     "noValue.noValueSet": "No value set",
     "mcl.loadMore": "Load more",
     "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive",
-    "paneMenuActionsToggleLabel": "Actions"
+    "paneMenuActionsToggleLabel": "Actions",
+    "searchFieldIndex": "Индекс поискового поля"
 }
