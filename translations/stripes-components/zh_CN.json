@@ -329,5 +329,6 @@
     "mcl.loadMore": "载入更多",
     "mcl.itemsRequestedMessage": "请求更多结果，将在到达时重点关注下一行",
     "paneMenuActionsToggleLabel": "操作",
-    "searchFieldIndex": "Search field index"
+    "searchFieldIndex": "Search field index",
+    "metaSection.screenReaderLabel": "Update information"
 }
