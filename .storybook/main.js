@@ -9,11 +9,3 @@ module.exports = {
     'storybook-addon-rtl/register',
   ],
 };
-
-
-
-
-
-
-
-
