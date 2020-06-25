@@ -84,7 +84,7 @@
     "redux": "^3.6.0",
     "redux-form": "^7.0.3",
     "regenerator-runtime": "^0.13.3",
-    "sinon": "^9.0.2",
+    "sinon": "^7.3.2",
     "storybook-addon-intl": "^2.3.2",
     "storybook-addon-rtl": "^0.2.1",
     "storybook-readme": "^4.0.2",
