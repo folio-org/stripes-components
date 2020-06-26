@@ -122,3 +122,8 @@ export {
   countriesByCode,
   countryCodes,
 } from './util/countries';
+
+export {
+  languageByCode,
+  default as languages,
+} from './util/languages';
