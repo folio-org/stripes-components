@@ -15,6 +15,13 @@
   z-index: 9999;
 }
 
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
 .calendarInner {
   & td {
     vertical-align: middle;
@@ -100,4 +107,19 @@
 .weekday {
   font-size: var(--font-size-medium);
   text-align: center;
+}
+
+.monthSelect {
+  border-style: dashed;
+  border-width: 0 0 1px 0;
+  padding: 4px;
+}
+
+.yearInput {
+  border-style: dashed;
+  border-width: 0 0 1px 0;
+  min-width: 0;
+  flex: 0 1 auto;
+  padding: 4px;
+  width: 8em;
 }
