@@ -124,6 +124,7 @@ export {
 } from './util/countries';
 
 export {
+  intlPreferredLanguageCode,
   languageByCode,
   default as languages,
 } from './util/languages';

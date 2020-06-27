@@ -497,6 +497,13 @@ const languages = [
   { alpha3: 'zza', alpha2: '', name: 'Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki' },
 ];
 
+// Returns the language object from the above list specified by code, which can be either
+// the alpha2 or alpha3 code.
 export const languageByCode = code => find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
+
+// For a given language (specified by code, either alpha2 or alpha3), return the alpha2 code if there is
+// one, alpha3 otherwise. This is because react-intl's formatDisplayName function will not return the name
+// of a language for the alpha3 code if it also has an alpha2!
+export const intlPreferredLanguageCode = code => languageByCode(code).alpha2 || languageByCode(code).alpha3;
 
 export default languages;
