@@ -360,7 +360,6 @@ const languages = [
   { alpha3: 'pra', alpha2: '', name: 'Prakrit languages' },
   { alpha3: 'pro', alpha2: '', name: 'Provençal, Old (to 1500); Occitan, Old (to 1500)' },
   { alpha3: 'pus', alpha2: 'ps', name: 'Pushto; Pashto' },
-  { alpha3: 'qaa-qtz', alpha2: '', name: 'Reserved for local use' },
   { alpha3: 'que', alpha2: 'qu', name: 'Quechua' },
   { alpha3: 'raj', alpha2: '', name: 'Rajasthani' },
   { alpha3: 'rap', alpha2: '', name: 'Rapanui' },
