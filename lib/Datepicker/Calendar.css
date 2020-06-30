@@ -123,3 +123,12 @@
   padding: 4px;
   width: 8em;
 }
+
+.daysOfWeek {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin: 1rem 0 .6rem;
+  list-style: none;
+  font-weight: bold;
+}

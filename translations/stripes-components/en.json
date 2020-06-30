@@ -5,7 +5,7 @@
   "goToPreviousMonth": "Go to previous month",
   "goToNextYear": "Go to next year",
   "goToNextMonth": "Go to next month",
-  "selectDay": "Select {dayOfWeek}, {date}",
+  "selectDay": "Choose {dayOfWeek}, {date}",
   "dateSelected": "{date} selected",
   "Datepicker.monthControl": "month",
   "Datepicker.yearControl": "year",
