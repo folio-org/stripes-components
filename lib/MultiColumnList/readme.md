@@ -73,6 +73,7 @@ Name | type | description | default | required
 `isSelected` | func({`item`}) | Should return `true` or `false` on whether or not to apply the `selectedClass` to the row. Useful for multiple selections. Preferred over `selectedRow` | |
 `loading` | bool | If true, will display an animated loading icon. | |
 `maxHeight` | number | the maximum height that the list should grow to before scrolling its list body in pixels. | |
+`nonInteractiveHeaders` | array of strings | Pass an array of column names to make their column headers non-interactive. This is only relevant if you have supplied an `onHeaderClick`-callback and you only want some of the header columns to be interactable. | [] |
 `onHeaderClick` | func[event, headerMetadata] | callback function invoked when one of the cells in the header is clicked (typically to choose a sort-order). By default, headerMetadata includes the column's data name as well as its alias, in case a object is supplied to the columnMapping prop. | |
 `onNeedMoreData` | func(`askAmount`, `index`) | Callback for fetching more data. If this prop is provided and a `totalCount` prop is provided, but un-reached by the count of loaded data items, `askAmount` will ask for the remainder of items or the `pageAmount` prop, whichever is less. This can be used to fulfill `limit` query parameters. `rowIndex` can be used to fulfill an `offset` query parameter. | |
 `onRowClick` | function(`event`, `item`) | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | |

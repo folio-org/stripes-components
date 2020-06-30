@@ -328,5 +328,7 @@
     "noValue.noValueSet": "Nenhum valor definido",
     "mcl.loadMore": "Carregue mais",
     "mcl.itemsRequestedMessage": "Solicitando mais resultados, o foco será na próxima linha quando chegarem",
-    "paneMenuActionsToggleLabel": "Ações"
+    "paneMenuActionsToggleLabel": "Ações",
+    "searchFieldIndex": "Índice do campo de pesquisa",
+    "metaSection.screenReaderLabel": "Atualizar informação"
 }

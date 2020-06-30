@@ -1,4 +1,5 @@
 @import '../variables.css';
+/* stylelint-disable no-descending-specificity */
 
 :root {
   --checkbox-size: 12px;
@@ -47,7 +48,6 @@
   min-height: var(--control-min-size-desktop);
   display: flex;
   align-items: baseline;
-  cursor: pointer;
   flex-grow: 2;
   position: relative;
   border-radius: var(--radius);
@@ -73,13 +73,73 @@
  */
 .input {
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   opacity: 0;
   cursor: pointer;
 }
 
 .noLabel .input {
   transform: scale(1.9);
+}
+
+/**
+ * Checkbox feedback
+ */
+.checkboxFeedback {
+  font-size: var(--font-size-medium);
+}
+
+.hasWarning {
+  & .checkboxFeedback {
+    color: var(--warn);
+  }
+
+  & .checkboxIcon {
+    border-color: var(--warn);
+  }
+}
+
+.hasError {
+  & .checkboxFeedback {
+    color: var(--error);
+  }
+
+  & .checkboxIcon {
+    border-color: var(--error);
+  }
+}
+
+/**
+ * Disabled or read-only
+ */
+.disabled,
+.readOnly {
+  & .inner,
+  & .input {
+    cursor: default;
+  }
+
+  & .checkboxIcon,
+  & input:checked + .checkboxIcon {
+    background-color: var(--checkable-disabled-fill);
+    border-color: var(--checkable-disabled-fill);
+  }
+}
+
+/**
+ * Checked state
+ */
+
+.input:checked + .checkboxIcon {
+  background-color: #000;
+
+  & svg {
+    opacity: 1;
+  }
+
+  & svg path {
+    stroke: #fff;
+  }
 }
 
 /**
@@ -122,33 +182,6 @@
 }
 
 /**
- * Checkbox feedback
- */
-.checkboxFeedback {
-  font-size: var(--font-size-medium);
-}
-
-.hasWarning {
-  & .checkboxFeedback {
-    color: var(--warn);
-  }
-
-  & .checkboxIcon {
-    border-color: var(--warn);
-  }
-}
-
-.hasError {
-  & .checkboxFeedback {
-    color: var(--error);
-  }
-
-  & .checkboxIcon {
-    border-color: var(--error);
-  }
-}
-
-/**
  * Interaction styles (hover, focus, active)
  */
 .checkboxInteractionStylesControl {
@@ -161,33 +194,4 @@
 
 .labelFocused {
   composes: isFocused from "../sharedStyles/interactionStyles.css";
-}
-
-/**
- * Disabled
- */
-.disabled {
-  & .checkboxIcon {
-    opacity: 0.5;
-  }
-
-  &:hover .inner {
-    cursor: default;
-  }
-}
-
-/**
- * Checked state
- */
-
-.input:checked + .checkboxIcon {
-  background-color: #000;
-
-  & svg {
-    opacity: 1;
-  }
-
-  & svg path {
-    stroke: #fff;
-  }
 }

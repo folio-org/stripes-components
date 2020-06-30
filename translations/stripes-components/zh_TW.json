@@ -328,5 +328,7 @@
     "noValue.noValueSet": "No value set",
     "mcl.loadMore": "繼續載入",
     "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive",
-    "paneMenuActionsToggleLabel": "Actions"
+    "paneMenuActionsToggleLabel": "Actions",
+    "searchFieldIndex": "Search field index",
+    "metaSection.screenReaderLabel": "Update information"
 }
