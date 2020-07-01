@@ -3,6 +3,7 @@
 ## 8.0.0 (IN PROGRESS)
 
 * Increment `react-router` to `^5.2`.
+* Add a utility list of language names & helper functions. Refs UIIN-829.
 
 ## 7.1.0 (IN PROGRESS)
 
@@ -11,7 +12,6 @@
 * Fix MultiSelect carat not aligned when there is not enough space.
 * ARIA role must be appropriate for the element (Selection). Fixes STCOM-702.
 * Add to `aria-label` descriptive text for filter headings. Refs STCOM-703.
-* Add a utility list of language names & helper functions. Refs UIIN-829.
 
 ## [7.0.1](https://github.com/folio-org/stripes-components/tree/v7.0.1) (2020-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.0...v7.0.1)
