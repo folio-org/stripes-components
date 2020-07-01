@@ -3,6 +3,7 @@
 ## 8.0.0 (IN PROGRESS)
 
 * Increment `react-router` to `^5.2`.
+* Upgraded `react-overlays` dependency to the latest version. Refs STCOM-650.
 
 ## 7.1.0 (IN PROGRESS)
 
