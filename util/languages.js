@@ -1,4 +1,5 @@
 import { find } from 'lodash';
+import { useIntl } from 'react-intl';
 
 // This list is derived from the table provided at https://www.loc.gov/standards/iso639-2/ascii_8bits.html
 // It uses the ISO 639-2 standard. Not all language names have both a two-character and three-character
@@ -496,13 +497,19 @@ const languages = [
   { alpha3: 'zza', alpha2: '', name: 'Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki' },
 ];
 
-// Returns the language object from the above list specified by code, which can be either
-// the alpha2 or alpha3 code.
-export const languageByCode = code => find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
+// Given a two- or three-character language code, return a localized langugae name string
+export const formattedLanguageName = code => {
+  // Getting the right localized name is slightly tricky because some languages
+  // can be represented by either a two- or three-character code (e.g.,
+  // 'bur' and 'my' both represent Burmese), but formatDisplayName will only
+  // return a localized language name for the two-char code (if there is one).
+  // Otherwise, it returns undefined. Thus for localizing, we
+  // have to favor the two-char code if there is one. If the function doesn't
+  // return a formatted language name at all, we use the English name as a fallback label.
+  const language = find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
+  const codeToUse = language.alpha2 || language.alpha3;
 
-// For a given language (specified by code, either alpha2 or alpha3), return the alpha2 code if there is
-// one, alpha3 otherwise. This is because react-intl's formatDisplayName function will not return the name
-// of a language for the alpha3 code if it also has an alpha2!
-export const intlPreferredLanguageCode = code => languageByCode(code).alpha2 || languageByCode(code).alpha3;
+  return useIntl().formatDisplayName(codeToUse, { fallback: 'none' }) || language.name;
+};
 
 export default languages;
