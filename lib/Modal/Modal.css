@@ -8,6 +8,8 @@
   width: 100%;
   height: 100%;
   pointer-events: auto;
+  background-color: transparent;
+  transition: background-color 0.3s;
 }
 
 .modal {
@@ -87,13 +89,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 0.3s;
-
-  &.show {
-    opacity: 1;
-  }
 }
 
 @media (--medium-up) {
@@ -130,24 +125,20 @@
  */
 
 .entered {
+  background-color: rgba(0, 0, 0, 0.2);
+
   & .modal {
     transform: translateY(0);
-    opacity: 1;
-  }
-
-  & .backdrop {
     opacity: 1;
   }
 }
 
 .exiting {
+  background-color: transparent;
+  transition-delay: 0.1s;
+
   & .modal {
     transform: translateY(20px);
     opacity: 0;
-  }
-
-  & .backdrop {
-    opacity: 0;
-    transition-delay: 0.1s;
   }
 }
