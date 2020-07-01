@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { configure, addDecorator } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { withOptions } from '@storybook/addon-options';
+import { addReadme } from 'storybook-readme';
 import { initializeRTL } from 'storybook-addon-rtl';
 import '../lib/global.css';
-
 
 /**
  * React intl support
@@ -97,10 +97,14 @@ addDecorator(withOptions({
   hierarchyRootSeparator: /\|/,
 }));
 
-const req = require.context('../lib', true, /\.stories\.js$/);
+addParameters({ options: { theme: {} } });
 
-function loadStories() {
-  req.keys().forEach((filename) => req(filename));
-}
-
-configure(loadStories, module);
+/**
+ * Readme
+ */
+addDecorator(addReadme);
+addParameters({ 
+    readme: {
+        codeTheme: 'a11y-dark',
+    },
+ });
