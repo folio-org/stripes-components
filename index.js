@@ -11,6 +11,7 @@ export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as EmptyMessage } from './lib/EmptyMessage';
 export { default as FormattedUTCDate } from './lib/FormattedUTCDate';
 export { default as Label } from './lib/Label';
+export { default as Link } from './lib/Link';
 export { Loading, LoadingPane, LoadingView } from './lib/Loading';
 export { default as RadioButton } from './lib/RadioButton';
 export { default as RadioButtonGroup } from './lib/RadioButtonGroup';

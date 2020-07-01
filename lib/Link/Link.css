@@ -1,0 +1,60 @@
+/**
+ * Link
+ */
+
+@import '../variables.css';
+
+:root {
+  --link-color-default: #2F609F;
+  --link-border-color-default: #d7dfeb;
+
+  --link-color-hover: green;
+  --link-border-color-hover: var(--link-color-hover);
+
+  --link-color-active: #000;
+  --link-border-color-active: var(--link-color-active);
+  
+  --link-border-color-focus: var(--primary);
+  --link-box-shadow-focus: 0 0 0 3px var(--color-fill-focus);
+}
+
+.root {
+  color: var(--link-color-default);
+  position: relative;
+  outline: 0;
+
+  /* CSS trick for adding border bottom with multiline support */
+  background-repeat: repeat-x;
+  background-position: 0 1.2em;
+  background-size: 100% 1px;
+  background-image: linear-gradient(to right, var(--link-border-color-default), var(--link-border-color-default));
+
+  /* Focus style */
+  &::before {
+    border-radius: var(--radius);
+    border: 1px solid var(--link-border-color-focus);
+    bottom: 0;
+    box-shadow: var(--link-box-shadow-focus);
+    content: "";
+    left: -2px;
+    opacity: 0;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    z-index: -1;
+  }
+
+  &:focus {
+    background-image: none;
+    display: inline-block;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  /* Hover style */
+
+
+  /* Active style */
+}
