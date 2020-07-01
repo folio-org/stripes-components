@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 8.0.0 (IN PROGRESS)
+
+* Increment `react-router` to `^5.2`.
+
 ## 7.1.0 (IN PROGRESS)
 
 * Provide `<CountrySelection>`. Fixes STCOM-291.
