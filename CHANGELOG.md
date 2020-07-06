@@ -3,6 +3,7 @@
 ## 8.0.0 (IN PROGRESS)
 
 * Increment `react-router` to `^5.2`.
+* Add a utility list of language names & helper functions. Refs UIIN-829.
 
 ## 7.1.0 (IN PROGRESS)
 
