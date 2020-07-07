@@ -499,8 +499,6 @@ const languages = [
 
 // Given a two- or three-character language code, return a localized langugae name string
 export const formattedLanguageName = code => {
-
-  const intl = useIntl();
   // Getting the right localized name is slightly tricky because some languages
   // can be represented by either a two- or three-character code (e.g.,
   // 'bur' and 'my' both represent Burmese), but formatDisplayName will only
@@ -511,7 +509,7 @@ export const formattedLanguageName = code => {
   const language = find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
   const codeToUse = language.alpha2 || language.alpha3;
 
-  return intl.formatDisplayName(codeToUse, { fallback: 'none' }) || language.name;
+  return useIntl().formatDisplayName(codeToUse, { fallback: 'none' }) || language.name;
 };
 
 export default languages;
