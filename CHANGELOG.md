@@ -4,6 +4,7 @@
 
 * Increment `react-router` to `^5.2`.
 * Upgraded `react-overlays` dependency to the latest version. Refs STCOM-650.
+* Add a utility list of language names & helper functions. Refs UIIN-829.
 
 ## 7.1.0 (IN PROGRESS)
 
