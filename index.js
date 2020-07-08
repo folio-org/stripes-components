@@ -123,3 +123,8 @@ export {
   countriesByCode,
   countryCodes,
 } from './util/countries';
+
+export {
+  formattedLanguageName,
+  default as languages,
+} from './util/languages';
