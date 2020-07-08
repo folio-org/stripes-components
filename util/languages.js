@@ -1,5 +1,4 @@
 import { find } from 'lodash';
-import { useIntl } from 'react-intl';
 
 // This list is derived from the table provided at https://www.loc.gov/standards/iso639-2/ascii_8bits.html
 // It uses the ISO 639-2 standard. Not all language names have both a two-character and three-character
@@ -498,7 +497,8 @@ const languages = [
 ];
 
 // Given a two- or three-character language code, return a localized langugae name string
-export const formattedLanguageName = code => {
+// @intl is really useIntl(), which can't be invoked outside a functional component
+export const formattedLanguageName = (code, intl) => {
   // Getting the right localized name is slightly tricky because some languages
   // can be represented by either a two- or three-character code (e.g.,
   // 'bur' and 'my' both represent Burmese), but formatDisplayName will only
@@ -509,7 +509,7 @@ export const formattedLanguageName = code => {
   const language = find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
   const codeToUse = language.alpha2 || language.alpha3;
 
-  return useIntl().formatDisplayName(codeToUse, { fallback: 'none' }) || language.name;
+  return intl.formatDisplayName(codeToUse, { fallback: 'none' }) || language.name;
 };
 
 export default languages;
