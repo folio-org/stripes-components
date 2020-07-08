@@ -5,16 +5,19 @@
 @import '../variables.css';
 
 :root {
-  --link-color-default: #2F609F;
+  --link-color-default: var(--color-link);
   --link-border-color-default: #d7dfeb;
 
-  --link-color-hover: green;
+  --link-color-hover: #23385a;
   --link-border-color-hover: var(--link-color-hover);
 
-  --link-color-active: #000;
+  --link-color-active: var(--color-text);
   --link-border-color-active: var(--link-color-active);
+
+  --link-color-visited: var(--color-link-visited);
+  --link-border-color-visited: var(--link-color-visited);
   
-  --link-border-color-focus: var(--primary);
+  --link-border-color-focus: #3b5f9a;
   --link-box-shadow-focus: 0 0 0 3px var(--color-fill-focus);
 }
 
@@ -29,7 +32,7 @@
   background-size: 100% 1px;
   background-image: linear-gradient(to right, var(--link-border-color-default), var(--link-border-color-default));
 
-  /* Focus style */
+  /* Focus */
   &::before {
     border-radius: var(--radius);
     border: 1px solid var(--link-border-color-focus);
@@ -37,7 +40,7 @@
     box-shadow: var(--link-box-shadow-focus);
     content: "";
     left: -2px;
-    opacity: 0;
+    display: none;
     position: absolute;
     right: -2px;
     top: 0;
@@ -48,13 +51,35 @@
     background-image: none;
     display: inline-block;
 
+    /* Activates focus outline */
     &::before {
-      opacity: 1;
+      display: block;
     }
   }
 
-  /* Hover style */
+  /* Visited */
+  &:visited {
+    color: var(--link-color-visited);
+    background-image: linear-gradient(to right, var(--link-border-color-visited), var(--link-border-color-visited));
+  }  
 
+  /* Hover */
+  &:hover {
+    color: var(--link-color-hover);
 
-  /* Active style */
+    &:not(:focus) {
+      background-image: linear-gradient(to right, var(--link-border-color-hover), var(--link-border-color-hover));
+    }
+  }
+
+  /* Active */
+  &:active {
+    color: var(--link-color-active);
+    display: inline;
+    background-image: linear-gradient(to right, var(--link-border-color-active), var(--link-border-color-active));
+
+    &::before {
+      display: none;
+    }
+  }
 }
