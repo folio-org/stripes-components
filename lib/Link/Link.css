@@ -22,7 +22,7 @@
   text-underline-position: under;
   text-decoration-color: var(--link-border-color-default);
 
-  /* Focus */
+  /* Focus outline */
   &::before {
     border-radius: var(--radius);
     border: 1px solid var(--link-border-color-focus);
@@ -37,25 +37,11 @@
     z-index: -1;
   }
 
-  &:focus {
-    background-image: none;
-    display: inline-block;
-
-    &:not(:active) {
-      text-decoration: none;
-    }
-
-    /* Activates focus outline */
-    &::before {
-      display: block;
-    }
-  }
-
   /* Visited */
   &:visited {
     color: var(--link-color-visited);
     text-decoration-color: var(--link-color-visited);
-  }  
+  }
 
   /* Hover */
   &:hover {
@@ -71,6 +57,21 @@
 
     &::before {
       display: none;
+    }
+  }
+
+  /* Focus */
+  &:focus {
+    background-image: none;
+    display: inline-block;
+
+    &:not(:active) {
+      text-decoration: none;
+    }
+
+    /* Activates focus outline */
+    &::before {
+      display: block;
     }
   }
 }
