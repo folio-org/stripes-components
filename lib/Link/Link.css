@@ -7,16 +7,9 @@
 :root {
   --link-color-default: var(--color-link);
   --link-border-color-default: #d7dfeb;
-
   --link-color-hover: #23385a;
-  --link-border-color-hover: var(--link-color-hover);
-
   --link-color-active: var(--color-text);
-  --link-border-color-active: var(--link-color-active);
-
   --link-color-visited: var(--color-link-visited);
-  --link-border-color-visited: var(--link-color-visited);
-  
   --link-border-color-focus: #3b5f9a;
   --link-box-shadow-focus: 0 0 0 3px var(--color-fill-focus);
 }
@@ -25,12 +18,9 @@
   color: var(--link-color-default);
   position: relative;
   outline: 0;
-
-  /* CSS trick for adding border bottom with multiline support */
-  background-repeat: repeat-x;
-  background-position: 0 1.2em;
-  background-size: 100% 1px;
-  background-image: linear-gradient(to right, var(--link-border-color-default), var(--link-border-color-default));
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: var(--link-border-color-default);
 
   /* Focus */
   &::before {
@@ -51,6 +41,10 @@
     background-image: none;
     display: inline-block;
 
+    &:not(:active) {
+      text-decoration: none;
+    }
+
     /* Activates focus outline */
     &::before {
       display: block;
@@ -60,23 +54,20 @@
   /* Visited */
   &:visited {
     color: var(--link-color-visited);
-    background-image: linear-gradient(to right, var(--link-border-color-visited), var(--link-border-color-visited));
+    text-decoration-color: var(--link-color-visited);
   }  
 
   /* Hover */
   &:hover {
     color: var(--link-color-hover);
-
-    &:not(:focus) {
-      background-image: linear-gradient(to right, var(--link-border-color-hover), var(--link-border-color-hover));
-    }
+    text-decoration-color: var(--link-color-hover);
   }
 
   /* Active */
   &:active {
     color: var(--link-color-active);
+    text-decoration-color: var(--link-color-active);
     display: inline;
-    background-image: linear-gradient(to right, var(--link-border-color-active), var(--link-border-color-active));
 
     &::before {
       display: none;
