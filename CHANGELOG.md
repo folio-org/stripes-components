@@ -4,6 +4,7 @@
 
 * Increment `react-router` to `^5.2`.
 * Add a utility list of language names & helper functions. Refs UIIN-829.
+* Added `lightning` icon. Refs UX-377.
 
 ## 7.1.0 (IN PROGRESS)
 
