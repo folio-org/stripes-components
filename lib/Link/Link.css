@@ -65,12 +65,13 @@
     background-image: none;
     display: inline-block;
 
+    /* Prevents double underline */
     &:not(:active) {
       text-decoration: none;
     }
 
     /* Activates focus outline */
-    &::before {
+    &:not(:hover)::before {
       display: block;
     }
   }
