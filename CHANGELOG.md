@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [7.0.3](https://github.com/folio-org/stripes-components/tree/v7.0.3) (2020-07-09)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.2...v7.0.3)
+
+* Correct validation for User Record Custom Fields MultiSelection. Fixes STCOM-715.
+
 ## [7.0.2](https://github.com/folio-org/stripes-components/tree/v7.0.2) (2020-07-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v7.0.2)
 
