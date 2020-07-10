@@ -1,8 +1,9 @@
 # Change history for stripes-components
 
-## 7.0.4 (IN PROGRESS)
+## [7.0.4](https://github.com/folio-org/stripes-components/tree/v7.0.4) (2020-07-09)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.3...v7.0.4)
 
-* Fix MultiSelect carat not aligned when there is not enough space.
+* Fix `<MultiSelect>` caret not aligned when there is not enough space. Refs STCOM-716.
 
 ## [7.0.3](https://github.com/folio-org/stripes-components/tree/v7.0.3) (2020-07-09)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.2...v7.0.3)
