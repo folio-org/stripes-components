@@ -12,6 +12,7 @@
 * Provide `<CountrySelection>`. Fixes STCOM-291.
 * Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
 * Fix MultiSelect carat not aligned when there is not enough space.
+* Updated `<Accordion>` a11y attributes and roles. Fixes STCOM-697.
 * ARIA role must be appropriate for the element (Selection). Fixes STCOM-702.
 * Add to `aria-label` descriptive text for filter headings. Refs STCOM-703.
 
