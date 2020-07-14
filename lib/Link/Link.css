@@ -1,0 +1,78 @@
+/**
+ * Link
+ */
+
+@import '../variables.css';
+
+:root {
+  --link-color-default: var(--color-link);
+  --link-border-color-default: #d7dfeb;
+  --link-color-hover: #23385a;
+  --link-color-active: var(--color-text);
+  --link-color-visited: var(--color-link-visited);
+  --link-border-color-focus: #3b5f9a;
+  --link-box-shadow-focus: 0 0 0 3px var(--color-fill-focus);
+}
+
+.root {
+  color: var(--link-color-default);
+  position: relative;
+  outline: 0;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: var(--link-border-color-default);
+
+  /* Focus outline */
+  &::before {
+    border-radius: var(--radius);
+    border: 1px solid var(--link-border-color-focus);
+    bottom: 0;
+    box-shadow: var(--link-box-shadow-focus);
+    content: "";
+    left: -2px;
+    display: none;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    z-index: -1;
+  }
+
+  /* Visited */
+  &:visited {
+    color: var(--link-color-visited);
+    text-decoration-color: var(--link-color-visited);
+  }
+
+  /* Hover */
+  &:hover {
+    color: var(--link-color-hover);
+    text-decoration-color: var(--link-color-hover);
+  }
+
+  /* Active */
+  &:active {
+    color: var(--link-color-active);
+    text-decoration-color: var(--link-color-active);
+    display: inline;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  /* Focus */
+  &:focus {
+    background-image: none;
+    display: inline-block;
+
+    /* Prevents double underline */
+    &:not(:active) {
+      text-decoration: none;
+    }
+
+    /* Activates focus outline */
+    &:not(:hover)::before {
+      display: block;
+    }
+  }
+}
