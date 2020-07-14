@@ -5,7 +5,7 @@
   --color-border: rgba(0, 0, 0, 0.2);
   --color-border-p2: rgba(0, 0, 0, 0.1);
   --color-icon: rgba(0, 0, 0, 0.62);
-  --color-link: var(--primary);
+  --color-link: #2f609f;
   --color-link-visited: #4f2bbb;
   --color-fill: rgba(0, 0, 0, 0.03);
   --color-fill-table-row-odd: rgba(0, 0, 0, 0.08);

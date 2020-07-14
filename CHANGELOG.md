@@ -5,12 +5,15 @@
 * Increment `react-router` to `^5.2`.
 * Upgraded `react-overlays` dependency to the latest version. Refs STCOM-650.
 * Add a utility list of language names & helper functions. Refs UIIN-829.
+* Added `<Link>`-component. Refs STCOM-699.
+* Added `lightning` icon. Refs UX-377.
 
 ## 7.1.0 (IN PROGRESS)
 
 * Provide `<CountrySelection>`. Fixes STCOM-291.
 * Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
 * Fix MultiSelect carat not aligned when there is not enough space.
+* Updated `<Accordion>` a11y attributes and roles. Fixes STCOM-697.
 * ARIA role must be appropriate for the element (Selection). Fixes STCOM-702.
 * Add to `aria-label` descriptive text for filter headings. Refs STCOM-703.
 
