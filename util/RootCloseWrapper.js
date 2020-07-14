@@ -1,3 +1,10 @@
+/**
+ * RootCloseWrapper
+ *
+ * This is a replacement for the react-overlays <RootCloseWrapper> component which is deprecated.
+ * It's only used for class components that does not support using the useRootClose hook.
+ */
+
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import useRootClose from 'react-overlays/useRootClose';
