@@ -35,6 +35,7 @@
 /* In some cases we want a negative offset for the focus indicator border */
 .withNegativeOffset {
   top: 0;
+
   &:focus-within::after {
     top: -5px;
   }
