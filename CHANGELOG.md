@@ -7,6 +7,7 @@
 * Add a utility list of language names & helper functions. Refs UIIN-829.
 * Added `<Link>`-component. Refs STCOM-699.
 * Added `lightning` icon. Refs UX-377.
+* Fix layout of inputed MultiColumnList in Accordion. Refs STCOM-719.
 
 ## 7.1.0 (IN PROGRESS)
 
