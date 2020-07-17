@@ -128,3 +128,6 @@ export {
   formattedLanguageName,
   default as languages,
 } from './util/languages';
+
+/* hooks */
+export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
