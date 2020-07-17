@@ -44,7 +44,7 @@ Here's an example from the Users-module:
   />
 ```
 ## Column Widths
-MultiColumnList measures DOM elements at render-time to calculate a single width for the entire column. At a minimum, this will be the width of the column's header. Render-time measurement is not always the preferred way to go, so MultiColumnList has the `columnWidths` prop for pre-determined widths to be applied. This will also avoid calculation of widths for pre-determined columns at render-time. 
+MultiColumnList measures DOM elements at render-time to calculate a single width for the entire column. At a minimum, this will be the width of the column's header. Render-time measurement is not always the preferred way to go, so MultiColumnList has the `columnWidths` prop for pre-determined widths to be applied. This will also avoid calculation of widths for pre-determined columns at render-time.
 
 **Advice #1**: Use a pre-determined width if there's a large amount of difference between a column's contents from one row to another. For instance, "title" items could contain a single word, or it could contain 10 words. Calculation will prefer a width that's closer to the longest among the sampled cells, so setting a width is the best way to keep the widths modest.
 
@@ -61,9 +61,10 @@ Name | type | description | default | required
 `columnMapping` | object | Maps rendered column labels to the data fields for the onHeaderClick prop. | `{}` |
 `columnWidths` | object | Set custom column widths, e.g. {email: '150px'}. Component will automatically measure any columns that are unspecified. | |
 `contentData` | array of object | the list of objects to be displayed. | | required
-`dataEndReached` | bool | Used in conjuction with `pagingType="click"`, `dataEndReached` can be used if a suitable `totalCount` prop cannot be obtained. Setting this to `true` will render the "end-of-list" marker rather than the load button. | `false` | 
+`dataEndReached` | bool | Used in conjuction with `pagingType="click"`, `dataEndReached` can be used if a suitable `totalCount` prop cannot be obtained. Setting this to `true` will render the "end-of-list" marker rather than the load button. | `false` |
 `formatter`  | object mapping names to functions | see separate section | |
-`getCellClass` | func | Used to update or completely overwrite the visual styles for each column. The function passed to this prop will receive the current CSS class as the only parameter and the returned value will overwrite the default class – e.g. `defaultClass => ${defaultClass} ${myCustomClass}` | `undefined` | 
+`getCellClass` | func | Used to update or completely overwrite the visual styles for each column. The function passed to this prop will receive the current CSS class, row data and the column name as the parameters and the returned value will overwrite the default class – e.g. `(defaultClass, rowData, header) => ${defaultClass} ${myCustomClass}` | `undefined` |
+`getHeaderCellClass` | func | Used to update the visual styles for each column header. The function passed to this prop will receive the column name as the  parameter and the returned value will extend the default class – e.g. `header =>  ${myCustomClass}` | `undefined` |
 `hasMargin` | bool | Applies horizontal margin on rows and header. This is primarily used to achieve the correct spacing within result panes. | |
 `headerMetadata` | object | Object with data to include with the | |
 `headerRowClass` | string | Applies a css class to the header row of the list. | |
@@ -78,8 +79,8 @@ Name | type | description | default | required
 `onNeedMoreData` | func(`askAmount`, `index`) | Callback for fetching more data. If this prop is provided and a `totalCount` prop is provided, but un-reached by the count of loaded data items, `askAmount` will ask for the remainder of items or the `pageAmount` prop, whichever is less. This can be used to fulfill `limit` query parameters. `rowIndex` can be used to fulfill an `offset` query parameter. | |
 `onRowClick` | function(`event`, `item`) | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | |
 `onScroll` | func | Callback for scrolling of list body. | `noop` |
-`pageAmount` | number | The base amount of data to pass as the `askAmount` parameter for the `onNeedMoreData` prop | `30` | 
-`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. | `"scroll"` | 
+`pageAmount` | number | The base amount of data to pass as the `askAmount` parameter for the `onNeedMoreData` prop | `30` |
+`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. | `"scroll"` |
 `rowFormatter`  | func | function of shape `<name>({rowIndex, rowClass, rowData, cells, rowProps}){return <reactElement>}` that can be used to supply custom row layout. Forking [defaultRowFormatter](defaultRowFormatter.js) is a good place to start if you need to use this. | `defaultRowFormatter` |
 `rowMetadata` | object | arbitrary data that is passed as a metadata object to the `onRowClick` handler - useful for passing in data that may exist outside of the realm of the rendered MCL. | |
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |
@@ -140,7 +141,7 @@ const resultsFormatter = {
 ```
 
 #### Side-effects in formatters
-Efficient performance of MCL depends on rows being "Purely" rendered - no exterior data used aside from what is directly supplied to the formatters themselves in the `item` argument. Doing so is discouraged and problematic. If an instance is using "impure" techniques, rows may not update as you would expect them to. Two suggestions for handling this: 
+Efficient performance of MCL depends on rows being "Purely" rendered - no exterior data used aside from what is directly supplied to the formatters themselves in the `item` argument. Doing so is discouraged and problematic. If an instance is using "impure" techniques, rows may not update as you would expect them to. Two suggestions for handling this:
 1. Actually include the exterior data into your `contentData` prop if possible.
 2. Use the `rowUpdater` prop to have MCL rows detect/render the changes.
 
