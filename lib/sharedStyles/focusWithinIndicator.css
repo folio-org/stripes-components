@@ -23,6 +23,7 @@
     top: -5px;
     opacity: 0;
     transition: height 200ms, top 200ms, opacity 500ms;
+    pointer-events: none;
   }
 
   &:focus-within::after {
