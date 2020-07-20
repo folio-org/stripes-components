@@ -62,7 +62,6 @@ Component | doc | categories
 [`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
 [`<FilterControlGroup>`](lib/FilterControlGroup) | | control
 [`<FilterGroups>`](lib/FilterGroups) | [doc](lib/FilterGroups/readme.md) | control
-[`<FilterPane>`](lib/FilterPane) | [doc](lib/FilterPane/readme.md) | structure
 [`<FilterPaneSearch>`](lib/FilterPaneSearch) | [doc](lib/FilterPaneSearch/readme.md) | obsolete
 [`<FocusLink>`](lib/FocusLink) | [doc](lib/FocusLink/readme.md) | accessibility
 [`<Headline>`](lib/Headline) | [doc](lib/Headline/readme.md) | structure

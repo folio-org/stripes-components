@@ -94,7 +94,6 @@ export { default as InfoPopover } from './lib/InfoPopover';
 export { default as SearchField } from './lib/SearchField';
 
 /* specific use */
-export { default as FilterPane } from './lib/FilterPane';
 export {
   default as FilterGroups,
   filterState,
