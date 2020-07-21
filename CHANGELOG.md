@@ -4,13 +4,20 @@
 
 * Increment `react-router` to `^5.2`.
 * Add a utility list of language names & helper functions. Refs UIIN-829.
+* Added `<Link>`-component. Refs STCOM-699.
 * Added `lightning` icon. Refs UX-377.
+* Fix layout of inputed MultiColumnList in Accordion. Refs STCOM-719.
+* Extend `getCellClass` callback with `rowData` and `column` name parameters. Introduced `getHeaderCellClass` callback prop to extend styling on the header cells. Refs STCOM-718
+* Remove FilterPane component. Refs STCOM-688.
+* Increase test coverage to 80% | Editor. Refs STCOM-660.
 
 ## 7.1.0 (IN PROGRESS)
 
+* Export currency options as a hook. Addition to STCOM-614.
 * Provide `<CountrySelection>`. Fixes STCOM-291.
 * Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
 * Fix MultiSelect carat not aligned when there is not enough space.
+* Updated `<Accordion>` a11y attributes and roles. Fixes STCOM-697.
 * ARIA role must be appropriate for the element (Selection). Fixes STCOM-702.
 * Add to `aria-label` descriptive text for filter headings. Refs STCOM-703.
 

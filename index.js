@@ -11,6 +11,7 @@ export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as EmptyMessage } from './lib/EmptyMessage';
 export { default as FormattedUTCDate } from './lib/FormattedUTCDate';
 export { default as Label } from './lib/Label';
+export { default as Link } from './lib/Link';
 export { Loading, LoadingPane, LoadingView } from './lib/Loading';
 export { default as RadioButton } from './lib/RadioButton';
 export { default as RadioButtonGroup } from './lib/RadioButtonGroup';
@@ -93,7 +94,6 @@ export { default as InfoPopover } from './lib/InfoPopover';
 export { default as SearchField } from './lib/SearchField';
 
 /* specific use */
-export { default as FilterPane } from './lib/FilterPane';
 export {
   default as FilterGroups,
   filterState,
@@ -127,3 +127,6 @@ export {
   formattedLanguageName,
   default as languages,
 } from './util/languages';
+
+/* hooks */
+export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
