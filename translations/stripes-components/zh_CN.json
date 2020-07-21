@@ -57,7 +57,7 @@
     "button.new": "新建",
     "multiSelection.defaultEmptyMessage": "找不到匹配的单件!",
     "multiSelection.filterPlaceholder": "筛选选项清单",
-    "multiSelection.controlDescription": "包含任何选定值的列表，其后是用于选择其他值的自动完成文本字段。",
+    "multiSelection.controlDescription": "包含任何选定值的清单，其后是用于选择其他值的自动完成文本字段。",
     "multiSelection.removeSelectedButtonDescription": "按回车或空格键从选择清单中移除单件。Home键和End键导航到第一个或最后一个单件。",
     "multiSelection.removeSelectedButtonLabel": "移除取值",
     "endOfList": "清单结束",
@@ -329,6 +329,6 @@
     "mcl.loadMore": "载入更多",
     "mcl.itemsRequestedMessage": "请求更多结果，将在到达时重点关注下一行",
     "paneMenuActionsToggleLabel": "操作",
-    "searchFieldIndex": "Search field index",
-    "metaSection.screenReaderLabel": "Update information"
+    "searchFieldIndex": "搜索字段索引",
+    "metaSection.screenReaderLabel": "更新信息"
 }
