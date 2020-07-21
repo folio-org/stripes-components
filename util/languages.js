@@ -506,10 +506,13 @@ export const formattedLanguageName = (code, intl) => {
   // Otherwise, it returns undefined. Thus for localizing, we
   // have to favor the two-char code if there is one. If the function doesn't
   // return a formatted language name at all, we use the English name as a fallback label.
+  //
+  // NOTE: This does not work at all in Safari for now.
   const language = find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
   const codeToUse = language.alpha2 || language.alpha3;
+  const intlString = intl.formatDisplayName(codeToUse, { fallback: 'none' });
 
-  return intl.formatDisplayName(codeToUse, { fallback: 'none' }) || language.name;
+  return intlString === undefined ? language.name : intlString;
 };
 
 export default languages;
