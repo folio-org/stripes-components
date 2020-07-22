@@ -104,6 +104,7 @@ Component | doc | categories
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) | accessibility, user-feedback
 [`<TextArea>`](lib/TextArea) | | control
 [`<TextField>`](lib/TextField) | [doc](lib/TextField/readme.md) | control
+[`<TextLink>`](lib/TextLink) | [doc](lib/TextLink/readme.md) | control
 [`<Timepicker>`](lib/Timepicker) | [doc](lib/Timepicker/readme.md) | control
 
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
