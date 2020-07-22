@@ -9,6 +9,7 @@
 * Fix layout of inputed MultiColumnList in Accordion. Refs STCOM-719.
 * Extend `getCellClass` callback with `rowData` and `column` name parameters. Introduced `getHeaderCellClass` callback prop to extend styling on the header cells. Refs STCOM-718
 * Remove FilterPane component. Refs STCOM-688.
+* Increase test coverage to 80% | Editor. Refs STCOM-660.
 
 ## 7.1.0 (IN PROGRESS)
 
