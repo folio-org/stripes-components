@@ -331,9 +331,9 @@
     "paneMenuActionsToggleLabel": "Actions",
     "searchFieldIndex": "Индекс поискового поля",
     "metaSection.screenReaderLabel": "Обновить информацию",
-    "Datepicker.monthControl": "month",
-    "Datepicker.yearControl": "year",
-    "Datepicker.unavailable": "unavailable",
-    "Datepicker.calendar": "calendar",
+    "Datepicker.monthControl": "месяц",
+    "Datepicker.yearControl": "год",
+    "Datepicker.unavailable": "недоступно",
+    "Datepicker.calendar": "календарь",
     "Datepicker.calenderRole": "datepicker"
 }

@@ -5,7 +5,7 @@
     "goToPreviousMonth": "Aller au mois précédent",
     "goToNextYear": "Aller à l'année suivante",
     "goToNextMonth": "Aller au mois suivant",
-    "selectDay": "Sélectionnez {dayOfWeek} , {date}",
+    "selectDay": "Choisissez {dayOfWeek} , {date}",
     "dateSelected": "{date} sélectionné",
     "screenReaderLabel": "Le format {label} est {screenReaderFormat} utilisez les touches fléchées pour parcourir les dates. Pressez la touche Entrée pour confirmer. {screenReaderMessage}",
     "clearFieldValue": "Effacer la valeur du champ",
@@ -331,9 +331,9 @@
     "paneMenuActionsToggleLabel": "Actions",
     "searchFieldIndex": "Search field index",
     "metaSection.screenReaderLabel": "Mettre à jour les informations",
-    "Datepicker.monthControl": "month",
-    "Datepicker.yearControl": "year",
-    "Datepicker.unavailable": "unavailable",
-    "Datepicker.calendar": "calendar",
-    "Datepicker.calenderRole": "datepicker"
+    "Datepicker.monthControl": "Mois",
+    "Datepicker.yearControl": "Année",
+    "Datepicker.unavailable": "Indisponible",
+    "Datepicker.calendar": "Calendrier",
+    "Datepicker.calenderRole": "Panneau de sélection de date"
 }
