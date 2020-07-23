@@ -533,7 +533,8 @@ export const formattedLanguageName = (code, intl, locale) => {
   }
 };
 
-
+// Provide an array of label/value pairs for the language list, suitable as options
+// for a <Select> component.
 export const languageOptions = (intl, locale) => {
   const options = languages.map(l => (
     {

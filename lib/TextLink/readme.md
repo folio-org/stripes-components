@@ -1,17 +1,17 @@
-# Link
-A replacement for the native `<a>` and the react-router-dom `<Link>`-component with a11y friendly interaction styles.
+# TextLink
+A replacement for the native `<a>` and the react-router-dom `<TextLink>`-component with a11y friendly interaction styles.
 
 ## Usage
 ```js
-import { Link } from '@folio/stripes/components';
+import { TextLink } from '@folio/stripes/components';
 
-<Link to="/users">
+<TextLink to="/users">
   I'm an internal link
-</Link>
+</TextLink>
 
-<Link target="_blank" rel="noopener noreferrer" href="https://folio.org">
+<TextLink target="_blank" rel="noopener noreferrer" href="https://folio.org">
   I'm an external link
-</Link>
+</TextLink>
 ```
 
 ## Props
