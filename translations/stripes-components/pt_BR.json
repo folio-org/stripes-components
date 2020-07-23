@@ -5,7 +5,7 @@
     "goToPreviousMonth": "Ir para o mês anterior",
     "goToNextYear": "Ir para o próximo ano",
     "goToNextMonth": "Ir para o próximo mês",
-    "selectDay": "Selecione {dayOfWeek}, {date}",
+    "selectDay": "Escolha {dayOfWeek} , {date}",
     "dateSelected": "{date} selecionado",
     "screenReaderLabel": "{label} formato é {screenReaderFormat} use as setas do teclado para navegar pelas datas. Pressione Enter para confirmar. {screenReaderMessage}",
     "clearFieldValue": "Limpar o valor do campo",
@@ -330,5 +330,10 @@
     "mcl.itemsRequestedMessage": "Solicitando mais resultados, o foco será na próxima linha quando chegarem",
     "paneMenuActionsToggleLabel": "Ações",
     "searchFieldIndex": "Índice do campo de pesquisa",
-    "metaSection.screenReaderLabel": "Atualizar informação"
+    "metaSection.screenReaderLabel": "Atualizar informação",
+    "Datepicker.monthControl": "mês",
+    "Datepicker.yearControl": "ano",
+    "Datepicker.unavailable": "indisponível",
+    "Datepicker.calendar": "calendário",
+    "Datepicker.calenderRole": "selecionador de datas"
 }
