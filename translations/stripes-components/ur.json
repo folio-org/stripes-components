@@ -5,7 +5,7 @@
     "goToPreviousMonth": "Go to previous month",
     "goToNextYear": "Go to next year",
     "goToNextMonth": "Go to next month",
-    "selectDay": "Select {dayOfWeek}, {date}",
+    "selectDay": "Choose {dayOfWeek}, {date}",
     "dateSelected": "{date} selected",
     "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
     "clearFieldValue": "Clear field value",
@@ -330,5 +330,10 @@
     "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive",
     "paneMenuActionsToggleLabel": "Actions",
     "searchFieldIndex": "Search field index",
-    "metaSection.screenReaderLabel": "Update information"
+    "metaSection.screenReaderLabel": "Update information",
+    "Datepicker.monthControl": "month",
+    "Datepicker.yearControl": "year",
+    "Datepicker.unavailable": "unavailable",
+    "Datepicker.calendar": "calendar",
+    "Datepicker.calenderRole": "datepicker"
 }

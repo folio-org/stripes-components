@@ -1,5 +1,5 @@
 /**
- * Link
+ * TextLink
  */
 
 @import '../variables.css';
@@ -66,7 +66,7 @@
     display: inline-block;
 
     /* Prevents double underline */
-    &:not(:active) {
+    &:not(:active):not(:hover) {
       text-decoration: none;
     }
 

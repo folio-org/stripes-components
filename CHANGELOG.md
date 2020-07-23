@@ -4,7 +4,7 @@
 
 * Increment `react-router` to `^5.2`.
 * Add a utility list of language names & helper functions. Refs UIIN-829.
-* Added `<Link>`-component. Refs STCOM-699.
+* Added `<TextLink>`-component. Refs STCOM-699.
 * Added `lightning` icon. Refs UX-377.
 * Fix layout of inputed MultiColumnList in Accordion. Refs STCOM-719.
 * Extend `getCellClass` callback with `rowData` and `column` name parameters. Introduced `getHeaderCellClass` callback prop to extend styling on the header cells. Refs STCOM-718
