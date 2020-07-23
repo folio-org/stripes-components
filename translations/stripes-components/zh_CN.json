@@ -330,5 +330,10 @@
     "mcl.itemsRequestedMessage": "请求更多结果，将在到达时重点关注下一行",
     "paneMenuActionsToggleLabel": "操作",
     "searchFieldIndex": "搜索字段索引",
-    "metaSection.screenReaderLabel": "更新信息"
+    "metaSection.screenReaderLabel": "更新信息",
+    "Datepicker.monthControl": "month",
+    "Datepicker.yearControl": "year",
+    "Datepicker.unavailable": "unavailable",
+    "Datepicker.calendar": "calendar",
+    "Datepicker.calenderRole": "datepicker"
 }
