@@ -330,5 +330,10 @@
     "mcl.itemsRequestedMessage": "Demander plus de résultats se concentrera sur la ligne suivante à leur arrivée",
     "paneMenuActionsToggleLabel": "Actions",
     "searchFieldIndex": "Search field index",
-    "metaSection.screenReaderLabel": "Mettre à jour les informations"
+    "metaSection.screenReaderLabel": "Mettre à jour les informations",
+    "Datepicker.monthControl": "month",
+    "Datepicker.yearControl": "year",
+    "Datepicker.unavailable": "unavailable",
+    "Datepicker.calendar": "calendar",
+    "Datepicker.calenderRole": "datepicker"
 }
