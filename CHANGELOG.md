@@ -14,6 +14,7 @@
 
 ## 7.1.0 (IN PROGRESS)
 
+* Avoid `ARIA attributes must conform to valid values` error on AutoSuggest field. Refs STCOM-720.
 * Export currency options as a hook. Addition to STCOM-614.
 * Provide `<CountrySelection>`. Fixes STCOM-291.
 * Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
