@@ -330,5 +330,10 @@
     "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive",
     "paneMenuActionsToggleLabel": "Actions",
     "searchFieldIndex": "Индекс поискового поля",
-    "metaSection.screenReaderLabel": "Обновить информацию"
+    "metaSection.screenReaderLabel": "Обновить информацию",
+    "Datepicker.monthControl": "month",
+    "Datepicker.yearControl": "year",
+    "Datepicker.unavailable": "unavailable",
+    "Datepicker.calendar": "calendar",
+    "Datepicker.calenderRole": "datepicker"
 }

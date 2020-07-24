@@ -330,5 +330,10 @@
     "mcl.itemsRequestedMessage": "طلب المزيد من النتائج، سوف يركز الصف التالي عند وصولها",
     "paneMenuActionsToggleLabel": "الإجراءات",
     "searchFieldIndex": "فهرس حقل البحث",
-    "metaSection.screenReaderLabel": "تحديث المعلومات"
+    "metaSection.screenReaderLabel": "تحديث المعلومات",
+    "Datepicker.monthControl": "الشهر",
+    "Datepicker.yearControl": "السنة",
+    "Datepicker.unavailable": "غير متاح",
+    "Datepicker.calendar": "الروزنامة",
+    "Datepicker.calenderRole": "محدد التاريخ"
 }
