@@ -125,6 +125,7 @@ export {
 
 export {
   formattedLanguageName,
+  languageOptions,
   default as languages,
 } from './util/languages';
 
