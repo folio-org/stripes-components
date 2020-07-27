@@ -331,6 +331,11 @@
     "paneMenuActionsToggleLabel": "Actions",
     "searchFieldIndex": "Search field index",
     "metaSection.screenReaderLabel": "Update information",
+    "Datepicker.monthControl": "month",
+    "Datepicker.yearControl": "year",
+    "Datepicker.unavailable": "unavailable",
+    "Datepicker.calendar": "calendar",
+    "Datepicker.calenderRole": "datepicker",
     "languages.afa": "Afro-Asiatic languages",
     "languages.alg": "Algonquian languages",
     "languages.apa": "Apache languages",
@@ -398,10 +403,5 @@
     "languages.wak": "Wakashan languages",
     "languages.wen": "Sorbian languages",
     "languages.ypk": "Yupik languages",
-    "languages.znd": "Zande languages",
-    "Datepicker.monthControl": "month",
-    "Datepicker.yearControl": "year",
-    "Datepicker.unavailable": "unavailable",
-    "Datepicker.calendar": "calendar",
-    "Datepicker.calenderRole": "datepicker"
+    "languages.znd": "Zande languages"
 }
