@@ -1,4 +1,4 @@
-import { find } from 'lodash';
+import { find, sortBy } from 'lodash';
 
 // This list is derived from the table provided at https://www.loc.gov/standards/iso639-2/ascii_8bits.html
 // It uses the ISO 639-2 standard. Not all language names have both a two-character and three-character
@@ -498,18 +498,51 @@ const languages = [
 
 // Given a two- or three-character language code, return a localized langugae name string
 // @intl is really useIntl(), which can't be invoked outside a functional component
-export const formattedLanguageName = (code, intl) => {
+export const formattedLanguageName = (code, intl, locale) => {
   // Getting the right localized name is slightly tricky because some languages
   // can be represented by either a two- or three-character code (e.g.,
   // 'bur' and 'my' both represent Burmese), but formatDisplayName will only
   // return a localized language name for the two-char code (if there is one).
   // Otherwise, it returns undefined. Thus for localizing, we
   // have to favor the two-char code if there is one. If the function doesn't
-  // return a formatted language name at all, we use the English name as a fallback label.
+  // return a formatted language name at all, we turn to the translation file
+  // or use the English name as a fallback label.
+  //
   const language = find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
   const codeToUse = language.alpha2 || language.alpha3;
 
-  return intl.formatDisplayName(codeToUse, { fallback: 'none' }) || language.name;
+  if (locale !== undefined) {
+    // 1. If a locale is provided, use Intl.DisplayNames (this is the preferred method
+    // because it works for a much longer list of languages and also works in Safari)
+    const languageNames = new Intl.DisplayNames(locale, { type: 'language' });
+    const translatedName = languageNames.of(codeToUse);
+    if (translatedName !== codeToUse) return translatedName;
+  }
+
+  // 2. If no locale is given, try intl.formatDisplayName
+  const intlString = intl.formatDisplayName(codeToUse, { fallback: 'none' });
+  if (intlString !== undefined) return intlString;
+  else {
+    // 3. If formatDisplayName doesn't give a result, look in the translation file
+    const translationId = `stripes-components.languages.${codeToUse}`;
+    const translatedName = intl.formatMessage({ id: translationId });
+
+    if (translatedName !== translationId) return translatedName;
+    // 4. If all else fails, use the English name from the list above
+    else return language.name;
+  }
+};
+
+// Provide an array of label/value pairs for the language list, suitable as options
+// for a <Select> component.
+export const languageOptions = (intl, locale) => {
+  const options = languages.map(l => (
+    {
+      label: formattedLanguageName(l.alpha3, intl, locale),
+      value: l.alpha3,
+    }
+  ));
+  return sortBy(options, ['label']);
 };
 
 export default languages;
