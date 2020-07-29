@@ -112,9 +112,5 @@ The value flow happens in 3 stages
 * **Down arrow** - Move cursor down in the calendar (forwards 1 week)
 * **Left arrow** - Move cursor left 1 day in the calendar (backwards 1 day)
 * **Right arrow** - Move cursor right 1 day in the calendar (forwards 1 day)
-* **PgUp** - backwards 1 month
-* **PgDown** - forwards 1 month
-* **Ctrl + PgUp** - backwards 1 year
-* **Ctrl + PgDown** - forwards 1 year
 * **Enter** - Select date at cursor
 * **Esc** - Close calendar
