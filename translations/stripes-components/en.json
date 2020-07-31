@@ -11,6 +11,8 @@
   "Datepicker.yearControl": "year",
   "Datepicker.unavailable": "unavailable",
   "Datepicker.calendar": "calendar",
+  "Datepicker.calendarDaysList": "calendar days list.",
+  "Datepicker.calendarDaysListDescription": "Use arrow keys to move cursor, press enter to select day.",
   "Datepicker.calenderRole": "datepicker",
   "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
   "clearFieldValue": "Clear field value",

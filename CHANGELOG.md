@@ -7,10 +7,12 @@
 * Added `<TextLink>`-component. Refs STCOM-699.
 * Added `lightning` icon. Refs UX-377.
 * Fix layout of inputed MultiColumnList in Accordion. Refs STCOM-719.
+* Added focus-within styles for `<Pane>`. Refs STCOM-477.
 * Extend `getCellClass` callback with `rowData` and `column` name parameters. Introduced `getHeaderCellClass` callback prop to extend styling on the header cells. Refs STCOM-718
 * Remove FilterPane component. Refs STCOM-688.
 * Increase test coverage to 80% | Editor. Refs STCOM-660.
 * Increase test coverage to 80% | FilterPaneSearch. Refs STCOM-689.
+* Datepicker refactor: numerous fixes in accessibility, internationalization, usability. Addresses STCOM-325, STCOM-606, STCOM-684, STCOM-640, STCOM-577, STCOM-315, STCOM-653, STCOM-639, STCOM-470, STCOM-641.
 
 ## 7.1.0 (IN PROGRESS)
 
