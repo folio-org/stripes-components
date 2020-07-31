@@ -8,6 +8,9 @@ import { Datepicker } from '@folio/stripes/components';
 //or pass as component within a form...
 <Field component={Datepicker} />
 ```
+outputBackendValue: PropTypes.bool,
+  outputFormatter: PropTypes.func,
+  parser: PropTypes.func,
 
 ## Props
 Name | type | description | default | required
@@ -19,12 +22,16 @@ Name | type | description | default | required
 `label` | string | visible field label | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
 `onChange` | func | Event handler to handle updates to the datefield text. | | false
+`outputBackendValue` | bool | If False - Outputs the value as it is displayed in the input. | true |
+`outputFormatter` | func | Function to format the date value for submission to the backend. | `defaultOutputFormatter` | 
+`parser` | func | Function to format the date from the `value` prop to the value ui's presentation within the input. | `defaultParser` | 
 `placement` | string | Determines the position of the date picker overlay. See available options in the <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper documentation</a>. | bottom | false
 `modifiers` | object | Passes modifiers for the internal <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper</a>-component which handles the positioning of the date picker overlay. | | false
 `readOnly` | bool | if true, field will be readonly. 'Calendar' and 'clear' buttons will be omitted. | false | false
 `screenReaderMessage` | string | Additional message to be read by screenreaders when textfield is focused in addition to the label and format - which are always read. | | false
 `timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
 `useFocus` | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
+`usePortal` | bool | if true, the Datepicker will render itself to a React-Portal (the `#OverlayContainer` div) this avoids haveing the Datepicker cutoff by overflow. | false | false
 `value` | string | date to be displayed in the textfield. In forms, this is supplied by the initialValues prop supplied to the form | "" | false
 
 <!-- dateFormat | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false-->
@@ -83,15 +90,27 @@ mode and leave display formatting to internationalization helpers. If
 using moment, this can be done via
 [`moment.utc()`](http://momentjs.com/docs/#/parsing/utc/).
 
+## Datepicker value flow.
+
+The value flow happens in 3 stages
+1. value prop - the value prop is a date string. ex `1992-04-29
+2. presentation formatting - the value prop is localized via the function from the `parser` prop and displayed in the text input. This function is provided with the following parameters:
+- value - the value prop.
+- timeZone - the timezone prop.
+- uiFormat - the localized format or `dateFormat` prop.
+- outputFormat - the ISO-string literal format derived from the `backendDateStandard` prop
+3. output formatting - when the input is changed by the user, its value is formatted again to work with the backend using the `outputFormatter` function. This function is provided with **a parameter object** holding the following values:
+- backendDateStandard - the prop of the same name. 
+- value - the value prop.
+- uiFormat - the localized format or `dateFormat` prop for displaying in the textfield.
+- outputFormat - the ISO-string literal format derived from the `backendDateStandard` prop.
+- timeZone - the timezone prop.
+
 ## Features
 ### Keyboard Navigation
 * **Up arrow** - Move cursor up in the calendar (backwards 1 week)
 * **Down arrow** - Move cursor down in the calendar (forwards 1 week)
 * **Left arrow** - Move cursor left 1 day in the calendar (backwards 1 day)
 * **Right arrow** - Move cursor right 1 day in the calendar (forwards 1 day)
-* **PgUp** - backwards 1 month
-* **PgDown** - forwards 1 month
-* **Ctrl + PgUp** - backwards 1 year
-* **Ctrl + PgDown** - forwards 1 year
 * **Enter** - Select date at cursor
 * **Esc** - Close calendar

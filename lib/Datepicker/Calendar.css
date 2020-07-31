@@ -15,26 +15,41 @@
   z-index: 9999;
 }
 
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
 .calendarInner {
   & td {
     vertical-align: middle;
-  }
-
-  & tbody tr {
-    height: 38px;
+    width: 46px;
+    height: 46px;
   }
 
   & .dayButton {
     appearance: none;
     background: none;
+
+    &:focus {
+      outline: #000 solid 2px;
+    }
+  }
+
+  & .dayLabel {
     color: #333;
     text-decoration: none;
     text-align: center;
-    padding: 4px;
-    border: 2px solid transparent;
-    width: 38px;
-    height: 38px;
+    margin: 4px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       background-color: #eee;
@@ -63,15 +78,6 @@
       &:hover {
         background-color: #0c577f;
       }
-
-      &.cursor {
-        color: #fff;
-      }
-    }
-
-    &.cursor {
-      border: 2px solid #666;
-      color: #333;
     }
   }
 }
@@ -101,4 +107,28 @@
 .weekday {
   font-size: var(--font-size-medium);
   text-align: center;
+}
+
+.monthSelect {
+  border-style: dashed;
+  border-width: 0 0 1px 0;
+  padding: 4px;
+}
+
+.yearInput {
+  border-style: dashed;
+  border-width: 0 0 1px 0;
+  min-width: 0;
+  flex: 0 1 auto;
+  padding: 4px;
+  width: 8em;
+}
+
+.daysOfWeek {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin: 1rem 0 0.6rem;
+  list-style: none;
+  font-weight: bold;
 }
