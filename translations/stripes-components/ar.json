@@ -403,5 +403,7 @@
     "languages.wak": "لغات واكاشان",
     "languages.wen": "اللغات الصوربية",
     "languages.ypk": "لغات يوبيك",
-    "languages.znd": "اللغات الزاندية"
+    "languages.znd": "اللغات الزاندية",
+    "Datepicker.calendarDaysList": "قائمة أيام الروزنامة",
+    "Datepicker.calendarDaysListDescription": "استخدم مفاتيح الأسهم لتحريك المؤشر، قم بالضغط على إدخال لتحديد اليوم."
 }
