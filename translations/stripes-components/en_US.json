@@ -403,5 +403,7 @@
     "languages.wak": "Wakashan languages",
     "languages.wen": "Sorbian languages",
     "languages.ypk": "Yupik languages",
-    "languages.znd": "Zande languages"
+    "languages.znd": "Zande languages",
+    "Datepicker.calendarDaysList": "calendar days list.",
+    "Datepicker.calendarDaysListDescription": "Use arrow keys to move cursor, press enter to select day."
 }
