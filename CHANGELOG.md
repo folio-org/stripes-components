@@ -13,6 +13,7 @@
 * Increase test coverage to 80% | Editor. Refs STCOM-660.
 * Increase test coverage to 80% | FilterPaneSearch. Refs STCOM-689.
 * Datepicker refactor: numerous fixes in accessibility, internationalization, usability. Addresses STCOM-325, STCOM-606, STCOM-684, STCOM-640, STCOM-577, STCOM-315, STCOM-653, STCOM-639, STCOM-470, STCOM-641.
+* Support AutoSuggest field in react-final-form. Refs STCOM-725
 
 ## 7.1.0 (IN PROGRESS)
 
