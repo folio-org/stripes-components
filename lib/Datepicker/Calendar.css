@@ -13,6 +13,7 @@
   padding: var(--gutter-static);
   box-shadow: var(--shadow);
   z-index: 9999;
+  pointer-events: all;
 }
 
 .calendarHeader {
