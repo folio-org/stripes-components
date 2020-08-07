@@ -16,6 +16,7 @@
 * Datepicker refactor: numerous fixes in accessibility, internationalization, usability. Addresses STCOM-325, STCOM-606, STCOM-684, STCOM-640, STCOM-577, STCOM-315, STCOM-653, STCOM-639, STCOM-470, STCOM-641.
 * Support AutoSuggest field in react-final-form. Refs STCOM-725
 * Extend `Pane` interactor with `header` field. STCOM-727.
+* Fix missing label for MultiSelection hidden value input element. Refs STCOM-726.
 
 ## 7.1.0 (IN PROGRESS)
 
