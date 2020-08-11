@@ -346,7 +346,6 @@
     "languages.bai": "Bamileke languages",
     "languages.bat": "Baltic languages",
     "languages.ber": "Berber languages",
-    "languages.bih": "Bihari languages",
     "languages.bnt": "Bantu languages",
     "languages.btk": "Batak languages",
     "languages.cai": "Central American Indian languages",
@@ -404,6 +403,9 @@
     "languages.wen": "Sorbian languages",
     "languages.ypk": "Yupik languages",
     "languages.znd": "Zande languages",
+    "Datepicker.calendarDaysList": "calendar days list.",
+    "Datepicker.calendarDaysListDescription": "Use arrow keys to move cursor, press enter to select day.",
+    "languages.bih": "Bihari languages",
     "languages.aar": "Afar",
     "languages.abk": "Abkhazian",
     "languages.ace": "Achinese",
@@ -821,7 +823,5 @@
     "languages.zul": "Zulu",
     "languages.zun": "Zuni",
     "languages.zxx": "No linguistic content; Not applicable",
-    "languages.zza": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki",
-    "Datepicker.calendarDaysList": "calendar days list.",
-    "Datepicker.calendarDaysListDescription": "Use arrow keys to move cursor, press enter to select day."
+    "languages.zza": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki"
 }
