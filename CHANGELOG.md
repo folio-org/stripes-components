@@ -17,6 +17,7 @@
 * Support AutoSuggest field in react-final-form. Refs STCOM-725
 * Extend `Pane` interactor with `header` field. STCOM-727.
 * Fix missing label for MultiSelection hidden value input element. Refs STCOM-726.
+* Fix `<SearchField>` component cannot be disabled. Refs STCOM-730.
 
 ## 7.1.0 (IN PROGRESS)
 
