@@ -18,3 +18,4 @@ onChange | Callback called when the value changes | |
 renderOption | Callback that renders the item in the dropdown | `item => item.value` |
 renderValue | Callback that render the item in the input field | `item => item.value` |
 valueKey | The key in the item object to use as the value. | `"value"`
+withFinalForm | toggle form time: true - final-form, false - redux-from (default) | |

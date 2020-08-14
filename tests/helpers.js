@@ -4,6 +4,7 @@ import { computed } from '@bigtest/interactor';
 import Harness from './Harness';
 
 import '../lib/global.css';
+import { getNextFocusable, getPreviousFocusable } from '../util/getFocusableElements';
 
 function getCleanTestingRoot() {
   let $root = document.getElementById('root');
@@ -57,4 +58,22 @@ export function computedStyle(selector, styleProperty) {
     }
     return getComputedStyle(this.$(selector));
   });
+}
+
+export function focusNext(current) {
+  let elem = getNextFocusable(current);
+  if (elem.tabIndex === -1) {
+    elem = focusNext(elem);
+  } else if (elem !== document.body) {
+    elem.focus();
+  }
+}
+
+export function focusPrevious(current) {
+  let elem = getPreviousFocusable(current);
+  if (elem.tabIndex === -1) {
+    elem = focusPrevious(elem);
+  } else if (elem !== document.body) {
+    elem.focus();
+  }
 }

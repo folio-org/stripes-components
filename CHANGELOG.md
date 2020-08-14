@@ -6,6 +6,7 @@
 * Upgraded `react-overlays` dependency to the latest version. Refs STCOM-650.
 * Add a utility list of language names & helper functions. Refs UIIN-829.
 * Added `<TextLink>`-component. Refs STCOM-699.
+* Extend `ConfirmationModal` interactor. STCOM-710.
 * Added `lightning` icon. Refs UX-377.
 * Fix layout of inputed MultiColumnList in Accordion. Refs STCOM-719.
 * Added focus-within styles for `<Pane>`. Refs STCOM-477.
@@ -14,9 +15,14 @@
 * Increase test coverage to 80% | Editor. Refs STCOM-660.
 * Increase test coverage to 80% | FilterPaneSearch. Refs STCOM-689.
 * Datepicker refactor: numerous fixes in accessibility, internationalization, usability. Addresses STCOM-325, STCOM-606, STCOM-684, STCOM-640, STCOM-577, STCOM-315, STCOM-653, STCOM-639, STCOM-470, STCOM-641.
+* Support AutoSuggest field in react-final-form. Refs STCOM-725
+* Extend `Pane` interactor with `header` field. STCOM-727.
+* Fix missing label for MultiSelection hidden value input element. Refs STCOM-726.
+* Fix `<SearchField>` component cannot be disabled. Refs STCOM-730.
 
 ## 7.1.0 (IN PROGRESS)
 
+* Disable `SearchField` interactions if `loading` is true
 * Avoid `ARIA attributes must conform to valid values` error on AutoSuggest field. Refs STCOM-720.
 * Export currency options as a hook. Addition to STCOM-614.
 * Provide `<CountrySelection>`. Fixes STCOM-291.
