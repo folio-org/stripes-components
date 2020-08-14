@@ -9,12 +9,12 @@ import { Layer, Paneset } from '@folio/stripes/components';
 let showLayer = true;
 
 <Paneset>
-    // Base Paneset contents ...
-    <Layer isOpen={showLayer} contentLabel="demonstration layer">
-        <Paneset isRoot>
-            //...Layered Paneset contents...
-        </Paneset>
-    </Layer>
+  // Base Paneset contents ...
+  <Layer isOpen={showLayer} contentLabel="demonstration layer">
+      <Paneset isRoot>
+          //...Layered Paneset contents...
+      </Paneset>
+  </Layer>
 </Paneset>
 ```
 
