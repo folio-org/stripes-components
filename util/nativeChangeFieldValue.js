@@ -11,7 +11,7 @@ export default (inputRef, focus, value = '', triggerChange = true) => {
     nativeInputValueSetter.call(inputRef.current, value);
 
     if (triggerChange) {
-      const ev = new Event('change', { bubbles: true });
+      const ev = new Event('input', { bubbles: true });
       inputRef.current.dispatchEvent(ev);
       if (focus) {
         inputRef.current.focus();
