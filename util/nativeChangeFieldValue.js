@@ -46,4 +46,9 @@ export default (inputRef, focus, value = '', triggerChange = true) => {
   if (descriptor) {
     Object.defineProperty(node, 'value', descriptor);
   }
+
+  // if focus was demanded, finish with that.
+  if (focus) {
+    node.focus();
+  }
 };
