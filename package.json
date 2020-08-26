@@ -123,7 +123,7 @@
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {
-    "react-intl": "^5.7.1",
+    "react-intl": "^4.5.1",
     "react-router-dom": "^5.2.0"
   },
   "resolutions": {
