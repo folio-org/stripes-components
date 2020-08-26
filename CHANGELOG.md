@@ -20,6 +20,7 @@
 * Fix missing label for MultiSelection hidden value input element. Refs STCOM-726.
 * Fix `<SearchField>` component cannot be disabled. Refs STCOM-730.
 * Fix `<Select>` component ignoring `required` property. Refs STCOM-742.
+* Added `aria-hidden` attribute to `<Asterisk>` to prevent screen readers from reading it. Refs STCOM-741.
 
 ## 7.1.0 (IN PROGRESS)
 
