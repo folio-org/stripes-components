@@ -1,4 +1,3 @@
-import React from 'react';
 import { describe, it } from '@bigtest/mocha';
 import { expect } from 'chai';
 
