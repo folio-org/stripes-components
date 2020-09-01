@@ -45,6 +45,17 @@ Here's an example from the Users-module:
 ```
 ## Column Widths
 MultiColumnList measures DOM elements at render-time to calculate a single width for the entire column. At a minimum, this will be the width of the column's header. Render-time measurement is not always the preferred way to go, so MultiColumnList has the `columnWidths` prop for pre-determined widths to be applied. This will also avoid calculation of widths for pre-determined columns at render-time.
+For columns where the column content width may vary, space conservation is important. For this, the width 'hint' API can be used.
+
+```js
+const columnWidths = {
+  name: '200px',
+  jobTitle: { min: 30, max: 300 },
+  startDate: '300px'
+}
+
+<MultiColumnList ... columnWidths={columnWidths} />
+```
 
 **Advice #1**: Use a pre-determined width if there's a large amount of difference between a column's contents from one row to another. For instance, "title" items could contain a single word, or it could contain 10 words. Calculation will prefer a width that's closer to the longest among the sampled cells, so setting a width is the best way to keep the widths modest.
 
@@ -59,7 +70,7 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 `autosize` | bool | if true, list will size itself to fit its containing element. Use this to have a list occupy the full width and height of a `<Pane>`s content area. | false |
 `columnMapping` | object | Maps rendered column labels to the data fields for the onHeaderClick prop. | `{}` |
-`columnWidths` | object | Set custom column widths, e.g. {email: '150px'}. Component will automatically measure any columns that are unspecified. | |
+`columnWidths` | object | Set custom column widths, e.g. {email: '150px'}. Component will automatically measure any columns that are unspecified. An object can be provided with `min` and `max` keys to set up a range - MCL will pick as close to the `min` as it can and none over the `max`.| |
 `contentData` | array of object | the list of objects to be displayed. | | required
 `dataEndReached` | bool | Used in conjuction with `pagingType="click"`, `dataEndReached` can be used if a suitable `totalCount` prop cannot be obtained. Setting this to `true` will render the "end-of-list" marker rather than the load button. | `false` |
 `formatter`  | object mapping names to functions | see separate section | |

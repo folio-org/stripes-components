@@ -21,6 +21,7 @@
 * Fix `<SearchField>` component cannot be disabled. Refs STCOM-730.
 * Fix `<Select>` component ignoring `required` property. Refs STCOM-742.
 * Added `aria-hidden` attribute to `<Asterisk>` to prevent screen readers from reading it. Refs STCOM-741.
+* MultiColumnList `columnWidth` prop's keys will accept an object with `min` and `max` keys that can vary the size of the column based on necessity.
 
 ## 7.1.0 (IN PROGRESS)
 
