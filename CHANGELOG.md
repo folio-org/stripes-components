@@ -22,6 +22,7 @@
 * Fix `<Select>` component ignoring `required` property. Refs STCOM-742.
 * Added `aria-hidden` attribute to `<Asterisk>` to prevent screen readers from reading it. Refs STCOM-741.
 * Fix a bug causing language name translation to crash if input is invalid. Fixes STCOM-745.
+* Provide `<FormattedDate>` and `<FormattedTime>` to handle dates without properly formatted timezones. Refs STCOM-659.
 
 ## 7.1.0 (IN PROGRESS)
 
