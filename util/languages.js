@@ -500,6 +500,9 @@ const languages = [
 // @intl is really useIntl(), which can't be invoked outside a functional component
 export const formattedLanguageName = (code, intl) => {
   const language = find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
+  if (language === undefined) {
+    return intl.formatMessage({ id: 'stripes-components.languages.und' });
+  }
   const translationId = `stripes-components.languages.${language.alpha3}`;
   const translatedName = intl.formatMessage({ id: translationId });
 
