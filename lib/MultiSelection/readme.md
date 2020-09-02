@@ -135,3 +135,18 @@ In that case make sure to provide `onBlur` callback like below as built-in one f
     ...
    />
 ```
+
+## Usage with an external label
+In some cases, it can be necessary to render a `<MultiSelect>` without a label-prop – e.g. when used in a search pane. However, you still need to provide some context for screen reader users.
+
+For this purpose, you can apply a custom `aria-labelledby`-prop which references the ID of another element that contains the label or description of the `<MultiSelect>`.
+
+```js
+  <Headline id="my-custom-aria-labelledby">
+    Multiselect with an external label
+  </Headline>
+  <MultiSelection
+    aria-labelledby="my-custom-aria-labelledby"
+    ...
+  />
+```

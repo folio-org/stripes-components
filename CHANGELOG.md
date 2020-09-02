@@ -21,6 +21,7 @@
 * Fix `<SearchField>` component cannot be disabled. Refs STCOM-730.
 * Fix `<Select>` component ignoring `required` property. Refs STCOM-742.
 * Added `aria-hidden` attribute to `<Asterisk>` to prevent screen readers from reading it. Refs STCOM-741.
+* Fix aria-labelledby prop on `<MultiSelection>` and added docs/example of usage with external label (STCOM-733)
 
 ## 7.1.0 (IN PROGRESS)
 
