@@ -123,10 +123,8 @@
 }
 
 .optionCursor {
-  &::before {
-    background: var(--color-fill-focus);
-    box-shadow: inset 0 0 0 3px var(--color-fill-focus);
-  }
+  composes: cursor from '../Selection/Selection.css';
+  box-shadow: inset 0 0 0 3px var(--primary);
 }
 
 .multiSelectError {
