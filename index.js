@@ -8,6 +8,8 @@ export { default as CurrencySelect } from './lib/CurrencySelect';
 export { default as CountrySelection } from './lib/CountrySelection';
 export { default as Datepicker, Calendar } from './lib/Datepicker';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
+export { default as FormattedDate } from './lib/FormattedDate';
+export { default as FormattedTime } from './lib/FormattedTime';
 export { default as EmptyMessage } from './lib/EmptyMessage';
 export { default as FormattedUTCDate } from './lib/FormattedUTCDate';
 export { default as Label } from './lib/Label';
