@@ -7,9 +7,14 @@ describe('iso8601Timestamp', () => {
   const validT = '2020-03-24T17:59:57.369+00:00';
 
   describe('values like "2020-03-24T17:59:57.369+0000" are reformatted', () => {
-    const invalidT = '2020-03-24T17:59:57.369+0000';
-    it('an invalid timestamp is reformated', () => {
-      expect(iso8601Timestamp(invalidT)).to.equal(validT);
+    const invalidPlus = '2020-03-24T17:59:57.369+0000';
+    it('a valid UTC+ timestamp with a missing colon is reformatted', () => {
+      expect(iso8601Timestamp(invalidPlus)).to.equal(validT);
+    });
+
+    const invalidMinus = '2020-03-24T17:59:57.369-0000';
+    it('a valid UTC- timestamp with a missing colon is reformatted', () => {
+      expect(iso8601Timestamp(invalidMinus)).to.equal(validT);
     });
   });
 
@@ -30,15 +35,9 @@ describe('iso8601Timestamp', () => {
       expect(iso8601Timestamp(value)).to.equal(value);
     });
 
-    // length == 28 but missing +
-    it('input without a "+" is left as-is', () => {
-      const value = '2020-03-24T17:59:57.369-0000';
-      expect(iso8601Timestamp(value)).to.equal(value);
-    });
-
-    // length == 28 but + in wrong location
-    it('input with misplaced "+" is left as-is', () => {
-      const value = '2020-03-24T17:59:57+369-0000';
+    // length == 28 but missing +/-
+    it('input without "+" or "-" in the correct position is left as-is', () => {
+      const value = '2020-03-24T17:59:57.369=0000';
       expect(iso8601Timestamp(value)).to.equal(value);
     });
   });
