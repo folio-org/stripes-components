@@ -11,7 +11,7 @@
   min-height: 36px;
   background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
-  margin: var(--gutter-static-one-third) 0;
+  margin: var(--gutter-static-one-third);
   border-radius: 4px;
   padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
   text-align: center;
