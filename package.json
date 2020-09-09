@@ -94,7 +94,10 @@
     "webpack": "^4.41.2"
   },
   "dependencies": {
+    "@bugsnag/js": "^7.3.3",
+    "@bugsnag/plugin-react": "^7.3.3",
     "@folio/stripes-react-hotkeys": "^3.0.5",
+    "@sentry/react": "^5.22.3",
     "classnames": "^2.2.5",
     "currency-codes": "^1.5.0",
     "dom-helpers": "^3.2.1",
@@ -120,6 +123,7 @@
     "react-tether": "^1.0.1",
     "react-transition-group": "^2.2.1",
     "react-virtualized-auto-sizer": "^1.0.2",
+    "rollbar": "^2.19.3",
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {

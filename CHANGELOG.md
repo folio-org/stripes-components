@@ -25,6 +25,7 @@
 * MultiColumnList `columnWidth` prop's keys will accept an object with `min` and `max` keys that can vary the size of the column based on necessity. Refs STCOM-631
 * Fix a bug causing language name translation to crash if input is invalid. Fixes STCOM-745.
 * Provide `<FormattedDate>` and `<FormattedTime>` to handle dates without properly formatted timezones. Refs STCOM-659.
+* Log errors captured by `<ErrorBoundary>` to logging services, when configured via `stripes.config.js`. Refs STCOM-753.
 
 ## 7.1.0 (IN PROGRESS)
 
