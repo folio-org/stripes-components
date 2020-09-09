@@ -823,5 +823,6 @@
     "languages.zul": "Zulu",
     "languages.zun": "Zuni",
     "languages.zxx": "No linguistic content; Not applicable",
-    "languages.zza": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki"
+    "languages.zza": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki",
+    "requiredFieldMessage": "Por favor complete este campo."
 }

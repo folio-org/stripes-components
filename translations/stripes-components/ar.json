@@ -823,5 +823,6 @@
     "languages.zul": "الزولوية",
     "languages.zun": "زوني",
     "languages.zxx": "لا يوجد محتوى لغوي؛ غير قابل للتطبيق",
-    "languages.zza": "الزازاكية"
+    "languages.zza": "الزازاكية",
+    "requiredFieldMessage": "يرجى ملء هذا الحقل."
 }
