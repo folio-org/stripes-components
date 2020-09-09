@@ -5,6 +5,7 @@ import iso8601Timestamp from '../iso8601Timestamp';
 
 describe('iso8601Timestamp', () => {
   const validT = '2020-03-24T17:59:57.369+00:00';
+  const validTMinus = '2020-03-24T17:59:57.369-00:00';
 
   describe('values like "2020-03-24T17:59:57.369+0000" are reformatted', () => {
     const invalidPlus = '2020-03-24T17:59:57.369+0000';
@@ -14,7 +15,7 @@ describe('iso8601Timestamp', () => {
 
     const invalidMinus = '2020-03-24T17:59:57.369-0000';
     it('a valid UTC- timestamp with a missing colon is reformatted', () => {
-      expect(iso8601Timestamp(invalidMinus)).to.equal(validT);
+      expect(iso8601Timestamp(invalidMinus)).to.equal(validTMinus);
     });
   });
 
