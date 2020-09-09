@@ -6,9 +6,9 @@
  * and reformat it like
  *     2020-03-24T17:59:57.369+00:00
  *
- * ISO-8601 is ambiguous about how timezones in timestamps shoudl be formatted.
+ * ISO-8601 is ambiguous about how timezones in timestamps should be formatted.
  * Regrettably, not all browsers accept all formats, leading to formatting
- * errors in some browsers, notably Safari and many browsers on mobild platforms,
+ * errors in some browsers, notably Safari and many browsers on mobile platforms,
  * when the timezone lacks a colon (:) between the hour and minute.
  *
  * A more careful implementation would use a gnarly regular expression to
