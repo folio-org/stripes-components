@@ -38,7 +38,9 @@ module.exports = ({ config }) => {
           plugins: () => [
             postCssImport(),
             autoprefixer(),
-            postCssCustomProperties(),
+            postCssCustomProperties({
+              importFrom: './lib/variables.css'
+            }),
             postCssCalc(),
             postCssNesting(),
             postCssCustomMedia(),
