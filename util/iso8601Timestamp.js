@@ -15,7 +15,7 @@
  * be more certain about the format of the input string. Such an impl
  * would also be waaaaaay slower.
  *
- * @param value string
+ * @param value any
  * @param string a more-strictly compliant ISO-8601 date-time string
  */
 export default function iso8601Timestamp(value) {

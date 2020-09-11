@@ -20,26 +20,43 @@ describe('iso8601Timestamp', () => {
   });
 
   describe('other date values are left as-is', () => {
-    it('a valid timestamp is left as-is', () => {
-      expect(iso8601Timestamp(validT)).to.equal(validT);
+    describe('strings', () => {
+      it('a valid timestamp is left as-is', () => {
+        expect(iso8601Timestamp(validT)).to.equal(validT);
+      });
+
+      // length < 28
+      it('too-short input is left as-is', () => {
+        const value = 'abc';
+        expect(iso8601Timestamp(value)).to.equal(value);
+      });
+
+      // length > 28
+      it('too-long input is left as-is', () => {
+        const value = '2020-03-24T17:59:57.369+0000abc';
+        expect(iso8601Timestamp(value)).to.equal(value);
+      });
+
+      // length == 28 but missing +/-
+      it('input without "+" or "-" in the correct position is left as-is', () => {
+        const value = '2020-03-24T17:59:57.369=0000';
+        expect(iso8601Timestamp(value)).to.equal(value);
+      });
     });
 
-    // length < 28
-    it('too-short input is left as-is', () => {
-      const value = 'abc';
-      expect(iso8601Timestamp(value)).to.equal(value);
+    describe('objects', () => {
+      const o = new Date();
+
+      it('object input is left as-is', () => {
+        expect(iso8601Timestamp(o)).to.equal(o);
+      });
     });
 
-    // length > 28
-    it('too-long input is left as-is', () => {
-      const value = '2020-03-24T17:59:57.369+0000abc';
-      expect(iso8601Timestamp(value)).to.equal(value);
-    });
-
-    // length == 28 but missing +/-
-    it('input without "+" or "-" in the correct position is left as-is', () => {
-      const value = '2020-03-24T17:59:57.369=0000';
-      expect(iso8601Timestamp(value)).to.equal(value);
+    describe('numbers', () => {
+      const millis = Date.now();
+      it('numeric input is left as-is', () => {
+        expect(iso8601Timestamp(millis)).to.equal(millis);
+      });
     });
   });
 });
