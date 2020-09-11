@@ -20,7 +20,8 @@
  */
 export default function iso8601Timestamp(value) {
   let tweakedValue = value;
-  if (value.length === 28 && (value[23] === '+' || value[23] === '-')) {
+
+  if (typeof value === 'string' && value.length === 28 && (value[23] === '+' || value[23] === '-')) {
     tweakedValue = value.substring(0, 26) + ':' + value.substring(26, 28);
   }
 
