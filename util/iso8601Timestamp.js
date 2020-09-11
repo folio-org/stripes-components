@@ -6,23 +6,25 @@
  * and reformat it like
  *     2020-03-24T17:59:57.369+00:00
  *
+ * Leave other input values alone (numbers, objects, non-conforming strings).
+ *
  * ISO-8601 is ambiguous about how timezones in timestamps should be formatted.
  * Regrettably, not all browsers accept all formats, leading to formatting
  * errors in some browsers, notably Safari and many browsers on mobile platforms,
  * when the timezone lacks a colon (:) between the hour and minute.
  *
- * A more careful implementation would use a gnarly regular expression to
- * be more certain about the format of the input string. Such an impl
- * would also be waaaaaay slower.
- *
  * @param value any
- * @param string a more-strictly compliant ISO-8601 date-time string
+ * @param any, but given a string, a more-strictly compliant ISO-8601 date-time string
  */
 export default function iso8601Timestamp(value) {
   let tweakedValue = value;
 
-  if (typeof value === 'string' && value.length === 28 && (value[23] === '+' || value[23] === '-')) {
-    tweakedValue = value.substring(0, 26) + ':' + value.substring(26, 28);
+  if (typeof value === 'string') {
+    // it looks ugly, but this regex just does a match for strings like
+    // 2020-03-24T17:59:57.369+0000, i.e. YYYY-MM-DDTHH:MM:SS.mmm+HHMM
+    if (value.match(/^[\d]{4}-[\d]{2}-[\d]{2}T[\d]{2}:[\d]{2}:[\d]{2}\.[\d]{3}[+-][\d]{4}$/)) {
+      tweakedValue = value.substring(0, 26) + ':' + value.substring(26, 28);
+    }
   }
 
   return tweakedValue;
