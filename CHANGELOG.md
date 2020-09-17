@@ -26,6 +26,7 @@
 * Fix a bug causing language name translation to crash if input is invalid. Fixes STCOM-745.
 * Provide `<FormattedDate>` and `<FormattedTime>` to handle dates without properly formatted timezones. Refs STCOM-659.
 * refactor SingleSelect away from componentWillReceiveProps. Refs STCOM-709.
+* Add `autoFocus` property to `<MultiSelection>`. Refs UIEH-959.
 
 ## 7.1.0 (IN PROGRESS)
 
