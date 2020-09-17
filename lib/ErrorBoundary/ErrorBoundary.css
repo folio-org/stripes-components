@@ -25,7 +25,7 @@
   margin-bottom: var(--gutter);
 }
 
-.viewDetailsButton {
+button.viewDetailsButton {
   color: var(--color-text-p2);
   font-weight: var(--text-weight-bold);
 }
