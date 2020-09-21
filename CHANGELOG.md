@@ -2,6 +2,7 @@
 
 ## 8.0.0 (IN PROGRESS)
 
+* Display `<NoValue />` in KeyValue if value is undefined or empty string. New FOLIO UX guidelines. Refs STCOM-758
 * Increment `react-router` to `^5.2`.
 * Upgraded `react-overlays` dependency to the latest version. Refs STCOM-650.
 * Add a utility list of language names & helper functions. Refs UIIN-829.
