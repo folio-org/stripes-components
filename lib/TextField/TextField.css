@@ -22,6 +22,7 @@
     background: none;
     border: none;
     outline: none;
+    min-width: 0; /* keep FF from inserting its own min-width so textfield can get smaller if necessary */
   }
 }
 

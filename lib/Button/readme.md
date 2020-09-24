@@ -16,7 +16,7 @@ import { Button } from '@folio/stripes/components';
 ## Props
 Name | Type | Description
 --- | --- | ---
-buttonStyle | string | Change the style/color of the button (see the [styles section](/?selectedKind=Button&selectedStory=Styles)) |
+buttonStyle | string | Change the style/color of the button |
 type | string | Change the button type |
 buttonClass | string | Add a custom class |
 align | string | Change the alignment of the button (with flexbox) Options: start, center, end |

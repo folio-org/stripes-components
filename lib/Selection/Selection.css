@@ -143,6 +143,7 @@
 .optionSegment {
   padding: 0 2px;
   text-align: initial;
+  word-break: break-word;
 }
 
 .selectionMultiContainer {

@@ -9,12 +9,12 @@ import { Layer, Paneset } from '@folio/stripes/components';
 let showLayer = true;
 
 <Paneset>
-    // Base Paneset contents ...
-    <Layer isOpen={showLayer} contentLabel="demonstration layer">
-        <Paneset isRoot>
-            //...Layered Paneset contents...
-        </Paneset>
-    </Layer>
+  // Base Paneset contents ...
+  <Layer isOpen={showLayer} contentLabel="demonstration layer">
+      <Paneset isRoot>
+          //...Layered Paneset contents...
+      </Paneset>
+  </Layer>
 </Paneset>
 ```
 
@@ -28,6 +28,7 @@ Name | type | description | default | required
 `afterClose` | func | Callback for after the `<Layer>` has closed. Handle focus management for accessible code here! | `()=>{}` |
 `afterOpen` | func | Callback for after the `<Layer>` has opened. | `()=>{}` |
 `enforceFocus` | bool | Whether or not the modal should trap focus within itself (best for accessibility) | `true` |
+`inRootSet` | bool | if no `container` prop is provided, `<Layer>` will render into the root of its parent paneset. `InRootSet` pushes further by rendering the layer to the top-most paneset in the tree. Consider using this if your `<Layer>` is used within a nested paneset. Modules' settings have this structure. | | 
 
 ### A11y practices
 The `<Layer>` is very similar to a modal dialog and focus management should be accounted for accordingly. When opened, focus will move to the rendered content div (unless a child element has already assumed focus via `autoFocus` or some other means.) Focus should be managed appropriately by the application when the `<Layer>` is closed. The `afterClose` prop can be used for this.

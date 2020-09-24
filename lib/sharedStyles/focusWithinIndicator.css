@@ -1,0 +1,43 @@
+/**
+ * focusWithinIndicator
+ * Animates a border in the top of the element when something inside is focused
+  *
+  * Usage:
+  * .root {
+      position: relative; (or anything else than position: static;)
+      composes: focusWithinIndicator from "../sharedStyles/focusWithinIndicator.css";
+    }
+*/
+
+@import "../variables";
+
+.focusWithinIndicator {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: var(--primary);
+    top: -5px;
+    opacity: 0;
+    transition: height 200ms, top 200ms, opacity 500ms;
+    pointer-events: none;
+  }
+
+  &:focus-within::after {
+    opacity: 1;
+    height: 5px;
+    top: 0;
+  }
+}
+
+/* In some cases we want a negative offset for the focus indicator border */
+.withNegativeOffset {
+  top: 0;
+
+  &:focus-within::after {
+    top: -5px;
+  }
+}

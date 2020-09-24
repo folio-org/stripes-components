@@ -1,4 +1,5 @@
 @import '../variables.css';
+/* stylelint-disable no-descending-specificity */
 
 :root {
   --radio-button-size: 12px;
@@ -6,7 +7,7 @@
 
 .radioButton {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
   &.marginBottom0 {
     margin-bottom: 0;
@@ -29,7 +30,6 @@
   line-height: var(--line-height);
   display: flex;
   align-items: baseline;
-  cursor: pointer;
   flex-grow: 2;
   border-radius: var(--radius);
   font-size: var(--font-size-medium);
@@ -57,7 +57,7 @@
   position: relative;
   width: var(--radio-button-size);
   height: var(--radio-button-size);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-form);
   border-radius: 999px;
   background: #fff;
   flex-shrink: 0;
@@ -76,15 +76,22 @@
   transition: all 0.2s ease;
 }
 
-.labelDisabled {
-  color: var(--color-text-p2);
-
-  &:hover {
-    cursor: not-allowed;
+/**
+ * Disabled or read only
+ */
+.disabled {
+  & .radioLabel {
+    cursor: default;
   }
 
-  & .labelPseudo {
-    opacity: 0.5;
+  & .labelPseudo,
+  & .input:checked + .labelPseudo {
+    background-color: var(--checkable-disabled-fill);
+    border-color: var(--checkable-disabled-fill);
+
+    &::after {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -139,7 +146,7 @@
  * Feedback
  */
 .radioFeedback {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
 }
 
 .hasWarning {
@@ -147,7 +154,7 @@
     color: var(--warn);
   }
 
-  & .input {
+  & .labelPseudo {
     border-color: var(--warn);
   }
 }
@@ -157,7 +164,7 @@
     color: var(--error);
   }
 
-  & .input {
+  & .labelPseudo {
     border-color: var(--error);
   }
 }

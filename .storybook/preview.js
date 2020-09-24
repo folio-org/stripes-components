@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { configure, addDecorator } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { withOptions } from '@storybook/addon-options';
+import { addReadme } from 'storybook-readme';
 import { initializeRTL } from 'storybook-addon-rtl';
 import '../lib/global.css';
-
 
 /**
  * React intl support
@@ -22,29 +22,6 @@ import frTranslations from '../translations/stripes-components/fr.json';
 import huTranslations from '../translations/stripes-components/hu.json';
 import itTranslations from '../translations/stripes-components/it_IT.json';
 import ptTranslations from '../translations/stripes-components/pt_BR.json';
-
-import { addLocaleData } from 'react-intl';
-import arLocaleData from 'react-intl/locale-data/ar';
-import caLocaleData from 'react-intl/locale-data/ca';
-import daLocaleData from 'react-intl/locale-data/da';
-import deLocaleData from 'react-intl/locale-data/de';
-import enLocaleData from 'react-intl/locale-data/en';
-import esLocaleData from 'react-intl/locale-data/es';
-import frLocaleData from 'react-intl/locale-data/fr';
-import huLocaleData from 'react-intl/locale-data/hu';
-import itLocaleData from 'react-intl/locale-data/it';
-import ptLocaleData from 'react-intl/locale-data/pt';
-
-addLocaleData(arLocaleData);
-addLocaleData(caLocaleData);
-addLocaleData(daLocaleData);
-addLocaleData(deLocaleData);
-addLocaleData(enLocaleData);
-addLocaleData(esLocaleData);
-addLocaleData(frLocaleData);
-addLocaleData(huLocaleData);
-addLocaleData(itLocaleData);
-addLocaleData(ptLocaleData);
 
 // mimics the StripesTranslationPlugin in @folio/stripes-core
 function prefixKeys(obj) {
@@ -120,10 +97,14 @@ addDecorator(withOptions({
   hierarchyRootSeparator: /\|/,
 }));
 
-const req = require.context('../lib', true, /\.stories\.js$/);
+addParameters({ options: { theme: {} } });
 
-function loadStories() {
-  req.keys().forEach((filename) => req(filename));
-}
-
-configure(loadStories, module);
+/**
+ * Readme
+ */
+addDecorator(addReadme);
+addParameters({ 
+    readme: {
+        codeTheme: 'a11y-dark',
+    },
+ });

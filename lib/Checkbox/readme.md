@@ -45,7 +45,7 @@ name | string | Sets the name of the input | `undefined`
 onBlur | func | Event handler for the input's `onBlur` event | `undefined`
 onChange | func | Event handler for the input's `onChange` event | `undefined`
 onFocus | func | Event handler for the input's `onFocus` event | `undefined`
-readOnly | bool | Renders the field as "read only" | `false`
+readOnly | bool | Renders the field as "read only" (focusable but non-interactive) | `false`
 required | bool | Sets the field as required | `false`
 value | string | Sets the selected value for the input | `undefined`
 vertical | bool | Renders the label vertically (above the checkbox) | `false`
@@ -59,6 +59,7 @@ warning | string, node | Renders a warning message below the checkbox | `undefin
 
   <Field
     component={Checkbox}
+    type="checkbox"
     label="green"
     name="bananas"
     value="green"
@@ -66,8 +67,10 @@ warning | string, node | Renders a warning message below the checkbox | `undefin
 
   <Field
     component={Checkbox}
+    type="checkbox"
     label="ripe"
     name="bananas"
     value="ripe"
   />
 ```
+(When invoking a `<Checkbox>` as part of a react-final-form `<Field>`, it is necessary to explicitly pass `type="checkbox"` as well as `component={Checkbox}`, otherwise the form library does not understand how to interpret the value.)

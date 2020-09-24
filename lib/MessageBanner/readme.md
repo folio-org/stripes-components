@@ -9,6 +9,15 @@ import { MessageBanner } from '@folio/stripes/components';
 <MessageBanner type="success">Success</MessageBanner>
 <MessageBanner type="error">Error</MessageBanner>
 <MessageBanner type="warning">Warning</MessageBanner>
+
+<MessageBanner type="error">
+  <ul>
+    <li><strong>Using an unordered HTML list</strong></li>
+    <li>Your password must include one numeric value</li>
+    <li>Your password must include one special charater</li>
+    <li>Your password must be at least 8 charaters</li>
+  </ul>
+</MessageBanner>
 ```
 
 ## Accessibility
@@ -59,13 +68,14 @@ const [show, setShow] = useState(false);
 ## Props
 Name | Type | Description | Options | Default
 -- | -- | -- | -- | --
+aria-live | string | Sets the `aria-live`-attribute for the root element. | off, polite, assertive | assertive
 autoFocusDismissButton | bool | Autofocuses the dismiss button when the `<MessageBanner>` enters the DOM. This requires that the `dismissable`-prop is set to true | | false
 type | string | Sets the style of the `<MessageBanner>` | default, error, success, warning | default
 children | node | Renders the contents of the `<MessageBanner>` | |
 dismissable | boolean | Adds a close icon and makes the `<MessageBanner>` dismissable | true/false | false
 dismissButtonAriaLabel | string | Adds an aria-label attribute for the dismiss `<IconButton>`. | | "Hide message"
 dismissButtonProps | object | Add custom props for the dismiss button. This can be useful for e.g. adding a custom class name for the internal `<IconButton>`. | | {}
-icon | string | Renders an icon next to the message. Supports all icons available for the [`<Icon>`](/?selectedKind=Icon)-component. When the `type`-prop is set to either "success", "error" and "warning" the `<MessageBanner>` will have icons by default but these too can be overwritten by using the `icon`-prop. If you want to remove the icon entirely you can simply set `icon` to `null` | |
+icon | string | Renders an icon next to the message. Supports all icons available for the <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Icon" target="_blank">`<Icon>`</a>-component. When the `type`-prop is set to either "success", "error" and "warning" the `<MessageBanner>` will have icons by default but these too can be overwritten by using the `icon`-prop. If you want to remove the icon entirely you can simply set `icon` to `null` | |
 onEnter | func | Callback when the `<MessageBanner>` enters | |
 onEntered | func | Callback when the `<MessageBanner>` has entered | |
 onExit | func | Callback when the `<MessageBanner>` exits | |

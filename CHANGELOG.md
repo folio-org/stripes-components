@@ -1,5 +1,94 @@
 # Change history for stripes-components
 
+## 8.0.0 (IN PROGRESS)
+
+* Display `<NoValue />` in KeyValue if value is undefined or empty string. New FOLIO UX guidelines. Refs STCOM-758
+* Increment `react-router` to `^5.2`.
+* Upgraded `react-overlays` dependency to the latest version. Refs STCOM-650.
+* Add a utility list of language names & helper functions. Refs UIIN-829.
+* Added `<TextLink>`-component. Refs STCOM-699.
+* Extend `ConfirmationModal` interactor. STCOM-710.
+* Added `lightning` icon. Refs UX-377.
+* Fix layout of inputed MultiColumnList in Accordion. Refs STCOM-719.
+* Added focus-within styles for `<Pane>`. Refs STCOM-477.
+* Extend `getCellClass` callback with `rowData` and `column` name parameters. Introduced `getHeaderCellClass` callback prop to extend styling on the header cells. Refs STCOM-718
+* Remove FilterPane component. Refs STCOM-688.
+* Increase test coverage to 80% | Editor. Refs STCOM-660.
+* Increase test coverage to 80% | FilterPaneSearch. Refs STCOM-689.
+* Datepicker refactor: numerous fixes in accessibility, internationalization, usability. Addresses STCOM-325, STCOM-606, STCOM-684, STCOM-640, STCOM-577, STCOM-315, STCOM-653, STCOM-639, STCOM-470, STCOM-641.
+* Support AutoSuggest field in react-final-form. Refs STCOM-725
+* Extend `Pane` interactor with `header` field. STCOM-727.
+* Fix missing label for MultiSelection hidden value input element. Refs STCOM-726.
+* Fix `<SearchField>` component cannot be disabled. Refs STCOM-730.
+* Fix `<Select>` component ignoring `required` property. Refs STCOM-742.
+* Added `aria-hidden` attribute to `<Asterisk>` to prevent screen readers from reading it. Refs STCOM-741.
+* Fix aria-labelledby prop on `<MultiSelection>` and added docs/example of usage with external label (STCOM-733)
+* MultiColumnList `columnWidth` prop's keys will accept an object with `min` and `max` keys that can vary the size of the column based on necessity. Refs STCOM-631
+* Fix a bug causing language name translation to crash if input is invalid. Fixes STCOM-745.
+* Provide `<FormattedDate>` and `<FormattedTime>` to handle dates without properly formatted timezones. Refs STCOM-659.
+* refactor SingleSelect away from componentWillReceiveProps. Refs STCOM-709.
+* Add `autoFocus` property to `<MultiSelection>`. Refs UIEH-959.
+* refactor SRStatus away from componentWillReceiveProps. Refs STCOM-708.
+* Added `headerProps` property to `FilterAccordionHeader` and `DefaultAccordionHeader`. Refs STCOM-760.
+
+## 7.1.0 (IN PROGRESS)
+
+* Disable `SearchField` interactions if `loading` is true
+* Avoid `ARIA attributes must conform to valid values` error on AutoSuggest field. Refs STCOM-720.
+* Export currency options as a hook. Addition to STCOM-614.
+* Provide `<CountrySelection>`. Fixes STCOM-291.
+* Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
+* Fix MultiSelect carat not aligned when there is not enough space.
+* Updated `<Accordion>` a11y attributes and roles. Fixes STCOM-697.
+* ARIA role must be appropriate for the element (Selection). Fixes STCOM-702.
+* Add to `aria-label` descriptive text for filter headings. Refs STCOM-703.
+
+## [7.0.1](https://github.com/folio-org/stripes-components/tree/v7.0.1) (2020-06-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.0...v7.0.1)
+
+* Tweak `<Modal>` spacing so the top has better alignment.
+* `react-hot-loader` is not provided by the platform.
+* `<MultiColumnList>` a11y improvements. Refs UICHKOUT-602.
+* Tooltips now hides when hitting escape. Refs STCOM-679.
+* Changed focus proxy element in `<Popdown>` to a `div[tabIndex="0"]` instead of an `input`. Fixes STCOM-651.
+* Use `UNSAFE_` prefix for deprecated React methods. We know, we know. Refs STCOM-649.
+* `<MultiSelection>` handles small input fields more nicely.
+* `<PasswordStrength>` must not set state if unmounted.
+* Remove spurious `role` attribute from `<NoValue>`.
+* Ensure `<TextField>` and `<TextArea>` are always associated with a `label`.
+* Make it possible to disable interactivity for some column headers (Refs. STCOM-685)
+
+## [7.0.0](https://github.com/folio-org/stripes-components/tree/v7.0.0) (2020-05-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.1.0...v7.0.0)
+
+* Fix issue with `initialStatus` prop on Accordions not working.
+* Fix bug with impossibility to use mouse to set Associated Service Point for Fee/Fine Owner. Refs UIU-1539.
+* Introduce a new filter config property called `operator`. Refs STCOM-662.
+* Expose `FILTER_GROUP_SEPARATOR` and `FILTER_SEPARATOR` for splitting/joing filters. Refs STCOM-670.
+* a11y improvements for form components and update primary color. Refs STCOM-658.
+* Fix aria-labelledby assignment on `<Multiselection>`. Refs UIREQ-437.
+* Fixed text overflow bug on `<Select>`. Refs UX-341.
+* Updated `<Timepicker>` to use `<Popper>` instead of react-tether. Refs STCOM-381.
+* Added `centerContent `-prop for `<Pane>`. Refs STCOM-618.
+* Allowed `to`, `href` and `labelStrings` props to be passed as functions to `defaultRowFormatter`. Refs STDTC-8.
+* Pane resizing is suppressed when Panes are overlapped. Fixes STCOM-673, STCOM-674.
+* Pin `moment` at `~2.24.0`. Refs STRIPES-678.
+* Fix issue in tests with conflicting lists inside repeatable field. Refs UIDATIMP-442
+* Increase test coverage to 80% | Dropdown menu. Refs STCOM-667.
+* Increase test coverage to 80% | Selection. Refs STCOM-668.
+* Added `unregisterAccordion` method to `<AccordionSet>` and unregistering of `<Accordion>` when unmounted. Refs STSMACOM-267.
+
+## [6.1.0](https://github.com/folio-org/stripes-components/tree/v6.1.0) (2020-03-16)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v6.0.0...v6.1.0)
+
+* Handle various different expand-all scenarios for `AccordionSet`. Refs STCOM-635.
+* Provide `allocate`, `cart`, `drag-drop`, `receive`, and `transfer`icons.
+* Correctly specify `SelectList` proptypes.
+* Introduce a new filter config function called `parse`. Part of STCOM-654.
+* Introduce `ariaLabel` prop on `<NoValue>`. Refs UIEH-832.
+* Fix accessibility issues. Refs UICHKOUT-602.
+* Converted `<Datepicker>` to use `<Popper>` instead of react-tether. STCOM-382.
+
 ## [6.0.0](https://github.com/folio-org/stripes-components/tree/v6.0.0) (2020-03-03)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v5.9.2...v6.0.0)
 

@@ -1,6 +1,7 @@
 @import '../variables.css';
 
 .modalRoot {
+  position: relative;
   display: flex;
   justify-content: center;
   top: 0;
@@ -8,15 +9,17 @@
   width: 100%;
   height: 100%;
   pointer-events: auto;
+  background-color: transparent;
+  transition: background-color 0.3s;
 }
 
 .modal {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 60px;
+  top: calc(var(--gutter-static) * 2);
   background-color: #fff;
-  max-height: calc(100% - 75px);
+  max-height: calc(100% - var(--gutter-static) * 3);
   width: calc(100% - (var(--gutter) * 2));
   overflow: hidden;
   border-radius: var(--radius);
@@ -87,19 +90,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 0.3s;
+  pointer-events: all;
 }
 
 @media (--medium-up) {
   .small {
     max-width: 550px;
-  }
-
-  .modal {
-    top: 100px;
-    max-height: calc(100% - 115px);
   }
 }
 
@@ -119,10 +115,10 @@
  * Move the modal further towards the top
  * when the browser window is a bit smaller in height
  */
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 850px) {
   .modal {
-    top: 60px;
-    max-height: calc(100% - 75px);
+    top: var(--gutter-static);
+    max-height: calc(100% - var(--gutter-static) * 2);
   }
 }
 
@@ -131,24 +127,20 @@
  */
 
 .entered {
+  background-color: rgba(0, 0, 0, 0.2);
+
   & .modal {
     transform: translateY(0);
-    opacity: 1;
-  }
-
-  & .backdrop {
     opacity: 1;
   }
 }
 
 .exiting {
+  background-color: transparent;
+  transition-delay: 0.1s;
+
   & .modal {
     transform: translateY(20px);
     opacity: 0;
-  }
-
-  & .backdrop {
-    opacity: 0;
-    transition-delay: 0.1s;
   }
 }
