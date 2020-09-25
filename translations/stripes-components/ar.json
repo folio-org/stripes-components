@@ -5,7 +5,7 @@
     "goToPreviousMonth": "اذهب إلى الشهر السابق",
     "goToNextYear": "اذهب إلى العام القادم",
     "goToNextMonth": "اذهب إلى الشهر القادم",
-    "selectDay": "تحديد {dayOfWeek}, {date}",
+    "selectDay": "اختر {dayOfWeek}, {date}",
     "dateSelected": "{date} المحدد",
     "screenReaderLabel": "تنسيق {label} هو {screenReaderFormat} استخدم مفاتيح الأسهم للانتقال بين التواريخ. ومفتاح الإدخال للتأكيد. {screenReaderMessage}",
     "clearFieldValue": "مسح قيمة الحقل",
