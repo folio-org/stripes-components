@@ -15,7 +15,7 @@ The error stack will be visible in development to enable developers to immediate
 ```
 
 ## Advanced Usage
-In a lot of cases, the default reset action (a page refresh) will not solve the issue for the user since the error might be triggered when a specific route mounts. It can lead to frustration and confusion for the user if the proposed action does not resolve the problem or leaves them in a dead-end.
+In a lot of cases, the default reset action – a full page refresh – will not solve the issue for the user since the error might be triggered when a specific route mounts. It can lead to frustration and confusion for the user if the proposed action does not resolve the problem or leaves them in a dead-end.
 
 Instead, you can provide an alternative reset callback – such as e.g. redirecting to another page or the root of the app. This can be done by passing the `onReset`-callback. Remember to change the label of the primary/reset button accordingly to avoid confusing the user.
 
@@ -44,7 +44,8 @@ Name | Type | Description | Options | Default
 --- | --- | --- | --- | ---
 children | node | Pass any component as a child to ErrorBoundary to enable error catching | |
 forceProductionError | boolean | Forces the production error in development. Mainly for demo purposes. | true/false | false
-onReset | func | The callback that will be fired when clicking the primary button. This defaults to a page refresh.  | |
+onCopyError | func | Callback fired when the user clicks the 'Copy'-button. The callback will receive the copied contents as the only parameter.  | |
+onReset | func | Callback fired when the user clicks the primary button. This defaults to a page refresh.  | |
 resetButtonLabel | node | The label for the primary/reset button | | `"Refresh page"`
 subTitle | node | Renders the sub title of the error boundary in production | | `"Something went wrong"`
 title | node | Renders the title of the error boundary in production | | `"Refresh the page to continue."`
