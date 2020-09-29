@@ -833,5 +833,7 @@
   "ErrorBoundary.defaultSubTitle": "Refresh the page to continue.",
   "ErrorBoundary.detailsButtonLabel": "View error details",
   "ErrorBoundary.defaultButtonLabel": "Refresh page",
-  "ErrorBoundary.detailsDescription": "The following occurred, resulting in the current page becoming unstable:"
+  "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
+  "ErrorBoundary.detailsDescription": "The following occurred, resulting in the current page becoming unstable:",
+  "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder"
 }
