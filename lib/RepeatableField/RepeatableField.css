@@ -1,8 +1,11 @@
 @import "../variables.css";
 
 .repeatableField {
-  margin: 1em 0;
   padding: 0;
+}
+
+.hasMargin {
+  margin: var(--gutter) 0;
 }
 
 .repeatableFieldList {
