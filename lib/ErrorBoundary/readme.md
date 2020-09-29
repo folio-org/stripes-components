@@ -43,7 +43,7 @@ The granularity of error boundaries is up to you. You may wrap top-level route c
 Name | Type | Description | Options | Default
 --- | --- | --- | --- | ---
 children | node | Pass any component as a child to ErrorBoundary to enable error catching | |
-layout | string | Force the error layout. This defaults to the current `process.env.NODE_ENV`. If the prop does not match one of the two options, it will default to the production layout. | `development` or `production` |
+forceProductionError | boolean | Forces the production error in development. Mainly for demo purposes. | true/false | false
 onReset | func | The callback that will be fired when clicking the primary button. This defaults to a page refresh.  | |
 resetButtonLabel | node | The label for the primary/reset button | | `"Refresh page"`
 subTitle | node | Renders the sub title of the error boundary in production | | `"Something went wrong"`
