@@ -19,12 +19,16 @@
   margin-bottom: var(--gutter);
 }
 
+div.modalContent {
+  max-height: 600px;
+}
+
 button.viewDetailsButton {
   color: var(--color-text-p2);
   font-weight: var(--text-weight-bold);
 }
 
-.primaryButton {
+button.resetButton {
   margin: var(--gutter) auto 0;
   display: block;
   padding: var(--gutter) calc(var(--gutter) * 3);
