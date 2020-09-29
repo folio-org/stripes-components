@@ -158,6 +158,7 @@ Name | type | description | default | required
 addLabel | string | Text for add field row button |
 canAdd | boolean | Flag to enable/disable add button | true
 canRemove | boolean | Flag to enable/disable remove button | true
+className | string | Adds a custom class name for the root element |
 emptyMessage | string | Text for when there are no rows; can be left blank |
 fields | array or object | Values that go with field rows | &#10004;
 headLabels | node | Element that displays heading field labels. Developer should care about accessibility if this property is used (see an example).   |
