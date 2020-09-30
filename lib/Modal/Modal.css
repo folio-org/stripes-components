@@ -1,6 +1,7 @@
 @import '../variables.css';
 
 .modalRoot {
+  position: relative;
   display: flex;
   justify-content: center;
   top: 0;
@@ -89,6 +90,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: all;
 }
 
 @media (--medium-up) {

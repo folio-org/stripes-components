@@ -114,3 +114,38 @@ The value flow happens in 3 stages
 * **Right arrow** - Move cursor right 1 day in the calendar (forwards 1 day)
 * **Enter** - Select date at cursor
 * **Esc** - Close calendar
+
+## Custom Circumstances with RFF
+
+If the provided defaults and base behaviors don't quite cover your requirements, you may need write an additional function in order to wrap the datepicker and modify props from `<Field>`. Simply supplying a function that accepts the input, and meta props that components usually receive from RFF. In this example, we want validation errors to 
+to show only if there are no warnings. Note the passing of a `useInput` prop to Datepicker. This is typically and internal prop for Datepicker to know when it's being used within a `<Field>` and act accordingly - otherwise, you may see date output coming through in the incorrect format.
+
+```
+<Field
+  name={`${name}.startDate`}
+  validate={composeValidators(
+    validators.requiredStartDate,
+    validators.dateOrder,
+    multipleOpenEndedCoverages,
+    overlappingCoverages,
+  )}
+>
+  {({ input, meta }) => {
+    return (
+      <Datepicker
+        backendDateStandard="YYYY-MM-DD"
+        error={!meta?.data?.warning && meta.touched && meta.error}
+        id={`cc-start-date-${index}`}
+        input={input}
+        inputRef={this.inputRef}
+        label={<FormattedMessage id="ui-agreements.agreements.startDate" />}
+        parser={parseDateOnlyString}
+        useInput  /* supremely important */
+        required
+        usePortal
+        warning={meta.touched && input.value && meta?.data?.warning}
+      />
+    );
+  }}
+</Field>
+```
