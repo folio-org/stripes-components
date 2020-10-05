@@ -65,6 +65,7 @@
     "file-loader": "^2.0.0",
     "jest-mock": "23.2.0",
     "karma-viewport": "^1.0.4",
+    "moment": "^2.29.0",
     "mocha": "^5.2.0",
     "postcss": "^7.0.2",
     "postcss-calc": "^6.0.1",
@@ -103,7 +104,6 @@
     "json2csv": "^4.2.1",
     "lodash": "^4.17.4",
     "memoize-one": "^5.0.0",
-    "moment": "~2.24.0",
     "moment-range": "^3.0.3",
     "moment-timezone": "^0.5.14",
     "normalize.css": "^7.0.0",
@@ -123,6 +123,7 @@
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {
+    "moment": "^2.29.0",
     "react-intl": "^5.0.0",
     "react-router-dom": "^5.2.0"
   },

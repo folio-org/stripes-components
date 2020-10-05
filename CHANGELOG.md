@@ -30,6 +30,7 @@
 * Add `autoFocus` property to `<MultiSelection>`. Refs UIEH-959.
 * refactor SRStatus away from componentWillReceiveProps. Refs STCOM-708.
 * Added `headerProps` property to `FilterAccordionHeader` and `DefaultAccordionHeader`. Refs STCOM-760.
+* Move `moment` to `peerDependencies`. Refs STCOM-761.
 
 ## 7.1.0 (IN PROGRESS)
 
