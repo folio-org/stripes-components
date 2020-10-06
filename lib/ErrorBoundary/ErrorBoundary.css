@@ -1,0 +1,9 @@
+/**
+ * ErrorBoundary
+ */
+
+.root {
+  max-width: 70rem;
+  margin: calc(var(--gutter) * 2) auto;
+  padding: var(--gutter);
+}
