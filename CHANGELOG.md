@@ -31,6 +31,7 @@
 * refactor SRStatus away from componentWillReceiveProps. Refs STCOM-708.
 * Added `headerProps` property to `FilterAccordionHeader` and `DefaultAccordionHeader`. Refs STCOM-760.
 * Move `moment` to `peerDependencies`. Refs STCOM-761.
+* Change default `<FilterGroups>` operator from `=` to `==`. Refs STCOM-492.
 
 ## 7.1.0 (IN PROGRESS)
 
