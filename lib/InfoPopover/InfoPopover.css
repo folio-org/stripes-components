@@ -4,8 +4,8 @@
 
 @import "../variables";
 
-.wrap {
-  max-width: 270px;
+.root {
+  max-width: 300px;
 }
 
 .content {
@@ -13,7 +13,7 @@
 }
 
 .icon:hover svg,
-.activeClass .icon svg {
+.icon.open svg {
   fill: var(--primary);
 }
 
