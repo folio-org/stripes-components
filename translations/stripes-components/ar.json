@@ -833,7 +833,7 @@
     "ErrorBoundary.defaultSubTitle": "قم بتحديث الصفحة للمتابعة.",
     "ErrorBoundary.detailsButtonLabel": "عرض تفاصيل الخطأ",
     "ErrorBoundary.defaultButtonLabel": "حدّث الصفحة",
-    "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
+    "ErrorBoundary.copyErrorButtonAriaLabel": "نسخ الخطأ إلى الحافظة",
     "ErrorBoundary.detailsDescription": "لقد حدث ما يلي، مما أدى إلى عدم استقرار الصفحة الحالية:",
-    "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder"
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "تم نسخ رسالة الخطأ وتتبع المكدس إلى حافظتك"
 }
