@@ -24,5 +24,6 @@ buttonTarget | string | The target for the button | _blank
 contentClass | string | `className` for content inside popover |
 iconSize | string | The size of the icon (`small` or `medium`) | small
 hideOnButtonClick | boolean | Whether to hide popover on anchor button click | false
+renderTrigger | func | Render a custom trigger button. The function will receive the `open`-state, a `ref` that needs to be passed onto trigger button and a `toggle`-function for toggling the `<InfoPopover>` |
 
 The remaining props passed to `<InfoPopover>` will be passed down to the internal `<Popover>`.
