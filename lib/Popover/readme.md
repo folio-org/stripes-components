@@ -52,7 +52,7 @@ className | string | Applies a custom class name for the popover overlay. | |
 modifiers | object | Pass modifiers for the internal `<Popper>`-component. See the `<Popper>`-documentation for more information. | |
 noPadding | bool | Removes the default padding on the popover overlay. | false |
 onToggle | func | A callback function for toggling the popover's open state. This is only relevant if you are manually controlling the open state externally. | |
-offset | number | Sets the offset from the popover overlay to the anchor/trigger element | 10 |
+offset | number | Sets the offset (px) from the popover overlay to the anchor/trigger element | 5 |
 open | bool | Controls the popover open state. This is only relevant if you need to be able to close the popover externally. Remember to also pass an `onToggle`-callback that toggles the external open state. | |
 placement | string | Determines the placement of the popover overlay relative to the trigger button/anchor element. See the available placements in the basic usage example/story. | bottom |
 popperProps | object | Pass additional props to the internal `<Popper>`-component. See the documentation for the `<Popper>`-component to learn more. | |
