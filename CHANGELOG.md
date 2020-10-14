@@ -1,7 +1,21 @@
 # Change history for stripes-components
 
-## 8.0.0 (IN PROGRESS)
+## 8.1.0 (IN PROGRESS)
 
+* Fix focusing SearchField when loading - make it readOnly. Refs STCOM-762
+
+## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
+
+* Disable `SearchField` interactions if `loading` is true
+* Avoid `ARIA attributes must conform to valid values` error on AutoSuggest field. Refs STCOM-720.
+* Export currency options as a hook. Addition to STCOM-614.
+* Provide `<CountrySelection>`. Fixes STCOM-291.
+* Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
+* Fix MultiSelect carat not aligned when there is not enough space.
+* Updated `<Accordion>` a11y attributes and roles. Fixes STCOM-697.
+* ARIA role must be appropriate for the element (Selection). Fixes STCOM-702.
+* Add to `aria-label` descriptive text for filter headings. Refs STCOM-703.
 * Display `<NoValue />` in KeyValue if value is undefined or empty string. New FOLIO UX guidelines. Refs STCOM-758
 * Increment `react-router` to `^5.2`.
 * Upgraded `react-overlays` dependency to the latest version. Refs STCOM-650.
@@ -30,18 +44,8 @@
 * Add `autoFocus` property to `<MultiSelection>`. Refs UIEH-959.
 * refactor SRStatus away from componentWillReceiveProps. Refs STCOM-708.
 * Added `headerProps` property to `FilterAccordionHeader` and `DefaultAccordionHeader`. Refs STCOM-760.
-
-## 7.1.0 (IN PROGRESS)
-
-* Disable `SearchField` interactions if `loading` is true
-* Avoid `ARIA attributes must conform to valid values` error on AutoSuggest field. Refs STCOM-720.
-* Export currency options as a hook. Addition to STCOM-614.
-* Provide `<CountrySelection>`. Fixes STCOM-291.
-* Localize currency names in `<CurrencySelect>`. Fixes STCOM-614.
-* Fix MultiSelect carat not aligned when there is not enough space.
-* Updated `<Accordion>` a11y attributes and roles. Fixes STCOM-697.
-* ARIA role must be appropriate for the element (Selection). Fixes STCOM-702.
-* Add to `aria-label` descriptive text for filter headings. Refs STCOM-703.
+* Move `moment` to `peerDependencies`. Refs STCOM-761.
+* Change default `<FilterGroups>` operator from `=` to `==`. Refs STCOM-492.
 
 ## [7.0.1](https://github.com/folio-org/stripes-components/tree/v7.0.1) (2020-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.0...v7.0.1)

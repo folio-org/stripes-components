@@ -824,5 +824,16 @@
     "languages.zun": "Zuni",
     "languages.zxx": "Sem conteúdo linguístico; Não aplicável",
     "languages.zza": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki",
-    "requiredFieldMessage": "Por favor, preencha este campo."
+    "requiredFieldMessage": "Por favor, preencha este campo.",
+    "close": "Fechar",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "ErrorBoundary.errorDetails": "Detalhes do erro",
+    "ErrorBoundary.defaultTitle": "Algo deu errado",
+    "ErrorBoundary.defaultSubTitle": "Atualize a página para continuar.",
+    "ErrorBoundary.detailsButtonLabel": "Ver detalhes do erro",
+    "ErrorBoundary.defaultButtonLabel": "Atualizar a página",
+    "ErrorBoundary.copyErrorButtonAriaLabel": "Copiar erro para  o clipholder",
+    "ErrorBoundary.detailsDescription": "O seguinte ocorreu, resultando na instabilidade da página atual:",
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "A mensagem de erro e o rastreamento da pilha foram copiados para o seu clipholder"
 }

@@ -81,6 +81,7 @@ onEntered | func | Callback when the `<MessageBanner>` has entered | |
 onExit | func | Callback when the `<MessageBanner>` exits | |
 onExited | func | Callback when the `<MessageBanner>` has exited | |
 className | string | Adds a custom class name for the `<MessageBanner>` | |
+contentClassName | string | Adds a custom class name for the content element inside the `<MessageBanner>` | |
 element | string, element, func | Changes the root element of the `<MessageBanner>` | | div |
 show | boolean | Control the visiblity externally. Using the show-prop will enable the `<MessageBanner>` to transition in and out. | true/false | |
 
