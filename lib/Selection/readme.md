@@ -78,6 +78,9 @@ Name | type | description | default | required
 `useValidStyle` | bool | if true, "success" styles will be applied to control if it contains a valid value `onBlur` (using redux-form validation.) | false |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 
+## Labeling
+Like other form controls in stripes-components, `<Selection>` abides by standard conventions for labeling props if alternatives to `label` (visible label with the control) are required... `aria-label` and `aria-labelledby` are useful for this. See [Accessiblity for developers documentation](https://github.com/folio-org/stripes-components/blob/master/docs/AccessibilityDevPrimer.md#labeling) for more details about which to choose.
+
 ## Usage in Redux-form
 Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.
 ```
