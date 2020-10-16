@@ -828,12 +828,12 @@
     "close": "إغلاق",
     "copy": "نسخ",
     "copied": "تم نسخه",
-    "ErrorBoundary.errorDetails": "Error details",
-    "ErrorBoundary.defaultTitle": "Something went wrong",
-    "ErrorBoundary.defaultSubTitle": "Refresh the page to continue.",
-    "ErrorBoundary.detailsButtonLabel": "View error details",
-    "ErrorBoundary.defaultButtonLabel": "Refresh page",
-    "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
-    "ErrorBoundary.detailsDescription": "The following occurred, resulting in the current page becoming unstable:",
-    "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder"
+    "ErrorBoundary.errorDetails": "تفاصيل الخطأ",
+    "ErrorBoundary.defaultTitle": "لقد حدث خطأ ما",
+    "ErrorBoundary.defaultSubTitle": "قم بتحديث الصفحة للمتابعة.",
+    "ErrorBoundary.detailsButtonLabel": "عرض تفاصيل الخطأ",
+    "ErrorBoundary.defaultButtonLabel": "حدّث الصفحة",
+    "ErrorBoundary.copyErrorButtonAriaLabel": "نسخ الخطأ إلى الحافظة",
+    "ErrorBoundary.detailsDescription": "لقد حدث ما يلي، مما أدى إلى عدم استقرار الصفحة الحالية:",
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "تم نسخ رسالة الخطأ وتتبع المكدس إلى حافظتك"
 }
