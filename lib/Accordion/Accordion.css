@@ -67,20 +67,37 @@
 }
 
 /**
- * Content
+ * Inner 
  */
-.content {
-  max-height: 0; /* hidden */
+
+.content-wrap {
+  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.25s ease;
-  width: 100%;
+  transition: max-height 0.3s;
+  z-index: 1;
+  position: relative;
 
   &.expanded {
-    flex: 1;
-    min-height: 0;
-    max-height: none; /* max-height applied inline */
-    overflow: visible;
-    margin: 0 0 1em 0;
+    max-height: 100rem;
+    transition: max-height 0.3s ease-in-out;
+  }
+}
+
+/**
+ * Content - hidden by default
+ */
+
+.content {
+  opacity: 0;
+  visibility: hidden; /* inputs within will not be focusable */
+  transform: translateY(-1rem);
+  transition: opacity 0.2s linear 0.2s, transform 0.2s ease 0.2s;
+ 
+  &.expanded {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.1s ease-in-out 0.1s, transform 0.1s ease-in-out 0.1s, visibility 0.1s ease-in-out 0.1s;
   }
 }
 
