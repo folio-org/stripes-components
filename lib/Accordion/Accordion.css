@@ -77,7 +77,7 @@
   position: relative;
   transition: max-height 0.3s;
   &.expanded {
-    max-height: 100rem;
+    max-height: 150rem;
     transition: max-height 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   }
 }
