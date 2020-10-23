@@ -113,6 +113,7 @@ Update the placement of the `<Tooltip>` relative to the trigger component using 
 Name | Type | Description | Required | Default
 -- | -- | -- | -- | --
 children | func | Renders the toggle using the render-prop pattern. The passed function receives an object with the `ref` that will be passed to the trigger. It also provides the prefixed aria ID's which can be used to associate the tooltip with the trigger component for screen reader users. | |
+hideOnTouch | boolean | Disables the tooltip on touch devices while preserving screen reader accessibility | |
 id | string | Serves as a prefix for the aria ID's that will be used to associate the tooltip with the trigger component for screen reader users | true |
 placement | string | Defines the placements for the tooltip. See available placements above | | bottom
 text | string or `<FormattedMessage>` | The label of the tooltip | true |
