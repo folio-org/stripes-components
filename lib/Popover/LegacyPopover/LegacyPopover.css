@@ -1,18 +1,29 @@
-@import "../variables.css";
+@import "../../variables.css";
 
-.popover {
+.popoverTarget {
+  position: static;
+  display: inline-block;
+}
+
+.popoverPop {
+  position: fixed;
   display: inline-block;
   padding: var(--gutter-static);
   border: 1px solid var(--color-border-p2);
-  background-color: var(--bg);
+  background-color: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   outline: 0;
   pointer-events: all;
+
+  & p {
+    padding: 0;
+    margin: 0;
+  }
 }
 
-/* No padding on popover */
-.noPadding {
+/* No padding on content */
+.popoverPop.noPadding {
   padding: 0;
 }
 

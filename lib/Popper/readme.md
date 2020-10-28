@@ -5,7 +5,7 @@ Is a component with basic mechanism for another components with popups.
 
 
 ## Usage
-Create a component which will control an "open" state of the overlay. Pass anchor element through renderAnchor prop and overlay as children.
+Create a component which will control an "open" state of the overlay. Pass anchor element through renderTrigger prop and overlay as children.
 
 ```
 import { Popper } from '@folio/stripes/components';
