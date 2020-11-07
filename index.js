@@ -135,3 +135,5 @@ export {
 
 /* hooks */
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
+export { default as useDateFormatter } from './hooks/useDateFormatter';
+export { default as useTimeFormatter } from './hooks/useTimeFormatter';

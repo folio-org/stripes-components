@@ -7,6 +7,7 @@
 * Handle DST in `Timepicker` tests.
 * Add `isDisabled` property to `CheckboxInteractor`. Refs STCOM-777.
 * Implement info callout. Refs STCOM-776.
+* Provide `useDateFormatter` and `useTimeFormatter` hooks. Refs STCOM-775.
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
