@@ -134,6 +134,6 @@ export {
 } from './util/languages';
 
 /* hooks */
-export { default as useCurrencyOptions } from './lib/hooks/useCurrencyOptions';
-export { default as useDateFormatter } from './lib/hooks/useDateFormatter';
-export { default as useTimeFormatter } from './lib/hooks/useTimeFormatter';
+export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
+export { default as useDateFormatter } from './hooks/useDateFormatter';
+export { default as useTimeFormatter } from './hooks/useTimeFormatter';
