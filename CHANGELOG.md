@@ -5,6 +5,7 @@
 * Fix focusing SearchField when loading - make it readOnly. Refs STCOM-762
 * Refactor `Timepicker` away from `componentWillReceiveProps` lifecycle hook. Refs STCOM-275
 * Handle DST in `Timepicker` tests.
+* Add `isDisabled` property to `CheckboxInteractor`. Refs UIDEXP-178.
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
