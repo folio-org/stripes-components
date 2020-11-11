@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 8.0.1 IN PROGRESS
+
+* Fix Dropdown moving focus when external state changes. Fixes STCOM-778.
+
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
 
