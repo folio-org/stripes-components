@@ -1,7 +1,7 @@
 @import '../variables.css';
 
 .modalRoot {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   top: 0;
