@@ -55,7 +55,7 @@
     "exportToCsv": "Esporta come .csv",
     "button.edit": "Modifica",
     "button.new": "Nuovo",
-    "multiSelection.defaultEmptyMessage": "Nessun oggetto corrispondente trovato!",
+    "multiSelection.defaultEmptyMessage": "Nessun elemento trovato!",
     "multiSelection.filterPlaceholder": "filtra lista di opzioni",
     "multiSelection.controlDescription": "Contiene un elenco di tutti i valori selezionati, seguito da una casella combinata per la selezione di valori aggiuntivi.",
     "multiSelection.removeSelectedButtonDescription": "Premere invio o barra spaziatrice per rimuovere l'elemento dall'elenco di selezione. I tasti Home e Fine consentono di raggiungere il primo o l'ultimo elemento.",

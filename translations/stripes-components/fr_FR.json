@@ -584,7 +584,7 @@
     "languages.kaa": "Kara-Kalpak",
     "languages.kab": "Kabyle",
     "languages.kac": "Kachin; Jingpho",
-    "languages.kal": "Kalaallisut; Greenlandic",
+    "languages.kal": "Kalaallisut; groenlandais",
     "languages.kam": "Kamba",
     "languages.kan": "Kannada",
     "languages.kas": "Kashmiri",
@@ -835,5 +835,5 @@
     "ErrorBoundary.defaultButtonLabel": "Rafraîchir la page",
     "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
     "ErrorBoundary.detailsDescription": "Ceci s'est produit, entraînant l'instabilité de la page actuelle:",
-    "ErrorBoundary.errorCopiedScreenReaderMessage": "Le message d'erreur et la stack trace ont été copiés dans votre clipholder"
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "Le message d'erreur et la \"stack trace\" ont été copiés dans votre presse-papiers"
 }
