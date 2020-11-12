@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 8.0.1 IN PROGRESS
+## [8.0.1](https://github.com/folio-org/stripes-components/tree/v8.0.1) (2020-11-12)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.0...v8.0.1)
 
 * Fix Dropdown moving focus when external state changes. Fixes STCOM-778.
 * `Datepicker` calendar weekday rendering bug. Fixes STRIPES-709.
