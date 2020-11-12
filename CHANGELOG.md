@@ -9,6 +9,7 @@
 * Implement info callout. Refs STCOM-776.
 * Set modalRoot position to absolute to allow for modals to stack. Refs STCOM-771.
 * Provide `useDateFormatter` and `useTimeFormatter` hooks. Refs STCOM-775.
+* `Datepicker` calendar weekday rendering bug. Fixes STRIPES-709.
 * Fix Dropdown moving focus when external state changes. Fixes STCOM-778.
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
