@@ -47,7 +47,6 @@
 
 ## 7.1.0 (IN PROGRESS)
 
-* Fix focusing SearchField when loading - make it readOnly. Refs STCOM-762
 * Disable `SearchField` interactions if `loading` is true
 * Avoid `ARIA attributes must conform to valid values` error on AutoSuggest field. Refs STCOM-720.
 * Export currency options as a hook. Addition to STCOM-614.
