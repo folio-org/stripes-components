@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [8.0.2](https://github.com/folio-org/stripes-components/tree/v8.0.2) (2020-11-13)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.1...v8.0.2)
+
+* Fix focusing SearchField when loading - make it readOnly. Refs STCOM-762
+
 ## [8.0.1](https://github.com/folio-org/stripes-components/tree/v8.0.1) (2020-11-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.0...v8.0.1)
 
