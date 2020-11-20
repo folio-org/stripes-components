@@ -88,6 +88,10 @@
     background-color: color(var(--success, #060) tint(75%));
   }
 
+  &.info {
+    border-color: #4c8eca;
+  }
+
   &.slide-entering {
     left: 100%;
     opacity: 0;
