@@ -99,7 +99,7 @@
     transition: transform 0.15s ease-in-out 0.2s, opacity 0.15s ease-in-out;
   }
 
-  &:after {
+  &::after {
     content: '';
     height: 1rem;
     display: block;
