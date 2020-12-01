@@ -67,7 +67,7 @@
 }
 
 /**
- * Inner 
+ * Inner
  */
 
 .content-wrap {
@@ -76,6 +76,7 @@
   z-index: 1;
   position: relative;
   transition: max-height 0.3s;
+
   &.expanded {
     max-height: 150rem;
     transition: max-height 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -89,14 +90,21 @@
 .content {
   opacity: 0;
   visibility: hidden; /* inputs within will not be focusable */
-  transform: translateY(-1rem);
+  /* transform: translateY(-1rem); */
   transition: transform 0.1s ease 0.5s, opacity 0.1s linear 0.5s, visibility 0.2s linear 0.5s;
+
   &.expanded {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    transition: transform 0.15s ease-in-out 0.2s, opacity 0.15s ease-in-out 0.2s;
-    margin-bottom: 1rem;
+    transition: transform 0.15s ease-in-out 0.2s, opacity 0.15s ease-in-out;
+  }
+
+  &:after {
+    content: '';
+    height: 1rem;
+    display: block;
+    width: 100%;
   }
 }
 
