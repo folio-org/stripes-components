@@ -90,7 +90,6 @@
 .content {
   opacity: 0;
   visibility: hidden; /* inputs within will not be focusable */
-  /* transform: translateY(-1rem); */
   transition: transform 0.1s ease 0.5s, opacity 0.1s linear 0.5s, visibility 0.2s linear 0.5s;
 
   &.expanded {
