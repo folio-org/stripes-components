@@ -824,5 +824,16 @@
     "languages.zun": "Zuni",
     "languages.zxx": "No linguistic content; Not applicable",
     "languages.zza": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki",
-    "requiredFieldMessage": "Por favor complete este campo."
+    "requiredFieldMessage": "Por favor complete este campo.",
+    "close": "Cerrar",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "ErrorBoundary.errorDetails": "Detalles del error",
+    "ErrorBoundary.defaultTitle": "Algo salió mal",
+    "ErrorBoundary.defaultSubTitle": "Actualiza la página para continuar.",
+    "ErrorBoundary.detailsButtonLabel": "Ver detalles del error",
+    "ErrorBoundary.defaultButtonLabel": "Actualizar página",
+    "ErrorBoundary.copyErrorButtonAriaLabel": "Copiar error al portapapeles",
+    "ErrorBoundary.detailsDescription": "Se ha producido lo siguiente, lo que provoca que la página actual se vuelva inestable:",
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "El mensaje de error y el rastro de la pila se copió en su portapapeles"
 }

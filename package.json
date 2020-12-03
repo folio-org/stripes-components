@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -44,7 +44,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.7.4",
     "@babel/register": "^7.0.0",
-    "@bigtest/interactor": "^0.7.2",
+    "@bigtest/interactor": "0.7.2",
     "@bigtest/mocha": "^0.5.0",
     "@folio/eslint-config-stripes": "^5.2.0",
     "@folio/stripes-cli": "^1.6.0",
@@ -66,6 +66,7 @@
     "jest-mock": "23.2.0",
     "karma-viewport": "^1.0.4",
     "mocha": "^5.2.0",
+    "moment": "^2.29.0",
     "postcss": "^7.0.2",
     "postcss-calc": "^6.0.1",
     "postcss-color-function": "^4.0.1",
@@ -85,6 +86,7 @@
     "redux-form": "^7.0.3",
     "regenerator-runtime": "^0.13.3",
     "sinon": "^7.3.2",
+    "storybook-addon-designs": "^5.4.2",
     "storybook-addon-intl": "^2.4.1",
     "storybook-addon-rtl": "^0.2.2",
     "storybook-readme": "^5.0.8",
@@ -103,7 +105,6 @@
     "json2csv": "^4.2.1",
     "lodash": "^4.17.4",
     "memoize-one": "^5.0.0",
-    "moment": "~2.24.0",
     "moment-range": "^3.0.3",
     "moment-timezone": "^0.5.14",
     "normalize.css": "^7.0.0",
@@ -123,6 +124,7 @@
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {
+    "moment": "^2.29.0",
     "react-intl": "^5.0.0",
     "react-router-dom": "^5.2.0"
   },

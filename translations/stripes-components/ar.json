@@ -5,7 +5,7 @@
     "goToPreviousMonth": "اذهب إلى الشهر السابق",
     "goToNextYear": "اذهب إلى العام القادم",
     "goToNextMonth": "اذهب إلى الشهر القادم",
-    "selectDay": "تحديد {dayOfWeek}, {date}",
+    "selectDay": "اختر {dayOfWeek}, {date}",
     "dateSelected": "{date} المحدد",
     "screenReaderLabel": "تنسيق {label} هو {screenReaderFormat} استخدم مفاتيح الأسهم للانتقال بين التواريخ. ومفتاح الإدخال للتأكيد. {screenReaderMessage}",
     "clearFieldValue": "مسح قيمة الحقل",
@@ -824,5 +824,16 @@
     "languages.zun": "زوني",
     "languages.zxx": "لا يوجد محتوى لغوي؛ غير قابل للتطبيق",
     "languages.zza": "الزازاكية",
-    "requiredFieldMessage": "يرجى ملء هذا الحقل."
+    "requiredFieldMessage": "يرجى ملء هذا الحقل.",
+    "close": "إغلاق",
+    "copy": "نسخ",
+    "copied": "تم نسخه",
+    "ErrorBoundary.errorDetails": "تفاصيل الخطأ",
+    "ErrorBoundary.defaultTitle": "لقد حدث خطأ ما",
+    "ErrorBoundary.defaultSubTitle": "قم بتحديث الصفحة للمتابعة.",
+    "ErrorBoundary.detailsButtonLabel": "عرض تفاصيل الخطأ",
+    "ErrorBoundary.defaultButtonLabel": "حدّث الصفحة",
+    "ErrorBoundary.copyErrorButtonAriaLabel": "نسخ الخطأ إلى الحافظة",
+    "ErrorBoundary.detailsDescription": "لقد حدث ما يلي، مما أدى إلى عدم استقرار الصفحة الحالية:",
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "تم نسخ رسالة الخطأ وتتبع المكدس إلى حافظتك"
 }
