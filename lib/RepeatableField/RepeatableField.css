@@ -20,6 +20,10 @@
 }
 
 .repeatableFieldItemLabelsContent {
+  flex-basis: 100%;
+}
+
+.repeatableFieldItemLabelsContentWithDelete {
   flex-basis: calc(100% - 3em);
 }
 
