@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 8.1.0 (IN PROGRESS)
+## 9.0.0 (IN PROGRESS)
 
 * Fix focusing SearchField when loading - make it readOnly. Refs STCOM-762
 * Refactor `Timepicker` away from `componentWillReceiveProps` lifecycle hook. Refs STCOM-275
