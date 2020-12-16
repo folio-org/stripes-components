@@ -51,7 +51,7 @@
   flex-grow: 2;
   position: relative;
   border-radius: var(--radius);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-form-label);
 }
 
 /**
