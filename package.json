@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "8.1.0",
+  "version": "9.0.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -20,7 +20,7 @@
     "storybook-build": "build-storybook -c .storybook -o .out"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=10.0.0"
   },
   "stripes": {
     "type": "components",
@@ -65,13 +65,14 @@
     "file-loader": "^2.0.0",
     "jest-mock": "23.2.0",
     "karma-viewport": "^1.0.4",
+    "karma-webpack": "^4.0.2",
     "mocha": "^5.2.0",
     "moment": "^2.29.0",
     "postcss": "^7.0.2",
     "postcss-calc": "^6.0.1",
     "postcss-color-function": "^4.0.1",
     "postcss-custom-media": "^6.0.0",
-    "postcss-custom-properties": "^9.1.1",
+    "postcss-custom-properties": "^10.0.0",
     "postcss-import": "^11.0.0",
     "postcss-media-minmax": "^3.0.0",
     "postcss-nesting": "^4.2.1",
