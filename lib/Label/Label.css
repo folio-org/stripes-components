@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   font-weight: var(--text-weight-bold);
-  font-size: 1.05rem;
+  font-size: var(--font-size-form-label);
   line-height: var(--line-height);
   margin-bottom: var(--control-label-margin-bottom);
   color: var(--color-text);

@@ -32,7 +32,7 @@
   align-items: baseline;
   flex-grow: 2;
   border-radius: var(--radius);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-form-label);
   margin-bottom: 0;
   min-height: var(--control-min-size-desktop);
 
