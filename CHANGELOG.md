@@ -13,6 +13,7 @@
 * Fix Dropdown moving focus when external state changes. Fixes STCOM-778.
 * Add Storybook example for <SRStatus>. Refs STCOM-424.
 * Fix alignment of head labels in RepeatableField. Refs STCOM-787.
+* Extend `Button` interactor with `isDisabled` field. Refs STCOM-792.
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
