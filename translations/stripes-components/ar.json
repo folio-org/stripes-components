@@ -57,7 +57,7 @@
     "button.new": "جديد",
     "multiSelection.defaultEmptyMessage": "لم يتم العثور على مواد مطابقة!",
     "multiSelection.filterPlaceholder": "قائمة خيار التنقيح",
-    "multiSelection.controlDescription": "يحتوي على قائمة بالقيم المحددة، متبوعًا بمربع خيارات منسدلة لتحديد قيم إضافية ",
+    "multiSelection.controlDescription": "يحتوي على قائمة بالقيم المحددة، متبوعة بحقل نص ذاتي الاستكمال لتحديد قيم إضافية.",
     "multiSelection.removeSelectedButtonDescription": "قم بالضغط على زر الإدخال أو مفتاح المسافة لإزالة المادة من قائمة التحديد. يمكن الانتقال إلى أول أو آخر بمادة باستخدام مفتاح البداية والنهاية.",
     "multiSelection.removeSelectedButtonLabel": "إزالة القيمة",
     "endOfList": "نهاية القائمة",
