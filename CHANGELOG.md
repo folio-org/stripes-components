@@ -2,6 +2,7 @@
 
 ## 9.0.0 (IN PROGRESS)
 
+* Make Select tooltip-ready (inputRef, aria-labelledby). Refs UITEN-119
 * Fix focusing SearchField when loading - make it readOnly. Refs STCOM-762
 * Refactor `Timepicker` away from `componentWillReceiveProps` lifecycle hook. Refs STCOM-275
 * Handle DST in `Timepicker` tests.
