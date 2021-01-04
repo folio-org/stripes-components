@@ -55,7 +55,7 @@ const commands = [
 export default commands;
 ```
 
-A centralized set of FOLIO-wide shortcut defaults is availabl. Simply import...
+A centralized set of FOLIO-wide shortcut defaults is availabl. Simply import... it contains basic key mapping for commands named **save, new, edit, search, expandAllSections, collapseAllSections, and duplicateRecord"**
 ```
 import { defaultKeyboardShortcuts as keyboardCommands } from '@folio/stripes/components';
 ```
