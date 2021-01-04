@@ -54,6 +54,12 @@ const commands = [
 
 export default commands;
 ```
+
+A centralized set of FOLIO-wide shortcut defaults is availabl. Simply import...
+```
+import { defaultKeyboardShortcuts as keyboardCommands } from '@folio/stripes/components';
+```
+
 ### Step 2: apply configuration at the top of the module.
 Next, in the module's index (or other top-level code) we use the command configuration by setting up an instance of `<CommandList>`.
 ```
