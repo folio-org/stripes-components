@@ -81,7 +81,7 @@
   flex: 1 1 0%;
 
   &.expanded {
-    max-height: 150rem;
+    max-height: 210rem;
     transition: max-height 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     overflow: visible;
   }
