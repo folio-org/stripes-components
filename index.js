@@ -88,7 +88,11 @@ export { default as SRStatus } from './lib/SRStatus';
 export { default as PasswordStrength } from './lib/PasswordStrength';
 export {
   CommandList,
-  HasCommand
+  HasCommand,
+  expandAllSections,
+  collapseAllSections,
+  checkScope,
+  defaultKeyboardShortcuts
 } from './lib/Commander';
 
 /* structures */
