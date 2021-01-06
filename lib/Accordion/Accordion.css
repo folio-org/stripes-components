@@ -2,6 +2,8 @@
 
 .accordion {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .disabled {
@@ -67,20 +69,41 @@
 }
 
 /**
- * Content
+ * Inner
  */
-.content {
-  max-height: 0; /* hidden */
+
+.content-wrap {
+  max-height: 0;
+  min-height: 0;
   overflow: hidden;
-  transition: max-height 0.25s ease;
-  width: 100%;
+  position: relative;
+  transition: max-height 0.3s;
+  flex: 1 1 0%;
 
   &.expanded {
-    flex: 1;
-    min-height: 0;
-    max-height: none; /* max-height applied inline */
+    max-height: 210rem;
+    transition: max-height 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     overflow: visible;
-    margin: 0 0 1em 0;
+  }
+}
+
+/**
+ * Content - hidden by default
+ */
+
+.content {
+  opacity: 0;
+  margin: 0 0 1rem 0;
+  visibility: hidden; /* inputs within will not be focusable */
+  transition: transform 0.1s ease 0.5s, opacity 0.1s linear 0.5s, visibility 0.2s linear 0.5s margin 0.1s linear 0.5s;
+  height: 100%;
+
+  &.expanded {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform 0.15s ease-in-out 0.2s, opacity 0.15s ease-in-out;
+    margin-bottom: 1rem;
   }
 }
 
