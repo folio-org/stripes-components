@@ -55,6 +55,7 @@
   "collapseSection": "Collapse section",
   "expandSection": "Expand section",
   "mcl.loadMore": "Load more",
+  "mcl.additionalResultsLoaded": "Additional results loaded",
   "mcl.itemsRequestedMessage": "Requesting more results, will focus next row when they arrive",
   "metaSection.source": "Source: {source}",
   "metaSection.sourceNoData": "Source: Automated process",
