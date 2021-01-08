@@ -1,7 +1,7 @@
 # Dropdown
 A toggleable, contextual overlay for displaying lists of links and more.
 
-## Dropdown with Custom Tether Options
+## Uses Popper 
 Dropdown makes use of [popper.js](https://popper.js.org/) to render its menu to the OverlayContainer div rendered by `stripes-core`. This overcomes issues with Dropdowns that might be cut off by containers with `overflow: hidden` in their styling.
 
 ## Dropdown works in both controlled and uncontrolled scenarios.
