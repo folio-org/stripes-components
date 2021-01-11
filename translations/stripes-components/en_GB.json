@@ -5,7 +5,7 @@
     "goToPreviousMonth": "Go to previous month",
     "goToNextYear": "Go to next year",
     "goToNextMonth": "Go to next month",
-    "selectDay": "Select {dayOfWeek}, {date}",
+    "selectDay": "Choose {dayOfWeek}, {date}",
     "dateSelected": "{date} selected",
     "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
     "clearFieldValue": "Clear field value",
@@ -835,5 +835,6 @@
     "ErrorBoundary.defaultButtonLabel": "Refresh page",
     "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
     "ErrorBoundary.detailsDescription": "The following occurred, resulting in the current page becoming unstable:",
-    "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder"
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder",
+    "mcl.additionalResultsLoaded": "Additional results loaded"
 }

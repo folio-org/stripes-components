@@ -835,5 +835,6 @@
     "ErrorBoundary.defaultButtonLabel": "Seite aktualisieren",
     "ErrorBoundary.copyErrorButtonAriaLabel": "Fehler in Zwischenablage kopieren",
     "ErrorBoundary.detailsDescription": "Folgendes ist aufgetreten, was dazu führte, dass die aktuelle Seite instabil wurde:",
-    "ErrorBoundary.errorCopiedScreenReaderMessage": "Fehlermeldung und Stracktrace wurde in die Zwischenablage kopiert."
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "Fehlermeldung und Stracktrace wurde in die Zwischenablage kopiert.",
+    "mcl.additionalResultsLoaded": "Additional results loaded"
 }
