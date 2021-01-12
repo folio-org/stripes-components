@@ -835,5 +835,6 @@
     "ErrorBoundary.defaultButtonLabel": "刷新页面",
     "ErrorBoundary.copyErrorButtonAriaLabel": "将错误复制到剪辑夹",
     "ErrorBoundary.detailsDescription": "发生以下情况，导致当前页面变得不稳定：",
-    "ErrorBoundary.errorCopiedScreenReaderMessage": "错误消息和堆栈跟踪已复制到剪辑夹"
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "错误消息和堆栈跟踪已复制到剪辑夹",
+    "mcl.additionalResultsLoaded": "Additional results loaded"
 }
