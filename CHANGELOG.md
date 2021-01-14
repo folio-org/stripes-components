@@ -19,6 +19,7 @@
 * After the browser window is minimized the pane is not adjusted so the content on the righthand side is cut. Refs STCOM-783.
 * Add `aria-label` attribute to modal root of `<Modal>` component. Refs UIEH-1017.
 * Add `ariaLabel` prop to `<ConfirmationModal>`. Refs UIEH-1017.
+* Correctly set `max-height` in expanded `<Accordion>`s. Refs STCOM-796.
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
