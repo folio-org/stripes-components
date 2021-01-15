@@ -40,7 +40,6 @@ Name | type | description | default | required
 `onRemove` | func | Event handler specifically called when an item is removed from the selection. The removed item is passed to the handler. | |
 `placeholder` | string | Rendered as a placeholder for the control when no value is present. | |
 `renderToOverlay` | bool | For use in situations where the dropdown may be cut off due to a containing dom element's `overflow: hidden/auto` css attribute. | false |
-`tether` | object | Override settings for the tether when `renderToOverlay` is used. | default tether object provided. |
 `value` | array | Array of selected objects. | |
 `ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | | 
 ## Validation props

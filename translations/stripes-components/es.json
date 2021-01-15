@@ -835,5 +835,6 @@
     "ErrorBoundary.defaultButtonLabel": "Actualizar página",
     "ErrorBoundary.copyErrorButtonAriaLabel": "Copiar error al portapapeles",
     "ErrorBoundary.detailsDescription": "Se ha producido lo siguiente, lo que provoca que la página actual se vuelva inestable:",
-    "ErrorBoundary.errorCopiedScreenReaderMessage": "El mensaje de error y el rastro de la pila se copió en su portapapeles"
+    "ErrorBoundary.errorCopiedScreenReaderMessage": "El mensaje de error y el rastro de la pila se copió en su portapapeles",
+    "mcl.additionalResultsLoaded": "Additional results loaded"
 }
