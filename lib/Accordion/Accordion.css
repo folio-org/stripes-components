@@ -81,7 +81,10 @@
   flex: 1 1 0%;
 
   &.expanded {
-    max-height: 210rem;
+    /* revert max-height, effectively un-setting the 0-value applied above
+     * for when the accordion is closed, which hides it.
+     */
+    max-height: revert;
     transition: max-height 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     overflow: visible;
   }
