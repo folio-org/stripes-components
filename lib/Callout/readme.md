@@ -1,6 +1,9 @@
 # Callout
 Keep your user informed about the actions they take! Callout creates a small alert that appears at the bottom of the workspace.
 
+**NOTE.**
+You probably want to use [`<CalloutContext>`](https://github.com/folio-org/stripes-core/blob/master/doc/callouts.md) rather than this.
+
 ## Usage
 Simply add the `<Callout>` component to your module with a ref. This works best at the highest level of your module.
 ```
