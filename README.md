@@ -76,6 +76,9 @@ Component | doc | categories
 [`<LayoutGrid>`](lib/LayoutGrid) | [doc](lib/LayoutGrid/readme.md) | structure
 [`<LayoutHeader>`](lib/LayoutHeader) | [doc](lib/LayoutHeader/readme.md) | structure
 [`<List>`](lib/List) | [doc](lib/List/readme.md) | data-display
+[`<Loading>`](lib/Loading) | [doc](lib/Loading/readme.md) | design
+[`<LoadingPane>`](lib/Loading) | [doc](lib/Loading/readme.md) | design
+[`<LoadingView>`](lib/Loading) | [doc](lib/Loading/readme.md) | design
 [`<MenuItem>`](lib/MenuItem) | [doc](lib/MenuItem/readme.md) | control
 [`<MetaSection>`](lib/MetaSection) | [doc](lib/MetaSection/readme.md) | data-display
 [`<Modal>`](lib/Modal) | [doc](lib/Modal/readme.md) | container
