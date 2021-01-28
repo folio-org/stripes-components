@@ -1,5 +1,5 @@
 # ErrorBoundary
-Catches JavaScript errors in child components and renders an error message instead of the actual content. 
+Catches JavaScript errors in child components and renders an error message instead of the actual content.
 
 The component will automatically render a more user-friendly error in production which hides technical information such as the error stack at first glance but enables the option to reveal it and copy it for debugging purposes.
 
@@ -45,6 +45,7 @@ Name | Type | Description | Options | Default
 children | node | Pass any component as a child to ErrorBoundary to enable error catching | |
 forceProductionError | boolean | Forces the production error in development. Mainly for demo purposes. | true/false | false
 onCopyError | func | Callback fired when the user clicks the 'Copy'-button. The callback will receive the copied contents as the only parameter.  | |
+onError | func | Callback fired from `componentDidCatch` that passes along its arguments (`error`, `info`). | |
 onReset | func | Callback fired when the user clicks the primary button. This defaults to a page refresh.  | |
 resetButtonLabel | node | The label for the primary/reset button | | `"Refresh page"`
 subTitle | node | Renders the sub title of the error boundary in production | | `"Something went wrong"`
