@@ -32,6 +32,8 @@ Name | type | description | default
 autoFocus | bool | If this prop is `true`, will automatically focus on mount | `false`
 checked | bool | Marks the checkbox as checked (true) or unchecked (false) | `false`
 className | string | Adds a custom class on the root element | `undefined`
+count | number | Renders count when checkbox is used as a facet | `undefined`
+countClass | string | Adds a custom class name on the count element | `undefined`
 disabled | bool | Sets the checkbox as disabled | `false`
 error | string, node | Renders an error message below the checkbox | `undefined`
 fullWidth | bool | Styles input to a width of 100% of its container | `false`

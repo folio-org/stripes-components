@@ -44,6 +44,14 @@
   }
 }
 
+/**
+ * Facet Count
+ */
+.checkBoxCount {
+  margin-left: auto;
+  padding: 0 10px;
+}
+
 .inner {
   min-height: var(--control-min-size-desktop);
   display: flex;
