@@ -47,9 +47,9 @@
 /**
  * Facet Count
  */
-.checkBoxCount {
+.checkBoxLabelInfo {
   margin-left: auto;
-  padding: 0 10px;
+  padding: 0 var(--gutter-static-two-thirds);
 }
 
 .inner {
