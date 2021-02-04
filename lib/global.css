@@ -153,6 +153,7 @@ button {
   border: 0;
   height: 0;
   width: 0;
+  overflow: hidden;
 }
 
 :global(.tether-element) {
