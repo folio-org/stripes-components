@@ -99,6 +99,7 @@ export {
 export { default as ConfirmationModal } from './lib/ConfirmationModal';
 export { default as InfoPopover } from './lib/InfoPopover';
 export { default as SearchField } from './lib/SearchField';
+export { default as MultiSelectSearchField } from './lib/MultiSelectSearchField';
 
 /* specific use */
 export {
