@@ -13,7 +13,6 @@ Universal search field component.
     onClear={...}
     placeholder="Search for something"
     isAdvancedSearch="true"
-    searchButtonRef={searchButtonRef}
   />
 ```
 
