@@ -12,23 +12,7 @@ Universal search field component.
     value={...}
     onClear={...}
     placeholder="Search for something"
-  />
-```
-
-## Usage with a MultiSelect component
-The component supports the addition of the isAdvancedSearch boolean property, which changes the TextField component to MultiSelect
-and a searchButtonRef property, which gives the ability to use Enter in textarea field without transfer to the next line.
-
-```
-  import MultiSelectSearchField from '@folio/stripes/components';
-
-  <MultiSelectSearchField
-    onChange={...}
-    value={...}
-    onClear={...}
-    placeholder="Search for something"
-    
-    isAdvancedSearch={true}
+    isAdvancedSearch="true"
     searchButtonRef={searchButtonRef}
   />
 ```
@@ -61,7 +45,9 @@ The component supports adding an array of searchable indexes which adds a select
 ```
 
 ## Props
-This component supports all props of the SearchField component and isAdvancedSearch.
+This component supports all props of the SearchField component and isAdvancedSearch boolean property, which changes the 
+TextField component to MultiSelect, and a searchButtonRef property, which gives the ability to use Enter in textarea 
+field without transfer to the next line.
 
 Name | type | Description
 -- | -- | --
@@ -75,14 +61,6 @@ loading | boolean | Adds a loading state to icon (on fetch etc.)
 onChange | function | On change handler for the input field
 onClear | function | On clear search field callback
 clearSearchId | string | Adds id to the clear search icon
-isAdvancedSearch | boolean | Rendering a MultiSelectSearch component instead of the TextField
-searchButtonRef | object | Supplies a ref to the search button
-
-### With the MultiSelect component
-Additional props for adding the MultiSelect component instead of the TextField.
-
-Name | type | Description
--- | -- | --
 isAdvancedSearch | boolean | Rendering a MultiSelectSearch component instead of the TextField
 searchButtonRef | object | Supplies a ref to the search button
 
