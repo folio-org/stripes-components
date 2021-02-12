@@ -25,6 +25,7 @@
 * Fix overflow in `sr-only` elements. Refs STCOM-801.
 * `<ErrorBoundary>` accepts a callback to receive the arguments to `componentDidCatch`. Refs STCOM-753.
 * Increment `@folio/stripes-cli` to `v2`. Refs STCOM-806.
+* Deprecate `tether` prop on `<Autosuggest>` and `<Selection>`. Refs STCOM-789.
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
