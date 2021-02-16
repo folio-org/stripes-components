@@ -58,7 +58,7 @@
 
   &.warning {
     border-color: var(--warn);
-    background-color: var(--warn-fill);
+    background-color: color(var(--warn, #940) tint(75%));
   }
 
   &.info {
