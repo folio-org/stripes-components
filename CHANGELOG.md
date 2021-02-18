@@ -8,6 +8,7 @@
 * Handle DST in `Timepicker` tests.
 * Add `isDisabled` property to `CheckboxInteractor`. Refs STCOM-777.
 * Implement info callout. Refs STCOM-776.
+* Implement warning callout. Refs STCOM-809.
 * Set modalRoot position to absolute to allow for modals to stack. Refs STCOM-771.
 * Provide `useDateFormatter` and `useTimeFormatter` hooks. Refs STCOM-775.
 * `Datepicker` calendar weekday rendering bug. Fixes STRIPES-709.

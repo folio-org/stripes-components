@@ -26,6 +26,6 @@ Use the ref to the `<Callout>` to call the `sendCallout` method, supplying a con
 ## Callout Configuration
 prop | description | default | required
 -- | -- | -- | --
-type | 'error' or 'success'. | 'success' |
+type | 'success', 'error', 'warning', 'info'. | 'success' |
 timeout | timeout for automatic dismissal, in milliseconds. Can be set to 0 to only allow for user-dismissal. | 6000 |
 message | String or HTML to render in the content of the callout. | | &#10004;
