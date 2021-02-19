@@ -12,38 +12,6 @@
   padding: 1.5rem 1rem;
 }
 
-.base {
-  padding: 1rem;
-  border-radius: var(--radius);
-  background-color: #fff;
-  width: 35%;
-  pointer-events: all;
-  position: relative;
-  transition: all 0.2s ease;
-  display: flex;
-  box-shadow: var(--shadow);
-
-  &.error {
-    background-color: color(var(--error, #900) tint(25%));
-    border-color: var(--error);
-    color: #fff;
-
-    & :global .stripes__icon {
-      fill: #fff;
-    }
-  }
-
-  &.success {
-    background-color: color(var(--success, #060) tint(25%));
-    border-color: var(--success);
-    color: #fff;
-
-    & :global .stripes__icon {
-      fill: #fff;
-    }
-  }
-}
-
 .calloutContainer {
   display: block;
   overflow: auto;
@@ -86,6 +54,11 @@
   &.success {
     border-color: var(--success);
     background-color: color(var(--success, #060) tint(75%));
+  }
+
+  &.warning {
+    border-color: var(--warn);
+    background-color: color(var(--warn, #940) tint(75%));
   }
 
   &.info {
