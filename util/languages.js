@@ -523,4 +523,20 @@ export const languageOptions = intl => {
   return sortBy(options, ['label']);
 };
 
+export const languageOptionsES = (intl, languages = []) => {
+  const options = languages.reduce((accum, { id, totalRecords }) => {
+    if (!totalRecords) return accum;
+
+    const option = {
+      label: formattedLanguageName(id, intl),
+      value: id,
+      count: totalRecords,
+    };
+    accum.push(option);
+
+    return accum;
+  }, []);
+  return sortBy(options, ['label']);
+};
+
 export default languages;
