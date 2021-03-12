@@ -523,8 +523,8 @@ export const languageOptions = intl => {
   return sortBy(options, ['label']);
 };
 
-export const languageOptionsES = (intl, languages = []) => {
-  const options = languages.reduce((accum, { id, totalRecords }) => {
+export const languageOptionsES = (intl, langs = []) => {
+  const options = langs.reduce((accum, { id, totalRecords }) => {
     if (!totalRecords) return accum;
 
     const option = {
