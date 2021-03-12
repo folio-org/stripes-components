@@ -61,24 +61,11 @@
   margin: 0 0 0 var(--gutter-static-one-third);
   display: flex;
   align-items: center;
-  flex: 3 3;
   min-height: var(--control-min-size-desktop);
 }
 
 [dir="rtl"] .labelText {
   margin: 0 var(--gutter-static-one-third) 0 0;
-}
-
-/**
- * Label info
- */
-.labelInfo {
-  flex: 1 1;
-  margin-left: var(--gutter-static-one-third);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: right;
 }
 
 /**
