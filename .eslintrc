@@ -11,7 +11,7 @@
   "extends": "@folio/eslint-config-stripes",
   "overrides": [
     {
-      "files": ["lib/**/tests/**", "util/tests/*"],
+      "files": ["lib/**/tests/**", "util/tests/*", "hooks/tests/*"],
       "rules": {
         "func-names": "off",
         "max-classes-per-file": "off",
