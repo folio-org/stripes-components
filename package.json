@@ -47,7 +47,7 @@
     "@bigtest/interactor": "0.7.2",
     "@bigtest/mocha": "^0.5.0",
     "@folio/eslint-config-stripes": "^5.2.0",
-    "@folio/stripes-cli": "^1.6.0",
+    "@folio/stripes-cli": "^2.0.0",
     "@folio/stripes-testing": "folio-org/stripes-testing#master",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
