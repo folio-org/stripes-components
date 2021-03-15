@@ -44,6 +44,14 @@
   }
 }
 
+/**
+ * Label Info
+ */
+.checkBoxLabelInfo {
+  margin-left: auto;
+  padding: 0 var(--gutter-static-two-thirds);
+}
+
 .inner {
   min-height: var(--control-min-size-desktop);
   display: flex;

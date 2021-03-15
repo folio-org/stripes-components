@@ -1,6 +1,11 @@
 # Change history for stripes-components
 
-## 9.0.0 (IN PROGRESS)
+## [9.1.0] IN PROGRESS
+
+* Fix Accordion content is displayed below other accordions when using scrollbar. Fixes STCOM-812.
+
+## [9.0.0](https://github.com/folio-org/stripes-components/tree/v9.0.0) (2021-02-25)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.0...v9.0.0)
 
 * Make Select tooltip-ready (inputRef, aria-labelledby). Refs UITEN-119
 * Fix focusing SearchField when loading - make it readOnly. Refs STCOM-762
@@ -8,6 +13,7 @@
 * Handle DST in `Timepicker` tests.
 * Add `isDisabled` property to `CheckboxInteractor`. Refs STCOM-777.
 * Implement info callout. Refs STCOM-776.
+* Implement warning callout. Refs STCOM-809.
 * Set modalRoot position to absolute to allow for modals to stack. Refs STCOM-771.
 * Provide `useDateFormatter` and `useTimeFormatter` hooks. Refs STCOM-775.
 * `Datepicker` calendar weekday rendering bug. Fixes STRIPES-709.
@@ -23,6 +29,9 @@
 * Add `className` prop to `<Accordion>`. Refs UIEH-926.
 * Settings > Panes are off. Refs STCOM-795.
 * Fix overflow in `sr-only` elements. Refs STCOM-801.
+* `<ErrorBoundary>` accepts a callback to receive the arguments to `componentDidCatch`. Refs STCOM-753.
+* Increment `@folio/stripes-cli` to `v2`. Refs STCOM-806.
+* Added `refresh`-icon. Refs UX-426.
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
