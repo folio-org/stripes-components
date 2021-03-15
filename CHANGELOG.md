@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## [9.1.0] IN PROGRESS
+
+* Fix Accordion content is displayed below other accordions when using scrollbar. Fixes STCOM-812.
+
 ## [9.0.0](https://github.com/folio-org/stripes-components/tree/v9.0.0) (2021-02-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.0...v9.0.0)
 
@@ -28,6 +32,8 @@
 * `<ErrorBoundary>` accepts a callback to receive the arguments to `componentDidCatch`. Refs STCOM-753.
 * Increment `@folio/stripes-cli` to `v2`. Refs STCOM-806.
 * Updated disabled styles for `<Button>` to fix the poor contrast ratio issue. Fixes STCOM-813.
+* Added `refresh`-icon. Refs UX-426.
+* Fix rendering default heading as `h3` tag for accordion of `<DefaultAccordionHeader>` component. Refs STCOM-815
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v7.0.1...v8.0.0)
