@@ -1,4 +1,4 @@
-import { find, sortBy, orderBy } from 'lodash';
+import { find, sortBy } from 'lodash';
 
 // This list is derived from the table provided at https://www.loc.gov/standards/iso639-2/ascii_8bits.html
 // It uses the ISO 639-2 standard. Not all language names have both a two-character and three-character
@@ -524,7 +524,7 @@ export const languageOptions = intl => {
 };
 
 export const languageOptionsES = (intl, langs = []) => {
-  const options = langs.reduce((accum, { id, totalRecords }) => {
+  return langs.reduce((accum, { id, totalRecords }) => {
     if (!totalRecords) return accum;
 
     const option = {
@@ -536,7 +536,6 @@ export const languageOptionsES = (intl, langs = []) => {
 
     return accum;
   }, []);
-  return orderBy(options, ['count'], ['desc']);
 };
 
 export default languages;
