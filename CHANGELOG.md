@@ -32,6 +32,7 @@
 * Fix overflow in `sr-only` elements. Refs STCOM-801.
 * `<ErrorBoundary>` accepts a callback to receive the arguments to `componentDidCatch`. Refs STCOM-753.
 * Increment `@folio/stripes-cli` to `v2`. Refs STCOM-806.
+* Updated disabled styles for `<Button>` to fix the poor contrast ratio issue. Fixes STCOM-813.
 * Added `refresh`-icon. Refs UX-426.
 * Fix rendering default heading as `h3` tag for accordion of `<DefaultAccordionHeader>` component. Refs STCOM-815
 
