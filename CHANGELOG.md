@@ -3,8 +3,9 @@
 ## [9.1.0] IN PROGRESS
 
 * Fix Accordion content is displayed below other accordions when using scrollbar. Fixes STCOM-812. 
-* Add languageOptionsES for the laguage facet. Refs UISEES-29: Update filters options for Instances with the facet data.
-* Fix Pane behavior on window resize/3rd pane/nested paneset resize. Fixes STCOM-808
+* Add languageOptionsES for the laguage facet. Refs UISEES-29.
+* Fix Pane behavior on window resize/3rd pane/nested paneset resize. Fixes STCOM-808.
+* Add the `<ErrorModal>` component. Refs STCOM-794.
 
 ## [9.0.0](https://github.com/folio-org/stripes-components/tree/v9.0.0) (2021-02-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.0...v9.0.0)
