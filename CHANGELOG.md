@@ -2,7 +2,10 @@
 
 ## [9.1.0] IN PROGRESS
 
-* Fix Accordion content is displayed below other accordions when using scrollbar. Fixes STCOM-812.
+* Fix Accordion content is displayed below other accordions when using scrollbar. Fixes STCOM-812. 
+* Add languageOptionsES for the laguage facet. Refs UISEES-29.
+* Fix Pane behavior on window resize/3rd pane/nested paneset resize. Fixes STCOM-808.
+* Add the `<ErrorModal>` component. Refs STCOM-794.
 
 ## [9.0.0](https://github.com/folio-org/stripes-components/tree/v9.0.0) (2021-02-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.0...v9.0.0)
@@ -31,6 +34,7 @@
 * Fix overflow in `sr-only` elements. Refs STCOM-801.
 * `<ErrorBoundary>` accepts a callback to receive the arguments to `componentDidCatch`. Refs STCOM-753.
 * Increment `@folio/stripes-cli` to `v2`. Refs STCOM-806.
+* Updated disabled styles for `<Button>` to fix the poor contrast ratio issue. Fixes STCOM-813.
 * Added `refresh`-icon. Refs UX-426.
 * Deprecate `tether` prop on `<Autosuggest>` and `<Selection>`. Refs STCOM-789.
 * Fix rendering default heading as `h3` tag for accordion of `<DefaultAccordionHeader>` component. Refs STCOM-815
