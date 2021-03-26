@@ -77,7 +77,7 @@ Name | type | description | default | required
 `onFilter` | function | Callback function used for custom data filtering | | false |
 `useValidStyle` | bool | if true, "success" styles will be applied to control if it contains a valid value `onBlur` (using redux-form validation.) | false |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
-
+`popper` | object | Used to adjust placement of options list overlay via underlying Popper component. [See `<Popper>` props](../Popper/readme.md) | | false | 
 ## Labeling
 Like other form controls in stripes-components, `<Selection>` abides by standard conventions for labeling props if alternatives to `label` (visible label with the control) are required... `aria-label` and `aria-labelledby` are useful for this. See [Accessiblity for developers documentation](https://github.com/folio-org/stripes-components/blob/master/docs/AccessibilityDevPrimer.md#labeling) for more details about which to choose.
 

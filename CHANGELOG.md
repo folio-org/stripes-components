@@ -36,6 +36,7 @@
 * Increment `@folio/stripes-cli` to `v2`. Refs STCOM-806.
 * Updated disabled styles for `<Button>` to fix the poor contrast ratio issue. Fixes STCOM-813.
 * Added `refresh`-icon. Refs UX-426.
+* Deprecate `tether` prop on `<Autosuggest>` and `<Selection>`. Refs STCOM-789.
 * Fix rendering default heading as `h3` tag for accordion of `<DefaultAccordionHeader>` component. Refs STCOM-815
 
 ## [8.0.0](https://github.com/folio-org/stripes-components/tree/v8.0.0) (2020-10-05)
