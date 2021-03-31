@@ -1,11 +1,22 @@
 # KeyboardShortcutsModal
 
-Display keyboard shortcuts that can used to navigate a Folio app by keyboard.
+Display keyboard shortcuts that can be used to navigate a Folio app by keyboard.
 
 ## Basic Usage
 
 ```
 import { KeyboardShortcutsModal } from '@folio/stripes/components';
+
+const commands = [
+  {
+    label: 'Copy',
+    shortcut: 'mod+c'
+  },
+  {
+    label: 'Paste',
+    shortcut: 'mod+v'
+  }
+];
 
 { this.state.showKeyboardShortcutsModal && (
   <KeyboardShortcutsModal
