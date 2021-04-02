@@ -61,7 +61,7 @@
     "multiSelection.removeSelectedButtonDescription": "按 enter 或 空白鍵 從選擇清單中移除單件。Home 鍵和 End 鍵移動到第一個或最後一個單件。",
     "multiSelection.removeSelectedButtonLabel": "移除值",
     "endOfList": "清單結尾",
-    "button.duplicate": "复制",
+    "button.duplicate": "複製",
     "passwordStrength.veryWeak": "您的密码非常弱。",
     "passwordStrength.weak": "您的密码太弱。",
     "passwordStrength.reasonable": "你的密码是合理的。",
