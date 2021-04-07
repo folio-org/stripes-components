@@ -57,7 +57,7 @@ Component | doc | categories
 [`<Datepicker>`](lib/Datepicker) | [doc](lib/Datepicker/readme.md) | control
 [`<Dropdown>`](lib/Dropdown) | [doc](lib/Dropdown/readme.md) | control
 [`<DropdownMenu>`](lib/DropdownMenu) | | control
-[`<EditableList>`](lib/EditableList) | [doc](lib/EditableList/readme.md) | control, prefab
+[`<EditableList>`](https://github.com/folio-org/stripes-smart-components/tree/master/lib/EditableList) | [doc](https://github.com/folio-org/stripes-smart-components/blob/master/lib/EditableList/readme.md) | control, prefab
 [`<EmptyMessage>`](lib/EmptyMessage) | [doc](lib/EmptyMessage/readme.md) | structure
 [`<ErrorBoundary>`](lib/ErrorBoundary) | | user-feedback
 [`<FilterControlGroup>`](lib/FilterControlGroup) | | control
@@ -93,7 +93,7 @@ Component | doc | categories
 [`<PaneMenu>`](lib/PaneMenu) | | control
 [`<Paneset>`](lib/Paneset) | [doc](lib/Paneset/readme.md) | structure
 [`<PaneSubheader>`](lib/PaneSubheader) | [doc](lib/PaneSubheader/readme.md) | structure
-[`<Pluggable>`](lib/Pluggable) | | utility
+[`<Pluggable>`](https://github.com/folio-org/stripes-core/blob/master/src/Pluggable.js) | | utility
 [`<Popover>`](lib/Popover) | [doc](lib/Popover/readme.md) | control
 [`<RadioButton>`](lib/RadioButton) | | control
 [`<RadioButtonGroup>`](lib/RadioButtonGroup) | [doc](lib/RadioButtonGroup/readme.md) | control
@@ -103,7 +103,7 @@ Component | doc | categories
 [`<SearchField>`](lib/SearchField) | [doc](lib/SearchField/readme.md) | control, prefab
 [`<Select>`](lib/Select) | [doc](lib/Select/readme.md) | control
 [`<Selection>`](lib/Selection) | [doc](lib/Selection/readme.md) | control
-[`<Settings>`](lib/Settings) | [doc](lib/Settings/readme.md) | prefab
+[`<Settings>`](https://github.com/folio-org/stripes-smart-components/tree/master/lib/Settings) | [doc](https://github.com/folio-org/stripes-smart-components/blob/master/lib/Settings/readme.md) | prefab
 [`<SRStatus>`](lib/SRStatus) | [doc](lib/SRStatus/readme.md) | accessibility, user-feedback
 [`<TextArea>`](lib/TextArea) | | control
 [`<TextField>`](lib/TextField) | [doc](lib/TextField/readme.md) | control
