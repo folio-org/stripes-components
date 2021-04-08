@@ -9,6 +9,7 @@
 * Add `check-in` icon. Refs UX-427.
 * Add `check-out` icon. Refs UX-428.
 * Add `KeyboardShortcutsModal` component. Refs STCOM-811.
+* Fix incorrect date from `<Datepicker>` when using `YYYY-MM-DD` formatting and hidden input. Fixes STCOM-822.
 
 ## [9.0.0](https://github.com/folio-org/stripes-components/tree/v9.0.0) (2021-02-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.0...v9.0.0)
