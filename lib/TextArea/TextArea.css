@@ -12,5 +12,6 @@
     padding: var(--input-vertical-padding) var(--input-horizontal-padding);
     font-size: var(--font-size-medium);
     line-height: var(--line-height);
+    max-width: 100%;
   }
 }

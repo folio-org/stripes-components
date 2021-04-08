@@ -9,6 +9,7 @@
 * Add `check-in` icon. Refs UX-427.
 * Add `check-out` icon. Refs UX-428.
 * Fix incorrect date from `<Datepicker>` when using `YYYY-MM-DD` formatting and hidden input. Fixes STCOM-822.
+* Set `max-width` on `textarea` elements, not just on their wrappers. Refs STCOM-824.
 
 ## [9.0.0](https://github.com/folio-org/stripes-components/tree/v9.0.0) (2021-02-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v8.0.0...v9.0.0)
