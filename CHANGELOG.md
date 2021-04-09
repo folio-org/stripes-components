@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## [9.1.0] IN PROGRESS
+## [9.1.0](https://github.com/folio-org/stripes-components/tree/v9.1.0) (2021-04-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.0.0...v9.1.0)
 
 * Fix Accordion content is displayed below other accordions when using scrollbar. Fixes STCOM-812. 
 * Add languageOptionsES for the laguage facet. Refs UISEES-29.
