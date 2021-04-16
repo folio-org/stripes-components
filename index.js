@@ -113,6 +113,7 @@ export {
 export { default as FilterControlGroup } from './lib/FilterControlGroup';
 export { default as FilterPaneSearch } from './lib/FilterPaneSearch';
 export { default as ExportCsv } from './lib/ExportCsv';
+export { default as Pagination } from './lib/Pagination';
 
 /* utilities */
 export { default as RootCloseWrapper } from './util/RootCloseWrapper';
