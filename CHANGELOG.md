@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 9.2.0 (IN PROGRESS)
+
+* `TextField`: Do not call `setState` on unmounted component. Refs STCOM-832.
+
 ## [9.1.0](https://github.com/folio-org/stripes-components/tree/v9.1.0) (2021-04-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.0.0...v9.1.0)
 
