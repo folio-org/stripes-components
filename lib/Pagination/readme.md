@@ -26,6 +26,17 @@ We use [react-paginate](https://github.com/AdeleD/react-paginate) under the hood
   />
 ```
 
+## Display modes based on page count...
+For less than 6 pages, 3 page links will be visible between previous and next buttons (carets.)
+```
+<  1  2  3  >
+```
+
+For more than 6 pages, extended mode is activated - it includes collected central links between ellipsis and outer "margin" links.
+```
+<  1  ...  4  5  6  ...  10  >
+```
+
 ## Props
 
 Name | type | description | default | required
