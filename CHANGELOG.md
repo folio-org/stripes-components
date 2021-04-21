@@ -9,6 +9,7 @@
 * Add the `<ErrorModal>` component. Refs STCOM-794.
 * Add `check-in` icon. Refs UX-427.
 * Add `check-out` icon. Refs UX-428.
+* Add `KeyboardShortcutsModal` component. Refs STCOM-811.
 * Fix incorrect date from `<Datepicker>` when using `YYYY-MM-DD` formatting and hidden input. Fixes STCOM-822.
 * Set `max-width` on `textarea` elements, not just on their wrappers. Refs STCOM-824.
 

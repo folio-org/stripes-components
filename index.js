@@ -30,6 +30,7 @@ export { default as Popper } from './lib/Popper';
 
 /* data containers */
 export { default as Card } from './lib/Card';
+export { default as KeyboardShortcutsModal } from './lib/KeyboardShortcutsModal';
 export { default as KeyValue } from './lib/KeyValue';
 export { default as MultiColumnList } from './lib/MultiColumnList';
 export { default as EndOfList } from './lib/MultiColumnList/EndOfList';
