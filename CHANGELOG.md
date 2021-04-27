@@ -2,6 +2,8 @@
 
 ## 9.2.0 (IN PROGRESS)
 
+* `<IconLabel>` Avoid passing `aria-label` to a `<span>`, an a11y violation. Refs STCOM-834.
+
 ## [9.1.0](https://github.com/folio-org/stripes-components/tree/v9.1.0) (2021-04-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.0.0...v9.1.0)
 
