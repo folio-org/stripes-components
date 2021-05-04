@@ -1,24 +1,24 @@
 # Keyboard Commands
-With this system of components, module-wide key combinations can be specified in one place - at the top of a module and applied through a `<CommandList>` instance. Further within the component tree, `<HasCommand>` is used to apply handlers to the key combinations to suit the requirements and fulfill workflows for the module. These special components function as wrappers for core hotkey components, allowing for additional capabilities in discoverability to be built into the system. 
+With this system of components, module-wide key combinations can be specified in one place - at the top of a module and applied through a `<CommandList>` instance. Further within the component tree, `<HasCommand>` is used to apply handlers to the key combinations to suit the requirements and fulfill workflows for the module. These special components function as wrappers for core hotkey components, allowing for additional capabilities in discoverability to be built into the system.
 ## CommandList
 This is a top-level component that stores default shortcut configurations. This configuration is re-usable and can be used to set up interfaces for customizeable shortcuts.
-### CommandList Props 
+### CommandList Props
 prop | type | description | required
 -- | -- | -- | --
 `commands` | array | Array of top-level command objects - commonly with only names, shortcuts, and labels. Shortcut keys that might be configurable or re-used throughout your application. | &#10004;
 `children` | node, array of nodes | Rendered children | &#10004;
 ## HasCommand
 Placed within the component tree to expose commands in a declarative way within the module.
-### HasCommand Props 
+### HasCommand Props
 prop | type | description | required
 -- | -- | -- | --
 `commands` | array | Array of command objects - commonly names and handlers - Shortcut keys that should be active within this component's children. | &#10004;
 `children` | node, array of nodes | Rendered children | &#10004;
-`scope` | DOMNode | Element that shortcut keys should delegate to. Defaults to the outer DOMNode of rendered children | 
-`isWithinScope` | function | Function called at handle-time to see whether or not the handler should be executed. This, in combination with the `scope` prop can be used to expand the functionality of the component outside of its own children. | 
+`scope` | DOMNode | Element that shortcut keys should delegate to. Defaults to the outer DOMNode of rendered children |
+`isWithinScope` | function | Function called at handle-time to see whether or not the handler should be executed. This, in combination with the `scope` prop can be used to expand the functionality of the component outside of its own children. |
 
 ## Command shape
-property | type | description 
+property | type | description
 -- | -- | --
 `name` | string | Static identifier for the command within module code.
 `shortcut` | string | Expresses the desired shortcut. ex `mod+s`.
@@ -129,7 +129,7 @@ scope={document.body}
 </HasCommand>
 ```
 ## Browser shortcuts.
-If a known browser shortcut is supplied to `<CommandList>` it will deliver a warning via the browser's development console. Care must be taken in these situations - In most cases, the shortcut should be changed to something else. There are certain cases where keys can be overridden - `mod+s`, for example, is used by browsers to save the actual html page locally - but is a comfortable convention for users when saving a form. To avoid the browser's behavior, you must call `e.preventDefault()` within the shortcut's handler.
+Care must be taken if a known browser shortcut is supplied to `<CommandList>`, e.g. `mod+s` is used by browsers to save the actual html page locally but is a comfortable convention for users when saving a form. In most cases, the shortcut should be changed to something else. To avoid the browser's behavior, you must call `e.preventDefault()` within the shortcut's handler.
 ```
 handleKeyboardSave(e) {
     e.preventDefault();
