@@ -836,5 +836,8 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "Fehler in Zwischenablage kopieren",
     "ErrorBoundary.detailsDescription": "Folgendes ist aufgetreten, was dazu führte, dass die aktuelle Seite instabil wurde:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "Fehlermeldung und Stracktrace wurde in die Zwischenablage kopiert.",
-    "mcl.additionalResultsLoaded": "Zusätzliche Ergebnisse geladen"
+    "mcl.additionalResultsLoaded": "Zusätzliche Ergebnisse geladen",
+    "shortcut.modalLabel": "Keyboard shortcuts",
+    "shortcut.action": "Action",
+    "shortcut.shortcut": "Shortcut"
 }

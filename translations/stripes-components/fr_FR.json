@@ -836,5 +836,8 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
     "ErrorBoundary.detailsDescription": "Ceci s'est produit, entraînant l'instabilité de la page actuelle:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "Le message d'erreur et la \"stack trace\" ont été copiés dans votre presse-papiers",
-    "mcl.additionalResultsLoaded": "Résultats supplémentaires chargés"
+    "mcl.additionalResultsLoaded": "Résultats supplémentaires chargés",
+    "shortcut.modalLabel": "Keyboard shortcuts",
+    "shortcut.action": "Action",
+    "shortcut.shortcut": "Shortcut"
 }

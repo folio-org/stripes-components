@@ -836,5 +836,8 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "Skopiuj błąd do schowka",
     "ErrorBoundary.detailsDescription": "Wystąpiły następujące zdarzenia, które spowodowały niestabilność bieżącej strony:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "Komunikat o błędzie i zawartość stosu zostały skopiowane do twojego schowka",
-    "mcl.additionalResultsLoaded": "Wczytano dodatkowe wyniki"
+    "mcl.additionalResultsLoaded": "Wczytano dodatkowe wyniki",
+    "shortcut.modalLabel": "Keyboard shortcuts",
+    "shortcut.action": "Action",
+    "shortcut.shortcut": "Shortcut"
 }

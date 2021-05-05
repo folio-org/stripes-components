@@ -836,5 +836,8 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "Copiar erro para  o clipholder",
     "ErrorBoundary.detailsDescription": "O seguinte ocorreu, resultando na instabilidade da página atual:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "A mensagem de erro e o rastreamento da pilha foram copiados para o seu clipholder",
-    "mcl.additionalResultsLoaded": "Resultados adicionais carregados"
+    "mcl.additionalResultsLoaded": "Resultados adicionais carregados",
+    "shortcut.modalLabel": "Keyboard shortcuts",
+    "shortcut.action": "Action",
+    "shortcut.shortcut": "Shortcut"
 }
