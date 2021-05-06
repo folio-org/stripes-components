@@ -1,5 +1,11 @@
 # Change history for stripes-components
 
+## 9.2.0 (IN PROGRESS)
+
+* `<IconLabel>` Avoid passing `aria-label` to a `<span>`, an a11y violation. Refs STCOM-834.
+* `<CommandList>` should not warn about overriding system key bindings. Refs STCOM-836.
+* `<Selection>` no longer always shows a `props.tether` deprecation warning. Refs STCOM-838.
+
 ## [9.1.0](https://github.com/folio-org/stripes-components/tree/v9.1.0) (2021-04-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.0.0...v9.1.0)
 
