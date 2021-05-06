@@ -277,3 +277,28 @@
     margin: 0 var(--gutter-static);
   }
 }
+
+/**
+* Styles for previous/next pagination
+*/
+.mclPrevNextButtonContainer {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-around;
+}
+
+.mclPrevNextStickyContainer {
+  position: sticky;
+  left: 0;
+}
+
+.mclPrevNextPageInfoContainer {
+  font-weight: bold;
+  display: flex;
+  flex-grow: 3;
+  flex-shrink: 0;
+  flex-basis: 45%;
+  align-items: center;
+  justify-content: center;
+  align-content: middle;
+}
