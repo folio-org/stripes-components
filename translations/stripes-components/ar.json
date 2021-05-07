@@ -836,5 +836,8 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "نسخ الخطأ إلى الحافظة",
     "ErrorBoundary.detailsDescription": "لقد حدث ما يلي، مما أدى إلى عدم استقرار الصفحة الحالية:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "تم نسخ رسالة الخطأ وتتبع المكدس إلى حافظتك",
-    "mcl.additionalResultsLoaded": "تم تحميل النتائج الإضافية"
+    "mcl.additionalResultsLoaded": "تم تحميل النتائج الإضافية",
+    "shortcut.modalLabel": "اختصارات لوحة المفاتيح",
+    "shortcut.action": "الإجراء",
+    "shortcut.shortcut": "اختصار"
 }

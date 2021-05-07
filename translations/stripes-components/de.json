@@ -52,13 +52,13 @@
     "selection.filterOptionsLabel": "{label} Optionsfilter",
     "selection.filterOptionsPlaceholder": "Liste der Filteroptionen",
     "selection.filterResultFeedback": "{length} Einträge gefunden, {label} ausgewählt",
-    "exportToCsv": "CSV Export",
+    "exportToCsv": "CSV-Export",
     "button.edit": "Bearbeiten",
     "button.new": "Neu",
     "multiSelection.defaultEmptyMessage": "Keine passenden Einträge gefunden!",
     "multiSelection.filterPlaceholder": "Liste der Filteroption",
     "multiSelection.controlDescription": "Enthält eine Liste aller ausgewählten Werte, gefolgt von einem Autovervollständigungs-Textfeld zur Auswahl zusätzlicher Werte.",
-    "multiSelection.removeSelectedButtonDescription": "Eingabe- oder Leertaste drücken, um den Eintrag aus der Auswahlliste zu entfernen. Die Tasten Home und Ende navigieren zum ersten und letzten Eintrag.",
+    "multiSelection.removeSelectedButtonDescription": "Eingabe- oder Leertaste drücken, um den Eintrag aus der Auswahlliste zu entfernen. Die Tasten Pos1 und Ende navigieren zum ersten und letzten Eintrag.",
     "multiSelection.removeSelectedButtonLabel": "Wert entfernen",
     "endOfList": "Ende der Liste",
     "button.duplicate": "Duplizieren",
@@ -836,5 +836,8 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "Fehler in Zwischenablage kopieren",
     "ErrorBoundary.detailsDescription": "Folgendes ist aufgetreten, was dazu führte, dass die aktuelle Seite instabil wurde:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "Fehlermeldung und Stracktrace wurde in die Zwischenablage kopiert.",
-    "mcl.additionalResultsLoaded": "Zusätzliche Ergebnisse geladen"
+    "mcl.additionalResultsLoaded": "Zusätzliche Ergebnisse geladen",
+    "shortcut.modalLabel": "Keyboard shortcuts",
+    "shortcut.action": "Action",
+    "shortcut.shortcut": "Shortcut"
 }
