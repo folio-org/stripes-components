@@ -836,5 +836,8 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
     "ErrorBoundary.detailsDescription": "以下が発生したことで、現在のページが不安定になりました。",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder",
-    "mcl.additionalResultsLoaded": "Additional results loaded"
+    "mcl.additionalResultsLoaded": "Additional results loaded",
+    "shortcut.modalLabel": "Keyboard shortcuts",
+    "shortcut.action": "Action",
+    "shortcut.shortcut": "Shortcut"
 }
