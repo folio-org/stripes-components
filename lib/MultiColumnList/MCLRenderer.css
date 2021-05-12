@@ -284,6 +284,8 @@
 .mclPrevNextButtonContainer {
   display: flex;
   margin-bottom: 1rem;
+  width: 100%;
+  max-width: 500px;
   justify-content: space-around;
 
   & button[disabled] {
@@ -299,6 +301,12 @@
 .mclPrevNextStickyContainer {
   position: sticky;
   left: 0;
+}
+
+.mclPaginationCenterContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .mclPrevNextPageInfoContainer {
