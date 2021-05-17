@@ -837,7 +837,7 @@
     "ErrorBoundary.detailsDescription": "The following occurred, resulting in the current page becoming unstable:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder",
     "mcl.additionalResultsLoaded": "Additional results loaded",
-    "shortcut.modalLabel": "Keyboard shortcuts",
-    "shortcut.action": "Action",
+    "shortcut.modalLabel": "Atalhos do teclado",
+    "shortcut.action": "Acção",
     "shortcut.shortcut": "Shortcut"
 }
