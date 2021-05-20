@@ -6,11 +6,12 @@
 * `<CommandList>` should not warn about overriding system key bindings. Refs STCOM-836.
 * `<Selection>` no longer always shows a `props.tether` deprecation warning. Refs STCOM-838.
 * `<Paneset>` should not call `setState` after unmounting. Refs STCOM-833.
+* Add `buttonLabel` to `<ErrorModal>`. Refs STCOM-841.
 
 ## [9.1.0](https://github.com/folio-org/stripes-components/tree/v9.1.0) (2021-04-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.0.0...v9.1.0)
 
-* Fix Accordion content is displayed below other accordions when using scrollbar. Fixes STCOM-812. 
+* Fix Accordion content is displayed below other accordions when using scrollbar. Fixes STCOM-812.
 * Add languageOptionsES for the laguage facet. Refs UISEES-29.
 * Fix Pane behavior on window resize/3rd pane/nested paneset resize. Fixes STCOM-808.
 * Add the `<ErrorModal>` component. Refs STCOM-794.
