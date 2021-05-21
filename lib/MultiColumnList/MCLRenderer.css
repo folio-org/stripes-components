@@ -290,9 +290,9 @@
 
   & button[disabled] {
     background-color: transparent;
-    color: var(--color-text-p2, rgba(0.0, 0.0, 0.0, 0.62));
+    color: var(--color-text-p2, rgba(0, 0, 0, 0.62));
 
-    &:hover{
+    &:hover {
       background-color: var(--color-fill-disabled, rgba(0, 0, 0, 0.15));
     }
   }
