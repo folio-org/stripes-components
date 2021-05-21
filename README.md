@@ -88,6 +88,7 @@ Component | doc | categories
 [`<NavList>`](lib/NavList) | [doc](lib/NavList/readme.md) | control
 [`<NavListItem>`](lib/NavListItem) | | control
 [`<NavListSection>`](lib/NavListSection) | | control
+[`<NoValue>`](lib/NoValue) | | accessibility
 [`<Pane>`](lib/Pane) | [doc](lib/Pane/readme.md) | structure
 [`<PaneHeader>`](lib/PaneHeader) | | structure
 [`<PaneMenu>`](lib/PaneMenu) | | control
