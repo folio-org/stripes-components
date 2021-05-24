@@ -18,6 +18,9 @@ You can also specify a formatter object to control exactly how the data is rende
 ### Infinite scroll
 For large lists of data the boolean prop `virtualize` can be turned on to efficiently display only the table rows that are visible to the user within the scrollable body of the list. The `virtualize` prop should be used in conjunction with the `height`, `maxHeight` or `autosize` prop - virtualization will not work otherwise.
 
+### Sparse Array Support
+Currently for non-virtualized (non-infinite scroll) lists, MCL can render sparse array structures. Sparse arrays are simply arrays that don't have their entire `length`'s worth of data items.
+
 ### Height and `autosize` props
 For efficiency, virtualization of list items requires a static `height` value (not percentage-based). If you're unsure how large the list's containing element will be, you can set the `autosize` prop to true - this will make the grid dynamically fill the space that it has, automatically using the resulting static width and height. This is ideal for the content of results panes.
 
