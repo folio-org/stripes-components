@@ -836,5 +836,8 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
     "ErrorBoundary.detailsDescription": "The following occurred, resulting in the current page becoming unstable:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder",
-    "mcl.additionalResultsLoaded": "Additional results loaded"
+    "mcl.additionalResultsLoaded": "Additional results loaded",
+    "shortcut.modalLabel": "Atalhos do teclado",
+    "shortcut.action": "Acção",
+    "shortcut.shortcut": "Shortcut"
 }
