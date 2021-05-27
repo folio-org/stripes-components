@@ -18,6 +18,9 @@ You can also specify a formatter object to control exactly how the data is rende
 ### Infinite scroll
 For large lists of data the boolean prop `virtualize` can be turned on to efficiently display only the table rows that are visible to the user within the scrollable body of the list. The `virtualize` prop should be used in conjunction with the `height`, `maxHeight` or `autosize` prop - virtualization will not work otherwise.
 
+### Sparse Array Support
+Currently for non-virtualized (non-infinite scroll) lists, MCL can render sparse array structures. Sparse arrays are simply arrays that don't have their entire `length`'s worth of data items.
+
 ### Height and `autosize` props
 For efficiency, virtualization of list items requires a static `height` value (not percentage-based). If you're unsure how large the list's containing element will be, you can set the `autosize` prop to true - this will make the grid dynamically fill the space that it has, automatically using the resulting static width and height. This is ideal for the content of results panes.
 
@@ -92,7 +95,7 @@ Name | type | description | default | required
 `onRowClick` | function(`event`, `item`) | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | |
 `onScroll` | func | Callback for scrolling of list body. | `noop` |
 `pageAmount` | number | The base amount of data to pass as the `askAmount` parameter for the `onNeedMoreData` prop | `30` |
-`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. | `"scroll"` |
+`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. `prev-next` will render pagination with 'previous' and 'next' buttons with a display of the current page's item numbers. | `"scroll"` |
 `rowFormatter`  | func | function of shape `<name>({rowIndex, rowClass, rowData, cells, rowProps}){return <reactElement>}` that can be used to supply custom row layout. Forking [defaultRowFormatter](defaultRowFormatter.js) is a good place to start if you need to use this. | `defaultRowFormatter` |
 `rowMetadata` | object | arbitrary data that is passed as a metadata object to the `onRowClick` handler - useful for passing in data that may exist outside of the realm of the rendered MCL. | |
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |
