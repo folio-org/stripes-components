@@ -7,6 +7,7 @@
 * `<Selection>` no longer always shows a `props.tether` deprecation warning. Refs STCOM-838.
 * `<Paneset>` should not call `setState` after unmounting. Refs STCOM-833.
 * Add `buttonLabel` to `<ErrorModal>`. Refs STCOM-841.
+* Copy features and bugfixes from the `stripes-util` dupe of `exportToCsv`. Refs STCOM-844.
 
 ## [9.1.0](https://github.com/folio-org/stripes-components/tree/v9.1.0) (2021-04-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.0.0...v9.1.0)
