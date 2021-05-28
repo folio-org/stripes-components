@@ -114,6 +114,7 @@ export {
 export { default as FilterControlGroup } from './lib/FilterControlGroup';
 export { default as FilterPaneSearch } from './lib/FilterPaneSearch';
 export { default as ExportCsv } from './lib/ExportCsv';
+export { default as exportToCsv } from './lib/ExportCsv/exportToCsv';
 
 /* utilities */
 export { default as RootCloseWrapper } from './util/RootCloseWrapper';
@@ -143,3 +144,5 @@ export {
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
 export { default as useDateFormatter } from './hooks/useFormatDate';
 export { default as useTimeFormatter } from './hooks/useFormatTime';
+
+export { pagingTypes as MCLPagingTypes } from './lib/MultiColumnList';
