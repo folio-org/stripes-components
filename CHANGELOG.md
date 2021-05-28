@@ -11,6 +11,7 @@
 * Add support for sparse arrays to MCL. Refs STCOM-829
 * Add `ItenToView` functionality so that item-based scroll positions can be marked by modules. Resolves STCOM-830.
 * Formally export `exportToCsv`. Refs STCOM-843.
+* Copy features and bugfixes from the `stripes-util` dupe of `exportToCsv`. Refs STCOM-844.
 
 ## [9.1.0](https://github.com/folio-org/stripes-components/tree/v9.1.0) (2021-04-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.0.0...v9.1.0)
