@@ -144,3 +144,5 @@ export {
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
 export { default as useDateFormatter } from './hooks/useFormatDate';
 export { default as useTimeFormatter } from './hooks/useFormatTime';
+
+export { pagingTypes as MCLPagingTypes } from './lib/MultiColumnList';
