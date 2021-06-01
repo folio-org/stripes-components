@@ -839,5 +839,7 @@
     "mcl.additionalResultsLoaded": "Resultados adicionais carregados",
     "shortcut.modalLabel": "Atalhos do teclado",
     "shortcut.action": "Ação",
-    "shortcut.shortcut": "Atalho"
+    "shortcut.shortcut": "Atalho",
+    "previous": "Anterior",
+    "next": "Próximo"
 }
