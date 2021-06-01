@@ -143,3 +143,4 @@ export {
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
 export { default as useDateFormatter } from './hooks/useFormatDate';
 export { default as useTimeFormatter } from './hooks/useFormatTime';
+export { default as useClickOutside } from './hooks/useClickOutside';
