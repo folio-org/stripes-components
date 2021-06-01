@@ -839,5 +839,7 @@
     "mcl.additionalResultsLoaded": "تم تحميل النتائج الإضافية",
     "shortcut.modalLabel": "اختصارات لوحة المفاتيح",
     "shortcut.action": "الإجراء",
-    "shortcut.shortcut": "اختصار"
+    "shortcut.shortcut": "اختصار",
+    "previous": "السابق",
+    "next": "التالي"
 }

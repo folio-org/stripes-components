@@ -837,7 +837,9 @@
     "ErrorBoundary.detailsDescription": "发生以下情况，导致当前页面变得不稳定：",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "错误消息和堆栈跟踪已复制到剪辑夹",
     "mcl.additionalResultsLoaded": "已加载其他结果",
-    "shortcut.modalLabel": "Keyboard shortcuts",
-    "shortcut.action": "Action",
-    "shortcut.shortcut": "Shortcut"
+    "shortcut.modalLabel": "键盘快捷键",
+    "shortcut.action": "操作",
+    "shortcut.shortcut": "快捷方式",
+    "previous": "上一个",
+    "next": "下一个"
 }

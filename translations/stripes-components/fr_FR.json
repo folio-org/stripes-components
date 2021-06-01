@@ -45,7 +45,7 @@
     "collapseSection": "Réduire la section",
     "expandSection": "Développer la section",
     "metaSection.source": "Source: {source}",
-    "metaSection.recordCreated": "Enregistrement créé: {date} {time}",
+    "metaSection.recordCreated": "Enregistrement créé le: {date} {time}",
     "metaSection.recordLastUpdated": "Dernière mise à jour: {date} {time}",
     "selection.emptyList": "La liste est vide",
     "selection.noMatches": "Aucune option correspondante",
@@ -839,5 +839,7 @@
     "mcl.additionalResultsLoaded": "Résultats supplémentaires chargés",
     "shortcut.modalLabel": "Raccourcis clavier",
     "shortcut.action": "Action",
-    "shortcut.shortcut": "Raccourci"
+    "shortcut.shortcut": "Raccourci",
+    "previous": "Précédent",
+    "next": "Suivant :"
 }
