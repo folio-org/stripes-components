@@ -1,0 +1,76 @@
+@import '../variables.css';
+
+/**
+* Default styling
+*/
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 4px 0;
+  margin: 0;
+
+  &.fillWidth {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  & .paginationItem {
+    padding: 0 2px;
+    margin: 0 1px;
+  }
+}
+
+.paginationLink {
+  composes: button from "../Button/Button.css";
+  padding: 0 var(--gutter-static-two-thirds, 8px);
+  margin: 0;
+
+  &[aria-disabled=true] {
+    color: var(--color-text-p2);
+    transition: opacity ease-in-out 500ms;
+    pointer-events: none;
+  }
+
+  &.numberLink {
+    min-width: 1.72rem;
+    padding: 0 4px;
+    margin: 0;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  &::before {
+    border-radius: 999px;
+  }
+
+  /**
+  * Button Style: Default
+  */
+
+  &.default {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+
+    & :global .stripes__icon {
+      fill: var(--primary);
+    }
+  }
+
+  /**
+   * Button style primary
+   */
+
+  &.primary {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: #fff;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
