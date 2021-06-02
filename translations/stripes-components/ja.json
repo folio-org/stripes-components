@@ -6,7 +6,7 @@
     "goToNextYear": "次の年に移動",
     "goToNextMonth": "次の年に移動",
     "selectDay": "{dayOfWeek},{date}を選択",
-    "dateSelected": "{日付} が選択されました",
+    "dateSelected": "{date} selected",
     "screenReaderLabel": "{label}形式は{screenReaderFormat} 、矢印キーを使用して日付をナビゲートします。キーを入力して確認します。 {screenReaderMessage}",
     "clearFieldValue": "フィールド値をクリア",
     "showOrHideDatepicker": "日付ピッカーの表示/非表示",
