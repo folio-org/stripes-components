@@ -27,6 +27,7 @@ export { default as Editor } from './lib/Editor';
 export { default as MultiSelection } from './lib/MultiSelection';
 export { default as RepeatableField } from './lib/RepeatableField';
 export { default as Popper } from './lib/Popper';
+export { default as Tree } from './lib/Tree';
 
 /* data containers */
 export { default as Card } from './lib/Card';
