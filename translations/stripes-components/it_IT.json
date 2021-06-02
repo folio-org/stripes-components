@@ -839,5 +839,7 @@
     "mcl.additionalResultsLoaded": "Risultati aggiuntivi caricati",
     "shortcut.modalLabel": "Scorciatoie da tastiera",
     "shortcut.action": "Azione",
-    "shortcut.shortcut": "Scorciatoia"
+    "shortcut.shortcut": "Scorciatoia",
+    "previous": "Previous",
+    "next": "Next"
 }

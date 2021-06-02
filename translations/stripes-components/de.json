@@ -839,5 +839,7 @@
     "mcl.additionalResultsLoaded": "Zusätzliche Ergebnisse geladen",
     "shortcut.modalLabel": "Keyboard shortcuts",
     "shortcut.action": "Action",
-    "shortcut.shortcut": "Shortcut"
+    "shortcut.shortcut": "Shortcut",
+    "previous": "Previous",
+    "next": "Next"
 }

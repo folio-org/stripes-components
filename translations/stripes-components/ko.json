@@ -5,7 +5,7 @@
     "goToPreviousMonth": "지난 달로 이동",
     "goToNextYear": "내년으로 이동",
     "goToNextMonth": "다음 달로 이동",
-    "selectDay": "{dayOfWeek}, {날짜} 선택",
+    "selectDay": "Choose {dayOfWeek}, {date}",
     "dateSelected": "{date} 선택됨",
     "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
     "clearFieldValue": "Clear field value",
@@ -45,7 +45,7 @@
     "collapseSection": "섹션 접기",
     "expandSection": "섹션 확장",
     "metaSection.source": "출처 : {source}",
-    "metaSection.recordCreated": "생성된 레코드: {날짜} {시간}",
+    "metaSection.recordCreated": "Record created: {date} {time}",
     "metaSection.recordLastUpdated": "Record last updated: {date} {time}",
     "selection.emptyList": "목록이 비어 있습니다",
     "selection.noMatches": "일치하는 옵션이 없습니다.",
@@ -839,5 +839,7 @@
     "mcl.additionalResultsLoaded": "Additional results loaded",
     "shortcut.modalLabel": "Keyboard shortcuts",
     "shortcut.action": "Action",
-    "shortcut.shortcut": "Shortcut"
+    "shortcut.shortcut": "Shortcut",
+    "previous": "Previous",
+    "next": "Next"
 }
