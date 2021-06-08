@@ -2,7 +2,7 @@
 # Pagination
 The Pagination component is used for nagivation between pages of a list of results.
 
-We use [react-paginate](https://github.com/AdeleD/react-paginate) under the hood, more detail can be found at their we expose their API along with a few useful props.
+We use [react-paginate](https://github.com/AdeleD/react-paginate) under the hood, more detail can be found in their documentation. We expose their API along with a few useful props.
 
 ## Basic Usage
 
