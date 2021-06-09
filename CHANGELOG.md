@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 9.2.0 (IN PROGRESS)
+## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.1.0...v9.2.0)
 
 * `<IconLabel>` Avoid passing `aria-label` to a `<span>`, an a11y violation. Refs STCOM-834.
 * `<CommandList>` should not warn about overriding system key bindings. Refs STCOM-836.
@@ -9,9 +10,10 @@
 * Add `buttonLabel` to `<ErrorModal>`. Refs STCOM-841.
 * Add `prev-next` pagination option to MCL. Refs STCOM-829
 * Add support for sparse arrays to MCL. Refs STCOM-829
-* Add `ItenToView` functionality so that item-based scroll positions can be marked by modules. Resolves STCOM-830.
+* Add `ItemToView` functionality so that item-based scroll positions can be marked by modules. Resolves STCOM-830.
 * Formally export `exportToCsv`. Refs STCOM-843.
 * Copy features and bugfixes from the `stripes-util` dupe of `exportToCsv`. Refs STCOM-844.
+* `<MultiColumnList>` validate container-ref before calling functions on it to avoid NPEs.
 
 ## [9.1.0](https://github.com/folio-org/stripes-components/tree/v9.1.0) (2021-04-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.0.0...v9.1.0)
