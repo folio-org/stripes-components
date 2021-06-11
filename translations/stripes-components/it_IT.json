@@ -7,7 +7,7 @@
     "goToNextMonth": "Vai al prossimo mese",
     "selectDay": "Seleziona {dayOfWeek} , {date}",
     "dateSelected": "{date} selezionato",
-    "screenReaderLabel": "Il formato {label} è {screenReaderFormat} usa i tasti freccia per navigare tra le date. Immettere il tasto per confermare.",
+    "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
     "clearFieldValue": "Svuota questo campo",
     "showOrHideDatepicker": "Mostra / nascondi calendario",
     "showOrHideTimepicker": "Mostra / nascondi calendario",
