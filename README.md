@@ -50,6 +50,7 @@ Component | doc | categories
 [`<Avatar>`](lib/Avatar) | [doc](lib/Avatar/readme.md) | data-display
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
 [`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) | control
+[`<ButtonGroup>`](lib/ButtonGroup) | [doc](lib/ButtonGroup/readme.md) | control
 [`<Callout>`](lib/Callout) | [doc](lib/Callout/readme.md) | user-feedback
 [`<Checkbox>`](lib/Checkbox) | | control
 [`<ConfirmationModal>`](lib/ConfirmationModal) | [doc](lib/ConfirmationModal/readme.md) | control, prefab
