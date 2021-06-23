@@ -841,5 +841,13 @@
     "shortcut.action": "الإجراء",
     "shortcut.shortcut": "اختصار",
     "previous": "السابق",
-    "next": "التالي"
+    "next": "التالي",
+    "shortcut.collapseAll": "طي كل الأقسام",
+    "shortcut.createRecord": "إنشاء تسجيلة جديدة",
+    "shortcut.duplicateRecord": "نسخ التسجيلة",
+    "shortcut.editRecord": "تحرير تسجيلة",
+    "shortcut.expandAll": "توسيع كل الأقسام",
+    "shortcut.goToSearchFilter": "اذهب إلى لوحة \"بحث وتنقيح\"",
+    "shortcut.openShortcutModal": "فتح اختصارات لوحة المفاتيح",
+    "shortcut.saveRecord": "حفظ تسجيلة"
 }

@@ -841,5 +841,13 @@
     "shortcut.action": "Acção",
     "shortcut.shortcut": "Shortcut",
     "previous": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "shortcut.collapseAll": "Collapse all accordions",
+    "shortcut.createRecord": "Create a new record",
+    "shortcut.duplicateRecord": "Duplicate a record",
+    "shortcut.editRecord": "Edit a record",
+    "shortcut.expandAll": "Expand all accordions",
+    "shortcut.goToSearchFilter": "Go to \"Search & filter\" pane",
+    "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
+    "shortcut.saveRecord": "Save a record"
 }
