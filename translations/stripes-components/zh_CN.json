@@ -841,5 +841,13 @@
     "shortcut.action": "操作",
     "shortcut.shortcut": "快捷方式",
     "previous": "上一个",
-    "next": "下一个"
+    "next": "下一个",
+    "shortcut.collapseAll": "Collapse all accordions",
+    "shortcut.createRecord": "Create a new record",
+    "shortcut.duplicateRecord": "Duplicate a record",
+    "shortcut.editRecord": "Edit a record",
+    "shortcut.expandAll": "Expand all accordions",
+    "shortcut.goToSearchFilter": "Go to \"Search & filter\" pane",
+    "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
+    "shortcut.saveRecord": "Save a record"
 }
