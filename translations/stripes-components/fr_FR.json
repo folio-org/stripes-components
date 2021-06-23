@@ -841,5 +841,13 @@
     "shortcut.action": "Action",
     "shortcut.shortcut": "Raccourci",
     "previous": "Précédent",
-    "next": "Suivant :"
+    "next": "Suivant :",
+    "shortcut.collapseAll": "Réduire tous les accordéons",
+    "shortcut.createRecord": "Créer un nouvel enregistrement",
+    "shortcut.duplicateRecord": "Dupliquer un enregistrement",
+    "shortcut.editRecord": "Modifier un enregistrement",
+    "shortcut.expandAll": "Développer tous les accordéons",
+    "shortcut.goToSearchFilter": "Accédez au volet Rechercher et filtrer",
+    "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
+    "shortcut.saveRecord": "Sauvegarder un enregistrement"
 }
