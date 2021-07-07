@@ -69,6 +69,8 @@ Name | type | description | default | required
 `id` | string | Sets the `id` html attribute on the control | |
 `label` | string | If provided, will render a `<label>` tag with an `htmlFor` attribute directed at the provided `id` prop. | |
 `emptyMessage` | string | Message to display filtering leaves the options list empty | 'No matching options' |
+`loading` | bool | if true, `loadingMessage` will be displayed to indicate that options are loading | false |
+`loadingMessage` | string | Message to display that options list is loading | 'Loading options...' |
 `listMaxHeight` | string | Sets a style attribute on options list, setting a max-height. list will scroll if the options list is too long to fit. | '174px' |
 `formatter` | function |  Used to customize the formatting of options. The `<OptionSegment>` component enables control over filter highlighting. Formatter results are rendered within a flexbox `<div>`. | `DefaultOptionFormatter` |
 `optionAlignment` | string | One of `start`, `end`, `outside`, `center`. Determines the alignment of OptionSegments and block elements that appear within the `formatter`.
