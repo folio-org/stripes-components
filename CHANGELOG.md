@@ -4,7 +4,7 @@
 
 * Add link icon. Refs STCOM-852.
 * `<MultiColumnList>` add ability to focus component if content data is empty. Refs STCOM-851.
-* Expose getLocalFormat Datepicker util. Refs STCOM-854.
+* Expose getLocaleDateFormat Datepicker util. Refs STCOM-854.
 
 ## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.1.0...v9.2.0)
