@@ -6,7 +6,7 @@ export { default as ButtonGroup } from './lib/ButtonGroup';
 export { default as Checkbox } from './lib/Checkbox';
 export { default as CurrencySelect } from './lib/CurrencySelect';
 export { default as CountrySelection } from './lib/CountrySelection';
-export { default as Datepicker, Calendar } from './lib/Datepicker';
+export { default as Datepicker, Calendar, getLocaleDateFormat } from './lib/Datepicker';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as FormattedDate } from './lib/FormattedDate';
 export { default as FormattedTime } from './lib/FormattedTime';
