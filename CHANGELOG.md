@@ -5,6 +5,7 @@
 * Add link icon. Refs STCOM-852.
 * `<MultiColumnList>` add ability to focus component if content data is empty. Refs STCOM-851.
 * Expose getLocaleDateFormat Datepicker util. Refs STCOM-854.
+* `<SingleSelect>` add new `loading` and `loadingMessage` props to display while loading options. Refs STCOM-858.
 
 ## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.1.0...v9.2.0)
