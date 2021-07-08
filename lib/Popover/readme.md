@@ -2,7 +2,7 @@
 Component to render a small pop-up "tip" once a trigger element is clicked. Clicking the target again should toggle the popover. Clicking outside of the popover will typically close it.
 
 ## Usage
-Similar to `<Dropdown>`, the `<Popover>` will render it's children inside an overlay and the `renderTrigger`-prop renders the button that triggers the overlay.
+Similar to `<Dropdown>`, the `<Popover>` will render its children inside an overlay and the `renderTrigger`-prop renders the button that triggers the overlay.
 
 ```js
 import { Popover } from '@folio/stripes/components';
@@ -22,7 +22,7 @@ import { Popover } from '@folio/stripes/components';
 ```
 
 ## Controlled
-By default, the `<Popover>` handles it's open state internally. If you need to control the `<Popover>` externally, you can pass an `open`-prop which controls the visibility of the overlay and an `onToggle`-prop that handles flipping the open state.
+By default, the `<Popover>` handles its open state internally. If you need to control the `<Popover>` externally, you can pass an `open`-prop which controls the visibility of the overlay and an `onToggle`-prop that handles flipping the open state.
 
 ```js
 const [open, setOpen] = useState(fale);
