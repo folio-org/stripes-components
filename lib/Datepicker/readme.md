@@ -16,15 +16,15 @@ outputBackendValue: PropTypes.bool,
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 `autoFocus` | bool | If this prop is `true`, component will automatically focus on mount | |
-`backendDateStandard` | string | parses to/from ISO 8601 standard by default before committing value. | "ISO 8601" | false
+`backendDateStandard` | string | parses to/from ISO 8601 standard, with Arabic (0-9) digits, by default before committing value. | "ISO 8601" | false
 `disabled` | bool | if true, field will be disabled for focus or entry. | false | false
 `id` | string | id for date field - used in the "id" attribute of the text input | | false
 `label` | string | visible field label | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
 `onChange` | func | Event handler to handle updates to the datefield text. | | false
 `outputBackendValue` | bool | If False - Outputs the value as it is displayed in the input. | true |
-`outputFormatter` | func | Function to format the date value for submission to the backend. | `defaultOutputFormatter` | 
-`parser` | func | Function to format the date from the `value` prop to the value ui's presentation within the input. | `defaultParser` | 
+`outputFormatter` | func | Function to format the date value for submission to the backend. | `defaultOutputFormatter` |
+`parser` | func | Function to format the date from the `value` prop to the value ui's presentation within the input. | `defaultParser` |
 `placement` | string | Determines the position of the date picker overlay. See available options in the <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper documentation</a>. | bottom | false
 `modifiers` | object | Passes modifiers for the internal <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper</a>-component which handles the positioning of the date picker overlay. | | false
 `readOnly` | bool | if true, field will be readonly. 'Calendar' and 'clear' buttons will be omitted. | false | false
@@ -100,7 +100,7 @@ The value flow happens in 3 stages
 - uiFormat - the localized format or `dateFormat` prop.
 - outputFormat - the ISO-string literal format derived from the `backendDateStandard` prop
 3. output formatting - when the input is changed by the user, its value is formatted again to work with the backend using the `outputFormatter` function. This function is provided with **a parameter object** holding the following values:
-- backendDateStandard - the prop of the same name. 
+- backendDateStandard - the prop of the same name.
 - value - the value prop.
 - uiFormat - the localized format or `dateFormat` prop for displaying in the textfield.
 - outputFormat - the ISO-string literal format derived from the `backendDateStandard` prop.
@@ -117,7 +117,7 @@ The value flow happens in 3 stages
 
 ## Custom Circumstances with RFF
 
-If the provided defaults and base behaviors don't quite cover your requirements, you may need write an additional function in order to wrap the datepicker and modify props from `<Field>`. Simply supplying a function that accepts the input, and meta props that components usually receive from RFF. In this example, we want validation errors to 
+If the provided defaults and base behaviors don't quite cover your requirements, you may need write an additional function in order to wrap the datepicker and modify props from `<Field>`. Simply supplying a function that accepts the input, and meta props that components usually receive from RFF. In this example, we want validation errors to
 to show only if there are no warnings. Note the passing of a `useInput` prop to Datepicker. This is typically and internal prop for Datepicker to know when it's being used within a `<Field>` and act accordingly - otherwise, you may see date output coming through in the incorrect format.
 
 ```
