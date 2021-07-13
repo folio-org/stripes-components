@@ -1,10 +1,13 @@
 # Change history for stripes-components
 
-## [9.3.0](IN PROGRESS)
+## [9.3.0] (IN PROGRESS)
 
 * Add link icon. Refs STCOM-852.
 * `<MultiColumnList>` add ability to focus component if content data is empty. Refs STCOM-851.
 * Expose getLocaleDateFormat Datepicker util. Refs STCOM-854.
+* Fix issue with misaligned dates/weekdays in Datepicker Calendar. Refs STCOM-849
+* `<Datepicker>` must correctly handle RFC-2822 dates. Refs STCOM-861.
+* `<Datepicker>` always provides Arabic numerals (0-9) given `backendDateStandard` to format values. Refs STCOM-860.
 * `<SingleSelect>` add new `loading` and `loadingMessage` props to display while loading options. Refs STCOM-858.
 
 ## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
