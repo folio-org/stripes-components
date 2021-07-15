@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 9.2.1
+## [9.2.1](https://github.com/folio-org/stripes-components/tree/v9.2.1) (2021-07-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v9.2.1)
 
 * Expose getLocaleDateFormat Datepicker util. Refs STCOM-854.
 
