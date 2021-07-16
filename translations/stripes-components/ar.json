@@ -849,5 +849,6 @@
     "shortcut.expandAll": "توسيع كل الأقسام",
     "shortcut.goToSearchFilter": "اذهب إلى لوحة \"بحث وتنقيح\"",
     "shortcut.openShortcutModal": "فتح اختصارات لوحة المفاتيح",
-    "shortcut.saveRecord": "حفظ تسجيلة"
+    "shortcut.saveRecord": "حفظ تسجيلة",
+    "selection.loading": "جاري تحميل الخيارات ..."
 }
