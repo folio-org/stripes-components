@@ -18,7 +18,7 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   pointer-events: all;
-  max-height: 85vh;
+  max-height: 80vh;
   overflow: auto;
 
   & ul {
