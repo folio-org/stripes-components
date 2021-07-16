@@ -18,6 +18,8 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   pointer-events: all;
+  max-height: 85vh;
+  overflow: auto;
 
   & ul {
     list-style: none;
