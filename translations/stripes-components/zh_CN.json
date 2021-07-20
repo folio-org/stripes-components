@@ -849,5 +849,6 @@
     "shortcut.expandAll": "全部展开",
     "shortcut.goToSearchFilter": "转到“搜索和筛选”窗格",
     "shortcut.openShortcutModal": "打开键盘快捷方式",
-    "shortcut.saveRecord": "保存记录"
+    "shortcut.saveRecord": "保存记录",
+    "selection.loading": "Loading options..."
 }

@@ -843,11 +843,12 @@
     "previous": "Anterior",
     "next": "Próximo",
     "shortcut.collapseAll": "Collapse all accordions",
-    "shortcut.createRecord": "Create a new record",
-    "shortcut.duplicateRecord": "Duplicate a record",
-    "shortcut.editRecord": "Edit a record",
+    "shortcut.createRecord": "Criar registro",
+    "shortcut.duplicateRecord": "Duplicar um registro",
+    "shortcut.editRecord": "Editar um registro",
     "shortcut.expandAll": "Expand all accordions",
     "shortcut.goToSearchFilter": "Go to \"Search & filter\" pane",
     "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
-    "shortcut.saveRecord": "Save a record"
+    "shortcut.saveRecord": "Salvar um registro",
+    "selection.loading": "Carregando opções ..."
 }
