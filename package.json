@@ -61,6 +61,7 @@
     "babel-plugin-remove-jsx-attributes": "^0.0.2",
     "chai": "^4.1.2",
     "core-js": "^3.6.1",
+    "element-is-visible": "^1.0.0",
     "eslint": "^6.2.1",
     "faker": "^4.1.0",
     "file-loader": "^2.0.0",
