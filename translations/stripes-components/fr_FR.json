@@ -849,5 +849,6 @@
     "shortcut.expandAll": "Développer tous les accordéons",
     "shortcut.goToSearchFilter": "Accédez au volet Rechercher et filtrer",
     "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
-    "shortcut.saveRecord": "Sauvegarder un enregistrement"
+    "shortcut.saveRecord": "Sauvegarder un enregistrement",
+    "selection.loading": "Loading options..."
 }
