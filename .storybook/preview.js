@@ -56,8 +56,6 @@ setIntlConfig({
     getMessages: (locale) => messages[locale]
 });
 
-// addDecorator(withIntl);
-
 /**
  * RTL
  */
