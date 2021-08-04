@@ -57,16 +57,18 @@ module.exports = async (config) => {
       {
         loader: 'postcss-loader',
         options: {
-          plugins: [
+          postcssOptions: {
+            plugins: [
               require('postcss-import'),
               require('autoprefixer'),
-              require('postcss-custom-properties')({ importFrom: './lib/variables.css' }),
+              require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css' }),
               require('postcss-calc'),
               require('postcss-nesting'),
               require('postcss-custom-media'),
               require('postcss-media-minmax'),
-              require('postcss-color-function')({ preserveCustomProps: false }),
-          ],
+              require('postcss-color-function'),
+            ],
+          },
           sourceMap: true,
         },
       },
