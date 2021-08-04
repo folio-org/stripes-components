@@ -88,31 +88,6 @@ initializeRTL();
   }
  }
 
-// addDecorator(storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>);
-
-/**
- * Set options
- */
-// addDecorator(withOptions({
-//   name: 'FOLIO Stripes',
-//   // sortStoriesByKind:
-//   hierarchySeparator: /\|/,
-//   hierarchyRootSeparator: /\|/,
-// }));
-
-// addParameters({ options: { theme: {} } });
-
-/**
- * Readme
- */
-// addDecorator(addReadme);
-// addParameters({ 
-//     readme: {
-//         codeTheme: 'a11y-dark',
-//     },
-//  });
-
-
 const storyFnDecorator = storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>
 
  export const decorators = [withIntl, storyFnDecorator, addReadme]
