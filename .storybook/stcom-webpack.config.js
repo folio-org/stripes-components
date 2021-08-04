@@ -6,14 +6,33 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path');
-// const postCssImport = require('postcss-import');
-// const autoprefixer = require('autoprefixer');
-// const postCssCustomProperties = require('postcss-custom-properties');
-// const postCssCalc = require('postcss-calc');
-// const postCssNesting = require('postcss-nesting');
-// const postCssCustomMedia = require('postcss-custom-media');
-// const postCssMediaMinMax = require('postcss-media-minmax');
-// const postCssColorFunction = require('postcss-color-mod-function');
+
+const babelOpts = {
+  cacheDirectory: true,
+  presets: [
+    ['@babel/preset-env', {
+      'targets': '> 0.25%, not dead',
+    }],
+    '@babel/preset-react',
+  ],
+  plugins: [
+    // Stage 2
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    '@babel/plugin-proposal-function-sent',
+    '@babel/plugin-proposal-export-namespace-from',
+    '@babel/plugin-proposal-numeric-separator',
+    '@babel/plugin-proposal-throw-expressions',
+
+    // Stage 3
+    '@babel/plugin-syntax-import-meta',
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
+    ['@babel/plugin-proposal-private-methods', { loose: true }],
+
+    // Others
+    'react-hot-loader/babel',
+  ]
+};
+
 
 module.exports = async (config) => {
   // Replace Storybook's own CSS config
@@ -46,6 +65,7 @@ module.exports = async (config) => {
               require('postcss-nesting'),
               require('postcss-custom-media'),
               require('postcss-media-minmax'),
+              require('postcss-color-function')({ preserveCustomProps: false }),
           ],
           sourceMap: true,
         },
@@ -70,66 +90,16 @@ module.exports = async (config) => {
         return false;
       },
       loader: 'babel-loader',
-      options: {
-        cacheDirectory: true,
-        presets: [
-          ['@babel/preset-env', {
-            'targets': '> 0.25%, not dead',
-          }],
-          '@babel/preset-react',
-        ],
-        plugins: [
-          // Stage 2
-          ['@babel/plugin-proposal-decorators', { legacy: true }],
-          '@babel/plugin-proposal-function-sent',
-          '@babel/plugin-proposal-export-namespace-from',
-          '@babel/plugin-proposal-numeric-separator',
-          '@babel/plugin-proposal-throw-expressions',
-  
-          // Stage 3
-          '@babel/plugin-syntax-import-meta',
-          ['@babel/plugin-proposal-class-properties', { loose: true }],
-          ['@babel/plugin-proposal-private-methods', { loose: true }],
-
-          // Others
-          'react-hot-loader/babel',
-        ]
-      },
+      options: babelOpts,
     };
 
     config.module.rules = config.module.rules.concat([
     {
-      test: /\.mdx?$/,
+      test: /\.mdx$/,
       use: [
         {
           loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-            presets: [
-              ['@babel/preset-env', {
-                'targets': '> 0.25%, not dead',
-              }],
-              '@babel/preset-react',
-            ],
-            plugins: [
-              '@babel/plugin-syntax-jsx',
-
-              // Stage 2
-              ['@babel/plugin-proposal-decorators', { legacy: true }],
-              '@babel/plugin-proposal-function-sent',
-              '@babel/plugin-proposal-export-namespace-from',
-              '@babel/plugin-proposal-numeric-separator',
-              '@babel/plugin-proposal-throw-expressions',
-      
-              // Stage 3
-              '@babel/plugin-syntax-import-meta',
-              ['@babel/plugin-proposal-class-properties', { loose: true }],
-              ['@babel/plugin-proposal-private-methods', { loose: true }],
-
-              // Others
-              'react-hot-loader/babel',
-            ]
-          }
+          options: babelOpts,
         },
          '@mdx-js/loader'
       ]
