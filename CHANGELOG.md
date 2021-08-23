@@ -10,6 +10,7 @@
 * `<Datepicker>` always provides Arabic numerals (0-9) given `backendDateStandard` to format values. Refs STCOM-860.
 * `<SingleSelect>` add new `loading` and `loadingMessage` props to display while loading options. Refs STCOM-858.
 * Applied maxheight to `<DropdownMenu>`. Fixes STCOM-848
+* Fix `<Datepicker>` `inputRef` prop not working. Refs STCOM-869
 
 ## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.1.0...v9.2.0)
