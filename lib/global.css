@@ -75,6 +75,13 @@ html {
   }
 }
 
+/* global "print" styles below was added for solve the problem with extra blank page generating on printing in all modules */
+@media print {
+  body {
+    height: auto !important;
+  }
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
