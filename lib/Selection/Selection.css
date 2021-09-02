@@ -190,7 +190,7 @@
   flex: 2 2 auto;
 }
 
-.selectionEmptyMessage {
+.selectionAlertMessage {
   font-weight: bold;
   padding: 6px;
 }
