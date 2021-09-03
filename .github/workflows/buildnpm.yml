@@ -11,6 +11,7 @@
 #   - COMPILE_TRANSLATION_FILES (boolean 'true' or 'false')
 
 
+
 name: buildNPM Snapshot
 on: [push, pull_request]
 
@@ -126,8 +127,11 @@ jobs:
           path: yarn.lock
           retention-days: 5
 
+      - name: Set default branch as env variable
+        run: echo "DEFAULT_BRANCH=${{ github.event.repository.default_branch }}" >> $GITHUB_ENV
+
       - name: Fetch branches for SonarCloud
-        run: git fetch --no-tags ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY} +refs/heads/master:refs/remotes/origin/master
+        run: git fetch --no-tags ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY} +refs/heads/${{ env.DEFAULT_BRANCH }}:refs/remotes/origin/${{ env.DEFAULT_BRANCH }}
 
       - name: Run SonarCloud scan
         uses: sonarsource/sonarcloud-github-action@master
