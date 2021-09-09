@@ -27,6 +27,7 @@ export { default as Editor } from './lib/Editor';
 export { default as MultiSelection } from './lib/MultiSelection';
 export { default as RepeatableField } from './lib/RepeatableField';
 export { default as Popper } from './lib/Popper';
+export { default as Tree } from './lib/Tree';
 
 /* data containers */
 export { default as Card } from './lib/Card';
@@ -114,6 +115,7 @@ export {
 export { default as FilterControlGroup } from './lib/FilterControlGroup';
 export { default as FilterPaneSearch } from './lib/FilterPaneSearch';
 export { default as ExportCsv } from './lib/ExportCsv';
+export { default as Pagination } from './lib/Pagination';
 export { default as exportToCsv } from './lib/ExportCsv/exportToCsv';
 
 /* utilities */
@@ -144,5 +146,6 @@ export {
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
 export { default as useDateFormatter } from './hooks/useFormatDate';
 export { default as useTimeFormatter } from './hooks/useFormatTime';
+export { default as useClickOutside } from './hooks/useClickOutside';
 
 export { pagingTypes as MCLPagingTypes } from './lib/MultiColumnList';
