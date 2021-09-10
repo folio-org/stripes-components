@@ -6,33 +6,7 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path');
-
-const babelOpts = {
-  cacheDirectory: true,
-  presets: [
-    ['@babel/preset-env', {
-      'targets': '> 0.25%, not dead',
-    }],
-    '@babel/preset-react',
-  ],
-  plugins: [
-    // Stage 2
-    ['@babel/plugin-proposal-decorators', { legacy: true }],
-    '@babel/plugin-proposal-function-sent',
-    '@babel/plugin-proposal-export-namespace-from',
-    '@babel/plugin-proposal-numeric-separator',
-    '@babel/plugin-proposal-throw-expressions',
-
-    // Stage 3
-    '@babel/plugin-syntax-import-meta',
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
-    ['@babel/plugin-proposal-private-methods', { loose: true }],
-
-    // Others
-    'react-hot-loader/babel',
-  ]
-};
-
+const { babelOptions } = require('@folio/stripes-cli');
 
 module.exports = async (config) => {
   // Replace Storybook's own CSS config
@@ -92,7 +66,7 @@ module.exports = async (config) => {
         return false;
       },
       loader: 'babel-loader',
-      options: babelOpts,
+      options: babelOptions,
     };
 
     config.module.rules = config.module.rules.concat([
@@ -101,7 +75,7 @@ module.exports = async (config) => {
       use: [
         {
           loader: 'babel-loader',
-          options: babelOpts,
+          options: babelOptions,
         },
          '@mdx-js/loader'
       ]
