@@ -836,5 +836,19 @@
     "ErrorBoundary.copyErrorButtonAriaLabel": "Copiar error al porta clip",
     "ErrorBoundary.detailsDescription": "Se ha producido lo siguiente, lo que provoca que la página actual se vuelva inestable:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "El mensaje de error y el rastro de la pila se copió en su portapapeles",
-    "mcl.additionalResultsLoaded": "Additional results loaded"
+    "mcl.additionalResultsLoaded": "Additional results loaded",
+    "shortcut.modalLabel": "Keyboard shortcuts",
+    "shortcut.action": "Action",
+    "shortcut.shortcut": "Shortcut",
+    "previous": "Previous",
+    "next": "Next",
+    "shortcut.collapseAll": "Collapse all accordions",
+    "shortcut.createRecord": "Create a new record",
+    "shortcut.duplicateRecord": "Duplicate a record",
+    "shortcut.editRecord": "Edit a record",
+    "shortcut.expandAll": "Expand all accordions",
+    "shortcut.goToSearchFilter": "Go to \"Search & filter\" pane",
+    "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
+    "shortcut.saveRecord": "Save a record",
+    "selection.loading": "Loading options..."
 }

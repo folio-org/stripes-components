@@ -18,6 +18,9 @@ You can also specify a formatter object to control exactly how the data is rende
 ### Infinite scroll
 For large lists of data the boolean prop `virtualize` can be turned on to efficiently display only the table rows that are visible to the user within the scrollable body of the list. The `virtualize` prop should be used in conjunction with the `height`, `maxHeight` or `autosize` prop - virtualization will not work otherwise.
 
+### Sparse Array Support
+Currently for non-virtualized (non-infinite scroll) lists, MCL can render sparse array structures. Sparse arrays are simply arrays that don't have their entire `length`'s worth of data items.
+
 ### Height and `autosize` props
 For efficiency, virtualization of list items requires a static `height` value (not percentage-based). If you're unsure how large the list's containing element will be, you can set the `autosize` prop to true - this will make the grid dynamically fill the space that it has, automatically using the resulting static width and height. This is ideal for the content of results panes.
 
@@ -83,16 +86,19 @@ Name | type | description | default | required
 `height` | string or number | the height of the table. **Necessary if `virtualize` is active you aren't using `autosize` already.** |  |
 `interactive` | bool | Applies a "pointer" cursor when the mouse hovers over a row | `true` |
 `isEmptyMessage` | string, object, node, arrayOf(node) | Message to display when the supplied contentData array is empty. | <FormattedMessage id="stripes-components.tableEmpty" /> |
+`itemToView` | positionObject | This object has keys for a 'selector' (string) and a client offset (number, pixels). This object is used to scroll the MCL list to the item that matches the selector, visually positioning it at the client offset from the top of the MCL. This is currently only working for **non-virtualized** lists. | `null` |
 `isSelected` | func({`item`}) | Should return `true` or `false` on whether or not to apply the `selectedClass` to the row. Useful for multiple selections. Preferred over `selectedRow` | |
 `loading` | bool | If true, will display an animated loading icon. | |
 `maxHeight` | number | the maximum height that the list should grow to before scrolling its list body in pixels. | |
 `nonInteractiveHeaders` | array of strings | Pass an array of column names to make their column headers non-interactive. This is only relevant if you have supplied an `onHeaderClick`-callback and you only want some of the header columns to be interactable. | [] |
 `onHeaderClick` | func[event, headerMetadata] | callback function invoked when one of the cells in the header is clicked (typically to choose a sort-order). By default, headerMetadata includes the column's data name as well as its alias, in case a object is supplied to the columnMapping prop. | |
 `onNeedMoreData` | func(`askAmount`, `index`) | Callback for fetching more data. If this prop is provided and a `totalCount` prop is provided, but un-reached by the count of loaded data items, `askAmount` will ask for the remainder of items or the `pageAmount` prop, whichever is less. This can be used to fulfill `limit` query parameters. `rowIndex` can be used to fulfill an `offset` query parameter. | |
+`onMarkPosition` | func(positionObject) | Called when an item is focused within the list. The position object consists of a 'selector' string and a client-space offset in pixels. This can be fed back to the `itemToView` prop and, upon rendering the list, MCL will scroll to the item, maintaining the same visual position. `itemToView` is currently only working for **non-virtualized** lists.| |
+`onResetMark` | func | Called if the selector of the `ItemToView` isn't found. Modules can use this to reset their cached value. | |
 `onRowClick` | function(`event`, `item`) | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | |
 `onScroll` | func | Callback for scrolling of list body. | `noop` |
 `pageAmount` | number | The base amount of data to pass as the `askAmount` parameter for the `onNeedMoreData` prop | `30` |
-`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. | `"scroll"` |
+`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. `prev-next` will render pagination with 'previous' and 'next' buttons with a display of the current page's item numbers. | `"scroll"` |
 `rowFormatter`  | func | function of shape `<name>({rowIndex, rowClass, rowData, cells, rowProps}){return <reactElement>}` that can be used to supply custom row layout. Forking [defaultRowFormatter](defaultRowFormatter.js) is a good place to start if you need to use this. | `defaultRowFormatter` |
 `rowMetadata` | object | arbitrary data that is passed as a metadata object to the `onRowClick` handler - useful for passing in data that may exist outside of the realm of the rendered MCL. | |
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |

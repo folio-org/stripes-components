@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { addDecorator, addParameters } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
 import { addReadme } from 'storybook-readme';
 import { initializeRTL } from 'storybook-addon-rtl';
 import '../lib/global.css';
@@ -22,6 +20,9 @@ import frTranslations from '../translations/stripes-components/fr.json';
 import huTranslations from '../translations/stripes-components/hu.json';
 import itTranslations from '../translations/stripes-components/it_IT.json';
 import ptTranslations from '../translations/stripes-components/pt_BR.json';
+import ruTranslations from '../translations/stripes-components/ru.json';
+import svTranslations from '../translations/stripes-components/sv.json';
+
 
 // mimics the StripesTranslationPlugin in @folio/stripes-core
 function prefixKeys(obj) {
@@ -44,16 +45,16 @@ const messages = {
   hu: prefixKeys(huTranslations),
   it: prefixKeys(itTranslations),
   pt: prefixKeys(ptTranslations),
+  ru: prefixKeys(ruTranslations),
+  sv: prefixKeys(svTranslations),
 };
 
 // Set intl configuration
 setIntlConfig({
-    locales: ['ar', 'ca', 'da', 'de', 'en', 'es', 'fr', 'hu', 'it', 'pt'],
+    locales: ['ar', 'ca', 'da', 'de', 'en', 'es', 'fr', 'hu', 'it', 'pt', 'ru', 'sv'],
     defaultLocale: 'en',
     getMessages: (locale) => messages[locale]
 });
-
-addDecorator(withIntl);
 
 /**
  * RTL
@@ -85,26 +86,16 @@ initializeRTL();
   }
  }
 
-addDecorator(storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>);
+const storyFnDecorator = storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>
 
-/**
- * Set options
- */
-addDecorator(withOptions({
-  name: 'FOLIO Stripes',
-  // sortStoriesByKind:
-  hierarchySeparator: /\|/,
-  hierarchyRootSeparator: /\|/,
-}));
-
-addParameters({ options: { theme: {} } });
-
-/**
- * Readme
- */
-addDecorator(addReadme);
-addParameters({ 
-    readme: {
-        codeTheme: 'a11y-dark',
-    },
- });
+ export const decorators = [withIntl, storyFnDecorator, addReadme]
+ export const parameters = {
+   options: {
+     theme: {
+      brandTitle: 'FOLIO Stripes',
+     }
+   },
+   readme: {
+     codeTheme: 'a11y-dark',
+   }
+ }
