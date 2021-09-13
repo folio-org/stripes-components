@@ -32,7 +32,7 @@ Name | type | description | default | required
 `filter` | func | a custom filter function. If you're not using `asyncFiltering` It should return an object with the shape of `{renderedItems:<array>}` This object can include additional properties that can be used for conditional rendering of `action`s. | the default filter is via reg-ex on the items' `label` field |
 `formatter` | func | Render function that accepts an object with keys for the option and the current filter string. The function is called to display values in the options dropdown and in the selected values list. A default `formatter` is provided. | [DefaultOptionFormatter](../Selection/DefaultOptionFormatter.md) |
 `id` | string | Sets the `id` attribute for the control. Other interior id's are generated using this string as a prefix. | |
-`itemToString` | <string>func | Function used to return a single string representation of its value. For example, option objects with a shape of `{label:<string>, value:<object>}` would use `item => (item ? item.label : '')` for their toString function. This is used to generate strings so that values can accurately be announced for screen readers. | `item => (item ? item.label : '')` |
+`itemToString` | `<string>`func | Function used to return a single string representation of its value. For example, option objects with a shape of `{label:<string>, value:<object>}` would use `item => (item ? item.label : '')` for their toString function. This is used to generate strings so that values can accurately be announced for screen readers. | `item => (item ? item.label : '')` |
 `label` | string | Used as the form label for the field. Appropriate label/field relationship for accessibility is automatically set up by the component. | |
 `maxHeight` | number | The maximum height of the options menu in pixels. This does not include the heigh of any validation messages that may also appear with the menu. | `168` |
 `onBlur` | func | Blur event handler for when the user blurs the filter field | |
@@ -56,7 +56,7 @@ Name | type | description | default | required
 ## Shape of dataOptions
 The shape of the items in your dataOptions array may require you to pass additional props. The default props are set up to handle dataOptions with `label` and `value` keys. If your options do not have label and value keys, here are some other props to be sure you're setting:
 
-* `itemToString` - string for accessible announcement of the item's status. "<item> has been removed"
+* `itemToString` - string for accessible announcement of the item's status. "`<item>` has been removed"
 * `filter` - function to use when filtering the options list. Should return an object with renderedItems holding the resulting array as a key.
 * `formatter` - function for rendering the options in the dropdown and selected items list.
 

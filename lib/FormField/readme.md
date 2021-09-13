@@ -4,7 +4,7 @@ Higher-order component for making a component easy to use in a [Redux Form](http
 When passing a component into the `component` prop of a `Field`, React Final Form and Redux Form will inject `input` and `meta` props.
 
 When doing this:
-```jsx
+```
 <Field name="myField" component={MyCustomInput} />
 ```
 `MyCustomInput` will receive `input` and `meta` objects in its props;
@@ -12,7 +12,7 @@ When doing this:
 
 ## Usage
 `formField()` will pass along the `input` props as-is. To normalize the `meta` props:
-```jsx
+```
 function ExampleComponent({ value, onChange, warning, error }) => (
   <div>{warning}</div>
 );
