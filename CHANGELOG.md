@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## [9.3.0] (IN PROGRESS)
+## [10.0.0] (IN PROGRESS)
 
 * Add link icon. Refs STCOM-852.
 * `<MultiColumnList>` add ability to focus component if content data is empty. Refs STCOM-851.
@@ -9,10 +9,11 @@
 * `<Datepicker>` must correctly handle RFC-2822 dates. Refs STCOM-861.
 * `<Datepicker>` always provides Arabic numerals (0-9) given `backendDateStandard` to format values. Refs STCOM-860.
 * `<SingleSelect>` add new `loading` and `loadingMessage` props to display while loading options. Refs STCOM-858.
-* Applied maxheight to `<DropdownMenu>`. Fixes STCOM-848
-* Fix `<Datepicker>` `inputRef` prop not working. Refs STCOM-869
-* Scope the focusable row to the scroll container. Refs STCOM-870
-* Fix issue when staff slips generate an extra blank page. Refs STCOM-872
+* Applied maxheight to `<DropdownMenu>`. Fixes STCOM-848.
+* Fix `<Datepicker>` `inputRef` prop not working. Refs STCOM-869.
+* Scope the focusable row to the scroll container. Refs STCOM-870.
+* Fix issue when staff slips generate an extra blank page. Refs STCOM-872.
+* React 17. STCOM-797.
 
 ## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.1.0...v9.2.0)
