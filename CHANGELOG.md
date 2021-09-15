@@ -9,10 +9,11 @@
 * `<Datepicker>` must correctly handle RFC-2822 dates. Refs STCOM-861.
 * `<Datepicker>` always provides Arabic numerals (0-9) given `backendDateStandard` to format values. Refs STCOM-860.
 * `<SingleSelect>` add new `loading` and `loadingMessage` props to display while loading options. Refs STCOM-858.
-* Applied maxheight to `<DropdownMenu>`. Fixes STCOM-848.
-* Fix `<Datepicker>` `inputRef` prop not working. Refs STCOM-869.
-* Scope the focusable row to the scroll container. Refs STCOM-870.
-* Fix issue when staff slips generate an extra blank page. Refs STCOM-872.
+* Applied maxheight to `<DropdownMenu>`. Fixes STCOM-848
+* Fix `<Datepicker>` `inputRef` prop not working. Refs STCOM-869
+* Scope the focusable row to the scroll container. Refs STCOM-870
+* Fix issue when staff slips generate an extra blank page. Refs STCOM-872
+* Use existing Bigtest Interactors from stripes-testing instead of local bigtest interactors. Refs STCOM-862 
 * React 17. STCOM-797.
 * Closing `<Popover>`, `<InfoPopover>` should send focus back to the trigger. Fixes STCOM-867.
 

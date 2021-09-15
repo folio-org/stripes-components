@@ -94,7 +94,7 @@
  * Content - hidden by default
  */
 
-.content {
+.content-region {
   opacity: 0;
   margin: 0 0 1rem 0;
   visibility: hidden; /* inputs within will not be focusable */
