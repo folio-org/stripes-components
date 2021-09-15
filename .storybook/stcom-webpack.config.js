@@ -6,18 +6,13 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path');
-const postCssImport = require('postcss-import');
-const autoprefixer = require('autoprefixer');
-const postCssCustomProperties = require('postcss-custom-properties');
-const postCssCalc = require('postcss-calc');
-const postCssNesting = require('postcss-nesting');
-const postCssCustomMedia = require('postcss-custom-media');
-const postCssMediaMinMax = require('postcss-media-minmax');
-const postCssColorFunction = require('postcss-color-function');
+const { babelOptions } = require('@folio/stripes-cli');
 
-module.exports = ({ config }) => {
+module.exports = async (config) => {
   // Replace Storybook's own CSS config
-  config.module.rules[2] = {
+  // get index of their css loading rule...
+  const cssRuleIndex = config.module.rules.findIndex(r => { const t = new RegExp(r.test); return t.test('m.css'); });
+  config.module.rules[cssRuleIndex] = {
     test: /\.css$/,
     use: [
       {
@@ -26,8 +21,9 @@ module.exports = ({ config }) => {
       {
         loader: 'css-loader',
         options: {
-          localIdentName: '[local]---[hash:base64:5]',
-          modules: true,
+          modules: {
+            localIdentName: '[local]---[hash:base64:5]',
+          },
           sourceMap: true,
           importLoaders: 1,
         },
@@ -35,18 +31,18 @@ module.exports = ({ config }) => {
       {
         loader: 'postcss-loader',
         options: {
-          plugins: () => [
-            postCssImport(),
-            autoprefixer(),
-            postCssCustomProperties({
-              importFrom: './lib/variables.css'
-            }),
-            postCssCalc(),
-            postCssNesting(),
-            postCssCustomMedia(),
-            postCssMediaMinMax(),
-            postCssColorFunction(),
-          ],
+          postcssOptions: {
+            plugins: [
+              require('postcss-import'),
+              require('autoprefixer'),
+              require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css' }),
+              require('postcss-calc'),
+              require('postcss-nesting'),
+              require('postcss-custom-media'),
+              require('postcss-media-minmax'),
+              require('postcss-color-function'),
+            ],
+          },
           sourceMap: true,
         },
       },
@@ -54,7 +50,8 @@ module.exports = ({ config }) => {
   };
 
   // Add additional required loaders for stripes/components
-  config.module.rules = config.module.rules.concat([
+  const jsRuleIndex = config.module.rules.findIndex(r => { const t = new RegExp(r.test); return t.test('m.js'); });
+  config.module.rules[jsRuleIndex] =
     {
       test(fn) {
         // We want to transpile files inside node_modules/@folio or outside
@@ -69,30 +66,19 @@ module.exports = ({ config }) => {
         return false;
       },
       loader: 'babel-loader',
-      options: {
-        cacheDirectory: true,
-        presets: [
-          ['@babel/preset-env', {
-            'targets': '> 0.25%, not dead',
-          }],
-          ['@babel/preset-react'],
-        ],
-        plugins: [
-          // Stage 2
-          ['@babel/plugin-proposal-decorators', { legacy: true }],
-          ['@babel/plugin-proposal-function-sent'],
-          ['@babel/plugin-proposal-export-namespace-from'],
-          ['@babel/plugin-proposal-numeric-separator'],
-          ['@babel/plugin-proposal-throw-expressions'],
-  
-          // Stage 3
-          ['@babel/plugin-syntax-import-meta'],
-          ['@babel/plugin-proposal-class-properties', { loose: true }],
-  
-          // Others
-          ['react-hot-loader/babel'],
-        ]
-      },
+      options: babelOptions,
+    };
+
+    config.module.rules = config.module.rules.concat([
+    {
+      test: /\.mdx$/,
+      use: [
+        {
+          loader: 'babel-loader',
+          options: babelOptions,
+        },
+         '@mdx-js/loader'
+      ]
     },
     {
       test: /\.(jpe?g|png|gif|svg)$/i,
