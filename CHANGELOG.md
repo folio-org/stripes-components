@@ -14,6 +14,7 @@
 * Scope the focusable row to the scroll container. Refs STCOM-870.
 * Fix issue when staff slips generate an extra blank page. Refs STCOM-872.
 * React 17. STCOM-797.
+* Closing `<Popover>`, `<InfoPopover>` should send focus back to the trigger. Fixes STCOM-867.
 
 ## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.1.0...v9.2.0)
