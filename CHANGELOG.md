@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## [9.3.0] (IN PROGRESS)
+## [10.0.0] (IN PROGRESS)
 
 * Add link icon. Refs STCOM-852.
 * `<MultiColumnList>` add ability to focus component if content data is empty. Refs STCOM-851.
@@ -13,6 +13,9 @@
 * Fix `<Datepicker>` `inputRef` prop not working. Refs STCOM-869
 * Scope the focusable row to the scroll container. Refs STCOM-870
 * Fix issue when staff slips generate an extra blank page. Refs STCOM-872
+* Use existing Bigtest Interactors from stripes-testing instead of local bigtest interactors. Refs STCOM-862 
+* React 17. STCOM-797.
+* Closing `<Popover>`, `<InfoPopover>` should send focus back to the trigger. Fixes STCOM-867.
 
 ## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.1.0...v9.2.0)
