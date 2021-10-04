@@ -66,7 +66,7 @@ Name | type | description | default | required
 ## Style Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-`className` | string | Apply a custom class name to the root element that wraps the  <Editor>`. | |
+`className` | string | Apply a custom class name to the root element that wraps the  `<Editor>`. | |
 `style` | object | An object with custom CSS rules to apply on the `<Editor>` container. Rules should be in React's "camelCased" naming style. | | 
 `editorClassName` | string | Apply a custom class name to the `<Editor>`. | | 
 

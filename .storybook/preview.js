@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { addDecorator, addParameters } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
 import { addReadme } from 'storybook-readme';
 import { initializeRTL } from 'storybook-addon-rtl';
 import '../lib/global.css';
@@ -58,8 +56,6 @@ setIntlConfig({
     getMessages: (locale) => messages[locale]
 });
 
-addDecorator(withIntl);
-
 /**
  * RTL
  */
@@ -90,26 +86,16 @@ initializeRTL();
   }
  }
 
-addDecorator(storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>);
+const storyFnDecorator = storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>
 
-/**
- * Set options
- */
-addDecorator(withOptions({
-  name: 'FOLIO Stripes',
-  // sortStoriesByKind:
-  hierarchySeparator: /\|/,
-  hierarchyRootSeparator: /\|/,
-}));
-
-addParameters({ options: { theme: {} } });
-
-/**
- * Readme
- */
-addDecorator(addReadme);
-addParameters({ 
-    readme: {
-        codeTheme: 'a11y-dark',
-    },
- });
+ export const decorators = [withIntl, storyFnDecorator, addReadme]
+ export const parameters = {
+   options: {
+     theme: {
+      brandTitle: 'FOLIO Stripes',
+     }
+   },
+   readme: {
+     codeTheme: 'a11y-dark',
+   }
+ }
