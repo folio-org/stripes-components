@@ -119,6 +119,7 @@ export { default as exportToCsv } from './lib/ExportCsv/exportToCsv';
 /* utilities */
 export { default as RootCloseWrapper } from './util/RootCloseWrapper';
 export { default as omitProps } from './util/omitProps';
+export * from './util/getFocusableElements;
 
 export {
   default as currencies,
