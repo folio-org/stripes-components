@@ -15,8 +15,6 @@
 *       If the index is before the start of the list, the last element will be returned.
 */
 
-// THIS FILE IS ADAPTED FROM https://github.com/folio-org/stripes-components/blob/master/util/getFocusableElements.js
-// With the option included to return null if run out of options
 import contains from 'dom-helpers/query/contains';
 import matches from 'dom-helpers/query/matches';
 import first from 'lodash/first';
