@@ -16,7 +16,7 @@ name: buildNPM Snapshot
 on: [push, pull_request]
 
 jobs:
-  build:
+  build-npm:
     env:
       YARN_TEST_OPTIONS: '--karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage'
       SQ_ROOT_DIR: './lib'
