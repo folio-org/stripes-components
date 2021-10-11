@@ -28,15 +28,15 @@ const commands = [
 
 ### Display application specific keyboard shortcuts:
 
-To display app specific keyboard shortcuts in the modal, you can make use of the following pattern:
+To display app specific keyboard shortcuts in the modal, you can make use of the `importShortcuts` and `renameShortcutLabels` utility functions
 
 ```import { importShortcuts, renameShortcutLabels } from '@folio/stripes-components'
 
-// To import app specific shortcuts, make use of the importShortcuts utility function
+// To import app specific shortcuts
 
 const appSpecificShortcuts = importShortcuts(['new', 'save'])
 
-// To rename labels to be displayed in the shortcuts modal, make use of the renameShortcutLabels utility funciton
+// To rename labels to be displayed in the shortcuts modal
 
 const renamedShortcuts = renameShortcutLabels(appSpecificShortcuts,
   [
