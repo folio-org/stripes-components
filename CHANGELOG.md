@@ -1,5 +1,8 @@
 # Change history for stripes-components
 
+## In-progress
+* removing skipped tests for TextField, Radiobutton, Select. Fixes STCOM-880.
+
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
 
