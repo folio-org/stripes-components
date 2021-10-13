@@ -37,7 +37,7 @@ The `filters` query parameter is unaffected (since it was not included in the pa
   By default the focus list comprises of the entire document.
 
   `loop` instructs the functions to either cycle to the beginning of the list after reaching the end, or not.
-  `nullOnExit` will then determine whether, after the end of the list is reached, the function spits out the terminal elememnt or null. This is useful if you want special behaviour on keyboard controls reaching the end of a list. (Note, this is ignored when `loop` is true).
+  `nullOnExit` will then determine whether, after the end of the list is reached, the function spits out the terminal element or null. This is useful if you want special behaviour on keyboard controls reaching the end of a list. (Note, this is ignored when `loop` is true).
 
   For example, calling `getNextFocusable(someRef.current, true, true, false)` will return the next focusable element (what you would normally expect 'Tab' to focus on) within the scope of `someRef.current`, and `getPreviousFocusable(someRef.current, true, false, false, false)` will return the previous focusable element (what you would normally expect 'Shift + Tab' to focus on) in the entire document, with the caveat that if focus happens to already be on the first focusable element in the document it will not loop to the end, instead returning the first element in the list (the element currently focused).
 
