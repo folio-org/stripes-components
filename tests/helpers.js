@@ -42,10 +42,10 @@ export function mount(component) {
  * @param {*} component the component to mount
  * @param {*} translations an array of {translations, prefix} objects
  */
-export function mountWithContext(component, translations) {
+export function mountWithContext(component, translations, locale) {
   return new Promise(resolve => {
     ReactDOM.render(
-      <Harness translations={translations}>{component}</Harness>,
+      <Harness translations={translations} locale={locale}>{component}</Harness>,
       getCleanTestingRoot(),
       resolve,
     );
