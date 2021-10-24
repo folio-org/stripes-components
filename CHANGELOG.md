@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [10.0.1](https://github.com/folio-org/stripes-components/tree/v10.0.1) (2021-10-24)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.0.1)
+
+* Reapply fix issue with misaligned dates/weekdays in Datepicker Calendar. Refs STCOM-849
+
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
 
