@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## In-progress
+* upgraded popover tests to use new interactors. part of STCOM-880.
+* removing skipped tests for TextField, Radiobutton, Select. Fixes STCOM-880.
+* Re-fix issue with misaligned dates/weekdays in Datepicker Calendar. Add regression tests for fix. Refs STCOM-849.
+
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
 
