@@ -44,7 +44,7 @@ class Harness extends React.Component {
 
     return (
       <Provider store={store}>
-        <IntlProvider locale="en" key="en" timeZone="UTC" messages={allTranslations}>
+        <IntlProvider locale={this.props.locale} key="en" timeZone="UTC" messages={allTranslations}>
           {this.props.children}
         </IntlProvider>
       </Provider>
@@ -55,6 +55,8 @@ class Harness extends React.Component {
 Harness.propTypes = {
   // the components to render into the context
   children: PropTypes.node,
+  // 110n locale to pass to component.
+  locale: PropTypes.string,
   // l10n map for the component's translation keys
   translations: PropTypes.arrayOf(
     PropTypes.shape({
@@ -66,6 +68,7 @@ Harness.propTypes = {
 
 Harness.defaultProps = {
   translations: [],
+  locale: 'en',
 };
 
 export default Harness;
