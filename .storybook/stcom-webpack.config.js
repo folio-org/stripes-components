@@ -86,7 +86,14 @@ module.exports = async (config) => {
     },
     {
       test: /\.(eot|ttf|woff|woff2?)$/,
-      loader: 'file-loader?name=fonts/[name].[hash].[ext]',
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[hash].[ext]'
+          }
+        }
+      ],
     }
   ]);
 
