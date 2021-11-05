@@ -1,9 +1,6 @@
 const customWebpack = require('./stcom-webpack.config.js');
 
 module.exports = {
-  core: {
-    builder: 'webpack5',
-  },
   features: {
     postcss: false, // we use our own postcss setup
   },

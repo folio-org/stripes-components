@@ -81,35 +81,14 @@ module.exports = async (config) => {
       ]
     },
     {
-      test: /\.(jpe?g|png|gif)$/i,
+      test: /\.(jpe?g|png|gif|svg)$/i,
       loader: "file-loader"
     },
-    
     {
       test: /\.(eot|ttf|woff|woff2?)$/,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[hash].[ext]'
-          }
-        }
-      ],
+      loader: 'file-loader?name=fonts/[name].[hash].[ext]',
     }
   ]);
-
-  const svgRuleIndex = config.module.rules.findIndex(r => { const t = new RegExp(r.test); return t.test('m.svg'); });
-  config.module.rules[svgRuleIndex] = {
-      test: /\.svg$/,
-      use: [
-        { 
-          loader: '@svgr/webpack',
-          options: {
-            name: '[name].svg' 
-          }
-        }
-      ]
-    };
 
   return config;
 }
