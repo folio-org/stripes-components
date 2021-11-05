@@ -4,6 +4,7 @@
 * upgraded popover tests to use new interactors. part of STCOM-880.
 * removing skipped tests for TextField, Radiobutton, Select. Fixes STCOM-880.
 * Re-fix issue with misaligned dates/weekdays in Datepicker Calendar. Add regression tests for fix. Refs STCOM-849.
+* Upgrade `postcss` to v8. Refs STCOM-892.
 * Update focus for MultiSelection. Refs STCOM-895.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
