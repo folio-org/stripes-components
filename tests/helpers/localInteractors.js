@@ -1,5 +1,5 @@
 // test-level interactor to check for presence of label, internal only.
 import { HTML } from '@folio/stripes-testing';
 
-export const label = HTML.extend('label-interactor')
-  .selector('label');
+// eslint-disable-next-line import/prefer-default-export
+export const label = HTML.extend('label-interactor').selector('label');
