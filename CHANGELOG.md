@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## In-progress
+* Export utilities for apps to display keyboard shortcuts in a modal.Refs STCOM-865.
 * upgraded popover tests to use new interactors. part of STCOM-880.
 * removing skipped tests for TextField, Radiobutton, Select. Fixes STCOM-880.
 * Re-fix issue with misaligned dates/weekdays in Datepicker Calendar. Add regression tests for fix. Refs STCOM-849.
