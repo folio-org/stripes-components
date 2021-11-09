@@ -93,8 +93,12 @@ export {
   expandAllSections,
   collapseAllSections,
   checkScope,
-  defaultKeyboardShortcuts
+  defaultKeyboardShortcuts,
+  keyboardShortcutNames,
+  importShortcuts,
+  renameShortcutLabels
 } from './lib/Commander';
+
 
 /* structures */
 export { default as ConfirmationModal } from './lib/ConfirmationModal';
