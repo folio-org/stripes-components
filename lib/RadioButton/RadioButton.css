@@ -45,15 +45,19 @@
   }
 }
 
-.labelInteractionStyles {
+.labelInputContainer {
   composes: interactionStyles boxOffsetStartSmall boxOffsetEndSmall from "../sharedStyles/interactionStyles.css";
+
+  display: flex;
+  align-items: center;
 }
 
-.labelFocused {
+.radioFocused {
   composes: isFocused from "../sharedStyles/interactionStyles.css";
 }
 
 .labelPseudo {
+  display: flex;
   position: relative;
   width: var(--radio-button-size);
   height: var(--radio-button-size);
@@ -62,6 +66,7 @@
   background: #fff;
   flex-shrink: 0;
   top: 1px;
+  pointer-events: none;
 }
 
 .labelPseudo::after {
