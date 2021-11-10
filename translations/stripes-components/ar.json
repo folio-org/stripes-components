@@ -851,10 +851,10 @@
     "shortcut.openShortcutModal": "فتح اختصارات لوحة المفاتيح",
     "shortcut.saveRecord": "حفظ تسجيلة",
     "selection.loading": "جاري تحميل الخيارات ...",
-    "shortcut.expandOrCollapse": "Expand or collapse an accordion",
-    "shortcut.closeModal": "Close a modal or pop-up",
-    "shortcut.copy": "Copy",
-    "shortcut.cut": "Cut",
-    "shortcut.paste": "Paste",
-    "shortcut.find": "Find"
+    "shortcut.expandOrCollapse": "توسيع أو طي قسم",
+    "shortcut.closeModal": "إغلاق النموذج أو النافذة المنبثقة",
+    "shortcut.copy": "نسخ",
+    "shortcut.cut": "قص",
+    "shortcut.paste": "لصق",
+    "shortcut.find": "بحث"
 }
