@@ -3,6 +3,7 @@ import {
   describe,
   it,
   beforeEach,
+  afterEach,
 } from '@bigtest/mocha';
 import {
   interactor,
@@ -27,8 +28,8 @@ describe('useClickOutside', () => {
   const TestComponent = ({ onClick }) => {
     const content = useRef(null);
 
-    useClickOutside(content, () => {
-      onClick();
+    useClickOutside(content, (e, isOutside) => {
+      onClick(isOutside);
     });
 
     return (
@@ -49,13 +50,17 @@ describe('useClickOutside', () => {
     );
   });
 
+  afterEach(() => {
+    onClickSpy.resetHistory();
+  });
+
   describe('when clicking outside element', () => {
     beforeEach(async () => {
       await useClickOutsideInteractor.clickOutsideElement();
     });
 
     it('should call onClick', () => {
-      expect(onClickSpy.called).to.be.true;
+      expect(onClickSpy.calledOnceWith(true)).to.be.true;
     });
   });
 
@@ -65,7 +70,7 @@ describe('useClickOutside', () => {
     });
 
     it('should not call onClick', () => {
-      expect(onClickSpy.called).to.be.false;
+      expect(onClickSpy.calledOnceWith(false)).to.be.true;
     });
   });
 });
