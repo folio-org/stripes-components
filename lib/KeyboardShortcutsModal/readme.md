@@ -34,7 +34,7 @@ To display app specific keyboard shortcuts in the modal, you can make use of the
 
 // To import app specific shortcuts
 
-const appSpecificShortcuts = importShortcuts(['new', 'save'])
+const appSpecificShortcuts = importShortcuts(['new', 'save', 'openShortcutModal'])
 
 // To rename labels to be displayed in the shortcuts modal
 
@@ -52,7 +52,6 @@ const renamedShortcuts = renameShortcutLabels(appSpecificShortcuts,
 ```
 ## Core shortcuts
 There are a few core shortcuts that get displayed by default in the shortcuts modal and need not be included when specifying the shortcuts at the application level. These include:
-* openShortcutsModal
 * closeModal
 * Copy
 * Cut
