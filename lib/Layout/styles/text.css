@@ -5,6 +5,10 @@
 /**
  * Alignment
  */
+.textLeft {
+  text-align: left;
+}
+
 .textCentered {
   text-align: center;
 }
