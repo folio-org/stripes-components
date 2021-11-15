@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## IN PROGRESS
+## [10.0.2](https://github.com/folio-org/stripes-components/tree/v10.0.2) (2021-11-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.1...v10.0.2)
 
 * Check that content inside `<Accordion>` was clicked and set focus flag. Refs STCOM-895.
 
