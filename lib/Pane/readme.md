@@ -14,7 +14,7 @@ import { Pane, PaneHeader, Paneset } from '@folio/stripes/components';
   </Pane>
   <Pane
     defaultWidth="fill"
-    padContent={false} // prevent scrolling
+    padContent={false} // prevent horizontal scrolling
     noOverflow         // at the pane level (useful in case the rendered content, like a results list, handles this.)
     // Render a custom header using the "renderHeader"-prop if needed
     renderHeader={renderProps => <PaneHeader {...renderProps} paneTitle="Search Results" />}
