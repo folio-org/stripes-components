@@ -83,6 +83,17 @@ Accordions can pass a their open status to their children via a functional child
 </Accordion>
 ```
 
+## onClickToggle prop
+This property is a callback function that is called when a user has opened accordion by interacting with it (clicking on header, pressing Enter). It's not called when accordion was toggled via "Expand all" button or any other way.
+Callback is called with the same argument as `onToggle` with one additional property - `open`
+```
+{
+  id: 'accordion-id',
+  label: 'accordion-label',
+  open: true,
+}
+```
+
 ## Controlled
 Accordions can, of course, be controlled by state or local resource. Simply include an object with a list of keys for each accordion's `id` set to a boolean value that will be passed through to the corresponding accordion's `open` prop. This object should be passed to the `<AccordionSet>`'s `accordionStatus` prop. An `onToggle` handler will also need to be provided for proper state interaction. Passed to the `<AccordionSet>`'s `onToggle` prop, it will receive both the label and id of the target accordion, either of which could be used for additional interactions as needed.
 
@@ -157,6 +168,7 @@ id | string | Unique ID to track accordion state | |
 displayWhenOpen | element | Content to display in header when Accordion is in the open state | |
 displayWhenClosed | element | Content to display in header when Accordion is in the closed state | |
 onToggle | func | Callback for toggling the accordion open/closed | |
+onClickToggle | func | Callback for letting the component consumer know when accordion has been toggled by clicking on header | |
 header | node, func | Used to render a custom accordion header | |
 headerProps | object | Passes additional props for the header component of the accordion | |
 contentRef | func | Reference function for accessing the accordion content's DOM element. | |
