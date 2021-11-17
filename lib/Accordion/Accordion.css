@@ -180,7 +180,6 @@
   padding: var(--input-vertical-padding) 0;
   width: 100%;
   line-height: var(--line-height);
-  
   font-size: var(--font-size-medium);
   min-height: var(--control-min-size-desktop);
 
@@ -193,8 +192,6 @@
     color: var(--color-text);
   }
 }
-
-
 
 .defaultHeaderIcon {
   color: var(--color-icon);
@@ -234,4 +231,3 @@
     padding-right: 0.25em;
   }
 }
-
