@@ -86,7 +86,14 @@ function getNextorPrevious(collection, current, loop, next, nullOnExit = false) 
   }
 }
 
-function getFocusableElement(next, currentElement, includeContained = true, onlyContained = false, loop = true, nullOnExit = false) {
+function getFocusableElement(
+  next,
+  currentElement,
+  includeContained = true,
+  onlyContained = false,
+  loop = true,
+  nullOnExit = false
+) {
   const container = includeContained && onlyContained ? currentElement : document;
   const focusable = getVisibleFocusableElements(container, includeContained, currentElement);
   if (focusable.length > 0) {
