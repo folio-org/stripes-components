@@ -47,7 +47,6 @@
 
 .labelInputContainer {
   composes: interactionStyles boxOffsetStartSmall boxOffsetEndSmall from "../sharedStyles/interactionStyles.css";
-
   display: flex;
   align-items: center;
 }
