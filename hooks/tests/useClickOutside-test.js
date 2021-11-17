@@ -34,7 +34,13 @@ describe('useClickOutside', () => {
 
     return (
       <div ref={content}>
-        <span id="click-inside-element">Inside element</span>
+        <button
+          id="click-inside-element"
+          type="button"
+          onClick={(e) => e.target.parentNode.removeChild(e.target)}
+        >
+          Inside element
+        </button>
       </div>
     );
   };
@@ -70,6 +76,16 @@ describe('useClickOutside', () => {
     });
 
     it('should not call onClick', () => {
+      expect(onClickSpy.calledOnceWith(false)).to.be.true;
+    });
+  });
+
+  describe('when other click handler removes click target from DOM', () => {
+    beforeEach(async () => {
+      await useClickOutsideInteractor.clickInsideElement();
+    });
+
+    it('should still give correct results', () => {
       expect(onClickSpy.calledOnceWith(false)).to.be.true;
     });
   });
