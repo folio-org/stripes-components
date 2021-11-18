@@ -36,12 +36,12 @@ If you need the `<MessageBanner>` to enter and exit the UI then you should use t
 
 You can further improve the screen reader experience by adding a more specific dismiss button aria-label. For this purpose you can use the `dismissButtonAriaLabel`-prop to change the message that will be read out load. This label defaults to `"Hide message"`.
 
-## Dismissable
-Setting the `dismissable`-prop enables the option for the user to hide the `<MessageBanner>`. It is also possible to control the visibility externally by using the `show`-prop. See an example below this section.
+## Dismissible
+Setting the `dismissible`-prop enables the option for the user to hide the `<MessageBanner>`. It is also possible to control the visibility externally by using the `show`-prop. See an example below this section.
 
 ```js
-<MessageBanner dismissable>
-  I'm dismissable
+<MessageBanner dismissible>
+  I'm dismissible
 </MessageBanner>
 ```
 
