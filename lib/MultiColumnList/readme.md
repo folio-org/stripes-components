@@ -108,7 +108,8 @@ Name | type | description | default | required
 `sortedColumn` | string | Used to apply styling to the appropriate column. | |
 `sortOrder` | string | 'ascending' or 'descending' direction. | |
 `striped` | bool | Adds striped style to rows | `true` |
-`virtualize` | bool | Employs virtualization for performant rendering of large sets of data. | |
+`totalCount` | number | The total number of expected records. It's necessary in various situations: using `virtualize` (so that MCL can anticipate the dimensions of expected rows) and with `prev-next` and `click` paging types ( so that the 'next' or 'load more' button can be adequately disabled when the end of the list is reached.) | 0 |
+`virtualize` | bool | Employs virtualization for performant rendering of large sets of data. | 0 |
 `visibleColumns` | array of strings | an ordered list of column names, indicating which fields from each object should be included in the table. (When omitted, the keys from the first record are used.) | |
 
 ## Usability: Clickable Rows vs clickable cells
