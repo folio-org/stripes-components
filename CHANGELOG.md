@@ -9,6 +9,7 @@
 * Check that content inside `<Accordion>` was clicked and set focus flag. Refs STCOM-895.
 * Add an event handler for accordion opening/closing at users' direct request. Refs STCOM-820.
 * Remove default tabIndex from Icon (cause of nested interactive axe errors), treated aria-labelledby appropriately in IconButton. Fixes STCOM-883
+* Make `useClickOutside` click handler work on `capture` event phase. Refs STCOM-895.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
