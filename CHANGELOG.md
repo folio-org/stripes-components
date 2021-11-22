@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## IN PROGRESS
+## [10.0.3](https://github.com/folio-org/stripes-components/tree/v10.0.3) (2021-11-22)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.2...v10.0.3)
 
 * Make `useClickOutside` click handler work on `capture` event phase. Refs STCOM-895.
 
