@@ -150,6 +150,8 @@ export {
   default as languages,
 } from './util/languages';
 
+export { default as nativeChangeFieldValue } from './util/nativeChangeFieldValue';
+
 /* hooks */
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
 export { default as useDateFormatter } from './hooks/useFormatDate';
