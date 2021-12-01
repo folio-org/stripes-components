@@ -1,0 +1,22 @@
+@import '../variables.css';
+
+.container {
+  margin-bottom: 10px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:visited {
+  color: var(--color-link-visited);
+}
+
+.externalLink {
+  vertical-align: unset;
+  margin-left: var(--gutter-static-one-third);
+}
