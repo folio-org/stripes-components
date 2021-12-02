@@ -118,6 +118,7 @@ const actionMenu = ({ onToggle }) => (
     // Pane Content
 </Pane>
 ```
+Note that if a `lastMenu` is rendered without a containing element, the rendered content of the `actionMenu` will not be appended to it.
 
 ## Props
 Name | Type | Description | Default
