@@ -73,7 +73,7 @@ To make a pane dismissible, simply supply the `dismissible` prop and a module-le
 ## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-actionMenu | func | Activates the action menu dropdown. Expects a function that returns a component or node. | undefined |
+actionMenu | func | Activates the [action menu dropdown](#action-menu). Expects a function that returns a component or node. | undefined |
 appIcon | element | Render an app icon in the PaneHeader by passing an `<AppIcon>` from stripes-core. |  | undefined
 defaultWidth | string percentage or `"fill"` | Tells the pane the percentage of the paneset that it should occupy. A string percentage (`"25%"`) will render a pane with a width of 25% of its containing element. The string `"fill"` will cause the pane to occupy any remaining space in the paneset after percentage-sized panes are accounted for. |  | &#10004;
 centerContent | bool | Wraps the content of the pane in a centered container. This can be useful when rendering forms or preview panes where you don't want the content to take up the entire width of a potentially very wide pane. | |
@@ -134,7 +134,7 @@ const lastMenu = (
 ```
 
 ## Action menu
-The action menu creates a dropdown off of the pane title. The prop accepts a function that returns the rendered contents of the menu.
+The prop accepts a function that returns the rendered contents of the menu. If `lastMenu` is provided, the ouput of this function will be appended to the children of `lastMenu`. If no container is present for last menu, this rendered content will not appear!
 ```
 const actionMenu = ({ onToggle }) => ( // eslint-disable-line
   <Fragment>
