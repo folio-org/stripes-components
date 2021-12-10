@@ -856,5 +856,7 @@
     "shortcut.copy": "Copier",
     "shortcut.cut": "Couper",
     "shortcut.paste": "Coller",
-    "shortcut.find": "Trouver"
+    "shortcut.find": "Trouver",
+    "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
+    "optimisticLocking.latestVersion": "Afficher la dernière version"
 }

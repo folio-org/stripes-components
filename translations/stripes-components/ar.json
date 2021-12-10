@@ -856,5 +856,7 @@
     "shortcut.copy": "نسخ",
     "shortcut.cut": "قص",
     "shortcut.paste": "لصق",
-    "shortcut.find": "بحث"
+    "shortcut.find": "بحث",
+    "optimisticLocking.saveError": "تعذر حفظ التسجيلة لأنها <strong>ليست</strong> أحدث إصدارة.",
+    "optimisticLocking.latestVersion": "عرض أحدث إصدار"
 }
