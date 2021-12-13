@@ -35,6 +35,8 @@
   font-size: var(--font-size-form-label);
   margin-bottom: 0;
   min-height: var(--control-min-size-desktop);
+  left: -1rem;
+  padding-left: 1rem;
 
   &.error {
     color: var(--error);
@@ -43,6 +45,12 @@
       border-color: var(--error) !important;
     }
   }
+}
+
+[dir=rtl] .radioLabel {
+  right: -1rem;
+  padding-left: 0;
+  padding-right: 1rem;
 }
 
 .labelInputContainer {
@@ -65,7 +73,6 @@
   background: #fff;
   flex-shrink: 0;
   top: 1px;
-  pointer-events: none;
 }
 
 .labelPseudo::after {
