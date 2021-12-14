@@ -849,6 +849,8 @@
   "shortcut.cut": "Cut",
   "shortcut.paste": "Paste",
   "shortcut.find": "Find",
+  "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
+  "optimisticLocking.latestVersion": "View latest version",
   "ErrorBoundary.errorDetails": "Error details",
   "ErrorBoundary.defaultTitle": "Something went wrong",
   "ErrorBoundary.defaultSubTitle": "Refresh the page to continue.",
