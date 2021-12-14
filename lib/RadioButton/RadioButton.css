@@ -57,6 +57,10 @@
   composes: interactionStyles boxOffsetStartSmall boxOffsetEndSmall from "../sharedStyles/interactionStyles.css";
   display: flex;
   align-items: center;
+
+  &.noInteractionLabel {
+    width: 1rem;
+  }
 }
 
 .radioFocused {
