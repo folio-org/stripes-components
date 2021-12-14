@@ -63,7 +63,7 @@
   composes: isFocused from "../sharedStyles/interactionStyles.css";
 }
 
-.labelPseudo {
+.pseudoButton {
   display: flex;
   position: relative;
   width: var(--radio-button-size);
@@ -75,7 +75,7 @@
   top: 1px;
 }
 
-.labelPseudo::after {
+.pseudoButton::after {
   content: '';
   width: 6px;
   height: 6px;
@@ -95,8 +95,8 @@
     cursor: default;
   }
 
-  & .labelPseudo,
-  & .input:checked + .labelPseudo {
+  & .pseudoButton,
+  & .inputHidden:checked + .pseudoButton {
     background-color: var(--checkable-disabled-fill);
     border-color: var(--checkable-disabled-fill);
 
@@ -116,7 +116,7 @@
     align-items: center;
   }
 
-  & .labelPseudo {
+  & .pseudoButton {
     top: 0;
   }
 
@@ -130,19 +130,19 @@
   margin-left: 0;
 }
 
-.input {
+.inputHidden {
   position: absolute;
   z-index: -1;
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.input:not(:checked) + .labelPseudo::after {
+.inputHidden:not(:checked) + .pseudoButton::after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-.input:checked + .labelPseudo {
+.inputHidden:checked + .pseudoButton {
   background-color: #fff;
 
   &::after {
@@ -165,7 +165,7 @@
     color: var(--warn);
   }
 
-  & .labelPseudo {
+  & .pseudoButton {
     border-color: var(--warn);
   }
 }
@@ -175,7 +175,7 @@
     color: var(--error);
   }
 
-  & .labelPseudo {
+  & .pseudoButton {
     border-color: var(--error);
   }
 }
