@@ -14,6 +14,7 @@
 * Create a Conflict Detection banner. Refs STCOM-889.
 * Scroll MCL to top when a shorter list of content is received. Refs STCOM-907
 * Fix issue with radioButton 'button' not responding to clicks. Fixes STCOM-910.
+* Upgrade `postcss` to v8. Refs STCOM-892.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
