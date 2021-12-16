@@ -13,6 +13,8 @@
 * Interactors should not use dynamic CSS variable names. Refs STCOM-902.
 * Create a Conflict Detection banner. Refs STCOM-889.
 * Scroll MCL to top when a shorter list of content is received. Refs STCOM-907
+* Fix issue with radioButton 'button' not responding to clicks. Fixes STCOM-910.
+* Upgrade `postcss` to v8. Refs STCOM-892.
 * Add a new `valueFormatter` prop to `<MultiSelection>`. Refs STCOM-911.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
