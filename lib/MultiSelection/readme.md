@@ -42,7 +42,6 @@ Name | type | description | default | required
 `renderToOverlay` | bool | For use in situations where the dropdown may be cut off due to a containing dom element's `overflow: hidden/auto` css attribute. | false |
 `value` | array | Array of selected objects. | |
 `valueFormatter` | func | Render function that accepts an object with keys for the option. The function is called to display values in the selected values list. If the prop is missing, `formatter` will be used instead. | |
-`id` | string | Sets the `id` attribute for the control. Other interior id's are generated using this string as a prefix. | |
 `ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | | 
 ## Validation props
 These are props that could be applicable if setting up your own validation system. These would probably best be handled within `onChange` and `onBlur` event handlers.
