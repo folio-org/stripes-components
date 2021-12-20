@@ -4,7 +4,7 @@ import {
   it,
   beforeEach,
   afterEach,
-} from '@bigtest/mocha';
+} from 'mocha';
 import {
   interactor,
   clickable,
