@@ -32,5 +32,4 @@ module.exports = (config) => {
   };
 
   config.set(configuration);
-  console.log(JSON.stringify(config, null, 2));
 };
