@@ -1,7 +1,7 @@
 import {
   describe,
   it,
-} from '@bigtest/mocha';
+} from 'mocha';
 import { expect } from 'chai';
 
 import getHookExecutionResult from '../../tests/helpers/getHookExecutionResult';

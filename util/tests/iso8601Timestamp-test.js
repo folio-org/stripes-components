@@ -1,4 +1,4 @@
-import { describe, it } from '@bigtest/mocha';
+import { describe, it } from 'mocha';
 import { expect } from 'chai';
 
 import iso8601Timestamp from '../iso8601Timestamp';

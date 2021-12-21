@@ -1,5 +1,5 @@
 import React from 'react';
-import { describe, beforeEach, afterEach, it } from '@bigtest/mocha';
+import { describe, beforeEach, afterEach, it } from 'mocha';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
