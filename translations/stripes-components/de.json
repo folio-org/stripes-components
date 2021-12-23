@@ -857,6 +857,6 @@
     "shortcut.cut": "Cut",
     "shortcut.paste": "Paste",
     "shortcut.find": "Find",
-    "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
-    "optimisticLocking.latestVersion": "View latest version"
+    "optimisticLocking.saveError": "Dieser Datensatz kann nicht gespeichert werden, da es sich <strong>nicht</strong> um die aktuellste Version handelt.",
+    "optimisticLocking.latestVersion": "Neueste Version anzeigen"
 }
