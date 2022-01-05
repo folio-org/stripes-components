@@ -17,6 +17,7 @@
 * Upgrade `postcss` to v8. Refs STCOM-892.
 * Add a new `valueFormatter` prop to `<MultiSelection>`. Refs STCOM-911.
 * remove `@bigtest/mocha` dependency - using `mocha` instead. Refs STCOM-907.
+* Do not pass `aria-invalid` to any `<button>` elements. Refs STCOM-915.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
