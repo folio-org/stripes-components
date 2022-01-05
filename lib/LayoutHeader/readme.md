@@ -16,7 +16,7 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 title | string | text for the header of the section | |
 level | number | The header level of the rendered `<Hx>` tag. (1-6). | 3 |
-actions | array of `{ name, icon, handler }` | see examples | |
+actions | array of `{ title, icon, handler }` | see examples | |
 onDelete | function | to support delete actions in the simplest use case. | |
 noActions | bool | hides action buttons. Useful for 'read-only' mode. | |
 
@@ -25,7 +25,7 @@ The actions prop can be used to supply a custom set of rendered buttons with ico
 ```
 [
   {
-    name: string,
+    title: string,
     icon: string,
     handler: function
   },
@@ -38,7 +38,7 @@ The simple delete action configuration looks like this:
 ```
 [
   {
-    name: 'Delete',
+    title: 'Delete',
     icon: 'trash',
     handler: props.onDelete,
   },
