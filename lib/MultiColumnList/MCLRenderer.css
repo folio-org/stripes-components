@@ -25,7 +25,7 @@
 
 /* Row is interactive (clickable, hoverable and focusable etc.) */
 .mclIsInteractive {
-  composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles noPointer hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
 }
 
 .mclRowFormatterContainer {
