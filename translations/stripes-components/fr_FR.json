@@ -850,5 +850,13 @@
     "shortcut.goToSearchFilter": "Accédez au volet Rechercher et filtrer",
     "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
     "shortcut.saveRecord": "Sauvegarder un enregistrement",
-    "selection.loading": "Loading options..."
+    "selection.loading": "Loading options...",
+    "shortcut.expandOrCollapse": "Développer ou réduire un accordéon",
+    "shortcut.closeModal": "Close a modal or pop-up",
+    "shortcut.copy": "Copier",
+    "shortcut.cut": "Couper",
+    "shortcut.paste": "Coller",
+    "shortcut.find": "Trouver",
+    "optimisticLocking.saveError": "Cette notice ne peut être sauvegardée car il ne s'agit <strong>pas</strong> de la version la plus récente.",
+    "optimisticLocking.latestVersion": "Afficher la dernière version"
 }

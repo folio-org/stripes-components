@@ -850,5 +850,13 @@
     "shortcut.goToSearchFilter": "Ir para o painel \"Buscar e filtrar\"",
     "shortcut.openShortcutModal": "Modal atalhos de teclado abertos",
     "shortcut.saveRecord": "Salvar um registro",
-    "selection.loading": "Carregando opções ..."
+    "selection.loading": "Carregando opções ...",
+    "shortcut.expandOrCollapse": "Expandir ou recolher um acordeão",
+    "shortcut.closeModal": "Fechar um modal ou pop-up",
+    "shortcut.copy": "Copiar",
+    "shortcut.cut": "Cortar",
+    "shortcut.paste": "Colar",
+    "shortcut.find": "Buscar",
+    "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
+    "optimisticLocking.latestVersion": "View latest version"
 }

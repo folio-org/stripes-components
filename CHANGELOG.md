@@ -1,6 +1,26 @@
 # Change history for stripes-components
 
-## [10.0.0] (IN PROGRESS)
+## In-progress
+* Export utilities for apps to display keyboard shortcuts in a modal.Refs STCOM-865.
+* upgraded popover tests to use new interactors. part of STCOM-880.
+* removing skipped tests for TextField, Radiobutton, Select. Fixes STCOM-880.
+* Re-fix issue with misaligned dates/weekdays in Datepicker Calendar. Add regression tests for fix. Refs STCOM-849.
+* Add new `textLeft` className to `<Layout>` component. Refs STCOM-897.
+* Check that content inside `<Accordion>` was clicked and set focus flag. Refs STCOM-895.
+* Add an event handler for accordion opening/closing at users' direct request. Refs STCOM-820.
+* Remove default tabIndex from Icon (cause of nested interactive axe errors), treated aria-labelledby appropriately in IconButton. Fixes STCOM-883
+* Make `useClickOutside` click handler work on `capture` event phase. Refs STCOM-895.
+* Interactors should not use dynamic CSS variable names. Refs STCOM-902.
+* Create a Conflict Detection banner. Refs STCOM-889.
+* Scroll MCL to top when a shorter list of content is received. Refs STCOM-907
+* Fix issue with radioButton 'button' not responding to clicks. Fixes STCOM-910.
+* Upgrade `postcss` to v8. Refs STCOM-892.
+* Add a new `valueFormatter` prop to `<MultiSelection>`. Refs STCOM-911.
+* remove `@bigtest/mocha` dependency - using `mocha` instead. Refs STCOM-907.
+* Do not pass `aria-invalid` to any `<button>` elements. Refs STCOM-915.
+
+## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
 
 * Add link icon. Refs STCOM-852.
 * `<MultiColumnList>` add ability to focus component if content data is empty. Refs STCOM-851.
@@ -13,9 +33,11 @@
 * Fix `<Datepicker>` `inputRef` prop not working. Refs STCOM-869
 * Scope the focusable row to the scroll container. Refs STCOM-870
 * Fix issue when staff slips generate an extra blank page. Refs STCOM-872
-* Use existing Bigtest Interactors from stripes-testing instead of local bigtest interactors. Refs STCOM-862 
+* Use existing Bigtest Interactors from stripes-testing instead of local bigtest interactors. Refs STCOM-862
 * React 17. STCOM-797.
 * Closing `<Popover>`, `<InfoPopover>` should send focus back to the trigger. Fixes STCOM-867.
+* Update `react-overlays` to v4. Refs STCOM-877.
+* Disable several unit tests that either don't like `react` `17` or `react-overlays` `v4`. Refs STCOM-880.
 
 ## [9.2.0](https://github.com/folio-org/stripes-components/tree/v9.2.0) (2021-06-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.1.0...v9.2.0)

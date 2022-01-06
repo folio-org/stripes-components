@@ -1,18 +1,20 @@
 import { useEffect } from 'react';
 
-const useClickOutside = (ref, onClickOutside) => {
+const useClickOutside = (ref, onClick) => {
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
-        onClickOutside(e);
-      }
+    const handleClick = (e) => {
+      const isOutside = ref.current && !ref.current.contains(e.target);
+      onClick(e, isOutside);
     };
 
-    document.addEventListener('click', handleClickOutside);
+    // need to catch event in capture phase to process click event before other handlers
+    // this is to fix a case when other click handler might remove e.target from DOM
+    // and when this handler runs - `contains` will return false because e.target is no longer in DOM
+    document.addEventListener('click', handleClick, true);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('click', handleClick, true);
     };
-  }, [ref, onClickOutside]);
+  }, [ref, onClick]);
 };
 
 export default useClickOutside;

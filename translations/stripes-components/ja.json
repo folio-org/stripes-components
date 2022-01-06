@@ -334,7 +334,7 @@
     "Datepicker.monthControl": "month",
     "Datepicker.yearControl": "year",
     "Datepicker.unavailable": "unavailable",
-    "Datepicker.calendar": "calendar",
+    "Datepicker.calendar": "カレンダー",
     "Datepicker.calenderRole": "datepicker",
     "languages.afa": "Afro-Asiatic languages",
     "languages.alg": "Algonquian languages",
@@ -850,5 +850,13 @@
     "shortcut.goToSearchFilter": "Go to \"Search & filter\" pane",
     "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
     "shortcut.saveRecord": "Save a record",
-    "selection.loading": "Loading options..."
+    "selection.loading": "Loading options...",
+    "shortcut.expandOrCollapse": "Expand or collapse an accordion",
+    "shortcut.closeModal": "Close a modal or pop-up",
+    "shortcut.copy": "Copy",
+    "shortcut.cut": "Cut",
+    "shortcut.paste": "Paste",
+    "shortcut.find": "Find",
+    "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
+    "optimisticLocking.latestVersion": "View latest version"
 }

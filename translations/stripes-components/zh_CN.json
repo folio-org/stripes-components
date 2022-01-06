@@ -850,5 +850,13 @@
     "shortcut.goToSearchFilter": "转到“搜索和筛选”窗格",
     "shortcut.openShortcutModal": "打开键盘快捷方式",
     "shortcut.saveRecord": "保存记录",
-    "selection.loading": "正在加载选项..."
+    "selection.loading": "正在加载选项...",
+    "shortcut.expandOrCollapse": "展开或收起",
+    "shortcut.closeModal": "关闭模式或弹出窗口",
+    "shortcut.copy": "复制",
+    "shortcut.cut": "剪切",
+    "shortcut.paste": "粘贴",
+    "shortcut.find": "查找",
+    "optimisticLocking.saveError": "无法保存此记录，因为它<strong>不是</strong>最新版本。",
+    "optimisticLocking.latestVersion": "查看最新版本"
 }

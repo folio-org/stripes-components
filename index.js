@@ -93,14 +93,19 @@ export {
   expandAllSections,
   collapseAllSections,
   checkScope,
-  defaultKeyboardShortcuts
+  defaultKeyboardShortcuts,
+  keyboardShortcutNames,
+  importShortcuts,
+  renameShortcutLabels
 } from './lib/Commander';
+
 
 /* structures */
 export { default as ConfirmationModal } from './lib/ConfirmationModal';
 export { default as ErrorModal } from './lib/ErrorModal';
 export { default as InfoPopover } from './lib/InfoPopover';
 export { default as SearchField } from './lib/SearchField';
+export { default as ConflictDetectionBanner } from './lib/ConflictDetectionBanner';
 
 /* specific use */
 export {
@@ -120,6 +125,12 @@ export { default as exportToCsv } from './lib/ExportCsv/exportToCsv';
 /* utilities */
 export { default as RootCloseWrapper } from './util/RootCloseWrapper';
 export { default as omitProps } from './util/omitProps';
+export {
+  getNextFocusable,
+  getPreviousFocusable,
+  getLastFocusable,
+  getFirstFocusable
+} from './util/getFocusableElements';
 
 export {
   default as currencies,
@@ -140,6 +151,8 @@ export {
   languageOptions,
   default as languages,
 } from './util/languages';
+
+export { default as nativeChangeFieldValue } from './util/nativeChangeFieldValue';
 
 /* hooks */
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';

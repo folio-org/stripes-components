@@ -49,9 +49,9 @@
     "metaSection.recordLastUpdated": "أخر تحديث للتسجيلة: {date} {time}",
     "selection.emptyList": "القائمة فارغة",
     "selection.noMatches": "لا توجد خيارات مطابقة",
-    "selection.filterOptionsLabel": "منقح خيارات {label} ",
+    "selection.filterOptionsLabel": "منقح خيارات {label}",
     "selection.filterOptionsPlaceholder": "قائمة خيار التنقيح",
-    "selection.filterResultFeedback": "تم العثور على {length} مواد، تم تحديد {label} ",
+    "selection.filterResultFeedback": "تم العثور على {length} مواد، تم تحديد {label}",
     "exportToCsv": "تصدير إلى ملف CSV",
     "button.edit": "تحرير",
     "button.new": "جديد",
@@ -850,5 +850,13 @@
     "shortcut.goToSearchFilter": "اذهب إلى لوحة \"بحث وتنقيح\"",
     "shortcut.openShortcutModal": "فتح اختصارات لوحة المفاتيح",
     "shortcut.saveRecord": "حفظ تسجيلة",
-    "selection.loading": "جاري تحميل الخيارات ..."
+    "selection.loading": "جاري تحميل الخيارات ...",
+    "shortcut.expandOrCollapse": "توسيع أو طي قسم",
+    "shortcut.closeModal": "إغلاق النموذج أو النافذة المنبثقة",
+    "shortcut.copy": "نسخ",
+    "shortcut.cut": "قص",
+    "shortcut.paste": "لصق",
+    "shortcut.find": "بحث",
+    "optimisticLocking.saveError": "تعذر حفظ التسجيلة لأنها <strong>ليست</strong> أحدث إصدارة.",
+    "optimisticLocking.latestVersion": "عرض أحدث إصدار"
 }

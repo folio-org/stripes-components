@@ -30,7 +30,7 @@ Name | type | description | default | required
 `dataOptions` | array of objects | An array that represents possible objects. Default props are set up to treat objects with the shape of `{value<any>, label:<string>}`. | |
 `emptyMessage` | string | feedback message for user when options list is empty (they've entered an option filter with no results,) | 'No matching items found!' |
 `filter` | func | a custom filter function. If you're not using `asyncFiltering` It should return an object with the shape of `{renderedItems:<array>}` This object can include additional properties that can be used for conditional rendering of `action`s. | the default filter is via reg-ex on the items' `label` field |
-`formatter` | func | Render function that accepts an object with keys for the option and the current filter string. The function is called to display values in the options dropdown and in the selected values list. A default `formatter` is provided. | [DefaultOptionFormatter](../Selection/DefaultOptionFormatter.md) |
+`formatter` | func | Render function that accepts an object with keys for the option and the current filter string. The function is called to display values in the options dropdown and in the selected values list if `valueFormatter` prop is missing. A default `formatter` is provided. | [DefaultOptionFormatter](../Selection/DefaultOptionFormatter.md) |
 `id` | string | Sets the `id` attribute for the control. Other interior id's are generated using this string as a prefix. | |
 `itemToString` | `<string>`func | Function used to return a single string representation of its value. For example, option objects with a shape of `{label:<string>, value:<object>}` would use `item => (item ? item.label : '')` for their toString function. This is used to generate strings so that values can accurately be announced for screen readers. | `item => (item ? item.label : '')` |
 `label` | string | Used as the form label for the field. Appropriate label/field relationship for accessibility is automatically set up by the component. | |
@@ -41,6 +41,7 @@ Name | type | description | default | required
 `placeholder` | string | Rendered as a placeholder for the control when no value is present. | |
 `renderToOverlay` | bool | For use in situations where the dropdown may be cut off due to a containing dom element's `overflow: hidden/auto` css attribute. | false |
 `value` | array | Array of selected objects. | |
+`valueFormatter` | func | Render function that accepts an object with keys for the option. The function is called to display values in the selected values list. If the prop is missing, `formatter` will be used instead. | |
 `ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | | 
 ## Validation props
 These are props that could be applicable if setting up your own validation system. These would probably best be handled within `onChange` and `onBlur` event handlers.

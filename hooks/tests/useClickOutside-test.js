@@ -3,7 +3,8 @@ import {
   describe,
   it,
   beforeEach,
-} from '@bigtest/mocha';
+  afterEach,
+} from 'mocha';
 import {
   interactor,
   clickable,
@@ -27,13 +28,19 @@ describe('useClickOutside', () => {
   const TestComponent = ({ onClick }) => {
     const content = useRef(null);
 
-    useClickOutside(content, () => {
-      onClick();
+    useClickOutside(content, (e, isOutside) => {
+      onClick(isOutside);
     });
 
     return (
       <div ref={content}>
-        <span id="click-inside-element">Inside element</span>
+        <button
+          id="click-inside-element"
+          type="button"
+          onClick={(e) => e.target.parentNode.removeChild(e.target)}
+        >
+          Inside element
+        </button>
       </div>
     );
   };
@@ -49,13 +56,17 @@ describe('useClickOutside', () => {
     );
   });
 
+  afterEach(() => {
+    onClickSpy.resetHistory();
+  });
+
   describe('when clicking outside element', () => {
     beforeEach(async () => {
       await useClickOutsideInteractor.clickOutsideElement();
     });
 
     it('should call onClick', () => {
-      expect(onClickSpy.called).to.be.true;
+      expect(onClickSpy.calledOnceWith(true)).to.be.true;
     });
   });
 
@@ -65,7 +76,17 @@ describe('useClickOutside', () => {
     });
 
     it('should not call onClick', () => {
-      expect(onClickSpy.called).to.be.false;
+      expect(onClickSpy.calledOnceWith(false)).to.be.true;
+    });
+  });
+
+  describe('when other click handler removes click target from DOM', () => {
+    beforeEach(async () => {
+      await useClickOutsideInteractor.clickInsideElement();
+    });
+
+    it('should still give correct results', () => {
+      expect(onClickSpy.calledOnceWith(false)).to.be.true;
     });
   });
 });

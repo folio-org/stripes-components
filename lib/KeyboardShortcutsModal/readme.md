@@ -26,6 +26,38 @@ const commands = [
 )}
 ```
 
+### Display application specific keyboard shortcuts:
+
+To display app specific keyboard shortcuts in the modal, you can make use of the `importShortcuts` and `renameShortcutLabels` utility functions
+
+```import { importShortcuts, renameShortcutLabels } from '@folio/stripes-components'
+
+// To import app specific shortcuts
+
+const appSpecificShortcuts = importShortcuts(['new', 'save', 'openShortcutModal'])
+
+// To rename labels to be displayed in the shortcuts modal
+
+const renamedShortcuts = renameShortcutLabels(appSpecificShortcuts,
+  [
+    {'shortcut': 'new', 'label': 'new resource'},
+    {'shortcut': 'save', 'label': 'save resource'}
+  ]
+);
+
+<KeyboardShortcutsModal
+    onClose={() => { this.changeKeyboardShortcutsModal(false); }}
+    allCommands={renamedShortcuts}
+/>
+```
+## Core shortcuts
+There are a few core shortcuts that get displayed by default in the shortcuts modal and need not be included when specifying the shortcuts at the application level. These include:
+* closeModal
+* Copy
+* Cut
+* Paste
+* Find
+
 ## Props
 Name | Type | Description
 -- | -- | --
