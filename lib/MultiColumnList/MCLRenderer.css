@@ -66,6 +66,10 @@
     }
   }
 
+  &.mclClickableRow:hover {
+    cursor: pointer;
+  }
+
   &.mclWrappedCells {
     flex-wrap: wrap;
   }
