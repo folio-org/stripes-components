@@ -857,6 +857,6 @@
     "shortcut.cut": "剪切",
     "shortcut.paste": "粘贴",
     "shortcut.find": "查找",
-    "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
-    "optimisticLocking.latestVersion": "View latest version"
+    "optimisticLocking.saveError": "无法保存此记录，因为它<strong>不是</strong>最新版本。",
+    "optimisticLocking.latestVersion": "查看最新版本"
 }
