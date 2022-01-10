@@ -858,5 +858,5 @@
     "shortcut.paste": "Colar",
     "shortcut.find": "Buscar",
     "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
-    "optimisticLocking.latestVersion": "View latest version"
+    "optimisticLocking.latestVersion": "Ver a última versão"
 }
