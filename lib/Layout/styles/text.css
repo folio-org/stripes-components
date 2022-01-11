@@ -16,3 +16,11 @@
 .textRight {
   text-align: right;
 }
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
