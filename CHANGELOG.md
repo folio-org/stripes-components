@@ -18,6 +18,7 @@
 * Add a new `valueFormatter` prop to `<MultiSelection>`. Refs STCOM-911.
 * remove `@bigtest/mocha` dependency - using `mocha` instead. Refs STCOM-907.
 * Do not pass `aria-invalid` to any `<button>` elements. Refs STCOM-915.
+* PrevNext buttons return incorrect index. Fixes STCOM-909.
 * Add new `text-start`, `text-end` classNames to `<Layout>` component. Refs STCOM-898.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
