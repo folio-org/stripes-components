@@ -25,7 +25,7 @@
 
 /* Row is interactive (clickable, hoverable and focusable etc.) */
 .mclIsInteractive {
-  composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
+  composes: interactionStyles noPointer hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
 }
 
 .mclRowFormatterContainer {
@@ -64,6 +64,18 @@
     &::after {
       background-color: #fff;
     }
+
+    & a{
+      color: var(--color-link-current);
+    }
+
+    & a:visited {
+      color: var(--color-link-visited-current);
+    }
+  }
+
+  &.mclClickableRow:hover {
+    cursor: pointer;
   }
 
   &.mclWrappedCells {
