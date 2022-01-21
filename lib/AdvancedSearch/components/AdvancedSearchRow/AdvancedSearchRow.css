@@ -1,6 +1,8 @@
 @import '../../../variables.css';
 
-.AdvancedSearchRow {}
+.AdvancedSearchRow {
+  display: block;
+}
 
 .searchInLabelCol {
   max-width: 20px;
