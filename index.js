@@ -106,6 +106,11 @@ export { default as ErrorModal } from './lib/ErrorModal';
 export { default as InfoPopover } from './lib/InfoPopover';
 export { default as SearchField } from './lib/SearchField';
 export { default as ConflictDetectionBanner } from './lib/ConflictDetectionBanner';
+export {
+  AdvancedSearch,
+  defaultQueryBuilder as defaultAdvancedSearchQueryBuilder,
+  BOOLEAN_OPERATORS as ADVANCED_SEARCH_BOOLEAN_OPERATORS,
+} from './lib/AdvancedSearch';
 
 /* specific use */
 export {
