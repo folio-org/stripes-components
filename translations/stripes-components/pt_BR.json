@@ -858,5 +858,19 @@
     "shortcut.paste": "Colar",
     "shortcut.find": "Buscar",
     "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
-    "optimisticLocking.latestVersion": "Ver a última versão"
+    "optimisticLocking.latestVersion": "Ver a última versão",
+    "advancedSearch.title": "Advanced search",
+    "advancedSearch.button": "Advanced search",
+    "advancedSearch.searchFor": "Search for",
+    "advancedSearch.searchIn": "in",
+    "advancedSearch.boolean.and": "AND",
+    "advancedSearch.boolean.or": "OR",
+    "advancedSearch.boolean.not": "NOT",
+    "advancedSearch.footer.search": "Search",
+    "advancedSearch.footer.cancel": "Cancel",
+    "advancedSearch.boolean.label": "Operator",
+    "advancedSearch.field.label": "Search for",
+    "advancedSearch.searchOptions.label": "Search options",
+    "advancedSearch.searchOptions.query": "Query",
+    "advancedSearch.emptyFirstRowError": "Enter a query in the first search box"
 }
