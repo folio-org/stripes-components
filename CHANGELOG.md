@@ -21,6 +21,7 @@
 * PrevNext buttons return incorrect index. Fixes STCOM-909.
 * Add new `text-start`, `text-end` classNames to `<Layout>` component. Refs STCOM-898.
 * Add `<AdvancedSearch>` component. Refs STCOM-919.
+* Strange arrow appears in select (multiple=true) boxes over scrollbar. Refs STCOM-925.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
