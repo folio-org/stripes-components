@@ -61,6 +61,13 @@ export {
   expandAllFunction
 } from './lib/Accordion';
 
+export {
+  Tabs,
+  Tab,
+  TabList,
+  TabPanel
+} from './lib/Tabs';
+
 /* misc */
 export { default as Icon } from './lib/Icon';
 export { default as IconButton } from './lib/IconButton';
