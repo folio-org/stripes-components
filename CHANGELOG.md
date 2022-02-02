@@ -1,4 +1,4 @@
-# Change history for stripes-components
+2# Change history for stripes-components
 
 ## In-progress
 * Export utilities for apps to display keyboard shortcuts in a modal.Refs STCOM-865.
@@ -21,6 +21,7 @@
 * PrevNext buttons return incorrect index. Fixes STCOM-909.
 * Add new `text-start`, `text-end` classNames to `<Layout>` component. Refs STCOM-898.
 * Add `<AdvancedSearch>` component. Refs STCOM-919.
+* Add onMount prop to the Pane component. Refs STCOM-928
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
