@@ -121,6 +121,10 @@
   font-size: var(--font-size-medium);
   color: var(--color-text);
 
+  &:focus-within {
+    box-shadow: inner 0 5px 0 0 var(--color-fill-focus);
+  }
+
   &.mclClickable {
     cursor: pointer;
   }
