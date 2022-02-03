@@ -1,4 +1,16 @@
 :root {
+  /**
+   * Main navigation
+   */
+  --main-nav-min-height-desktop: 56px;
+  --main-nav-min-height-mobile: 48px;
+  --main-nav-border-bottom-color: rgba(0, 0, 0, 0.9);
+  --main-nav-background-color: rgba(0, 0, 0, 0.8);
+  --main-nav-text-color: #fff;
+
+  /**
+   * General stripes-components
+   */
   --color-text: #000;
   --color-text-p2: rgba(0, 0, 0, 0.62);
   --color-border-form: rgba(0, 0, 0, 0.42);
