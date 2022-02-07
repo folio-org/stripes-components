@@ -1,7 +1,13 @@
-@import "../variables";
-@import "./styles/padding";
-@import "./styles/margin";
-@import "./styles/flexbox";
-@import "./styles/width";
-@import "./styles/text";
-@import "./styles/float";
+/* Layout.css */
+
+@import "../variables.css";
+@import "./styles/padding.css";
+@import "./styles/margin.css";
+@import "./styles/flexbox.css";
+@import "./styles/width.css";
+@import "./styles/text.css";
+@import "./styles/float.css";
+
+.someTestClass {
+  border-bottom: 1px solid var(--primary);
+}
