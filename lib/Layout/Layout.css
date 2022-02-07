@@ -7,7 +7,3 @@
 @import "./styles/width.css";
 @import "./styles/text.css";
 @import "./styles/float.css";
-
-.someTestClass {
-  border-bottom: 1px solid var(--primary);
-}
