@@ -1,5 +1,7 @@
 # Change history for stripes-components
 
+## 10.2.0 IN PROGRESS
+
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
 
