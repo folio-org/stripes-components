@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## In-progress
+## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
+
 * Export utilities for apps to display keyboard shortcuts in a modal.Refs STCOM-865.
 * upgraded popover tests to use new interactors. part of STCOM-880.
 * removing skipped tests for TextField, Radiobutton, Select. Fixes STCOM-880.
