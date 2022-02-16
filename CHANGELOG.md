@@ -1,7 +1,8 @@
 # Change history for stripes-components
 
 ## In-progress
-* prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
+* Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
+* Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
