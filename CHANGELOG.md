@@ -6,6 +6,7 @@
 * Export to CSV not handling diacritics. Fixes STCOM-951.
 * Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
 * Improve splitting search query into rows in <AdvancedSearch>. Fixes STCOM-955.
+* prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
