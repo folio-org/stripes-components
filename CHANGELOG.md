@@ -2,7 +2,7 @@
 
 ## In-progress
 * prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931.
-* resize panes that use percentage-based layout widths. fixes STCOM-927.
+* include percentage-based layout widths in proportional resizing. fixes STCOM-927.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
