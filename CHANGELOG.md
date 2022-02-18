@@ -1,10 +1,13 @@
 # Change history for stripes-components
 
+## 10.1.3 IN PROGRESS
+
+* Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
+
 ## [10.1.2](https://github.com/folio-org/stripes-components/tree/v10.1.2) (2022-03-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.1...v10.1.2)
 
 * Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931.
-* Include percentage-based layout widths in proportional resizing. fixes STCOM-927.
 
 ## [10.1.1](https://github.com/folio-org/stripes-components/tree/v10.1.1) (2022-03-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.1.1)
