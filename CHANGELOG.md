@@ -1,12 +1,16 @@
 # Change history for stripes-components
 
+## 10.1.2 In-progress
+
+* Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931.
+* Include percentage-based layout widths in proportional resizing. fixes STCOM-927.
+
 ## [10.1.1](https://github.com/folio-org/stripes-components/tree/v10.1.1) (2022-03-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.1.1)
 
 * Export to CSV not handling diacritics. Fixes STCOM-951.
 * Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
-* Improve splitting search query into rows in <AdvancedSearch>. Fixes STCOM-955.
-* prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
+* Improve splitting search query into rows in `<AdvancedSearch>`. Fixes STCOM-955.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
