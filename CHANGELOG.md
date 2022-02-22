@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## In-progress
+## 10.2.0 IN PROGRESS
 
 * Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
 * Include percentage-based layout widths in proportional resizing. fixes STCOM-927.
