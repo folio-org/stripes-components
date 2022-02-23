@@ -79,8 +79,7 @@
 }
 
 div[class*="Selected"] {
-
-  & .root {
+  &.root {
     color: var(--link-color-current);
 
     /* Visited */
