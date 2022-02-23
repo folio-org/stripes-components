@@ -12,6 +12,7 @@
   --link-color-visited: var(--color-link-visited);
   --link-border-color-focus: #3b5f9a;
   --link-box-shadow-focus: 0 0 0 3px var(--color-fill-focus);
+  --link-box-shadow-current: 0 0 0 3px var(--color-fill-focus-current);
 }
 
 .root {
@@ -73,6 +74,29 @@
     /* Activates focus outline */
     &:not(:hover)::before {
       display: block;
+    }
+  }
+}
+
+div[class*="Selected"] {
+
+  & .root {
+    color: var(--link-color-current);
+
+    /* Visited */
+    &:visited {
+      color: var(--link-color-visited-current);
+      text-decoration-color: var(--link-color-visited-current);
+    }
+
+    /* Focus */
+    &:focus {
+      /* Activates focus outline */
+      &:not(:hover)::before {
+        display: block;
+        box-shadow: var(--link-box-shadow-current);
+        border: 1px solid var(--link-box-shadow-current);
+      }
     }
   }
 }

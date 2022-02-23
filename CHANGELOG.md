@@ -1,12 +1,36 @@
 # Change history for stripes-components
 
-## In-progress
+## 10.2.0 IN PROGRESS
+
+* Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
+* Include percentage-based layout widths in proportional resizing. fixes STCOM-927.
+* Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
+
+## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
+
 * Export utilities for apps to display keyboard shortcuts in a modal.Refs STCOM-865.
 * upgraded popover tests to use new interactors. part of STCOM-880.
 * removing skipped tests for TextField, Radiobutton, Select. Fixes STCOM-880.
 * Re-fix issue with misaligned dates/weekdays in Datepicker Calendar. Add regression tests for fix. Refs STCOM-849.
 * Add new `textLeft` className to `<Layout>` component. Refs STCOM-897.
 * Check that content inside `<Accordion>` was clicked and set focus flag. Refs STCOM-895.
+* Add an event handler for accordion opening/closing at users' direct request. Refs STCOM-820.
+* Remove default tabIndex from Icon (cause of nested interactive axe errors), treated aria-labelledby appropriately in IconButton. Fixes STCOM-883
+* Make `useClickOutside` click handler work on `capture` event phase. Refs STCOM-895.
+* Interactors should not use dynamic CSS variable names. Refs STCOM-902.
+* Create a Conflict Detection banner. Refs STCOM-889.
+* Scroll MCL to top when a shorter list of content is received. Refs STCOM-907
+* Fix issue with radioButton 'button' not responding to clicks. Fixes STCOM-910.
+* Upgrade `postcss` to v8. Refs STCOM-892.
+* Add a new `valueFormatter` prop to `<MultiSelection>`. Refs STCOM-911.
+* remove `@bigtest/mocha` dependency - using `mocha` instead. Refs STCOM-907.
+* Do not pass `aria-invalid` to any `<button>` elements. Refs STCOM-915.
+* PrevNext buttons return incorrect index. Fixes STCOM-909.
+* Add new `text-start`, `text-end` classNames to `<Layout>` component. Refs STCOM-898.
+* Add `<AdvancedSearch>` component. Refs STCOM-919.
+* Strange arrow appears in select (multiple=true) boxes over scrollbar. Refs STCOM-925.
+* Add onMount prop to the Pane component. Refs STCOM-928
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)

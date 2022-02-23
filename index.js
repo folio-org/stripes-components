@@ -32,7 +32,7 @@ export { default as Popper } from './lib/Popper';
 export { default as Card } from './lib/Card';
 export { default as KeyboardShortcutsModal } from './lib/KeyboardShortcutsModal';
 export { default as KeyValue } from './lib/KeyValue';
-export { default as MultiColumnList } from './lib/MultiColumnList';
+export { default as MultiColumnList, DefaultMCLRowFormatter } from './lib/MultiColumnList';
 export { default as EndOfList } from './lib/MultiColumnList/EndOfList';
 export { default as List } from './lib/List';
 
@@ -105,6 +105,12 @@ export { default as ConfirmationModal } from './lib/ConfirmationModal';
 export { default as ErrorModal } from './lib/ErrorModal';
 export { default as InfoPopover } from './lib/InfoPopover';
 export { default as SearchField } from './lib/SearchField';
+export { default as ConflictDetectionBanner } from './lib/ConflictDetectionBanner';
+export {
+  AdvancedSearch,
+  defaultQueryBuilder as defaultAdvancedSearchQueryBuilder,
+  BOOLEAN_OPERATORS as ADVANCED_SEARCH_BOOLEAN_OPERATORS,
+} from './lib/AdvancedSearch';
 
 /* specific use */
 export {
@@ -149,6 +155,8 @@ export {
   languageOptions,
   default as languages,
 } from './util/languages';
+
+export { default as nativeChangeFieldValue } from './util/nativeChangeFieldValue';
 
 /* hooks */
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';

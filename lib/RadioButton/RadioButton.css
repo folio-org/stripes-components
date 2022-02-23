@@ -35,6 +35,8 @@
   font-size: var(--font-size-form-label);
   margin-bottom: 0;
   min-height: var(--control-min-size-desktop);
+  left: -1rem;
+  padding-left: 1rem;
 
   &.error {
     color: var(--error);
@@ -45,18 +47,27 @@
   }
 }
 
+[dir=rtl] .radioLabel {
+  right: -1rem;
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
 .labelInputContainer {
   composes: interactionStyles boxOffsetStartSmall boxOffsetEndSmall from "../sharedStyles/interactionStyles.css";
-
   display: flex;
   align-items: center;
+
+  &.noInteractionLabel {
+    width: 1rem;
+  }
 }
 
 .radioFocused {
   composes: isFocused from "../sharedStyles/interactionStyles.css";
 }
 
-.labelPseudo {
+.pseudoButton {
   display: flex;
   position: relative;
   width: var(--radio-button-size);
@@ -66,10 +77,9 @@
   background: #fff;
   flex-shrink: 0;
   top: 1px;
-  pointer-events: none;
 }
 
-.labelPseudo::after {
+.pseudoButton::after {
   content: '';
   width: 6px;
   height: 6px;
@@ -89,8 +99,8 @@
     cursor: default;
   }
 
-  & .labelPseudo,
-  & .input:checked + .labelPseudo {
+  & .pseudoButton,
+  & .inputHidden:checked + .pseudoButton {
     background-color: var(--checkable-disabled-fill);
     border-color: var(--checkable-disabled-fill);
 
@@ -110,7 +120,7 @@
     align-items: center;
   }
 
-  & .labelPseudo {
+  & .pseudoButton {
     top: 0;
   }
 
@@ -124,19 +134,19 @@
   margin-left: 0;
 }
 
-.input {
+.inputHidden {
   position: absolute;
   z-index: -1;
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.input:not(:checked) + .labelPseudo::after {
+.inputHidden:not(:checked) + .pseudoButton::after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-.input:checked + .labelPseudo {
+.inputHidden:checked + .pseudoButton {
   background-color: #fff;
 
   &::after {
@@ -159,7 +169,7 @@
     color: var(--warn);
   }
 
-  & .labelPseudo {
+  & .pseudoButton {
     border-color: var(--warn);
   }
 }
@@ -169,7 +179,7 @@
     color: var(--error);
   }
 
-  & .labelPseudo {
+  & .pseudoButton {
     border-color: var(--error);
   }
 }

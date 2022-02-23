@@ -156,6 +156,10 @@
 
 .interactionStyles:hover {
   cursor: pointer;
+
+  &.noPointer {
+    cursor: default;
+  }
 }
 
 /**
