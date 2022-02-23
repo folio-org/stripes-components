@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { computed } from '@bigtest/interactor';
-import axe from 'axe-core';
-import { expect } from 'chai';
 import Harness from './Harness';
-
-
 
 import '../lib/global.css';
 import { getNextFocusable, getPreviousFocusable } from '../util/getFocusableElements';
-
 
 function getCleanTestingRoot() {
   let $root = document.getElementById('root');
@@ -81,36 +76,4 @@ export function focusPrevious(current) {
   } else if (elem !== document.body) {
     elem.focus();
   }
-}
-
-
-const config = {
-  rules: {
-    'color-contrast': { enabled: false },
-    'link-in-text-block': { enabled: false }
-  }
-};
-
-
-
-// axe testing utility
-// usage:
-// it('has no axe errors', runAxeTest);
-
-function axeTest() {
-  return new Promise((resolve) => {
-    const rootNode = document.getElementById('root');
-    axe.run(rootNode, config, (err, { violations }) => {
-      resolve(err, violations);
-    });
-  });
-}
-
-function axeResolve(err, violations) {
-  expect(err).toBe(null);
-  expect(violations).toHaveLength(0);
-}
-
-export function runAxeTest() {
-  axeTest(axeResolve);
 }
