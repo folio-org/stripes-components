@@ -5,6 +5,8 @@
 * Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
 * Include percentage-based layout widths in proportional resizing. fixes STCOM-927.
 * Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
+* AccordionSet has incorrect aria attribute. Refs STCOM-937.
+* NoValue component doesn't have role. Refs STCOM-936.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
