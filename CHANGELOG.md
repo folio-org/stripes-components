@@ -7,6 +7,7 @@
 * Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
 * AccordionSet has incorrect aria attribute. Refs STCOM-937.
 * NoValue component doesn't have role. Refs STCOM-936.
+* Correctly apply `aria-haspopup` and `aria-expanded` to IconButton. Refs STCOM 941.
 * Open Loans List: Elements must only use allowed ARIA attributes. Refs STCOM-948.
 * Appropriately apply labels within `<AutoSuggest>` component. Refs STCOM-939.
 
