@@ -7,6 +7,8 @@
 * Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
 * AccordionSet has incorrect aria attribute. Refs STCOM-937.
 * NoValue component doesn't have role. Refs STCOM-936.
+* Open Loans List: Elements must only use allowed ARIA attributes. Refs STCOM-948.
+* Appropriately apply labels within `<AutoSuggest>` component. Refs STCOM-939.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
