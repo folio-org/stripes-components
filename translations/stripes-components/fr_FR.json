@@ -867,7 +867,7 @@
     "advancedSearch.boolean.or": "OR",
     "advancedSearch.boolean.not": "NOT",
     "advancedSearch.footer.search": "Search",
-    "advancedSearch.footer.cancel": "Cancel",
+    "advancedSearch.footer.cancel": "Annuler",
     "advancedSearch.boolean.label": "Operator",
     "advancedSearch.field.label": "Search for",
     "advancedSearch.searchOptions.label": "Search options",
