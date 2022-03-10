@@ -11,6 +11,7 @@
 * Open Loans List: Elements must only use allowed ARIA attributes. Refs STCOM-948.
 * Appropriately apply labels within `<AutoSuggest>` component. Refs STCOM-939.
 * Correct Arabic and Japanese `font-family` typos. Refs STCOM-950.
+* Provide `<NoValue>` interactor. Refs STCOM-949.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
