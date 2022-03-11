@@ -10,6 +10,9 @@
 * Correctly apply `aria-haspopup` and `aria-expanded` to IconButton. Refs STCOM 941.
 * Open Loans List: Elements must only use allowed ARIA attributes. Refs STCOM-948.
 * Appropriately apply labels within `<AutoSuggest>` component. Refs STCOM-939.
+* Correct Arabic and Japanese `font-family` typos. Refs STCOM-950.
+* Provide `<NoValue>` interactor. Refs STCOM-949.
+* Correctly label focus-trap control in `<Timepicker>`. Refs STCOM-945.
 * Add rendered text to the control of `<Selection>`. Refs STCOM-942.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
