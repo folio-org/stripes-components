@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 10.1.1 IN PROGRESS
+
+* Export to CSV not handling diacritics. Fixes STCOM-951.
+
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
 
