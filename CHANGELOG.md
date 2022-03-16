@@ -14,6 +14,7 @@
 * Provide `<NoValue>` interactor. Refs STCOM-949.
 * Export to CSV not handling diacritics. Fixes STCOM-951.
 * Correctly label focus-trap control in `<Timepicker>`. Refs STCOM-945.
+* Avoid `setState` calls in unmounted components. Refs STCOM-952.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
