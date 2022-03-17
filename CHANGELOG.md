@@ -12,6 +12,9 @@
 * Appropriately apply labels within `<AutoSuggest>` component. Refs STCOM-939.
 * Correct Arabic and Japanese `font-family` typos. Refs STCOM-950.
 * Provide `<NoValue>` interactor. Refs STCOM-949.
+* Export to CSV not handling diacritics. Fixes STCOM-951.
+* Correctly label focus-trap control in `<Timepicker>`. Refs STCOM-945.
+* Avoid `setState` calls in unmounted components. Refs STCOM-952.
 * Break long words in headings based on zooming 200%. Refs STCOM-835.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
