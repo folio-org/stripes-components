@@ -1,12 +1,11 @@
-
 import {
   useCallback,
   useState,
   useMemo,
   useEffect,
 } from 'react';
-
 import { useIntl } from 'react-intl';
+
 import splitQueryRows from '../../lib/AdvancedSearch/utilities/splitQueryRows';
 import filterFilledRows from '../../lib/AdvancedSearch/utilities/filterFilledRows';
 import {
@@ -106,3 +105,4 @@ const useAdvancedSearch = ({
 };
 
 export default useAdvancedSearch;
+
