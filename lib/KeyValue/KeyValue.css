@@ -7,6 +7,7 @@
   margin-bottom: 0.25rem;
   color: var(--color-text);
   line-height: var(--line-height);
+  overflow-wrap: break-word;
 }
 
 .kvRoot {
