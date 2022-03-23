@@ -17,6 +17,7 @@
 * Add rendered text to the control of `<Selection>`. Refs STCOM-942.
 * Avoid `setState` calls in unmounted components. Refs STCOM-952.
 * Break long words in headings based on zooming 200%. Refs STCOM-835.
+* Improve splitting search query into rows in <AdvancedSearch>. Fixes STCOM-955.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
