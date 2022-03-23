@@ -14,6 +14,7 @@
 * Provide `<NoValue>` interactor. Refs STCOM-949.
 * Export to CSV not handling diacritics. Fixes STCOM-951.
 * Correctly label focus-trap control in `<Timepicker>`. Refs STCOM-945.
+* Add rendered text to the control of `<Selection>`. Refs STCOM-942.
 * Avoid `setState` calls in unmounted components. Refs STCOM-952.
 * Break long words in headings based on zooming 200%. Refs STCOM-835.
 * Improve splitting search query into rows in <AdvancedSearch>. Fixes STCOM-955.
