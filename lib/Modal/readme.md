@@ -34,4 +34,5 @@ Name | type | description | default | required
 `open` | bool | Deciding value for rendering the modal(true) or not(false). | false | &#10004;
 `restoreFocus` | bool | If true, the modal will restore focus to previously focused element once modal is hidden. | true |
 `scope` | string | Parent element for modal. Defaults to 'module' which keeps the main navigation visible. A value of 'root' covers the entire view. | 'module' |
+`size` | string | `small` `medium` or `large` - sets the max-width of the window to `550px`, `750px`, `1100px`, respectively | 'medium' | 
 `wrappingElement` | string | Change the HTML-tag of the wrapping element. Useful if the modal is a form. | |

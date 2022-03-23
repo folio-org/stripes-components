@@ -1,0 +1,13 @@
+@import '../../../variables.css';
+
+.AdvancedSearchRow {
+  display: block;
+}
+
+.searchInLabelCol {
+  max-width: 20px;
+}
+
+.emptyRowErrorMessage {
+  color: var(--error);
+}
