@@ -3,6 +3,7 @@
 ## 10.1.3 IN PROGRESS
 
 * Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
+* Fix cropping of nested panesets. Fixes STCOM-953
 
 ## [10.1.2](https://github.com/folio-org/stripes-components/tree/v10.1.2) (2022-03-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.1...v10.1.2)
