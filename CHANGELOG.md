@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 10.1.1 IN PROGRESS
+## [10.1.1](https://github.com/folio-org/stripes-components/tree/v10.1.1) (2022-03-24)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.1.1)
 
 * Export to CSV not handling diacritics. Fixes STCOM-951.
 * Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
