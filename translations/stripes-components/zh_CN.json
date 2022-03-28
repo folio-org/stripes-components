@@ -872,5 +872,11 @@
     "advancedSearch.field.label": "搜索",
     "advancedSearch.searchOptions.label": "搜索选项",
     "advancedSearch.searchOptions.query": "查询",
-    "advancedSearch.emptyFirstRowError": "在第一个搜索框中输入查询"
+    "advancedSearch.emptyFirstRowError": "在第一个搜索框中输入查询",
+    "Timepicker.hoursLabel": "Hours",
+    "Timepicker.minutesLabel": "Minutes",
+    "Timepicker.PeriodLabel": "AM or PM",
+    "Timepicker.SetTimeLabel": "Set time",
+    "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
+    "Timepicker.LeaveDialog": "leave dialog"
 }
