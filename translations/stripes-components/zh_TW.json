@@ -872,5 +872,11 @@
     "advancedSearch.field.label": "Search for",
     "advancedSearch.searchOptions.label": "搜尋選項",
     "advancedSearch.searchOptions.query": "查詢",
-    "advancedSearch.emptyFirstRowError": "在第一個搜尋框輸入查詢名稱"
+    "advancedSearch.emptyFirstRowError": "在第一個搜尋框輸入查詢名稱",
+    "Timepicker.hoursLabel": "Hours",
+    "Timepicker.minutesLabel": "Minutes",
+    "Timepicker.PeriodLabel": "AM or PM",
+    "Timepicker.SetTimeLabel": "Set time",
+    "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
+    "Timepicker.LeaveDialog": "leave dialog"
 }
