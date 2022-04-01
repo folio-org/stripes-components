@@ -14,8 +14,12 @@
 * Provide `<NoValue>` interactor. Refs STCOM-949.
 * Export to CSV not handling diacritics. Fixes STCOM-951.
 * Correctly label focus-trap control in `<Timepicker>`. Refs STCOM-945.
+* Add rendered text to the control of `<Selection>`. Refs STCOM-942.
 * Avoid `setState` calls in unmounted components. Refs STCOM-952.
 * Break long words in headings based on zooming 200%. Refs STCOM-835.
+* Improve splitting search query into rows in <AdvancedSearch>. Fixes STCOM-955.
+* Fix cropping of nested panesets. Fixes STCOM-953.
+* Lock-off `postcss-custom-properties` to 12.1.4. Fixes STCOM-956.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
