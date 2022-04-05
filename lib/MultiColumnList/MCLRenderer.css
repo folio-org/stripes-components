@@ -117,7 +117,7 @@
   flex-shrink: 0;
   flex-grow: 0;
   padding: var(--gutter-static-two-thirds) var(--gutter-static-two-thirds) var(--gutter-static-one-third) var(--gutter-static-two-thirds);
-  word-break: break-all;
+  overflow-wrap: break-word;
   font-weight: var(--text-weight-bold);
   font-size: var(--font-size-medium);
   color: var(--color-text);
