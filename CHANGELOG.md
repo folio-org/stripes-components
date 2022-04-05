@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 10.1.3 IN PROGRESS
+## [10.1.3](https://github.com/folio-org/stripes-components/tree/v10.1.4) (2022-04-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.2...v10.1.3)
 
 * Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
 * Fix cropping of nested panesets. Fixes STCOM-953
