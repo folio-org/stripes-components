@@ -96,7 +96,8 @@
     "storybook-readme": "^5.0.9",
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-junit-formatter": "^0.2.1"
+    "stylelint-junit-formatter": "^0.2.1",
+    "webpack": "~5.68.0"
   },
   "dependencies": {
     "@folio/stripes-react-hotkeys": "^3.0.5",
