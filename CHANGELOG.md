@@ -20,6 +20,7 @@
 * Improve splitting search query into rows in <AdvancedSearch>. Fixes STCOM-955.
 * Fix cropping of nested panesets. Fixes STCOM-953.
 * Lock-off `postcss-custom-properties` to 12.1.4. Fixes STCOM-956.
+* Fix Accessibility problems for "MultiSelection" component. STCOM-967.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
