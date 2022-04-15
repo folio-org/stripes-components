@@ -1,6 +1,6 @@
 # NumberField
 
-Input field for parsing strings into numbers according to the current locale.
+Input field for parsing numeric strings in any locale ("1,234.56", "1.234,56") into JS numbers (1234.56), i.e. `atof`.
 
 ## Basic Usage
 ```js
@@ -18,4 +18,4 @@ import { NumberField } from '@folio/stripes/components';
 
 ## Summary
 
-Detail: In Javascript the comma `,` is used for grouping, the decimal `.` for separating whole and decimal portion of floating point numbers, and the numerals consist of 0-9. These values are the same in the `en-US` locale but are not shared by all locales, e.g. `de-DE` which uses `.` for grouping and `,` for decimal, and others may not use Arabic numerals. This component allows users to enter numberic values in their tenant's format and have them be correctly parsed into numeric values.
+Detail: Convert a numeric string in any local to a JS float, i.e. `atof` for all you C programmers. In a Javascript number, the comma `,` is used for grouping, the decimal `.` for separating they whole and decimal portion of floating point numbers, and the numerals consist of 0-9. These values are the same in the `en-US` locale but are not shared by all locales, e.g. `de-DE` which uses `.` for grouping and `,` for decimal; of course, other locales may not use Arabic numerals. This component allows users to enter numeric strings in the format expected by their current locale and have them be correctly parsed into actual JS numbers.
