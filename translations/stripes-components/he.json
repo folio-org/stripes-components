@@ -872,5 +872,12 @@
     "advancedSearch.field.label": "Search for",
     "advancedSearch.searchOptions.label": "Search options",
     "advancedSearch.searchOptions.query": "Query",
-    "advancedSearch.emptyFirstRowError": "Enter a query in the first search box"
+    "advancedSearch.emptyFirstRowError": "Enter a query in the first search box",
+    "Timepicker.hoursLabel": "Hours",
+    "Timepicker.minutesLabel": "דקות",
+    "Timepicker.PeriodLabel": "AM או PM",
+    "Timepicker.SetTimeLabel": "Set time",
+    "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
+    "Timepicker.LeaveDialog": "leave dialog",
+    "selection.controlLabel": "Select control"
 }

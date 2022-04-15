@@ -872,5 +872,12 @@
     "advancedSearch.field.label": "بحث عن",
     "advancedSearch.searchOptions.label": "خيارات البحث",
     "advancedSearch.searchOptions.query": "استعلام",
-    "advancedSearch.emptyFirstRowError": "قم بإدخال استعلام في مربع البحث الأول"
+    "advancedSearch.emptyFirstRowError": "قم بإدخال استعلام في مربع البحث الأول",
+    "Timepicker.hoursLabel": "ساعات",
+    "Timepicker.minutesLabel": "دقائق",
+    "Timepicker.PeriodLabel": "صباحاً أم مساءً",
+    "Timepicker.SetTimeLabel": "ضبط الوقت",
+    "Timepicker.ScreenReaderLabel": "تنسيق {label} هو {screenReaderFormat} استخدم السهم لأسفل لإدخال مربع حوار محدد الوقت. {screenReaderMessage}",
+    "Timepicker.LeaveDialog": "اترك مربع الحوار",
+    "selection.controlLabel": "تحديد التحكم"
 }

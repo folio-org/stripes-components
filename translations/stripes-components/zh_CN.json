@@ -872,5 +872,12 @@
     "advancedSearch.field.label": "搜索",
     "advancedSearch.searchOptions.label": "搜索选项",
     "advancedSearch.searchOptions.query": "查询",
-    "advancedSearch.emptyFirstRowError": "在第一个搜索框中输入查询"
+    "advancedSearch.emptyFirstRowError": "在第一个搜索框中输入查询",
+    "Timepicker.hoursLabel": "小时",
+    "Timepicker.minutesLabel": "分钟",
+    "Timepicker.PeriodLabel": "上午或下午",
+    "Timepicker.SetTimeLabel": "设置时间",
+    "Timepicker.ScreenReaderLabel": "{label}格式为{screenReaderFormat}使用向下箭头进入时间选择器对话框。 {screenReaderMessage}",
+    "Timepicker.LeaveDialog": "离开对话框",
+    "selection.controlLabel": "选择控制"
 }

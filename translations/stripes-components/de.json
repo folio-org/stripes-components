@@ -872,5 +872,12 @@
     "advancedSearch.field.label": "Suche nach",
     "advancedSearch.searchOptions.label": "Suchoptionen",
     "advancedSearch.searchOptions.query": "Suchanfrage",
-    "advancedSearch.emptyFirstRowError": "Suchanfrage in das erste Suchfeld eingeben"
+    "advancedSearch.emptyFirstRowError": "Suchanfrage in das erste Suchfeld eingeben",
+    "Timepicker.hoursLabel": "Hours",
+    "Timepicker.minutesLabel": "Minutes",
+    "Timepicker.PeriodLabel": "AM or PM",
+    "Timepicker.SetTimeLabel": "Set time",
+    "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
+    "Timepicker.LeaveDialog": "leave dialog",
+    "selection.controlLabel": "Select control"
 }

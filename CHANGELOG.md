@@ -7,6 +7,20 @@
 * Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
 * AccordionSet has incorrect aria attribute. Refs STCOM-937.
 * NoValue component doesn't have role. Refs STCOM-936.
+* Correctly apply `aria-haspopup` and `aria-expanded` to IconButton. Refs STCOM 941.
+* Open Loans List: Elements must only use allowed ARIA attributes. Refs STCOM-948.
+* Appropriately apply labels within `<AutoSuggest>` component. Refs STCOM-939.
+* Correct Arabic and Japanese `font-family` typos. Refs STCOM-950.
+* Provide `<NoValue>` interactor. Refs STCOM-949.
+* Export to CSV not handling diacritics. Fixes STCOM-951.
+* Correctly label focus-trap control in `<Timepicker>`. Refs STCOM-945.
+* Add rendered text to the control of `<Selection>`. Refs STCOM-942.
+* Avoid `setState` calls in unmounted components. Refs STCOM-952.
+* Break long words in headings based on zooming 200%. Refs STCOM-835.
+* Improve splitting search query into rows in <AdvancedSearch>. Fixes STCOM-955.
+* Fix cropping of nested panesets. Fixes STCOM-953.
+* Lock-off `postcss-custom-properties` to 12.1.4. Fixes STCOM-956.
+* eHoldings app: Package Detail Record> Usage & analysis accordion > Apply pagination to Titles list. Refs STCOM-966.
 * Provide `NumberField` component. Refs STCOM-944.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
@@ -34,6 +48,7 @@
 * Add `<AdvancedSearch>` component. Refs STCOM-919.
 * Strange arrow appears in select (multiple=true) boxes over scrollbar. Refs STCOM-925.
 * Add onMount prop to the Pane component. Refs STCOM-928
+* Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
