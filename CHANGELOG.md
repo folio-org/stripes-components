@@ -21,6 +21,7 @@
 * Fix cropping of nested panesets. Fixes STCOM-953.
 * Lock-off `postcss-custom-properties` to 12.1.4. Fixes STCOM-956.
 * eHoldings app: Package Detail Record> Usage & analysis accordion > Apply pagination to Titles list. Refs STCOM-966.
+* Fix Accessibility problems for "MultiSelection" component. STCOM-967.
 * Add `marginBottom0` prop to `<Timepicker>`. Refs STCOM-968
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
