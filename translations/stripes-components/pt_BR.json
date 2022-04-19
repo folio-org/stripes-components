@@ -878,5 +878,6 @@
     "Timepicker.PeriodLabel": "AM ou PM",
     "Timepicker.SetTimeLabel": "Definir horário",
     "Timepicker.ScreenReaderLabel": "O formato {label} é {screenReaderFormat} use a seta para baixo para entrar na caixa de diálogo de seleção de horário. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "sair do diálogo"
+    "Timepicker.LeaveDialog": "sair do diálogo",
+    "selection.controlLabel": "Selecione o controle"
 }
