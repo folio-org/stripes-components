@@ -50,6 +50,7 @@
 * Strange arrow appears in select (multiple=true) boxes over scrollbar. Refs STCOM-925.
 * Add onMount prop to the Pane component. Refs STCOM-928
 * Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
+* Add `usePortal` prop to `<Timepicker>`. Refs STCOM-969.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
