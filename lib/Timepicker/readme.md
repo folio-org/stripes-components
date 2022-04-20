@@ -21,6 +21,7 @@ Name | type | description | default | required
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `timeZone` | string | Overrides the time zone provided by context. (Use `'UTC'` to force interpretation as an absolute time of day) | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
+`marginBottom0` | bool | Remove the bottom margin | false | false
 
 ## Working with Times
 
