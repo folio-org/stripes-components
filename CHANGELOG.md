@@ -22,6 +22,7 @@
 * Lock-off `postcss-custom-properties` to 12.1.4. Fixes STCOM-956.
 * eHoldings app: Package Detail Record> Usage & analysis accordion > Apply pagination to Titles list. Refs STCOM-966.
 * Fix Accessibility problems for "MultiSelection" component. STCOM-967.
+* Add `marginBottom0` prop to `<Timepicker>`. Refs STCOM-968
 * Update `autoprefixer` to maintain compat with `postcss`. Refs STCOM-963.
 * Fix prop types of `<IconButton>`. Fixes STCOM-972.
 
@@ -51,6 +52,7 @@
 * Strange arrow appears in select (multiple=true) boxes over scrollbar. Refs STCOM-925.
 * Add onMount prop to the Pane component. Refs STCOM-928
 * Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
+* Add `usePortal` prop to `<Timepicker>`. Refs STCOM-969.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)
