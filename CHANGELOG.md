@@ -25,6 +25,7 @@
 * Add `marginBottom0` prop to `<Timepicker>`. Refs STCOM-968
 * Update `autoprefixer` to maintain compat with `postcss`. Refs STCOM-963.
 * Fix prop types of `<IconButton>`. Fixes STCOM-972.
+* Add Cancel icon. Refs STCOM-976.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
