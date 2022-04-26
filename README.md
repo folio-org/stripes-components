@@ -71,6 +71,7 @@ Component | doc | categories
 [`<IconButton>`](lib/IconButton) | [doc](lib/IconButton/readme.md) | control
 [`<InfoPopover>`](lib/InfoPopover) | [doc](lib/InfoPopover/readme.md) | control, prefab
 [`<KeyValue>`](lib/KeyValue) | [doc](lib/KeyValue/readme.md) | data-display
+[`<Label>`](lib/Label) | [doc](lib/Label/readme.md) | control
 [`<Layer>`](lib/Layer) | [doc](lib/Layer/readme.md) | structure
 [`<Layout>`](lib/Layout) | | structure
 [`<LayoutBox>`](lib/LayoutBox) | | structure
