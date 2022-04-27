@@ -25,7 +25,7 @@
   }
 
   & option {
-    background-color: white;
+    background-color: var(--bg);
   }
 }
 
