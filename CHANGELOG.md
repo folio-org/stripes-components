@@ -28,6 +28,7 @@
 * Add Cancel icon. Refs STCOM-976.
 * Export `<Calendar>` component as standalone. Refs STCOM-850
 * Export all exports from `<FilterGroups>`. Refs STCOM-980.
+* Add background-color to <Select> options for FF UA styles. Fixes STCOM-974.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
