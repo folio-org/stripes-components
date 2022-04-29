@@ -1,6 +1,8 @@
 # Icon
 Component for rendering a variety of FOLIO icons.
 
+To see icons you can use, check out our [available icons list](https://folio-org.github.io/stripes-components/?path=/story/icon--available-icons)
+
 ## Basic Usage
 ```js
 import { Icon } from '@folio/stripes/components';

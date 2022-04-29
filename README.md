@@ -22,6 +22,11 @@ Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 
 This is a library of React components and utility functions for use with [the Stripes UI toolkit](https://github.com/folio-org/stripes-core/), part of [the FOLIO project](https://www.folio.org/).
 
+## Storybook
+
+A listing of our components with demonstrations and example usage can be found here:
+https://folio-org.github.io/stripes-components
+
 ## Component categories
 
 These are general descriptive categories that indicate the type of use cases that components serve. A component can have multiple categories associated with it.
