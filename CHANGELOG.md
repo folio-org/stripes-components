@@ -29,6 +29,7 @@
 * Export `<Calendar>` component as standalone. Refs STCOM-850
 * Export all exports from `<FilterGroups>`. Refs STCOM-980.
 * Add background-color to <Select> options for FF UA styles. Fixes STCOM-974.
+* Set Monday as first day of the week for `es-419`. Refs STCOM-985.
 * The schedule time does not accept PM value. Fixes STCOM-986.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
