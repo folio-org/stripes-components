@@ -21,6 +21,9 @@ import { Icon } from '@folio/stripes/components';
 </Icon>
 ```
 
+## Icons
+The set of available icons is in [the `icons` directory](icons). [`list-of-icons.html`](list-of-icons.html) contains a primitive visual index of the icons; after adding or deleting an icon, it can be regenerated using [`regenerate-list-of-icons.sh`](regenerate-list-of-icons.sh).
+
 ## Custom icon
 It is possbile to render custom icons by passing a function that returns a `<svg>`.
 
