@@ -15,11 +15,13 @@ Name | type | description | default | required
 `value` | string | Sets the value for the control. **Not necessary if using redux-form.** | |
 `onChange` | function | Callback function that will receive the control's current value and the onChange event object. `fn(e, value)` **Not necessary if using redux-form**, but it will still work if callback from a change is needed. |  |
 `placement` | string | Determines the position of the date picker overlay. See available options in the <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper documentation</a>. | bottom | false
+`usePortal` | bool | if true, the Timepicker will render itself to a React-Portal (the `#OverlayContainer` div) -- this avoids having the Timepicker cutoff by overflow (useful if the Timepicker is rendered inside of a MultiColumnList, for example). | false | false
 `modifiers` | object | Passes modifiers for the internal <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper</a>-component which handles the positioning of the date picker overlay. | | false
 `passThroughValue` (deprecated) | string | Can be used to set dynamic values up to the form - values should be inspected/adjusted in a handler at submission time (like a button click that calls `submit()`.) See below for usage example. |  |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `timeZone` | string | Overrides the time zone provided by context. (Use `'UTC'` to force interpretation as an absolute time of day) | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
+`marginBottom0` | bool | Remove the bottom margin | false | false
 
 ## Working with Times
 

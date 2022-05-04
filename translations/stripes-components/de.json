@@ -665,8 +665,8 @@
     "languages.nap": "Neapolitanisch",
     "languages.nau": "Nauruanisch",
     "languages.nav": "Navajo-Sprache",
-    "languages.nbl": "Ndebele-Sprache <Transvaal>",
-    "languages.nde": "Ndebele-Sprache <Simbabwe>",
+    "languages.nbl": "Ndebele, South; South Ndebele",
+    "languages.nde": "Ndebele, North; North Ndebele",
     "languages.ndo": "Ndonga",
     "languages.nds": "Niederdeutsch",
     "languages.nep": "Nepali",
@@ -878,5 +878,6 @@
     "Timepicker.PeriodLabel": "AM or PM",
     "Timepicker.SetTimeLabel": "Set time",
     "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "leave dialog"
+    "Timepicker.LeaveDialog": "leave dialog",
+    "selection.controlLabel": "Select control"
 }

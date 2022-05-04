@@ -878,5 +878,6 @@
     "Timepicker.PeriodLabel": "صباحاً أم مساءً",
     "Timepicker.SetTimeLabel": "ضبط الوقت",
     "Timepicker.ScreenReaderLabel": "تنسيق {label} هو {screenReaderFormat} استخدم السهم لأسفل لإدخال مربع حوار محدد الوقت. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "اترك مربع الحوار"
+    "Timepicker.LeaveDialog": "اترك مربع الحوار",
+    "selection.controlLabel": "تحديد التحكم"
 }
