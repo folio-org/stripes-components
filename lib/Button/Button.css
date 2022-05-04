@@ -193,11 +193,26 @@
   }
 
   &.link {
-    background-color: transparent;
-    border: 1px solid transparent;
+    display: inline;
+    padding: 0;
+    width: auto;
+    height: auto;
+    border-color: rgb(0, 0, 238);
+    border-style: none;
+    box-sizing: content-box;
+    font: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 238);
     cursor: pointer;
-    color: var(--primary);
-    padding: 0.25em;
+    text-align: start;
+    text-decoration: underline;
+    appearance: none;
+
+    &:hover,
+    &:focus {
+      outline-style: dotted;
+      outline-width: 1px;
+    }
   }
 
   &.bottomMargin0,
