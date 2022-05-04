@@ -8,9 +8,9 @@
   will-change: transform;
   overflow: hidden;
 
-  & .paneset {
+  /* & .paneset {
     overflow: visible;
-  }
+  } */
 
   & .paneset,
   &.nested {
