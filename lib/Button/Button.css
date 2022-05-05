@@ -3,6 +3,9 @@
 /**
 * Default styling
 */
+:root {
+  --link-color-hover: #23385a;
+}
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
@@ -197,21 +200,22 @@
     padding: 0;
     width: auto;
     height: auto;
-    border-color: rgb(0, 0, 238);
+    border-color: var(--color-link);
     border-style: none;
     box-sizing: content-box;
     font: inherit;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(0, 0, 238);
+    color: var(--color-link);
     cursor: pointer;
     text-align: start;
     text-decoration: underline;
     appearance: none;
+    margin-bottom: 0;
 
     &:hover,
     &:focus {
       outline-style: dotted;
       outline-width: 1px;
+      color: var(--link-color-hover);
     }
   }
 
