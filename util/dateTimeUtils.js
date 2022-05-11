@@ -52,7 +52,7 @@ export const getLocaleDateFormat = ({ intl }) => {
 // array items can be used as values for the day period control,
 // and the array length used to determin 12 hour (2 items) or 24 hour mode (0 items).
 
-export function getTimeFormatInfo(locale) {
+export function getLocalizedTimeFormatInfo(locale) {
   // Build array of time stamps for convenience.
   const dateArray = [];
   while (dateArray.length < 24) {
@@ -64,7 +64,9 @@ export function getTimeFormatInfo(locale) {
   const options = { hour: 'numeric', minute: 'numeric' };
   const dpOptions = new Set();
   const df = new Intl.DateTimeFormat(locale, options);
-  dateArray.forEach((d) => {
+
+  let timeFormat = '';
+  dateArray.forEach((d, i) => {
     const dateFields = df.formatToParts(d);
 
     dateFields.forEach((f) => {
@@ -81,9 +83,33 @@ export function getTimeFormatInfo(locale) {
           break;
       }
     });
+
+    // compile a local date-time format from the pieces.
+    if (i === dateArray.length - 1) {
+      dateFields.forEach((p) => {
+        switch (p.type) {
+          case 'hour':
+            timeFormat += 'HH';
+            break;
+          case 'minute':
+            timeFormat += 'mm';
+            break;
+          case 'literal':
+            timeFormat += p.value;
+            break;
+          case 'dayPeriod':
+            timeFormat += 'A';
+            break;
+          default:
+            break;
+        }
+      });
+    }
   });
+
   return {
     ...formatInfo,
+    timeFormat,
     dayPeriods: [...dpOptions]
   };
 }
