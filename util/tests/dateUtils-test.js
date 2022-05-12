@@ -55,6 +55,10 @@ describe('Date Utilities', () => {
     it('returns the time format according to the passed locale', () => {
       expect(timeFormat.timeFormat).to.equal('HH:mm');
     });
+
+    it('returns an empty array of day perdiods', () => {
+      expect(timeFormat.dayPeriods.length).to.equal(0);
+    });
   });
 
   describe('get locale time format - en-US', () => {
@@ -65,6 +69,14 @@ describe('Date Utilities', () => {
 
     it('returns the time format according to the passed locale', () => {
       expect(timeFormat.timeFormat).to.equal('HH:mm A');
+    });
+
+    it('returns a separator', () => {
+      expect(timeFormat.separator).to.equal(':');
+    });
+
+    it('returns an array of 2 day perdiods', () => {
+      expect(timeFormat.dayPeriods.length).to.equal(2);
     });
   });
 

@@ -7,6 +7,8 @@ export function getMomentLocalizedFormat(intl) {
 }
 
 // Returns a localized format.
+// Format will be a string similar to YYYY.MM.DD - something that can be
+// passed to moment for parsing/formatting purposes.
 export const getLocaleDateFormat = ({ intl }) => {
   const tempDate = new Date('Thu May 14 2020 14:39:25 GMT-0500');
   let format = '';
@@ -42,15 +44,33 @@ export const getLocaleDateFormat = ({ intl }) => {
       }
     });
   } else {
+    // if INTL api is not available, fall back to moment...
     format = getMomentLocalizedFormat(intl);
   }
 
   return format;
 };
 
+// getLocalizedTimeFormatInfo() -
+// Accepts a locale like 'ar' or 'de'
 // Gets an array of dayPeriods for 12 hour modes of time. The
 // array items can be used as values for the day period control,
 // and the array length used to determin 12 hour (2 items) or 24 hour mode (0 items).
+
+// example usage:
+// getLocalizedTimeFormatInfo('en-SE') returns:
+//   {
+//     separator: ':',
+//     timeFormat: 'HH:mm',
+//     dayPeriods: [],  // no dayPeriods means 24 hour time format.
+//   }
+
+// getLocalizedTimeFormatInfo('en-US') returns:
+//   {
+//     separator: ':',
+//     timeFormat: 'HH:mm A',
+//     dayPeriods: ['am', 'pm'], // day periods: 12 hour time format.
+//   }
 
 export function getLocalizedTimeFormatInfo(locale) {
   // Build array of time stamps for convenience.
@@ -70,21 +90,13 @@ export function getLocalizedTimeFormatInfo(locale) {
     const dateFields = df.formatToParts(d);
 
     dateFields.forEach((f) => {
-      switch (f.type) {
-        case 'dayPeriod':
-          dpOptions.add(f.value);
-          break;
-        case 'literal':
-          if (!formatInfo.separator) {
-            formatInfo.separator = f.value;
-          }
-          break;
-        default:
-          break;
+      if (f.type === 'dayPeriod') {
+        dpOptions.add(f.value);
       }
     });
 
-    // compile a local date-time format from the pieces.
+    // compile a local date-time format from the pieces of the last item.
+    // something in the form of HH:mm or HH:mm A that could be fed to a library like moment.
     if (i === dateArray.length - 1) {
       dateFields.forEach((p) => {
         switch (p.type) {
@@ -96,6 +108,9 @@ export function getLocalizedTimeFormatInfo(locale) {
             break;
           case 'literal':
             timeFormat += p.value;
+            if (p.value !== ' ' && !formatInfo.separator) {
+              formatInfo.separator = p.value;
+            }
             break;
           case 'dayPeriod':
             timeFormat += 'A';
