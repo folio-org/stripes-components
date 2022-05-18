@@ -37,6 +37,7 @@
 * Button: 'Link' style should behave as expected. Fixes STCOM-938.
 * Resized nested paneset containing elements. Fixes STCOM-989.
 * Hours format on Timepicker consistent to locale. Fixes STCOM-947.
+* Extend proptypes for avoiding console errors. Fixes STCOM-994.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
