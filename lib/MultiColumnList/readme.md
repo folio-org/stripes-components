@@ -72,6 +72,8 @@ Check out our [hosted storybook](https://ux.folio.org/storybook/) for examples o
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 `autosize` | bool | if true, list will size itself to fit its containing element. Use this to have a list occupy the full width and height of a `<Pane>`s content area. | false |
+`canGoNext` | bool | When passed to component, will enable or disable "Next" pagination button. When `null` or `undefined` - default checking for available next page will be performed | null | |
+`canGoPrevious` | bool | When passed to component, will enable or disable "Previous" pagination button. When `null` or `undefined` - default checking for available previous page will be performed | null | |
 `columnIdPrefix` | string | Appends a prefix to the id's for column headers and clickable headers for buttons. Useful in case multiple grids with the same shape of data appear in the same view.| | 
 `columnMapping` | object | Maps rendered column labels to the data fields for the onHeaderClick prop. | `{}` |
 `columnWidths` | object | Set custom column widths, e.g. {email: '150px'}. Component will automatically measure any columns that are unspecified. An object can be provided with `min` and `max` keys to set up a range - MCL will pick as close to the `min` as it can and none over the `max`.| |
