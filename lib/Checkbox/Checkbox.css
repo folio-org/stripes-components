@@ -70,6 +70,7 @@
   display: flex;
   align-items: center;
   min-height: var(--control-min-size-desktop);
+  word-break: break-all;
 }
 
 [dir="rtl"] .labelText {
