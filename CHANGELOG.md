@@ -38,6 +38,7 @@
 * Resized nested paneset containing elements. Fixes STCOM-989.
 * Hours format on Timepicker consistent to locale. Fixes STCOM-947.
 * Extend proptypes for avoiding console errors. Fixes STCOM-994.
+* Added `pagingCanGoNext` and `pagingCanGoPrevious` props to `<MultiColumnList>`. Refs STCOM-995.
 * Break long words in (checkbox) labels. Fixes STCOM-990.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
