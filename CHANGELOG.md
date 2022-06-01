@@ -1,5 +1,12 @@
 # Change history for stripes-components
 
+## 10.1.4 IN PROGRESS
+
+* Handle panesets containing only percentage-based panes differently. Fixes STCOM-983
+* In mixed px and non-px panesets, resize caches only for px-based widths. Fixes STCOM-982
+* Resize non-cached paneset layouts on window resize. Fixes STCOM-984.
+* Resized nested paneset containing elements. Fixes STCOM-989.
+
 ## [10.1.3](https://github.com/folio-org/stripes-components/tree/v10.1.4) (2022-04-04)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.2...v10.1.3)
 
