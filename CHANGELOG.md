@@ -4,6 +4,7 @@
 
 * Set Monday as first day of the week for `es-419`. Refs STCOM-985.
 * Migrate Node JS to active LTS, v16. Refs STCOM-996.
+* Include recent `zh-TW` translations. Refs STCOM-1003.
 
 ## [10.1.4](https://github.com/folio-org/stripes-components/tree/v10.1.4) (2022-06-01)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.3...v10.1.4)
