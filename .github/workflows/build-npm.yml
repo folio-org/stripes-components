@@ -20,11 +20,12 @@ jobs:
     env:
       YARN_TEST_OPTIONS: '--karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage'
       SQ_ROOT_DIR: './lib'
-      COMPILE_TRANSLATION_FILES: 'false' 
+      COMPILE_TRANSLATION_FILES: 'false'
       PUBLISH_MOD_DESCRIPTOR: 'false'
       FOLIO_NPM_REGISTRY: 'https://repository.folio.org/repository/npm-folioci/'
+      FOLIO_NPM_REGISTRY_AUTH: '//repository.folio.org/repository/npm-folioci/'
       FOLIO_MD_REGISTRY: 'https://folio-registry.dev.folio.org'
-      NODEJS_VERSION: '12'
+      NODEJS_VERSION: '16'
       JEST_JUNIT_OUTPUT_DIR: 'artifacts/jest-junit'
       JEST_COVERAGE_REPORT_DIR: 'artifacts/coverage-jest/lcov-report/'
       BIGTEST_JUNIT_OUTPUT_DIR: 'artifacts/runTest'
@@ -41,7 +42,7 @@ jobs:
       - name: Setup kernel for react native, increase watchers
         run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODEJS_VERSION }}
           check-latest: true
@@ -150,7 +151,7 @@ jobs:
 
       - name: Set up NPM environment for publishing
         if: ${{ github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main' }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODEJS_VERSION }}
           check-latest: true
@@ -160,13 +161,13 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main' }}
         run: |
           npm config set @folio:registry $FOLIO_NPM_REGISTRY
-          npm config set _auth $NODE_AUTH_TOKEN
+          npm config set $FOLIO_NPM_REGISTRY_AUTH/:_auth $NODE_AUTH_TOKEN
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Exclude some CI-generated artifacts in package
         if: ${{ github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main' }}
-        run: | 
+        run: |
           echo ".github" >> .npmignore
           echo ".scannerwork" >> .npmignore
           cat .npmignore
