@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 10.1.5 (IN PROGRESS)
+## [10.1.5](https://github.com/folio-org/stripes-components/tree/v10.1.5) (2022-06-06)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.4...v10.1.5)
 
 * Set Monday as first day of the week for `es-419`. Refs STCOM-985.
 * Migrate Node JS to active LTS, v16. Refs STCOM-996.
