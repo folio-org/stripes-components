@@ -1,6 +1,52 @@
 # Change history for stripes-components
 
-## In-progress
+## 10.2.0 IN PROGRESS
+
+* Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
+* Include percentage-based layout widths in proportional resizing. fixes STCOM-927.
+* Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
+* AccordionSet has incorrect aria attribute. Refs STCOM-937.
+* NoValue component doesn't have role. Refs STCOM-936.
+* Correctly apply `aria-haspopup` and `aria-expanded` to IconButton. Refs STCOM 941.
+* Open Loans List: Elements must only use allowed ARIA attributes. Refs STCOM-948.
+* Appropriately apply labels within `<AutoSuggest>` component. Refs STCOM-939.
+* Correct Arabic and Japanese `font-family` typos. Refs STCOM-950.
+* Provide `<NoValue>` interactor. Refs STCOM-949.
+* Export to CSV not handling diacritics. Fixes STCOM-951.
+* Correctly label focus-trap control in `<Timepicker>`. Refs STCOM-945.
+* Add rendered text to the control of `<Selection>`. Refs STCOM-942.
+* Avoid `setState` calls in unmounted components. Refs STCOM-952.
+* Break long words in headings based on zooming 200%. Refs STCOM-835.
+* Improve splitting search query into rows in <AdvancedSearch>. Fixes STCOM-955.
+* Fix cropping of nested panesets. Fixes STCOM-953.
+* Lock-off `postcss-custom-properties` to 12.1.4. Fixes STCOM-956.
+* eHoldings app: Package Detail Record> Usage & analysis accordion > Apply pagination to Titles list. Refs STCOM-966.
+* Fix Accessibility problems for "MultiSelection" component. STCOM-967.
+* Add `marginBottom0` prop to `<Timepicker>`. Refs STCOM-968
+* Update `autoprefixer` to maintain compat with `postcss`. Refs STCOM-963.
+* Fix prop types of `<IconButton>`. Fixes STCOM-972.
+* Add Cancel icon. Refs STCOM-976.
+* Export `<Calendar>` component as standalone. Refs STCOM-850
+* Export all exports from `<FilterGroups>`. Refs STCOM-980.
+* Add background-color to `<Select>` options for FF UA styles. Fixes STCOM-974.
+* Set Monday as first day of the week for `es-419`. Refs STCOM-985.
+* The schedule time does not accept PM value. Fixes STCOM-986.
+* Handle panesets containing only percentage-based panes differently. Fixes STCOM-983
+* In mixed px and non-px panesets, resize caches only for px-based widths. Fixes STCOM-982
+* Resize non-cached paneset layouts on window resize. Fixes STCOM-984.
+* Button: 'Link' style should behave as expected. Fixes STCOM-938.
+* Resized nested paneset containing elements. Fixes STCOM-989.
+* Hours format on Timepicker consistent to locale. Fixes STCOM-947.
+* Extend proptypes for avoiding console errors. Fixes STCOM-994.
+* Added `pagingCanGoNext` and `pagingCanGoPrevious` props to `<MultiColumnList>`. Refs STCOM-995.
+* Break long words in (checkbox) labels. Fixes STCOM-990.
+* Remove paginationBoundaries prop from MCLRenderer and PrevNextPaginationRow components. Refs STCOM-999.
+* Paneset logic handles container widths of 0. Refs STCOM-1004.
+* properly provide popper placements. Fixes STCOM-979.
+
+## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
+
 * Export utilities for apps to display keyboard shortcuts in a modal.Refs STCOM-865.
 * upgraded popover tests to use new interactors. part of STCOM-880.
 * removing skipped tests for TextField, Radiobutton, Select. Fixes STCOM-880.
@@ -18,6 +64,13 @@
 * Add a new `valueFormatter` prop to `<MultiSelection>`. Refs STCOM-911.
 * remove `@bigtest/mocha` dependency - using `mocha` instead. Refs STCOM-907.
 * Do not pass `aria-invalid` to any `<button>` elements. Refs STCOM-915.
+* PrevNext buttons return incorrect index. Fixes STCOM-909.
+* Add new `text-start`, `text-end` classNames to `<Layout>` component. Refs STCOM-898.
+* Add `<AdvancedSearch>` component. Refs STCOM-919.
+* Strange arrow appears in select (multiple=true) boxes over scrollbar. Refs STCOM-925.
+* Add onMount prop to the Pane component. Refs STCOM-928
+* Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
+* Add `usePortal` prop to `<Timepicker>`. Refs STCOM-969.
 
 ## [10.0.0](https://github.com/folio-org/stripes-components/tree/v10.0.0) (2021-09-26)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v9.2.0...v10.0.0)

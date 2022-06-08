@@ -6,7 +6,8 @@ export { default as ButtonGroup } from './lib/ButtonGroup';
 export { default as Checkbox } from './lib/Checkbox';
 export { default as CurrencySelect } from './lib/CurrencySelect';
 export { default as CountrySelection } from './lib/CountrySelection';
-export { default as Datepicker, Calendar, getLocaleDateFormat } from './lib/Datepicker';
+export { default as Datepicker, Calendar } from './lib/Datepicker';
+export { getLocaleDateFormat, getLocalizedTimeFormatInfo } from './util/dateTimeUtils';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as FormattedDate } from './lib/FormattedDate';
 export { default as FormattedTime } from './lib/FormattedTime';
@@ -26,13 +27,13 @@ export { default as Tooltip } from './lib/Tooltip';
 export { default as Editor } from './lib/Editor';
 export { default as MultiSelection } from './lib/MultiSelection';
 export { default as RepeatableField } from './lib/RepeatableField';
-export { default as Popper } from './lib/Popper';
+export { default as Popper, AVAILABLE_PLACEMENTS } from './lib/Popper';
 
 /* data containers */
 export { default as Card } from './lib/Card';
 export { default as KeyboardShortcutsModal } from './lib/KeyboardShortcutsModal';
 export { default as KeyValue } from './lib/KeyValue';
-export { default as MultiColumnList } from './lib/MultiColumnList';
+export { default as MultiColumnList, DefaultMCLRowFormatter } from './lib/MultiColumnList';
 export { default as EndOfList } from './lib/MultiColumnList/EndOfList';
 export { default as List } from './lib/List';
 
@@ -98,6 +99,7 @@ export {
   importShortcuts,
   renameShortcutLabels
 } from './lib/Commander';
+export { default as ErrorBoundary } from './lib/ErrorBoundary';
 
 
 /* structures */
@@ -106,12 +108,21 @@ export { default as ErrorModal } from './lib/ErrorModal';
 export { default as InfoPopover } from './lib/InfoPopover';
 export { default as SearchField } from './lib/SearchField';
 export { default as ConflictDetectionBanner } from './lib/ConflictDetectionBanner';
+export {
+  AdvancedSearch,
+  defaultQueryBuilder as defaultAdvancedSearchQueryBuilder,
+  BOOLEAN_OPERATORS as ADVANCED_SEARCH_BOOLEAN_OPERATORS,
+} from './lib/AdvancedSearch';
 
 /* specific use */
 export {
   default as FilterGroups,
   filterState,
   filters2cql,
+  handleClearAllFilters,
+  handleFilterChange,
+  handleFilterClear,
+  initialFilterState,
   onChangeFilter,
   FILTER_SEPARATOR,
   FILTER_GROUP_SEPARATOR,

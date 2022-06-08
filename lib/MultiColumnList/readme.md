@@ -72,7 +72,7 @@ Check out our [hosted storybook](https://ux.folio.org/storybook/) for examples o
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 `autosize` | bool | if true, list will size itself to fit its containing element. Use this to have a list occupy the full width and height of a `<Pane>`s content area. | false |
-`columnIdPrefix` | string | Appends a prefix to the id's for column headers and clickable headers for buttons. Useful in case multiple grids with the same shape of data appear in the same view.| | 
+`columnIdPrefix` | string | Appends a prefix to the id's for column headers and clickable headers for buttons. Useful in case multiple grids with the same shape of data appear in the same view.| |
 `columnMapping` | object | Maps rendered column labels to the data fields for the onHeaderClick prop. | `{}` |
 `columnWidths` | object | Set custom column widths, e.g. {email: '150px'}. Component will automatically measure any columns that are unspecified. An object can be provided with `min` and `max` keys to set up a range - MCL will pick as close to the `min` as it can and none over the `max`.| |
 `contentData` | array of object | the list of objects to be displayed. | | required
@@ -98,9 +98,11 @@ Name | type | description | default | required
 `onRowClick` | function(`event`, `item`) | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | |
 `onScroll` | func | Callback for scrolling of list body. | `noop` |
 `pageAmount` | number | The base amount of data to pass as the `askAmount` parameter for the `onNeedMoreData` prop | `30` |
-`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. `prev-next` will render pagination with 'previous' and 'next' buttons with a display of the current page's item numbers. | `"scroll"` |
+`pagingCanGoNext` | bool | When passed to component, will enable or disable "Next" pagination button. When `null` or `undefined` - default checking for available next page will be performed | null | |
+`pagingCanGoPrevious` | bool | When passed to component, will enable or disable "Previous" pagination button. When `null` or `undefined` - default checking for available previous page will be performed | null | |
+`pagingType` | string | Controls the interaction type when loading more data in the MCL. `"scroll"` is used for infinite scroll/loading scenarios, `"click"` renders a paging button below the results if the loaded count is less than the `totalCount` prop. `prev-next` will render pagination with 'previous' and 'next' buttons with a display of the current page's item numbers.`"none"` is used for custom pagination | `"scroll"` |
 `rowFormatter`  | func | function of shape `<name>({rowIndex, rowClass, rowData, cells, rowProps}){return <reactElement>}` that can be used to supply custom row layout. Forking [defaultRowFormatter](defaultRowFormatter.js) is a good place to start if you need to use this. | `defaultRowFormatter` |
-`rowMetadata` | object | arbitrary data that is passed as a metadata object to the `onRowClick` handler - useful for passing in data that may exist outside of the realm of the rendered MCL. | |
+`rowMetadata` | array | a list of keys in `contentData` that should not be rendered.  This is useful if you wish to add arbitrary data outside of the realm of the rendered MCL, such as for the `onRowClick` handler. | `[]` |
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |
 `selectedClass` | string | override class for the default style applied to selected rows. | built-in |
 `selectedRow` | object | **legacy API** Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | |

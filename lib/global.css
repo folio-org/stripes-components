@@ -33,11 +33,13 @@ html {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
     "Adobe Arabic",
-    "Myriad     abic",
+    "Myriad Arabic",
     "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro",
-    メイリオ    Meiryo,
+    メイリオ,
+    Meiryo,
     "ＭＳ Ｐゴシック",
+    "MS PGothic",
     sans-serif;
   color: var(--color-text);
   letter-spacing: 0.04em;
@@ -66,11 +68,13 @@ html {
       "Segoe UI Emoji",
       "Segoe UI Symbol",
       "Adobe Arabic",
-      "Myriad     abic",
+      "Myriad Arabic",
       "ヒラギノ角ゴ Pro W3",
       "Hiragino Kaku Gothic Pro",
-      メイリオ    Meiryo,
+      メイリオ,
+      Meiryo,
       "ＭＳ Ｐゴシック",
+      "MS PGothic",
       sans-serif;
   }
 }

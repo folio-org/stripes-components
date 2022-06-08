@@ -63,3 +63,12 @@ The `dropdownItem` buttonStyle is useful for adding a list of buttons inside of 
     <Icon icon="duplicate">Duplicate</Icon>
 </Button>
 ```
+
+### link
+The `link` buttonStyle is useful for adding link buttons inside the text.
+
+```
+<Button buttonStyle="link">
+     I'm a link button 
+</Button>
+```
