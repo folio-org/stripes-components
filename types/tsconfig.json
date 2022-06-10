@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    // never assume any
+    "noImplicitAny": true,
+    // allow importing things like React
+    "esModuleInterop": true,
+    // JSX is react-flavored
+    "jsx": "react",
+    // module resolution strategies
+    "lib": ["esnext"],
+    "module": "es6",
+    "moduleResolution": "node"
+  }
+}
