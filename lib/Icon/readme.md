@@ -61,3 +61,5 @@ iconClassName | string | Applies a custom css class name directly to icon | stri
 children | node, string | Adds content next to the icon. Useful for adding a label to an icon. | undefined
 iconPosition | string | Sets the the position of the icon. Can be set to "start" and "end". Note: This is only relevant when the "children"-prop is utilized. | start
 iconStyle | string | Changes the style of the icon. Currently, the only style available is "action" | undefined
+status | string | Colors the icon. Currently supported values are "error", "warn", "success", or undefined (for no styling). | undefined
+tabIndex | number | Sets a custom tabIndex on the element |
