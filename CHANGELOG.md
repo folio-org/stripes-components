@@ -43,6 +43,7 @@
 * Remove paginationBoundaries prop from MCLRenderer and PrevNextPaginationRow components. Refs STCOM-999.
 * Paneset logic handles container widths of 0. Refs STCOM-1004.
 * properly provide popper placements. Fixes STCOM-979.
+* Additional functionality needed for metadata display when user record is deleted. Refs STCOM-882.
 * MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)

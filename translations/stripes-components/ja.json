@@ -73,7 +73,7 @@
     "readonly": "Read-only",
     "readMore": "Read more",
     "tableEmpty": "リストにアイテムがありません",
-    "metaSection.sourceNoData": "Source: Automated process",
+    "metaSection.sourceNoData": "Source: Unknown user",
     "metaSection.recordCreatedNoData": "レコード作成日時：不明",
     "metaSection.recordLastUpdatedNoData": "レコード最終更新日時: 不明",
     "saveAndClose": "保存して閉じる",
