@@ -44,6 +44,7 @@
 * Paneset logic handles container widths of 0. Refs STCOM-1004.
 * properly provide popper placements. Fixes STCOM-979.
 * Additional functionality needed for metadata display when user record is deleted. Refs STCOM-882.
+* Add initial TypeScript definition files. Refs STCOM-1012.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
