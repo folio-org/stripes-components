@@ -80,6 +80,7 @@ Name | type | description | default | required
 `formatter`  | object mapping names to functions | see separate section | |
 `getCellClass` | func | Used to update or completely overwrite the visual styles for each column. The function passed to this prop will receive the current CSS class, row data and the column name as the parameters and the returned value will overwrite the default class – e.g. `(defaultClass, rowData, header) => ${defaultClass} ${myCustomClass}` | `undefined` |
 `getHeaderCellClass` | func | Used to update the visual styles for each column header. The function passed to this prop will receive the column name as the  parameter and the returned value will extend the default class – e.g. `header =>  ${myCustomClass}` | `undefined` |
+`getRowContainerClass` | func | Used to update the visual styles for row container. The function passed to this prop will receive the current CSS class as the parameter and the returned value will overwrite the default class – e.g. `defaultClass =>  ${defaultClass} ${myCustomClass}` | `undefined` |
 `hasMargin` | bool | Applies horizontal margin on rows and header. This is primarily used to achieve the correct spacing within result panes. | |
 `headerMetadata` | object | Object with data to include with the | |
 `headerRowClass` | string | Applies a css class to the header row of the list. | |
