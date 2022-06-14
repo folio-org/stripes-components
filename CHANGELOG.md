@@ -34,6 +34,18 @@
 * Handle panesets containing only percentage-based panes differently. Fixes STCOM-983
 * In mixed px and non-px panesets, resize caches only for px-based widths. Fixes STCOM-982
 * Resize non-cached paneset layouts on window resize. Fixes STCOM-984.
+* Button: 'Link' style should behave as expected. Fixes STCOM-938.
+* Resized nested paneset containing elements. Fixes STCOM-989.
+* Hours format on Timepicker consistent to locale. Fixes STCOM-947.
+* Extend proptypes for avoiding console errors. Fixes STCOM-994.
+* Added `pagingCanGoNext` and `pagingCanGoPrevious` props to `<MultiColumnList>`. Refs STCOM-995.
+* Break long words in (checkbox) labels. Fixes STCOM-990.
+* Remove paginationBoundaries prop from MCLRenderer and PrevNextPaginationRow components. Refs STCOM-999.
+* Paneset logic handles container widths of 0. Refs STCOM-1004.
+* properly provide popper placements. Fixes STCOM-979.
+* Additional functionality needed for metadata display when user record is deleted. Refs STCOM-882.
+* Add the ability to pass a className to the rows container in the `<MultiColumnList>`. Refs STCOM-1009.
+* MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)

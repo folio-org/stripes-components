@@ -73,7 +73,7 @@
     "readonly": "Только для чтения",
     "readMore": "Read more",
     "tableEmpty": "Список не содержит элементов",
-    "metaSection.sourceNoData": "Source: Automated process",
+    "metaSection.sourceNoData": "Source: Unknown user",
     "metaSection.recordCreatedNoData": "Record created: Unknown",
     "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown",
     "saveAndClose": "Сохранить и закрыть",
