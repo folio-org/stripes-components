@@ -45,6 +45,7 @@
 * properly provide popper placements. Fixes STCOM-979.
 * Additional functionality needed for metadata display when user record is deleted. Refs STCOM-882.
 * Add the ability to pass a className to the rows container in the `<MultiColumnList>`. Refs STCOM-1009.
+* MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
