@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 10.2.0 IN PROGRESS
+## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
 
 * Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
 * Include percentage-based layout widths in proportional resizing. fixes STCOM-927.
@@ -47,6 +48,41 @@
 * Add the ability to pass a className to the rows container in the `<MultiColumnList>`. Refs STCOM-1009.
 * MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
 * Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
+
+## [10.1.5](https://github.com/folio-org/stripes-components/tree/v10.1.5) (2022-06-06)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.4...v10.1.5)
+
+* Set Monday as first day of the week for `es-419`. Refs STCOM-985.
+* Migrate Node JS to active LTS, v16. Refs STCOM-996.
+* Include recent `zh-TW` translations. Refs STCOM-1003.
+
+## [10.1.4](https://github.com/folio-org/stripes-components/tree/v10.1.4) (2022-06-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.3...v10.1.4)
+
+* Handle panesets containing only percentage-based panes differently. Fixes STCOM-983
+* In mixed px and non-px panesets, resize caches only for px-based widths. Fixes STCOM-982
+* Resize non-cached paneset layouts on window resize. Fixes STCOM-984.
+* Check for window resize in `calcWidths`. Refs STCOM-987.
+* resize-nested paneset containers. Refs STCOM-988.
+* Resized nested paneset containing elements. Fixes STCOM-989.
+
+## [10.1.3](https://github.com/folio-org/stripes-components/tree/v10.1.3) (2022-04-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.2...v10.1.3)
+
+* Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
+* Fix cropping of nested panesets. Fixes STCOM-953
+
+## [10.1.2](https://github.com/folio-org/stripes-components/tree/v10.1.2) (2022-03-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.1...v10.1.2)
+
+* Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931.
+
+## [10.1.1](https://github.com/folio-org/stripes-components/tree/v10.1.1) (2022-03-24)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.1.1)
+
+* Export to CSV not handling diacritics. Fixes STCOM-951.
+* Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
+* Improve splitting search query into rows in `<AdvancedSearch>`. Fixes STCOM-955.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)
