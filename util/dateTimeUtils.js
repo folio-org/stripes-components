@@ -18,7 +18,7 @@ export const getLocaleDateFormat = ({ intl }) => {
     const intlFormatter = new Intl.DateTimeFormat(intl.locale, {
       day: '2-digit',
       year: 'numeric',
-      month: '2-digit'
+      month: '2-digit',
     });
 
     const formatted = intlFormatter.formatToParts(tempDate);
@@ -122,9 +122,13 @@ export function getLocalizedTimeFormatInfo(locale) {
     }
   });
 
+  if (timeFormat.includes('A')) {
+    timeFormat = timeFormat.replace('HH', 'hh');
+  }
+
   return {
     ...formatInfo,
     timeFormat,
-    dayPeriods: [...dpOptions]
+    dayPeriods: [...dpOptions],
   };
 }
