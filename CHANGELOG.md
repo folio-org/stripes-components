@@ -48,6 +48,7 @@
 * Add the ability to pass a className to the rows container in the `<MultiColumnList>`. Refs STCOM-1009.
 * MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
 * Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
+* Record detail panes are empty when printed. Refs STCOM-975.
 
 ## [10.1.5](https://github.com/folio-org/stripes-components/tree/v10.1.5) (2022-06-06)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.4...v10.1.5)

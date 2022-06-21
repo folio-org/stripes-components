@@ -16,6 +16,10 @@
   &.static {
     position: static;
   }
+
+  @media print {
+    overflow: visible;
+  }
 }
 
 @media (--medium-up) {
