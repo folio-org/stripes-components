@@ -3,6 +3,9 @@
 /**
 * Default styling
 */
+:root {
+  --link-color-hover: #23385a;
+}
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
@@ -193,11 +196,27 @@
   }
 
   &.link {
-    background-color: transparent;
-    border: 1px solid transparent;
+    display: inline;
+    padding: 0;
+    width: auto;
+    height: auto;
+    border-color: var(--color-link);
+    border-style: none;
+    box-sizing: content-box;
+    font: inherit;
+    color: var(--color-link);
     cursor: pointer;
-    color: var(--primary);
-    padding: 0.25em;
+    text-align: start;
+    text-decoration: underline;
+    appearance: none;
+    margin-bottom: 0;
+
+    &:hover,
+    &:focus {
+      outline-style: dotted;
+      outline-width: 1px;
+      color: var(--link-color-hover);
+    }
   }
 
   &.bottomMargin0,

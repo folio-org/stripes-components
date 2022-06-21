@@ -79,7 +79,14 @@
 }
 
 div[class*="Selected"] {
-
+  /**
+    * :not is the crown prince of pseudo selector specificity.
+    * That's causing stylelint grief here since it's more
+    * specific than the things above it, but if we invert the
+    * hierarchy then we'd have to duplicate most of this code.
+    * <sigh>.
+    */
+  /* stylelint-disable no-descending-specificity */
   & .root {
     color: var(--link-color-current);
 
