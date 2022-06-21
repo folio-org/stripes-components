@@ -68,14 +68,14 @@ describe('Date Utilities', () => {
     });
 
     it('returns the time format according to the passed locale', () => {
-      expect(timeFormat.timeFormat).to.equal('HH:mm A');
+      expect(timeFormat.timeFormat).to.equal('hh:mm A');
     });
 
     it('returns a separator', () => {
       expect(timeFormat.separator).to.equal(':');
     });
 
-    it('returns an array of 2 day perdiods', () => {
+    it('returns an array of 2 day periods', () => {
       expect(timeFormat.dayPeriods.length).to.equal(2);
     });
   });
@@ -87,7 +87,7 @@ describe('Date Utilities', () => {
     });
 
     it('returns the time format according to the passed locale', () => {
-      expect(timeFormat.timeFormat).to.equal('A HH:mm');
+      expect(timeFormat.timeFormat).to.equal('A hh:mm');
     });
   });
 });
