@@ -107,7 +107,6 @@ Name | type | description | default | required
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |
 `selectedClass` | string | override class for the default style applied to selected rows. | built-in |
 `selectedRow` | object | **legacy API** Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | |
-`sortedClass` | string | override class for the default style applied to headers of sorted columns. | built-in |
 `sortedColumn` | string | Used to apply styling to the appropriate column. | |
 `sortOrder` | string | 'ascending' or 'descending' direction. | |
 `striped` | bool | Adds striped style to rows | `true` |
