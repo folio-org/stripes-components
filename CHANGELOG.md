@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## 10.2.2 IN PROGRESS
+
+* Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
+* `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
+
 ## [10.2.1](https://github.com/folio-org/stripes-components/tree/v10.2.1) (2022-07-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.2.1)
 
@@ -54,7 +59,6 @@
 * Additional functionality needed for metadata display when user record is deleted. Refs STCOM-882.
 * Add the ability to pass a className to the rows container in the `<MultiColumnList>`. Refs STCOM-1009.
 * MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
-* Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
 
 ## [10.1.5](https://github.com/folio-org/stripes-components/tree/v10.1.5) (2022-06-06)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.4...v10.1.5)
