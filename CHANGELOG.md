@@ -4,6 +4,7 @@
 * Fix 12-hour formatting in `dateTimeUtils` `getLocalizedTimeFormatInfo`. Fixes STCOM-1017
 * Add `inputRef` prop to `<Timepicker>`. Refs STCOM-1016
 * `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
+* Long titles do not fit in the confirmation modal window header. Refs STCOM-1020
 * Pass `modifiers` prop to correct component in `<MultiSelection>`. Fixes STCOM-1013.
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
