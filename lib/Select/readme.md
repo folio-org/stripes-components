@@ -31,6 +31,7 @@ validationEnabled | bool | Controls whether or not the select displays validatio
 value | string | Sets the selected value for the input. **This prop isn't necessary if part of a redux-form (see below)** | | false
 onChange | func | Event handler for the select's `onChange` event. **This prop isn't necessary if part of a redux-form (see below)** | | false
 selectClass | string | Adds className to the select field | | false
+inputRef | object/func | Reference object/function for accessing the select DOM element. | | false
 
 ## Properties set by Redux-form
 If `<Select>` is used within a redux-form `<Field>` component (currently the most common case) then you don't have to set any of these props yourself. See the [redux-form website](https://redux-form.com/7.2.0/) for more details.

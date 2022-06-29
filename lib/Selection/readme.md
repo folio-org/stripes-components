@@ -67,6 +67,7 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 `dataOptions` | array of objects | Array of objects with `label` and `value` keys. The labels are visible to the users in the options list, the values are not. | | &#10004;
 `id` | string | Sets the `id` html attribute on the control | |
+`innerRef` | object/func | Reference object/function for accessing the input DOM element. | ref | false
 `label` | string | If provided, will render a `<label>` tag with an `htmlFor` attribute directed at the provided `id` prop. | |
 `emptyMessage` | string | Message to display filtering leaves the options list empty | 'No matching options' |
 `loading` | bool | if true, `loadingMessage` will be displayed to indicate that options are loading | false |
