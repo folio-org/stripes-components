@@ -12,3 +12,4 @@ artifacts
 .vscode
 .idea
 yarn.lock
+dist

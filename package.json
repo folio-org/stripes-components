@@ -7,17 +7,30 @@
   "sideEffects": [
     "*.css"
   ],
+  "main": "dist/index.js",
+  "style": "dist/style.css",
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
   },
+  "files": [
+    "lib/global.css",
+    "lib/variables.css",
+    "lib/fonts.css",
+    "lib/sharedStyles/*",
+    "util",
+    "dist",
+    "translations"
+  ],
   "scripts": {
+    "prepublish": "yarn transpile",
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
     "lint": "eslint ./ && stylelint \"lib/**/*.css\"",
     "eslint": "eslint ./",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o .out"
+    "storybook-build": "build-storybook -c .storybook -o .out",
+    "transpile": "stripes transpile"
   },
   "engines": {
     "node": ">=10.0.0"
