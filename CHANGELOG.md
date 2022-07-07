@@ -7,6 +7,7 @@
 * Long titles do not fit in the confirmation modal window header. Refs STCOM-1020
 * Pass `modifiers` prop to correct component in `<MultiSelection>`. Fixes STCOM-1013.
 * Add `inputRef` prop to `<Selection>`. Refs STCOM-647.
+* `<MultiSelection>` must handle null filter string. Refs STCOM-1022.
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
