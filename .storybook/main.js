@@ -7,10 +7,19 @@ module.exports = {
   features: {
     postcss: false, // we use our own postcss setup
   },
-  stories: ['../lib/**/*.stories.[tj]s'],
+  stories: [{
+    directory: '../docs',
+    titlePrefix: 'Guides',
+    files: '**/*.mdx'
+  },
+  {
+    directory: '../lib',
+    titlePrefix: 'Components',
+    files: '**/*.stories.[tj]s'
+  }],
   addons: [
     'storybook-readme/register',
-    '@storybook/addon-actions/register',
+    '@storybook/addon-essentials',
     'storybook-addon-intl/register',
     'storybook-addon-rtl/register',
     'storybook-addon-designs/register',

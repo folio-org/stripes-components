@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { addReadme } from 'storybook-readme';
 import { initializeRTL } from 'storybook-addon-rtl';
+import pkg from '../package.json';
+import { themes } from '@storybook/theming';
 import '../lib/global.css';
 
 /**
@@ -90,10 +92,10 @@ const storyFnDecorator = storyFn => <AddOverlayContainer>{storyFn()}</AddOverlay
 
  export const decorators = [withIntl, storyFnDecorator, addReadme]
  export const parameters = {
-   options: {
-     theme: {
-      brandTitle: 'FOLIO Stripes',
-     }
+   docs: {
+     theme: Object.assign({}, themes.light, {
+      brandTitle: `FOLIO Stripes-components v${pkg.version}`,
+     })
    },
    readme: {
      codeTheme: 'a11y-dark',
