@@ -8,6 +8,7 @@
 * Pass `modifiers` prop to correct component in `<MultiSelection>`. Fixes STCOM-1013.
 * Add `inputRef` prop to `<Selection>`. Refs STCOM-647.
 * `<MultiSelection>` must handle null filter string. Refs STCOM-1022.
+* Break long words in Callout message. Refs STCOM-1023.
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
