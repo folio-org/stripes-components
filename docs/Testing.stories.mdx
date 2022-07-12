@@ -122,6 +122,7 @@ describe('Button', () => {
   });
 
   // make assertions against the initial rendered state
+  // interactors allow this through their `is\has` API.
 
    it('renders a <button> tag', async () => {
       await button.is({ button: true });
@@ -164,42 +165,35 @@ previous components on _the next_ call, this allows us to investigate
 and debug our tests after they run. You can then use Mocha's `it.only`
 to isolate a specific test to debug.
 
-Since `@bigtest/mocha` makes our tests convergent, and could possibly
-run them multiple times, _they must only contain assertions_. You'll
-also notice when we perform our `clicked` test that the `await
-button.clickButton()` action is separated into it's own `beforeEach`
-hook so it isn't accidentally invoked more than once. Separating
-side-effects this way and repeatedly running our assertions until
-completion, results in _very fast testing times_. For example, the
-tests above run and complete in _less than a tenth of a second_.
-
 ### Testing Component Interactions
 
-In the previous example, all of our tests reference the `button = new
-ButtonInteractor()` at the top of the test suite which is imported
-from [the button's `tests/interactor.js`
-file](https://github.com/folio-org/stripes-components/blob/master/lib/Button/tests/interactor.js).
+In the previous example, all of our tests reference the `button = ButtonInteractor()` at the top of the test suite which is imported
+from [the button's interactor in @folio/stripes-testing]
+file](https://github.com/folio-org/stripes-testing/blob/master/interactors/button.js).
 
 ``` javascript
-import {
-  interactor,
-  is,
-  attribute,
-  hasClass
-} from '@bigtest/interactor';
+import HTML from './baseHTML';
 
-import css from '../Button.css';
-
-export default interactor(class ButtonInteractor {
-  static defaultScope = `.${css.button}`;
-  id = attribute('id');
-  href = attribute('href');
-  isAnchor = is('a');
-  isButton = is('button');
-  rendersDefault = hasClass(css.default);
-  rendersPrimary = hasClass(css.primary);
-  rendersBottomMargin0 = hasClass(css.marginBottom0)
-});
+export default HTML.extend('button')
+  .selector('a[href],button,input[type=button],input[type=submit],input[type=reset],input[type=image],a[role=button],div[role=button]')
+  .filters({
+    // some buttons don't have attribute href
+    href: (el) => el.getAttribute('href') ?? '',
+    type: (el) => el.getAttribute('type'),
+    icon: (el) => el.getAttribute('icon'),
+    button: (el) => el.tagName === 'BUTTON',
+    anchor: (el) => el.tagName === 'A',
+    default: (el) => el.classList.contains('default'),
+    ariaLabel: (el) => el.ariaLabel,
+    ariaExpanded: (el) => el.getAttribute('aria-expanded'),
+    disabled: {
+      apply: (el) => {
+        if (el.disabled !== undefined) return el.disabled;
+        return el.getAttribute('aria-disabled') === 'true';
+      },
+      default: false
+    }
+  });
 ```
 
 You should always use an interactor if your tests need to interact
@@ -220,49 +214,13 @@ the DOM before interacting with them. Interactor properties are lazy
 and do not query for the element until they are accessed. To learn
 more about what they do, how to create your own interactors, and how
 to then compose interactors, check out the [BigTest Interactor
-Guides](https://bigtestjs.io/guides/interactors/introduction/).
+Guides](https://frontside.com/interactors).
 
-#### Note about CSS classnames
 
-When importing the `css` classnames, properties will return a
-_space-separated_ list of names. To query for an element via classname,
-you must denote a class using a leading period (`.classname`). So
-while `.${css.button}` works when a _single classname_ is returned,
-it will not work when using postcss `compose:`, which returns
-_multiple classnames_. For this, another helper is needed to convert
-the classname string into a proper selector.
+### Testing localized components
 
-``` javascript
-import { selectorFromClassnameString } from '../../../tests/helpers';
-
-// neccessary due to composing classnames with postcss `composes`
-const btnClass = selectorFromClassnameString(`.${css.button}`);
-```
-
-### "I need the `stripes`/`redux`/`intl` context"
-
-**Components should be able to be tested in complete isolation.**
-
-Components are meant to be reusable and composable. By having a
-component rely on any context, they lose their reusability and make it
-more difficult to compose them without the required context. A prime
-example of this are the various `redux-form` reliant field
-components. It was _impossible_ to use many of these components
-outside of a `redux-form` connected HOC, [until
-recently](https://issues.folio.org/browse/STCOM-269).
-
-In fact, React is [deprecating the previously experimental context
-API](https://reactjs.org/docs/legacy-context.html) in favor of a new
-[props-based component API
-instead](https://reactjs.org/docs/context.html). Once Stripes
-Components and it's dependencies fully support the new context API,
-you should only need to provide additional props instead of requiring
-a top-level provider for context.
-
-Until then, however, if you _absolutely need_ to provide your
-component with the old context, there exists another testing mount
-helper that will set up typical contexts found within a stripes
-application.
+Components that render translated strings will require intl context. This
+is conveniently provided in the `mountWithContext` helper.
 
 ``` javascript
 // instead of importing `mount`, import `mountWithContext`
