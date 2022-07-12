@@ -15,17 +15,17 @@ Modern web development gives us a wholesome set of tools to control the way that
 ### Development checklist.
 Each link within this list is a link to part of this document.
 
-- [ ] Use appropriate [semantic tags](#html5-semantic-tags-roles-and-aria) instead of generic `<div>`s and `<span>`s.
+- Use appropriate [semantic tags](#html5-semantic-tags-roles-and-aria) instead of generic `<div>`s and `<span>`s.
 
-- [ ] Keep any user aware of status/context. Be sure that changes to the page are relayed appropriately to screen readers via [focus management](#focus-management) or other means of [relaying messages](#relaying-status-with-aria-live-regions).
+- Keep any user aware of status/context. Be sure that changes to the page are relayed appropriately to screen readers via [focus management](#focus-management) or other means of [relaying messages](#relaying-status-with-aria-live-regions).
 
-- [ ] Don't rely on hover effects to relay important info. Avoid using [title attributes](#title-attributes). The `<Tooltip>` component can be used to supply a hover functionality in an accessible way.
+- Don't rely on hover effects to relay important info. Avoid using [title attributes](#title-attributes). The `<Tooltip>` component can be used to supply a hover functionality in an accessible way.
 
-- [ ] Keep the application usable via keyboard only. Use [tabIndex = "-1"](#tabindex) and [focus-management](#focus-management) to keep keyboard navigation efficient.
+- Keep the application usable via keyboard only. Use [tabIndex = "-1"](#tabindex) and [focus-management](#focus-management) to keep keyboard navigation efficient.
 
-- [ ] All form controls should be [Labeled appropriately](#labeling). Redundant labeling should be removed.
+- All form controls should be [Labeled appropriately](#labeling). Redundant labeling should be removed.
 
-- [ ] Ensure adequate [color contrast](#color) ratios for styles and be sure that any meaningful color is accompanied by text that also relays the meaning.
+- Ensure adequate [color contrast](#color) ratios for styles and be sure that any meaningful color is accompanied by text that also relays the meaning.
 
 ### HTML5 semantic tags, roles, and ARIA.
 Tags such as `<header>`, `<nav>` and `<dialog>` invoke special behaviors with assistive technology as opposed to their generic counterparts (`<div>` and `<span>`.) When the content of these semantic elements is initially focused, screen readers will specifically announce them, saying 'header', 'navigation', 'dialog' respectively and give AT users context about where their focus/cursor is located within the body of the page. See [W3Schools Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) for a nice reference list of available tags.
