@@ -66,17 +66,7 @@ is fixed.
 ## How Do I Write Tests?
 
 Tests in stripes components are written using
-[Mocha](https://mochajs.org/) via
-[`@bigtest/mocha`](https://github.com/bigtestjs/mocha). At the core of
-this package is the concept of _convergences_ which make testing
-asynchronous applications both robust and fast. They accomplish this
-by freeing us from the burden of worrying about when a component, or
-any updates to a component, will render into the DOM. If a test
-initially fails, as long as the component renders within the timeout,
-the test will rerun and eventually pass. To read more about how this
-strategy works, and why it is so effective, checkout the
-[documentation on
-convergences](https://github.com/bigtestjs/convergence#why-convergence).
+[Mocha](https://mochajs.org/)and interactions and assertions are performed via [Bigtest interactors](https://frontside.com/interactors) 
 
 ### Getting Started
 
@@ -101,7 +91,7 @@ Here's a sample of tests from the `Button` component:
 import React from 'react';
 
 // testing tools
-import { describe, beforeEach, it } from '@bigtest/mocha';
+import { describe, beforeEach, it } from 'mocha';
 import { expect } from 'chai';
 
 // test helpers
@@ -111,11 +101,11 @@ import { mount } from '../../../tests/helpers';
 import Button from '../Button';
 
 // interactor used to perform actions (more on this later)
-import ButtonInteractor from './interactor';
+import { Button as ButtonInteractor } from '@folio/stripes-testing';
 
 // the actual tests
 describe('Button', () => {
-  const button = new ButtonInteractor();
+  const button = ButtonInteractor();
   let clicked;
 
   // 1. Do any setup work necessary
@@ -133,32 +123,35 @@ describe('Button', () => {
 
   // make assertions against the initial rendered state
 
-  it('renders a <button> tag', () => {
-    expect(button.isButton).to.be.true;
-  });
+   it('renders a <button> tag', async () => {
+      await button.is({ button: true });
+    });
 
-  it('renders child text as its label', () => {
-    expect(button.text).to.equal('test');
-  });
+  it('renders with default class', async () => {
+      await button.perform((e) => expect(e.classList.contains(css.default)).to.be.true);
+    });
 
-  it('has an id on the root element', () => {
-    expect(button.id).to.equal('button-test');
-  });
+    it('renders child text as its label', async () => {
+      await button.has({ text: 'test' });
+    });
+
+    it('has an id on the root element', async () => {
+      await button.has({ id: 'button-test' });
+    });
 
   // testing a specific action
 
   describe('clicking the button', () => {
 
-    // 2. Perform any actions on the component that we want to verify
-    beforeEach(async () => {
-      await button.click();
-    });
+    // perform the action...
+      beforeEach(async () => {
+        await button.click();
+      });
 
-    // 3. Make assertions against the desired state
-    it('calls the onClick handler', () => {
-      expect(clicked).to.be.true;
+      it('calls the onClick handler', () => {
+        expect(clicked).to.be.true;
+      });
     });
-  });
 });
 ```
 
