@@ -10,6 +10,7 @@
 * `<MultiSelection>` must handle null filter string. Refs STCOM-1022.
 * Break long words in Callout message. Refs STCOM-1023.
 * Add underline to Button focus indicator. Refs STCOM-1007
+* Provide ability to disable an Icon Button. Refs STCOM-1028
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
