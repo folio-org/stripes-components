@@ -74,16 +74,6 @@ module.exports = async (config) => {
 
     config.module.rules = config.module.rules.concat([
     {
-      test: /\.mdx$/,
-      use: [
-        {
-          loader: 'babel-loader',
-          options: babelOptions,
-        },
-         '@mdx-js/loader'
-      ]
-    },
-    {
       test: /\.(jpe?g|png|gif)$/i,
       loader: "file-loader"
     },
