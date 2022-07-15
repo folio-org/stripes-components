@@ -21,7 +21,7 @@
       }
     }
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "rules": {
     "max-len": ["warn", { "code": 120 }],
     "no-console": ["error", {

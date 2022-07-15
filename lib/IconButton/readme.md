@@ -30,3 +30,4 @@ id | string | Adds an id attribute to the button
 innerClassName | string | Apply a custom class name to the inner element of the component
 aria-label | string | Adds an aria label to the button. Camel-case prop name `ariaLabel` is also supported.
 autoFocus | bool | If this prop is `true`, component will automatically focus on mount | |
+disabled | bool | If this prop is 'true', component will render a disabled button

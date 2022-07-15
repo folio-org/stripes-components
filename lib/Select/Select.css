@@ -23,6 +23,10 @@
       color: #444;
     }
   }
+
+  & option {
+    background-color: var(--bg);
+  }
 }
 
 [dir="rtl"] .selectControl {

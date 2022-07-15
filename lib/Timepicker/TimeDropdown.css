@@ -10,6 +10,10 @@
   box-shadow: var(--shadow);
   z-index: 9999;
 
+  /* needed to prevent clicks going behind the dropdown when attached to
+  the portal #OverlayContainer */
+  pointer-events: all;
+
   /* WebKit desktop browsers add little up down arrows
   to number inputs called spinners. Here we remove them to preserve space. */
   & input[type=number]::-webkit-inner-spin-button,

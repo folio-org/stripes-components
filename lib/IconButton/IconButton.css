@@ -21,6 +21,11 @@
   }
 }
 
+.iconButton:disabled,
+.iconButton[disabled]{
+  pointer-events: none;
+}
+
 /* To avoid global :visited color on anchor tags */
 a.iconButton {
   color: var(--color-icon);

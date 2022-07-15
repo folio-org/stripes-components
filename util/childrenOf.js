@@ -7,8 +7,6 @@
 * string or a `<FormattedMessage>` and the range allowed by `PropTypes.node`
 * is too wide.
 */
-import { areComponentsEqual } from 'react-hot-loader';
-
 function getDisplayName(WrappedComponent) {
   return WrappedComponent.displayName || WrappedComponent.name || 'Component';
 }
@@ -39,7 +37,7 @@ export default function childrenOf(...types) {
   return requirable((props, propName, componentName, location = 'prop', propFullName = propName) => {
     const component = props[propName];
 
-    const check = c => types.some(type => areComponentsEqual(type, c.type));
+    const check = c => types.some(type => type === c.type);
     const valid = Array.isArray(component) ? component.every(check) : check(component);
     if (!valid) {
       return new Error(

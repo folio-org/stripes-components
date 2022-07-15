@@ -33,11 +33,13 @@ html {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
     "Adobe Arabic",
-    "Myriad     abic",
+    "Myriad Arabic",
     "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro",
-    メイリオ    Meiryo,
+    メイリオ,
+    Meiryo,
     "ＭＳ Ｐゴシック",
+    "MS PGothic",
     sans-serif;
   color: var(--color-text);
   letter-spacing: 0.04em;
@@ -66,19 +68,25 @@ html {
       "Segoe UI Emoji",
       "Segoe UI Symbol",
       "Adobe Arabic",
-      "Myriad     abic",
+      "Myriad Arabic",
       "ヒラギノ角ゴ Pro W3",
       "Hiragino Kaku Gothic Pro",
-      メイリオ    Meiryo,
+      メイリオ,
+      Meiryo,
       "ＭＳ Ｐゴシック",
+      "MS PGothic",
       sans-serif;
   }
 }
 
 /* global "print" styles below was added for solve the problem with extra blank page generating on printing in all modules */
 @media print {
-  body {
-    height: auto !important;
+  html, body {
+    margin: 0 !important;
+  }
+
+  @page {
+    margin: var(--page-margin-default);
   }
 }
 
