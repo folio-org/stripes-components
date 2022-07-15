@@ -147,14 +147,14 @@ Component | doc | categories
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
 ## Accessibility
-* [Accessibility overview](docs/AccessibilityOverview.md) - general overview of some utilities that stripes-components provides.
-* [Accessibility for developers](docs/AccessibilityDevPrimer.md) - dev-specific primer for accessibility. More direct code/component reference - a great intro for those who are unfamiliar to accessibility.
+* [Accessibility overview]guides/AccessibilityOverview.md) - general overview of some utilities that stripes-components provides.
+* [Accessibility for developers]guides/AccessibilityDevPrimer.md) - dev-specific primer for accessibility. More direct code/component reference - a great intro for those who are unfamiliar to accessibility.
 
 ## Patterns
 Useful recipes for UI patterns appearing in FOLIO modules.
 
-* [Show/Hide Columns in MCL](docs/patterns/ColumnSelector.md) -- Give users the ability to select only the data they need to see.
-* [Accessible Routing](docs/patterns/AccessibleRouting.md) -- Detail the approaches to implementing accessible focus management.
+* [Show/Hide Columns in MCL]guides/patterns/ColumnSelector.md) -- Give users the ability to select only the data they need to see.
+* [Accessible Routing]guides/patterns/AccessibleRouting.md) -- Detail the approaches to implementing accessible focus management.
 
 ## Testing
 Stripes Components' tests are automated browser tests powered by
@@ -173,7 +173,7 @@ This will spin up Karma via
 [`stripes-cli`](https://github.com/folio-org/stripes-cli) and run all
 tests locally in the Chrome browser.
 
-See our [testing documentation](docs/Testing.md) for more information
+See our [testing documentation]guides/Testing.md) for more information
 on writing tests.
 
 ## FAQ
@@ -192,8 +192,8 @@ and
 
 Some related documents:
 
-* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
-* [CSS for stripes-components development](docs/CSSinStripes.md)
+* [Guide to UI Module Layout Components]guides/UIModuleLayout.md)
+* [CSS for stripes-components development]guides/CSSinStripes.md)
 * [Change-log](CHANGELOG.md)
 
 See project [STCOM](https://issues.folio.org/browse/STCOM) (STripes COMponents)

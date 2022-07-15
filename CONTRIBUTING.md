@@ -10,4 +10,4 @@ Before adding a new component, be sure that your use-case isn't already covered 
 Please limit PR's in scope. A PR with a high number of changed files can be quite difficult to effectively review. The last thing that we want is to merge in the fix to a single problem while introducing 4 or 5 new ones at the same time.
 
 ## Testing
-Component tests are automated browser tests powered by karma and written using mocha syntax. See [Testing in Stripes Components](docs/Testing.md) for more information.
+Component tests are automated browser tests powered by karma and written using mocha syntax. See [Testing in Stripes Components]guides/Testing.md) for more information.
