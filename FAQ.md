@@ -17,12 +17,12 @@ To see components in action, our storybook can be run locally via the command
 
    1. Reach out to the core FOLIO team on Slack, or via a JIRA in the STCOM project at [issues.folio.org](https://issues.folio.org) We can make suggestions for alternative stripes-components or props that may need to be applied to achieve the necessary results.
    2. If your use-case cannot be solved with the current state of a component, the path forward is to create a PR for the change on the stripes-components repo. The change should meet the following criteria:
-      1. Be mindful of accessibility in the rendered markup. Check out our [Accessibility guide]guides/Accessibility.md)
-      2. Have additional tests written and passing. See our [Testing guide](TESTING.md)
+      1. Be mindful of accessibility in the rendered markup. Check out our [Accessibility guide](guides/AccessibilityDevPrimer.stories.mdx)
+      2. Have additional tests written and passing. See our [Testing guide](guides/testing.stories.mdx)
       3. Be documented for other developers:
          * in the CHANGELOG.md
          * in the component's README.md if it affects the component's API or is noteworthy to future users of the components.
-      4. Be in-line with [stripes-components style guidelines]guides/CSSinStripes.md)
+      4. Be in-line with [stripes-components style guidelines](guides/CSSinStripes.stories.mdx)
 
 
 4. **There’s not a component that meets the use case I have. What should I do?**

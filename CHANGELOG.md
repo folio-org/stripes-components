@@ -13,7 +13,6 @@
 * Fix selection bug where pressing the enter key while no options are available will clear the selected value. fixes STCOM-1024.
 * Fix TextField bug where "focused" state is retained if component is disabled while it's in focus. fixes STCOM-818.
 * Provide ability to disable an Icon Button. Refs STCOM-1028
-* "docs" folder renamed to "guides" for sake of storybook.
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
@@ -809,7 +808,7 @@
 * Add `<FocusLink>` component. Part of STRPCOMP-7. [docs](lib/FocusLink/readme.md)
 * `<MultiColumnList>` now passes columns, columnWidths, and cell aria-labels to rowFormatter so that they can be used in custom row templates. Fixes STRPCOMP-11
 * `<MultiColumnList>` `columnWidths` prop is now functional. Fixes STRPCOMP-12. [docs](lib/MultiColumnList/readme.md)
-* Added documentation for [handling CSS]guides/CSSinStripes.md) and [module layout components]guides/UIModuleLayout.md). Fixes STRPCOMP-10.
+* Added documentation for [handling CSS](docs/CSSinStripes.md) and [module layout components](docs/UIModuleLayout.md). Fixes STRPCOMP-10.
 * Cured shifting of field buttons on form field validation.
 * Keep primary address field name consistent. STRPCOMP-4.
 * `<EditableList>` accepts optional `nameKey` argument. Needed for STRPCOMP-8.
