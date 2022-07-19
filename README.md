@@ -54,7 +54,7 @@ Component | doc | categories
 [`<AutoSuggest>`](lib/AutoSuggest) | [doc](lib/AutoSuggest/readme.md) | control
 [`<Avatar>`](lib/Avatar) | [doc](lib/Avatar/readme.md) | data-display
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
-[`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) | control
+[`<Button>`](lib/Button) | [doc](lib/Button/readme.md) | control
 [`<ButtonGroup>`](lib/ButtonGroup) | [doc](lib/ButtonGroup/readme.md) | control
 [`<Callout>`](lib/Callout) | [doc](lib/Callout/readme.md) | user-feedback
 [`<Card>`](lib/Card) | [doc](lib/Card/readme.md) | structure
@@ -173,7 +173,7 @@ This will spin up Karma via
 [`stripes-cli`](https://github.com/folio-org/stripes-cli) and run all
 tests locally in the Chrome browser.
 
-See our [testing documentation](guides/Testing.stroies.mdx) for more information
+See our [testing documentation](guides/Testing.stories.mdx) for more information
 on writing tests.
 
 ## FAQ
