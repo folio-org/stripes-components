@@ -8,4 +8,4 @@ When you would normally use `<FormattedDate>` to display a date field interprete
 
 ## Props
 
-The same as those of [`react-intl`'s `<FormattedDate>`](https://github.com/formatjs/react-intl/blob/master/docs/Components.md#formatteddate).
+The same as those of [`react-intl`'s `<FormattedDate>`](https://formatjs.io/docs/react-intl/components#formatteddate).

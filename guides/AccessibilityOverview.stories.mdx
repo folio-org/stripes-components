@@ -3,7 +3,7 @@ import { Meta } from '@storybook/addon-docs';
 <Meta title="Accessibility" />
 
 # Accessibility in Stripes
-This document is an overview of accessibility in the stripes-components libraries... for more developer-centric documentation, please refer to our [Accessibility Primer for Developers](AccessibilityDevPrimer.md)
+This document is an overview of accessibility in the stripes-components libraries... for more developer-centric documentation, please refer to our [Accessibility Primer for Developers](AccessibilityDevPrimer.stories.mdx)
 
 Accessibility involves the navigability, legibility, and general usability of the web application. Conversations around accessibility typically involve the engagement of users that have impaired vision, motor-skills or a learning disability, but it can have great and positive impact on the experience of fully capable users as well. Much of the time it involves how assistive technology (screen readers, etc.) interact with the content of the web page - but other areas involve the color contrast of styling, font choices/sizes, lack of input segregation (mouse vs touch vs keyboard-only navigation).
 
@@ -37,7 +37,7 @@ Productivity is key. The UI that allows users to work faster and increase effici
 
 Focus is the key to the context of assistive technology. The focused element can be the text-input where a user is entering a value, a highlighted radio-button, or an outlined link that's awaiting a press of the enter key to help the user travel to another page. Stripes-components manage focus where necessary, making assurance that the User's focus indicator is where it needs to be when it needs to be there. Triggered actions might move focus to a different control on the page to save the user from having to navigate across numerous tabbable elements to get to the location in the UI where a change needs to be made. `<FocusLink>` is a component that can be used to make sections of content "skip-able" if so desired. This works well for skipping sets of filters after a search field and shifting focus directly to the results listing.
 
-See the patterns documentation [Accessible Routing in FOLIO](patterns/AccessibleRouting.md) to implement accessible focus management for your application's routing.
+See the patterns documentation [Accessible Routing in FOLIO](patterns/AccessibleRouting.stories.mdx) to implement accessible focus management for your application's routing.
 
 ## Testing 
 ### Keyboard:

@@ -8,7 +8,7 @@ module.exports = {
     postcss: false, // we use our own postcss setup
   },
   stories: [{
-    directory: '../docs',
+    directory: '../guides',
     titlePrefix: 'Guides',
     files: '**/*.mdx'
   },
