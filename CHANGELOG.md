@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 10.2.1 IN PROGRESS
+
 * Fix 12-hour formatting in `dateTimeUtils` `getLocalizedTimeFormatInfo`. Fixes STCOM-1017
 * Add `inputRef` prop to `<Timepicker>`. Refs STCOM-1016
 * `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
