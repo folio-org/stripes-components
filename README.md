@@ -173,7 +173,7 @@ This will spin up Karma via
 [`stripes-cli`](https://github.com/folio-org/stripes-cli) and run all
 tests locally in the Chrome browser.
 
-See our [testing documentation](guides/Testing.stroies.mdx) for more information
+See our [testing documentation](guides/Testing.stories.mdx) for more information
 on writing tests.
 
 ## FAQ
