@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 10.2.1 IN PROGRESS
+## [10.2.1](https://github.com/folio-org/stripes-components/tree/v10.2.1) (2022-07-25)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.2.1)
 
 * Fix 12-hour formatting in `dateTimeUtils` `getLocalizedTimeFormatInfo`. Fixes STCOM-1017
 * Long titles do not fit in the confirmation modal window header. Refs STCOM-1020
