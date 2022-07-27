@@ -3,7 +3,7 @@
 .modalFooterButtons {
   align-items: center;
   display: flex;
-  flex-flow: row-reverse wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: calc((var(--control-margin-bottom) / 4) * -1) 0;
   width: 100%;
@@ -17,3 +17,12 @@
     }
   }
 }
+
+.flexDirectionRowReverse {
+  flex-direction: row-reverse;
+}
+
+.flexDirectionRow {
+  flex-direction: row;
+}
+

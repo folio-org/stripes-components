@@ -30,6 +30,7 @@ Name | type | description | default | required
 `id` | string | Used in the "id" attribute of the modal div. | |
 `label` | string | Descriptive title for top of modal. | | &#10004;
 `onClose` | func | Callback that signals intent to close window. This callback does not actually close the modal, but can call code within its body that will change the boolean passed to the `open` prop. | |
+`onEscapeKeyDown` | bool | Modal can be dismissed by clicking the background overlay. | false |
 `onOpen` | func | Callback fired when modal opens. | noop |
 `open` | bool | Deciding value for rendering the modal(true) or not(false). | false | &#10004;
 `restoreFocus` | bool | If true, the modal will restore focus to previously focused element once modal is hidden. | true |

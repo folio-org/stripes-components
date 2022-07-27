@@ -32,3 +32,4 @@ const footer = (
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 children | | Set of `<Button>`s. |  |
+buttonsAlignReverse | bool | Reverse the button alignment | false |
