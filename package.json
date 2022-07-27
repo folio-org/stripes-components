@@ -51,6 +51,7 @@
     "@folio/stripes-testing": "^4.3.0",
     "@mdx-js/loader": "^1.6.22",
     "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addons": "^6.3.6",
     "@storybook/builder-webpack5": "^6.3.12",
     "@storybook/manager-webpack5": "^6.3.12",
