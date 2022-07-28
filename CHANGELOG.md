@@ -5,6 +5,7 @@
 * Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
 * `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
 * Pass `modifiers` prop to correct component in `<MultiSelection>`. Fixes STCOM-1013.
+* Fix regex matching of search options in `<AdvancedSearch>`. Fixes STCOM-1031.
 
 ## [10.2.1](https://github.com/folio-org/stripes-components/tree/v10.2.1) (2022-07-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.2.1)
