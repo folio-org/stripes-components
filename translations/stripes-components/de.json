@@ -665,8 +665,8 @@
     "languages.nap": "Neapolitanisch",
     "languages.nau": "Nauruanisch",
     "languages.nav": "Navajo-Sprache",
-    "languages.nbl": "Ndebele, South; South Ndebele",
-    "languages.nde": "Ndebele, North; North Ndebele",
+    "languages.nbl": "Ndebele-Sprache <Transvaal>",
+    "languages.nde": "Ndebele-Sprache <Simbabwe>",
     "languages.ndo": "Ndonga",
     "languages.nds": "Niederdeutsch",
     "languages.nep": "Nepali",
@@ -875,9 +875,9 @@
     "advancedSearch.emptyFirstRowError": "Suchanfrage in das erste Suchfeld eingeben",
     "Timepicker.hoursLabel": "Stunden",
     "Timepicker.minutesLabel": "Minuten",
-    "Timepicker.PeriodLabel": "AM or PM",
-    "Timepicker.SetTimeLabel": "Set time",
-    "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
+    "Timepicker.PeriodLabel": "AM oder PM",
+    "Timepicker.SetTimeLabel": "Zeit einstellen",
+    "Timepicker.ScreenReaderLabel": "{label}-Format ist {screenReaderFormat} Pfeil nach unten zum Aufrufen des Uhrzeit-Dialogs verwenden. {screenReaderMessage}",
     "Timepicker.LeaveDialog": "leave dialog",
     "selection.controlLabel": "Select control"
 }
