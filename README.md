@@ -54,7 +54,7 @@ Component | doc | categories
 [`<AutoSuggest>`](lib/AutoSuggest) | [doc](lib/AutoSuggest/readme.md) | control
 [`<Avatar>`](lib/Avatar) | [doc](lib/Avatar/readme.md) | data-display
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
-[`<Button>`](lib/Button) | [doc](lib/Button/readme/general.md) | control
+[`<Button>`](lib/Button) | [doc](lib/Button/readme.md) | control
 [`<ButtonGroup>`](lib/ButtonGroup) | [doc](lib/ButtonGroup/readme.md) | control
 [`<Callout>`](lib/Callout) | [doc](lib/Callout/readme.md) | user-feedback
 [`<Card>`](lib/Card) | [doc](lib/Card/readme.md) | structure
@@ -147,14 +147,14 @@ Component | doc | categories
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
 ## Accessibility
-* [Accessibility overview](docs/AccessibilityOverview.md) - general overview of some utilities that stripes-components provides.
-* [Accessibility for developers](docs/AccessibilityDevPrimer.md) - dev-specific primer for accessibility. More direct code/component reference - a great intro for those who are unfamiliar to accessibility.
+* [Accessibility overview](guides/AccessibilityOverview.stories.mdx) - general overview of some utilities that stripes-components provides.
+* [Accessibility for developers](guides/AccessibilityDevPrimer.stories.mdx) - dev-specific primer for accessibility. More direct code/component reference - a great intro for those who are unfamiliar to accessibility.
 
 ## Patterns
 Useful recipes for UI patterns appearing in FOLIO modules.
 
-* [Show/Hide Columns in MCL](docs/patterns/ColumnSelector.md) -- Give users the ability to select only the data they need to see.
-* [Accessible Routing](docs/patterns/AccessibleRouting.md) -- Detail the approaches to implementing accessible focus management.
+* [Show/Hide Columns in MCL](guides/patterns/ColumnSelector.stories.mdx) -- Give users the ability to select only the data they need to see.
+* [Accessible Routing](guides/patterns/AccessibleRouting.stories.mdx) -- Detail the approaches to implementing accessible focus management.
 
 ## Testing
 Stripes Components' tests are automated browser tests powered by
@@ -173,7 +173,7 @@ This will spin up Karma via
 [`stripes-cli`](https://github.com/folio-org/stripes-cli) and run all
 tests locally in the Chrome browser.
 
-See our [testing documentation](docs/Testing.md) for more information
+See our [testing documentation](guides/Testing.stories.mdx) for more information
 on writing tests.
 
 ## FAQ
@@ -192,8 +192,8 @@ and
 
 Some related documents:
 
-* [Guide to UI Module Layout Components](docs/UIModuleLayout.md)
-* [CSS for stripes-components development](docs/CSSinStripes.md)
+* [Guide to UI Module Layout Components](guides/UIModuleLayout.stories.mdx)
+* [CSS for stripes-components development](guides/CSSinStripes.stories.mdx)
 * [Change-log](CHANGELOG.md)
 
 See project [STCOM](https://issues.folio.org/browse/STCOM) (STripes COMponents)
