@@ -16,6 +16,7 @@
     "eslint": "eslint ./",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
+    "test-dev": "stripes test karma --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook-build": "build-storybook -c .storybook -o .out"
   },
