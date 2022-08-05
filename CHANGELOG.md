@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 10.2.2 IN PROGRESS
+## [10.2.2](https://github.com/folio-org/stripes-components/tree/v10.2.2) (2022-08-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.1...v10.2.2)
 
 * Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
 * `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
