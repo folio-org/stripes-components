@@ -15,6 +15,7 @@
 * Provide ability to disable an Icon Button. Refs STCOM-1028.
 * `MultiSelection` support for `aria-label`. Refs STCOM-977.
 * Fix regex matching of search options in `<AdvancedSearch>`. Fixes STCOM-1031.
+* Export `staticFirstWeekDay` and `staticLangCountryCodes` from `Datepicker`. Refs STCOM-1038.
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
