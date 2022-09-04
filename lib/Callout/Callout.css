@@ -44,6 +44,7 @@
     flex-grow: 2;
     padding: 0 6px;
     font-size: var(--font-size-medium);
+    word-break: break-word;
   }
 
   &.error {

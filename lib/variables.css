@@ -45,6 +45,7 @@
   --input-horizontal-padding: var(--gutter-static-one-third);
   --input-vertical-padding: 0;
   --container-max-width: 80rem;
+  --page-margin-default: 0.4in;
 
   /**
    * Font-size

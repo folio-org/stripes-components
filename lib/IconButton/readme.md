@@ -24,9 +24,10 @@ iconSize | string | Size of the icon inside the button (small, medium or large)
 style | object | Set the inline style
 onClick | function | Attach an event handler
 href | string | Turns the button into a link (instead of using an onClick handler)
-to | string or object | accepts `to` prop similar to `<Link>` from `react-router` [Details for `<Link>`](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/Link.md).
+to | string or object | accepts `to` prop similar to `<Link>` from `react-router` [Details for `<Link>`](https://github.com/remix-run/react-router/blob/3679bafb744c1fb1b495eefdacce0a4fbbb9197a/packages/react-router-dom/docs/api/Link.md).
 badgeCount | string / number | Display a small number badge on the IconButton
 id | string | Adds an id attribute to the button
 innerClassName | string | Apply a custom class name to the inner element of the component
 aria-label | string | Adds an aria label to the button. Camel-case prop name `ariaLabel` is also supported.
 autoFocus | bool | If this prop is `true`, component will automatically focus on mount | |
+disabled | bool | If this prop is 'true', component will render a disabled button
