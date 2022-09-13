@@ -52,6 +52,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  text-align: center;
+  word-break: break-all;
   font-size: var(--font-size-medium);
 }
 

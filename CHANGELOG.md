@@ -1,5 +1,22 @@
 # Change history for stripes-components
 
+## 10.2.1 IN PROGRESS
+* Fix 12-hour formatting in `dateTimeUtils` `getLocalizedTimeFormatInfo`. Fixes STCOM-1017
+* Add `inputRef` prop to `<Timepicker>`. Refs STCOM-1016
+* `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
+* Long titles do not fit in the confirmation modal window header. Refs STCOM-1020
+* Pass `modifiers` prop to correct component in `<MultiSelection>`. Fixes STCOM-1013.
+* Add `inputRef` prop to `<Selection>`. Refs STCOM-647.
+* `<MultiSelection>` must handle null filter string. Refs STCOM-1022.
+* Break long words in Callout message. Refs STCOM-1023.
+* Add underline to Button focus indicator. Refs STCOM-1007
+* Fix selection bug where pressing the enter key while no options are available will clear the selected value. fixes STCOM-1024.
+* Fix TextField bug where "focused" state is retained if component is disabled while it's in focus. fixes STCOM-818.
+* Provide ability to disable an Icon Button. Refs STCOM-1028.
+* `MultiSelection` support for `aria-label`. Refs STCOM-977.
+* Fix regex matching of search options in `<AdvancedSearch>`. Fixes STCOM-1031.
+* Button: Button link style has a min-height, which can offset it from text. Fixes STCOM-1039.
+
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
 
@@ -48,6 +65,7 @@
 * Add the ability to pass a className to the rows container in the `<MultiColumnList>`. Refs STCOM-1009.
 * MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
 * Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
+* Record detail panes are empty when printed. Refs STCOM-975.
 
 ## [10.1.5](https://github.com/folio-org/stripes-components/tree/v10.1.5) (2022-06-06)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.4...v10.1.5)
