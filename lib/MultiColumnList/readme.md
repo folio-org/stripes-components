@@ -93,9 +93,9 @@ Name | type | description | default | required
 `maxHeight` | number | the maximum height that the list should grow to before scrolling its list body in pixels. | |
 `nonInteractiveHeaders` | array of strings | Pass an array of column names to make their column headers non-interactive. This is only relevant if you have supplied an `onHeaderClick`-callback and you only want some of the header columns to be interactable. | [] |
 `onHeaderClick` | func[event, headerMetadata] | callback function invoked when one of the cells in the header is clicked (typically to choose a sort-order). By default, headerMetadata includes the column's data name as well as its alias, in case a object is supplied to the columnMapping prop. | |
-`onNeedMoreData` | func(`askAmount`, `index`) | Callback for fetching more data. If this prop is provided and a `totalCount` prop is provided, but un-reached by the count of loaded data items, `askAmount` will ask for the remainder of items or the `pageAmount` prop, whichever is less. This can be used to fulfill `limit` query parameters. `rowIndex` can be used to fulfill an `offset` query parameter. | |
 `onMarkPosition` | func(positionObject) | Called when an item is focused within the list. The position object consists of a 'selector' string and a client-space offset in pixels. This can be fed back to the `itemToView` prop and, upon rendering the list, MCL will scroll to the item, maintaining the same visual position. `itemToView` is currently only working for **non-virtualized** lists.| |
-`onResetMark` | func | Called if the selector of the `ItemToView` isn't found. Modules can use this to reset their cached value. | |
+`onMarkReset` | func | Called if the selector of the `ItemToView` isn't found. Modules can use this to reset their cached value. | |
+`onNeedMoreData` | func(`askAmount`, `index`) | Callback for fetching more data. If this prop is provided and a `totalCount` prop is provided, but un-reached by the count of loaded data items, `askAmount` will ask for the remainder of items or the `pageAmount` prop, whichever is less. This can be used to fulfill `limit` query parameters. `rowIndex` can be used to fulfill an `offset` query parameter. | |
 `onRowClick` | function(`event`, `item`) | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | |
 `onScroll` | func | Callback for scrolling of list body. | `noop` |
 `pageAmount` | number | The base amount of data to pass as the `askAmount` parameter for the `onNeedMoreData` prop | `30` |
@@ -107,7 +107,6 @@ Name | type | description | default | required
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |
 `selectedClass` | string | override class for the default style applied to selected rows. | built-in |
 `selectedRow` | object | **legacy API** Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | |
-`sortedClass` | string | override class for the default style applied to headers of sorted columns. | built-in |
 `sortedColumn` | string | Used to apply styling to the appropriate column. | |
 `sortOrder` | string | 'ascending' or 'descending' direction. | |
 `striped` | bool | Adds striped style to rows | `true` |
