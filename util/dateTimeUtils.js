@@ -68,7 +68,7 @@ export const getLocaleDateFormat = ({ intl }) => {
 // getLocalizedTimeFormatInfo('en-US') returns:
 //   {
 //     separator: ':',
-//     timeFormat: 'HH:mm A',
+//     timeFormat: 'hh:mm A',
 //     dayPeriods: ['am', 'pm'], // day periods: 12 hour time format.
 //   }
 
