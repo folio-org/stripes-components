@@ -18,6 +18,7 @@
 * Export `staticFirstWeekDay` and `staticLangCountryCodes` from `Datepicker`. Refs STCOM-1038.
 * Button: Button link style has a min-height, which can offset it from text. Fixes STCOM-1039.
 * The vertical scroll bar displays at the second pane when it doesn't need. Fixes STCOM-1044.
+* Make MCL row unclickable when a placeholder row is displayed. Refs STCOM-1046.
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
