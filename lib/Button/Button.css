@@ -205,6 +205,7 @@
     padding: 0;
     width: auto;
     height: auto;
+    min-height: unset;
     border-color: var(--color-link);
     border-style: none;
     box-sizing: content-box;
@@ -213,6 +214,7 @@
     cursor: pointer;
     text-align: start;
     text-decoration: underline;
+    text-underline-offset: 2px;
     appearance: none;
     margin-bottom: 0;
 
