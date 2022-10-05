@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
 
-<Meta title="Automated Accessibility Testing" />
+<Meta title="Accessibility/Automated Accessibility Testing" />
 
 ## Automated Accessibility Testing
 
@@ -23,7 +23,7 @@ expect.extend(toHaveNoViolations)
 it('should demonstrate this matcher`s usage with react testing library', async () => {
   const { container } = render(<App/>)
   const results = await axe(container)
-  
+
   expect(results).toHaveNoViolations()
 })
 ```
@@ -45,7 +45,7 @@ describe('render component', () => {
       <Datepicker />
     );
   });
-  
+
   // defaults can be used as a standalone callback to 'it()' calls.
   it('render with no axe errors', runAxeTest);
 });
