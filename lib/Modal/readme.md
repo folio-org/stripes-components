@@ -36,3 +36,38 @@ Name | type | description | default | required
 `scope` | string | Parent element for modal. Defaults to 'module' which keeps the main navigation visible. A value of 'root' covers the entire view. | 'module' |
 `size` | string | `small` `medium` or `large` - sets the max-width of the window to `550px`, `750px`, `1100px`, respectively | 'medium' | 
 `wrappingElement` | string | Change the HTML-tag of the wrapping element. Useful if the modal is a form. | |
+
+### Focus management
+By default, the modal will focus its outer element. Internal elements of the modal can be focused using refs and a simple function passed to the `onOpen` prop. For example, the implementation of `<ConfirmationModal>` focuses its primary action using `onOpen`. This code is abridged, but you can [see the full source](../ConfirmationModal/ConfirmationModal.js)
+
+```
+// basic handler function
+const focusFooterPrimary = ref => ref.current.focus();
+
+const ConfirmationModal = () => {
+  // Initialize ref to footer button.
+  const footerPrimary = useRef(null);
+
+  // Set up confirmation footer, applying the ref to the button we want focus to move to.
+  const footer = (
+    <ModalFooter>
+      <Button
+        ...
+        ref={footerPrimary}
+      >
+        {confirmLabel}
+      </Button>
+    </ModalFooter>
+  );
+
+  // Apply the focusFooterPrimary function in the Modal declaration.
+  return(
+    <Modal
+      ...
+      onOpen={() => { focusFooterPrimary(footerPrimary); }}
+      footer={footer}
+    >
+  );
+}
+
+```
