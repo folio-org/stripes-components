@@ -61,7 +61,7 @@ This error is announced as a non-serious error when axe cannot determine text fr
 
 #### Landmarks should have unique labeling
 
-This can happen with accordions and inputs share the same element for labels, ex: a "Tags" input within an accordion that's labeled by the accordion's label via aria-labelledby. Apply a unique `aria-label` prop to the input to disambiguate it *or use the `label` prop if the input is required.
+This can happen with accordions and inputs share the same element for labels, ex: a "Tags" input within an accordion that's labeled by the accordion's label via aria-labelledby. Apply a unique `aria-label` prop to the input to disambiguate it *or* use the `label` prop if the input is required.
 
 
 #### Nested interactive elements
@@ -76,7 +76,7 @@ Certain aria roles can expect other aria roles as immediate children. It's best 
 
 #### Links with the same name must have a similar purpose
 
-This might be common in list entries (search results) that can have non-unique names, since the links will go to different locations, but the visible label will be the same. Ensure that any anchor-rendering components (`<Link>``<Button>``<TextLink>`) within your applications have unique, descriptive labels.
+This might be common in list entries (search results) that can have non-unique names, since the links will go to different locations, but the visible label will be the same. Ensure that any anchor-rendering components (`<Link>`, `<Button>`, `<TextLink>`) within your applications have unique, descriptive labels.
 
 
 #### Axe-core github issues for outstanding false positives
