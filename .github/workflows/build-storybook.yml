@@ -28,6 +28,17 @@ jobs:
       - name: Set yarn config
         run: yarn config set @folio:registry $FOLIO_NPM_REGISTRY
 
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Sync storybook branch
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: master
+          target_branch: storybook
+          github_token: ${{ github.token }}
+
       - name: checkout storybook branch
         uses: actions/checkout@v3
         with:
@@ -36,18 +47,13 @@ jobs:
       - name: Run yarn install
         run: yarn install --ignore-scripts
 
-      - name: update from master
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-
       - name: Build storybook
-        run: |
-          git merge master
-          npm run storybook-build
+        run: npm run storybook-build
 
       - name: Publish storybook
         run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
           git commit -am "update storybook"
           git push origin storybook
