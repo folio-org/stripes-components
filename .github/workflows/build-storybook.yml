@@ -43,7 +43,7 @@ jobs:
 
       - name: Build storybook
         run: |
-          git merge origin/master
+          git merge master
           npm run storybook-build
 
       - name: Publish storybook
