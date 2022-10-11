@@ -8,10 +8,6 @@
   will-change: transform;
   overflow: hidden;
 
-  & .paneset {
-    overflow: visible;
-  }
-
   & .paneset,
   &.nested {
     position: relative;
@@ -19,6 +15,10 @@
 
   &.static {
     position: static;
+  }
+
+  @media print {
+    overflow: visible;
   }
 }
 

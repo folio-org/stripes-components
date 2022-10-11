@@ -73,7 +73,7 @@
     "readonly": "Somente leitura",
     "readMore": "Leia Mais",
     "tableEmpty": "A lista não contém itens",
-    "metaSection.sourceNoData": "Fonte: Processamento automatizado",
+    "metaSection.sourceNoData": "Fonte: usuário desconhecido",
     "metaSection.recordCreatedNoData": "Registro criado: Desconhecido",
     "metaSection.recordLastUpdatedNoData": "Última atualização do registro: Desconhecido",
     "saveAndClose": "Salvar e fechar",

@@ -73,7 +73,7 @@
     "readonly": "للقراءة فقط",
     "readMore": "قراءة المزيد",
     "tableEmpty": "لا تحتوي القائمة على مواد",
-    "metaSection.sourceNoData": "المصدر: عملية مؤتمتة",
+    "metaSection.sourceNoData": "المصدر: مستخدم غير معروف",
     "metaSection.recordCreatedNoData": "تم إنشاء التسجيلة في: غير معروف",
     "metaSection.recordLastUpdatedNoData": "أخر تحديث للتسجيلة: غير معروف",
     "saveAndClose": "حفظ وإغلاق",

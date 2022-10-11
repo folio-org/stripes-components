@@ -3,6 +3,9 @@
 /**
 * Default styling
 */
+:root {
+  --link-color-hover: #23385a;
+}
 
 .button {
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
@@ -59,6 +62,11 @@
     margin-left: 0;
   }
 
+  &:focus {
+    text-decoration: underline;
+    text-decoration-skip: objects;
+    text-decoration-thickness: 2px;
+  }
   /**
   * Colors
   */
@@ -193,11 +201,29 @@
   }
 
   &.link {
-    background-color: transparent;
-    border: 1px solid transparent;
+    display: inline;
+    padding: 0;
+    width: auto;
+    height: auto;
+    min-height: unset;
+    border-color: var(--color-link);
+    border-style: none;
+    box-sizing: content-box;
+    font: inherit;
+    color: var(--color-link);
     cursor: pointer;
-    color: var(--primary);
-    padding: 0.25em;
+    text-align: start;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    appearance: none;
+    margin-bottom: 0;
+
+    &:hover,
+    &:focus {
+      outline-style: dotted;
+      outline-width: 1px;
+      color: var(--link-color-hover);
+    }
   }
 
   &.bottomMargin0,

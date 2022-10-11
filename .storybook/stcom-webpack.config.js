@@ -8,6 +8,9 @@
 const path = require('path');
 const { babelOptions } = require('@folio/stripes-cli');
 
+// strip react-refresh since storybook already uses it
+const adjustedBabelOptions = Object.assign(babelOptions, { plugins: babelOptions.plugins.filter((p) => !p.includes('react-refresh')) });
+
 module.exports = async (config) => {
   // Replace Storybook's own CSS config
   // get index of their css loading rule...
@@ -66,20 +69,10 @@ module.exports = async (config) => {
         return false;
       },
       loader: 'babel-loader',
-      options: babelOptions,
+      options: adjustedBabelOptions,
     };
 
     config.module.rules = config.module.rules.concat([
-    {
-      test: /\.mdx$/,
-      use: [
-        {
-          loader: 'babel-loader',
-          options: babelOptions,
-        },
-         '@mdx-js/loader'
-      ]
-    },
     {
       test: /\.(jpe?g|png|gif)$/i,
       loader: "file-loader"
