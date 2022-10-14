@@ -61,5 +61,5 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -am "update storybook"
-          git pull origin storybook -Xours
+          git pull --rebase origin/storybook -Xours
           git push origin storybook
