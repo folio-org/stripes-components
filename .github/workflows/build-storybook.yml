@@ -42,7 +42,7 @@ jobs:
       - name: checkout storybook branch
         uses: actions/checkout@v3
         with:
-          ref: storybook,
+          ref: storybook
 
       - name: Run yarn install
         run: yarn install --ignore-scripts
