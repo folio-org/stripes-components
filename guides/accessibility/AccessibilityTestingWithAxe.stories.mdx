@@ -1,0 +1,84 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Accessibility/Automated Accessibility Testing" />
+
+## Automated Accessibility Testing
+
+To help us maintian inclusively interactive applications, we employ automated accessibilty testing via the `axe-core` tool.
+
+### RTL/Jest using jest-axe
+
+The [jest-axe](https://github.com/nickcolley/jest-axe) custom jest matcher can be used to run tests and apply custom configurations
+in RTL/Jest tests. See the library link for configuration instructions.
+
+
+```
+const React = require('react')
+const App = require('./app')
+
+const { render } = require('@testing-library/react')
+const { axe, toHaveNoViolations } = require('jest-axe')
+expect.extend(toHaveNoViolations)
+
+it('should demonstrate this matcher`s usage with react testing library', async () => {
+  const { container } = render(<App/>)
+  const results = await axe(container)
+
+  expect(results).toHaveNoViolations()
+})
+```
+
+### Browser-based tests
+
+The [runAxeTest export from @folio/stripes-testing](https://github.com/folio-org/stripes-testing/blob/master/doc/axeTesting.md) is best for
+running axe in browser-based tests. See the library link for configuration instructions.
+
+
+```
+import { runAxeTest } from '@folio/stripes-testing';
+...
+
+// Given an example where a component or page is rendered. (Mocha/BigTest tests)
+describe('render component', () => {
+  beforeEach(async () => {
+    await mount(
+      <Datepicker />
+    );
+  });
+
+  // defaults can be used as a standalone callback to 'it()' calls.
+  it('render with no axe errors', runAxeTest);
+});
+
+```
+
+### Common errors/solutions
+
+#### Elements must have sufficient color contrast
+
+This error is announced as a non-serious error when axe cannot determine text from an elements background color for various reasons.
+
+
+#### Landmarks should have unique labeling
+
+This can happen with accordions and inputs share the same element for labels, ex: a "Tags" input within an accordion that's labeled by the accordion's label via aria-labelledby. Apply a unique `aria-label` prop to the input to disambiguate it *or* use the `label` prop if the input is required.
+
+
+#### Nested interactive elements
+
+Clickable elements nested within other clickable elements. Legacy result listing rows (SearchAndSort) are wrapped in anchors. Any clickable elements rendered within the table's cells will trigger this axe error. SearchAndSort listings should apply the MCL `DefaultRowFormatter` exported from `@folio/stripes/components` and use cell-level `formatter` to render links or buttons within the table cells.
+
+
+#### Aria-required parent/child
+
+Certain aria roles can expect other aria roles as immediate children. It's best practice not to mix these relationships or wrap children with elements of unexpected roles. *Elements must not be given roles that do not match their implemented behavior.* Browsers/screen readers expect roles of buttons, dialogs, lists to all behave in a certain way - breach of this contract by using false roles is an accessibility bug.
+
+
+#### Links with the same name must have a similar purpose
+
+This might be common in list entries (search results) that can have non-unique names, since the links will go to different locations, but the visible label will be the same. Ensure that any anchor-rendering components (`<Link>`, `<Button>`, `<TextLink>`) within your applications have unique, descriptive labels.
+
+
+#### Axe-core github issues for outstanding false positives
+
+Check the list at https://github.com/dequelabs/axe-core/issues  to see if work is being done to correct any prevalent false positives. You can turn off rules via configuration steps for the previously mentioned testing tools if necessary.
