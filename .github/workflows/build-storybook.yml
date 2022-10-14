@@ -60,9 +60,10 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -f .out
+          git commit -am "added built storybook"
+          git pull origin storybook --rebase -Xours
           rm -rf docs
           git commit -am "clean hosted storybook"
           git mv .out docs
           git commit -am "update storybook"
-          git pull origin storybook --rebase -Xours
           git push origin storybook
