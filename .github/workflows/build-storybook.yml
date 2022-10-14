@@ -31,18 +31,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Sync storybook branch
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: master
-          target_branch: storybook
-          github_token: ${{ github.token }}
+      # - name: Sync storybook branch
+      #   uses: devmasx/merge-branch@master
+      #   with:
+      #     type: now
+      #     from_branch: master
+      #     target_branch: storybook
+      #     github_token: ${{ github.token }}
 
       - name: checkout storybook branch
         uses: actions/checkout@v3
         with:
-          ref: storybook
+          fetch-depth: 0
+
+      - name: sync storybook branch
+        run: |
+          git checkout storybook
+          git reset --hard origin/master
 
       - name: Run yarn install
         run: yarn install --ignore-scripts
@@ -56,4 +61,5 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -am "update storybook"
+          git pull origin storybook -Xours
           git push origin storybook
