@@ -48,7 +48,7 @@ jobs:
         run: npm run storybook-build
 
       # commit the build to history, clean the previous build, promote the new build (rename .out to docs)"
-      - name: Update records storybook
+      - name: Promote new storybook build to published build
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
