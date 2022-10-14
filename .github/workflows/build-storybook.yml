@@ -60,6 +60,7 @@ jobs:
 
       - name: Publish storybook
         run: |
+          git status
           git add .
           git commit -am "update storybook"
           git merge -Xours origin/storybook
