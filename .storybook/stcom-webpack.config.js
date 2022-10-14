@@ -72,7 +72,7 @@ module.exports = async (config) => {
       options: adjustedBabelOptions,
     };
 
-    config.module.rules = config.module.rules.concat([
+  config.module.rules = config.module.rules.concat([
     {
       test: /\.(jpe?g|png|gif)$/i,
       loader: "file-loader"

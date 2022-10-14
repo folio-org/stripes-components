@@ -18,7 +18,7 @@
     "test": "stripes test karma",
     "test-dev": "stripes test karma --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o .out"
+    "storybook-build": "build-storybook -c .storybook -o ./docs"
   },
   "engines": {
     "node": ">=10.0.0"
