@@ -63,5 +63,5 @@ jobs:
           mv .out docs
           git add .
           git commit -am "update storybook"
-          git pull origin storybook -Xours
+          git pull origin storybook --rebase -Xours
           git push origin storybook
