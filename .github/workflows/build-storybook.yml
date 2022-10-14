@@ -62,5 +62,5 @@ jobs:
         run: |
           git add .
           git commit -am "update storybook"
-          git merge origin/storybook
+          git pull origin/storybook
           git push origin storybook
