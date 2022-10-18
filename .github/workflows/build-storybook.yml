@@ -1,0 +1,62 @@
+# This is a basic workflow to build and publish stripes-components storybook
+
+name: Build and Publish Storybook
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build-storybook:
+    env:
+      FOLIO_NPM_REGISTRY: 'https://repository.folio.org/repository/npm-folioci/'
+      NODEJS_VERSION: '16'
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODEJS_VERSION }}
+          check-latest: true
+          always-auth: true
+
+      - name: Set yarn config
+        run: yarn config set @folio:registry $FOLIO_NPM_REGISTRY
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: checkout storybook branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: sync storybook branch
+        run: |
+          git checkout storybook
+          git reset --hard origin/master
+
+      - name: Run yarn install
+        run: yarn install --ignore-scripts
+
+      - name: Build storybook
+        run: npm run storybook-build
+
+      # commit the build to history, clean the previous build, promote the new build (rename .out to docs)"
+      - name: Promote new storybook build to published build
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -f .out
+          git commit -am "added built storybook"
+          git pull origin storybook --rebase -Xours
+          rm -rf docs
+          git commit -am "clean hosted storybook"
+          git mv .out docs
+          git commit -am "update storybook"
+
+      - name: Publish storybook
+        run: git push origin storybook
