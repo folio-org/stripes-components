@@ -72,7 +72,7 @@
     "fieldIsDisabled": "Il campo è disabilitato",
     "readonly": "Sola lettura",
     "readMore": "Per saperne di più",
-    "tableEmpty": "L'elenco non contiene elementi",
+    "tableEmpty": "Nessun elemento da mostrare",
     "metaSection.sourceNoData": "Fonte: processo automatizzato",
     "metaSection.recordCreatedNoData": "Record creato: sconosciuto",
     "metaSection.recordLastUpdatedNoData": "Ultimo aggiornamento del record: sconosciuto",
@@ -877,7 +877,7 @@
     "Timepicker.minutesLabel": "Minuti",
     "Timepicker.PeriodLabel": "AM o PM",
     "Timepicker.SetTimeLabel": "Imposta l'orario",
-    "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
+    "Timepicker.ScreenReaderLabel": "Il formato di {label} è {screenReaderFormat} usare la freccia verso il basso per entrare nella finestra di dialogo del timepicker. {screenReaderMessage}",
     "Timepicker.LeaveDialog": "lascia la finestra di dialogo",
     "selection.controlLabel": "Seleziona il controllo"
 }

@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 10.2.1 IN PROGRESS
+## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
+
 * Fix 12-hour formatting in `dateTimeUtils` `getLocalizedTimeFormatInfo`. Fixes STCOM-1017
 * Add `inputRef` prop to `<Timepicker>`. Refs STCOM-1016
 * `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
@@ -15,6 +17,10 @@
 * Provide ability to disable an Icon Button. Refs STCOM-1028.
 * `MultiSelection` support for `aria-label`. Refs STCOM-977.
 * Fix regex matching of search options in `<AdvancedSearch>`. Fixes STCOM-1031.
+* Export `staticFirstWeekDay` and `staticLangCountryCodes` from `Datepicker`. Refs STCOM-1038.
+* Button: Button link style has a min-height, which can offset it from text. Fixes STCOM-1039.
+* The vertical scroll bar displays at the second pane when it doesn't need. Fixes STCOM-1044.
+* Focus management and accessible labeling of confirmation modals. Confirmation modals announce in a way similart to Javascript alerts. Fixes STCOM-1041.
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
