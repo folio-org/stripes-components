@@ -1,14 +1,17 @@
-import moment from 'moment-timezone';
+import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
 
-export function getMomentLocalizedFormat(intl) {
-  moment.locale(intl.locale);
-  const format = moment.localeData()._longDateFormat.L;
+dayjs.extend(timezone);
+
+export function getLibraryLocalizedFormat(intl) {
+  dayjs.locale(intl.locale);
+  const format = dayjs.localeData()._longDateFormat.L;
   return format;
 }
 
 // Returns a localized format.
 // Format will be a string similar to YYYY.MM.DD - something that can be
-// passed to moment for parsing/formatting purposes.
+// passed to dayjs for parsing/formatting purposes.
 export const getLocaleDateFormat = ({ intl }) => {
   const tempDate = new Date('Thu May 14 2020 14:39:25 GMT-0500');
   let format = '';
@@ -44,8 +47,8 @@ export const getLocaleDateFormat = ({ intl }) => {
       }
     });
   } else {
-    // if INTL api is not available, fall back to moment...
-    format = getMomentLocalizedFormat(intl);
+    // if INTL api is not available, fall back to the date library...
+    format = getLibraryLocalizedFormat(intl);
   }
 
   return format;
