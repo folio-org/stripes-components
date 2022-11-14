@@ -1,11 +1,19 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import availabelLocales from 'dayjs/locale';
-import IntlContext from 'react-intl';
+import { IntlContext } from 'react-intl';
 
-export default () => {
-  const { locale } = React.useContext(IntlContext);
-  const [localeLoaded, setLocaleLoaded] = React.useState(locale === 'en');
+const isEnglishLang = (locale) => {
+  return /^en/.test(locale);
+};
+
+const useDynamicLocale = ({ locale : localeProp } = {}) => {
+  const { locale: localeContext } = React.useContext(IntlContext);
+  const [localeLoaded, setLocaleLoaded] = React.useState(
+    localeProp ? isEnglishLang(localeProp) :
+      isEnglishLang(localeContext)
+  );
+  const locale = localeProp || localeContext;
 
   React.useEffect(() => {
     // don't load a dynamic locale if the dayjs locale is already set to it,
@@ -14,13 +22,23 @@ export default () => {
       // check if locale is available
       const available = availabelLocales.findIndex(l => l.key === locale);
       if (available !== -1) {
-        import(/* webpackChunkName: "dayjs-locale-[request]" */ `dayjs/locale/${locale}`).then(() => {
+        import(
+          /* webpackChunkName: "dayjs-locale-[request]" */
+          /* webpackExclude: /\.d\.ts$/ */
+          `dayjs/locale/${locale}`
+        ).then(() => {
           dayjs.locale(locale);
           setLocaleLoaded(true);
         });
       }
+    } else if (dayjs.locale() === locale) {
+      setLocaleLoaded(true);
     }
   }, [localeLoaded, locale]);
 
-  return { localeLoaded };
+  return { localeLoaded,
+    isEnglish: localeProp ? localeProp === 'en' :
+      localeContext === 'en' };
 };
+
+export default useDynamicLocale;

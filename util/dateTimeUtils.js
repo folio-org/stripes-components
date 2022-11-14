@@ -1,11 +1,13 @@
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
+import localeData from 'dayjs/plugin/localeData';
 
 dayjs.extend(timezone);
+dayjs.extend(localeData);
 
 export function getLibraryLocalizedFormat(intl) {
   dayjs.locale(intl.locale);
-  const format = dayjs.localeData()._longDateFormat.L;
+  const format = dayjs.localeData().longDateFormat('L');
   return format;
 }
 

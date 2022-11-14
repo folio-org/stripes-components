@@ -1,12 +1,12 @@
 import { beforeEach, it, describe } from 'mocha';
 import { expect } from 'chai';
-import { getMomentLocalizedFormat, getLocaleDateFormat, getLocalizedTimeFormatInfo } from '../dateTimeUtils';
+import { getLibraryLocalizedFormat, getLocaleDateFormat, getLocalizedTimeFormatInfo } from '../dateTimeUtils';
 
 describe('Date Utilities', () => {
   describe('get localized format - moment fallback', () => {
     let format;
     beforeEach(async () => {
-      format = getMomentLocalizedFormat({ locale: 'de' }); // eslint-disable-line
+      format = getLibraryLocalizedFormat({ locale: 'de' }); // eslint-disable-line
     });
 
     it('returns the long date format according to the passed locale', () => {
@@ -17,7 +17,7 @@ describe('Date Utilities', () => {
   describe('get localized format - moment fallback', () => {
     let format;
     beforeEach(async () => {
-      format = getMomentLocalizedFormat({ locale: 'de' }); // eslint-disable-line
+      format = getLibraryLocalizedFormat({ locale: 'de' }); // eslint-disable-line
     });
     it('returns the long date format according to the passed locale', () => {
       expect(format).to.equal('DD.MM.YYYY');
