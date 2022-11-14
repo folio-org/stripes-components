@@ -1,8 +1,15 @@
 # Change history for stripes-components
 
+## 10.3.1 (IN PROGRESS)
+
+* The "Are you sure?" modal window doesn't close when pressing on the "ESC" keyboard button. Refs STCOM-1054.
+* `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
+
 ## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
 
+* Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
+* Record detail panes are empty when printed. Refs STCOM-975.
 * Fix 12-hour formatting in `dateTimeUtils` `getLocalizedTimeFormatInfo`. Fixes STCOM-1017
 * Add `inputRef` prop to `<Timepicker>`. Refs STCOM-1016
 * `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
@@ -21,6 +28,21 @@
 * Button: Button link style has a min-height, which can offset it from text. Fixes STCOM-1039.
 * The vertical scroll bar displays at the second pane when it doesn't need. Fixes STCOM-1044.
 * Focus management and accessible labeling of confirmation modals. Confirmation modals announce in a way similart to Javascript alerts. Fixes STCOM-1041.
+
+## [10.2.2](https://github.com/folio-org/stripes-components/tree/v10.2.2) (2022-08-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.1...v10.2.2)
+
+* Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
+* `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
+* Pass `modifiers` prop to correct component in `<MultiSelection>`. Fixes STCOM-1013.
+* Fix regex matching of search options in `<AdvancedSearch>`. Fixes STCOM-1031.
+
+## [10.2.1](https://github.com/folio-org/stripes-components/tree/v10.2.1) (2022-07-25)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.2.1)
+
+* Fix 12-hour formatting in `dateTimeUtils` `getLocalizedTimeFormatInfo`. Fixes STCOM-1017
+* Long titles do not fit in the confirmation modal window header. Refs STCOM-1020
+* `<MultiSelection>` must handle null filter string. Refs STCOM-1022.
 
 ## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
@@ -69,9 +91,6 @@
 * Additional functionality needed for metadata display when user record is deleted. Refs STCOM-882.
 * Add the ability to pass a className to the rows container in the `<MultiColumnList>`. Refs STCOM-1009.
 * MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
-* Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
-* Record detail panes are empty when printed. Refs STCOM-975.
-* The "Are you sure?" modal window doesn't close when pressing on the "ESC" keyboard button. Refs STCOM-1054.
 
 ## [10.1.5](https://github.com/folio-org/stripes-components/tree/v10.1.5) (2022-06-06)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.4...v10.1.5)
