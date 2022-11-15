@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 10.3.1 (IN PROGRESS)
+## [10.3.1](https://github.com/folio-org/stripes-components/tree/v10.3.1) (2022-11-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v10.3.1)
 
 * The "Are you sure?" modal window doesn't close when pressing on the "ESC" keyboard button. Refs STCOM-1054.
 * `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
