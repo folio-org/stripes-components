@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## [10.2.3](https://github.com/folio-org/stripes-components/tree/v10.2.3) (2022-11-15)
+## [10.2.3](https://github.com/folio-org/stripes-components/tree/v10.2.3) (2022-11-16)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.2...v10.2.3)
 
 * `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
