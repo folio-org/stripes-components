@@ -48,7 +48,7 @@
     "@bigtest/interactor": "0.7.2",
     "@folio/eslint-config-stripes": "^6",
     "@folio/stripes-cli": "^2.4.0",
-    "@folio/stripes-testing": "^4.2.0",
+    "@folio/stripes-testing": "~4.3.0 <4.3.1000004620",
     "@mdx-js/loader": "^1.6.22",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addons": "^6.3.6",
