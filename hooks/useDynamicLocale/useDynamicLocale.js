@@ -1,6 +1,6 @@
 import React from 'react';
 import dayjs from 'dayjs';
-import availabelLocales from 'dayjs/locale';
+import availableLocales from 'dayjs/locale';
 import { IntlContext } from 'react-intl';
 
 const isEnglishLang = (locale) => {
@@ -20,7 +20,7 @@ const useDynamicLocale = ({ locale : localeProp } = {}) => {
     // or if it's already been loaded according to state...
     if (!localeLoaded && dayjs.locale() !== locale) {
       // check if locale is available
-      const available = availabelLocales.findIndex(l => l.key === locale);
+      const available = availableLocales.findIndex(l => l.key === locale);
       if (available !== -1) {
         import(
           /* webpackChunkName: "dayjs-locale-[request]" */

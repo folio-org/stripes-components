@@ -7,20 +7,25 @@ dayjs.extend(localeData);
 
 export function getLibraryLocalizedFormat(intl) {
   dayjs.locale(intl.locale);
-  const format = dayjs.localeData().longDateFormat('L');
+  let format
+  try {
+    dayjs.localeData().longDateFormat('L');
+  } catch {
+    dayjs.locale
+  }
   return format;
 }
 
 // Returns a localized format.
 // Format will be a string similar to YYYY.MM.DD - something that can be
 // passed to dayjs for parsing/formatting purposes.
-export const getLocaleDateFormat = ({ intl }) => {
+export const getLocaleDateFormat = ({ intl, config }) => {
   const tempDate = new Date('Thu May 14 2020 14:39:25 GMT-0500');
   let format = '';
 
   // set up a locally formatted array of parts...
   if (Intl?.DateTimeFormat()?.formatToParts) {
-    const intlFormatter = new Intl.DateTimeFormat(intl.locale, {
+    const intlFormatter = new Intl.DateTimeFormat(intl.locale, config || {
       day: '2-digit',
       year: 'numeric',
       month: '2-digit',
@@ -32,6 +37,16 @@ export const getLocaleDateFormat = ({ intl }) => {
 
     formatted.forEach((p) => {
       switch (p.type) {
+        case 'dayPeriod':
+          format += 'A';
+          format = format.replace('H', 'h');
+          break;
+        case 'minute':
+          format += 'mm';
+          break;
+        case 'hour':
+          format += 'H';
+          break;
         case 'month':
           format += 'MM';
           break;
