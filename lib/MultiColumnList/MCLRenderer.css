@@ -49,6 +49,11 @@
   /* Different bg on odd rows */
   &.mclIsOdd:not(.mclSelected) {
     background-color: var(--color-fill-table-row-odd);
+
+    & .mclSticky::before {
+      content: "";
+      background-color: var(--color-fill-table-row-odd);
+    }
   }
 
   &::before {
@@ -72,6 +77,10 @@
     & a:visited {
       color: var(--color-link-visited-current);
     }
+
+    & .mclSticky::before {
+      background-color: var(--color-fill-current);
+    }
   }
 
   &.mclClickableRow:hover {
@@ -80,6 +89,29 @@
 
   &.mclWrappedCells {
     flex-wrap: wrap;
+  }
+
+  & .mclSticky {
+    position: sticky;
+    left: 0;
+    background-color: var(--bg);
+    z-index: 3;
+    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      background-color: var(--color-fill-table-row-even);
+    }
+
+    &.mclStickyEnd {
+      right: 0;
+      left: initial;
+      box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
+    }
   }
 }
 
@@ -145,6 +177,31 @@
     &:active,
     &:focus {
       outline: none;
+    }
+  }
+
+  &.mclSticky {
+    position: sticky;
+    left: 0;
+    background-color: var(--bg);
+    z-index: 3;
+    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid var(--color-border-p2);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+    }
+
+    &.mclStickyEnd {
+      right: 18px; /* accounts for scrollbar width */
+      left: initial;
+      box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
+      border-left: 1px solid var(--color-border-p2);
+      border-right: 0;
     }
   }
 
@@ -336,4 +393,23 @@
   align-items: center;
   justify-content: center;
   align-content: middle;
+}
+
+[dir="rtl"] .mclSticky {
+  left: initial;
+  right: 0;
+  box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
+  border-left: 1px solid var(--color-border-p2);
+
+  &.mclStickyEnd {
+    left: 0;
+    right: initial;
+    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid var(--color-border-p2);
+    border-left: 0;
+
+    &.mclHeader {
+      left: 18px; /* accounts for scrollbar */
+    }
+  }
 }
