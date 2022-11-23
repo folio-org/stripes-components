@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [10.3.2](https://github.com/folio-org/stripes-components/tree/v10.3.2) (2022-11-23)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v10.3.1)
+
+* Dummy release to move the `latest` dist-tag back to the 10.3.x branch due to https://issues.sonatype.org/browse/NEXUS-22915. 
+
 ## [10.3.1](https://github.com/folio-org/stripes-components/tree/v10.3.1) (2022-11-15)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v10.3.1)
 
