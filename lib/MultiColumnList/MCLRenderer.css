@@ -94,6 +94,7 @@
   & .mclSticky {
     position: sticky;
     left: 0;
+    top: 0;
     background-color: var(--bg);
     z-index: 3;
     box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
@@ -104,6 +105,7 @@
       width: 100%;
       height: 100%;
       left: 0;
+      top: 0;
       background-color: var(--color-fill-table-row-even);
     }
 
@@ -111,6 +113,18 @@
       right: 0;
       left: initial;
       box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &:focus {
+    & .mclSticky::after {
+      background-color: var(--color-fill-focus);
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
     }
   }
 }
