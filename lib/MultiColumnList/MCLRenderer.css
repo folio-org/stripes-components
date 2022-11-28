@@ -85,6 +85,16 @@
 
   &.mclClickableRow:hover {
     cursor: pointer;
+
+    & .mclSticky::after {
+      background-color: var(--color-fill-focus);
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
   }
 
   &.mclWrappedCells {
@@ -116,16 +126,14 @@
     }
   }
 
-  &:focus {
-    & .mclSticky::after {
-      background-color: var(--color-fill-focus);
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-    }
+  &:focus .mclSticky::after {
+    background-color: var(--color-fill-focus);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
   }
 }
 
