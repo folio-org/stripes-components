@@ -26,6 +26,17 @@
 /* Row is interactive (clickable, hoverable and focusable etc.) */
 .mclIsInteractive {
   composes: interactionStyles noPointer hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
+
+  &:hover .mclSticky::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--color-fill-hover);
+    opacity: 0.7;
+  }
 }
 
 .mclRowFormatterContainer {
@@ -58,6 +69,10 @@
 
   &::before {
     border-radius: 0;
+  }
+
+  &:focus {
+    z-index: 2;
   }
 
   /* Selected style */
@@ -106,7 +121,6 @@
     left: 0;
     top: 0;
     background-color: var(--bg);
-    z-index: 3;
     box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
 
     &::before {
@@ -124,16 +138,6 @@
       left: initial;
       box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
     }
-  }
-
-  &:focus .mclSticky::after {
-    background-color: var(--color-fill-focus);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
   }
 }
 
