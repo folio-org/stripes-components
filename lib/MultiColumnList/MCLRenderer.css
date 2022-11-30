@@ -219,7 +219,7 @@
     }
 
     &.mclStickyEnd {
-      right: 18px; /* accounts for scrollbar width */
+      right: 0;
       left: initial;
       box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
       border-left: 1px solid var(--color-border-p2);
@@ -429,9 +429,5 @@
     box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
     border-right: 1px solid var(--color-border-p2);
     border-left: 0;
-
-    &.mclHeader {
-      left: 18px; /* accounts for scrollbar */
-    }
   }
 }
