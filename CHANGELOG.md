@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [10.3.3](https://github.com/folio-org/stripes-components/tree/v10.3.3) (2022-12-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.1...v10.3.2)
+
+* After click submit button disable the confirmation button in Confirmation modal component. Refs STCOM-1058.
+
 ## [10.3.2](https://github.com/folio-org/stripes-components/tree/v10.3.2) (2022-11-23)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v10.3.1)
 
@@ -10,7 +15,6 @@
 
 * The "Are you sure?" modal window doesn't close when pressing on the "ESC" keyboard button. Refs STCOM-1054.
 * `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
-* After click submit button disable the confirmation button in Confirmation modal component. Refs STCOM-1058
 
 ## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
