@@ -29,7 +29,7 @@ jobs:
       JEST_COVERAGE_REPORT_DIR: 'artifacts/coverage-jest/lcov-report/'
       BIGTEST_JUNIT_OUTPUT_DIR: 'artifacts/runTest'
       BIGTEST_COVERAGE_REPORT_DIR: 'artifacts/coverage/lcov-report/'
-      SQ_LCOV_REPORT: 'artifacts/coverage/lcov-report/lcov.info'
+      SQ_LCOV_REPORT: 'artifacts/coverage/lcov.info'
       SQ_EXCLUSIONS: '**/platform/alias-service.js,**/docs/**,**/node_modules/**,**/examples/**,**/artifacts/**,**/ci/**,Jenkinsfile,**/LICENSE,**/*.css,**/*.md,**/*.json,**/tests/**,**/stories/*.js,**/test/**,**/.stories.js,**/resources/bigtest/interactors/**,**/resources/bigtest/network/**,**/*-test.js,**/*.test.js,**/*-spec.js,**/karma.conf.js,**/jest.config.js'
 
     runs-on: ubuntu-latest
