@@ -4,6 +4,7 @@
 
 * `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
 * After click submit button disable the confirmation button in Confirmation modal component. Refs STCOM-1058
+* FOLIO Login screen missing scrollbar - removed global styling for body overflow. Refs STCOM-1059.
 
 ## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
