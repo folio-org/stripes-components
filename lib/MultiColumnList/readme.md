@@ -15,6 +15,10 @@ const catalogResults = [
 
 You can also specify a formatter object to control exactly how the data is rendered: see below.
 
+### Sticky Columns
+The first and last columns of the grid can be 'pinned' into place. These will keep them visible when they would normally have scrolled out of view.
+To apply this, use the `stickyFirstColumn` or `stickyLastColumns` props.
+
 ### Infinite scroll
 For large lists of data the boolean prop `virtualize` can be turned on to efficiently display only the table rows that are visible to the user within the scrollable body of the list. The `virtualize` prop should be used in conjunction with the `height`, `maxHeight` or `autosize` prop - virtualization will not work otherwise.
 
@@ -109,6 +113,8 @@ Name | type | description | default | required
 `selectedRow` | object | **legacy API** Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | |
 `sortedColumn` | string | Used to apply styling to the appropriate column. | |
 `sortOrder` | string | 'ascending' or 'descending' direction. | |
+`stickyFirstColumn` | bool | Pins the first column in place so that it will remain visible when scrolled out of view. | |
+`stickyLastColumn` | bool | Pins the last column in place so that it will remain visible when scrolled out of view | |
 `striped` | bool | Adds striped style to rows | `true` |
 `totalCount` | number | The total number of expected records. It's necessary in various situations: using `virtualize` (so that MCL can anticipate the dimensions of expected rows) and with `prev-next` and `click` paging types ( so that the 'next' or 'load more' button can be adequately disabled when the end of the list is reached.) | 0 |
 `virtualize` | bool | Employs virtualization for performant rendering of large sets of data. | 0 |
