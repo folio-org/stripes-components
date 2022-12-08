@@ -38,7 +38,7 @@ onFocus | func | | | false
 readOnly | bool | Renders the field as "read only" | | false
 required | bool | Sets the field as required | | false
 value | string | Sets the selected value for the input. **This prop isn't necessary if part of a redux-form (see below)** | | false
-warning | string | | | false  
+warning | string | | | false
 
 
 ## Use with Redux Form
