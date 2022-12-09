@@ -7,13 +7,7 @@ dayjs.extend(localeData);
 
 export function getLibraryLocalizedFormat(intl) {
   dayjs.locale(intl.locale);
-  let format
-  try {
-    dayjs.localeData().longDateFormat('L');
-  } catch {
-    dayjs.locale
-  }
-  return format;
+  return dayjs.localeData().longDateFormat('L');
 }
 
 // Returns a localized format.
@@ -151,4 +145,21 @@ export function getLocalizedTimeFormatInfo(locale) {
     timeFormat,
     dayPeriods: [...dpOptions],
   };
+}
+
+// parses time without DST.
+// DST moves time forward an hour - so +1 to the utc offset - but thankfully, it's not in use for majority ranges.
+// given 2 static sample dates that are far enough apart, you'd get one that wasn't
+// in DST if it's observed in your locale.
+// so we can use the non-DST date to avoid off-by-1-hour time issues.
+export function removeDST(dateTime, timeFormat) {
+  const julDate = '2022-07-20';
+  const janDate = '2022-01-01';
+
+  const julOffset = dayjs(julDate).utcOffset();
+  const janOffset = dayjs(janDate).utcOffset();
+
+  const offsetDate = janOffset < julOffset ? janDate : julDate;
+  const timestring = dateTime.includes('T') ? dateTime.split('T')[1] : dateTime;
+  return dayjs.utc(`${offsetDate}T${timestring}`).local().format(timeFormat);
 }
