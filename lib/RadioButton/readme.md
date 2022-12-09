@@ -18,6 +18,7 @@ Renders a basic HTML radio button.
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 autoFocus | bool | If this prop is `true`, will automatically focus on mount | `false` | false
+centered | bool | Allow to center radio button | `false` | false
 checked | bool | | | false
 className | string | | | false
 disabled | bool | | | false
