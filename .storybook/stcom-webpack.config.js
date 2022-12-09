@@ -68,7 +68,6 @@ module.exports = async (config) => {
         if (fn.endsWith('.js') && (nmidx === -1 || fn.lastIndexOf('@folio') > nmidx)) return true;
         return false;
       },
-      exclude: /\.d\.ts$/,
       loader: 'babel-loader',
       options: adjustedBabelOptions,
     };
@@ -78,7 +77,7 @@ module.exports = async (config) => {
       test: /\.(jpe?g|png|gif)$/i,
       loader: "file-loader"
     },
-
+    
     {
       test: /\.(eot|ttf|woff|woff2?)$/,
       use: [
@@ -89,21 +88,17 @@ module.exports = async (config) => {
           }
         }
       ],
-    },
-    {
-      test: /\.d\.ts$/,
-      loader: 'ignore-loader'
-    },
+    }
   ]);
 
   const svgRuleIndex = config.module.rules.findIndex(r => { const t = new RegExp(r.test); return t.test('m.svg'); });
   config.module.rules[svgRuleIndex] = {
       test: /\.svg$/,
       use: [
-        {
+        { 
           loader: '@svgr/webpack',
           options: {
-            name: '[name].svg'
+            name: '[name].svg' 
           }
         }
       ]
