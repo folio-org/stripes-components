@@ -5,10 +5,13 @@ import localeData from 'dayjs/plugin/localeData';
 dayjs.extend(timezone);
 dayjs.extend(localeData);
 
-export function getLibraryLocalizedFormat(intl) {
+export const getLibraryLocalizedFormat = (intl) => {
   dayjs.locale(intl.locale);
   return dayjs.localeData().longDateFormat('L');
 }
+
+// deprecated library-specific exported name.
+export const getMomentLocalizedFormat = getLibraryLocalizedFormat;
 
 // Returns a localized format.
 // Format will be a string similar to YYYY.MM.DD - something that can be
