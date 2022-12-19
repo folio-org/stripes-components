@@ -10,4 +10,8 @@ updates:
     schedule:
       interval: "weekly"
     ignore:
-      - dependency-name: "react-router-dom""
+      - dependency-name: "faker"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "react-router"
+      - dependency-name: "react-router-dom"
