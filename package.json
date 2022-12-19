@@ -111,7 +111,7 @@
     "json2csv": "^4.2.1",
     "lodash": "^4.17.4",
     "memoize-one": "^5.0.0",
-    "moment-range": "^3.0.3",
+    "moment-range": "^4.0.2",
     "moment-timezone": "^0.5.14",
     "normalize.css": "^7.0.0",
     "popper.js": "^1.14.6",
