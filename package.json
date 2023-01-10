@@ -95,7 +95,7 @@
     "storybook-addon-intl": "^2.4.1",
     "storybook-addon-rtl": "^0.3.0",
     "storybook-readme": "^5.0.9",
-    "stylelint": "^9.5.0",
+    "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
     "stylelint-junit-formatter": "^0.2.1",
     "webpack": "~5.68.0"
