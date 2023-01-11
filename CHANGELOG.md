@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 10.4.0 (IN PROGRESS)
+## 11.0.0 (IN PROGRESS)
 
 * `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
 * After click submit button disable the confirmation button in Confirmation modal component. Refs STCOM-1058
