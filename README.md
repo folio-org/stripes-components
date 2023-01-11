@@ -147,7 +147,7 @@ Component | doc | categories
 There are also various [utility _functions_](util) (as opposed to React components), which are [documented separately](util/README.md).
 
 ## Accessibility
-* [Accessibility overview](guides/accessibility/AccessibilityOverview.stories.mdx) - general overview of some utilities that stripes-components provides.
+* [Accessibility overview](guides/accessibility/AboutAccessibility.stories.mdx) - general overview of some utilities that stripes-components provides.
 * [Accessibility for developers](guides/accessibility/AccessibilityDevPrimer.stories.mdx) - dev-specific primer for accessibility. More direct code/component reference - a great intro for those who are unfamiliar to accessibility.
 
 ## Patterns
