@@ -7,7 +7,7 @@ Similar to `<Dropdown>`, the `<Popover>` will render its children inside an over
 ```js
 import { Popover } from '@folio/stripes/components';
 
-<Popover 
+<Popover
   renderTrigger={({ open, ref, toggle, }) => (
     <Button
       onClick={toggle}
@@ -57,20 +57,6 @@ open | bool | Controls the popover open state. This is only relevant if you need
 placement | string | Determines the placement of the popover overlay relative to the trigger button/anchor element. See the available placements in the basic usage example/story. | bottom |
 popperProps | object | Pass additional props to the internal `<Popper>`-component. See the documentation for the `<Popper>`-component to learn more. | |
 renderTrigger | func | Renders the trigger button/anchor element. The function will receive an object that contains a `ref`, an open state and a `toggle`-function. It's required to pass the ref down to either the toggle button or some anchor element. | |
-
-## Legacy Popover
-The previous `<Popover>` component API is still working for older implementations. However, it is recommended that you update your implementations to use the new component API as support for the deprecated component API will be removed in a future release.
-
-You can see the documentation for the legacy popover below.
-
-Name | type | description | default | required
---- | --- | --- | --- | ---
-position | string | Position of pop-up relative to the target. Can be `top`, `bottom`, `start`, or `end` | `bottom` |
-alignment | string | Position along the cross-axis. Can be centered, or align with an edge of the target. Can be set to `center`, `start`, or `end` | `center` |
-children | arrayOf(node) | Requires two children one with `data-role="target"` and another with `data-role="popover"`. Ideally, the target child is an interactive element - a `<Button>`, for instance. The popover can be any dom element. | | &#10004;
-noPadding | bool | Removes padding from popover content if set to true | `false` |
-offset | number | Distance of the popover toward or away from the target. | 0 |
-activeClass | string | Adds the activeClass to the wrapper once the Popover is open |  |
 
 ## Positioning
 Setting `position` of "top" and `alignment` of "end" will render the popover above the trigger, aligned with the 'end' of the target's bounding box.
