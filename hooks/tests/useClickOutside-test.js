@@ -16,7 +16,7 @@ import { mountWithContext } from '../../tests/helpers';
 import useClickOutside from '../useClickOutside';
 
 const UseClickOutsideInteractor = interactor(class UseClickOutsideInteractor {
-  static defaultScope ='#test-component';
+  static defaultScope = '#test-component';
   clickOutsideElement = clickable('#click-outside-element');
   clickInsideElement = clickable('#click-inside-element');
 });
