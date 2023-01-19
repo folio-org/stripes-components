@@ -12,6 +12,7 @@
 * Enable dependabot. Refs STCOM-1068, FOLIO-3664.
 * Fix link in focused MCL row not working. Fixes STCOM-1066.
 * Loosen prop-types for `<TextLink>`. Refs STCOM-1076.
+* Replace tyop in `<Accordion>`'s test-id. Refs STCOM-1079.
 
 ## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
