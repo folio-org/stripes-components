@@ -13,5 +13,6 @@ updates:
       - dependency-name: "faker"
       - dependency-name: "react"
       - dependency-name: "react-dom"
+      - dependency-name: "react-intl"
       - dependency-name: "react-router"
       - dependency-name: "react-router-dom"
