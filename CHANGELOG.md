@@ -8,8 +8,12 @@
 * Correctly configure SonarCloud to find coverage reports. Refs STCOM-1064.
 * Add 'centered' property to the 'RadioButton' component. Refs STCOM-1065.:
 * Prevent Popover from leaking escape keypress events. Refs STCOM-1061.
+* BREAKING: Remove properties and components labeled as "deprecated". Refs STCOM-1067.
 * Enable dependabot. Refs STCOM-1068, FOLIO-3664.
-* Upgrade `react-redux` to `v8`. Refs STRIPES-834.
+* Fix link in focused MCL row not working. Fixes STCOM-1066.
+* Loosen prop-types for `<TextLink>`. Refs STCOM-1076.
+* Replace tyop in `<Accordion>`'s test-id. Refs STCOM-1079.
+* Upgrade `react-redux` to `v8`. Refs STCOM-1080.
 
 ## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
