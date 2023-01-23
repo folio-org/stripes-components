@@ -9,13 +9,13 @@ export function getMomentLocalizedFormat(intl) {
 // Returns a localized format.
 // Format will be a string similar to YYYY.MM.DD - something that can be
 // passed to moment for parsing/formatting purposes.
-export const getLocaleDateFormat = ({ intl }) => {
+export const getLocaleDateFormat = ({ intl, config }) => {
   const tempDate = new Date('Thu May 14 2020 14:39:25 GMT-0500');
   let format = '';
 
   // set up a locally formatted array of parts...
   if (Intl?.DateTimeFormat()?.formatToParts) {
-    const intlFormatter = new Intl.DateTimeFormat(intl.locale, {
+    const intlFormatter = new Intl.DateTimeFormat(intl.locale, config || {
       day: '2-digit',
       year: 'numeric',
       month: '2-digit',
@@ -27,6 +27,16 @@ export const getLocaleDateFormat = ({ intl }) => {
 
     formatted.forEach((p) => {
       switch (p.type) {
+        case 'dayPeriod':
+          format += 'A';
+          format = format.replace('H', 'h');
+          break;
+        case 'minute':
+          format += 'mm';
+          break;
+        case 'hour':
+          format += 'H';
+          break;
         case 'month':
           format += 'MM';
           break;
@@ -131,4 +141,21 @@ export function getLocalizedTimeFormatInfo(locale) {
     timeFormat,
     dayPeriods: [...dpOptions],
   };
+}
+
+// parses time without DST.
+// DST moves time forward an hour - so +1 to the utc offset - but thankfully, it's not in use for majority ranges.
+// given 2 static sample dates that are far enough apart, you'd get one that wasn't
+// in DST if it's observed in your locale.
+// so we can use the non-DST date to avoid off-by-1-hour time issues.
+export function removeDST(dateTime, timeFormat) {
+  const julDate = '2022-07-20';
+  const janDate = '2022-01-01';
+
+  const julOffset = moment(julDate).utcOffset();
+  const janOffset = moment(janDate).utcOffset();
+
+  const offsetDate = janOffset < julOffset ? janDate : julDate;
+  const timestring = dateTime.includes('T') ? dateTime.split('T')[1] : dateTime;
+  return moment.utc(`${offsetDate}T${timestring}`).local().format(timeFormat);
 }
