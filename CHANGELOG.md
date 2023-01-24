@@ -14,6 +14,7 @@
 * Loosen prop-types for `<TextLink>`. Refs STCOM-1076.
 * Replace tyop in `<Accordion>`'s test-id. Refs STCOM-1079.
 * Upgrade `react-redux` to `v8`. Refs STCOM-1080.
+* Fix bug with MCL columnwidths not updating with width hint API. Refs STCOM-1090.
 
 ## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
