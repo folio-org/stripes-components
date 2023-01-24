@@ -1,7 +1,7 @@
 # Icon
 Component for rendering a variety of FOLIO icons.
 
-To see icons you can use, check out our [available icons list](https://folio-org.github.io/stripes-components/?path=/story/icon--available-icons)
+To see icons you can use, check out our [available icons list](https://folio-org.github.io/stripes-components/?path=/story/components-icon--available-icons)
 
 ## Basic Usage
 ```js
@@ -36,7 +36,7 @@ _When exported from e.g. Adobe Illustrator, SVG files often have unneeded attrib
 - **The SVG has a viewBox of "0 0 32 32"** <br />
 _This ensures a persistent look and feel of the rendered icons. This prop will automatically be applied when the props are spread onto the `<svg>`-element_
 
-**Tip for creating icons:** Grab the SVG markup from an existing icon (inspect in the browser and copy) and save it as a `.svg`-file. Then open this file in e.g. Adobe Illustrator and update it's contents. This way you make sure that your icon has the correct size and viewbox. You can even use the existing icon as guide for adjusting the size of the icon itself.
+**Tip for creating icons:** Grab the SVG markup from an existing icon (inspect in the browser and copy) and save it as a `.svg`-file. Then open this file in e.g. Adobe Illustrator and update its contents. This way you make sure that your icon has the correct size and viewbox. You can even use the existing icon as guide for adjusting the size of the icon itself.
 
 ```javascript
 // Make a function that returns your SVG markup
