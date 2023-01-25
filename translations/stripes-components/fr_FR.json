@@ -878,6 +878,7 @@
     "Timepicker.PeriodLabel": "Matin ou après-midi",
     "Timepicker.SetTimeLabel": "Set time",
     "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "leave dialog",
-    "selection.controlLabel": "Select control"
+    "selection.controlLabel": "Select control",
+    "Timepicker.formEnd": "End of form",
+    "Timepicker.formStart": "Beginning of form"
 }

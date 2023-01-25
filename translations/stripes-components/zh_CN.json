@@ -878,6 +878,7 @@
     "Timepicker.PeriodLabel": "上午或下午",
     "Timepicker.SetTimeLabel": "设置时间",
     "Timepicker.ScreenReaderLabel": "{label}格式为{screenReaderFormat}使用向下箭头进入时间选择器对话框。 {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "离开对话框",
-    "selection.controlLabel": "选择控制"
+    "selection.controlLabel": "选择控制",
+    "Timepicker.formEnd": "End of form",
+    "Timepicker.formStart": "Beginning of form"
 }

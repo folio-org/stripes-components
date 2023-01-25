@@ -878,6 +878,7 @@
     "Timepicker.PeriodLabel": "AM nebo PM",
     "Timepicker.SetTimeLabel": "Nastavte čas",
     "Timepicker.ScreenReaderLabel": "{label} formát je {screenReaderFormat} pomocí šipky dolů přejděte do dialogu pro výběr času. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "opustit dialogové okno",
-    "selection.controlLabel": "Vybrat ovládací prvek"
+    "selection.controlLabel": "Vybrat ovládací prvek",
+    "Timepicker.formEnd": "Konec formuláře",
+    "Timepicker.formStart": "Začátek formuláře"
 }
