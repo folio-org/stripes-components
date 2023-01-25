@@ -878,6 +878,7 @@
     "Timepicker.PeriodLabel": "AM o PM",
     "Timepicker.SetTimeLabel": "Configure tiempo",
     "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "leave dialog",
-    "selection.controlLabel": "Select control"
+    "selection.controlLabel": "Select control",
+    "Timepicker.formEnd": "Fin del formulario",
+    "Timepicker.formStart": "Inicio del formulario"
 }
