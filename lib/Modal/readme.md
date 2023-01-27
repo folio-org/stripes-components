@@ -29,6 +29,7 @@ Name | type | description | default | required
 `footer` | node | Footer content of the modal. Pass a single component or multiple components wrapped in a Fragment. | |
 `id` | string | Used in the "id" attribute of the modal div. | |
 `label` | string | Descriptive title for top of modal. | | &#10004;
+`modalClass` | string | Apply custom CSS classes to the modal root element | |
 `onClose` | func | Callback that signals intent to close window. This callback does not actually close the modal, but can call code within its body that will change the boolean passed to the `open` prop. | |
 `onOpen` | func | Callback fired when modal opens. | noop |
 `open` | bool | Deciding value for rendering the modal(true) or not(false). | false | &#10004;

@@ -57,8 +57,6 @@ Used with Redux-form, we need to apply a custom value getter. Here's what that c
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 `children` | function | should be set up to accept render props passed in from the wrapper |  |
-`initialStartDate` | string | used to initialize the wrapper's internal state. Should be the same as your starting date field's initial value prop. | |
-`initialEndDate` | string | used to initialize the wrapper's internal state. Should be the same as your ending date field's initial value prop. | |
 
 ## Behavior override props
 Name | type | description | default | required
@@ -85,8 +83,6 @@ Name | type | description
 --- | --- | ---
 `endDateExclude` | function(day) | function for determining whether a day rendered by the calendar should be excluded or not. If the function returns `true`, the day will be excluded from picking (un-clickable, with appropriate styles assigned). This uses a default function, but can be overridden by using the `endExcluder` prop
 `startDateExclude` | function(day) | similar to `endDateExclude`, but applied to the start date DatePicker.
-`getEndInputProps` | function(props: <object>) | Prop-getter function. Applies the Wrapper's internal 'onChange' handler, as well as any `onChange` handler passed by the application via the `props` argument.
-`getStartInputProps` | function(props: <object>) | Prop-getter function Similar to `getEndInputProps`.
 
 ## Behavior overrides
 If the internal excluder functions or value getters don't work for some reason, you can supply your own function to take care of the task. This helps the component be flexible for any scenario. Internally, the Wrapper simply stores the value parameter from onChange in its state, but this parameter might be an event where you'd want `e.target.value` to be stored instead. So you can use the `end` and `startValueGetter` props like so:
