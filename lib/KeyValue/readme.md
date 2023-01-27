@@ -22,6 +22,7 @@ The "value" can also be a node, passed as children. This version is useful for a
 ```
 
 If the `value` prop is set and children exist, the `value` prop is ignored.
+The whitespaces in the `value` prop are honored.
 
 ## Props
 Name | Type | Description
