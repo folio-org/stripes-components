@@ -3,8 +3,8 @@
 Primitive for setting up two Datepickers to assemble a date range structure. Dates outside of the range (before the start date or after the end date) are excluded. Makes use of render props and prop getters to allow for variable layouts of the components within.
 
 ## With Final-Form Fields
-While it can certainly be used with vanilla Datepickers, a common use-case of FOLIO forms will be final-form.
-Used with Final-Form, we need to apply a custom value getter. Here's what that code looks like.
+Can be used with vanilla Datepickers as well as final-form. To support both use cases custom value getters are required.
+Here's what that code looks like.
 ```
   import { DateRangeWrapper, Datepicker } from '@folio/stripes/components'
 
@@ -54,8 +54,8 @@ Name | type | description | default | required
 ## Behavior override props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-`endValueGetter` | function(<...any>) | Used in the internal `startDateExclude` method to get a date value from the form state. | `(value) => value` |
-`startValueGetter` | function(param <...any>) | Similar to `endValueGetter`. Applied to the start date field. | `(value) => value` |
+`endValueGetter` | function(<>) | Used in the internal `startDateExclude` method to get a date value from the form state. | `undefined` | true
+`startValueGetter` | function(param <>) | Similar to `endValueGetter`. Applied to the start date field. | `undefined` | true
 `endExcluder` | function(day <any>) | Used to substitute default excluder logic. Internally, `<DateRangeWrapper>` uses `moment.isBefore()` to exclude dates that come before its internal `startDate` so these will not be available in the picker. | |
 `startExcluder` | function(day <any>) | Similar to `startExcluder`. Uses `moment.isAfter()` for its test. | |
 
