@@ -17,6 +17,7 @@
 
 .kvValue {
   overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .kvSub {
