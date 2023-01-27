@@ -2,33 +2,28 @@
 
 Primitive for setting up two Datepickers to assemble a date range structure. Dates outside of the range (before the start date or after the end date) are excluded. Makes use of render props and prop getters to allow for variable layouts of the components within.
 
-## With Redux-form Fields
-While it can certainly be used with vanilla Datepickers, a common use-case of FOLIO forms will be redux-form.
-Used with Redux-form, we need to apply a custom value getter. Here's what that code looks like.
+## With Final-Form Fields
+While it can certainly be used with vanilla Datepickers, a common use-case of FOLIO forms will be final-form.
+Used with Final-Form, we need to apply a custom value getter. Here's what that code looks like.
 ```
   import { DateRangeWrapper, Datepicker } from '@folio/stripes/components'
 
-    // with redux-form, best value comes in the 2nd param...
-    const getter = (e, value) => {
-      return value;
+    // with final-form, form values are stored in `values` object
+    const startGetter = (values) => {
+      return values.rangeStartDate;
     };
 
-    // bring in redux-form's initialValues to get initial dates, if there are any.
-    const {
-      initialValues
-    } = this.props;
+    const endGetter = (values) => {
+      return values.rangeEndDate;
+    };
 
     return (
       <form>
         <DateRangeWrapper
-          initialStartDate={initialValues.rangeStartDate}
-          initialEndDate={initialValues.rangeEndDate}
-          startValueGetter={getter}
-          endValueGetter={getter}
+          startValueGetter={startGetter}
+          endValueGetter={endGetter}
         >
           {({
-            getStartInputProps,
-            getEndInputProps,
             endDateExclude,
             startDateExclude,
           }) => (
@@ -38,14 +33,12 @@ Used with Redux-form, we need to apply a custom value getter. Here's what that c
                 label="Start date"
                 component={Datepicker}
                 exclude={startDateExclude}
-                {...getStartInputProps()}
               />
               <Field
                 name="rangeEndDate"
                 label="End date"
                 component={Datepicker}
                 exclude={endDateExclude}
-                {...getEndInputProps()}
               />
             </div>
             )
@@ -61,7 +54,7 @@ Name | type | description | default | required
 ## Behavior override props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-`endValueGetter` | function(<...any>) | Used in the internal onChange handler to get a date value from the 'end' Datepicker. | `(value) => value` |
+`endValueGetter` | function(<...any>) | Used in the internal `startDateExclude` method to get a date value from the form state. | `(value) => value` |
 `startValueGetter` | function(param <...any>) | Similar to `endValueGetter`. Applied to the start date field. | `(value) => value` |
 `endExcluder` | function(day <any>) | Used to substitute default excluder logic. Internally, `<DateRangeWrapper>` uses `moment.isBefore()` to exclude dates that come before its internal `startDate` so these will not be available in the picker. | |
 `startExcluder` | function(day <any>) | Similar to `startExcluder`. Uses `moment.isAfter()` for its test. | |
@@ -74,10 +67,6 @@ The child function allows for its returned JSX to be of any shape to suite the r
 <Component>{({rProp}) => <AAC foo={rProp} ></AAC> }</Component>
 ```
 
-## Prop-getter function
-
-Prop-getter functions return an object of bundled props that can be easily applied to a component via spread attributes. For example: `<Component {...propGetter()}>`. `<DateRangeWrapper>`'s prop-getters accept a `props` object. The keys of that object are composed in with the internally supplied props/handlers. If you pass an `onChange` handler to the prop-getter function, it will be called **before** the `<DateRangeWrapper>`'s internal onChange handler.
-
 ### Render-props for the child function
 Name | type | description
 --- | --- | ---
@@ -85,15 +74,16 @@ Name | type | description
 `startDateExclude` | function(day) | similar to `endDateExclude`, but applied to the start date DatePicker.
 
 ## Behavior overrides
-If the internal excluder functions or value getters don't work for some reason, you can supply your own function to take care of the task. This helps the component be flexible for any scenario. Internally, the Wrapper simply stores the value parameter from onChange in its state, but this parameter might be an event where you'd want `e.target.value` to be stored instead. So you can use the `end` and `startValueGetter` props like so:
+If the start and end date field names shouldn't be `startEnd` or `endDate`, you should supply your own `startValueGetter` and `endValueGetter` functions to select correct values from final form's state. This helps the component be flexible for any scenario.
 ```
 // our value-getter to suite our needs:
-const getter = (e) => e.target.value;
+const startDateGetter = (values) => values.customStartDateName;
+const endDateGetter = (values) => values.customEndDateName;
 
 // in render...
 <DateRangeWrapper
-  startValueGetter={getter}
-  endValueGetter={getter}
+  startValueGetter={startDateGetter}
+  endValueGetter={endDateGetter}
 >
 // ...jsx continued
 ```
