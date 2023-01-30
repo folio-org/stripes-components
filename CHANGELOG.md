@@ -1,19 +1,20 @@
 # Change history for stripes-components
 
-## 11.0.0 (IN PROGRESS)
+## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
 
 * `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
 * After click submit button disable the confirmation button in Confirmation modal component. Refs STCOM-1058
 * FOLIO Login screen missing scrollbar - removed global styling for body overflow. Refs STCOM-1059.
 * Correctly configure SonarCloud to find coverage reports. Refs STCOM-1064.
-* Add 'centered' property to the 'RadioButton' component. Refs STCOM-1065.:
+* Add 'centered' property to the 'RadioButton' component. Refs STCOM-1065.
 * Prevent Popover from leaking escape keypress events. Refs STCOM-1061.
-* BREAKING: Remove properties and components labeled as "deprecated". Refs STCOM-1067.
+* *BREAKING:* Remove properties and components labeled as "deprecated". Refs STCOM-1067.
 * Enable dependabot. Refs STCOM-1068, FOLIO-3664.
 * Fix link in focused MCL row not working. Fixes STCOM-1066.
 * Loosen prop-types for `<TextLink>`. Refs STCOM-1076.
 * Replace tyop in `<Accordion>`'s test-id. Refs STCOM-1079.
-* Upgrade `react-redux` to `v8`. Refs STCOM-1080.
+* *BREAKING:* Upgrade `react-redux` to `v8`. Refs STCOM-1080.
 * Fix bug with MCL columnwidths not updating with width hint API. Refs STCOM-1090.
 * Add line break at newline characters. Refs STCOM-1097.
 
