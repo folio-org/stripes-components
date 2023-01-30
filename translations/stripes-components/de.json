@@ -861,15 +861,15 @@
     "optimisticLocking.latestVersion": "Neueste Version anzeigen",
     "advancedSearch.title": "Erweiterte Suche",
     "advancedSearch.button": "Erweiterte Suche",
-    "advancedSearch.searchFor": "Suche nach",
+    "advancedSearch.searchFor": "Suchen nach",
     "advancedSearch.searchIn": "in",
     "advancedSearch.boolean.and": "UND",
     "advancedSearch.boolean.or": "ODER",
     "advancedSearch.boolean.not": "NICHT",
-    "advancedSearch.footer.search": "Suche",
+    "advancedSearch.footer.search": "Suchen",
     "advancedSearch.footer.cancel": "Abbrechen",
     "advancedSearch.boolean.label": "Operator",
-    "advancedSearch.field.label": "Suche nach",
+    "advancedSearch.field.label": "Suchen nach",
     "advancedSearch.searchOptions.label": "Suchoptionen",
     "advancedSearch.searchOptions.query": "Suchanfrage",
     "advancedSearch.emptyFirstRowError": "Suchanfrage in das erste Suchfeld eingeben",
@@ -878,6 +878,7 @@
     "Timepicker.PeriodLabel": "AM oder PM",
     "Timepicker.SetTimeLabel": "Zeit einstellen",
     "Timepicker.ScreenReaderLabel": "{label}-Format ist {screenReaderFormat} Pfeil nach unten zum Aufrufen des Uhrzeit-Dialogs verwenden. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "leave dialog",
-    "selection.controlLabel": "Select control"
+    "selection.controlLabel": "Select control",
+    "Timepicker.formEnd": "End of form",
+    "Timepicker.formStart": "Beginning of form"
 }

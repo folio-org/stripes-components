@@ -1,5 +1,22 @@
 # Change history for stripes-components
 
+## 11.0.0 (IN PROGRESS)
+
+* `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
+* After click submit button disable the confirmation button in Confirmation modal component. Refs STCOM-1058
+* FOLIO Login screen missing scrollbar - removed global styling for body overflow. Refs STCOM-1059.
+* Correctly configure SonarCloud to find coverage reports. Refs STCOM-1064.
+* Add 'centered' property to the 'RadioButton' component. Refs STCOM-1065.:
+* Prevent Popover from leaking escape keypress events. Refs STCOM-1061.
+* BREAKING: Remove properties and components labeled as "deprecated". Refs STCOM-1067.
+* Enable dependabot. Refs STCOM-1068, FOLIO-3664.
+* Fix link in focused MCL row not working. Fixes STCOM-1066.
+* Loosen prop-types for `<TextLink>`. Refs STCOM-1076.
+* Replace tyop in `<Accordion>`'s test-id. Refs STCOM-1079.
+* Upgrade `react-redux` to `v8`. Refs STCOM-1080.
+* Fix bug with MCL columnwidths not updating with width hint API. Refs STCOM-1090.
+* Add line break at newline characters. Refs STCOM-1097.
+
 ## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
 
@@ -71,6 +88,7 @@
 * MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
 * Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
 * Record detail panes are empty when printed. Refs STCOM-975.
+* The "Are you sure?" modal window doesn't close when pressing on the "ESC" keyboard button. Refs STCOM-1054.
 
 ## [10.1.5](https://github.com/folio-org/stripes-components/tree/v10.1.5) (2022-06-06)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.4...v10.1.5)
