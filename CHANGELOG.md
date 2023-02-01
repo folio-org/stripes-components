@@ -16,7 +16,7 @@
 * Upgrade `react-redux` to `v8`. Refs STCOM-1080.
 * Fix bug with MCL columnwidths not updating with width hint API. Refs STCOM-1090.
 * Add line break at newline characters. Refs STCOM-1097.
-* Refactor `<DateRangeWrapper>` and add `modalClass` prop to `<Modal>`. Refs STCOM-1099.
+* Refactor `<DateRangeWrapper>`. Refs STCOM-1099.
 
 ## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
