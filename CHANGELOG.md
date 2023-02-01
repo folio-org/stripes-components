@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## [11.1.0](IN PROGRESS)
+## 11.1.0 IN PROGRESS
 
 * Add `rootClass` and `fitContent` props to `<TextArea>`. Refs STCOM-1101.
 
