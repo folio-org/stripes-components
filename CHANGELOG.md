@@ -5,6 +5,7 @@
 * Add `rootClass` and `fitContent` props to `<TextArea>`. Refs STCOM-1101.
 * Fix bug with Timepicker formatting user input too quickly/aggressively. Refs STCOM-1103.
 * Fix big with Timepicker timedropdown spinners not respecting their appropriate ranges. Refs STCOM-1104.
+* Add optgroup example  of `Select` component in storybook. Refs STCOM-1121.
  
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
