@@ -8,9 +8,6 @@ import { Datepicker } from '@folio/stripes/components';
 //or pass as component within a form...
 <Field component={Datepicker} />
 ```
-outputBackendValue: PropTypes.bool,
-  outputFormatter: PropTypes.func,
-  parser: PropTypes.func,
 
 ## Props
 Name | type | description | default | required
