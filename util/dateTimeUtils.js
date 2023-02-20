@@ -47,7 +47,14 @@ export const getLocaleDateFormat = ({ intl, config }) => {
           format += 'YYYY';
           break;
         case 'literal':
-          format += p.value;
+          // An ICU 72 update places a unicode character \u202f (non-breaking space) before day period (am/pm).
+          // This can make for differences that are imperceptible to humans, but automated tests know!
+          // the \u202f character is best detected via its charCode... 8239
+          if (p.value.charCodeAt(0) === 8239) {
+            format += ' ';
+          } else {
+            format += p.value;
+          }
           break;
         default:
           break;
@@ -109,6 +116,7 @@ export function getLocalizedTimeFormatInfo(locale) {
     // something in the form of HH:mm or HH:mm A that could be fed to a library like moment.
     if (i === dateArray.length - 1) {
       dateFields.forEach((p) => {
+        let adjustedValue;
         switch (p.type) {
           case 'hour':
             timeFormat += 'HH';
@@ -117,8 +125,15 @@ export function getLocalizedTimeFormatInfo(locale) {
             timeFormat += 'mm';
             break;
           case 'literal':
-            timeFormat += p.value;
-            if (p.value !== ' ' && !formatInfo.separator) {
+            adjustedValue = p.value;
+            // An ICU 72 update places a unicode character \u202f (non-breaking space) before day period (am/pm).
+            // This can make for differences that are imperceptible to humans, but automated tests know!
+            // the \u202f character is best detected via its charCode... 8239
+            if (adjustedValue.charCodeAt(0) === 8239) {
+              adjustedValue = ' ';
+            }
+            timeFormat += adjustedValue;
+            if (adjustedValue !== ' ' && !formatInfo.separator) {
               formatInfo.separator = p.value;
             }
             break;
