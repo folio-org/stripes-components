@@ -5,8 +5,11 @@
 * Add `rootClass` and `fitContent` props to `<TextArea>`. Refs STCOM-1101.
 * Fix bug with Timepicker formatting user input too quickly/aggressively. Refs STCOM-1103.
 * Fix big with Timepicker timedropdown spinners not respecting their appropriate ranges. Refs STCOM-1104.
+* Fix Timepicker dropdown not spinning values when the value is empty/undefined. Refs STCOM-1118.
+* Timepicker conforms to redux-form's expected blur behavior. Refs STCOM-1119.
 * Add optgroup example  of `Select` component in storybook. Refs STCOM-1121.
- 
+* Fix Convert24hr function of timepicker to fix 'invalid date' message when timedropdown is used. Refs STCOM-1120.
+
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
 
