@@ -9,6 +9,8 @@
 * Timepicker conforms to redux-form's expected blur behavior. Refs STCOM-1119.
 * Add optgroup example  of `Select` component in storybook. Refs STCOM-1121.
 * Fix Convert24hr function of timepicker to fix 'invalid date' message when timedropdown is used. Refs STCOM-1120.
+* Fix MCL Columnheaders' focus styling. Refs STCOM-1105.
+* Fix keyboard interaction with MCL Columnheaders - Enter and Spacebar can now be used to 'click' them. Refs STCOM-680.
 * Replace `json2csv` with `@json2csv`. Refs STCOM-1132.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
