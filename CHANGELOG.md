@@ -1,19 +1,34 @@
 # Change history for stripes-components
 
-## 11.0.0 (IN PROGRESS)
+## 11.1.0 IN PROGRESS
+
+* Add `rootClass` and `fitContent` props to `<TextArea>`. Refs STCOM-1101.
+* Fix bug with Timepicker formatting user input too quickly/aggressively. Refs STCOM-1103.
+* Fix big with Timepicker timedropdown spinners not respecting their appropriate ranges. Refs STCOM-1104.
+* Fix Timepicker dropdown not spinning values when the value is empty/undefined. Refs STCOM-1118.
+* Timepicker conforms to redux-form's expected blur behavior. Refs STCOM-1119.
+* Add optgroup example  of `Select` component in storybook. Refs STCOM-1121.
+* Fix Convert24hr function of timepicker to fix 'invalid date' message when timedropdown is used. Refs STCOM-1120.
+* Fix MCL Columnheaders' focus styling. Refs STCOM-1105.
+* Fix keyboard interaction with MCL Columnheaders - Enter and Spacebar can now be used to 'click' them. Refs STCOM-680.
+* The Datepicker works correctly with an invalid date. Refs STCOM-1110.
+* Implement timeZone support in `<Timepicker/>` default output formatter. Refs STCOM-1128.
+
+## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
 
 * `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
 * After click submit button disable the confirmation button in Confirmation modal component. Refs STCOM-1058
 * FOLIO Login screen missing scrollbar - removed global styling for body overflow. Refs STCOM-1059.
 * Correctly configure SonarCloud to find coverage reports. Refs STCOM-1064.
-* Add 'centered' property to the 'RadioButton' component. Refs STCOM-1065.:
+* Add 'centered' property to the 'RadioButton' component. Refs STCOM-1065.
 * Prevent Popover from leaking escape keypress events. Refs STCOM-1061.
-* BREAKING: Remove properties and components labeled as "deprecated". Refs STCOM-1067.
+* *BREAKING:* Remove properties and components labeled as "deprecated". Refs STCOM-1067.
 * Enable dependabot. Refs STCOM-1068, FOLIO-3664.
 * Fix link in focused MCL row not working. Fixes STCOM-1066.
 * Loosen prop-types for `<TextLink>`. Refs STCOM-1076.
 * Replace tyop in `<Accordion>`'s test-id. Refs STCOM-1079.
-* Upgrade `react-redux` to `v8`. Refs STCOM-1080.
+* *BREAKING:* Upgrade `react-redux` to `v8`. Refs STCOM-1080.
 * Fix bug with MCL columnwidths not updating with width hint API. Refs STCOM-1090.
 * Add line break at newline characters. Refs STCOM-1097.
 
