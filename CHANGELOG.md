@@ -11,6 +11,8 @@
 * Fix Convert24hr function of timepicker to fix 'invalid date' message when timedropdown is used. Refs STCOM-1120.
 * Fix MCL Columnheaders' focus styling. Refs STCOM-1105.
 * Fix keyboard interaction with MCL Columnheaders - Enter and Spacebar can now be used to 'click' them. Refs STCOM-680.
+* The Datepicker works correctly with an invalid date. Refs STCOM-1110.
+* Implement timeZone support in `<Timepicker/>` default output formatter. Refs STCOM-1128.
 * Replace `json2csv` with `@json2csv`. Refs STCOM-1132.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
