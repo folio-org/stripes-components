@@ -50,8 +50,6 @@
     "@folio/eslint-config-stripes": "^6",
     "@folio/stripes-cli": "^2.4.0",
     "@folio/stripes-testing": "^4.5.0",
-    "@json2csv/plainjs": "^6.1.2",
-    "@json2csv/transforms": "^6.1.2",
     "@mdx-js/loader": "^1.6.22",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
@@ -104,6 +102,8 @@
   },
   "dependencies": {
     "@folio/stripes-react-hotkeys": "^3.0.5",
+    "@json2csv/plainjs": "^6.1.2",
+    "@json2csv/transforms": "^6.1.2",
     "classnames": "^2.2.5",
     "currency-codes": "^1.5.0",
     "dom-helpers": "^3.2.1",
