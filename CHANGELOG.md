@@ -1,11 +1,13 @@
 # Change history for stripes-components
 
-## 11.0.2 IN PROGRESS
+## [11.0.2](https://github.com/folio-org/stripes-components/tree/v11.0.2) (2023-03-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.1...v11.0.2)
 
 * Implement timeZone support in `<Timepicker/>` default output formatter. Refs STCOM-1128.
 * Fix MCL Columnheaders' focus styling. Refs STCOM-1105.
 * Fix keyboard interaction with MCL Columnheaders - Enter and Spacebar can now be used to 'click' them. Refs STCOM-680.
 * The Datepicker works correctly with an invalid date. Refs STCOM-1110.
+* The ides of March gonna be just fine this year.
 
 ## [11.0.1](https://github.com/folio-org/stripes-components/tree/v11.0.1) (2023-02-21)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v11.0.1)
