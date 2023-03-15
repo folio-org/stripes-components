@@ -3,6 +3,7 @@
 ## 11.0.2 IN PROGRESS
 
 * Implement timeZone support in `<Timepicker/>` default output formatter. Refs STCOM-1128.
+* Fix MCL Columnheaders' focus styling. Refs STCOM-1105.
 
 ## [11.0.1](https://github.com/folio-org/stripes-components/tree/v11.0.1) (2023-02-21)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v11.0.1)
