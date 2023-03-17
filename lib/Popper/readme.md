@@ -22,7 +22,7 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 isOpen | boolean | Responsible for displaying of the overlay component | | |
 onUpdate | function | Callback to be called on every change of the PopperJS instance. Returns all data set of the instance. 
-placement | string | Overlay placement. Available values: `top`, `bottom`, `left`, `right`. Each placement can have a variation: `-start`, `-end`. E.g. `top-start`, `left-start`. | `bottom` | |
+placement | string | Overlay placement. Available values: `auto`, `top`, `bottom`, `left`, `right`. Each placement can have a variation: `-start`, `-end`. E.g. `top-start`, `left-start`. | `bottom` | |
 portal | node | When is provided, overlay renders inside provided portal. | | |
 anchorRef | object | Reference to anchor element |  | yes |
 children | component | Component to be passed as an overlay |  | yes |

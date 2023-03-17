@@ -108,6 +108,7 @@ Update the placement of the `<Tooltip>` relative to the trigger component using 
 - left-end
 - right-start
 - right-end
+- auto
 
 ## Props
 Name | Type | Description | Required | Default

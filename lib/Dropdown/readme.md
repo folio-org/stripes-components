@@ -74,7 +74,7 @@ Name | type | description | default | required
 `open` | bool | required for controlled usage only. A boolean to tell `<Dropdown>` to display its menu or not. | | controlled-only
 `onToggle` | func | callback for updating the open/closed state for controlled use. | | controlled-only
 `usePortal` | bool | whether or not the internal `Popper` component should render the menu to the `#OverlayContainer` or not. | true |
-`placement` | string | string representing one of several different placements... "cardinal" positions: `top`, `bottom`, `left`, `right` with hyphenated cross-axis `start` and `end`. (`bottom-start` for lower-right renders dropdown below trigger, aligned with the flex-start side. This accounds for proper rtl positioning). | `bottom` |
+`placement` | string |  See available options in the <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper documentation</a>. | `bottom` |
 `modifiers` | object | `Popper.js` uses a collection of modifiers which ultimately define the location of the menu element. This prop can be used to make small adjustments to positioning or affect behavior in overflow situations (`flip` modifier). For more details, please, go to https://popper.js.org/popper-documentation.html#modifiers. | `{flip: { boundariesElement: 'scrollParent', padding: 10 }, preventOverflow: { boundariesElement: 'scrollParent', padding: 10 }}` |
 `relativePosition` | bool | in [some cases](https://stackoverflow.com/questions/54984952/popper-js-and-flex-end-causing-body-overflow), Popper.js requires relative positioning on the parent element of the anchor to adequately prevent overflow |
 
