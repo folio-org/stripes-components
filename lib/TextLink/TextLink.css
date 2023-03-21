@@ -64,7 +64,7 @@
   /* Focus */
   &:focus {
     background-image: none;
-    display: inline-flex;
+    display: inline-block;
 
     /* Prevents double underline */
     &:not(:active):not(:hover) {
