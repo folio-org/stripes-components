@@ -102,6 +102,7 @@
   },
   "dependencies": {
     "@folio/stripes-react-hotkeys": "^3.0.5",
+    "@svgr/webpack": "^6.5.1",
     "classnames": "^2.2.5",
     "currency-codes": "^2.1.0",
     "downshift": "^2.0.16",
