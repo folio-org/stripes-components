@@ -88,12 +88,12 @@ div[class*="Selected"] {
     */
   /* stylelint-disable no-descending-specificity */
   & .root {
-    color: var(--link-color-current);
+    color: var(--color-link-current);
 
     /* Visited */
     &:visited {
-      color: var(--link-color-visited-current);
-      text-decoration-color: var(--link-color-visited-current);
+      color: var(--color-link-current);
+      text-decoration-color: var(--color-link-current);
     }
 
     /* Focus */
@@ -104,6 +104,11 @@ div[class*="Selected"] {
         box-shadow: var(--link-box-shadow-current);
         border: 1px solid var(--link-box-shadow-current);
       }
+    }
+
+    &:hover {
+      color: var(--link-color-selected);
+      text-decoration-color: var(--link-color-selected);
     }
   }
 }

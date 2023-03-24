@@ -93,10 +93,6 @@
       color: var(--color-link-current);
     }
 
-    & a:visited {
-      color: var(--color-link-visited-current);
-    }
-
     & .mclSticky::before {
       background-color: var(--color-fill-current);
     }
