@@ -91,17 +91,27 @@ module.exports = async (config) => {
   ]);
 
   const svgRuleIndex = config.module.rules.findIndex(r => { const t = new RegExp(r.test); return t.test('m.svg'); });
-  config.module.rules[svgRuleIndex] = {
-      test: /\.svg$/,
-      use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            name: '[name].svg'
-          }
-        }
-      ]
-    };
+  // config.module.rules[svgRuleIndex] = {
+  //     test: /\.svg$/,
+  //     type: 'asset',
+  //     resourceQuery: /url/, // *.svg?url
+  //   };
 
+  const svgrRules = [
+    {
+      test: /\.svg$/,
+      type: 'asset',
+      resourceQuery: { not: [/icon/] }, // exclude built-in icons from stripes-components
+    },
+    {
+      test: /\.svg$/,
+      resourceQuery: /icon/,
+      use: ['@svgr/webpack'],
+    },
+  ];
+
+  config.module.rules.splice(svgRuleIndex,1, ...svgrRules);
+
+  console.log(JSON.stringify(config, null, 2 ));
   return config;
 }
