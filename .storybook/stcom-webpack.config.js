@@ -75,19 +75,18 @@ module.exports = async (config) => {
     config.module.rules = config.module.rules.concat([
     {
       test: /\.(jpe?g|png|gif)$/i,
-      loader: "file-loader"
+      type: 'asset/resource',
+      generator: {
+        filename: './img/[name].[contenthash].[ext]'
+      }
     },
-    
+
     {
       test: /\.(eot|ttf|woff|woff2?)$/,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[hash].[ext]'
-          }
-        }
-      ],
+      type: 'asset/resource',
+      generator: {
+        filename: './fonts/[name].[hash].[ext]'
+      }
     }
   ]);
 
@@ -95,10 +94,10 @@ module.exports = async (config) => {
   config.module.rules[svgRuleIndex] = {
       test: /\.svg$/,
       use: [
-        { 
+        {
           loader: '@svgr/webpack',
           options: {
-            name: '[name].svg' 
+            name: '[name].svg'
           }
         }
       ]
