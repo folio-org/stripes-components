@@ -91,12 +91,6 @@ module.exports = async (config) => {
   ]);
 
   const svgRuleIndex = config.module.rules.findIndex(r => { const t = new RegExp(r.test); return t.test('m.svg'); });
-  // config.module.rules[svgRuleIndex] = {
-  //     test: /\.svg$/,
-  //     type: 'asset',
-  //     resourceQuery: /url/, // *.svg?url
-  //   };
-
   const svgrRules = [
     {
       test: /\.svg$/,
