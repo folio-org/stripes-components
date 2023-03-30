@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 11.0.3 IN PROGRESS
+## [11.0.3](https://github.com/folio-org/stripes-components/tree/v11.0.3) (2023-03-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.2...v11.0.3)
 
 * Timepicker considers timezone when parsing value prop. Refs STCOM-1141.
 
