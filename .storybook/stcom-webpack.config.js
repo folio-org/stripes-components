@@ -105,7 +105,5 @@ module.exports = async (config) => {
   ];
 
   config.module.rules.splice(svgRuleIndex,1, ...svgrRules);
-
-  console.log(JSON.stringify(config, null, 2 ));
   return config;
 }
