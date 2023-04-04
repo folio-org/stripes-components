@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 11.0.4 IN PROGRESS
+## [11.0.4](https://github.com/folio-org/stripes-components/tree/v11.0.4) (2023-04-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.3...v11.0.4)
 
 * Lock `react-virtual-auto-sizer` to prevent test failures. Refs STCOM-1146.
 
