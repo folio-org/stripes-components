@@ -72,7 +72,7 @@
     "fieldIsDisabled": "Il campo è disabilitato",
     "readonly": "Sola lettura",
     "readMore": "Per saperne di più",
-    "tableEmpty": "Nessun elemento da mostrare",
+    "tableEmpty": "La lista è vuota",
     "metaSection.sourceNoData": "Fonte: processo automatizzato",
     "metaSection.recordCreatedNoData": "Record creato: sconosciuto",
     "metaSection.recordLastUpdatedNoData": "Ultimo aggiornamento del record: sconosciuto",
