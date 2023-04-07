@@ -7,7 +7,7 @@
     "goToNextMonth": "다음 달로 이동",
     "selectDay": "{dayOfWeek}, {date} 선택",
     "dateSelected": "{date} 선택됨",
-    "screenReaderLabel": "{label} 형식은 {스크린 리더 형식}이며 화살표 키를 사용하여 날짜를 탐색합니다. 확인하려면 키를 입력하십시오. {스크린 리더 메시지}",
+    "screenReaderLabel": "{label} format is {screenReaderFormat} use arrow keys to navigate dates. Enter key to confirm. {screenReaderMessage}",
     "clearFieldValue": "필드 값 지우기",
     "showOrHideDatepicker": "날짜 선택기 표시/숨기기",
     "showOrHideTimepicker": "시간 선택기 표시/숨기기",
