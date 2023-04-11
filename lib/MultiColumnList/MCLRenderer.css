@@ -57,6 +57,14 @@
   outline: none;
   background-color: var(--color-fill-table-row-even);
 
+  &:focus-within {
+    z-index: 3;
+  }
+
+  &:not(:focus-within) {
+    z-index: 0;
+  }
+
   &:visited {
     color: var(--color-text);
   }
@@ -272,7 +280,6 @@
   flex-shrink: 0;
   flex-grow: 0;
   flex-basis: auto;
-  overflow: hidden;
   text-align: left;
   word-break: break-word;
 
