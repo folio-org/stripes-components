@@ -58,7 +58,7 @@
   background-color: var(--color-fill-table-row-even);
 
   &:focus-within {
-    z-index: 3;
+    z-index: 2;
   }
 
   &:not(:focus-within) {
