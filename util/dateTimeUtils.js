@@ -48,7 +48,7 @@ export const getLocaleDateFormat = ({ intl }) => {
     format = getMomentLocalizedFormat(intl);
   }
 
-  return format.replace('\u202f', ' ');
+  return format.replaceAll('\u202f', ' ');
 };
 
 // getLocalizedTimeFormatInfo() -
@@ -128,7 +128,7 @@ export function getLocalizedTimeFormatInfo(locale) {
 
   return {
     ...formatInfo,
-    timeFormat,
+    timeFormat: timeFormat.replaceAll('\u202f', ' '),
     dayPeriods: [...dpOptions],
   };
 }
