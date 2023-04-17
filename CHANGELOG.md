@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 10.3.4 IN PROGRESS
+
+* PaneContent div should be `position: relative` to hide overflow from absolutely positioned contents. Refs STCOM-1148.
+
 ## [10.3.3](https://github.com/folio-org/stripes-components/tree/v10.3.3) (2022-12-04)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.1...v10.3.2)
 
