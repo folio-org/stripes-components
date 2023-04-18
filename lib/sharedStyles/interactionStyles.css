@@ -23,10 +23,6 @@
   z-index: 1;
 }
 
-.interactionStyles * {
-  z-index: 2;
-}
-
 /**
  * Disabled state
  */
@@ -189,7 +185,6 @@
 .interactionStylesControl:active > .interactionStyles,
 .interactionStyles:active {
   color: #fff;
-  & * { color: #fff; }
   & svg { fill: #fff; }
 }
 
