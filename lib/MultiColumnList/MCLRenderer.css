@@ -280,6 +280,7 @@
   flex-shrink: 0;
   flex-grow: 0;
   flex-basis: auto;
+  overflow: hidden;
   text-align: left;
   word-break: break-word;
 
