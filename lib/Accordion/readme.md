@@ -73,7 +73,7 @@ const initial = {
 ```
 
 ## Open render-prop
-Accordions can pass a their open status to their children via a functional child: 
+Accordions can pass a their open status to their children via a functional child:
 
 ```
 <Accordion label="Lazy content">
@@ -153,9 +153,29 @@ onToggleSection({label, id}) {
 ## Header
 The `<Accordion>` comes with a default header component out of the box. The default header suits many cases, but if it is not adequate, a custom header can be provided via `<Accordion>`'s `header` prop.
 
-A custom header component should take `ContentId` prop in order to appropriately apply aria-attributes to the custom header. Any props passed to `<Accordion>` will also be passed to its `header` component.
+A custom header component should take `ContentId` and `labelId` props in order to appropriately apply aria-attributes to the custom header. Any props passed to `<Accordion>` will also be passed to its `header` component.
 
 You can pass down additional props for the header component by using the `headerProps`-prop. This can be useful for e.g. changing the header level of the default accordion header via. the `headingLevel`-prop (defaults to `3`).
+
+Example custom header:
+```
+const header = ({
+    contentId,
+    toggleRef,
+    open,
+    onToggle,
+    label,
+    labelId,
+  }) => (
+      <p style={{ border: '1px solid #ddd', padding: '0 4px' }}>
+      <button ref={toggleRef} onClick={onToggle} aria-owns={contentId} id={labelId}>{`${label} Header Content (click to ${open ? 'close':'expand'})`}</button>
+      </p>
+    );
+
+<Accordion header={header} label="Example">
+Content
+</Accordion>
+```
 
 ## Accordion Props
 
