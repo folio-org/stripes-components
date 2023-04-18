@@ -35,11 +35,23 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  background-color: var(--color-fill-form-element);
 
   &.marginBottom0 {
     /* stylelint-disable-next-line length-zero-no-unit */
     margin-bottom: 0;
   }
+}
+
+[class*=interactionStyles] .selectionControl {
+  background-color: var(--bg);
+  &:active {
+    color: var(--color-text);
+  }
+}
+
+[class*=interactionStyles]:active .selectionControl {
+  color: var(--color-text);
 }
 
 .selectionFilterContainer {
@@ -100,6 +112,7 @@
   cursor: default;
   display: flex;
   justify-content: space-between;
+  color: var(--color-text);
 
   &.selected {
     background: var(--color-fill-current);

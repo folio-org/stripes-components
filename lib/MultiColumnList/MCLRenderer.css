@@ -57,6 +57,14 @@
   outline: none;
   background-color: var(--color-fill-table-row-even);
 
+  &:focus-within {
+    z-index: 2;
+  }
+
+  &:not(:focus-within) {
+    z-index: 0;
+  }
+
   &:visited {
     color: var(--color-text);
   }
