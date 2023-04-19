@@ -48,6 +48,8 @@ export const getLocaleDateFormat = ({ intl }) => {
     format = getMomentLocalizedFormat(intl);
   }
 
+  // replace narrow non-breaking space introduced in ICU 72.1
+  // see https://github.com/nodejs/node/issues/46123
   return format.replaceAll('\u202f', ' ');
 };
 
