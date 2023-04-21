@@ -18,6 +18,7 @@
 * Timepicker considers timezone when parsing value prop. Refs STCOM-1141.
 * PaneContent div should be position: relative to hide overflow from absolutely positioned contents. Refs STCOM-1148.
 * Adjust styles for overlay controls rendered in MCL rows. Refs STCOM-1149, UIRS-100.
+* Fix the `key` property for `<SelectOption/>` to fix duplications when the label is not unique. Refs STCOM-1155.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
