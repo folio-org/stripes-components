@@ -112,7 +112,7 @@ Name | type | description | default | required
 `selectedClass` | string | override class for the default style applied to selected rows. | built-in |
 `selectedRow` | object | **legacy API** Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | |
 `sortedColumn` | string | Used to apply styling to the appropriate column. | |
-`sortOrder` | string | 'ascending' or 'descending' direction. | |
+`sortDirection` | string | 'ascending' or 'descending' direction. | |
 `stickyFirstColumn` | bool | Pins the first column in place so that it will remain visible when scrolled out of view. | |
 `stickyLastColumn` | bool | Pins the last column in place so that it will remain visible when scrolled out of view | |
 `striped` | bool | Adds striped style to rows | `true` |
