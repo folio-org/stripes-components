@@ -6,9 +6,9 @@
   --color-border-p2: rgba(0, 0, 0, 0.1);
   --color-icon: rgba(0, 0, 0, 0.62);
   --color-link: #2f609f;
-  --color-link-current: rgb(165, 234, 255);
+  --color-link-current: #fff;
   --color-link-visited: #4f2bbb;
-  --color-link-visited-current: rgb(185, 192, 255);
+  --color-link-visited-current: #fff;
   --color-fill: rgba(0, 0, 0, 0.03);
   --color-fill-table-row-odd: rgba(0, 0, 0, 0.08);
   --color-fill-table-row-even: rgba(0, 0, 0, 0.03);
@@ -45,6 +45,7 @@
   --input-horizontal-padding: var(--gutter-static-one-third);
   --input-vertical-padding: 0;
   --container-max-width: 80rem;
+  --page-margin-default: 0.4in;
 
   /**
    * Font-size

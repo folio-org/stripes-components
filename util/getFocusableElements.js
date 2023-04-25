@@ -1,18 +1,19 @@
-/*  getNextFocusable() and getPreviousFocusable() -
-*    Returns next/previous focusable DOM element, respectively
-*   Params:
-*     currentElement
-*       (object) DOM element - starting element for search. Returns next focused element AFTER this element.
-*     includeContained
-*       (bool) Default: true. Will return the next focusable item within the current element. If false, returned
-*       element will be outside of the container,
-*      onlyContained
-*       (bool) Default: false. If true and includeContaining is true, the search is limited only to
-*        elements within the container.
-*     loop
-*       (bool) Default: true. Elements are chosen by index. If the index is beyond the end of the list,
-*       the first element will be returned.
-*       If the index is before the start of the list, the last element will be returned.
+/**
+ * @typedef {Function} getNextFocusable()
+ *    @description Returns next/previous focusable DOM element, respectively
+ *   Params:
+ *     @param {object} currentElement
+ *       DOM element - starting element for search. Returns next focused element AFTER this element.
+ *     @param {bool} includeContained
+ *       Default: true. Will return the next focusable item within the current element. If false, returned
+ *       element will be outside of the container,
+ *      @param {bool} onlyContained
+ *       Default: false. If true and includeContaining is true, the search is limited only to
+ *        elements within the container.
+ *     @param {bool} loop
+ *       Default: true. Elements are chosen by index. If the index is beyond the end of the list,
+ *       the first element will be returned.
+ *       If the index is before the start of the list, the last element will be returned.
 */
 
 import contains from 'dom-helpers/query/contains';
@@ -20,11 +21,12 @@ import matches from 'dom-helpers/query/matches';
 import first from 'lodash/first';
 import last from 'lodash/last';
 
+// eslint-disable-next-line max-len
+export const FOCUSABLE_SELECTOR = 'a:not([disabled]), button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
+
 function getVisibleFocusableElements(container = document, includeContained, currentElement) {
   if (container.querySelectorAll) {
-    // eslint-disable-next-line max-len
-    const focusableSelector = 'a:not([disabled]), button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
-    return Array.from(container.querySelectorAll(focusableSelector))
+    return Array.from(container.querySelectorAll(FOCUSABLE_SELECTOR))
       .filter((element) => {
         if (!includeContained) {
           if (element === currentElement) {

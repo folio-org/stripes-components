@@ -15,6 +15,10 @@
   overflow: hidden;
   position: absolute;
   will-change: transform;
+
+  @media print {
+    overflow: visible;
+  }
 }
 
 .focusIndicator {
@@ -42,6 +46,7 @@
   width: 100%;
   overflow: auto;
   outline: 0;
+  position: relative;
 
   &.hasPadding {
     padding: var(--gutter-static);
@@ -49,6 +54,10 @@
 
   &.noOverflow {
     overflow: hidden;
+  }
+
+  @media print {
+    overflow: visible;
   }
 }
 

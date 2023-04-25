@@ -6,7 +6,12 @@ export { default as ButtonGroup } from './lib/ButtonGroup';
 export { default as Checkbox } from './lib/Checkbox';
 export { default as CurrencySelect } from './lib/CurrencySelect';
 export { default as CountrySelection } from './lib/CountrySelection';
-export { default as Datepicker, Calendar } from './lib/Datepicker';
+export {
+  default as Datepicker,
+  Calendar,
+  staticFirstWeekDay,
+  staticLangCountryCodes
+} from './lib/Datepicker';
 export { getLocaleDateFormat, getLocalizedTimeFormatInfo } from './util/dateTimeUtils';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as FormattedDate } from './lib/FormattedDate';
@@ -70,7 +75,7 @@ export { default as Modal } from './lib/Modal';
 export { default as ModalFooter } from './lib/ModalFooter';
 export { default as Avatar } from './lib/Avatar';
 export { default as Callout, CalloutElement } from './lib/Callout';
-export { Dropdown, UncontrolledDropdown } from './lib/Dropdown';
+export { default as Dropdown } from './lib/Dropdown';
 export { default as DropdownMenu } from './lib/DropdownMenu';
 export { default as DropdownButton } from './lib/DropdownButton';
 export { default as MenuSection } from './lib/MenuSection';

@@ -73,7 +73,7 @@
     "readonly": "只读",
     "readMore": "了解更多",
     "tableEmpty": "该清单不含任何单件",
-    "metaSection.sourceNoData": "来源：自动化流程",
+    "metaSection.sourceNoData": "来源：未知用户",
     "metaSection.recordCreatedNoData": "记录创建：未知",
     "metaSection.recordLastUpdatedNoData": "记录上次更新：未知",
     "saveAndClose": "保存并关闭",
@@ -878,6 +878,7 @@
     "Timepicker.PeriodLabel": "上午或下午",
     "Timepicker.SetTimeLabel": "设置时间",
     "Timepicker.ScreenReaderLabel": "{label}格式为{screenReaderFormat}使用向下箭头进入时间选择器对话框。 {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "离开对话框",
-    "selection.controlLabel": "选择控制"
+    "selection.controlLabel": "选择控制",
+    "Timepicker.formEnd": "表格结束",
+    "Timepicker.formStart": "表格开头"
 }

@@ -1,6 +1,67 @@
 # Change history for stripes-components
 
-## 10.2.0 IN PROGRESS
+## 11.1.0 IN PROGRESS
+
+* Add `rootClass` and `fitContent` props to `<TextArea>`. Refs STCOM-1101.
+* Fix bug with Timepicker formatting user input too quickly/aggressively. Refs STCOM-1103.
+* Fix big with Timepicker timedropdown spinners not respecting their appropriate ranges. Refs STCOM-1104.
+* Fix Timepicker dropdown not spinning values when the value is empty/undefined. Refs STCOM-1118.
+* Timepicker conforms to redux-form's expected blur behavior. Refs STCOM-1119.
+* Add optgroup example  of `Select` component in storybook. Refs STCOM-1121.
+* Fix Convert24hr function of timepicker to fix 'invalid date' message when timedropdown is used. Refs STCOM-1120.
+* Fix MCL Columnheaders' focus styling. Refs STCOM-1105.
+* Fix keyboard interaction with MCL Columnheaders - Enter and Spacebar can now be used to 'click' them. Refs STCOM-680.
+* The Datepicker works correctly with an invalid date. Refs STCOM-1110.
+* Implement timeZone support in `<Timepicker/>` default output formatter. Refs STCOM-1128.
+* Internalize the react-flexbox-grid dependency. Refs STCOM-1127.
+* Set TextLink color to white on selected MCL rows. Refs STCOM-1122.
+* Timepicker considers timezone when parsing value prop. Refs STCOM-1141.
+* PaneContent div should be position: relative to hide overflow from absolutely positioned contents. Refs STCOM-1148.
+* Adjust styles for overlay controls rendered in MCL rows. Refs STCOM-1149, UIRS-100.
+* Provide onChange and ariaLabel prop to TextArea component. Refs STCOM-1154.
+
+## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
+
+* `<Paneset>` initializes state more thoroughly, avoiding nulls. Refs STCOM-1056.
+* After click submit button disable the confirmation button in Confirmation modal component. Refs STCOM-1058
+* FOLIO Login screen missing scrollbar - removed global styling for body overflow. Refs STCOM-1059.
+* Correctly configure SonarCloud to find coverage reports. Refs STCOM-1064.
+* Add 'centered' property to the 'RadioButton' component. Refs STCOM-1065.
+* Prevent Popover from leaking escape keypress events. Refs STCOM-1061.
+* *BREAKING:* Remove properties and components labeled as "deprecated". Refs STCOM-1067.
+* Enable dependabot. Refs STCOM-1068, FOLIO-3664.
+* Fix link in focused MCL row not working. Fixes STCOM-1066.
+* Loosen prop-types for `<TextLink>`. Refs STCOM-1076.
+* Replace tyop in `<Accordion>`'s test-id. Refs STCOM-1079.
+* *BREAKING:* Upgrade `react-redux` to `v8`. Refs STCOM-1080.
+* Fix bug with MCL columnwidths not updating with width hint API. Refs STCOM-1090.
+* Add line break at newline characters. Refs STCOM-1097.
+
+## [10.3.0](https://github.com/folio-org/stripes-components/tree/v10.3.0) (2022-10-13)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.2.0...v10.3.0)
+
+* Fix 12-hour formatting in `dateTimeUtils` `getLocalizedTimeFormatInfo`. Fixes STCOM-1017
+* Add `inputRef` prop to `<Timepicker>`. Refs STCOM-1016
+* `<MultiDownshift>` - highlight first item when searching for options. Fixes STCOM-1015
+* Long titles do not fit in the confirmation modal window header. Refs STCOM-1020
+* Pass `modifiers` prop to correct component in `<MultiSelection>`. Fixes STCOM-1013.
+* Add `inputRef` prop to `<Selection>`. Refs STCOM-647.
+* `<MultiSelection>` must handle null filter string. Refs STCOM-1022.
+* Break long words in Callout message. Refs STCOM-1023.
+* Add underline to Button focus indicator. Refs STCOM-1007
+* Fix selection bug where pressing the enter key while no options are available will clear the selected value. fixes STCOM-1024.
+* Fix TextField bug where "focused" state is retained if component is disabled while it's in focus. fixes STCOM-818.
+* Provide ability to disable an Icon Button. Refs STCOM-1028.
+* `MultiSelection` support for `aria-label`. Refs STCOM-977.
+* Fix regex matching of search options in `<AdvancedSearch>`. Fixes STCOM-1031.
+* Export `staticFirstWeekDay` and `staticLangCountryCodes` from `Datepicker`. Refs STCOM-1038.
+* Button: Button link style has a min-height, which can offset it from text. Fixes STCOM-1039.
+* The vertical scroll bar displays at the second pane when it doesn't need. Fixes STCOM-1044.
+* Focus management and accessible labeling of confirmation modals. Confirmation modals announce in a way similart to Javascript alerts. Fixes STCOM-1041.
+
+## [10.2.0](https://github.com/folio-org/stripes-components/tree/v10.2.0) (2022-06-14)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.2.0)
 
 * Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931
 * Include percentage-based layout widths in proportional resizing. fixes STCOM-927.
@@ -44,6 +105,46 @@
 * Paneset logic handles container widths of 0. Refs STCOM-1004.
 * properly provide popper placements. Fixes STCOM-979.
 * Additional functionality needed for metadata display when user record is deleted. Refs STCOM-882.
+* Add the ability to pass a className to the rows container in the `<MultiColumnList>`. Refs STCOM-1009.
+* MultiSelection - fix exception when using special characters in search string. Fixes STCOM-1010.
+* Browse contributors > Second pane should not show a horizontal scrollbar. Fixes STCOM-1011.
+* Record detail panes are empty when printed. Refs STCOM-975.
+* The "Are you sure?" modal window doesn't close when pressing on the "ESC" keyboard button. Refs STCOM-1054.
+
+## [10.1.5](https://github.com/folio-org/stripes-components/tree/v10.1.5) (2022-06-06)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.4...v10.1.5)
+
+* Set Monday as first day of the week for `es-419`. Refs STCOM-985.
+* Migrate Node JS to active LTS, v16. Refs STCOM-996.
+* Include recent `zh-TW` translations. Refs STCOM-1003.
+
+## [10.1.4](https://github.com/folio-org/stripes-components/tree/v10.1.4) (2022-06-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.3...v10.1.4)
+
+* Handle panesets containing only percentage-based panes differently. Fixes STCOM-983
+* In mixed px and non-px panesets, resize caches only for px-based widths. Fixes STCOM-982
+* Resize non-cached paneset layouts on window resize. Fixes STCOM-984.
+* Check for window resize in `calcWidths`. Refs STCOM-987.
+* resize-nested paneset containers. Refs STCOM-988.
+* Resized nested paneset containing elements. Fixes STCOM-989.
+
+## [10.1.3](https://github.com/folio-org/stripes-components/tree/v10.1.3) (2022-04-04)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.2...v10.1.3)
+
+* Prevent caching of pane layouts (resizeable widths) when panes do not have a provided stable `id` prop. fixes STCOM-932.
+* Fix cropping of nested panesets. Fixes STCOM-953
+
+## [10.1.2](https://github.com/folio-org/stripes-components/tree/v10.1.2) (2022-03-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.1...v10.1.2)
+
+* Prevent `onMount` from being passed to rendered HTML element in `<Pane>`. fixes STCOM-931.
+
+## [10.1.1](https://github.com/folio-org/stripes-components/tree/v10.1.1) (2022-03-24)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.1.0...v10.1.1)
+
+* Export to CSV not handling diacritics. Fixes STCOM-951.
+* Advanced search does not work when editing Advanced Search box. Refs STCOM-934.
+* Improve splitting search query into rows in `<AdvancedSearch>`. Fixes STCOM-955.
 
 ## [10.1.0](https://github.com/folio-org/stripes-components/tree/v10.1.0) (2022-02-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.0.0...v10.1.0)

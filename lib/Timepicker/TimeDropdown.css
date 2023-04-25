@@ -6,7 +6,7 @@
   border-radius: var(--radius);
   border: 1px solid #bcbcbc;
   padding: var(--gutter-static);
-  min-width: 260px;
+  min-width: 290px;
   box-shadow: var(--shadow);
   z-index: 9999;
 

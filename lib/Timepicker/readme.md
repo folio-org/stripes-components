@@ -1,43 +1,90 @@
 # Timepicker
-Form element for selecting a time.
 ## Usage
-```
-import { Timepicker } from '@folio/stripes/components';
 
-// later in your JSX....
+```js
+import { Timepicker } from '@folio/stripes/components';
+//..
 <Timepicker />
+//or pass as component within a final-form...
+<Field component={Timepicker} />
 ```
+
+## Controlled Timepicker example
+```
+...
+const [time, updatetime] = useState();
+...
+
+handleTimeChange = (e) => {
+  updatetime(e.target.value);
+}
+
+<Timepicker
+  label="Time"
+  value={this.state.time1}
+  onChange={handleTimeChange}
+/>
+```
+
 ## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-`id` | string | Sets the `id` html attribute on the control | |
-`label` | string | If provided, will render a `<label>` tag with an `htmlFor` attribute directed at the provided `id` prop. | |
-`value` | string | Sets the value for the control. **Not necessary if using redux-form.** | |
-`onChange` | function | Callback function that will receive the control's current value and the onChange event object. `fn(e, value)` **Not necessary if using redux-form**, but it will still work if callback from a change is needed. |  |
-`placement` | string | Determines the position of the date picker overlay. See available options in the <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper documentation</a>. | bottom | false
-`usePortal` | bool | if true, the Timepicker will render itself to a React-Portal (the `#OverlayContainer` div) -- this avoids having the Timepicker cutoff by overflow (useful if the Timepicker is rendered inside of a MultiColumnList, for example). | false | false
-`modifiers` | object | Passes modifiers for the internal <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper</a>-component which handles the positioning of the date picker overlay. | | false
-`passThroughValue` (deprecated) | string | Can be used to set dynamic values up to the form - values should be inspected/adjusted in a handler at submission time (like a button click that calls `submit()`.) See below for usage example. |  |
-`autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
-`timeZone` | string | Overrides the time zone provided by context. (Use `'UTC'` to force interpretation as an absolute time of day) | | false
-`locale` | string | Overrides the locale provided by context. | "en" | false
-`marginBottom0` | bool | Remove the bottom margin | false | false
+`autoFocus` | bool | If this prop is `true`, component will automatically focus on mount | |
+`disabled` | bool | if true, field will be disabled for focus or entry. | false | false
+`id` | string | id for date field - used in the "id" attribute of the text input | | false
+`label` | string | visible field label | | false
+`locale` | string | Overrides the locale provided by context. | | false
+`marginBottom0` | bool | removes the default bottom margin from the component. | | false
+`modifiers` | object | Passes modifiers for the internal <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper</a>-component which handles the positioning of the time picker overlay. | | false
+`onChange` | func | Event handler to handle updates to the value. By default this value comes from a hidden input, containing a formatted output value (product of `outputFormatter`) | | false
+`outputFormatter` | func | Function to format the date value for submission to the backend. | `defaultOutputFormatter` |
+`parser` | func | Function to format the time from the `value` prop to the value ui's presentation within the visible input. | `defaultParser` |
+`placement` | string | Determines the position of the time picker overlay. See available options in the <a href="https://github.com/folio-org/stripes-components/tree/master/lib/Popper" target="_blank">Popper documentation</a>. | 'bottom' | false
+`readOnly` | bool | if true, field will be readonly. 'Calendar' and 'clear' buttons will be omitted. | false | false
+`required` | bool | markes the input as a required field, applies the html required attribute. | | false
+`screenReaderMessage` | string | Additional message to be read by screenreaders when textfield is focused in addition to the label and format - which are always read. | | false
+`timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
+`timeFormat` | string | String to override default time format according to locale | | false
+`useInput` | bool | If true - Outputs the value as it is displayed in the input. | false |
+`usePortal` | bool | if true, the Timepicker will render itself to a React-Portal (the `#OverlayContainer` div) this avoids haveing the Timepicker cutoff by overflow. | false | false
+`value` | string | time to be displayed in the visible input. | | false
 
-## Working with Times
 
-Using a `value` that does not include any timezone information, the
-time is assumed by `moment()` to be in the local timezone. When the
-local timezone is east of UTC, such as `+03:00`, and converted to UTC
-for internationalization formatting, the offset will be subtracted
-from the time. For example, a value of `12:00` will appear as `9:00`
-UTC when viewed in the EEST timezone.
+## `parser` and `outputFormatter` - Timepicker Value Flow.
 
-When comparing or manipulating dates, it is safest to operate in UTC
-mode and leave display formatting to internationalization helpers. If
-using moment, this can be done via
-[`moment.utc()`](http://momentjs.com/docs/#/parsing/utc/).
+The value flow happens in 3 stages
+1. **value prop** - the value prop is a time string. ex '4:00 AM' or '13:00'.
 
-## Usage in Redux-form
-Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.
+2. **presentation formatting** - the value prop is localized via the function from the `parser` prop and displayed in the text input. This function is provided with the following parameters in this order:
+- `value` - the value prop.
+- `timezone` - the timezone prop.
+- `timeFormat` - array of localized formats including the value provided in the `timeFormat` prop.
+- `intl` - from the `intl` prop or part of `react-intl` context.
+
+By default this returns a localized time value DST removed, or the raw input value (if it doesn't satisfy the full time format 'H:mm' or 'h:mm A').
+
+3. **output formatting** - when the input is changed by the user, its value is formatted again to work with the backend/data layer using the `outputFormatter` function. This function is provided *a parameter object* holding the following keys:
+- `value` - the value prop.
+- `formats` - the array of localized formats including the  `timeFormat` prop if provided for displaying the value in the textfield.
+- `timezone` - string representing the timezone, taken from context or via the override prop.
+- `intl` - from the intl prop or part of `react-intl` context.
+
+By default, this function returns a value in the ISOString format: 'HH:mm:ss.sssZ'
+
+
+## Final Form usage
+
 ```
-<Field name="exampleTimeReturned" label="Time returned" id="timeReturnTP" placeholder="Select Time" component={Timepicker} />
+<Field component={Timepicker} name="time" label="time" />
+```
+### Value manipulation into/out of the field...
+To adjust the value from the redux store before passing it to the component, use the `<Field>`'s `format` prop:
+```
+const formatField = value => (value ? moment.utc(value) : '');
+<Field component={Timepicker} name="date" label="date" format={formatField} />
+```
+To adjust the set value, prior to storing it in the redux-store, use `parse`
+```
+const parseField = value => (value ? moment.utc(value) : '');
+<Field component={Timepicker} name="date" label="date" parse={parseField} />
+```

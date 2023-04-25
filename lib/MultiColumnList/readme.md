@@ -15,6 +15,10 @@ const catalogResults = [
 
 You can also specify a formatter object to control exactly how the data is rendered: see below.
 
+### Sticky Columns
+The first and last columns of the grid can be 'pinned' into place. These will keep them visible when they would normally have scrolled out of view.
+To apply this, use the `stickyFirstColumn` or `stickyLastColumns` props.
+
 ### Infinite scroll
 For large lists of data the boolean prop `virtualize` can be turned on to efficiently display only the table rows that are visible to the user within the scrollable body of the list. The `virtualize` prop should be used in conjunction with the `height`, `maxHeight` or `autosize` prop - virtualization will not work otherwise.
 
@@ -80,6 +84,7 @@ Name | type | description | default | required
 `formatter`  | object mapping names to functions | see separate section | |
 `getCellClass` | func | Used to update or completely overwrite the visual styles for each column. The function passed to this prop will receive the current CSS class, row data and the column name as the parameters and the returned value will overwrite the default class – e.g. `(defaultClass, rowData, header) => ${defaultClass} ${myCustomClass}` | `undefined` |
 `getHeaderCellClass` | func | Used to update the visual styles for each column header. The function passed to this prop will receive the column name as the  parameter and the returned value will extend the default class – e.g. `header =>  ${myCustomClass}` | `undefined` |
+`getRowContainerClass` | func | Used to update the visual styles for row container. The function passed to this prop will receive the current CSS class as the parameter and the returned value will overwrite the default class – e.g. `defaultClass =>  ${defaultClass} ${myCustomClass}` | `undefined` |
 `hasMargin` | bool | Applies horizontal margin on rows and header. This is primarily used to achieve the correct spacing within result panes. | |
 `headerMetadata` | object | Object with data to include with the | |
 `headerRowClass` | string | Applies a css class to the header row of the list. | |
@@ -92,9 +97,9 @@ Name | type | description | default | required
 `maxHeight` | number | the maximum height that the list should grow to before scrolling its list body in pixels. | |
 `nonInteractiveHeaders` | array of strings | Pass an array of column names to make their column headers non-interactive. This is only relevant if you have supplied an `onHeaderClick`-callback and you only want some of the header columns to be interactable. | [] |
 `onHeaderClick` | func[event, headerMetadata] | callback function invoked when one of the cells in the header is clicked (typically to choose a sort-order). By default, headerMetadata includes the column's data name as well as its alias, in case a object is supplied to the columnMapping prop. | |
-`onNeedMoreData` | func(`askAmount`, `index`) | Callback for fetching more data. If this prop is provided and a `totalCount` prop is provided, but un-reached by the count of loaded data items, `askAmount` will ask for the remainder of items or the `pageAmount` prop, whichever is less. This can be used to fulfill `limit` query parameters. `rowIndex` can be used to fulfill an `offset` query parameter. | |
 `onMarkPosition` | func(positionObject) | Called when an item is focused within the list. The position object consists of a 'selector' string and a client-space offset in pixels. This can be fed back to the `itemToView` prop and, upon rendering the list, MCL will scroll to the item, maintaining the same visual position. `itemToView` is currently only working for **non-virtualized** lists.| |
-`onResetMark` | func | Called if the selector of the `ItemToView` isn't found. Modules can use this to reset their cached value. | |
+`onMarkReset` | func | Called if the selector of the `ItemToView` isn't found. Modules can use this to reset their cached value. | |
+`onNeedMoreData` | func(`askAmount`, `index`) | Callback for fetching more data. If this prop is provided and a `totalCount` prop is provided, but un-reached by the count of loaded data items, `askAmount` will ask for the remainder of items or the `pageAmount` prop, whichever is less. This can be used to fulfill `limit` query parameters. `rowIndex` can be used to fulfill an `offset` query parameter. | |
 `onRowClick` | function(`event`, `item`) | callback function invoked when one of the lines in the table is clicked (typically to select a record for more detailed display). | |
 `onScroll` | func | Callback for scrolling of list body. | `noop` |
 `pageAmount` | number | The base amount of data to pass as the `askAmount` parameter for the `onNeedMoreData` prop | `30` |
@@ -106,9 +111,10 @@ Name | type | description | default | required
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |
 `selectedClass` | string | override class for the default style applied to selected rows. | built-in |
 `selectedRow` | object | **legacy API** Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | |
-`sortedClass` | string | override class for the default style applied to headers of sorted columns. | built-in |
 `sortedColumn` | string | Used to apply styling to the appropriate column. | |
-`sortOrder` | string | 'ascending' or 'descending' direction. | |
+`sortDirection` | string | 'ascending' or 'descending' direction. | |
+`stickyFirstColumn` | bool | Pins the first column in place so that it will remain visible when scrolled out of view. | |
+`stickyLastColumn` | bool | Pins the last column in place so that it will remain visible when scrolled out of view | |
 `striped` | bool | Adds striped style to rows | `true` |
 `totalCount` | number | The total number of expected records. It's necessary in various situations: using `virtualize` (so that MCL can anticipate the dimensions of expected rows) and with `prev-next` and `click` paging types ( so that the 'next' or 'load more' button can be adequately disabled when the end of the list is reached.) | 0 |
 `virtualize` | bool | Employs virtualization for performant rendering of large sets of data. | 0 |

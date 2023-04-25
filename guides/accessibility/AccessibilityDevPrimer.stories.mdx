@@ -1,3 +1,7 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Accessibility/Accessibility for Developers" />
+
 ## Accessibility primer for developers
 
 Accessibility and inclusive design mean that no permissable user is excluded from accessing data or performing tasks through a user interface. Any subjective design decision has potential to exclude users from functionality, but awareness of best accessibility practices can help filter out inaccessible approaches up front. It's a larger effort to make inaccessible code accessible after the fact.
@@ -11,17 +15,17 @@ Modern web development gives us a wholesome set of tools to control the way that
 ### Development checklist.
 Each link within this list is a link to part of this document.
 
-- [ ] Use appropriate [semantic tags](#html5-semantic-tags-roles-and-aria) instead of generic `<div>`s and `<span>`s.
+- Use appropriate [semantic tags](#html5-semantic-tags-roles-and-aria) instead of generic `<div>`s and `<span>`s.
 
-- [ ] Keep any user aware of status/context. Be sure that changes to the page are relayed appropriately to screen readers via [focus management](#focus-management) or other means of [relaying messages](#relaying-status-with-aria-live-regions).
+- Keep any user aware of status/context. Be sure that changes to the page are relayed appropriately to screen readers via [focus management](#focus-management) or other means of [relaying messages](#relaying-status-with-aria-live-regions).
 
-- [ ] Don't rely on hover effects to relay important info. Avoid using [title attributes](#title-attributes). The `<Tooltip>` component can be used to supply a hover functionality in an accessible way.
+- Don't rely on hover effects to relay important info. Avoid using [title attributes](#title-attributes). The `<Tooltip>` component can be used to supply a hover functionality in an accessible way.
 
-- [ ] Keep the application usable via keyboard only. Use [tabIndex = "-1"](#tabindex) and [focus-management](#focus-management) to keep keyboard navigation efficient.
+- Keep the application usable via keyboard only. Use [tabIndex = "-1"](#tabindex) and [focus-management](#focus-management) to keep keyboard navigation efficient.
 
-- [ ] All form controls should be [Labeled appropriately](#labeling). Redundant labeling should be removed.
+- All form controls should be [Labeled appropriately](#labeling). Redundant labeling should be removed.
 
-- [ ] Ensure adequate [color contrast](#color) ratios for styles and be sure that any meaningful color is accompanied by text that also relays the meaning.
+- Ensure adequate [color contrast](#color) ratios for styles and be sure that any meaningful color is accompanied by text that also relays the meaning.
 
 ### HTML5 semantic tags, roles, and ARIA.
 Tags such as `<header>`, `<nav>` and `<dialog>` invoke special behaviors with assistive technology as opposed to their generic counterparts (`<div>` and `<span>`.) When the content of these semantic elements is initially focused, screen readers will specifically announce them, saying 'header', 'navigation', 'dialog' respectively and give AT users context about where their focus/cursor is located within the body of the page. See [W3Schools Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) for a nice reference list of available tags.
@@ -68,7 +72,7 @@ render() {
 #### TabIndex
 HTML elements have a `tabindex` or (or `tabIndex` in React) that will set its position in document tab order - the order elements are focused in when the user moves focus using the "Tab" key. All `tabIndex="0"` are focused on the first pass, the `tabIndex="1"` and so on... Best practices dictate to never set tab-index above "0" as it can cause elements to be communicated out-of-order. Interactive elements like `<button>` and `<input>` have `tabIndex="0"` set by default.
 
-`tabIndex="-1"` means that the element is only focusable via javascript. If an element is only meant to be focused by client side code, and not part of a user's keyboard navigation, use `tabIndex = "-1"`. 
+`tabIndex="-1"` means that the element is only focusable via javascript. If an element is only meant to be focused by client side code, and not part of a user's keyboard navigation, use `tabIndex = "-1"`.
 
 ### Color
 Color is a great tool for meaning - but it should never be the *only* indicator of meaning. Color should always be used in conjunction with text - even in the verbiage of a page. **Bad**: "Press the blue button" **Good**: "Press the blue 'Submit' button."
@@ -100,7 +104,7 @@ If visible labels are inadequate, `aria-label` can be used:
 <!-- stripes-components controls -->
 <TextField aria-label="username" />
 ```
-If the label is visible elsewhere in the page, its element can be associated with the input via `aria-labelledby`: 
+If the label is visible elsewhere in the page, its element can be associated with the input via `aria-labelledby`:
 ```
 <!-- general html controls -->
 <div id="columnlabel">starting date</div>
@@ -111,7 +115,7 @@ If the label is visible elsewhere in the page, its element can be associated wit
 <TextField aria-labelledby="columnlabel" />
 ```
 
-Although form controls are a primary place where `aria-` attributes can be used, just about any focusable element can have a `aria-` labeling applied. 
+Although form controls are a primary place where `aria-` attributes can be used, just about any focusable element can have a `aria-` labeling applied.
 
 These are powerful accessibility tools, but they should be used with care. Over/improper usage can lead to redundant screen reader announcements. This is considered a flaw and should be avoided. Imagine someone's reading a navigation to you and they read every label twice.
 
@@ -119,7 +123,7 @@ These are powerful accessibility tools, but they should be used with care. Over/
 It is not uncommon for `title` attributes to be used and considered 'handy' for their hover effects. Not only is it bad practice to hide important instructions in these attributes due to dependance on hover/mouse support, `title` can cause redundant announcement of labels if they're used with any other method of labeling. It's best to be avoided and its intended result can be achieved to other means in most cases.
 
 #### Label precedence
-`aria-labelledby` takes precedence over `aria-label` as well as an explicit/visible text label. Elements can be over-labeled. 
+`aria-labelledby` takes precedence over `aria-label` as well as an explicit/visible text label. Elements can be over-labeled.
 
 In the following contrived example, we might have wanted the label to be 'username' - but the `<label>` element will be ignored despite its explicit relationship, as well as the `aria-label` attribute.
 The content of the `<span #label-elem>` will be announced, as well as the `title`. Focusing this input using NVDA will announce 'label element edit title name, blank'.
@@ -152,7 +156,7 @@ Form element components use `role="alert"` for form validation messages.
 See [WAI ARIA Spec: aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) for more details.
 
 ### Document structure
-The ideal document structure, at the very least, has headers nested by their level (rank). 
+The ideal document structure, at the very least, has headers nested by their level (rank).
 ```html static
 <H1>
   <H2>
@@ -173,8 +177,8 @@ Other semantic tags are useful for relaying the location of the user's cursor if
 
 The FOLIO UI sets up a rank-nested header by default.
 - h1: the main navigation heading
-- h2: each `<Pane>` header.
-` h3: each `<Accordion>` header.
+- h2: each `Pane` header.
+` h3: each `Accordion` header.
 
 Each heading nested within this should be h4-h6.
 

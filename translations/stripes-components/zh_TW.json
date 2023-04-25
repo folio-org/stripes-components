@@ -859,14 +859,14 @@
     "shortcut.find": "Find",
     "optimisticLocking.saveError": "This record cannot be saved because it is <strong>not</strong> the most recent version.",
     "optimisticLocking.latestVersion": "View latest version",
-    "advancedSearch.title": "進階搜尋",
-    "advancedSearch.button": "進階搜尋",
-    "advancedSearch.searchFor": "搜尋",
+    "advancedSearch.title": "進階查詢",
+    "advancedSearch.button": "進階查詢",
+    "advancedSearch.searchFor": "查詢",
     "advancedSearch.searchIn": "在",
     "advancedSearch.boolean.and": "AND",
     "advancedSearch.boolean.or": "OR",
     "advancedSearch.boolean.not": "NOT",
-    "advancedSearch.footer.search": "搜尋",
+    "advancedSearch.footer.search": "查詢",
     "advancedSearch.footer.cancel": "取消",
     "advancedSearch.boolean.label": "Operator",
     "advancedSearch.field.label": "Search for",
@@ -878,6 +878,7 @@
     "Timepicker.PeriodLabel": "上午或下午",
     "Timepicker.SetTimeLabel": "Set time",
     "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "leave dialog",
-    "selection.controlLabel": "Select control"
+    "selection.controlLabel": "Select control",
+    "Timepicker.formEnd": "End of form",
+    "Timepicker.formStart": "Beginning of form"
 }

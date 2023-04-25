@@ -18,9 +18,9 @@ const RootCloseWrapper = forwardRef(({ children, onRootClose, disabled }, ref) =
 });
 
 RootCloseWrapper.propTypes = {
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  onRootClose: PropTypes.func,
+  children: PropTypes.node, // eslint-disable-line react/no-unused-prop-types
+  disabled: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
+  onRootClose: PropTypes.func, // eslint-disable-line react/no-unused-prop-types
 };
 
 RootCloseWrapper.defaultProps = {

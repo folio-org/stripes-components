@@ -81,8 +81,12 @@ html {
 
 /* global "print" styles below was added for solve the problem with extra blank page generating on printing in all modules */
 @media print {
-  body {
-    height: auto !important;
+  html, body {
+    margin: 0 !important;
+  }
+
+  @page {
+    margin: var(--page-margin-default);
   }
 }
 

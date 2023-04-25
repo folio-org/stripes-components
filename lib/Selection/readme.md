@@ -67,6 +67,7 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 `dataOptions` | array of objects | Array of objects with `label` and `value` keys. The labels are visible to the users in the options list, the values are not. | | &#10004;
 `id` | string | Sets the `id` html attribute on the control | |
+`inputRef` | object/func | Reference object/function for accessing the contro button DOM element. | ref | false
 `label` | string | If provided, will render a `<label>` tag with an `htmlFor` attribute directed at the provided `id` prop. | |
 `emptyMessage` | string | Message to display filtering leaves the options list empty | 'No matching options' |
 `loading` | bool | if true, `loadingMessage` will be displayed to indicate that options are loading | false |
@@ -81,7 +82,7 @@ Name | type | description | default | required
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `popper` | object | Used to adjust placement of options list overlay via underlying Popper component. [See `<Popper>` props](../Popper/readme.md) | | false | 
 ## Labeling
-Like other form controls in stripes-components, `<Selection>` abides by standard conventions for labeling props if alternatives to `label` (visible label with the control) are required... `aria-label` and `aria-labelledby` are useful for this. See [Accessiblity for developers documentation](https://github.com/folio-org/stripes-components/blob/master/docs/AccessibilityDevPrimer.md#labeling) for more details about which to choose.
+Like other form controls in stripes-components, `<Selection>` abides by standard conventions for labeling props if alternatives to `label` (visible label with the control) are required... `aria-label` and `aria-labelledby` are useful for this. See [Accessiblity for developers documentation](https://github.com/folio-org/stripes-components/blob/master/guides/AccessibilityDevPrimer.stories.mdx#labeling) for more details about which to choose.
 
 ## Usage in Redux-form
 Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.

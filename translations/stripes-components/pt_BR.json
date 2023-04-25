@@ -73,7 +73,7 @@
     "readonly": "Somente leitura",
     "readMore": "Leia Mais",
     "tableEmpty": "A lista não contém itens",
-    "metaSection.sourceNoData": "Fonte: Processamento automatizado",
+    "metaSection.sourceNoData": "Fonte: usuário desconhecido",
     "metaSection.recordCreatedNoData": "Registro criado: Desconhecido",
     "metaSection.recordLastUpdatedNoData": "Última atualização do registro: Desconhecido",
     "saveAndClose": "Salvar e fechar",
@@ -878,6 +878,7 @@
     "Timepicker.PeriodLabel": "AM ou PM",
     "Timepicker.SetTimeLabel": "Definir horário",
     "Timepicker.ScreenReaderLabel": "O formato {label} é {screenReaderFormat} use a seta para baixo para entrar na caixa de diálogo de seleção de horário. {screenReaderMessage}",
-    "Timepicker.LeaveDialog": "sair do diálogo",
-    "selection.controlLabel": "Selecione o controle"
+    "selection.controlLabel": "Selecione o controle",
+    "Timepicker.formEnd": "Fim do formulário",
+    "Timepicker.formStart": "Início do formulário"
 }
