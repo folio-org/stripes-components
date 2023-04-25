@@ -17,6 +17,7 @@
 * Set TextLink color to white on selected MCL rows. Refs STCOM-1122.
 * Timepicker considers timezone when parsing value prop. Refs STCOM-1141.
 * PaneContent div should be position: relative to hide overflow from absolutely positioned contents. Refs STCOM-1148.
+* Omit `webpack` dependency; it is not used directly and is supplied indirectly via `@folio/stripes-cli`. Refs STCOM-1153.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
