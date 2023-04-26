@@ -64,7 +64,11 @@ describe('Date Utilities', () => {
   describe('get locale time format - en-US', () => {
     let timeFormat;
     beforeEach(async () => {
-      timeFormat = getLocalizedTimeFormatInfo('en-US'); // eslint-disable-line
+      timeFormat = getLocalizedTimeFormatInfo('en-US');
+
+      // Oh ICU 72, how do I hate thee? Let me count the ways.
+      // https://github.com/nodejs/node/issues/46123
+      timeFormat.timeFormat = timeFormat.timeFormat.replaceAll('\u202f', ' ');
     });
 
     it('returns the time format according to the passed locale', () => {
