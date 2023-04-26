@@ -134,6 +134,7 @@
     "react-router-dom": "^5.2.0"
   },
   "resolutions": {
-    "moment": "~2.24.0"
+    "moment": "~2.24.0",
+    "webpack": "~5.68.0"
   }
 }
