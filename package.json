@@ -46,7 +46,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.7.4",
     "@babel/register": "^7.0.0",
-    "@bigtest/interactor": "0.7.2",
+    "@bigtest/interactor": "0.31.1",
     "@folio/eslint-config-stripes": "^6",
     "@folio/stripes-cli": "^2.4.0",
     "@folio/stripes-testing": "^4.5.0",
