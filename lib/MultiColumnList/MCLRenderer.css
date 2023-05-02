@@ -415,16 +415,13 @@
 
 .mclPaginationCenterContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   position: relative;
 }
 
 .mclPrevNextPageInfoContainer {
   font-weight: bold;
   display: flex;
-  flex-grow: 3;
-  flex-shrink: 0;
-  flex-basis: 45%;
   align-items: center;
   justify-content: center;
   align-content: middle;
