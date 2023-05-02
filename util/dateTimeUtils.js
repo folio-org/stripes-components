@@ -48,7 +48,9 @@ export const getLocaleDateFormat = ({ intl }) => {
     format = getMomentLocalizedFormat(intl);
   }
 
-  return format;
+  // replace narrow non-breaking space introduced in ICU 72.1
+  // see https://github.com/nodejs/node/issues/46123
+  return format.replaceAll('\u202f', ' ');
 };
 
 // getLocalizedTimeFormatInfo() -
@@ -128,7 +130,7 @@ export function getLocalizedTimeFormatInfo(locale) {
 
   return {
     ...formatInfo,
-    timeFormat,
+    timeFormat: timeFormat.replaceAll('\u202f', ' '),
     dayPeriods: [...dpOptions],
   };
 }
