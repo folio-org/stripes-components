@@ -12,13 +12,14 @@
   },
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "lint": "eslint ./ && stylelint \"lib/**/*.css\"",
     "eslint": "eslint ./",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/stripes-components ./translations/stripes-components/compiled",
+    "lint": "eslint ./ && stylelint \"lib/**/*.css\"",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
-    "test-dev": "stripes test karma --watch",
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o .out"
+    "test-dev": "stripes test karma --watch"
   },
   "engines": {
     "node": ">=10.0.0"
