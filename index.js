@@ -115,6 +115,7 @@ export { default as SearchField } from './lib/SearchField';
 export { default as ConflictDetectionBanner } from './lib/ConflictDetectionBanner';
 export {
   AdvancedSearch,
+  useAdvancedSearch,
   defaultQueryBuilder as defaultAdvancedSearchQueryBuilder,
   BOOLEAN_OPERATORS as ADVANCED_SEARCH_BOOLEAN_OPERATORS,
 } from './lib/AdvancedSearch';
