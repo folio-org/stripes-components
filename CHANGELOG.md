@@ -22,6 +22,7 @@
 * Omit `webpack` dependency; it is not used directly and is supplied indirectly via `@folio/stripes-cli`. Refs STCOM-1153.
 * Add styling for search fields to remove the `x` cancel icon that went away when we upgraded `normalize.css` . Refs STCOM-1157.
 * Remove Accordion's problematic internal aria-label (it already has aria-labelledby for adequate labeling. Refs STCOM-1129.
+* Compile translations. Refs STCOM-1162.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)

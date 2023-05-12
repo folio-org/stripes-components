@@ -12,13 +12,14 @@
   },
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "lint": "eslint ./ && stylelint \"lib/**/*.css\"",
     "eslint": "eslint ./",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/stripes-components ./translations/stripes-components/compiled",
+    "lint": "eslint ./ && stylelint \"lib/**/*.css\"",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
-    "test-dev": "stripes test karma --watch",
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o .out"
+    "test-dev": "stripes test karma --watch"
   },
   "engines": {
     "node": ">=10.0.0"
@@ -50,6 +51,7 @@
     "@folio/eslint-config-stripes": "^6",
     "@folio/stripes-cli": "^2.4.0",
     "@folio/stripes-testing": "^4.5.0",
+    "@formatjs/cli": "^6.0.4",
     "@mdx-js/loader": "^1.6.22",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
