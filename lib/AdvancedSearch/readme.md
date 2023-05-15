@@ -96,3 +96,49 @@ defaultSearchOptionValue | string | One of the options in `searchOptions` that w
 firstRowInitialSearch | object | Object with shape `{ query, option }` - will be used to populate first row with default values | false
 rowFormatter | func | Function that will be used to combine boolean, query and search option of each row. Signature: `(searchOption, query, bool, comparator) => {...}`. Returned values will be used by `queryBuilder` to join them together. *Note:* no need to add `bool` to resulting string here - it will be added by `queryBuilder`. | false
 queryBuilder | func | Function that will be used to construct the search query. Signature: `(rows, rowFormatter) => {...}`. `rows` - array of shapes `{ query, searchOption, query }`, `rowFormatter` - the prop. Returned value will be passed as the first argument to `onSearch`. | false
+
+## useAdvancedSearch
+`stripes-components` also provides the `useAdvancedSearch` hook. It has the same API as the `<AdvancedSearch>` component, but doesn't render the UI. The hook can be used to get formatted advanced search rows and query outside of `<AdvancedSearch>` component. For example, when you need to run advanced search on page load with initial query from URL 
+
+```js
+/// SearchForm.js
+
+const SearchForm = (...) => {
+  ...
+  return (
+    ...
+    <AdvancedSearch // regular use of AdvancedSearch that shows the modal
+      open
+      searchOptions={advancedSearchOptions}
+      defaultSearchOptionValue={searchableIndexesValues.KEYWORD}
+      firstRowInitialSearch={advancedSearchDefaultSearch}
+      onSearch={handleAdvancedSearch}
+      onCancel={() => setIsAdvancedSearchOpen(false)}
+    >
+      ...
+
+    </AdvancedSearch>
+  );
+}
+
+
+/// SearchRoute.js
+
+const SearchRoute = (...) => {
+  const { query, option } = queryString.parse(location.search);
+  
+  const { filledRows, query: formattedQuery } = useAdvancedSearch({
+    defaultSearchOptionValue: 'keyword',
+    firstRowInitialSearch: { query, option },
+  });
+
+  // here `formattedQuery` can be used to make a request to BE
+
+  useEffect(() => {
+    fetch(`/some-url?query=${formattedQuery}`);
+  }, []);
+
+  return (...);
+}
+
+```
