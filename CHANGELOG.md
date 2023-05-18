@@ -24,6 +24,7 @@
 * Remove Accordion's problematic internal aria-label (it already has aria-labelledby for adequate labeling). Refs STCOM-1129.
 * Compile translations. Refs STCOM-1162.
 * Return filled rows and query from `useAdvancedSearch` hook. Fixes STCOM-1156.
+* Remove `dom-helpers` dependency. Resolves STCOM-1170.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
