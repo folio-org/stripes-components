@@ -1,4 +1,3 @@
-import contains from 'dom-helpers/query/contains';
 
 const getDefaultExceptions = () => [
   document.getElementById('OverlayContainer'),
@@ -8,10 +7,10 @@ const getDefaultExceptions = () => [
 
 export default function trapFocus(container, exceptions) {
   if (container && container.className !== document.activeElement.className) {
-    if (!contains(container, document.activeElement)) {
+    if (!container.contains(document.activeElement)) {
       if ([...getDefaultExceptions(), ...exceptions].filter((e) => {
         if (!e) return false;
-        return contains(e, document.activeElement);
+        return e.contains(document.activeElement);
       }).length === 0) {
         container.focus();
       }
