@@ -223,6 +223,7 @@ jobs:
 
       - name: Exclude some CI-generated artifacts in package
         run: |
+          echo "artifacts" >> .npmignore
           echo ".github" >> .npmignore
           echo ".scannerwork" >> .npmignore
           cat .npmignore
