@@ -387,44 +387,15 @@
   }
 }
 
-/**
-* Styles for previous/next pagination
-*/
-.mclPrevNextButtonContainer {
-  display: flex;
-  margin-bottom: 1rem;
-  width: 100%;
-  max-width: 500px;
-  justify-content: space-around;
-
-  & button[disabled] {
-    background-color: transparent;
-    color: var(--color-text-p2, rgba(0, 0, 0, 0.62));
-
-    &:hover {
-      background-color: var(--color-fill-disabled, rgba(0, 0, 0, 0.15));
-    }
-  }
-}
-
-.mclPrevNextStickyContainer {
-  position: sticky;
-  left: 0;
-  width: 100%;
-}
-
 .mclPaginationCenterContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   position: relative;
 }
 
 .mclPrevNextPageInfoContainer {
   font-weight: bold;
   display: flex;
-  flex-grow: 3;
-  flex-shrink: 0;
-  flex-basis: 45%;
   align-items: center;
   justify-content: center;
   align-content: middle;
