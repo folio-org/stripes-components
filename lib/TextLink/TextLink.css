@@ -112,3 +112,8 @@ div[class*="Selected"] {
     }
   }
 }
+
+div[class*="interactionStyles"]:active .root {
+  color: var(--color-link-current);
+  text-decoration-color: var(--color-link-current);
+}
