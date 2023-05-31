@@ -1,0 +1,71 @@
+@import "@folio/stripes-components/lib/variables.css";
+
+.delimiter {
+  overflow-wrap: break-word;
+
+  & > span:not(:last-child):after {
+    content: " \B7 ";
+  }
+}
+
+.job {
+  padding: .5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height);
+  position: relative;
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  & .delimiter:first-child {
+      padding-right: var(--control-min-size-desktop);
+  }
+
+  &.deletingInProgress {
+    border-color: var(--danger);
+    background-color: color(var(--error) alpha(-90%));
+
+    & .deleteIcon {
+      display: none;
+    }
+  }
+
+  .fileItemDanger {
+    padding-right: 60px;
+    border-color: var(--danger);
+    background-color: color(var(--error) alpha(-90%));
+  }
+}
+
+[class*="listStyleDefault"] {
+  & .job {
+    margin-bottom: 0;
+    display: block;
+    padding: .5rem;
+    border-radius: var(--radius);
+  }
+}
+
+.jobHeader {
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+}
+
+.jobPreview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.deleteIcon {
+  display: inline-block;
+}
