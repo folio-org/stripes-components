@@ -5,7 +5,7 @@
     "goToPreviousMonth": "Přejít na předchozí měsíc",
     "goToNextYear": "Přejít na příští rok",
     "goToNextMonth": "Přejít na další měsíc",
-    "selectDay": "Vyberte {dayOfWeek} , {date}",
+    "selectDay": "Vybrat {dayOfWeek} , {date}",
     "dateSelected": "{date} vybráno",
     "screenReaderLabel": "{label} formát je {screenReaderFormat} pro pohyb po datech použijte šipky. Potvrďte klávesou Enter. {screenReaderMessage}",
     "clearFieldValue": "Vymazat hodnotu pole",
