@@ -53,7 +53,7 @@
     "@folio/stripes-testing": "^4.5.0",
     "@formatjs/cli": "^6.0.4",
     "@mdx-js/loader": "^1.6.22",
-    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-actions": "^7.0.18",
     "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addons": "^6.3.6",
     "@storybook/builder-webpack5": "^6.3.12",
