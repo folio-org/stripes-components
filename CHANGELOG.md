@@ -25,6 +25,8 @@
 * Compile translations. Refs STCOM-1162.
 * Return filled rows and query from `useAdvancedSearch` hook. Fixes STCOM-1156.
 * Remove `dom-helpers` dependency. Resolves STCOM-1170.
+* Center MCL prev-next pagination to scrollParent. Resolves STCOM-1158.
+* Add style to `<TextLink>` to account for interactionStyles' `:active` style. Refs STCOM-1159.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
