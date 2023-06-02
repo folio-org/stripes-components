@@ -28,6 +28,7 @@
 * Center MCL prev-next pagination to scrollParent. Resolves STCOM-1158.
 * Add style to `<TextLink>` to account for interactionStyles' `:active` style. Refs STCOM-1159.
 * Upgrade `postcss-calc` from v8 to v9.0.1. Refs STCOM-1174.
+* Upgrade `react-transition-group` from 2.9.0 to 4.4.5. Refs STCOM-1175.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
