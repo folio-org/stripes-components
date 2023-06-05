@@ -75,7 +75,7 @@
     "postcss-calc": "^9.0.1",
     "postcss-color-function": "folio-org/postcss-color-function",
     "postcss-custom-media": "^9.0.1",
-    "postcss-custom-properties": "12.1.11",
+    "postcss-custom-properties": "13.2.0",
     "postcss-import": "^15.0.1",
     "postcss-loader": "^7.0.2",
     "postcss-media-minmax": "^5.0.0",
