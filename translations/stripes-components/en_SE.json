@@ -73,7 +73,7 @@
     "readonly": "Read-only",
     "readMore": "Read more",
     "tableEmpty": "The list contains no items",
-    "metaSection.sourceNoData": "Source: Automated process",
+    "metaSection.sourceNoData": "Source: Unknown user",
     "metaSection.recordCreatedNoData": "Record created: Unknown",
     "metaSection.recordLastUpdatedNoData": "Record last updated: Unknown",
     "saveAndClose": "Save & close",
