@@ -1,32 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { computed } from '@bigtest/interactor';
 import Harness from './Harness';
 
 import '../lib/global.css';
 import { getNextFocusable, getPreviousFocusable } from '../util/getFocusableElements';
 
+let $root = null;
 function getCleanTestingRoot() {
-  let $root = document.getElementById('root');
-
-  // if a root exists, unmount anything inside and remove it
+  // create a brand new root element
   if ($root) {
-    ReactDOM.unmountComponentAtNode($root);
-    $root.parentNode.removeChild($root);
+    $root.unmount();
+    const container = document.getElementById('root');
+    container.parentNode.removeChild(container);
   }
 
-  // create a brand new root element
-  $root = document.createElement('div');
-  $root.id = 'root';
-
-  document.body.appendChild($root);
+  if (!document.getElementById('root')) {
+    const container = document.createElement('div');
+    container.id = 'root';
+    document.body.appendChild(container);
+    $root = createRoot(container);
+  }
 
   return $root;
-}
+};
+
 
 export function mount(component) {
   return new Promise(resolve => {
-    ReactDOM.render(component, getCleanTestingRoot(), resolve);
+    const root = getCleanTestingRoot();
+    root.render(component);
+    resolve();
   });
 }
 
@@ -39,11 +44,9 @@ export function mount(component) {
  */
 export function mountWithContext(component, translations, locale) {
   return new Promise(resolve => {
-    ReactDOM.render(
-      <Harness translations={translations} locale={locale}>{component}</Harness>,
-      getCleanTestingRoot(),
-      resolve,
-    );
+    const root = getCleanTestingRoot();
+    root.render(<Harness translations={translations} locale={locale}>{component}</Harness>);
+    resolve();
   });
 }
 
