@@ -2,7 +2,6 @@
 
 .metaSectionRoot {
   border-radius: var(--radius);
-  background-color: var(--color-fill);
   margin-bottom: 10px;
   font-size: var(--font-size-small);
   line-height: var(--line-height);
