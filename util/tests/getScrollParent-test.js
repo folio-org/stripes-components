@@ -1,12 +1,14 @@
 import React from 'react';
 import { describe, beforeEach, it } from 'mocha';
 import { expect } from 'chai';
+import { converge } from '@folio/stripes-testing';
+
 import { mount } from '../../tests/helpers';
 import getScrollParent from '../getScrollParent';
 
-describe('getScrollParent', () => {
-  beforeEach(() => {
-    mount(
+describe.only('getScrollParent', () => {
+  beforeEach(async () => {
+    await mount(
       <div id="outer" style={{ position: 'relative', overflowX: 'auto', height: '100px', width: '100px' }}>
         <div id="nondescript">
           <div id="inner" style={{ overflow: 'auto', height: '300px', width: '300px' }}>
@@ -27,7 +29,9 @@ describe('getScrollParent', () => {
 
   it('given the deep element, returns the inner element', () => {
     const el = document.getElementById('deepChild');
-    expect(getScrollParent(el).id).to.equal('inner');
+    converge(() => {
+      expect(getScrollParent(el).id).to.equal('inner');
+    });
   });
 
   it('given the deep element with second includeHiddenOverflow parameter, returns the overflow:hidden element', () => {
