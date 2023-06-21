@@ -7,6 +7,10 @@
   line-height: var(--line-height);
 }
 
+.metaSectionRootBGColor {
+  background-color: var(--color-fill);
+}
+
 .metaSectionContent {
   margin-top: -0.5rem;
   padding: 0.5rem 0 0.5rem 0.33rem;
@@ -53,4 +57,8 @@
   pointer-events: none;
   user-select: none;
   padding: 0 4px;
+}
+
+.metaSectionInline {
+  display: flex;
 }
