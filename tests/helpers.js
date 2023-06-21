@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
 import { computed } from '@bigtest/interactor';
 import Harness from './Harness';
@@ -8,19 +7,16 @@ import '../lib/global.css';
 import { getNextFocusable, getPreviousFocusable } from '../util/getFocusableElements';
 
 let $root = null;
+let $container = null;
 function getCleanTestingRoot() {
-  // create a brand new root element
-  if ($root) {
-    $root.unmount();
-    const container = document.getElementById('root');
-    container.parentNode.removeChild(container);
+  if (!$container) {
+    $container = document.createElement('div');
+    $container.id = 'root';
+    document.body.appendChild($container);
   }
 
-  if (!document.getElementById('root')) {
-    const container = document.createElement('div');
-    container.id = 'root';
-    document.body.appendChild(container);
-    $root = createRoot(container);
+  if (!$root) {
+    $root = createRoot($container);
   }
 
   return $root;
