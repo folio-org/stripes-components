@@ -6,7 +6,7 @@ import { converge } from '@folio/stripes-testing';
 import { mount } from '../../tests/helpers';
 import getScrollParent from '../getScrollParent';
 
-describe.only('getScrollParent', () => {
+describe('getScrollParent', () => {
   beforeEach(async () => {
     await mount(
       <div id="outer" style={{ position: 'relative', overflowX: 'auto', height: '100px', width: '100px' }}>
