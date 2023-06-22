@@ -29,33 +29,31 @@ describe('getScrollParent', () => {
 
   it('given the deep element, returns the inner element', () => {
     const el = document.getElementById('deepChild');
-    converge(() => {
-      expect(getScrollParent(el).id).to.equal('inner');
-    });
+    converge(() => expect(getScrollParent(el).id).to.equal('inner'));
   });
 
   it('given the deep element with second includeHiddenOverflow parameter, returns the overflow:hidden element', () => {
     const el = document.getElementById('deepChild');
-    expect(getScrollParent(el).id).to.equal('inner');
+    converge(() => expect(getScrollParent(el).id).to.equal('inner'));
   });
 
   it('given the inner element, returns the outer element', () => {
     const el = document.getElementById('inner');
-    expect(getScrollParent(el).id).to.equal('outer');
+    converge(() => expect(getScrollParent(el).id).to.equal('outer'));
   });
 
   it('given the outer element, returns the document.body', () => {
     const el = document.getElementById('outer');
-    expect(getScrollParent(el)).to.equal(document.body);
+    converge(() => expect(getScrollParent(el)).to.equal(document.body));
   });
 
   it('given the fixed element, returns the document.body', () => {
     const el = document.getElementById('fixedTest');
-    expect(getScrollParent(el)).to.equal(document.body);
+    converge(() => expect(getScrollParent(el)).to.equal(document.body));
   });
 
   it('given the deep absolutely positioned element, returns the relatively positioned outer element (skipping the staticly positioned inner)', () => {
     const el = document.getElementById('absoluteChild');
-    expect(getScrollParent(el).id).to.equal('outer');
+    converge(() => expect(getScrollParent(el).id).to.equal('outer'));
   });
 });

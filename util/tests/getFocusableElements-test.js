@@ -1,6 +1,7 @@
 import React from 'react';
 import { describe, beforeEach, it } from 'mocha';
 import { expect } from 'chai';
+import { converge } from '@folio/stripes-testing';
 
 import FocusableHarness from './FocusableHarness/FocusableHarness';
 import FocusableInteractor from './FocusableHarness/FocusableInteractor';
@@ -14,7 +15,7 @@ describe('getFocusableElements', () => {
   });
 
   it('renders', () => {
-    expect(focal.buttons().length).to.equal(6);
+    converge(() => expect(focal.buttons().length).to.equal(6));
   });
 
   describe('getNextFocusable', () => {
