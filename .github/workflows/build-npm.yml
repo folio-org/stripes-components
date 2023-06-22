@@ -167,6 +167,7 @@ jobs:
       - name: Exclude some CI-generated artifacts in package
         if: ${{ github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main' }}
         run: |
+          echo "artifacts" >> .npmignore
           echo ".github" >> .npmignore
           echo ".scannerwork" >> .npmignore
           cat .npmignore

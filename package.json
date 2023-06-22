@@ -72,7 +72,7 @@
     "mocha": "^10.2.0",
     "moment": "^2.29.0",
     "postcss": "^8.4.2",
-    "postcss-calc": "^8.2.4",
+    "postcss-calc": "^9.0.1",
     "postcss-color-function": "folio-org/postcss-color-function",
     "postcss-custom-media": "^9.0.1",
     "postcss-custom-properties": "12.1.11",
@@ -121,7 +121,7 @@
     "react-overlays": "^5.2.1",
     "react-quill": "^2.0.0",
     "react-svg-loader": "^3.0.3",
-    "react-transition-group": "^2.2.1",
+    "react-transition-group": "^4.4.5",
     "react-virtualized-auto-sizer": "^1.0.2",
     "tai-password-strength": "^1.1.1"
   },
