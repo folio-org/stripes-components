@@ -15,9 +15,11 @@ function getCleanTestingRoot() {
     document.body.appendChild($container);
   }
 
-  if (!$root) {
-    $root = createRoot($container);
+  if ($root) {
+    $root.unmount();
   }
+
+  $root = createRoot($container);
 
   return $root;
 };
