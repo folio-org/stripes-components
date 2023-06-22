@@ -24,7 +24,7 @@ function getCleanTestingRoot() {
   return $root;
 };
 
-const TestHarness = ({ component, callback }) => (
+const TestComponent = ({ component, callback }) => (
   <div style={{ width: '100vh', height: '100vw' }} ref={callback}>{component}</div>
 )
 
@@ -32,7 +32,7 @@ export function mount(component) {
   return new Promise(resolve => {
     const root = getCleanTestingRoot();
     root.render(
-      <TestHarness
+      <TestComponent
         component={component}
         callback={resolve}
       />);
@@ -50,7 +50,7 @@ export function mountWithContext(component, translations, locale) {
   return new Promise(resolve => {
     const root = getCleanTestingRoot();
     root.render(<Harness translations={translations} locale={locale}>
-      <TestHarness
+      <TestComponent
         component={component}
         callback={resolve}
       />
