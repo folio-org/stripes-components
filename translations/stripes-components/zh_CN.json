@@ -880,5 +880,10 @@
     "Timepicker.ScreenReaderLabel": "{label}格式为{screenReaderFormat}使用向下箭头进入时间选择器对话框。 {screenReaderMessage}",
     "selection.controlLabel": "选择控制",
     "Timepicker.formEnd": "表格结束",
-    "Timepicker.formStart": "表格开头"
+    "Timepicker.formStart": "表格开头",
+    "metaSection.by": "by",
+    "metaSection.lastUpdated": "<b>Last updated</b>",
+    "metaSection.lastUpdatedDateTime": "{date} {time}",
+    "metaSection.lastUpdatedBy": "by {source}",
+    "metaSection.unknownUser": "Unknown user"
 }

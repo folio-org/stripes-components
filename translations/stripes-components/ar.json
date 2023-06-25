@@ -880,5 +880,10 @@
     "Timepicker.ScreenReaderLabel": "تنسيق {label} هو {screenReaderFormat} استخدم السهم لأسفل لإدخال مربع حوار محدد الوقت. {screenReaderMessage}",
     "selection.controlLabel": "تحديد التحكم",
     "Timepicker.formEnd": "End of form",
-    "Timepicker.formStart": "Beginning of form"
+    "Timepicker.formStart": "Beginning of form",
+    "metaSection.by": "by",
+    "metaSection.lastUpdated": "<b>Last updated</b>",
+    "metaSection.lastUpdatedDateTime": "{date} {time}",
+    "metaSection.lastUpdatedBy": "by {source}",
+    "metaSection.unknownUser": "Unknown user"
 }

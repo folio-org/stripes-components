@@ -880,5 +880,10 @@
     "Timepicker.ScreenReaderLabel": "{label} el formato es {screenReaderFormat} utilice la flecha hacia abajo para entrar en el cuadro de diálogo timepicker. {screenReaderMessage}",
     "selection.controlLabel": "Seleccionar control",
     "Timepicker.formEnd": "Fin del formulario",
-    "Timepicker.formStart": "Inicio del formulario"
+    "Timepicker.formStart": "Inicio del formulario",
+    "metaSection.by": "por",
+    "metaSection.lastUpdated": "<b>Última actualización</b>",
+    "metaSection.lastUpdatedDateTime": "{date} {time}",
+    "metaSection.lastUpdatedBy": "por {source}",
+    "metaSection.unknownUser": "Usuario desconocido"
 }

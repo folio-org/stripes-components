@@ -880,5 +880,10 @@
     "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
     "selection.controlLabel": "Select control",
     "Timepicker.formEnd": "フォームの終了",
-    "Timepicker.formStart": "Beginning of form"
+    "Timepicker.formStart": "Beginning of form",
+    "metaSection.by": "by",
+    "metaSection.lastUpdated": "<b>Last updated</b>",
+    "metaSection.lastUpdatedDateTime": "{date} {time}",
+    "metaSection.lastUpdatedBy": "by {source}",
+    "metaSection.unknownUser": "Unknown user"
 }
