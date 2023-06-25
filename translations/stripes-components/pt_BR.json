@@ -880,5 +880,10 @@
     "Timepicker.ScreenReaderLabel": "O formato {label} é {screenReaderFormat} use a seta para baixo para entrar na caixa de diálogo de seleção de horário. {screenReaderMessage}",
     "selection.controlLabel": "Selecione o controle",
     "Timepicker.formEnd": "Fim do formulário",
-    "Timepicker.formStart": "Início do formulário"
+    "Timepicker.formStart": "Início do formulário",
+    "metaSection.by": "by",
+    "metaSection.lastUpdated": "<b>Last updated</b>",
+    "metaSection.lastUpdatedDateTime": "{date} {time}",
+    "metaSection.lastUpdatedBy": "by {source}",
+    "metaSection.unknownUser": "Unknown user"
 }
