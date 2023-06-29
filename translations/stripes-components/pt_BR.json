@@ -881,9 +881,9 @@
     "selection.controlLabel": "Selecione o controle",
     "Timepicker.formEnd": "Fim do formulário",
     "Timepicker.formStart": "Início do formulário",
-    "metaSection.by": "by",
-    "metaSection.lastUpdated": "<b>Last updated</b>",
+    "metaSection.by": "por",
+    "metaSection.lastUpdated": "<b> Última atualização </b>",
     "metaSection.lastUpdatedDateTime": "{date} {time}",
-    "metaSection.lastUpdatedBy": "by {source}",
-    "metaSection.unknownUser": "Unknown user"
+    "metaSection.lastUpdatedBy": "por {source}",
+    "metaSection.unknownUser": "Usuário desconhecido"
 }
