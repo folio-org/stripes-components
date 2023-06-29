@@ -881,9 +881,9 @@
     "selection.controlLabel": "选择控制",
     "Timepicker.formEnd": "表格结束",
     "Timepicker.formStart": "表格开头",
-    "metaSection.by": "by",
-    "metaSection.lastUpdated": "<b>Last updated</b>",
+    "metaSection.by": "由",
+    "metaSection.lastUpdated": "<b>上次更新</b>",
     "metaSection.lastUpdatedDateTime": "{date} {time}",
-    "metaSection.lastUpdatedBy": "by {source}",
-    "metaSection.unknownUser": "Unknown user"
+    "metaSection.lastUpdatedBy": "由{source}",
+    "metaSection.unknownUser": "未知用户"
 }
