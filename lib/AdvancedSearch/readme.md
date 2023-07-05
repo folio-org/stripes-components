@@ -35,6 +35,7 @@ In some cases users may want to do custom formatting of query string. This can b
 `rowFormatter` can be used to combine the boolean operator, searched term and search option. For example, if you'd like to change comparison operator from default `==` to `=`.
 `queryBuilder` gives users complete control over query construction. `AdvancedSearch` will call this function with an array of object representing rows and users can use that to meet their requirements.
 More about `rowFormatter` and `queryBuilder` in [Props](#props).
+*Note:* if you change default comparison operator, or default boolean operator symbols - you'll also need to provide `splitRows` prop for custom parsing of queries into rows.
 
 `AdvancedSearch` also accepts a function as children and will call it with object containing `resetRows` function - it will clear internal state. It may be used with "Reset all" buttons on search pages to also clear `AdvancedSearch` rows.
 
@@ -96,6 +97,7 @@ defaultSearchOptionValue | string | One of the options in `searchOptions` that w
 firstRowInitialSearch | object | Object with shape `{ query, option }` - will be used to populate first row with default values | false
 rowFormatter | func | Function that will be used to combine boolean, query and search option of each row. Signature: `(searchOption, query, bool, comparator) => {...}`. Returned values will be used by `queryBuilder` to join them together. *Note:* no need to add `bool` to resulting string here - it will be added by `queryBuilder`. | false
 queryBuilder | func | Function that will be used to construct the search query. Signature: `(rows, rowFormatter) => {...}`. `rows` - array of shapes `{ query, searchOption, query }`, `rowFormatter` - the prop. Returned value will be passed as the first argument to `onSearch`. | false
+splitRow | func | Function that will be used to parse a query string into a row object. | false
 
 ## useAdvancedSearch
 `stripes-components` also provides the `useAdvancedSearch` hook. It has the same API as the `<AdvancedSearch>` component, but doesn't render the UI. The hook can be used to get formatted advanced search rows and query outside of `<AdvancedSearch>` component. For example, when you need to run advanced search on page load with initial query from URL 
