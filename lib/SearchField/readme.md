@@ -40,6 +40,35 @@ The component supports adding an array of searchable indexes which adds a select
   />
 ```
 
+## Usage with searchable options
+The component supports adding custom searchable options, e.g. if the `<optgroup>` tag is required.
+
+```
+  import SearchField from '@folio/stripes/components';
+
+  const searchableOptions = (
+    <optgroup label="Fruits">
+      <option value={apples}>Apples</option>
+      <option value={bananas}>Bananas</option>
+    </optgroup>
+    <optgroup label="Vegetables">
+      <option value={tomatoes}>Tomatoes</option>
+    </optgroup>
+  );
+
+  <SearchField
+    onChange={...}
+    value={...}
+    onClear={...}
+    placeholder="Search for something"
+
+    searchableOptions={searchableOptions}
+    onChangeIndex={() => ...}
+    selectedIndex={...}
+    searchableIndexesPlaceholder="Search for these fields.."
+  />
+```
+
 ## Props
 This component supports the same props as the TextField component among other props.
 
@@ -59,9 +88,10 @@ clearSearchId | string | Adds id to the clear search icon
 ### With searchable indexes
 Additional props for adding searchable indexes/fields.
 
-Name | type | Description
--- | -- | --
-searchableIndexes | array of objects | Adds a list of searchable indexes/fields
-selectedIndex | string | Currently selected index
-onChangeIndex | function | On change handler for when changing index
-searchableIndexesPlaceholder | string | Control the placeholder of the select field
+Name | type                 | Description
+-- |----------------------| --
+searchableIndexes | array of objects     | Adds a list of searchable indexes/fields
+searchableOptions | nodes/array of nodes | Adds a list of custom searchable indexes/fields
+selectedIndex | string               | Currently selected index
+onChangeIndex | function             | On change handler for when changing index
+searchableIndexesPlaceholder | string               | Control the placeholder of the select field
