@@ -161,6 +161,7 @@ canRemove | boolean | Flag to enable/disable remove button | true
 className | string | Adds a custom class name for the root element |
 emptyMessage | string | Text for when there are no rows; can be left blank |
 fields | array or object | Values that go with field rows | &#10004;
+getFieldUniqueKey | func | A function that returns a unique value as the `key` prop for each field in an array. If not provided, it will default to the index of the field in the array. |
 hasMargin | bool | Applies margin on top and bottom | true | 
 headLabels | node | Element that displays heading field labels. Developer should care about accessibility if this property is used (see an example).   |
 id | string | Adds an ID for the root element and prefixed ID's for the default add button |
