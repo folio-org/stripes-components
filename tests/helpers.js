@@ -25,7 +25,7 @@ function getCleanTestingRoot() {
 };
 
 const TestComponent = ({ component, callback }) => (
-  <div style={{ width: '100vh', height: '100vw' }} ref={callback}>{component}</div>
+  <div style={{ width: '100vw', height: '100vh' }} ref={callback}>{component}</div>
 )
 
 export function mount(component) {
