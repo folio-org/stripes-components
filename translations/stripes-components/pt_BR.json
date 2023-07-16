@@ -885,5 +885,9 @@
     "metaSection.lastUpdated": "<b> Última atualização </b>",
     "metaSection.lastUpdatedDateTime": "{date} {time}",
     "metaSection.lastUpdatedBy": "por {source}",
-    "metaSection.unknownUser": "Usuário desconhecido"
+    "metaSection.unknownUser": "Usuário desconhecido",
+    "advancedSearch.match.exactPhrase": "Frase exata",
+    "advancedSearch.match.containsAll": "Contém todos",
+    "advancedSearch.match.startsWith": "Começa com",
+    "advancedSearch.match.label": "Opção de correspondência"
 }
