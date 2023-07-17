@@ -885,5 +885,9 @@
     "metaSection.lastUpdated": "<b>Naposledy aktualizováno</b>",
     "metaSection.lastUpdatedDateTime": "{date} {time}",
     "metaSection.lastUpdatedBy": "od {source}",
-    "metaSection.unknownUser": "Neznámý uživatel"
+    "metaSection.unknownUser": "Neznámý uživatel",
+    "advancedSearch.match.exactPhrase": "Exact phrase",
+    "advancedSearch.match.containsAll": "Contains all",
+    "advancedSearch.match.startsWith": "Starts with",
+    "advancedSearch.match.label": "Match option"
 }
