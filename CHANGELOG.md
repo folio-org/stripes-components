@@ -32,6 +32,7 @@
 * Expand options of MetaSection component. Refs STCOM-1171.
 * Provide the searchableOptions prop to the SearchField component to use it as children for options in the Select component. Refs STCOM-1183.
 * Provide the `getFieldUniqueKey` prop to define a `key` for the list items in the `<RepeatableField>` component. Refs STCOM-1186.
+* Bugfix for `<MultiSelection>` - onRemove should support remove button clicks and list de-selection as it does backspace. Refs STCOM-1106.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)

@@ -35,6 +35,7 @@ Name | type | description | default | required
 `itemToString` | `<string>`func | Function used to return a single string representation of its value. For example, option objects with a shape of `{label:<string>, value:<object>}` would use `item => (item ? item.label : '')` for their toString function. This is used to generate strings so that values can accurately be announced for screen readers. | `item => (item ? item.label : '')` |
 `label` | string | Used as the form label for the field. Appropriate label/field relationship for accessibility is automatically set up by the component. | |
 `maxHeight` | number | The maximum height of the options menu in pixels. This does not include the heigh of any validation messages that may also appear with the menu. | `168` |
+`onAdd` | func | Event handler specifically called when an item is added to the selection. The added item is passed to the handler. | |
 `onBlur` | func | Blur event handler for when the user blurs the filter field | |
 `onChange` | func | Change event handler for when internal state changes. `selectedItems` is passed as parameter to function. | |
 `onRemove` | func | Event handler specifically called when an item is removed from the selection. The removed item is passed to the handler. | |
@@ -42,7 +43,7 @@ Name | type | description | default | required
 `renderToOverlay` | bool | For use in situations where the dropdown may be cut off due to a containing dom element's `overflow: hidden/auto` css attribute. | false |
 `value` | array | Array of selected objects. | |
 `valueFormatter` | func | Render function that accepts an object with keys for the option. The function is called to display values in the selected values list. If the prop is missing, `formatter` will be used instead. | |
-`ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | | 
+`ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | |
 ## Validation props
 These are props that could be applicable if setting up your own validation system. These would probably best be handled within `onChange` and `onBlur` event handlers.
 
