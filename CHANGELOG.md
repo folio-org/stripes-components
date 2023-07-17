@@ -5,7 +5,34 @@
 * Add `rootClass` and `fitContent` props to `<TextArea>`. Refs STCOM-1101.
 * Fix bug with Timepicker formatting user input too quickly/aggressively. Refs STCOM-1103.
 * Fix big with Timepicker timedropdown spinners not respecting their appropriate ranges. Refs STCOM-1104.
- 
+* Fix Timepicker dropdown not spinning values when the value is empty/undefined. Refs STCOM-1118.
+* Timepicker conforms to redux-form's expected blur behavior. Refs STCOM-1119.
+* Add optgroup example  of `Select` component in storybook. Refs STCOM-1121.
+* Fix Convert24hr function of timepicker to fix 'invalid date' message when timedropdown is used. Refs STCOM-1120.
+* Fix MCL Columnheaders' focus styling. Refs STCOM-1105.
+* Fix keyboard interaction with MCL Columnheaders - Enter and Spacebar can now be used to 'click' them. Refs STCOM-680.
+* The Datepicker works correctly with an invalid date. Refs STCOM-1110.
+* Implement timeZone support in `<Timepicker/>` default output formatter. Refs STCOM-1128.
+* Internalize the react-flexbox-grid dependency. Refs STCOM-1127.
+* Set TextLink color to white on selected MCL rows. Refs STCOM-1122.
+* Timepicker considers timezone when parsing value prop. Refs STCOM-1141.
+* PaneContent div should be position: relative to hide overflow from absolutely positioned contents. Refs STCOM-1148.
+* Adjust styles for overlay controls rendered in MCL rows. Refs STCOM-1149, UIRS-100.
+* Provide onChange and ariaLabel prop to TextArea component. Refs STCOM-1154.
+* Omit `webpack` dependency; it is not used directly and is supplied indirectly via `@folio/stripes-cli`. Refs STCOM-1153.
+* Add styling for search fields to remove the `x` cancel icon that went away when we upgraded `normalize.css` . Refs STCOM-1157.
+* Remove Accordion's problematic internal aria-label (it already has aria-labelledby for adequate labeling). Refs STCOM-1129.
+* Compile translations. Refs STCOM-1162.
+* Return filled rows and query from `useAdvancedSearch` hook. Fixes STCOM-1156.
+* Remove `dom-helpers` dependency. Resolves STCOM-1170.
+* Center MCL prev-next pagination to scrollParent. Resolves STCOM-1158.
+* Add style to `<TextLink>` to account for interactionStyles' `:active` style. Refs STCOM-1159.
+* Upgrade `postcss-calc` from v8 to v9.0.1. Refs STCOM-1174.
+* Upgrade `react-transition-group` from 2.9.0 to 4.4.5. Refs STCOM-1175.
+* Expand options of MetaSection component. Refs STCOM-1171.
+* Provide the searchableOptions prop to the SearchField component to use it as children for options in the Select component. Refs STCOM-1183.
+* Provide the `getFieldUniqueKey` prop to define a `key` for the list items in the `<RepeatableField>` component. Refs STCOM-1186.
+
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
 
