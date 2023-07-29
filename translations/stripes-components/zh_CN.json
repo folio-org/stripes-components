@@ -886,8 +886,8 @@
     "metaSection.lastUpdatedDateTime": "{date} {time}",
     "metaSection.lastUpdatedBy": "由{source}",
     "metaSection.unknownUser": "未知用户",
-    "advancedSearch.match.exactPhrase": "Exact phrase",
-    "advancedSearch.match.containsAll": "Contains all",
-    "advancedSearch.match.startsWith": "Starts with",
-    "advancedSearch.match.label": "Match option"
+    "advancedSearch.match.exactPhrase": "精确短语",
+    "advancedSearch.match.containsAll": "包含全部",
+    "advancedSearch.match.startsWith": "始于",
+    "advancedSearch.match.label": "匹配选项"
 }
