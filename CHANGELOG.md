@@ -35,7 +35,8 @@
 * Bugfix for `<MultiSelection>` - onRemove should support remove button clicks and list de-selection as it does backspace. Refs STCOM-1106.
 * Add `graph` icon. Refs STCOM-1187.
 * `<AccordionSet/>` bugfix - fix for Accordions reverting to their initial open/close state when outer component is updated. Fixes STCOM-1188.
-
+* Unpin `moment` from `2.24`; STRIPES-678 resolved long ago. Resolves CVE-2022-24785.
+    
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
 
