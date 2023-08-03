@@ -886,8 +886,8 @@
     "metaSection.lastUpdatedDateTime": "{date} {time}",
     "metaSection.lastUpdatedBy": "por {source}",
     "metaSection.unknownUser": "Usuario desconocido",
-    "advancedSearch.match.exactPhrase": "Exact phrase",
-    "advancedSearch.match.containsAll": "Contains all",
-    "advancedSearch.match.startsWith": "Starts with",
-    "advancedSearch.match.label": "Match option"
+    "advancedSearch.match.exactPhrase": "Frase exacta",
+    "advancedSearch.match.containsAll": "Contiene todos",
+    "advancedSearch.match.startsWith": "Empieza por",
+    "advancedSearch.match.label": "Opción de coincidencia"
 }
