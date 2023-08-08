@@ -130,8 +130,5 @@
     "react-intl": "^5.0.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^5.2.0"
-  },
-  "resolutions": {
-    "moment": "~2.24.0"
   }
 }
