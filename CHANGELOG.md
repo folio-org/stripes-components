@@ -33,6 +33,7 @@
 * Provide the searchableOptions prop to the SearchField component to use it as children for options in the Select component. Refs STCOM-1183.
 * Provide the `getFieldUniqueKey` prop to define a `key` for the list items in the `<RepeatableField>` component. Refs STCOM-1186.
 * Bugfix for `<MultiSelection>` - onRemove should support remove button clicks and list de-selection as it does backspace. Refs STCOM-1106.
+* *BREAKING* bump `react` to `v18`. Refs STCOM-1179.
 * Add `graph` icon. Refs STCOM-1187.
 * `<AccordionSet/>` bugfix - fix for Accordions reverting to their initial open/close state when outer component is updated. Fixes STCOM-1188.
 * Unpin `moment` from `2.24`; STRIPES-678 resolved long ago. Resolves CVE-2022-24785.
