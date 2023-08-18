@@ -49,7 +49,7 @@
     "@babel/register": "^7.0.0",
     "@bigtest/interactor": "0.7.2",
     "@folio/eslint-config-stripes": "^6",
-    "@folio/stripes-cli": "^2.4.0",
+    "@folio/stripes-cli": "^3.0.0",
     "@folio/stripes-testing": "^4.5.0",
     "@formatjs/cli": "^6.0.4",
     "@mdx-js/loader": "^1.6.22",
