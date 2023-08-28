@@ -10,7 +10,7 @@ jobs:
   build-storybook:
     env:
       FOLIO_NPM_REGISTRY: 'https://repository.folio.org/repository/npm-folioci/'
-      NODEJS_VERSION: '16'
+      NODEJS_VERSION: '18'
 
     runs-on: ubuntu-latest
 
