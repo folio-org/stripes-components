@@ -39,6 +39,7 @@
 * Unpin `moment` from `2.24`; STRIPES-678 resolved long ago. Resolves CVE-2022-24785.
 * Always display spinner buttons on `input[type="number"]`. Resolves STCOM-1185.
 * Add `pagingOffset` prop to `<MultiColumnList/>`. Resoves STCOM-1189.
+* Adjust scroll position to the top for non-sparse array. Resolves STCOM-1196.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
