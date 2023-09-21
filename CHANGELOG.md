@@ -41,6 +41,7 @@
 * Add `pagingOffset` prop to `<MultiColumnList/>`. Resoves STCOM-1189.
 * Adjust scroll position to the top for non-sparse array. Resolves STCOM-1196.
 * *BREAKING* bump `react-intl` to `v6.4.4`. Refs STCOM-1198.
+* Move prev/next pagination outside of MCL's scrollable div. Refs STCOM-1115.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
