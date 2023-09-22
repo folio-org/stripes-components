@@ -41,6 +41,7 @@
 * Add `pagingOffset` prop to `<MultiColumnList/>`. Resoves STCOM-1189.
 * Adjust scroll position to the top for non-sparse array. Resolves STCOM-1196.
 * *BREAKING* bump `react-intl` to `v6.4.4`. Refs STCOM-1198.
+* Add `current` for `selectList` and `container` refs due to removal of dom-helpers dependency. Refs STCOM-1199.
 * Fix focus of first row and prevent multiple focus calls in MCLRenderer. Fixes STCOM-1202.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
