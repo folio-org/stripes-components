@@ -43,6 +43,7 @@
 * *BREAKING* bump `react-intl` to `v6.4.4`. Refs STCOM-1198.
 * Add `current` for `selectList` and `container` refs due to removal of dom-helpers dependency. Refs STCOM-1199.
 * Fix focus of first row and prevent multiple focus calls in MCLRenderer. Fixes STCOM-1202.
+* Reset the `loading` state for the sparse array in `MCLRenderer`, not just the non-sparse. Fixes STCOM-1203.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
