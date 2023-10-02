@@ -45,6 +45,8 @@
 * Fix focus of first row and prevent multiple focus calls in MCLRenderer. Fixes STCOM-1202.
 * Move prev/next pagination outside of MCL's scrollable div. Refs STCOM-1115.
 * Reset the `loading` state for the sparse array in `MCLRenderer`, not just the non-sparse. Fixes STCOM-1203.
+* Bump `@svgr/webpack` from `7.0.0` to `8.1.0`.
+* Update/unbreak `expandAllSections` and `collapseAllSections` keyboard shortcuts to work with updated `<AccordionStatus>` code. Fixes STCOM-1207.
 * Make Advanced search query boxes expandable. Fixes STCOM-1205.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
