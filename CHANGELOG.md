@@ -47,6 +47,7 @@
 * Reset the `loading` state for the sparse array in `MCLRenderer`, not just the non-sparse. Fixes STCOM-1203.
 * Bump `@svgr/webpack` from `7.0.0` to `8.1.0`.
 * Update/unbreak `expandAllSections` and `collapseAllSections` keyboard shortcuts to work with updated `<AccordionStatus>` code. Fixes STCOM-1207.
+* Correctly handle multiple `<Callout>` elements when they are manipulated quickly. Refs STCOM-1209.
 * Make Advanced search query boxes expandable. Fixes STCOM-1205.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
