@@ -50,6 +50,7 @@
 * Correctly handle multiple `<Callout>` elements when they are manipulated quickly. Refs STCOM-1209.
 * Make Advanced search query boxes expandable. Fixes STCOM-1205.
 * Fix state mutation in `<AccordionSet>`. Add `onRegisterAccordion` and `onUnregisterAccordion` props. Refs STCOM-1210.
+* Add `hasMatchSelection` to `<AdvancedSearch>` to hide/show search match selection dropdown. Refs STCOM-1211.
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
