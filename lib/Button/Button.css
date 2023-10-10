@@ -297,6 +297,9 @@
   &[disabled] {
     background-color: transparent;
     border: 0;
+    color: var(--color-text);
+    opacity: 0.65;
+    pointer-events: none;
   }
 
   &:hover,
