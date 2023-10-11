@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 12.0.0 IN PROGRESS
+## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
 
 * Add `rootClass` and `fitContent` props to `<TextArea>`. Refs STCOM-1101.
 * Fix bug with Timepicker formatting user input too quickly/aggressively. Refs STCOM-1103.
