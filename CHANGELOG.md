@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 12.0.1
+
+* Bump `@folio/stripes-testing` to `v4.6.0` for new interactors.
+
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
 
