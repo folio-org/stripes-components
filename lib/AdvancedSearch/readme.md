@@ -130,6 +130,7 @@ onSearch | func | Callback fired when search is performed. Called with two argum
 onCancel | func | Callback fired when the user clicks the cancel button. | true
 defaultSearchOptionValue | string | One of the options in `searchOptions` that will be selected by default in all rows | false
 firstRowInitialSearch | object | Object with shape `{ query, option }` - will be used to populate first row with default values | false
+hasMatchSelection | boolean | Show/hide search match option dropdown | true
 hasQueryOption | boolean | Controls whether `Query` search option should be appended to search options list | true
 rowFormatter | func | Function that will be used to combine boolean, query and search option of each row. Signature: `(searchOption, query, bool, comparator) => {...}`. Returned values will be used by `queryBuilder` to join them together. *Note:* no need to add `bool` to resulting string here - it will be added by `queryBuilder`. | false
 queryBuilder | func | Function that will be used to construct the search query. Signature: `(rows, rowFormatter) => {...}`. `rows` - array of shapes `{ query, searchOption, query }`, `rowFormatter` - the prop. Returned value will be passed as the first argument to `onSearch`. | false
