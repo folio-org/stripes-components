@@ -1,11 +1,15 @@
 # Change history for stripes-components
 
+## [12.0.2](https://github.com/folio-org/stripes-components/tree/v12.0.2) (2023-10-20)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.1...v12.0.2)
+
+* Add `hasMatchSelection` to `<AdvancedSearch>` to hide/show search match selection dropdown. Refs STCOM-1211.
+* Bump `@folio/stripes-testing` to `v4.6.1` for new interactors.
+
 ## [12.0.1](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.0.1)
 
 * Bump `@folio/stripes-testing` to `v4.6.0` for new interactors.
-
-* Add `hasMatchSelection` to `<AdvancedSearch>` to hide/show search match selection dropdown. Refs STCOM-1211.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
