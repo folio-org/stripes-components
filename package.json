@@ -90,7 +90,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.0",
     "redux-form": "^8.3.0",
-    "regenerator-runtime": "^0.13.3",
+    "regenerator-runtime": "^0.14.0",
     "sinon": "^15.0.1",
     "storybook-addon-designs": "^6.0.1",
     "storybook-addon-intl": "^2.4.1",
