@@ -10,6 +10,7 @@
   height: 100%;
   pointer-events: none;
   padding: 1.5rem 1rem;
+  z-index: 1;
 }
 
 .calloutContainer {

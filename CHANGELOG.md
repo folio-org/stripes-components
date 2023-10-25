@@ -3,6 +3,7 @@
 ## 12.1.0 IN PROGRESS
 
 * Add `hasMatchSelection` to `<AdvancedSearch>` to hide/show search match selection dropdown. Refs STCOM-1211.
+* Add z-index of 1 to callout out to have it always render on top of sibling elements. Fixes STCOM-1217.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
