@@ -20,37 +20,3 @@
   min-width: 100%;
   max-width: 100%;
 }
-
-.startControls,
-.endControls {
-  pointer-events: none;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex: 0;
-}
-
-.startControls {
-  justify-content: flex-start;
-  padding: 0 0 0 var(--input-horizontal-padding);
-}
-
-[dir="rtl"] .startControls {
-  padding: 0 var(--input-horizontal-padding) 0 0;
-}
-
-.endControls {
-  justify-content: flex-end;
-  padding: 0 var(--input-horizontal-padding) 0 0;
-}
-
-[dir="rtl"] .endControls {
-  padding: 0 0 0 var(--input-horizontal-padding);
-}
-
-.controlGroup {
-  pointer-events: all;
-  display: flex;
-  align-items: center;
-}
