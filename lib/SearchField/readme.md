@@ -78,9 +78,12 @@ placeholder | string | Adds a placeholder to the search input field
 id | string | Adds an ID to the input field
 className | string | Adds a className to the root element
 inputClass | string | Adds a className to the input
+inputType | string | Controls if input box should be `input` or `textarea`. Accepted values are `input` and `textarea`.
 aria-label | string | Adds an aria label to the input field. Camel-case `ariaLabel` is also accepted.
 value | string | The value of the input field
 loading | boolean | Adds a loading state to icon (on fetch etc.)
+lockWidth | boolean | Prevent user from changing textarea width. Applies only when `inputType` is `textarea`
+newLineOnShiftEnter | boolean | Make pressing Shift+Enter enter a new line, and pressing Enter - submit a form. Applies only when `inputType` is `textarea`
 onChange | function | On change handler for the input field
 onClear | function | On clear search field callback
 clearSearchId | string | Adds id to the clear search icon
