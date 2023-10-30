@@ -15,3 +15,8 @@
     max-width: 100%;
   }
 }
+
+.lockWidth {
+  min-width: 100%;
+  max-width: 100%;
+}
