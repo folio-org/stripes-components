@@ -118,6 +118,8 @@ export {
   useAdvancedSearch,
   defaultQueryBuilder as defaultAdvancedSearchQueryBuilder,
   BOOLEAN_OPERATORS as ADVANCED_SEARCH_BOOLEAN_OPERATORS,
+  MATCH_OPTIONS as ADVANCED_SEARCH_MATCH_OPTIONS,
+  FIELD_NAMES as ADVANCED_SEARCH_FIELD_NAMES,
 } from './lib/AdvancedSearch';
 
 /* specific use */
