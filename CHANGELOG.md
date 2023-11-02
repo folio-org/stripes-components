@@ -3,6 +3,7 @@
 ## 12.0.3 IN PROGRESS
 
 * Add z-index of 1 to callout out to have it always render on top of sibling elements. Fixes STCOM-1217.
+* Ensure CSS visibility of datepicker's year input number spinner. Refs STCOM-1225.
 
 ## [12.0.2](https://github.com/folio-org/stripes-components/tree/v12.0.2) (2023-10-20)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.1...v12.0.2)
