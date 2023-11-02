@@ -129,6 +129,10 @@
   width: 8em;
 }
 
+input[type="number"].yearInput::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
 .daysOfWeek {
   display: flex;
   justify-content: space-between;
