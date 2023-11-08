@@ -17,7 +17,15 @@
   will-change: transform;
 
   @media print {
-    overflow: visible;
+    display: none;
+  }
+
+  &:nth-last-of-type(1) {
+    @media print {
+      overflow: visible;
+      display: block;
+      flex: 0 0 100vw !important;
+    }
   }
 }
 
