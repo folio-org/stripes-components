@@ -889,5 +889,6 @@
     "advancedSearch.match.exactPhrase": "Frase exacta",
     "advancedSearch.match.containsAll": "Contiene todos",
     "advancedSearch.match.startsWith": "Empieza con",
-    "advancedSearch.match.label": "Match option"
+    "advancedSearch.match.label": "Match option",
+    "advancedSearch.match.containsAny": "Contains any"
 }
