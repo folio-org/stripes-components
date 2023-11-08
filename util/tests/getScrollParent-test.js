@@ -5,8 +5,8 @@ import { mount } from '../../tests/helpers';
 import getScrollParent from '../getScrollParent';
 
 describe('getScrollParent', () => {
-  beforeEach(() => {
-    mount(
+  beforeEach(async () => {
+    await mount(
       <div id="outer" style={{ position: 'relative', overflowX: 'auto', height: '100px', width: '100px' }}>
         <div id="nondescript">
           <div id="inner" style={{ overflow: 'auto', height: '300px', width: '300px' }}>

@@ -880,5 +880,14 @@
     "Timepicker.ScreenReaderLabel": "{label} 형식은 {screenReaderFormat} 입니다. 아래쪽 화살표를 사용하여 시간 선택기 대화상자로 들어갑니다. {screenReaderMessage}",
     "selection.controlLabel": "컨트롤 선택",
     "Timepicker.formEnd": "End of form",
-    "Timepicker.formStart": "Beginning of form"
+    "Timepicker.formStart": "Beginning of form",
+    "metaSection.by": "by",
+    "metaSection.lastUpdated": "<b>Last updated</b>",
+    "metaSection.lastUpdatedDateTime": "{date} {time}",
+    "metaSection.lastUpdatedBy": "by {source}",
+    "metaSection.unknownUser": "Unknown user",
+    "advancedSearch.match.exactPhrase": "Exact phrase",
+    "advancedSearch.match.containsAll": "Contains all",
+    "advancedSearch.match.startsWith": "Starts with",
+    "advancedSearch.match.label": "Match option"
 }

@@ -40,6 +40,35 @@ The component supports adding an array of searchable indexes which adds a select
   />
 ```
 
+## Usage with searchable options
+The component supports adding custom searchable options, e.g. if the `<optgroup>` tag is required.
+
+```
+  import SearchField from '@folio/stripes/components';
+
+  const searchableOptions = (
+    <optgroup label="Fruits">
+      <option value={apples}>Apples</option>
+      <option value={bananas}>Bananas</option>
+    </optgroup>
+    <optgroup label="Vegetables">
+      <option value={tomatoes}>Tomatoes</option>
+    </optgroup>
+  );
+
+  <SearchField
+    onChange={...}
+    value={...}
+    onClear={...}
+    placeholder="Search for something"
+
+    searchableOptions={searchableOptions}
+    onChangeIndex={() => ...}
+    selectedIndex={...}
+    searchableIndexesPlaceholder="Search for these fields.."
+  />
+```
+
 ## Props
 This component supports the same props as the TextField component among other props.
 
@@ -49,9 +78,12 @@ placeholder | string | Adds a placeholder to the search input field
 id | string | Adds an ID to the input field
 className | string | Adds a className to the root element
 inputClass | string | Adds a className to the input
+inputType | string | Controls if input box should be `input` or `textarea`. Accepted values are `input` and `textarea`.
 aria-label | string | Adds an aria label to the input field. Camel-case `ariaLabel` is also accepted.
 value | string | The value of the input field
 loading | boolean | Adds a loading state to icon (on fetch etc.)
+lockWidth | boolean | Prevent user from changing textarea width. Applies only when `inputType` is `textarea`
+newLineOnShiftEnter | boolean | Make pressing Shift+Enter enter a new line, and pressing Enter - submit a form. Applies only when `inputType` is `textarea`
 onChange | function | On change handler for the input field
 onClear | function | On clear search field callback
 clearSearchId | string | Adds id to the clear search icon
@@ -59,9 +91,10 @@ clearSearchId | string | Adds id to the clear search icon
 ### With searchable indexes
 Additional props for adding searchable indexes/fields.
 
-Name | type | Description
--- | -- | --
-searchableIndexes | array of objects | Adds a list of searchable indexes/fields
-selectedIndex | string | Currently selected index
-onChangeIndex | function | On change handler for when changing index
-searchableIndexesPlaceholder | string | Control the placeholder of the select field
+Name | type                 | Description
+-- |----------------------| --
+searchableIndexes | array of objects     | Adds a list of searchable indexes/fields
+searchableOptions | nodes/array of nodes | Adds a list of custom searchable indexes/fields
+selectedIndex | string               | Currently selected index
+onChangeIndex | function             | On change handler for when changing index
+searchableIndexesPlaceholder | string               | Control the placeholder of the select field

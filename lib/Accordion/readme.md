@@ -72,6 +72,10 @@ const initial = {
     ...
 ```
 
+### `onRegisterAccordion` and `onUnregisterAccordion` props
+The `onRegisterAccordion` and `onUnregisterAccordion` props are called when an `<Accordion>` is registered and unregistered. This is useful when accordions can be mounted or unmounted and you want to notify a consumer of `<AccordionStatus>` when that has happened.
+The props are called with a single argument - accordion's `id`.
+
 ## Open render-prop
 Accordions can pass a their open status to their children via a functional child:
 

@@ -232,7 +232,7 @@
     "countries.NA": "Namibia",
     "countries.NR": "Nauru",
     "countries.NP": "Nepal",
-    "countries.NL": "Antille Olandesi",
+    "countries.NL": "Olanda",
     "countries.AN": "Antille Olandesi",
     "countries.NC": "Nuova Caledonia",
     "countries.NZ": "Nuova Zelanda",
@@ -880,5 +880,14 @@
     "Timepicker.ScreenReaderLabel": "Il formato di {label} è {screenReaderFormat} usare la freccia verso il basso per entrare nella finestra di dialogo del timepicker. {screenReaderMessage}",
     "selection.controlLabel": "Seleziona il controllo",
     "Timepicker.formEnd": "End of form",
-    "Timepicker.formStart": "Beginning of form"
+    "Timepicker.formStart": "Beginning of form",
+    "metaSection.by": "by",
+    "metaSection.lastUpdated": "<b>Last updated</b>",
+    "metaSection.lastUpdatedDateTime": "{date} {time}",
+    "metaSection.lastUpdatedBy": "by {source}",
+    "metaSection.unknownUser": "Unknown user",
+    "advancedSearch.match.exactPhrase": "Exact phrase",
+    "advancedSearch.match.containsAll": "Contains all",
+    "advancedSearch.match.startsWith": "Starts with",
+    "advancedSearch.match.label": "Match option"
 }

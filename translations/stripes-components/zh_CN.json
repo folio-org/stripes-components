@@ -880,5 +880,14 @@
     "Timepicker.ScreenReaderLabel": "{label}格式为{screenReaderFormat}使用向下箭头进入时间选择器对话框。 {screenReaderMessage}",
     "selection.controlLabel": "选择控制",
     "Timepicker.formEnd": "表格结束",
-    "Timepicker.formStart": "表格开头"
+    "Timepicker.formStart": "表格开头",
+    "metaSection.by": "由",
+    "metaSection.lastUpdated": "<b>上次更新</b>",
+    "metaSection.lastUpdatedDateTime": "{date} {time}",
+    "metaSection.lastUpdatedBy": "由{source}",
+    "metaSection.unknownUser": "未知用户",
+    "advancedSearch.match.exactPhrase": "精确短语",
+    "advancedSearch.match.containsAll": "包含全部",
+    "advancedSearch.match.startsWith": "始于",
+    "advancedSearch.match.label": "匹配选项"
 }

@@ -1,6 +1,15 @@
 # Change history for stripes-components
 
-## 11.1.0 IN PROGRESS
+## 12.1.0 IN PROGRESS
+
+* Add `hasMatchSelection` to `<AdvancedSearch>` to hide/show search match selection dropdown. Refs STCOM-1211.
+* Add z-index of 1 to callout out to have it always render on top of sibling elements. Fixes STCOM-1217.
+* Make `<SearchField>` support input and textarea as an input field. Refs STCOM-1220.
+* Add support for new match option `containsAll` in `<AdvancedSearch>`. Refs STCOM-1223.
+* Ensure CSS visibility of datepicker's year input number spinner. Refs STCOM-1225.
+
+## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
 
 * Add `rootClass` and `fitContent` props to `<TextArea>`. Refs STCOM-1101.
 * Fix bug with Timepicker formatting user input too quickly/aggressively. Refs STCOM-1103.
@@ -27,6 +36,30 @@
 * Remove `dom-helpers` dependency. Resolves STCOM-1170.
 * Center MCL prev-next pagination to scrollParent. Resolves STCOM-1158.
 * Add style to `<TextLink>` to account for interactionStyles' `:active` style. Refs STCOM-1159.
+* Upgrade `postcss-calc` from v8 to v9.0.1. Refs STCOM-1174.
+* Upgrade `react-transition-group` from 2.9.0 to 4.4.5. Refs STCOM-1175.
+* Expand options of MetaSection component. Refs STCOM-1171.
+* Provide the searchableOptions prop to the SearchField component to use it as children for options in the Select component. Refs STCOM-1183.
+* Provide the `getFieldUniqueKey` prop to define a `key` for the list items in the `<RepeatableField>` component. Refs STCOM-1186.
+* Bugfix for `<MultiSelection>` - onRemove should support remove button clicks and list de-selection as it does backspace. Refs STCOM-1106.
+* *BREAKING* bump `react` to `v18`. Refs STCOM-1179.
+* Add `graph` icon. Refs STCOM-1187.
+* `<AccordionSet/>` bugfix - fix for Accordions reverting to their initial open/close state when outer component is updated. Fixes STCOM-1188.
+* Unpin `moment` from `2.24`; STRIPES-678 resolved long ago. Resolves CVE-2022-24785.
+* Always display spinner buttons on `input[type="number"]`. Resolves STCOM-1185.
+* Add `pagingOffset` prop to `<MultiColumnList/>`. Resoves STCOM-1189.
+* Adjust scroll position to the top for non-sparse array. Resolves STCOM-1196.
+* *BREAKING* bump `react-intl` to `v6.4.4`. Refs STCOM-1198.
+* Add `current` for `selectList` and `container` refs due to removal of dom-helpers dependency. Refs STCOM-1199.
+* Fix focus of first row and prevent multiple focus calls in MCLRenderer. Fixes STCOM-1202.
+* Move prev/next pagination outside of MCL's scrollable div. Refs STCOM-1115.
+* Reset the `loading` state for the sparse array in `MCLRenderer`, not just the non-sparse. Fixes STCOM-1203.
+* Bump `@svgr/webpack` from `7.0.0` to `8.1.0`.
+* Update/unbreak `expandAllSections` and `collapseAllSections` keyboard shortcuts to work with updated `<AccordionStatus>` code. Fixes STCOM-1207.
+* Correctly handle multiple `<Callout>` elements when they are manipulated quickly. Refs STCOM-1209.
+* Make Advanced search query boxes expandable. Fixes STCOM-1205.
+* Fix state mutation in `<AccordionSet>`. Add `onRegisterAccordion` and `onUnregisterAccordion` props. Refs STCOM-1210.
+* Italian locale: provide correct value for `NL` country code. Refs STCOM-1216
 
 ## [11.0.0](https://github.com/folio-org/stripes-components/tree/v11.0.0) (2023-01-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v10.3.0...v11.0.0)
