@@ -7,6 +7,7 @@
 * Make `<SearchField>` support input and textarea as an input field. Refs STCOM-1220.
 * Add support for new match option `containsAll` in `<AdvancedSearch>`. Refs STCOM-1223.
 * Ensure CSS visibility of datepicker's year input number spinner. Refs STCOM-1225.
+* Update FilterGroups.js. Refs UIU-2731.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
