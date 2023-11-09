@@ -9,6 +9,7 @@
 * Ensure CSS visibility of datepicker's year input number spinner. Refs STCOM-1225.
 * Include pagination height in MCL container height calculation. Refs STCOM-1224.
 * Added `indexRef` and `inputRef` props to `<SearchField>`. Refs STCOM-1231.
+* Adjusted print styles of panes so that the last pane will print. Refs STCOM-1228, STCOM-1229.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
