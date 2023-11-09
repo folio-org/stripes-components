@@ -5,6 +5,7 @@
 * Add z-index of 1 to callout out to have it always render on top of sibling elements. Fixes STCOM-1217.
 * Ensure CSS visibility of datepicker's year input number spinner. Refs STCOM-1225.
 * Include pagination height in MCL container height calculation. Refs STCOM-1224.
+* Adjusted print styles of panes so that the last pane will print. Refs STCOM-1228, STCOM-1229.
 
 ## [12.0.2](https://github.com/folio-org/stripes-components/tree/v12.0.2) (2023-10-20)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.1...v12.0.2)
