@@ -69,7 +69,7 @@
     "passwordStrength.veryStrong": "Vaše heslo je velmi silné.",
     "passwordStrength.infoPopoverText": "Zahrňte číslice/symboly nebo heslo prodlužte a proveďte náhodnějším",
     "passwordStrength.label": "Síla hesla:",
-    "fieldIsDisabled": "Pole je zakázáno",
+    "fieldIsDisabled": "Pole je deaktivováno",
     "readonly": "Jen pro čtení",
     "readMore": "Přečtěte si více",
     "tableEmpty": "Seznam neobsahuje žádné jednotky",
