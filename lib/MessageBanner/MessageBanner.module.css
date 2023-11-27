@@ -19,7 +19,7 @@
   --message-banner-error-color: var(--error);
   --message-banner-error-border-color: var(--error);
   --message-banner-success-fill: var(--success-fill);
-  --message-banner-success-color: var(--success);
+  --message-banner-success-color: var(--color-text);
   --message-banner-success-border-color: var(--success);
   --message-banner-warning-fill: var(--warn-fill);
   --message-banner-warning-color: var(--warn);
