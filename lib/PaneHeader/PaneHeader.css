@@ -82,9 +82,9 @@
 
 /* Pane sub */
 .paneSub {
-  color: var(--color-text-p2);
+  color: var(--color-text);
   font-size: var(--font-size-small);
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 /* Pane button areas */
