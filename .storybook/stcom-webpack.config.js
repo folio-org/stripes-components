@@ -44,7 +44,6 @@ module.exports = async (config) => {
               require('postcss-custom-media'),
               require('postcss-media-minmax'),
               require('@csstools/postcss-relative-color-syntax'),
-              require('postcss-color-function'),
             ],
           },
           sourceMap: true,
