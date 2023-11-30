@@ -43,6 +43,7 @@ module.exports = async (config) => {
               require('postcss-nesting'),
               require('postcss-custom-media'),
               require('postcss-media-minmax'),
+              require('@csstools/postcss-relative-color-syntax'),
               require('postcss-color-function'),
             ],
           },

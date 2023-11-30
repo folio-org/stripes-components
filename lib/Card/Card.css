@@ -2,7 +2,7 @@
 
 .card {
   width: 100%;
-  background-color: color(var(--bg) blend(var(--bg-hover) 20%));
+  background-color: color-mix(in oklch, var(--bg) 80%, var(--bg-hover-native) 20%);
   border: 1px solid var(--color-border-p2);
   margin-bottom: var(--gutter);
   overflow: hidden;
