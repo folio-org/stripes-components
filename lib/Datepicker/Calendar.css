@@ -120,9 +120,7 @@
   padding: 4px;
 }
 
-input[type="number"].yearInput {
-  -moz-appearance: initial;
-  appearance: initial;
+.yearInput {
   border-style: dashed;
   border-width: 0 0 1px 0;
   min-width: 0;
