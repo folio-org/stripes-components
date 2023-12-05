@@ -120,7 +120,9 @@
   padding: 4px;
 }
 
-.yearInput {
+input[type="number"].yearInput {
+  -moz-appearance: initial;
+  appearance: initial;
   border-style: dashed;
   border-width: 0 0 1px 0;
   min-width: 0;
@@ -130,7 +132,7 @@
 }
 
 input[type="number"].yearInput::-webkit-inner-spin-button {
-  appearance: initial;
+  appearance: auto;
   opacity: 1;
 }
 
