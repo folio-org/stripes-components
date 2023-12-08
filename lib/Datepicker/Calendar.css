@@ -130,7 +130,7 @@
 }
 
 input[type="number"].yearInput::-webkit-inner-spin-button {
-  appearance: initial;
+  appearance: auto;
   opacity: 1;
 }
 
