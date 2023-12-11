@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 12.0.4 in progress
+## [12.0.4](https://github.com/folio-org/stripes-components/tree/v12.0.4) (2023-12-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.3...v12.0.4)
+
 * Display spinner on Datepicker year input. Refs STCOM-1225.
 
 ## [12.0.3](https://github.com/folio-org/stripes-components/tree/v12.0.3) (2023-11-10)
