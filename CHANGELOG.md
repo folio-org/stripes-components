@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [12.0.4](https://github.com/folio-org/stripes-components/tree/v12.0.4) (2023-11-10)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.3...v12.0.4)
+
+* Display spinner on Datepicker year input. Refs STCOM-1225.
+
 ## [12.0.3](https://github.com/folio-org/stripes-components/tree/v12.0.3) (2023-11-10)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.2...v12.0.3)
 
@@ -8,7 +13,16 @@
 * Include pagination height in MCL container height calculation. Refs STCOM-1224.
 * Adjusted print styles of panes so that the last pane will print. Refs STCOM-1228, STCOM-1229.
 * Accessibility Issues - stripes components. Refs STCOM-1222.
-* Display spinner on Datepicker year input. Refs STCOM-1225.
+
+## [12.0.2](https://github.com/folio-org/stripes-components/tree/v12.0.2) (2023-10-20)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.1...v12.0.2)
+
+* Add `hasMatchSelection` to `<AdvancedSearch>` to hide/show search match selection dropdown. Refs STCOM-1211.
+
+## [12.0.1](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.0.1)
+
+* Bump `@folio/stripes-testing` to `v4.6.0` for new interactors.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
