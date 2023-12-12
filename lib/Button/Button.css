@@ -168,7 +168,7 @@
         border-bottom: 4px solid var(--primary);
 
         &:focus {
-          border-bottom-color: color(var(--primary) shade(8%));
+          border-bottom-color: oklch(from var(--primary) calc(l - 0.03) c h);
         }
       }
 

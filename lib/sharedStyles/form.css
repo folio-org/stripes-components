@@ -66,21 +66,21 @@
 
   &.hasWarning {
     border-color: var(--warn);
-    background-color: color(var(--warn) alpha(-95%));
+    background-color: oklch(from var(--warn) l c h / 5%);
   }
 
   &.hasError {
     border-color: var(--error);
-    background-color: color(var(--error) alpha(-95%));
+    background-color: oklch(from var(--error) l c h / 5%);
   }
 
   &.isValid {
     border-color: var(--success);
-    background-color: color(var(--success) alpha(-95%));
+    background-color: oklch(from var(--success) l c h / 5%);
   }
 
   &.isChanged {
-    background-color: color(var(--primary) alpha(-80%));
+    background-color: oklch(from var(--primary) l c h / 20%);
   }
 }
 

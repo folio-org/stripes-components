@@ -50,17 +50,17 @@
 
   &.error {
     border-color: var(--error);
-    background-color: color(var(--error, #600) tint(75%));
+    background-color: oklch(from var(--error) 90% 11% h);
   }
 
   &.success {
     border-color: var(--success);
-    background-color: color(var(--success, #060) tint(75%));
+    background-color: oklch(from var(--success) 90% 12% h);
   }
 
   &.warning {
     border-color: var(--warn);
-    background-color: color(var(--warn, #940) tint(75%));
+    background-color: oklch(from var(--warn) 90% 9% h);
   }
 
   &.info {

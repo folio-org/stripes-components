@@ -65,7 +65,7 @@
     }
 
     &.today {
-      background: color(#106c9e tint(80%));
+      background: color-mix(in oklch, var(--bg) 80%, var(--bg-hover-native) 20%);
     }
 
     &.excluded {
