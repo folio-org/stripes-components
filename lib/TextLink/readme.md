@@ -12,14 +12,6 @@ import { TextLink } from '@folio/stripes/components';
 <TextLink target="_blank" rel="noopener noreferrer" href="https://folio.org">
   I'm an external link
 </TextLink>
-
-<TextLink to="/users" ref={yourRefCallback}>
-  {({ className }) => (
-    <span className={className}>
-      I'm an internal link with custom styles
-    </span>
-  )}
-</TextLink>
 ```
 
 ## Props
@@ -33,3 +25,13 @@ The remaining props are passed onto the root element of the component. This comp
 the ability to apply a root CSS class to the child element. Now, the TextLink component supports the object parameter 
 `className` and applying a root CSS class to the child element. This change was made to ensure correct inheritance of styles, 
 especially in cases where the children are inline elements with display: inline-flex, and the underline is not inherited.
+```js
+// In the case that direct style application is required, a child function can be used.
+<TextLink to="/users" ref={yourRefCallback}>
+  {({ className }) => (
+    <span className={className}>
+      I'm an internal link with custom styles
+    </span>
+  )}
+</TextLink>
+```
