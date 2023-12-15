@@ -3,7 +3,8 @@ import { addReadme } from 'storybook-readme';
 import { initializeRTL } from 'storybook-addon-rtl';
 import pkg from '../package.json';
 import { themes } from '@storybook/theming';
-import '../lib/global.css';
+import '!!style-loader!css-loader?modules!../lib/variables.css';
+import '!!style-loader!css-loader!../lib/global.css';
 
 /**
  * React intl support

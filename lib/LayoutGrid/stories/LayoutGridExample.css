@@ -2,8 +2,6 @@
  * LayoutGrid example CSS
  */
 
-@import "../../variables";
-
 .headline:not(:first-child) {
   margin-top: 30px;
 }

@@ -1,4 +1,4 @@
-@import '../variables.css';
+/* PaneSubHeader CSS */
 
 .subheader {
   padding: 8px var(--gutter, 15px);

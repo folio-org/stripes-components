@@ -2,8 +2,6 @@
  * Label
  */
 
-@import "../variables";
-
 .label {
   display: flex;
   align-items: center;

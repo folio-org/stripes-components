@@ -1,4 +1,5 @@
-@import '../variables';
+
+/* MetaSection CSS */
 
 .metaSectionRoot {
   border-radius: var(--radius);

@@ -1,13 +1,8 @@
 /**
  * Universal Interaction Styles
- * @variables-needs-updating
- */
+*/
 
-/* stylelint-disable no-descending-specificity  */
-
-@import '../variables.css';
-
-:root {
+.interactionStyles {
   --focus-dot-offset-default: var(--gutter-static-one-third);
   --focus-dot-offset-small: calc(var(--gutter-static-one-third) * -1);
   --focus-dot-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
@@ -15,9 +10,7 @@
   --box-offset-small: calc(var(--gutter-static-one-third) * -1);
   --box-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
   --box-offset-large: calc(var(--gutter-static) * -1);
-}
 
-.interactionStyles {
   position: relative;
   outline: none;
   z-index: 1;

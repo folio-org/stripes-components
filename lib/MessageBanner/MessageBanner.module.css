@@ -2,9 +2,7 @@
  * MessageBanner
  */
 
-@import '../variables.css';
-
-:root {
+.root {
   --message-banner-font-size: var(--font-size-medium);
   --message-banner-padding-small: 0.6rem;
   --message-banner-padding-large: 0.75rem;

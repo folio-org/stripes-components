@@ -2,8 +2,6 @@
  * Tooltip
  */
 
-@import "../variables";
-
 .tooltip {
   display: flex;
   justify-content: center;

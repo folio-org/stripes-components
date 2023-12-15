@@ -1,4 +1,4 @@
-@import "../variables";
+/* also maintains global class .stripes__icon for places where CSS module postfix is inaccessible */
 
 .icon {
   display: inline-flex;
@@ -10,13 +10,6 @@
   &:focus {
     outline: none;
   }
-}
-
-:global .stripes__icon {
-  flex-shrink: 0;
-  fill: currentColor;
-  height: 1.1429em;
-  width: 1.1429em;
 }
 
 /**

@@ -2,8 +2,6 @@
  * Asterisk
  */
 
-@import "../../../variables";
-
 .asterisk {
   color: var(--error);
   font-weight: bold;

@@ -1,4 +1,4 @@
-@import '../variables.css';
+/* Selection CSS */
 
 .selectionRoot {
   position: relative;
@@ -45,6 +45,7 @@
 
 [class*=interactionStyles] .selectionControl {
   background-color: var(--bg);
+
   &:active {
     color: var(--color-text);
   }

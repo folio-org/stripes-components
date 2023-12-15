@@ -1,4 +1,4 @@
-@import '../variables.css';
+/* Default PaneFooter CSS */
 
 .paneFooterContent {
   max-width: var(--container-max-width);

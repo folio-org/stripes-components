@@ -1,6 +1,5 @@
 @import "fonts.css";
-@import "normalize.css";
-@import "variables";
+@import "~normalize.css";
 
 * {
   box-sizing: border-box;
@@ -81,7 +80,8 @@ html {
 
 /* global "print" styles below was added for solve the problem with extra blank page generating on printing in all modules */
 @media print {
-  html, body {
+  html,
+  body {
     margin: 0 !important;
   }
 
@@ -137,8 +137,17 @@ button {
 }
 
 /* clears the ‘X’ from Internet Explorer */
-input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
-input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
 
 /* clears the ‘X’ from Chrome */
 input[type="search"]::-webkit-search-decoration,
@@ -192,6 +201,14 @@ input[type="number"]::-webkit-inner-spin-button {
 
 :global(.editor-preview *) {
   margin: 0;
+}
+
+/* for custom icons */
+:global(.stripes__icon) {
+  flex-shrink: 0;
+  fill: currentColor;
+  height: 1.1429em;
+  width: 1.1429em;
 }
 
 :global(body[dir="rtl"] .floatEnd),

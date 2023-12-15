@@ -2,8 +2,6 @@
  * PaneHeaderIconButton
  */
 
-@import "../variables";
-
 .PaneHeaderIconButton {
   /* min-width: var(--control-min-size-touch); */
   padding: 0 var(--gutter-static-one-third);

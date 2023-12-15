@@ -25,6 +25,7 @@ module.exports = async (config) => {
         loader: 'css-loader',
         options: {
           modules: {
+            mode: 'pure',
             localIdentName: '[local]---[hash:base64:5]',
           },
           sourceMap: true,
@@ -38,7 +39,6 @@ module.exports = async (config) => {
             plugins: [
               require('postcss-import'),
               require('autoprefixer'),
-              require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css' }),
               require('postcss-calc'),
               require('postcss-nesting'),
               require('postcss-custom-media'),

@@ -1,11 +1,9 @@
-@import '../variables.css';
+
 /* stylelint-disable no-descending-specificity */
 
-:root {
-  --radio-button-size: 12px;
-}
-
 .radioButton {
+  --radio-button-size: 12px;
+
   display: flex;
   flex-direction: column;
 

@@ -2,8 +2,6 @@
  * InfoPopover
  */
 
-@import "../variables";
-
 .root {
   max-width: 300px;
 }

@@ -1,4 +1,5 @@
-@import '../variables.css';
+
+/* LayoutHeader */
 
 .sectionHeader {
   background-color: var(--bg-hover);

@@ -2,9 +2,7 @@
  * TextLink
  */
 
-@import '../variables.css';
-
-:root {
+.root {
   --link-color-default: var(--color-link);
   --link-border-color-default: #d7dfeb;
   --link-color-hover: #23385a;
@@ -13,9 +11,7 @@
   --link-border-color-focus: #3b5f9a;
   --link-box-shadow-focus: 0 0 0 3px var(--color-fill-focus);
   --link-box-shadow-current: 0 0 0 3px var(--color-fill-focus-current);
-}
 
-.root {
   color: var(--link-color-default);
   position: relative;
   outline: 0;

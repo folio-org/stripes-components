@@ -2,8 +2,6 @@
  * Avatar
  */
 
-@import "../variables";
-
 .avatar {
   background-color: var(--color-fill);
   height: 24px;

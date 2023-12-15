@@ -1,13 +1,10 @@
-@import '../variables.css';
-
 /**
 * Default styling
 */
-:root {
-  --link-color-hover: #23385a;
-}
 
 .button {
+  --link-color-hover: #23385a;
+
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   padding: 0 var(--gutter-static);
   text-align: center;
@@ -67,6 +64,7 @@
     text-decoration-skip: objects;
     text-decoration-thickness: 2px;
   }
+
   /**
   * Colors
   */

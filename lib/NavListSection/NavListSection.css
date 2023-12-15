@@ -1,4 +1,5 @@
-@import "../variables";
+
+/* NavListSection CSS */
 
 .header {
   padding: 0 var(--gutter-static-two-thirds);

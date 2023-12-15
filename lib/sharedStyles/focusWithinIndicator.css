@@ -9,8 +9,6 @@
     }
 */
 
-@import "../variables";
-
 .focusWithinIndicator {
   &::after {
     content: '';

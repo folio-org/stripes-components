@@ -1,11 +1,8 @@
-@import '../variables.css';
+
 /* stylelint-disable no-descending-specificity */
-
-:root {
-  --checkbox-size: 12px;
-}
-
 .checkbox {
+  --checkbox-size: 12px;
+
   display: flex;
   flex-direction: column;
   position: relative;

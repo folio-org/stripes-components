@@ -2,8 +2,6 @@
  * Pane Menu Icon
  */
 
-@import '../variables';
-
 .iconButton {
   composes: interactionStylesControl from "../sharedStyles/interactionStyles.css";
   position: relative;
@@ -22,7 +20,7 @@
 }
 
 .iconButton:disabled,
-.iconButton[disabled]{
+.iconButton[disabled] {
   pointer-events: none;
 }
 
