@@ -1,14 +1,52 @@
 import moment from 'moment-timezone';
+import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
+import localeData from 'dayjs/plugin/localeData';
 
+dayjs.extend(timezone);
+dayjs.extend(localeData);
+
+/**
+ * Since Moment is still in use, we can keep this for sake of easing the transition.
+ * @deprecated
+ *
+ * @export
+ * @param {*} intl
+ * @returns {String}
+ */
 export function getMomentLocalizedFormat(intl) {
   moment.locale(intl.locale);
   const format = moment.localeData()._longDateFormat.L;
   return format;
 }
 
-// Returns a localized format.
-// Format will be a string similar to YYYY.MM.DD - something that can be
-// passed to moment for parsing/formatting purposes.
+/**
+ * getDayJSLocalizedFormat
+ * Fallback function in case getLocaleDateFormat is unable to perform.
+ *
+ * @export
+ * @param {*} intl
+ * @returns {String}
+ */
+export const getDayJSLocalizedFormat = (intl) => {
+  dayjs.locale(intl.locale);
+  return dayjs.localeData().longDateFormat('L');
+}
+
+//
+
+/**
+ * Returns a localized format.
+ * Format will be a string similar to YYYY.MM.DD - something that can be
+ * passed to moment/dayjs for parsing/formatting purposes.
+ * @export
+ * @param {Object} settings -
+ * @param {Object} settings.intl - the intl object from context
+ * @param {config} settings.config - sets the options for IntlDateTimeFormat. See
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options
+ * @returns {String}
+ */
+
 export const getLocaleDateFormat = ({ intl, config }) => {
   const tempDate = new Date('Thu May 14 2020 14:39:25 GMT-0500');
   let format = '';
@@ -62,33 +100,38 @@ export const getLocaleDateFormat = ({ intl, config }) => {
     });
   } else {
     // if INTL api is not available, fall back to moment...
-    format = getMomentLocalizedFormat(intl);
+    format = getDayJSLocalizedFormat(intl);
   }
 
   return format;
 };
 
-// getLocalizedTimeFormatInfo() -
-// Accepts a locale like 'ar' or 'de'
-// Gets an array of dayPeriods for 12 hour modes of time. The
-// array items can be used as values for the day period control,
-// and the array length used to determin 12 hour (2 items) or 24 hour mode (0 items).
-
-// example usage:
-// getLocalizedTimeFormatInfo('en-SE') returns:
-//   {
-//     separator: ':',
-//     timeFormat: 'HH:mm',
-//     dayPeriods: [],  // no dayPeriods means 24 hour time format.
-//   }
-
-// getLocalizedTimeFormatInfo('en-US') returns:
-//   {
-//     separator: ':',
-//     timeFormat: 'hh:mm A',
-//     dayPeriods: ['am', 'pm'], // day periods: 12 hour time format.
-//   }
-
+/**
+ * getLocalizedTimeFormatInfo()
+ * Accepts a locale like 'ar' or 'de'
+ * Gets an array of dayPeriods for 12 hour modes of time. The
+ * array items can be used as values for the day period control,
+ * and the array length used to determin 12 hour (2 items) or 24 hour mode (0 items).
+ *
+ * example usage:
+ * getLocalizedTimeFormatInfo('en-SE') returns:
+ *   {
+ *     separator: ':',
+ *     timeFormat: 'HH:mm',
+ *     dayPeriods: [],  // no dayPeriods means 24 hour time format.
+ *   }
+ *
+ * getLocalizedTimeFormatInfo('en-US') returns:
+ *   {
+ *     separator: ':',
+ *     timeFormat: 'hh:mm A',
+ *     dayPeriods: ['am', 'pm'], // day periods: 12 hour time format.
+ *   }
+ *
+ * @export
+ * @param {*} locale
+ * @returns {{ timeFormat: string; dayPeriods: {}; }}
+ */
 export function getLocalizedTimeFormatInfo(locale) {
   // Build array of time stamps for convenience.
   const dateArray = [];
@@ -158,11 +201,17 @@ export function getLocalizedTimeFormatInfo(locale) {
   };
 }
 
-// parses time without DST.
-// DST moves time forward an hour - so +1 to the utc offset - but thankfully, it's not in use for majority ranges.
-// given 2 static sample dates that are far enough apart, you'd get one that wasn't
-// in DST if it's observed in your locale.
-// so we can use the non-DST date to avoid off-by-1-hour time issues.
+/** Parses time without DST.
+ * DST moves time forward an hour - so +1 to the utc offset - but thankfully, it's not in use for majority ranges.
+ * given 2 static sample dates that are far enough apart, you'd get one that wasn't
+ * in DST if it's observed in your locale.
+ * so we can use the non-DST date to avoid off-by-1-hour time issues.
+ *
+ * @export
+ * @param {String} dateTime
+ * @param {String} timeFormat
+ * @returns {String}
+*/
 export function removeDST(dateTime, timeFormat) {
   const julDate = '2022-07-20';
   const janDate = '2022-01-01';
@@ -173,4 +222,24 @@ export function removeDST(dateTime, timeFormat) {
   const offsetDate = janOffset < julOffset ? janDate : julDate;
   const timestring = dateTime.includes('T') ? dateTime.split('T')[1] : dateTime;
   return moment.utc(`${offsetDate}T${timestring}`).local().format(timeFormat);
+}
+
+/**
+ * Version of removeDST using DayJS
+ *
+ * @export
+ * @param {String} dateTime
+ * @param {String} timeFormat
+ * @returns {String}
+ */
+export function removeDSTDayJS(dateTime, timeFormat) {
+  const julDate = '2022-07-20';
+  const janDate = '2022-01-01';
+
+  const julOffset = dayjs(julDate).utcOffset();
+  const janOffset = dayjs(janDate).utcOffset();
+
+  const offsetDate = janOffset < julOffset ? janDate : julDate;
+  const timestring = dateTime.includes('T') ? dateTime.split('T')[1] : dateTime;
+  return dayjs.utc(`${offsetDate}T${timestring}`).local().format(timeFormat);
 }
