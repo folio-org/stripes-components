@@ -14,7 +14,9 @@ import { mountWithContext } from '../helpers';
 const getHookExecutionResult = (hook, hookArguments = []) => {
   let result = {};
   const TestComponent = () => {
-    const hookResult = hook(...hookArguments);
+    const hookResult = Array.isArray(hookArguments)
+      ? hook(...hookArguments)
+      : hook(hookArguments);
     if (typeof hookResult === 'function') {
       result = hookResult;
     } else {
