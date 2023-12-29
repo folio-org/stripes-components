@@ -13,6 +13,7 @@
 * Accessibility Issues - stripes components. Refs STCOM-1222.
 * Enable spinner on Datepicker year input. Refs STCOM-1225.
 * TextLink - underline showing up on nested spans with 'display: inline-flex'. Refs STCOM-1226.
+* Use the default search option instead of an unsupported one in Advanced search. Refs STCOM-1242.
 * Added support for clear icon in `<TextArea>`. Refs STCOM-1240.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
