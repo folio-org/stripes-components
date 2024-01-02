@@ -24,7 +24,7 @@
 .startControls,
 .endControls {
   position: absolute;
-  right: 8px; /* leave some space for textarea's resize control */
+  inset-inline-end: 8px; /* leave some space for textarea's resize control */
   bottom: 1px; /* makes the controls look more vertically centered in single line textareas */
 
   pointer-events: none;
