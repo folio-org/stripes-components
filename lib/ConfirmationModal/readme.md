@@ -38,7 +38,7 @@ handleSubmit() {
 
 Name | type | description | default | required
 --- | --- | --- | --- | ---
-heading | node | Content to appear as the modal's H1 tag. Doubles as the modal's ARIA-label |  | &#10004;
+heading | string | String to appear as the modal's H1 tag. Doubles as the modal's ARIA-label |  | &#10004;
 message | node or array of nodes | Renderable content rendered within a `<p>` tag. |  |
 open | bool | Boolean reflecting modal's open/closed status |  | &#10004;
 cancelLabel | node | String to render on the Cancel action. | "Cancel" |
