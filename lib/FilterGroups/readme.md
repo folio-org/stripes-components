@@ -143,6 +143,8 @@ The following properties are supported:
 | config | object | The configuration structure described above, which specifies which groups and filters to render. | | Yes |
 | filters | object | An objects whose keys are the full names of filters that are selected (i.e. the `filters` part of the component state). | | Yes |
 | onChangeFilter | function | A function that is invoked when one of the filters is clicked. | | Yes |
+| onClearFilter | function | A function that is invoked when a group of filters is cleared. | | Yes |
+| disableNames | object | A record of filters to booleans that indicate if a given filter's checkbox should be disabled. | `{}` | No |
 
 The change-filter handler function is the most awkward part of this
 API. It must update the component state to represent the change in the
