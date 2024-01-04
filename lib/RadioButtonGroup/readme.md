@@ -5,18 +5,6 @@ The component will automatically render radio buttons within a `<FieldGroup>` wi
 
 ## Usage
 
-Basic usage:
-```js
-<RadioButtonGroup label="Acting as" name="subGroup">
-  <RadioButton label="self" id="actingAsSelf" value="self" />
-  <h4>Sponsor</h4>
-  <RadioButton label="Abbot, Cody" id="actingSponsor001" value="sponsor001" inline />
-  <RadioButton label="Doe, John" id="actingSponsor002" value="sponsor002" inline />
-  <RadioButton label="Martin, Danforth" id="actingSponsor003" value="sponsor003" inline />
-  <RadioButton label="James, Phillip" id="actingSponsor004" value="sponsor004" inline />
-</RadioButtonGroup>
-```
-
 Example with react-final-form:
 ```js
 <Field label="Acting as" name="subGroup" component={RadioButtonGroup}>
