@@ -25,5 +25,7 @@ contentClass | string | `className` for content inside popover |
 iconSize | string | The size of the icon (`small` or `medium`) | small
 hideOnButtonClick | boolean | Whether to hide popover on anchor button click | false
 renderTrigger | func | Render a custom trigger button. The function will receive an object that contains the the `open`-state, a `ref` that needs to be passed onto trigger button and a `toggle`-function for toggling the `<InfoPopover>`. The render function should return a button. |
+buttonProps | object | Pass additional props to the trigger `<IconButton>` | `{}`
+popperProps | object | Pass additional props to the underlying `<Popper>` | `{}`
 
 The remaining props passed to `<InfoPopover>` will be passed down to the internal `<Popover>`.
