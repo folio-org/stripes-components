@@ -1,8 +1,17 @@
 import { beforeEach, it, describe } from 'mocha';
 import { expect } from 'chai';
-import { getMomentLocalizedFormat, getLocaleDateFormat, getLocalizedTimeFormatInfo } from '../dateTimeUtils';
+import {
+  getMomentLocalizedFormat,
+  getLocaleDateFormat,
+  getLocalizedTimeFormatInfo,
+  DayRange,
+  getDayJSLocalizedFormat,
+  dayjs
+} from '../dateTimeUtils';
+import 'dayjs/locale/de';
 
-describe('Date Utilities', () => {
+
+describe.only('Date Utilities', () => {
   describe('get localized format - moment fallback', () => {
     let format;
     beforeEach(async () => {
@@ -14,11 +23,12 @@ describe('Date Utilities', () => {
     });
   });
 
-  describe('get localized format - moment fallback', () => {
+  describe('get localized format - dayJS fallback', () => {
     let format;
     beforeEach(async () => {
-      format = getMomentLocalizedFormat({ locale: 'de' }); // eslint-disable-line
+      format = getDayJSLocalizedFormat({ locale: 'de' }); // eslint-disable-line
     });
+
     it('returns the long date format according to the passed locale', () => {
       expect(format).to.equal('DD.MM.YYYY');
     });
@@ -88,6 +98,49 @@ describe('Date Utilities', () => {
 
     it('returns the time format according to the passed locale', () => {
       expect(timeFormat.timeFormat).to.equal('A hh:mm');
+    });
+  });
+
+  describe('DayRange class', () => {
+    const testRange = new DayRange(dayjs(), dayjs().add(7, 'days'));
+    it('expands to array', () => {
+      expect(testRange.expand().length).equals(7);
+    });
+
+    it('isSame - queries equality (positive)', () => {
+      expect(testRange.isSame(new DayRange(dayjs(), dayjs().add(7, 'days')))).equals(true);
+    });
+
+    it('isSame - queries equality (negative)', () => {
+      expect(testRange.isSame(new DayRange(dayjs(), dayjs().add(8, 'days')))).equals(false);
+    });
+
+    it('contains - positive dayjs object', () => {
+      expect(testRange.contains(dayjs().add(1, 'day'))).equals(true);
+    });
+
+    it('contains - positive dayRange', () => {
+      expect(testRange.contains(new DayRange(dayjs().add(1, 'day'), dayjs().add(4, 'days')))).equals(true);
+    });
+
+    it('contains - negative dayjs object', () => {
+      expect(testRange.contains(dayjs().subtract(1, 'day'))).equals(false);
+    });
+
+    it('contains - negative dayRange', () => {
+      expect(testRange.contains(new DayRange(dayjs().subtract(1, 'day'), dayjs().add(4, 'days')))).equals(false);
+    });
+
+    it('overlaps - positive', () => {
+      expect(testRange.overlaps(new DayRange(dayjs().subtract(2, 'days'), dayjs().add(4, 'days')))).equals(true);
+    });
+
+    it('overlaps - positive (same range)', () => {
+      expect(testRange.overlaps(new DayRange(dayjs(), dayjs().add(8, 'days')))).equals(true);
+    });
+
+    it('overlaps - negative', () => {
+      expect(testRange.overlaps(new DayRange(dayjs().subtract(7, 'days'), dayjs().subtract(4, 'days')))).equals(false);
     });
   });
 });

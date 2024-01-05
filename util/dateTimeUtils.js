@@ -63,12 +63,12 @@ export class DayRange {
    * equality check.
    *
    * @method
-   * @name DayRange#isEqual
+   * @name DayRange#isSame
    * @param { DayRange }
    * @returns {Bool}
    */
-  isEqual = (candidate) => {
-    return this.start.isEqual(candidate.start) && this.end.isEqual(candidate.start);
+  isSame = (candidate) => {
+    return this.start.isSame(candidate.start, 'day') && this.end.isSame(candidate.end, 'day');
   }
 
   /**
@@ -83,7 +83,7 @@ export class DayRange {
 
   contains = (candidate) => {
     if (candidate instanceof DayRange) {
-      return this.isEqual(candidate) ||
+      return this.isSame(candidate) ||
       (this.contains(candidate.start) && this.contains(candidate.end))
     } else {
       return dayjs(candidate).isBetween(this.start, this.end);
@@ -100,7 +100,7 @@ export class DayRange {
    */
   overlaps = (candidate) => {
     if (candidate instanceof DayRange) {
-      return this.isEqual(candidate) ||
+      return this.isSame(candidate) ||
       this.contains(candidate.start) ||
       this.contains(candidate.end)
     }
