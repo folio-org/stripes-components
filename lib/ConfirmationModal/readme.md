@@ -41,8 +41,10 @@ Name | type | description | default | required
 heading | string | String to appear as the modal's H1 tag. Doubles as the modal's ARIA-label |  | &#10004;
 message | node or array of nodes | Renderable content rendered within a `<p>` tag. |  |
 open | bool | Boolean reflecting modal's open/closed status |  | &#10004;
-cancelLabel | string | String to render on the Cancel action. | "Cancel" |
-confirmLabel | string | String to render on the Submit action. | "Submit" |
+cancelLabel | node | String to render on the Cancel action. | "Cancel" |
+confirmLabel | node | String to render on the Submit action. | "Submit" |
+buttonStyle | [button style](https://github.com/folio-org/stripes-components/tree/master/lib/Button#colors) | Style of the Submit action button. | `primary` |
+cancelButtonStyle | [button style](https://github.com/folio-org/stripes-components/tree/master/lib/Button#colors) | Style of the Cancel action button. | `default` |
 onConfirm | func | Callback fired when the Submit button is clicked |  | &#10004;
 onCancel | func | Callback fired when the Cancel button is clicked |  | &#10004;
 bodyTag | string | String to set the HTML tag used to wrap the modal message | "p" |

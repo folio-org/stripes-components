@@ -41,7 +41,7 @@ id | string | HTML id attribute applied to input - will also set the HtmlFor att
 inline | bool | Renders the checkbox inline | `false`
 innerClass | string | Adds a custom class name for the inner element of the component | `undefined`
 inputRef | object or func | Supplies a ref to the rendered `<input>` | `undefined`
-label | string | Renders a label for the checkbox | `undefined`
+label | string, node | Renders a label for the checkbox | `undefined`
 labelClass | string | Adds a custom class name on the `<label>`-element | `undefined`
 name | string | Sets the name of the input | `undefined`
 onBlur | func | Event handler for the input's `onBlur` event | `undefined`
