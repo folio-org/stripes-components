@@ -26,4 +26,7 @@ placement | string | Overlay placement. Available values: `auto`, `top`, `bottom
 portal | node | When is provided, overlay renders inside provided portal. | | |
 anchorRef | object | Reference to anchor element |  | yes |
 children | component | Component to be passed as an overlay |  | yes |
-modifiers | object | A set of modifications for extending popper functionality. For more details, please, go to https://popper.js.org/popper-documentation.html#modifiers. | | |
+modifiers | object | A set of modifications for extending popper functionality. For more details, please, [see the Popper.js docs](https://popper.js.org/docs/v1/#modifiers). | | |
+hideIfClosed | boolean | Hides the overlay if the popper is closed (via `display: none`), rather than removing it from the DOM entirely | false | |
+overlayProps | object | Props to add to the `<div>` used as the overlay | `{}` | |
+overlayRef | ref | Grabs a reference for the overlay `<div>` | | |
