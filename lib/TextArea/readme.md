@@ -1,4 +1,3 @@
-
 # TextArea
 
 A multi-line, resizable text field.
