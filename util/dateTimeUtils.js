@@ -8,7 +8,6 @@ import isoWeek from 'dayjs/plugin/isoWeek';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import weekday from 'dayjs/plugin/weekday';
 import arraySupport from 'dayjs/plugin/arraySupport';
-import customParseFormat from 'dayjs/plugin/customParseFormat';
 import objectSupport from 'dayjs/plugin/objectSupport';
 
 dayjs.extend(timezone);
