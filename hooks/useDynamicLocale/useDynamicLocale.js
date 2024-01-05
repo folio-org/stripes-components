@@ -1,5 +1,5 @@
 import React from 'react';
-import dayjs from 'dayjs';
+import { dayjs } from '../../util/dateTimeUtils';
 import availableLocales from 'dayjs/locale';
 import { IntlContext } from 'react-intl';
 

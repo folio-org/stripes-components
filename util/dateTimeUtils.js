@@ -2,9 +2,29 @@ import moment from 'moment-timezone';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import localeData from 'dayjs/plugin/localeData';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import isoWeek from 'dayjs/plugin/isoWeek';
+import weekOfYear from 'dayjs/plugin/weekOfYear';
+import weekday from 'dayjs/plugin/weekday';
+import localeData from 'dayjs/plugin/localeData';
+import arraySupport from 'dayjs/plugin/arraySupport';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import objectSupport from 'dayjs/plugin/objectSupport';
 
 dayjs.extend(timezone);
 dayjs.extend(localeData);
+dayjs.extend(utc);
+dayjs.extend(objectSupport);
+dayjs.extend(isoWeek);
+dayjs.extend(weekOfYear);
+dayjs.extend(weekday);
+dayjs.extend(arraySupport);
+dayjs.extend(customParseFormat);
+
+// export a pre-extended dayjs for consumption.
+export { dayjs };
 
 /**
  * Since Moment is still in use, we can keep this for sake of easing the transition.
