@@ -5,7 +5,7 @@
 * [Overview](#overview)
     * [Filter configuration](#filter-configuration)
     * [Representation in the user-interface URL](#representation-in-the-user-interface-url)
-* [The `initialFilterState` function](#the-initialfilterstate-function)
+* [The `filterState` function](#the-filterstate-function)
 * [The `<FilterGroups>` component](#the-filtergroups-component)
     * [Properties](#properties)
 * [The `filters2cql` function](#the-filters2cql-function)
@@ -43,7 +43,6 @@ this.state = {
 const filterCql = filters2cql(filterConfig, filters);
 ```
 
-
 ## Overview
 
 This library provides several utilities for initialising, rendering
@@ -59,46 +58,36 @@ representation. This state is set using a `transitionToParams` method,
 and obtained using a `queryParam` method. These must both be provided
 within the React component that uses `<FilterGroups>`.
 
-
 ### Filter configuration
 
-The filter configuration is an array containing an ordered list of
-filter groups. Each group is represented by an object with four keys:
+The filter configuration is an array containing an ordered list of filter
+groups. Each group is represented by an object with the following properties:
 
-* `label` -- The human-readable label that is used when presenting the
-  group on a page.
-* `name` -- The name used internally for the filter group, which may
-  be short or opaque in meaning.
-* `cql` -- The name of the CQL index that corresponds to the filter
-  group, and which will be used in queries to find records that
-  satisfy particular settings of the filters in the group. In general,
-  this will be the name of a field, or maybe subfield, in the schema
-  for the kind of records under consideration.
-* `values` -- A list of the possible values that may be selected for
-  the filter.
-* `restrictWhenAllSelected` -- a boolean indicating how to behave when
-  all the filters in the group are selected. By default, this is taken
-  to mean no restriction is intended, and so that filter group makes
-  no contribution to the query. However, if this is set true, then a
-  query clause is always included. (See
-  [STCOM-204](https://issues.folio.org/browse/STCOM-204) for
-  rationale.)
-* `isRange` -- The flag that is used to build range cql query. By default `false`.
-* `isIncludingStart` -- The flag is used only with `isRange: true` to include boundary value from the start. By default `true`.
-* `isIncludingEnd` -- The flag is used only with `isRange: true` to include boundary value from the end. By default `true`.
-* `rangeSeparator` -- The string is used only with `isRange: true` to break range value to `start` and `end` values. By default `:`.
-* `parse` -- An optional function which can be used to convert filter values into a CQL manually.
-* `operator` -- An optional string which can be used to change matching operator. By default `=`.
+| Property | Type | Description | Default | Required |
+| --- | --- | --- | --- | --- |
+| label | string | The human-readable label that is used when presenting the group on a page. | | Yes |
+| name | string | The name used internally for the filter group, which may be short or opaque in meaning. | | Yes |
+| cql | string | The name of the CQL index that corresponds to the filter group, and which will be used in queries to find records that satisfy particular settings of the filters in the group. In general, this will be the name of a field, or maybe subfield, in the schema for the kind of records under consideration. | | Yes |
+| values | array | A list of the possible values that may be selected for the filter. | | Yes |
+| restrictWhenAllSelected | boolean | A boolean indicating how to behave when all the filters in the group are selected. When `false` (default), this is taken to mean no restriction is intended, and so that filter group makes no contribution to the query. However, if this is `true`, then a query clause is always included. (See [STCOM-204](https://issues.folio.org/browse/STCOM-204) for rationale.) | `false` | No |
+| isRange | boolean | The flag that is used to build range cql query. | `false` | No |
+| isIncludingStart | boolean | The flag is used only with `isRange: true` to include boundary value from the start. | `true` | No |
+| isIncludingEnd | boolean | The flag is used only with `isRange: true` to include boundary value from the end. | `true` | No |
+| rangeSeparator | string | The string is used only with `isRange: true` to break range value to `start` and `end` values. | `:` | No |
+| parse | function | An optional function which can be used to convert filter values into a CQL manually. | | No |
+| operator | string | An optional string which can be used to change matching operator. | `=` | No |
 
 Each of the `values` is typically represented by a simple string, which
 is used both to display on the page and as the value to use in
 queries. However, each value may optionally instead be an object
-containing two keys:
+containing:
 
-* `name` -- the name used internally for the filter checkbox for `name` attribute.
-* `displayName` -- optional display name used to display the filter on the page (helpful for intl support). By default equals to the `name`.
-* `cql` -- the value used when generating CQL queries.
-* `hidden` -- hide the value in the UI and always apply the filter
+| Property | Type | Description | Default | Required |
+| --- | --- | --- | --- | --- |
+| name | string | The name used internally for the filter checkbox for `name` attribute. | | Yes |
+| displayName | node | Optional display name used to display the filter on the page (helpful for intl support). By default equals the `name`. | | No |
+| cql | string | The value used when generating CQL queries. | | Yes |
+| hidden | boolean | Hide the value in the UI and always apply the filter. | `false` | No |
 
 In the example above, there are two filter groups, "Item Types" and
 "Location". All the values of the former are simple strings; one of
@@ -127,7 +116,6 @@ URL. For example:
 
 	http://example.com/users?filters=item.DVDs,item.Microfilm,location.Main+Library
 
-
 ## The `filterState` function
 
 This function takes as its parameter a comma-separated string of
@@ -150,12 +138,13 @@ This component renders the full set of filter groups, with headings.
 
 The following properties are supported:
 
-* `config` -- the configuration structure described above, which
-  specifies which groups and filters to render.
-* `filters` -- an objects whose keys are the full names of filters
-  that are selected (i.e. the `filters` part of the component state).
-* `onChangeFilter` -- a function that is invoked when one of the
-  filters is clicked.
+| Property | Type | Description | Default | Required |
+| --- | --- | --- | --- | --- |
+| config | object | The configuration structure described above, which specifies which groups and filters to render. | | Yes |
+| filters | object | An objects whose keys are the full names of filters that are selected (i.e. the `filters` part of the component state). | | Yes |
+| onChangeFilter | function | A function that is invoked when one of the filters is clicked. | | Yes |
+| onClearFilter | function | A function that is invoked when a group of filters is cleared. | | Yes |
+| disableNames | object | A record of filters to booleans that indicate if a given filter's checkbox should be disabled. | `{}` | No |
 
 The change-filter handler function is the most awkward part of this
 API. It must update the component state to represent the change in the
