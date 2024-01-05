@@ -1,5 +1,5 @@
 import moment from 'moment-timezone';
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import localeData from 'dayjs/plugin/localeData';
 import utc from 'dayjs/plugin/utc';
@@ -9,6 +9,9 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import weekday from 'dayjs/plugin/weekday';
 import arraySupport from 'dayjs/plugin/arraySupport';
 import objectSupport from 'dayjs/plugin/objectSupport';
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
+import isBetween from 'dayjs/plugin/isBetween';
 
 dayjs.extend(timezone);
 dayjs.extend(localeData);
@@ -19,9 +22,90 @@ dayjs.extend(weekOfYear);
 dayjs.extend(weekday);
 dayjs.extend(arraySupport);
 dayjs.extend(customParseFormat);
+dayjs.extend(isSameOrBefore);
+dayjs.extend(isSameOrAfter);
+dayjs.extend(isBetween);
 
 // export a pre-extended dayjs for consumption.
 export { dayjs };
+
+/** DayJS range utility class. */
+export class DayRange {
+  /**
+     * Create a DayRange.
+     * @param {DayJS|dateString} start - the start value.
+     * @param {DayJS|dateString} end - the end value.
+     */
+  constructor(start, end) {
+    this.start = dayjs(start);
+    this.end = dayjs(end);
+    this.isRange = true;
+  }
+
+  /**
+   * returns an array of contained dayjs day objects.
+   *
+   * @method
+   * @name DayRange#expand
+   * @returns {Array} of dayjs objects.
+   */
+  expand = () => {
+    const range = [];
+    let current = dayjs(this.start);
+    while (current.isBefore(this.end)) {
+      range.push(current.clone());
+      current = current.add(1, 'day');
+    }
+    return range;
+  }
+
+  /**
+   * equality check.
+   *
+   * @method
+   * @name DayRange#isEqual
+   * @param { DayRange }
+   * @returns {Bool}
+   */
+  isEqual = (candidate) => {
+    return this.start.isEqual(candidate.start) && this.end.isEqual(candidate.start);
+  }
+
+  /**
+   * returns true if candidate is fully within or equal to the range. Can be used with single dayjs objects
+   * or date strings as well.
+   *
+   * @method
+   * @name DayRange#isEqual
+   * @param { DayRange|Dayjs }
+   * @returns {Bool}
+   */
+
+  contains = (candidate) => {
+    if (candidate instanceof DayRange) {
+      return this.isEqual(candidate) ||
+      (this.contains(candidate.start) && this.contains(candidate.end))
+    } else {
+      return dayjs(candidate).isBetween(this.start, this.end);
+    }
+  }
+
+  /**
+   * returns true if candidate start or end is within the range, or if candidate is equal to the range.
+   *
+   * @method
+   * @name DayRange#isEqual
+   * @param { DayRange|Dayjs }
+   * @returns {Bool}
+   */
+  overlaps = (candidate) => {
+    if (candidate instanceof DayRange) {
+      return this.isEqual(candidate) ||
+      this.contains(candidate.start) ||
+      this.contains(candidate.end)
+    }
+  }
+}
 
 /**
  * Since Moment is still in use, we can keep this for sake of easing the transition.
