@@ -47,7 +47,7 @@ const [open, setOpen] = useState(fale);
 Name | Type | Description | Default | Required
 --- | --- | --- | --- | ---
 anchorRef | func, object | Pass a ref to an alternative anchor element. The anchor is the element that the popover attaches to. The `<Popover>` will automatically generate a ref that will be passed down to the trigger element via. the `renderTrigger`-prop. The default ref will be replaced by the ref passed to the `anchorRef`-prop. | |
-children | func, node | Renders the contents of the popover overlay. Passing a function will enable accessing the same render-props that is passed to the `renderTrigger`-function. This is useful for e.g. passing down the `toggle`-function to a "close"-button inside the popover overlay. | |
+children | func, node | Renders the contents of the popover overlay. Passing a function will enable accessing the same render-props that is passed to the `renderTrigger`-function. This is useful for e.g. passing down the `toggle`-function to a "close"-button inside the popover overlay. | | Yes
 className | string | Applies a custom class name for the popover overlay. | |
 modifiers | object | Pass modifiers for the internal `<Popper>`-component. See the `<Popper>`-documentation for more information. | |
 noPadding | bool | Removes the default padding on the popover overlay. | false |
