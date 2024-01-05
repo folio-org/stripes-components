@@ -11,7 +11,7 @@ import {
 import 'dayjs/locale/de';
 
 
-describe.only('Date Utilities', () => {
+describe('Date Utilities', () => {
   describe('get localized format - moment fallback', () => {
     let format;
     beforeEach(async () => {
