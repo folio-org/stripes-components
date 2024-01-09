@@ -57,7 +57,7 @@ export class DayRange {
       current = current.add(1, 'day');
     }
     return range;
-  }
+  };
 
   /**
    * equality check.
@@ -69,7 +69,7 @@ export class DayRange {
    */
   isSame = (candidate) => {
     return this.start.isSame(candidate.start, 'day') && this.end.isSame(candidate.end, 'day');
-  }
+  };
 
   /**
    * returns true if candidate is fully within or equal to the range. Can be used with single dayjs objects
@@ -84,11 +84,11 @@ export class DayRange {
   contains = (candidate) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
-      (this.contains(candidate.start) && this.contains(candidate.end))
+      (this.contains(candidate.start) && this.contains(candidate.end));
     } else {
       return dayjs(candidate).isBetween(this.start, this.end);
     }
-  }
+  };
 
   /**
    * returns true if candidate start or end is within the range, or if candidate is equal to the range.
@@ -102,9 +102,9 @@ export class DayRange {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
       this.contains(candidate.start) ||
-      this.contains(candidate.end)
+      this.contains(candidate.end);
     }
-  }
+  };
 }
 
 /**
@@ -132,7 +132,7 @@ export function getMomentLocalizedFormat(intl) {
 export const getDayJSLocalizedFormat = (intl) => {
   dayjs.locale(intl.locale);
   return dayjs.localeData().longDateFormat('L');
-}
+};
 
 //
 
