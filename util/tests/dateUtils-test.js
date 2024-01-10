@@ -179,7 +179,7 @@ describe('Date Utilities', () => {
     });
   });
 
-  describe.only('loadDayJSLocale', () => {
+  describe('loadDayJSLocale', () => {
     let localeCB = sinon.spy();
     beforeEach(() => {
       localeCB.resetHistory();
