@@ -1,12 +1,16 @@
 import { beforeEach, it, describe } from 'mocha';
 import { expect } from 'chai';
+import sinon from 'sinon';
+import { converge } from '@folio/stripes-testing';
 import {
   getMomentLocalizedFormat,
   getLocaleDateFormat,
   getLocalizedTimeFormatInfo,
   DayRange,
   getDayJSLocalizedFormat,
-  dayjs
+  dayjs,
+  getCompatibleDayJSLocale,
+  loadDayJSLocale
 } from '../dateTimeUtils';
 import 'dayjs/locale/de';
 
@@ -141,6 +145,54 @@ describe('Date Utilities', () => {
 
     it('overlaps - negative', () => {
       expect(testRange.overlaps(new DayRange(dayjs().subtract(7, 'days'), dayjs().subtract(4, 'days')))).equals(false);
+    });
+  });
+
+  describe('getCompatibleDayJSLocale()', () => {
+    let consoleSpy;
+    beforeEach(() => {
+      consoleSpy = sinon.spy(global.window.console, 'error');
+    });
+
+    afterEach(() => {
+      consoleSpy.restore();
+    });
+
+    it('returns the locale available for "SV"', () => {
+      expect(getCompatibleDayJSLocale('sv-se', 'se')).equals('se');
+      expect(consoleSpy.notCalled).to.be.true;
+    });
+
+    it('returns the locale available for "en-SE"', () => {
+      expect(getCompatibleDayJSLocale('en-se', 'en')).equals('en');
+      expect(consoleSpy.notCalled).to.be.true;
+    });
+
+    it('returns the locale available for "de"', () => {
+      expect(getCompatibleDayJSLocale('de', 'de')).equals('de');
+      expect(consoleSpy.notCalled).to.be.true;
+    });
+
+    it('logs an error for non-existent locale. "vo"', () => {
+      expect(getCompatibleDayJSLocale('vo', 'fs')).equals(undefined);
+      expect(consoleSpy.called).to.be.true;
+    });
+  });
+
+  describe.only('loadDayJSLocale', () => {
+    let localeCB = sinon.spy();
+    beforeEach(() => {
+      localeCB.resetHistory();
+    });
+
+    it('loads/sets locale to "de"', async () => {
+      loadDayJSLocale('de', localeCB);
+      await converge(() => { if (!localeCB.calledWith('de')) throw (new Error('locale de not set')); });
+    });
+
+    it('attempt to loads/set locale to "nph" - fallback to "en-US"', async () => {
+      loadDayJSLocale('nph', localeCB);
+      await converge(() => { if (!localeCB.calledWith('en-US')) throw (new Error('should fall back to "en" locale')); });
     });
   });
 });

@@ -146,6 +146,7 @@ export {
   getLocalizedTimeFormatInfo,
   dayjs,
   DayRange,
+  loadDayJSLocale,
 } from './util/dateTimeUtils';
 export { default as RootCloseWrapper } from './util/RootCloseWrapper';
 export { default as omitProps } from './util/omitProps';

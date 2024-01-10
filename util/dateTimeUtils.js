@@ -1,5 +1,6 @@
 import moment from 'moment-timezone';
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
+import noop from 'lodash/noop';
 import timezone from 'dayjs/plugin/timezone';
 import localeData from 'dayjs/plugin/localeData';
 import utc from 'dayjs/plugin/utc';
@@ -12,6 +13,7 @@ import objectSupport from 'dayjs/plugin/objectSupport';
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import isBetween from 'dayjs/plugin/isBetween';
+import availableLocales from 'dayjs/locale'
 
 dayjs.extend(timezone);
 dayjs.extend(localeData);
@@ -57,7 +59,7 @@ export class DayRange {
       current = current.add(1, 'day');
     }
     return range;
-  };
+  }
 
   /**
    * equality check.
@@ -69,7 +71,7 @@ export class DayRange {
    */
   isSame = (candidate) => {
     return this.start.isSame(candidate.start, 'day') && this.end.isSame(candidate.end, 'day');
-  };
+  }
 
   /**
    * returns true if candidate is fully within or equal to the range. Can be used with single dayjs objects
@@ -81,15 +83,14 @@ export class DayRange {
    * @returns {Bool}
    */
 
-  contains = (candidate, inclusive = true) => {
+  contains = (candidate) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
-      (this.contains(candidate.start, inclusive) && this.contains(candidate.end, inclusive));
+      (this.contains(candidate.start) && this.contains(candidate.end))
     } else {
-      return inclusive ? dayjs(candidate).isBetween(this.start, this.end, null, '[]') :
-        dayjs(candidate).isBetween(this.start, this.end);
+      return dayjs(candidate).isBetween(this.start, this.end);
     }
-  };
+  }
 
   /**
    * returns true if candidate start or end is within the range, or if candidate is equal to the range.
@@ -103,9 +104,9 @@ export class DayRange {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
       this.contains(candidate.start) ||
-      this.contains(candidate.end);
+      this.contains(candidate.end)
     }
-  };
+  }
 }
 
 /**
@@ -133,9 +134,73 @@ export function getMomentLocalizedFormat(intl) {
 export const getDayJSLocalizedFormat = (intl) => {
   dayjs.locale(intl.locale);
   return dayjs.localeData().longDateFormat('L');
+}
+
+/**
+ * getCompatibleDayJSLocale -
+ * Function that returns an existing DayJS locale. Returns undefined if the static locale does not exist.
+ *
+ * @param {String} locale  - locale string ex : 'en-SE'
+ * @param {String} parentLocale - 2 character language of the locale...ex parentLocale of
+ */
+export const getCompatibleDayJSLocale = (locale, parentLanguage) => {
+  /**
+     * Check for availability of locales - DayJS comes with a JSON list of available locales.
+     * We can check against that before attempting to load. We check for the full locale
+     * first, followed by the language if the full locale doesn't work.
+     */
+  let localeToLoad;
+  let available = availableLocales.findIndex(l => l.key === locale);
+  if (available !== -1) {
+    localeToLoad = locale;
+  } else {
+    available = availableLocales.findIndex(l => l.key === parentLanguage);
+    if (available !== -1) {
+      localeToLoad = parentLanguage;
+    } else {
+      // eslint-disable-next-line no-console
+      console.error(`${locale}/${parentLanguage} unavailable for DayJS`);
+    }
+  }
+  return localeToLoad;
 };
 
-//
+/**
+ * loadDayJSLocale
+ * dynamically loads a DayJS locale and sets the global DayJS locale.
+ * @param {string} locale
+ * */
+export function loadDayJSLocale(locale, cb = noop) {
+  const parentLocale = locale.split('-')[0];
+  // Locale loading setup for DayJS
+  // 'en-US' is default and always loaded, so we don't even worry about loading another if the language is English.
+  if (locale !== 'en-US') {
+    let localeToLoad = getCompatibleDayJSLocale(locale, parentLocale);
+
+    if (localeToLoad) {
+      import(
+        /* webpackChunkName: "dayjs-locale-[request]" */
+        /* webpackExclude: /\.d\.ts$/ */
+        `dayjs/locale/${localeToLoad}`
+      ).then(() => {
+        dayjs.locale(localeToLoad);
+        cb(localeToLoad);
+      }).catch(e => {
+        // eslint-disable-next-line no-console
+        console.error(`Error loading locale ${localeToLoad} for DayJS`, e);
+        cb(localeToLoad, e);
+      });
+    } else {
+      // fall back to english in case a compatible locale can't be loaded.
+      dayjs.locale('en-US');
+      cb('en-US');
+    }
+  } else {
+    // set locale to english in case we're transitioning away from a non-english locale.
+    dayjs.locale('en-US');
+    cb('en-US');
+  }
+}
 
 /**
  * Returns a localized format.
