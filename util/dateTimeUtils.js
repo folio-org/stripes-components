@@ -81,12 +81,13 @@ export class DayRange {
    * @returns {Bool}
    */
 
-  contains = (candidate) => {
+  contains = (candidate, inclusive = true) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
-      (this.contains(candidate.start) && this.contains(candidate.end));
+      (this.contains(candidate.start, inclusive) && this.contains(candidate.end, inclusive));
     } else {
-      return dayjs(candidate).isBetween(this.start, this.end);
+      return inclusive ? dayjs(candidate).isBetween(this.start, this.end, null, '[]') :
+        dayjs(candidate).isBetween(this.start, this.end);
     }
   };
 
