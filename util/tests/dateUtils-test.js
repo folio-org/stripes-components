@@ -187,12 +187,37 @@ describe('Date Utilities', () => {
 
     it('loads/sets locale to "de"', async () => {
       loadDayJSLocale('de', localeCB);
-      await converge(() => { if (!localeCB.calledWith('de')) throw (new Error('locale de not set')); });
+      await converge(() => { expect(localeCB.calledWith('de')).to.be.true; });
     });
 
     it('attempt to loads/set locale to "nph" - fallback to "en-US"', async () => {
       loadDayJSLocale('nph', localeCB);
-      await converge(() => { if (!localeCB.calledWith('en-US')) throw (new Error('should fall back to "en" locale')); });
+      await converge(() => { expect(localeCB.calledWith('en-US')).to.be.true; });
+    });
+
+    it('loads 2 letter locale ("ru")', async () => {
+      loadDayJSLocale('ru');
+      await converge(() => { expect(dayjs.locale()).equals('ru'); });
+    });
+
+    it('loads parent language locale ("en-SE")', async () => {
+      loadDayJSLocale('en-SE');
+      await converge(() => { expect(dayjs.locale()).equals('en') });
+    });
+
+    it('resets locale if it is previously set to non-english locale', async () => {
+      loadDayJSLocale('ru');
+      await converge(() => { expect(dayjs.locale()).equals('ru'); });
+      loadDayJSLocale('en-US');
+      await converge(() => { expect(dayjs.locale()).equals('en'); });
+    });
+
+    it('writes error to console if locale is unavailable ("!e")', async () => {
+      const mockConsoleError = sinon.spy(console, 'error');
+      loadDayJSLocale('!e');
+      await converge(() => { expect(mockConsoleError.calledOnce).to.be.true });
+      await converge(() => { expect(dayjs.locale()).equals('en') });
+      mockConsoleError.restore();
     });
   });
 });
