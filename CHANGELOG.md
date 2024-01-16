@@ -15,6 +15,7 @@
 * TextLink - underline showing up on nested spans with 'display: inline-flex'. Refs STCOM-1226.
 * Use the default search option instead of an unsupported one in Advanced search. Refs STCOM-1242.
 * Added support for clear icon in `<TextArea>`. Refs STCOM-1240.
+* Bug fix for Accordion content z-index rendering. Refs STCOM-1238.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
