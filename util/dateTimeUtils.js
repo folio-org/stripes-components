@@ -59,7 +59,7 @@ export class DayRange {
       current = current.add(1, 'day');
     }
     return range;
-  }
+  };
 
   /**
    * equality check.
@@ -71,7 +71,7 @@ export class DayRange {
    */
   isSame = (candidate) => {
     return this.start.isSame(candidate.start, 'day') && this.end.isSame(candidate.end, 'day');
-  }
+  };
 
   /**
    * returns true if candidate is fully within or equal to the range. Can be used with single dayjs objects
@@ -86,11 +86,11 @@ export class DayRange {
   contains = (candidate) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
-      (this.contains(candidate.start) && this.contains(candidate.end))
+      (this.contains(candidate.start) && this.contains(candidate.end));
     } else {
       return dayjs(candidate).isBetween(this.start, this.end);
     }
-  }
+  };
 
   /**
    * returns true if candidate start or end is within the range, or if candidate is equal to the range.
@@ -104,9 +104,11 @@ export class DayRange {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
       this.contains(candidate.start) ||
-      this.contains(candidate.end)
+      this.contains(candidate.end);
+    } else {
+      throw new Error('parameter should be a DayRange instance');
     }
-  }
+  };
 }
 
 /**
@@ -134,7 +136,26 @@ export function getMomentLocalizedFormat(intl) {
 export const getDayJSLocalizedFormat = (intl) => {
   dayjs.locale(intl.locale);
   return dayjs.localeData().longDateFormat('L');
-}
+};
+
+/** dateCanBeParsed
+ *  Due to some differentiating behavior between passing a single formats vs an array of formats to Dayjs.utc,
+ *  we're implementing this utility function...
+ *  We can probably remove this once https://github.com/iamkun/dayjs/pull/1914 is merged...
+ *
+ * @export
+ * @param {String} value - the date string to be validated.
+ * @param {Array.<String>} formats - an array of formats to attempt parsing the value with. The first to
+ *  parse successfully will be returned as the validFormat.
+ * @returns {String}
+*/
+
+export const dateCanBeParsed = (value, formats) => ({
+  isValid: formats.some((f) => dayjs.utc(value, f).isValid()),
+  validFormat: formats[formats.findIndex((f) => dayjs(value, f, true).isValid())]
+});
+
+
 
 /**
  * getCompatibleDayJSLocale -
@@ -175,7 +196,7 @@ export function loadDayJSLocale(locale, cb = noop) {
   // Locale loading setup for DayJS
   // 'en-US' is default and always loaded, so we don't even worry about loading another if the language is English.
   if (locale !== 'en-US') {
-    let localeToLoad = getCompatibleDayJSLocale(locale, parentLocale);
+    const localeToLoad = getCompatibleDayJSLocale(locale, parentLocale);
 
     if (localeToLoad) {
       import(
