@@ -43,14 +43,15 @@
   }
 }
 
-[class*=interactionStyles] .selectionControl {
+[class*="interactionStyles"] .selectionControl {
   background-color: var(--bg);
+
   &:active {
     color: var(--color-text);
   }
 }
 
-[class*=interactionStyles]:active .selectionControl {
+[class*="interactionStyles"]:active .selectionControl {
   color: var(--color-text);
 }
 
@@ -78,7 +79,7 @@
 
   &:focus {
     outline: none;
-    border-color: var(--primary, #0c577f);
+    border-color: var(--primary #0c577f);
   }
 }
 
@@ -94,7 +95,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0 0 0 0.2);
   padding-top: 48px;
   align-items: flex-start;
   pointer-events: all;
@@ -211,7 +212,6 @@
 .srOnly {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* old IE */
-  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   width: 1px;
   overflow: hidden;

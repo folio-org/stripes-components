@@ -28,8 +28,8 @@
     margin-left: -1px;
   }
 
-  & > :not(:first-child):not(:last-child),
-  & > :not(:first-child):not(:last-child)::before {
+  & > :not(:first-child, :last-child),
+  & > :not(:first-child, :last-child)::before {
     border-radius: 0;
   }
 }
@@ -38,18 +38,14 @@
   & .buttonGroup {
     & > :first-child,
     & > :first-child::before {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-right-radius: var(--radius);
-      border-bottom-right-radius: var(--radius);
+      /* top-left | top-right | bottom-right | bottom-left */
+      border-radius: 0 var(--radius) var(--radius) 0;
     }
 
     & > :last-child,
     & > :last-child::before {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-top-left-radius: var(--radius);
-      border-bottom-left-radius: var(--radius);
+      /* top-left | top-right | bottom-right | bottom-left */
+      border-radius: var(--radius) 0 0 var(--radius);
     }
 
     & > :not(:first-child) {

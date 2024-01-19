@@ -118,7 +118,7 @@
  * Move the modal further towards the top
  * when the browser window is a bit smaller in height
  */
-@media screen and (max-height: 850px) {
+@media screen and (height <= 850px) {
   .modal {
     top: var(--gutter-static);
     max-height: calc(100% - var(--gutter-static) * 2);
@@ -130,7 +130,7 @@
  */
 
 .entered {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0 0 0 20%);
 
   & .modal {
     transform: translateY(0);

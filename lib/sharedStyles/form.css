@@ -12,7 +12,7 @@
 }
 
 /**
- * Default input, textarea and select styling
+ * Default input textarea and select styling
  */
 .formControl {
   margin-bottom: var(--control-margin-bottom);
@@ -31,10 +31,10 @@
     display: none;
   }
 
-  &:focus,
+  &:focus
   &.isFocused {
     border: 1px solid var(--primary);
-    box-shadow: inset 0 0 0 2px rgba(37, 118, 195, 0.3);
+    box-shadow: inset 0 0 0 2px rgba(37 118 195 0.3);
   }
 
   &.fullWidth {
@@ -49,7 +49,7 @@
     margin-bottom: 0;
   }
 
-  &:disabled,
+  &:disabled
   &.isDisabled {
     background-color: #ebebe4;
     color: #777;

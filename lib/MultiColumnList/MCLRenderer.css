@@ -1,5 +1,7 @@
 @import '../variables.css';
 
+/* stylelint-disable no-descending-specificity */
+
 .mclContainer {
   display: flex;
   flex-direction: column;
@@ -129,7 +131,7 @@
     left: 0;
     top: 0;
     background-color: var(--bg);
-    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 3px 0 4px rgba(0 0 0 5%);
     z-index: 3;
 
     &::before {
@@ -145,7 +147,7 @@
     &.mclStickyEnd {
       right: 0;
       left: initial;
-      box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
+      box-shadow: -3px 0 4px rgba(0 0 0 5%);
     }
   }
 }
@@ -155,7 +157,7 @@
 
   /* Use monospaced numbers, aka Tabular Numerals (tnum) */
   font-feature-settings: 'tnum';
-  -webkit-font-feature-settings: 'tnum';
+  /* stylelint-disable-next-line */
   -moz-font-feature-settings: 'tnum';
 }
 
@@ -220,7 +222,7 @@
     left: 0;
     background-color: var(--bg);
     z-index: 3;
-    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 3px 0 4px rgba(0 0 0 5%);
     border-right: 1px solid var(--color-border-p2);
 
     &::before {
@@ -234,7 +236,7 @@
     &.mclStickyEnd {
       right: 0;
       left: initial;
-      box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
+      box-shadow: -3px 0 4px rgba(0 0 0 5%);
       border-left: 1px solid var(--color-border-p2);
       border-right: 0;
     }
@@ -277,9 +279,7 @@
   display: flex;
   align-items: center;
   align-self: stretch;
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: auto;
+  flex: 0 0 auto;
   overflow: hidden;
   text-align: left;
   word-break: break-word;
@@ -331,12 +331,11 @@
 
 .mclContentLoading {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  place-content: center center;
   height: 1.5rem;
   width: 3rem;
   padding: 0.25rem 0.5rem 0 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255 255 255 50%);
 }
 
 .mclEmptyMessage {
@@ -397,21 +396,22 @@
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: center;
-  align-content: middle;
+  place-content: center center;
 }
 
 [dir="rtl"] .mclSticky {
   left: initial;
   right: 0;
-  box-shadow: -3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: -3px 0 4px rgba(0 0 0 5%);
   border-left: 1px solid var(--color-border-p2);
 
   &.mclStickyEnd {
     left: 0;
     right: initial;
-    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 3px 0 4px rgba(0 0 0 5%);
     border-right: 1px solid var(--color-border-p2);
     border-left: 0;
   }
 }
+
+/* stylelint-enable no-descending-specificity */

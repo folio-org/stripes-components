@@ -1,6 +1,12 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
+    "import-notation": "string",
+    "value-keyword-case": ["lower", {
+      "ignoreProperties": ["composes"]
+    }],
+    "keyframes-name-pattern": null,
+    "selector-class-pattern": null,
     "selector-pseudo-class-no-unknown": [true, {
       "ignorePseudoClasses": [
         "export",
