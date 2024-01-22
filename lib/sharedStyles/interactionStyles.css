@@ -31,7 +31,7 @@
   opacity: 0.65;
   cursor: default;
 
-  &::after
+  &::after,
   &::before {
     display: none;
   }
@@ -142,8 +142,8 @@
  * Hover
  */
 
-.isHovered::before
-.interactionStylesControl:hover > .interactionStyles::before
+.isHovered::before,
+.interactionStylesControl:hover > .interactionStyles::before,
 .interactionStyles:hover::before {
   background: var(--color-fill-hover);
 }
@@ -159,8 +159,8 @@
 /**
  * Focus
  */
-.isFocused::before
-.interactionStylesControl:focus > .interactionStyles::before
+.isFocused::before,
+.interactionStylesControl:focus > .interactionStyles::before,
 .interactionStyles:focus::before {
   background: var(--color-fill-focus);
   border: 1px solid var(--color-border);
@@ -168,8 +168,8 @@
   z-index: 3;
 }
 
-.isFocused.hasDot::after
-.interactionStylesControl:focus > .interactionStyles.hasDot::after
+.isFocused.hasDot::after,
+.interactionStylesControl:focus > .interactionStyles.hasDot::after,
 .interactionStyles.hasDot:focus::after {
   visibility: visible;
   opacity: 1;
@@ -178,15 +178,15 @@
 /**
  * Active
  */
-.isActive
-.interactionStylesControl:active > .interactionStyles
+.isActive,
+.interactionStylesControl:active > .interactionStyles,
 .interactionStyles:active {
   color: #fff;
   & svg { fill: #fff; }
 }
 
-.isActive::before
-.interactionStylesControl:active > .interactionStyles::before
+.isActive::before,
+.interactionStylesControl:active > .interactionStyles::before,
 .interactionStyles:active::before {
   background: var(--color-fill-active);
   border: 1px solid var(--color-border);
@@ -194,8 +194,8 @@
   z-index: -1; /* keep the active style behind any text etc */
 }
 
-.interactionStyles.hasDot.isActive:active::after
-.interactionStylesControl:active > .interactionStyles.hasDot::after
+.interactionStyles.hasDot.isActive:active::after,
+.interactionStylesControl:active > .interactionStyles.hasDot::after,
 .interactionStyles.hasDot:active::after {
   background-color: #fff;
   visibility: visible;
