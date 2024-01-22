@@ -9,7 +9,7 @@
   --color-link-current: #fff;
   --color-link-visited: #4f2bbb;
   --color-link-visited-current: #fff;
-  --color-fill: rgba(0 0 0 / 03%);
+  --color-fill: rgba(0 0 0 / 3%);
   --color-fill-table-row-odd: rgba(0 0 0 / 8%);
   --color-fill-table-row-even: rgba(0 0 0 / 3%);
   --color-fill-form-element: var(--color-fill);
