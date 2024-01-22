@@ -95,7 +95,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: rgba(0 0 0 0.2);
+  background-color: rgba(0 0 0 / 0.2);
   padding-top: 48px;
   align-items: flex-start;
   pointer-events: all;
