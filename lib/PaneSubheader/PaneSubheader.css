@@ -1,6 +1,6 @@
 @import '../variables.css';
 
 .subheader {
-  padding: 8px var(--gutter, 15px);
+  padding: 8px var(--gutter);
   border-bottom: 1px solid rgba(0 0 0 / 10%);
 }

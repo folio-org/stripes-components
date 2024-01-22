@@ -79,7 +79,7 @@
 
   &:focus {
     outline: none;
-    border-color: var(--primary #0c577f);
+    border-color: var(--primary);
   }
 }
 
@@ -95,7 +95,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: rgba(0 0 0 / 0.2);
+  background-color: rgba(0 0 0 / 20%);
   padding-top: 48px;
   align-items: flex-start;
   pointer-events: all;

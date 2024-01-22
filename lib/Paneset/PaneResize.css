@@ -15,7 +15,7 @@
 .cursor {
   height: 100%;
   width: 1px;
-  border-right: 2px dashed rgba(0 0 0 / 0.2);
+  border-right: 2px dashed rgba(0 0 0 / 20%);
   align-self: stretch;
 }
 
@@ -30,7 +30,7 @@
 
   &:hover,
   &.active {
-    background-color: rgba(0 0 0 / 0.1);
+    background-color: rgba(0 0 0 / 10%);
   }
 }
 

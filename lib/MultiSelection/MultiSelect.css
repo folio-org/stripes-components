@@ -18,7 +18,7 @@
 
 .multiSelectFocused {
   border: 1px solid var(--primary);
-  box-shadow: inset 0 0 0 / 2px rgba(37 118 195 / 30%);
+  box-shadow: inset 0 0 0 2px rgba(37 118 195 / 30%);
 }
 
 .multiSelectControlGroup {
@@ -80,7 +80,7 @@
   margin-top: 4px;
   padding: 4px;
   background-color: #fff;
-  border: 1px solid rgba(0 0 0 / 0.2);
+  border: 1px solid rgba(0 0 0 / 20%);
   pointer-events: all;
 
   &.untethered {
@@ -121,7 +121,7 @@
 
 .optionCursor {
   background-color: var(--color-fill-hover);
-  box-shadow: inset 0 0 0 / 3px var(--primary);
+  box-shadow: inset 0 0 0 3px var(--primary);
 }
 
 .multiSelectError {
@@ -146,7 +146,7 @@
 }
 
 .mobileBackdrop {
-  background-color: rgba(0 0 0 / 0.2);
+  background-color: rgba(0 0 0 / 20%);
   width: 100vw;
   height: 100vh;
   position: absolute;
