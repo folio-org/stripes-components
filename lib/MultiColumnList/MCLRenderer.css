@@ -157,8 +157,6 @@
 
   /* Use monospaced numbers, aka Tabular Numerals (tnum) */
   font-feature-settings: 'tnum';
-  /* stylelint-disable-next-line */
-  -moz-font-feature-settings: 'tnum';
 }
 
 .mclHeaderContainer {
