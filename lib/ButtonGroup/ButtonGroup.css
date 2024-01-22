@@ -38,13 +38,11 @@
   & .buttonGroup {
     & > :first-child,
     & > :first-child::before {
-      /* top-left | top-right | bottom-right | bottom-left */
       border-radius: 0 var(--radius) var(--radius) 0;
     }
 
     & > :last-child,
     & > :last-child::before {
-      /* top-left | top-right | bottom-right | bottom-left */
       border-radius: var(--radius) 0 0 var(--radius);
     }
 

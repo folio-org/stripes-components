@@ -19,7 +19,7 @@
       "ignoreProperties": [
         "composes",
         "compose-with"
-      ],
-    }],
+      ]
+    }]
   }
 }
