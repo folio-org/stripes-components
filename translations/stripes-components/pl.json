@@ -1,6 +1,6 @@
 {
-    "expandAll": "Rozwiń wszystkie",
-    "collapseAll": "Zwiń wszystkie",
+    "expandAll": "Rozwiń wszystko",
+    "collapseAll": "Zwiń wszystko",
     "goToPreviousYear": "Przejdź do poprzedniego roku",
     "goToPreviousMonth": "Przejdź do poprzedniego miesiąca",
     "goToNextYear": "Przejdź do następnego roku",
@@ -871,7 +871,7 @@
     "advancedSearch.boolean.label": "Operator",
     "advancedSearch.field.label": "Search for",
     "advancedSearch.searchOptions.label": "Opcje wyszukiwania",
-    "advancedSearch.searchOptions.query": "Query",
+    "advancedSearch.searchOptions.query": "Zapytanie",
     "advancedSearch.emptyFirstRowError": "Enter a query in the first search box",
     "Timepicker.hoursLabel": "Hours",
     "Timepicker.minutesLabel": "Minutes",
