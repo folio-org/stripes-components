@@ -110,7 +110,7 @@ button.actionMenuToggle {
 
 /* Pull first pane icon button to the left/start */
 .paneHeaderButtonsArea.first .paneHeaderIconButton:first-child,
-[dir=rtl] .paneHeaderButtonsArea.last .paneHeaderIconButton:last-child {
+[dir="rtl"] .paneHeaderButtonsArea.last .paneHeaderIconButton:last-child {
   margin-left: calc(var(--gutter-static-two-thirds) * -1);
   margin-right: 0;
 }

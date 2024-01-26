@@ -16,16 +16,16 @@
   font-size: var(--font-size-medium);
   line-height: var(--line-height);
 
+  & option {
+    background-color: var(--bg);
+  }
+
   &.placeholder {
     color: #888;
 
     & option {
       color: #444;
     }
-  }
-
-  & option {
-    background-color: var(--bg);
   }
 }
 

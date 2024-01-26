@@ -16,9 +16,9 @@
 
   /* WebKit desktop browsers add little up down arrows
   to number inputs called spinners. Here we remove them to preserve space. */
-  & input[type=number]::-webkit-inner-spin-button,
-  & input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+  & input[type="number"]::-webkit-inner-spin-button,
+  & input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
     margin: 0;
   }
 

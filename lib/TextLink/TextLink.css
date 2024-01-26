@@ -27,14 +27,11 @@
   &::before {
     border-radius: var(--radius);
     border: 1px solid var(--link-border-color-focus);
-    bottom: 0;
+    inset: 0 -2px;
     box-shadow: var(--link-box-shadow-focus);
     content: "";
-    left: -2px;
     display: none;
     position: absolute;
-    right: -2px;
-    top: 0;
     z-index: -1;
   }
 
@@ -67,7 +64,7 @@
     display: inline-block;
 
     /* Prevents double underline */
-    &:not(:active):not(:hover) {
+    &:not(:hover, :active) {
       text-decoration: none;
     }
 
