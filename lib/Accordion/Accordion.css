@@ -96,7 +96,7 @@
 
 .content-region {
   opacity: 0;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
   visibility: hidden; /* inputs within will not be focusable */
   transition: transform 0.1s ease 0.5s, opacity 0.1s linear 0.5s, visibility 0.2s linear 0.5s margin 0.1s linear 0.5s;
   height: 100%;

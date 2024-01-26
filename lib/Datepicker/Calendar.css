@@ -116,13 +116,13 @@
 
 .monthSelect {
   border-style: dashed;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 1px;
   padding: 4px;
 }
 
 .yearInput {
   border-style: dashed;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 1px;
   min-width: 0;
   flex: 0 1 auto;
   padding: 4px;
