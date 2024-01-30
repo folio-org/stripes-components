@@ -26,7 +26,7 @@
 /**
  * Disabled state
  */
-.interactionStylesControl:disabled > .interactionStyles
+.interactionStylesControl:disabled > .interactionStyles,
 .interactionStyles:disabled {
   opacity: 0.65;
   cursor: default;

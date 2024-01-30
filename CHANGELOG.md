@@ -18,6 +18,7 @@
 * Bug fix for Accordion content z-index rendering. Refs STCOM-1238.
 * Format aria attributes in `<Icon>`. Refs STCOM-1165.
 * Upgrade `stylelint` and fix errors. Refs STCOM-1087.
+* Show action buttons in correct color. Refs STCOM-1256.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
