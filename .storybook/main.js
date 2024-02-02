@@ -1,12 +1,10 @@
 const customWebpack = require('./stcom-webpack.config.js');
 
-module.exports = {
-  core: {
-    builder: 'webpack5',
-  },
+const config = {
   features: {
     postcss: false, // we use our own postcss setup
   },
+
   stories: [{
     directory: '../guides',
     titlePrefix: 'Guides',
@@ -17,12 +15,25 @@ module.exports = {
     titlePrefix: 'Components',
     files: '**/*.stories.[tj]s'
   }],
+
   addons: [
-    'storybook-readme/register',
     '@storybook/addon-essentials',
-    'storybook-addon-intl/register',
-    'storybook-addon-rtl/register',
-    'storybook-addon-designs/register',
+    // 'storybook-addon-intl/register',
+    // 'storybook-addon-rtl/register',
+    // 'storybook-addon-designs/register',
+    '@storybook/addon-mdx-gfm'
   ],
-  webpackFinal: customWebpack
+
+  webpackFinal: customWebpack,
+
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: { fastRefresh: true }
+  },
+
+  docs: {
+    autodocs: false
+  },
 };
+
+export default config;

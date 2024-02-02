@@ -6,10 +6,10 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path');
-const { babelOptions } = require('@folio/stripes-cli');
+const { babelOptions } = require('./babel.config.js');
 
 // strip react-refresh since storybook already uses it
-const adjustedBabelOptions = Object.assign(babelOptions, { plugins: babelOptions.plugins.filter((p) => !p.includes('react-refresh')) });
+// const adjustedBabelOptions = Object.assign(babelOptions, { plugins: babelOptions.plugins.filter((p) => !p.includes('react-refresh')) });
 
 module.exports = async (config) => {
   // Replace Storybook's own CSS config
@@ -38,8 +38,8 @@ module.exports = async (config) => {
             plugins: [
               require('postcss-import'),
               require('autoprefixer'),
-              require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css' }),
-              require('postcss-calc'),
+              require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css', disableDeprecationNotice: true }),
+              // require('postcss-calc'),
               require('postcss-nesting'),
               require('postcss-custom-media'),
               require('postcss-media-minmax'),
@@ -69,7 +69,7 @@ module.exports = async (config) => {
         return false;
       },
       loader: 'babel-loader',
-      options: adjustedBabelOptions,
+      options: babelOptions,
     };
 
     config.module.rules = config.module.rules.concat([
@@ -104,6 +104,6 @@ module.exports = async (config) => {
     },
   ];
 
-  config.module.rules.splice(svgRuleIndex,1, ...svgrRules);
+  config.module.rules.splice(svgRuleIndex,2, ...svgrRules);
   return config;
 }
