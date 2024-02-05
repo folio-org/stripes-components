@@ -1,3 +1,6 @@
+// Storybook v7 requires that projects now bring their own babel configuration. This file is a subset of the configuration found in
+// stripes-webpack, containing only the portions we need for components.
+
 module.exports = function (api) {
   api.cache(true);
  return {

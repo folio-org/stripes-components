@@ -8,9 +8,6 @@
 const path = require('path');
 const { babelOptions } = require('./babel.config.js');
 
-// strip react-refresh since storybook already uses it
-// const adjustedBabelOptions = Object.assign(babelOptions, { plugins: babelOptions.plugins.filter((p) => !p.includes('react-refresh')) });
-
 module.exports = async (config) => {
   // Replace Storybook's own CSS config
   // get index of their css loading rule...
@@ -39,7 +36,6 @@ module.exports = async (config) => {
               require('postcss-import'),
               require('autoprefixer'),
               require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css', disableDeprecationNotice: true }),
-              // require('postcss-calc'),
               require('postcss-nesting'),
               require('postcss-custom-media'),
               require('postcss-media-minmax'),
