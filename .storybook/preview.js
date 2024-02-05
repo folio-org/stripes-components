@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
-// import { addReadme } from 'storybook-readme';
-// import { initializeRTL } from 'storybook-addon-rtl';
 import pkg from '../package.json';
 import { themes } from '@storybook/theming';
 import '../lib/global.css';
@@ -51,18 +49,6 @@ const messages = {
   ru: prefixKeys(ruTranslations),
   sv: prefixKeys(svTranslations),
 };
-
-// Set intl configuration
-// setIntlConfig({
-//     locales: ['ar', 'ca', 'da', 'de', 'en', 'es', 'fr', 'hu', 'it', 'pt', 'ru', 'sv'],
-//     defaultLocale: 'en',
-//     getMessages: (locale) => messages[locale]
-// });
-
-/**
- * RTL
- */
-// initializeRTL();
 
 /**
  * Add OverlayContainer to all stories
