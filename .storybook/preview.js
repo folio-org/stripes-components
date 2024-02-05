@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import pkg from '../package.json';
 import { themes } from '@storybook/theming';
+import IntlWrap from './IntlWrap';
 import '../lib/global.css';
 
 /**
@@ -76,11 +77,11 @@ const messages = {
  }
 
 const storyFnDecorator = storyFn => (
-  <IntlProvider locale={'en'} messages={messages['en']}>
+  <IntlWrap messages={messages}>
     <AddOverlayContainer>
       {storyFn()}
     </AddOverlayContainer>
-  </IntlProvider>
+  </IntlWrap>
 );
 
 const preview = {

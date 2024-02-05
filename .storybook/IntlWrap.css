@@ -1,0 +1,27 @@
+.iwControls {
+  position: sticky;
+  inset: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  z-index: 1;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+.iwLabel {
+  font-weight: bold;
+  display: inline;
+}
+
+.iwLegend {
+  display: block;
+}
+
+.iwFieldSet {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: .5rem;
+}
