@@ -6,7 +6,10 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path');
-const { babelOptions } = require('./babel.config.js');
+const { babelOptions } = require('@folio/stripes-cli');
+
+// strip react-refresh since storybook already uses it
+const adjustedBabelOptions = Object.assign(babelOptions, { plugins: babelOptions.plugins.filter((p) => !p.includes('react-refresh')) });
 
 module.exports = async (config) => {
   // Replace Storybook's own CSS config
@@ -65,7 +68,7 @@ module.exports = async (config) => {
         return false;
       },
       loader: 'babel-loader',
-      options: babelOptions,
+      options: adjustedBabelOptions,
     };
 
     config.module.rules = config.module.rules.concat([
