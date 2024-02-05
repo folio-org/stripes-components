@@ -18,9 +18,6 @@ const config = {
 
   addons: [
     '@storybook/addon-essentials',
-    // 'storybook-addon-intl/register',
-    // 'storybook-addon-rtl/register',
-    // 'storybook-addon-designs/register',
     '@storybook/addon-mdx-gfm'
   ],
 
