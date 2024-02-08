@@ -20,7 +20,7 @@ import first from 'lodash/first';
 import last from 'lodash/last';
 
 // eslint-disable-next-line max-len
-export const FOCUSABLE_SELECTOR = 'a:not([disabled]), button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
+export const FOCUSABLE_SELECTOR = 'a:not([disabled]), button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"]), [tabIndex="-1"]:not([disabled]):focus';
 
 function getVisibleFocusableElements(container = document, includeContained, currentElement) {
   if (container.querySelectorAll) {
