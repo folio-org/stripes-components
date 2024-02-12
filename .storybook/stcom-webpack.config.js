@@ -38,8 +38,7 @@ module.exports = async (config) => {
             plugins: [
               require('postcss-import'),
               require('autoprefixer'),
-              require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css' }),
-              require('postcss-calc'),
+              require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css', disableDeprecationNotice: true }),
               require('postcss-nesting'),
               require('postcss-custom-media'),
               require('postcss-media-minmax'),
@@ -104,6 +103,6 @@ module.exports = async (config) => {
     },
   ];
 
-  config.module.rules.splice(svgRuleIndex,1, ...svgrRules);
+  config.module.rules.splice(svgRuleIndex,2, ...svgrRules);
   return config;
 }

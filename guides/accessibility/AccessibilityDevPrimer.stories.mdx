@@ -86,11 +86,11 @@ Form controls require associated labels so that AT can convey the purpose of a t
 
 Typical labeling of form elements is as follows (explicit labeling) our form controls set these up under the hood:
 ```
-<!-- general html controls -->
+{/* general html controls */}
 <label for="inputid">username</label>
 <input type="text" id="inputid" />
 
-<!-- stripes-components controls -->
+{/* stripes-components controls */}
 <TextField label="username" />
 ```
 
@@ -98,20 +98,20 @@ Given this, a screen reader will announce 'username edit blank' when the user ta
 
 If visible labels are inadequate, `aria-label` can be used:
 ```
-<!-- general html controls -->
+{/* general html controls */}
 <input type="text" aria-label="username" id="inputid" />
 
-<!-- stripes-components controls -->
+{/* stripes-components controls */}
 <TextField aria-label="username" />
 ```
 If the label is visible elsewhere in the page, its element can be associated with the input via `aria-labelledby`:
 ```
-<!-- general html controls -->
+{/* general html controls */}
 <div id="columnlabel">starting date</div>
 ...
 <input type="text" aria-labelledby="columnlabel" />
 
-<!-- stripes-components controls -->
+{/* stripes-components controls */}
 <TextField aria-labelledby="columnlabel" />
 ```
 

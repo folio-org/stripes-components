@@ -1,15 +1,7 @@
-import { addons } from '@storybook/addons';
-import { themes } from '@storybook/theming';
-import pkg from '../package.json'
+import { addons } from '@storybook/manager-api';
+import theme from './theme';
+
 
 addons.setConfig({
-  docs: {
-    theme: Object.assign(
-      themes.light,
-      {
-        brandTitle: `Stripes-Components v${pkg.version}`,
-        brandUrl: 'https://github.com/folio-org/stripes-components'
-      }
-    )
-  }
+  theme: theme
 });
