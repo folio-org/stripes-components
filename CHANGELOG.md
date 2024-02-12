@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [12.0.5](https://github.com/folio-org/stripes-components/tree/v12.0.5) (2024-02-27)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.4...v12.0.5)
+
+* MCL Bugfix. Reset loading state for non-sparse arrays. Refs STCOM-1262.
+
 ## [12.0.4](https://github.com/folio-org/stripes-components/tree/v12.0.4) (2023-11-10)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.3...v12.0.4)
 
