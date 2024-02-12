@@ -21,6 +21,7 @@
 * Show action buttons in correct color. Refs STCOM-1256.
 * Accessibility | Repeatable Field Component. Refs STCOM-766.
 * Apply highest z-index to focused `<Accordion>` within `AccordionSet`. Refs STCOM-1257.
+* Upgrade storybook to v7. Refs STCOM-1176.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
