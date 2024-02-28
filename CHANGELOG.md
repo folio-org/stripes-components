@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## In-progress
+## [12.0.5](https://github.com/folio-org/stripes-components/tree/v12.0.4) (2024-02-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.4...v12.0.5)
 
 * MCL loading bugfix - Refs STCOM-1262.
 
