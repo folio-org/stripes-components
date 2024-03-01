@@ -24,6 +24,7 @@
 * Upgrade storybook to v7. Refs STCOM-1176.
 * Fix bug with MCL not re-enabling paging buttons after more data was loaded. Refs STCOM-1262.
 * Accessible grouping for filter group checkboxes via `role="group"`. Refs STCOM-1192.
+* Fix `<FilterAccordionHeader>` does not have correct `aria-label` when `label` prop type is string. Fixes STCOM-1271.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
