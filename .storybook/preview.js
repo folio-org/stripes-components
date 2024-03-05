@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { addReadme } from 'storybook-readme';
-import { initializeRTL } from 'storybook-addon-rtl';
+import { IntlProvider } from 'react-intl';
 import pkg from '../package.json';
 import { themes } from '@storybook/theming';
+import IntlWrap from './IntlWrap';
 import '../lib/global.css';
 
 /**
@@ -10,7 +10,7 @@ import '../lib/global.css';
  */
 
 // Load the locale data for all your defined locales
-import { setIntlConfig, withIntl } from 'storybook-addon-intl';
+// import { setIntlConfig, withIntl } from 'storybook-addon-intl';
 
 import arTranslations from '../translations/stripes-components/ar.json';
 import caTranslations from '../translations/stripes-components/ca.json';
@@ -51,18 +51,6 @@ const messages = {
   sv: prefixKeys(svTranslations),
 };
 
-// Set intl configuration
-setIntlConfig({
-    locales: ['ar', 'ca', 'da', 'de', 'en', 'es', 'fr', 'hu', 'it', 'pt', 'ru', 'sv'],
-    defaultLocale: 'en',
-    getMessages: (locale) => messages[locale]
-});
-
-/**
- * RTL
- */
-initializeRTL();
-
 /**
  * Add OverlayContainer to all stories
  * Popovers, Modals etc. mount to this element in the real system
@@ -88,16 +76,26 @@ initializeRTL();
   }
  }
 
-const storyFnDecorator = storyFn => <AddOverlayContainer>{storyFn()}</AddOverlayContainer>
+const storyFnDecorator = storyFn => (
+  <IntlWrap messages={messages}>
+    <AddOverlayContainer>
+      {storyFn()}
+    </AddOverlayContainer>
+  </IntlWrap>
+);
 
- export const decorators = [withIntl, storyFnDecorator, addReadme]
- export const parameters = {
-   docs: {
-     theme: Object.assign({}, themes.light, {
-      brandTitle: `FOLIO Stripes-components v${pkg.version}`,
-     })
-   },
-   readme: {
-     codeTheme: 'a11y-dark',
-   }
- }
+const preview = {
+  decorators: [storyFnDecorator],
+  parameters: {
+    docs: {
+      theme: Object.assign({}, themes.light, {
+       brandTitle: `FOLIO Stripes-components v${pkg.version}`,
+      })
+    },
+    readme: {
+      codeTheme: 'a11y-dark',
+    }
+  }
+}
+
+export default preview;

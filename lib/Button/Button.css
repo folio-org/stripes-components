@@ -11,7 +11,7 @@
   composes: interactionStyles from "../sharedStyles/interactionStyles.css";
   padding: 0 var(--gutter-static);
   text-align: center;
-  -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
   color: var(--color-text);
   border-radius: 999px;
@@ -67,9 +67,6 @@
     text-decoration-skip: objects;
     text-decoration-thickness: 2px;
   }
-  /**
-  * Colors
-  */
 
   /**
   * Button Style: Default

@@ -14,6 +14,17 @@
 * Enable spinner on Datepicker year input. Refs STCOM-1225.
 * TextLink - underline showing up on nested spans with 'display: inline-flex'. Refs STCOM-1226.
 * Use the default search option instead of an unsupported one in Advanced search. Refs STCOM-1242.
+* Added support for clear icon in `<TextArea>`. Refs STCOM-1240.
+* Bug fix for Accordion content z-index rendering. Refs STCOM-1238.
+* Format aria attributes in `<Icon>`. Refs STCOM-1165.
+* Upgrade `stylelint` and fix errors. Refs STCOM-1087.
+* Show action buttons in correct color. Refs STCOM-1256.
+* Accessibility | Repeatable Field Component. Refs STCOM-766.
+* Apply highest z-index to focused `<Accordion>` within `AccordionSet`. Refs STCOM-1257.
+* Upgrade storybook to v7. Refs STCOM-1176.
+* Fix bug with MCL not re-enabling paging buttons after more data was loaded. Refs STCOM-1262.
+* Accessible grouping for filter group checkboxes via `role="group"`. Refs STCOM-1192.
+* Fix `<FilterAccordionHeader>` does not have correct `aria-label` when `label` prop type is string. Fixes STCOM-1271.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
