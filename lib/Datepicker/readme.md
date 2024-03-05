@@ -32,6 +32,7 @@ Name | type | description | default | required
 `usePortal` | bool | if true, the Datepicker will render itself to a React-Portal (the `#OverlayContainer` div) this avoids haveing the Datepicker cutoff by overflow. | false | false
 `value` | string | date to be displayed in the textfield. In forms, this is supplied by the initialValues prop supplied to the form | "" | false
 
+<!-- dateFormat | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false-->
 
 ## Controlled Datepicker example
 ```
@@ -76,7 +77,7 @@ You can read more about value lifecycles in `redux-form` here: https://redux-for
 ## Working with Dates
 
 Using a `value` that does not include any time or timezone
-information, such as `12/01`, the date is assumed by `dayjs()` to be
+information, such as `12/01`, the date is assumed by `moment()` to be
 in the local timezone. When the local timezone is east of UTC, such as
 `+03:00`, and converted to UTC for internationalization formatting,
 the offset will be subtracted from the date. So `12/01` will appear as
@@ -84,8 +85,8 @@ the offset will be subtracted from the date. So `12/01` will appear as
 
 When comparing or manipulating dates, it is safest to operate in UTC
 mode and leave display formatting to internationalization helpers. If
-using DayJS, this can be done via
-[`dayjs.utc()`](https://day.js.org/docs/en/parse/utc).
+using moment, this can be done via
+[`moment.utc()`](http://momentjs.com/docs/#/parsing/utc/).
 
 ## Datepicker value flow.
 

@@ -80,11 +80,11 @@ By default, this function returns a value in the ISOString format: 'HH:mm:ss.sss
 ### Value manipulation into/out of the field...
 To adjust the value from the redux store before passing it to the component, use the `<Field>`'s `format` prop:
 ```
-const formatField = value => (value ? dayjs.utc(value) : '');
+const formatField = value => (value ? moment.utc(value) : '');
 <Field component={Timepicker} name="date" label="date" format={formatField} />
 ```
 To adjust the set value, prior to storing it in the redux-store, use `parse`
 ```
-const parseField = value => (value ? dayjs.utc(value) : '');
+const parseField = value => (value ? moment.utc(value) : '');
 <Field component={Timepicker} name="date" label="date" parse={parseField} />
 ```
