@@ -288,7 +288,7 @@ export const getLocaleDateFormat = ({ intl, config }) => {
     });
   } else {
     // if INTL api is not available, fall back to moment...
-    format = getDayJSLocalizedFormat(intl);
+    format = getMomentLocalizedFormat(intl);
   }
 
   return format;
