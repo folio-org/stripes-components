@@ -15,9 +15,6 @@ module.exports = async (config) => {
   // Replace Storybook's own CSS config
   // get index of their css loading rule...
   const cssRuleIndex = config.module.rules.findIndex(r => { const t = new RegExp(r.test); return t.test('m.css'); });
-
-  config.devtool = 'eval-cheap-source-map';
-
   config.module.rules[cssRuleIndex] = {
     test: /\.css$/,
     use: [
@@ -107,6 +104,5 @@ module.exports = async (config) => {
   ];
 
   config.module.rules.splice(svgRuleIndex,2, ...svgrRules);
-  // console.log(JSON.stringify(config, null, 2));
   return config;
 }
