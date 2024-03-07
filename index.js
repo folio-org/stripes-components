@@ -140,7 +140,7 @@ export { default as FilterControlGroup } from './lib/FilterControlGroup';
 export { default as FilterPaneSearch } from './lib/FilterPaneSearch';
 export { default as ExportCsv } from './lib/ExportCsv';
 export { default as exportToCsv } from './lib/ExportCsv/exportToCsv';
-
+export { default as CleanHTML, sanitizeMarkup } from './lib/CleanHTML';
 /* utilities */
 export { default as RootCloseWrapper } from './util/RootCloseWrapper';
 export { default as omitProps } from './util/omitProps';
