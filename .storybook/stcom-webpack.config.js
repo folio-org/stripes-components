@@ -12,6 +12,8 @@ const { babelOptions } = require('@folio/stripes-cli');
 const adjustedBabelOptions = Object.assign(babelOptions, { plugins: babelOptions.plugins.filter((p) => !p.includes('react-refresh')) });
 
 module.exports = async (config) => {
+
+  config.devtool="eval-cheap-source-map";
   // Replace Storybook's own CSS config
   // get index of their css loading rule...
   const cssRuleIndex = config.module.rules.findIndex(r => { const t = new RegExp(r.test); return t.test('m.css'); });
