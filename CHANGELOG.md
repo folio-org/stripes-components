@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 12.1.0 IN PROGRESS
+## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
 
 * Add `hasMatchSelection` to `<AdvancedSearch>` to hide/show search match selection dropdown. Refs STCOM-1211.
 * Add z-index of 1 to callout out to have it always render on top of sibling elements. Fixes STCOM-1217.
@@ -27,6 +28,35 @@
 * Fix `<FilterAccordionHeader>` does not have correct `aria-label` when `label` prop type is string. Fixes STCOM-1271.
 * Add `number-generator` icon. Refs STCOM-1269.
 * Accordions retain their z-index after being blurred, and assume the highest z-index when focus enters them. Refs STCOM-1238.
+
+## [12.0.5](https://github.com/folio-org/stripes-components/tree/v12.0.4) (2024-02-28)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.4...v12.0.5)
+
+* MCL loading bugfix - Refs STCOM-1262.
+
+## [12.0.4](https://github.com/folio-org/stripes-components/tree/v12.0.4) (2023-11-10)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.3...v12.0.4)
+
+* Display spinner on Datepicker year input. Refs STCOM-1225.
+
+## [12.0.3](https://github.com/folio-org/stripes-components/tree/v12.0.3) (2023-11-10)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.2...v12.0.3)
+
+* Add z-index of 1 to callout out to have it always render on top of sibling elements. Fixes STCOM-1217.
+* Ensure CSS visibility of datepicker's year input number spinner. Refs STCOM-1225.
+* Include pagination height in MCL container height calculation. Refs STCOM-1224.
+* Adjusted print styles of panes so that the last pane will print. Refs STCOM-1228, STCOM-1229.
+* Accessibility Issues - stripes components. Refs STCOM-1222.
+
+## [12.0.2](https://github.com/folio-org/stripes-components/tree/v12.0.2) (2023-10-20)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.1...v12.0.2)
+
+* Add `hasMatchSelection` to `<AdvancedSearch>` to hide/show search match selection dropdown. Refs STCOM-1211.
+
+## [12.0.1](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.0.1)
+
+* Bump `@folio/stripes-testing` to `v4.6.0` for new interactors.
 
 ## [12.0.0](https://github.com/folio-org/stripes-components/tree/v12.0.0) (2023-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v11.0.0...v12.0.0)
