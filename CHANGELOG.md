@@ -30,6 +30,7 @@
 * Fix `<FilterAccordionHeader>` does not have correct `aria-label` when `label` prop type is string. Fixes STCOM-1271.
 * Add `number-generator` icon. Refs STCOM-1269.
 * Accordions retain their z-index after being blurred, and assume the highest z-index when focus enters them. Refs STCOM-1238.
+* `<Selection>` should only move focus back to its control/trigger if focus within the list. Refs STCOM-1238.
 
 ## [12.0.5](https://github.com/folio-org/stripes-components/tree/v12.0.4) (2024-02-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.4...v12.0.5)
