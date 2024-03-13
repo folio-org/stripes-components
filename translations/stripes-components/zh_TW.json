@@ -885,10 +885,10 @@
     "metaSection.lastUpdated": "<b>Last updated</b>",
     "metaSection.lastUpdatedDateTime": "{date} {time}",
     "metaSection.lastUpdatedBy": "by {source}",
-    "metaSection.unknownUser": "Unknown user",
-    "advancedSearch.match.exactPhrase": "Exact phrase",
-    "advancedSearch.match.containsAll": "Contains all",
-    "advancedSearch.match.startsWith": "Starts with",
-    "advancedSearch.match.label": "Match option",
-    "advancedSearch.match.containsAny": "Contains any"
+    "metaSection.unknownUser": "未知使用者",
+    "advancedSearch.match.exactPhrase": "精確片語",
+    "advancedSearch.match.containsAll": "包含全部",
+    "advancedSearch.match.startsWith": "開始於",
+    "advancedSearch.match.label": "符合選項",
+    "advancedSearch.match.containsAny": "包含任何"
 }
