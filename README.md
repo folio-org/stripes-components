@@ -156,6 +156,18 @@ Useful recipes for UI patterns appearing in FOLIO modules.
 * [Show/Hide Columns in MCL](guides/patterns/ColumnSelector.stories.mdx) -- Give users the ability to select only the data they need to see.
 * [Accessible Routing](guides/patterns/AccessibleRouting.stories.mdx) -- Detail the approaches to implementing accessible focus management.
 
+## Working with dates/times in UI-Modules
+
+We provide a handful of components and utilities for date/time functionality.
+
+* **Datepicker, Timepicker, DateRangeWrapper components** - UI-widgets for accepting date/time input.
+* **FormattedDate, FormattedUTCDate, FormattedTime** - Cross-browser convenience components for displaying localized representations of system ISO8601 timestamps.
+* [dateTimeUtils](util/DateUtils_readme.md) - A handful of utility functions for working with date/time code in application logic.
+* **Hooks**
+  * useFormatDate - presentational date-formatting.
+  * useFormatTime - presentational time-formatting.
+  * useDynamicLocale - loading DayJS locale information within functional components (also available in component form, via `DynamicLocaleRenderer`).
+
 ## Testing
 Stripes Components' tests are automated browser tests powered by
 [Karma](http://karma-runner.github.io) and written using

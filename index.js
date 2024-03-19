@@ -12,7 +12,6 @@ export {
   staticFirstWeekDay,
   staticLangCountryCodes
 } from './lib/Datepicker';
-export { getLocaleDateFormat, getLocalizedTimeFormatInfo } from './util/dateTimeUtils';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as FormattedDate } from './lib/FormattedDate';
 export { default as FormattedTime } from './lib/FormattedTime';
@@ -142,6 +141,13 @@ export { default as ExportCsv } from './lib/ExportCsv';
 export { default as exportToCsv } from './lib/ExportCsv/exportToCsv';
 
 /* utilities */
+export {
+  getLocaleDateFormat,
+  getLocalizedTimeFormatInfo,
+  dayjs,
+  DayRange,
+  loadDayJSLocale,
+} from './util/dateTimeUtils';
 export { default as RootCloseWrapper } from './util/RootCloseWrapper';
 export { default as omitProps } from './util/omitProps';
 export {
