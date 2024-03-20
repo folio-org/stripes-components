@@ -31,6 +31,8 @@ dayjs.extend(isBetween);
 // export a pre-extended dayjs for consumption.
 export { dayjs };
 
+const DEFAULT_LOCALE = 'en-US';
+
 /** DayJS range utility class. */
 export class DayRange {
   /**
@@ -48,10 +50,10 @@ export class DayRange {
    * returns an array of contained dayjs day objects.
    *
    * @method
-   * @name DayRange#expand
+   * @name DayRange#asDayJSArray
    * @returns {Array} of dayjs objects.
    */
-  expand = () => {
+  asDayJSArray = () => {
     const range = [];
     let current = dayjs(this.start);
     while (current.isBefore(this.end)) {
@@ -78,11 +80,10 @@ export class DayRange {
    * or date strings as well.
    *
    * @method
-   * @name DayRange#isEqual
+   * @name DayRange#contains
    * @param { DayRange|Dayjs }
    * @returns {Bool}
    */
-
   contains = (candidate) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
@@ -96,7 +97,7 @@ export class DayRange {
    * returns true if candidate start or end is within the range, or if candidate is equal to the range.
    *
    * @method
-   * @name DayRange#isEqual
+   * @name DayRange#overlaps
    * @param { DayRange|Dayjs }
    * @returns {Bool}
    */
@@ -149,7 +150,6 @@ export const getDayJSLocalizedFormat = (intl) => {
  *  parse successfully will be returned as the validFormat.
  * @returns {String}
 */
-
 export const dateCanBeParsed = (value, formats) => ({
   isValid: formats.some((f) => dayjs.utc(value, f).isValid()),
   validFormat: formats[formats.findIndex((f) => dayjs(value, f, true).isValid())]
@@ -195,7 +195,7 @@ export function loadDayJSLocale(locale, cb = noop) {
   const parentLocale = locale.split('-')[0];
   // Locale loading setup for DayJS
   // 'en-US' is default and always loaded, so we don't even worry about loading another if the language is English.
-  if (locale !== 'en-US') {
+  if (locale !== DEFAULT_LOCALE) {
     const localeToLoad = getCompatibleDayJSLocale(locale, parentLocale);
 
     if (localeToLoad) {
@@ -213,13 +213,13 @@ export function loadDayJSLocale(locale, cb = noop) {
       });
     } else {
       // fall back to english in case a compatible locale can't be loaded.
-      dayjs.locale('en-US');
-      cb('en-US');
+      dayjs.locale(DEFAULT_LOCALE);
+      cb(DEFAULT_LOCALE);
     }
   } else {
     // set locale to english in case we're transitioning away from a non-english locale.
-    dayjs.locale('en-US');
-    cb('en-US');
+    dayjs.locale(DEFAULT_LOCALE);
+    cb(DEFAULT_LOCALE);
   }
 }
 
@@ -232,7 +232,7 @@ export function loadDayJSLocale(locale, cb = noop) {
  * @param {Object} settings.intl - the intl object from context
  * @param {config} settings.config - sets the options for IntlDateTimeFormat. See
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options
- * @returns {String}
+ * @returns {String} - something similar to 'YYYY-MM-DD' or 'MM/DD/YYYY' that you could provide to a date-parsing library.
  */
 
 export const getLocaleDateFormat = ({ intl, config }) => {

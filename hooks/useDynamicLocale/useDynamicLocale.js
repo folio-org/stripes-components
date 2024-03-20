@@ -7,12 +7,19 @@ const isEnglishLang = (locale) => {
 };
 
 /**
+* @typedef {Object} dynamicLocaleInfo
+* @property {boolean} localeLoaded - whether the a new locale has loaded or not.
+* @property {boolean} isEnglish - a boolean for whether or not the requested locale is English, DayJS' default, which is always loaded.
+*/
+
+/**
  * useDynamicLocale -
- * React hook that loads a DayJS locale, returns an
- * @date 12/15/2023 - 1:58:58 PM
+ * React hook that loads a DayJS locale.
  *
+ * @returns {dynamicLocaleInfo}
  * @param {Object} hookParams
  * @param {String} hookParams.locale - locale string ex : 'en-SE'
+ * @returns {dynamicLocaleInfo}
  */
 const useDynamicLocale = ({ locale : localeProp } = {}) => {
   const { locale: localeContext } = React.useContext(IntlContext);
