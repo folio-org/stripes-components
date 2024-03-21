@@ -31,6 +31,7 @@
 * Add `number-generator` icon. Refs STCOM-1269.
 * Accordions retain their z-index after being blurred, and assume the highest z-index when focus enters them. Refs STCOM-1238.
 * `<Selection>` should only move focus back to its control/trigger if focus within the list. Refs STCOM-1238.
+* Add DayJS export and Date/Time utilities. Refs STCOM-1094/
 
 ## [12.0.5](https://github.com/folio-org/stripes-components/tree/v12.0.4) (2024-02-28)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.4...v12.0.5)
