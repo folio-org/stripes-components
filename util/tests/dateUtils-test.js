@@ -1,6 +1,19 @@
 import { beforeEach, it, describe } from 'mocha';
 import { expect } from 'chai';
-import { getMomentLocalizedFormat, getLocaleDateFormat, getLocalizedTimeFormatInfo } from '../dateTimeUtils';
+import sinon from 'sinon';
+import { converge } from '@folio/stripes-testing';
+import {
+  getMomentLocalizedFormat,
+  getLocaleDateFormat,
+  getLocalizedTimeFormatInfo,
+  DayRange,
+  getDayJSLocalizedFormat,
+  dayjs,
+  getCompatibleDayJSLocale,
+  loadDayJSLocale
+} from '../dateTimeUtils';
+import 'dayjs/locale/de';
+
 
 describe('Date Utilities', () => {
   describe('get localized format - moment fallback', () => {
@@ -14,11 +27,12 @@ describe('Date Utilities', () => {
     });
   });
 
-  describe('get localized format - moment fallback', () => {
+  describe('get localized format - dayJS fallback', () => {
     let format;
     beforeEach(async () => {
-      format = getMomentLocalizedFormat({ locale: 'de' }); // eslint-disable-line
+      format = getDayJSLocalizedFormat({ locale: 'de' }); // eslint-disable-line
     });
+
     it('returns the long date format according to the passed locale', () => {
       expect(format).to.equal('DD.MM.YYYY');
     });
@@ -88,6 +102,122 @@ describe('Date Utilities', () => {
 
     it('returns the time format according to the passed locale', () => {
       expect(timeFormat.timeFormat).to.equal('A hh:mm');
+    });
+  });
+
+  describe('DayRange class', () => {
+    const testRange = new DayRange(dayjs(), dayjs().add(7, 'days'));
+    it('expands to array', () => {
+      expect(testRange.asDayJSArray().length).equals(7);
+    });
+
+    it('isSame - queries equality (positive)', () => {
+      expect(testRange.isSame(new DayRange(dayjs(), dayjs().add(7, 'days')))).equals(true);
+    });
+
+    it('isSame - queries equality (negative)', () => {
+      expect(testRange.isSame(new DayRange(dayjs(), dayjs().add(8, 'days')))).equals(false);
+    });
+
+    it('contains - positive dayjs object', () => {
+      expect(testRange.contains(dayjs().add(1, 'day'))).equals(true);
+    });
+
+    it('contains - positive dayRange', () => {
+      expect(testRange.contains(new DayRange(dayjs().add(1, 'day'), dayjs().add(4, 'days')))).equals(true);
+    });
+
+    it('contains - negative dayjs object', () => {
+      expect(testRange.contains(dayjs().subtract(1, 'day'))).equals(false);
+    });
+
+    it('contains - negative dayRange', () => {
+      expect(testRange.contains(new DayRange(dayjs().subtract(1, 'day'), dayjs().add(4, 'days')))).equals(false);
+    });
+
+    it('overlaps - positive', () => {
+      expect(testRange.overlaps(new DayRange(dayjs().subtract(2, 'days'), dayjs().add(4, 'days')))).equals(true);
+    });
+
+    it('overlaps - positive (same range)', () => {
+      expect(testRange.overlaps(new DayRange(dayjs(), dayjs().add(8, 'days')))).equals(true);
+    });
+
+    it('overlaps - negative', () => {
+      expect(testRange.overlaps(new DayRange(dayjs().subtract(7, 'days'), dayjs().subtract(4, 'days')))).equals(false);
+    });
+  });
+
+  describe('getCompatibleDayJSLocale()', () => {
+    let consoleSpy;
+    beforeEach(() => {
+      consoleSpy = sinon.spy(global.window.console, 'error');
+    });
+
+    afterEach(() => {
+      consoleSpy.restore();
+    });
+
+    it('returns the locale available for "SV"', () => {
+      expect(getCompatibleDayJSLocale('sv-se', 'se')).equals('se');
+      expect(consoleSpy.notCalled).to.be.true;
+    });
+
+    it('returns the locale available for "en-SE"', () => {
+      expect(getCompatibleDayJSLocale('en-se', 'en')).equals('en');
+      expect(consoleSpy.notCalled).to.be.true;
+    });
+
+    it('returns the locale available for "de"', () => {
+      expect(getCompatibleDayJSLocale('de', 'de')).equals('de');
+      expect(consoleSpy.notCalled).to.be.true;
+    });
+
+    it('logs an error for non-existent locale. "vo"', () => {
+      expect(getCompatibleDayJSLocale('vo', 'fs')).equals(undefined);
+      expect(consoleSpy.called).to.be.true;
+    });
+  });
+
+  describe('loadDayJSLocale', () => {
+    let localeCB = sinon.spy();
+    beforeEach(() => {
+      localeCB.resetHistory();
+    });
+
+    it('loads/sets locale to "de"', async () => {
+      loadDayJSLocale('de', localeCB);
+      await converge(() => { expect(localeCB.calledWith('de')).to.be.true; });
+    });
+
+    it('attempt to loads/set locale to "nph" - fallback to "en-US"', async () => {
+      loadDayJSLocale('nph', localeCB);
+      await converge(() => { expect(localeCB.calledWith('en-US')).to.be.true; });
+    });
+
+    it('loads 2 letter locale ("ru")', async () => {
+      loadDayJSLocale('ru');
+      await converge(() => { expect(dayjs.locale()).equals('ru'); });
+    });
+
+    it('loads parent language locale ("en-SE")', async () => {
+      loadDayJSLocale('en-SE');
+      await converge(() => { expect(dayjs.locale()).equals('en') });
+    });
+
+    it('resets locale if it is previously set to non-english locale', async () => {
+      loadDayJSLocale('ru');
+      await converge(() => { expect(dayjs.locale()).equals('ru'); });
+      loadDayJSLocale('en-US');
+      await converge(() => { expect(dayjs.locale()).equals('en'); });
+    });
+
+    it('writes error to console if locale is unavailable ("!e")', async () => {
+      const mockConsoleError = sinon.spy(console, 'error');
+      loadDayJSLocale('!e');
+      await converge(() => { expect(mockConsoleError.calledOnce).to.be.true });
+      await converge(() => { expect(dayjs.locale()).equals('en') });
+      mockConsoleError.restore();
     });
   });
 });
