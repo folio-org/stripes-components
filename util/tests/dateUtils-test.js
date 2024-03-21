@@ -108,7 +108,7 @@ describe('Date Utilities', () => {
   describe('DayRange class', () => {
     const testRange = new DayRange(dayjs(), dayjs().add(7, 'days'));
     it('expands to array', () => {
-      expect(testRange.expand().length).equals(7);
+      expect(testRange.asDayJSArray().length).equals(7);
     });
 
     it('isSame - queries equality (positive)', () => {
