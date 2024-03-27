@@ -20,6 +20,8 @@ const hiddenCurrencies = [
   'USN', // US Dollar (Next Day)
   'CHE', // WIR Euro
   'CHW', // WIR Franc
+  'UYI', // Uruguay Peso en Unidades Indexadas
+  'UYW', // Uruguayan Unidad Previsional
 ];
 
 export const filteredCurrencies = currencies.filter(c => hiddenCurrencies.indexOf(c.code) === -1);
