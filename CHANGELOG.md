@@ -4,6 +4,7 @@
 
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
+* Replace the `Control` shortcut display with `Ctrl` for Windows computers in `KeyboardShortcutsModal`. Refs STCOM-1277.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
