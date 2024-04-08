@@ -1,13 +1,15 @@
 # Change history for stripes-components
 
+## [12.1.2](https://github.com/folio-org/stripes-components/tree/v12.1.2) (2024-04-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.1...v12.1.2)
+
+* Exclude invalid additional currencies. Refs STCOM-1274.
 
 ## [12.1.1](https://github.com/folio-org/stripes-components/tree/v12.1.1) (2024-03-25)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.1.1)
 
 * `<Selection>` should only move focus back to its control/trigger if focus within the list. Refs STCOM-1238.
 * Relax prop-type for `ConfirmationModal.heading`.
-
-* Exclude invalid additional currencies. Refs STCOM-1274.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
