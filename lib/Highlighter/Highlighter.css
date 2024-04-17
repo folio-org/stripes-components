@@ -2,7 +2,7 @@
  * Highlighter
  */
 
-@import '../variables.css';
+
 
 .mark {
   background-color: var(--highlighter-fill);
