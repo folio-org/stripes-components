@@ -5,7 +5,7 @@
 
 /* stylelint-disable no-descending-specificity  */
 
-@import '../variables.css';
+
 
 :root {
   --focus-dot-offset-default: var(--gutter-static-one-third);

@@ -38,12 +38,15 @@ module.exports = async (config) => {
         options: {
           postcssOptions: {
             plugins: [
+              // postcssGlobalData to import custom media queries so that those can be successfully resolve
+              require('@csstools/postcss-global-data')({
+                files: [
+                  path.resolve(__dirname , '../lib/variables.css')
+                ]
+              }),
               require('postcss-import'),
               require('autoprefixer'),
-              require('postcss-custom-properties')({ preserve: false, importFrom: './lib/variables.css', disableDeprecationNotice: true }),
-              require('postcss-nesting'),
               require('postcss-custom-media'),
-              require('postcss-media-minmax'),
               require('@csstools/postcss-relative-color-syntax'),
             ],
           },

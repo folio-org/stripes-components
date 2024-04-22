@@ -2,7 +2,7 @@
  * <EmptyMessage />
  */
 
-@import "../variables";
+
 
 .emptyMessage {
   font-size: var(--font-size-medium);

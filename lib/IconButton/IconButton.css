@@ -2,7 +2,7 @@
  * Pane Menu Icon
  */
 
-@import '../variables';
+
 
 .iconButton {
   composes: interactionStylesControl from "../sharedStyles/interactionStyles.css";

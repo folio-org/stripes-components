@@ -2,7 +2,7 @@
  * TextLink
  */
 
-@import '../variables.css';
+
 
 :root {
   --link-color-default: var(--color-link);

@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider } from 'react-intl';
 import pkg from '../package.json';
 import { themes } from '@storybook/theming';
 import IntlWrap from './IntlWrap';
 import '../lib/global.css';
+import '../lib/variables.css';
 
 /**
  * React intl support

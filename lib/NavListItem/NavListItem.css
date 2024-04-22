@@ -2,7 +2,7 @@
  * NavListItem
  */
 
-@import '../variables.css';
+
 
 .NavListItem {
   composes: interactionStyles hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
