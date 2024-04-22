@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
 import translations from '../translations/stripes-components/en';
+import "../lib/variables.css";
 
 const reducers = {
   form: formReducer,
