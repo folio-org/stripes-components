@@ -27,10 +27,6 @@
   display: flex;
   align-items: center;
 
-  &::-ms-clear {
-    display: none;
-  }
-
   &:focus,
   &.isFocused {
     border: 1px solid var(--primary);
@@ -81,6 +77,10 @@
 
   &.isChanged {
     background-color: oklch(from var(--primary) l c h / 20%);
+  }
+
+  &::-ms-clear {
+    display: none;
   }
 }
 
