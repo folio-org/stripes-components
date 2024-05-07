@@ -46,6 +46,7 @@ import { TextArea } from '@folio/stripes/components';
 | `fullWidth` | boolean | If the field should stretch to fill its container | | |
 | `id` | string | Adds a custom ID to the control | | |
 | `inputRef` | ref | Ref to the internal HTMLTextArea | | |
+| `isCursorAtEnd` | boolean | Place the cursor at the end of the field value | | |
 | `label` | node | The input's label | | |
 | `loading` | boolean | Adds a loading spinner to the control | | |
 | `lockWidth` | boolean | Prevent the user from changing the width | | |
