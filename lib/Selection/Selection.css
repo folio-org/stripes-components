@@ -154,6 +154,15 @@
   }
 }
 
+.groupLabel {
+  padding: 0.5rem;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text);
+  background-color: var(--color-fill-disabled);
+}
+
 .optionSegment {
   padding: 0 2px;
   text-align: initial;
