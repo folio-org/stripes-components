@@ -4,6 +4,10 @@
 
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
+* Resolve bug with form control validation styles not rendering. Adjusted order of nested selectors. Refs STCOM-1284.
+* `<MultiSelection/>`'s overlay will use the overlay container as its boundary when the `renderToOverlay` prop is applied, as opposed to the scrollParent of the control. Refs STCOM-1282.
+* Add `isCursorAtEnd` property to `TextArea` to place the cursor at the end of the value. Refs STCOM-1289.
+* Focus the last modified query field when opening `<AdvancedSearch>`. Refs STCOM-1288.
 * Avoid deprecated `defaultProps` for functional components. Refs STCOM-1291.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
