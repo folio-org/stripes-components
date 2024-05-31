@@ -155,12 +155,13 @@
 }
 
 .groupLabel {
-  padding: 0.5rem;
+  padding: 0.5rem 0.2rem;
+  font-weight: bold;
   cursor: default;
   display: flex;
   justify-content: space-between;
   color: var(--color-text);
-  background-color: var(--color-fill-disabled);
+  background-color: var(--color-fill-table-row-odd);
 }
 
 .optionSegment {
