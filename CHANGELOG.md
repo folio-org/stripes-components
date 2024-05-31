@@ -9,6 +9,7 @@
 * Add `isCursorAtEnd` property to `TextArea` to place the cursor at the end of the value. Refs STCOM-1289.
 * Focus the last modified query field when opening `<AdvancedSearch>`. Refs STCOM-1288.
 * Avoid deprecated `defaultProps` for functional components. Refs STCOM-1291.
+* Add a "Save & keep editing" translation. Refs STCOM-1296.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
