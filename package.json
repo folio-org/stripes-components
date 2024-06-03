@@ -63,7 +63,7 @@
     "@storybook/addons": "^7.6.12",
     "@storybook/manager-api": "^7.6.12",
     "@storybook/react": "^7.6.12",
-    "@storybook/react-webpack5": "7.6.12",
+    "@storybook/react-webpack5": "8.1.5",
     "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.3",
