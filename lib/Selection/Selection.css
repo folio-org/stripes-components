@@ -152,6 +152,10 @@
   &.optionOutside {
     justify-content: space-between;
   }
+
+  &.groupedOption {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .groupLabel {
@@ -163,6 +167,8 @@
   color: var(--color-text);
   background-color: var(--color-fill-table-row-odd);
 }
+
+
 
 .optionSegment {
   padding: 0 2px;
