@@ -23,7 +23,7 @@ const getHookExecutionResult = (hook, hookArguments = []) => {
         result = hookResult;
         break;
       default:
-        result = { ...hookResult };
+        result = Object.assign(result, hookResult);
     }
 
     return <></>;
