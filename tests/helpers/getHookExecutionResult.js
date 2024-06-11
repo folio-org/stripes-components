@@ -17,10 +17,13 @@ const getHookExecutionResult = (hook, hookArguments = []) => {
     const hookResult = Array.isArray(hookArguments)
       ? hook(...hookArguments)
       : hook(hookArguments);
-    if (typeof hookResult === 'function') {
-      result = hookResult;
-    } else {
-      Object.assign(result, hookResult);
+    switch (typeof hookResult) {
+      case 'function':
+      case 'string':
+        result = hookResult;
+        break;
+      default:
+        result = { ...hookResult };
     }
 
     return <></>;
