@@ -12,6 +12,7 @@
 * Use user agent colors for native `<Select>` selected `<option>`s. Refs STCOM-1287.
 * Add a "Save & keep editing" translation. Refs STCOM-1296.
 * Add `dndProvided` prop to the `<MCLRenderer>` to render a placeholder for a draggable row. Refs STCOM-1297.
+* Adjust styles for links within default `<MessageBanner>`. Refs STCOM-1276.
 * Support Optimistic Locking in Tags - allow disable and show loading indicator in MultiSelect. Refs STCOM-1299.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
