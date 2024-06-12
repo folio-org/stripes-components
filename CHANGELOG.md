@@ -13,6 +13,7 @@
 * Add a "Save & keep editing" translation. Refs STCOM-1296.
 * Add `dndProvided` prop to the `<MCLRenderer>` to render a placeholder for a draggable row. Refs STCOM-1297.
 * Adjust styles for links within default `<MessageBanner>`. Refs STCOM-1276.
+* Support Optimistic Locking in Tags - allow disable and show loading indicator in MultiSelect. Refs STCOM-1299.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
