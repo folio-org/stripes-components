@@ -1,0 +1,10 @@
+name: Centralized workflow test
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  ui:
+    # Use the shared UI workflow, v2
+    uses: folio-org/.github/.github/workflows/ui.yml@v2
+    secrets: inherit
+
+

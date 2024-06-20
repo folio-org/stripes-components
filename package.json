@@ -74,7 +74,7 @@
     "eslint": "^8.31.0",
     "faker": "^4.1.0",
     "karma-viewport": "^1.0.4",
-    "mocha": "^10.2.0",
+    "mocha": "^10.4.0",
     "moment": "^2.29.0",
     "postcss": "^8.4.2",
     "postcss-custom-media": "^9.0.1",
