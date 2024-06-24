@@ -18,6 +18,11 @@
 
   & option {
     background-color: var(--bg);
+
+    &:checked {
+      background-color: selecteditem;
+      color: selecteditemtext;
+    }
   }
 
   &.placeholder {
