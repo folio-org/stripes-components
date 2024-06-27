@@ -50,17 +50,17 @@
 
   &.error {
     border-color: var(--error);
-    background-color: color-mix(in hsl, var(--error) 25%, var(--bg));
+    background-color: color-mix(in oklab, var(--error) 25%, var(--bg));
   }
 
   &.success {
     border-color: var(--success);
-    background-color: color-mix(in hsl, var(--success) 25%, var(--bg));
+    background-color: color-mix(in oklab, var(--success) 25%, var(--bg));
   }
 
   &.warning {
     border-color: var(--warn);
-    background-color: color-mix(in hsl, var(--warn) 20%, var(--bg));
+    background-color: color-mix(in oklab, var(--warn) 20%, var(--bg));
   }
 
   &.info {
