@@ -14,6 +14,8 @@
 * Add `dndProvided` prop to the `<MCLRenderer>` to render a placeholder for a draggable row. Refs STCOM-1297.
 * Adjust styles for links within default `<MessageBanner>`. Refs STCOM-1276.
 * Support Optimistic Locking in Tags - allow disable and show loading indicator in MultiSelect. Refs STCOM-1299.
+* Update `downshift` dependency. Refactor `<Selection>`, `<MultiSelection>`, `<AutoSuggest>` to functional components. Refs STCOM-1091.
+* Implement option grouping feature in `<Selection>`. Refs STCOM-1278.
 * Refactor `<Callout>` styles for Firefox compatibility.
 * Adjust focus styling for color contrast in main navigation. Refs STCOM-1301.
 
