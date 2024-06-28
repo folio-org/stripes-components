@@ -16,6 +16,8 @@
 * Support Optimistic Locking in Tags - allow disable and show loading indicator in MultiSelect. Refs STCOM-1299.
 * Update `downshift` dependency. Refactor `<Selection>`, `<MultiSelection>`, `<AutoSuggest>` to functional components. Refs STCOM-1091.
 * Implement option grouping feature in `<Selection>`. Refs STCOM-1278.
+* Refactor `<Callout>` styles for Firefox compatibility.
+* Adjust focus styling for color contrast in main navigation. Refs STCOM-1301.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
