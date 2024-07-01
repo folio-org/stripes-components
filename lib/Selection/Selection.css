@@ -152,7 +152,23 @@
   &.optionOutside {
     justify-content: space-between;
   }
+
+  &.groupedOption {
+    padding: 0.5rem 1rem;
+  }
 }
+
+.groupLabel {
+  padding: 0.5rem 0.2rem;
+  font-weight: bold;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text);
+  background-color: var(--color-fill-table-row-odd);
+}
+
+
 
 .optionSegment {
   padding: 0 2px;

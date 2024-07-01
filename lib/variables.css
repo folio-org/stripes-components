@@ -2,8 +2,8 @@
   --color-text: #000;
   --color-text-p2: rgba(0 0 0 / 62%);
   --color-border-form: rgba(0 0 0 / 42%);
-  --color-border: rgba(0 0 0 / 20%);
-  --color-border-p2: rgba(0 0 0 / 10%);
+  --color-border: color-mix(in oklch, currentcolor 50%, transparent);
+  --color-border-p2: color-mix(in oklch, currentcolor 15%, transparent);
   --color-icon: rgba(0 0 0 / 62%);
   --color-link: #2f609f;
   --color-link-current: #fff;
@@ -16,7 +16,8 @@
   --color-fill-current: rgba(0 0 0 / 62%);
   --color-fill-disabled: rgba(0 0 0 / 15%);
   --color-fill-hover: rgba(37 118 195 / 20%);
-  --color-fill-focus: rgba(37 118 195 / 30%);
+  --color-fill-focus: rgba(37 118 195 / 20%);
+  --color-focus-shadow:  rgba(166 212 255 / 65%);
   --color-fill-focus-current: rgb(116 173 191);
   --color-fill-active: var(--primary);
   --highlighter-fill: #fc0;
