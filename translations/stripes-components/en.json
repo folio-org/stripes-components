@@ -110,6 +110,7 @@
   "selection.filterOptionsPlaceholder": "Filter options list",
   "selection.filterResultFeedback": "{length} items found, {label} selected",
   "selection.controlLabel": "Select control",
+  "multiSelection.dropdownTriggerLabel": "open menu",
   "multiSelection.defaultEmptyMessage": "No matching items found!",
   "multiSelection.filterPlaceholder": "filter option list",
   "multiSelection.controlDescription": "Contains a list of any selected values, followed by an autocomplete textfield for selecting additional values.",
