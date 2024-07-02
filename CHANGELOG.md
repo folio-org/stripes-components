@@ -1,7 +1,7 @@
 # Change history for stripes-components
 
 ## 12.2.0 IN PROGRESS
-
+* Add specific loading props to MCL to pass to Prev/Next pagination row, Refs STCOM-1305
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
 * Resolve bug with form control validation styles not rendering. Adjusted order of nested selectors. Refs STCOM-1284.
