@@ -890,5 +890,7 @@
     "advancedSearch.match.containsAll": "Contiene todos",
     "advancedSearch.match.startsWith": "Empieza con",
     "advancedSearch.match.label": "Match option",
-    "advancedSearch.match.containsAny": "Contains any"
+    "advancedSearch.match.containsAny": "Contains any",
+    "saveAndKeepEditing": "Save & keep editing",
+    "multiSelection.dropdownTriggerLabel": "open menu"
 }
