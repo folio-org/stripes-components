@@ -23,6 +23,7 @@
 * Add translation for `<MultiSelection>` dropdown trigger. Refs FAT-14783.
 * Apply correct widths for `<MultiSelectOptionsList>`. Refs STCOM-1308.
 * Pass the `isCursorAtEnd` property to the textarea props in the `SearchField` component. Refs STCOM-1307.
+* Use `isEqual` to dedupe multiSelection values list rather that `===`. Refs STCOM-1311.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
