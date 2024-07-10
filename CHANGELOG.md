@@ -26,6 +26,7 @@
 * Use `isEqual` to dedupe multiSelection values list rather that `===`. Refs STCOM-1311.
 * Set `<MultiSelection>`'s popper modifiers to avoid overlap with the control when rendered within an Editable list. Refs STCOM-1309.
 * Conform `<Selection>`'s internal state when value prop changes after initial render. Refs STCOM-1312.
+* Conform `<Selection>`'s internal state when dataOptions prop changes after initial render. Refs STCOM-1313.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
