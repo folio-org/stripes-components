@@ -41,8 +41,8 @@ Name | type | description | default | required
 `onChange` | func | Change event handler for when internal state changes. `selectedItems` is passed as parameter to function. | |
 `onRemove` | func | Event handler specifically called when an item is removed from the selection. The removed item is passed to the handler. | |
 `placeholder` | string | Rendered as a placeholder for the control when no value is present. | |
-`renderToOverlay` | bool | For use in situations where the dropdown may be cut off due to a containing dom element's `overflow: hidden/auto` css attribute. | false |
 `showLoading` | bool | Should render loading indicator on the field | |
+`usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. | |
 `value` | array | Array of selected objects. | |
 `valueFormatter` | func | Render function that accepts an object with keys for the option. The function is called to display values in the selected values list. If the prop is missing, `formatter` will be used instead. | |
 `ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | |

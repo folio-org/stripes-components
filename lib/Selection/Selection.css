@@ -9,6 +9,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: var(--shadow);
+  pointer-events: all;
 }
 
 .selectionListStatus {

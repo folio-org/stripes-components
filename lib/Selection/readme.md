@@ -81,6 +81,8 @@ Name | type | description | default | required
 `useValidStyle` | bool | if true, "success" styles will be applied to control if it contains a valid value `onBlur` (using redux-form validation.) | false |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `popper` | object | Used to adjust placement of options list overlay via underlying Popper component. [See `<Popper>` props](../Popper/readme.md) | | false |
+`usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. | |
+
 ## Labeling
 Like other form controls in stripes-components, `<Selection>` abides by standard conventions for labeling props if alternatives to `label` (visible label with the control) are required... `aria-label` and `aria-labelledby` are useful for this. See [Accessiblity for developers documentation](https://github.com/folio-org/stripes-components/blob/master/guides/AccessibilityDevPrimer.stories.mdx#labeling) for more details about which to choose.
 
