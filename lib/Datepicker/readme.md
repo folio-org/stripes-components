@@ -15,6 +15,7 @@ Name | type | description | default | required
 `autoFocus` | bool | If this prop is `true`, component will automatically focus on mount | |
 `backendDateStandard` | string | parses to/from ISO 8601 standard, with Arabic (0-9) digits, by default before committing value. | "ISO 8601" | false
 `disabled` | bool | if true, field will be disabled for focus or entry. | false | false
+`formatInvalidDates` | bool | If set to true, the input value will be set directly to '' when an invalid date is entered. When set to false the value is left alone for validation purposes (which leaves the onus of preventing save or sanitising value on the implementing code) | true | false
 `id` | string | id for date field - used in the "id" attribute of the text input | | false
 `label` | string | visible field label | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false

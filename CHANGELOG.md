@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
 ## 12.2.0 IN PROGRESS
+* Fix bug in Datepicker when outputBackendValue is set to false, and introduce formatInvalidDates bool. refs STCOM-1327
 * Add specific loading props to MCL to pass to Prev/Next pagination row, Refs STCOM-1305
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
