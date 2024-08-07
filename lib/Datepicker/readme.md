@@ -16,6 +16,7 @@ Name | type | description | default | required
 `backendDateStandard` | string | parses to/from ISO 8601 standard, with Arabic (0-9) digits, by default before committing value. | "ISO 8601" | false
 `disabled` | bool | if true, field will be disabled for focus or entry. | false | false
 `id` | string | id for date field - used in the "id" attribute of the text input | | false
+`inputValidator` | func | Function that receives the value, the provided format prop and the backend format to determine if the value is passed on through advanced stages of the value lifecycle. Returns a boolean.  | | `defaultInputValidator`
 `label` | string | visible field label | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
 `onChange` | func | Event handler to handle updates to the datefield text. | | false
@@ -97,7 +98,8 @@ The value flow happens in 3 stages
 - timeZone - the timezone prop.
 - uiFormat - the localized format or `dateFormat` prop.
 - outputFormat - the ISO-string literal format derived from the `backendDateStandard` prop
-3. output formatting - when the input is changed by the user, its value is formatted again to work with the backend using the `outputFormatter` function. This function is provided with **a parameter object** holding the following values:
+3. Input validity. The value is checked to be sure it's a parsible 'valid' date using the `inputValidator` prop. It is provided the parameters `value`, `format`, `backendStandard` - the backendStandard is an alpha-numeric formatting string, similar to `"YYYY-MM-DD"`...
+4. output formatting - when the input is changed by the user, its value is formatted again to work with the backend using the `outputFormatter` function. This function is provided with **a parameter object** holding the following values:
 - backendDateStandard - the prop of the same name.
 - value - the value prop.
 - uiFormat - the localized format or `dateFormat` prop for displaying in the textfield.
