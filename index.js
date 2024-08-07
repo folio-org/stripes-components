@@ -10,7 +10,13 @@ export {
   default as Datepicker,
   Calendar,
   staticFirstWeekDay,
-  staticLangCountryCodes
+  staticLangCountryCodes,
+  defaultOutputFormatter,
+  defaultParser,
+  defaultInputValidator,
+  passThroughOutputFormatter,
+  passThroughParser,
+  datePickerAppValidationProps
 } from './lib/Datepicker';
 export { default as DateRangeWrapper } from './lib/DateRangeWrapper';
 export { default as FormattedDate } from './lib/FormattedDate';
