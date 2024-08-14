@@ -263,6 +263,16 @@
   &.mclSorted .mclHeaderInner {
     text-decoration: underline;
   }
+
+  &.mclSortIndicator .mclHeaderInner::after {
+     content: '';
+     width: var(--gutter-static);
+     height: 18px;
+     background:
+       url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20fill%3D%22%23888%22%20class%3D%22stripes__icon%22%20d%3D%22M7%202.9l5.77%206.92-1.54%201.28L7%206.02%202.77%2011.1%201.23%209.82%207%202.9z%22/%3E%3C/svg%3E') no-repeat center top,
+       url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20fill%3D%22%23888%22%20class%3D%22stripes__icon%22%20d%3D%22M7%2011.1L1.23%204.18%202.77%202.9%207%207.98l4.23-5.08%201.54%201.28L7%2011.1z%22/%3E%3C/svg%3E') no-repeat center 8px;
+     background-size: 10px;
+  }
 }
 
 .mclHeaderOuter:active,
