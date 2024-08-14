@@ -16,7 +16,7 @@
     "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/stripes-components ./translations/stripes-components/compiled",
     "lint": "eslint ./ && stylelint \"lib/**/*.css\"",
     "storybook": "storybook dev -p 9001 -c .storybook",
-    "storybook-build": "storybook build -c .storybook -o .out",
+    "storybook-build": "storybook build -c .storybook -o ./docs",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
     "test-dev": "stripes test karma --watch"
