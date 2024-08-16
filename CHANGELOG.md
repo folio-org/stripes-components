@@ -30,6 +30,7 @@
 * Make `<MultiSelection>` less strict about item removal via `itemToKey` setting (`downshift`). Refs STCOM-1311.
 * Conform `<Selection>`'s internal state when dataOptions prop changes after initial render. Refs STCOM-1313.
 * Add the `showSortIndicator` property to MLC to display a sort indicator next to the sortable column names. Refs STCOM-1328.
+* Fix MCL Paging bug - back button being incorrectly disabled. This was due to an inaccurate rowcount/rowIndex value. Refs STCOM-1331.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
