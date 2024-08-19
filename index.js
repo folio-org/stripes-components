@@ -8,6 +8,7 @@ export { default as CurrencySelect } from './lib/CurrencySelect';
 export { default as CountrySelection } from './lib/CountrySelection';
 export {
   default as Datepicker,
+  AppValidatedDatepicker,
   Calendar,
   staticFirstWeekDay,
   staticLangCountryCodes,

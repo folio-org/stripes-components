@@ -16,7 +16,7 @@ Name | type | description | default | required
 `backendDateStandard` | string | parses to/from ISO 8601 standard, with Arabic (0-9) digits, by default before committing value. | "ISO 8601" | false
 `disabled` | bool | if true, field will be disabled for focus or entry. | false | false
 `id` | string | id for date field - used in the "id" attribute of the text input | | false
-`inputValidator` | func | Function that receives the value, the provided format prop and the backend format to determine if the value is passed on through advanced stages of the value lifecycle. Returns a boolean.  | | `defaultInputValidator`
+`inputValidator` | func | Function that receives the value (value prop or user input), the provided format prop and the backend format to determine if the value is passed on through advanced stages of the value lifecycle (formatting for output). Returns a boolean.  | | `defaultInputValidator`
 `label` | string | visible field label | | false
 `locale` | string | Overrides the locale provided by context. | "en" | false
 `onChange` | func | Event handler to handle updates to the datefield text. | | false
@@ -114,6 +114,34 @@ The value flow happens in 3 stages
 * **Right arrow** - Move cursor right 1 day in the calendar (forwards 1 day)
 * **Enter** - Select date at cursor
 * **Esc** - Close calendar
+
+## Fully controlled version.
+
+By default, `<Datepicker>` will only emit empty strings or fully formed date strings formatted to the specifics of the `backendDateStandard`. If the application requires a fully controlled set-up, where incomplete and possibly invalid values can pass through form state and be validated by the consuming app itself, we export a set of bundle of props that can be applied via `datePickerAppValidationProps` like so...
+
+```
+import { datepickerAppValidationProps, Datepicker } from '@folio/stripes/components';
+
+<Field
+  component={Datepicker}
+  label="myDateField"
+  name={rfFieldState}
+  {...datePickerAppValidationProps }
+/>
+```
+
+`datePickerAppValidationProps` supplies modified versions of the `outputFormatter`, `parser` and `inputValidator` props that conform to the use-case of app-level validation.
+
+We also export `<AppValidatedDatepicker>` - a component which applies the props of `datePickerAppValidationProps` to a wrapped `<Datepicker>` instance. Similar to above:
+
+```
+<Field
+  component={AppValidatedDatepicker}
+  label="myDateField"
+  name={rfFieldState}
+/>
+```
+
 
 ## Custom Circumstances with RFF
 
