@@ -30,6 +30,7 @@
 * Make `<MultiSelection>` less strict about item removal via `itemToKey` setting (`downshift`). Refs STCOM-1311.
 * Conform `<Selection>`'s internal state when dataOptions prop changes after initial render. Refs STCOM-1313.
 * Add the `showSortIndicator` property to MLC to display a sort indicator next to the sortable column names. Refs STCOM-1328.
+* Expose `aria-label` for SearchField Index `<Select>`. Refs STCOM-1329.
 * `<FilterAccordionHeader>` - move focus to accordion header after clear button is pressed. Refs STCOM-1330.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
