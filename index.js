@@ -156,7 +156,7 @@ export {
   getLastFocusable,
   getFirstFocusable
 } from './util/getFocusableElements';
-
+export * from './util/consts';
 export {
   default as currencies,
   currenciesByCode,
