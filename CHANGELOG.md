@@ -35,6 +35,7 @@
 * Remove `tabIndex="-1"` from `<Datepicker>`'s clear button, placing it in tab order. Refs STCOM-1322.
 * `<MultiSelection>` Bugfix - remove filter value after an item is selected. Refs STCOM-1324.
 * Fix visual issue with `<Selection>` where dropdown caret shifts downward when a validation message is present. Refs STCOM-1323.
+* Fix MCL Paging bug - back button being incorrectly disabled. This was due to an inaccurate rowcount/rowIndex value. Refs STCOM-1331.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
