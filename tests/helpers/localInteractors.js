@@ -7,5 +7,6 @@ export const label = HTML.extend('label-interactor')
 export const RoledHTML = HTML.extend('html plus')
   .filters({
     role: element => element.getAttribute('role'),
-    tagName: el => el.tagName
+    tagName: el => el.tagName,
+    inert: el => el.inert
   });
