@@ -81,6 +81,7 @@ Name | type | description | default | required
 `columnWidths` | object | Set custom column widths, e.g. {email: '150px'}. Component will automatically measure any columns that are unspecified. An object can be provided with `min` and `max` keys to set up a range - MCL will pick as close to the `min` as it can and none over the `max`.| |
 `contentData` | array of object | the list of objects to be displayed. | | required
 `dataEndReached` | bool | Used in conjuction with `pagingType="click"`, `dataEndReached` can be used if a suitable `totalCount` prop cannot be obtained. Setting this to `true` will render the "end-of-list" marker rather than the load button. | `false` |
+`dndProvided` | object | The `provided` object provided by the `<Droppable>` context contains a `placeholder` for the draggable row. Used for MCLs supporting Drag-n-Drop. | `{}` |
 `formatter`  | object mapping names to functions | see separate section | |
 `getCellClass` | func | Used to update or completely overwrite the visual styles for each column. The function passed to this prop will receive the current CSS class, row data and the column name as the parameters and the returned value will overwrite the default class – e.g. `(defaultClass, rowData, header) => ${defaultClass} ${myCustomClass}` | `undefined` |
 `getHeaderCellClass` | func | Used to update the visual styles for each column header. The function passed to this prop will receive the column name as the  parameter and the returned value will extend the default class – e.g. `header =>  ${myCustomClass}` | `undefined` |
@@ -112,6 +113,8 @@ Name | type | description | default | required
 `rowUpdater` | func(`rowData`, `rowIndex`) | This function should return a shallow data structure (flattened object) or primitive (string, number) that will indicate that exterior data for a row has changed. It will receive two parameters of the `rowData` and the `rowIndex` that can be used to base return values. This result is fed directly to the data rows via props, keeping them pure. You should rarely have to use this prop, as most changes will be relayed directly in the `contentData` array itself. | `noop` |
 `selectedClass` | string | override class for the default style applied to selected rows. | built-in |
 `selectedRow` | object | **legacy API** Applies 'selected' class to the table row matching the property in the object, e.g. {id: '1224'}. | |
+`showSortIndicator` | bool | If true, an icon for sortable fields will be displayed next to the column name. It will not be displayed for the currently sorted column. Also add the `sortableFields` property so that screen readers can read all column names, not just those not in `nonInteractiveHeaders`. | false |
+`sortableFields` | array | A list of sortable field names, allowing the sort indicator to be displayed for sortable fields rather than those not in `nonInteractiveHeaders`. | `[]` |
 `sortedColumn` | string | Used to apply styling to the appropriate column. | |
 `sortDirection` | string | 'ascending' or 'descending' direction. | |
 `stickyFirstColumn` | bool | Pins the first column in place so that it will remain visible when scrolled out of view. | |

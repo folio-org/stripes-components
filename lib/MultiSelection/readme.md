@@ -32,6 +32,7 @@ Name | type | description | default | required
 `filter` | func | a custom function used to filter candidate values for search filters. It must accept two arguments: a string containing the partial value typed by the user, and an array of candidate values. If `asyncFiltering` is not being used, it should return an object with the shape of `{ renderedItems: <array> }`, where the array is a list of the candidate values that match the partial value. The returned object can also include additional properties that can be used for conditional rendering of `action`s. | The default filter (the `filterOptions` function in [`MultiSelection.js`](MultiSelection.js)) works by left-anchored regular-expression matching on the items' `label` field |
 `formatter` | func | Render function that accepts an object with keys for the option and the current filter string. The function is called to display values in the options dropdown and in the selected values list if `valueFormatter` prop is missing. A default `formatter` is provided. | [DefaultOptionFormatter](../Selection/DefaultOptionFormatter.js) |
 `id` | string | Sets the `id` attribute for the control. Other interior id's are generated using this string as a prefix. | |
+`inputRef` | object/func | Reference to input element | |
 `itemToString` | `<string>`func | Function used to return a single string representation of its value. For example, option objects with a shape of `{label:<string>, value:<object>}` would use `item => (item ? item.label : '')` for their toString function. This is used to generate strings so that values can accurately be announced for screen readers. | `item => (item ? item.label : '')` |
 `label` | string | Used as the form label for the field. Appropriate label/field relationship for accessibility is automatically set up by the component. | |
 `maxHeight` | number | The maximum height of the options menu in pixels. This does not include the heigh of any validation messages that may also appear with the menu. | `168` |
@@ -40,7 +41,8 @@ Name | type | description | default | required
 `onChange` | func | Change event handler for when internal state changes. `selectedItems` is passed as parameter to function. | |
 `onRemove` | func | Event handler specifically called when an item is removed from the selection. The removed item is passed to the handler. | |
 `placeholder` | string | Rendered as a placeholder for the control when no value is present. | |
-`renderToOverlay` | bool | For use in situations where the dropdown may be cut off due to a containing dom element's `overflow: hidden/auto` css attribute. | false |
+`showLoading` | bool | Should render loading indicator on the field | |
+`usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. | |
 `value` | array | Array of selected objects. | |
 `valueFormatter` | func | Render function that accepts an object with keys for the option. The function is called to display values in the selected values list. If the prop is missing, `formatter` will be used instead. | |
 `ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | |
