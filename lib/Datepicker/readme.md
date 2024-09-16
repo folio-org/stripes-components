@@ -15,6 +15,7 @@ Name | type | description | default | required
 `autoFocus` | bool | If this prop is `true`, component will automatically focus on mount | |
 `backendDateStandard` | string | parses to/from ISO 8601 standard, with Arabic (0-9) digits, by default before committing value. | "ISO 8601" | false
 `disabled` | bool | if true, field will be disabled for focus or entry. | false | false
+`hideCalendarButton` | bool | if true, calendar button will be hidden. | false | false
 `id` | string | id for date field - used in the "id" attribute of the text input | | false
 `inputValidator` | func | Function that receives the value (value prop or user input), the provided format prop and the backend format to determine if the value is passed on through advanced stages of the value lifecycle (formatting for output). Returns a boolean.  | | `defaultInputValidator`
 `label` | string | visible field label | | false
