@@ -38,6 +38,7 @@
 * Fix MCL Paging bug - back button being incorrectly disabled. This was due to an inaccurate rowcount/rowIndex value. Refs STCOM-1331.
 * `Datepicker` - add the `hideCalendarButton` property to hide the calendar icon button. Refs STCOM-1342.
 * Optimize rendering of 2k+ option lists in `Selection`. Refs STCOM-1340.
+* Refactor Modals away from `react-overlays`. Refs STCOM-1334.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
