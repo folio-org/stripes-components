@@ -22,6 +22,7 @@
   background-color: transparent;
   transition: background-color 0.3s;
   overflow: visible;
+  border: 0;
 
   &:focus {
     & .modalHeader {
