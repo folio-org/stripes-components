@@ -3,7 +3,7 @@
 // in contextes where there may not be a div#OverlayContainer
 
 import { useState, useEffect } from 'react';
-import { OVERLAY_CONTAINER_ID } from '../../util/consts';
+import { OVERLAY_CONTAINER_ID } from './consts';
 
 const resolveElement = (ref) => {
   if (ref === null) {
@@ -19,7 +19,7 @@ const resolveElement = (ref) => {
     return el;
   }
   return ref;
-}
+};
 
 export default (ref) => {
   const [element, setElement] = useState(resolveElement(ref));
@@ -39,10 +39,10 @@ export default (ref) => {
       const el = resolveElement(ref);
       if (!el) setElement(el);
     }
-  }
+  };
 
   return {
     element,
     refresh
-  }
+  };
 };
