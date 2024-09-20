@@ -3,7 +3,7 @@
 // in contextes where there may not be a div#OverlayContainer
 
 import { useState, useEffect } from 'react';
-import { OVERLAY_CONTAINER_ID } from './consts';
+import { OVERLAY_CONTAINER_ID } from '../../util/consts';
 
 const resolveElement = (ref) => {
   if (ref === null) {
