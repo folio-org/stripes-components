@@ -103,6 +103,7 @@
   "button.duplicate": "Duplicate",
   "button.new": "New",
   "exportToCsv": "Export to CSV",
+  "selection.enterFilter": "Enter filter to load possible options",
   "selection.emptyList": "List is empty",
   "selection.noMatches": "No matching options",
   "selection.loading": "Loading options...",
