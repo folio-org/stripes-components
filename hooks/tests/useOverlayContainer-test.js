@@ -93,9 +93,26 @@ describe('useOverlayContainer', () => {
       }));
   });
 
-  describe('refresh', () => {
+  describe('successfully initial result...', () => {
     beforeEach(async () => {
       await getHookExecutionHarness(
+        useOverlayContainer,
+        ['true'],
+        Harness,
+        (result) => { res = result.element },
+        areDomNodesEqual
+      );
+    });
+
+    it('div#OverlayContainer in place, it should return it',
+      () => converge(() => {
+        if (res !== 'true') throw new Error('should just return truthy value');
+      }));
+  });
+
+  describe('refresh', () => {
+    beforeEach(async () => {
+      res = await getHookExecutionHarness(
         useOverlayContainer,
         [null],
         Harness,
