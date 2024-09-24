@@ -20,6 +20,7 @@
   "advancedSearch.emptyFirstRowError": "Enter a query in the first search box",
   "expandAll": "Expand all",
   "collapseAll": "Collapse all",
+  "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
   "goToPreviousYear": "Go to previous year",
   "goToPreviousMonth": "Go to previous month",
   "goToNextYear": "Go to next year",
