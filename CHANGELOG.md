@@ -42,6 +42,7 @@
 * Apply `inert` attribute to header and siblings of `div#OverlayContainer` when modals are open. Refs STCOM-1334.
 * Expand focus trapping of modal to the `div#OverlayContainer` so that overlay components can function within `<Modal>` using the `usePortal` prop. Refs STCOM-1334.
 * Render string for `FilterGroups` clear button. Refs STCOM-1337.
+* Add OverlayContext for Overlay-style components rendered within Modals and MCL's. Refs STCOM-1335.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
