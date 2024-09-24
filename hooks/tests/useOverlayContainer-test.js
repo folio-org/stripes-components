@@ -35,7 +35,7 @@ const areDomNodesEqual = (current, candidate) => {
   return true;
 }
 
-describe('useOverlayContainer', () => {
+describe.only('useOverlayContainer', () => {
   const overlayElement = () => document.getElementById(OVERLAY_CONTAINER_ID);
   let res;
   beforeEach(() => {
@@ -73,6 +73,41 @@ describe('useOverlayContainer', () => {
     it('div#OverlayContainer in place, it should return it',
       () => converge(() => {
         if (res.id !== OVERLAY_CONTAINER_ID) throw new Error(`expected element to fallback to body: ${res.id}`);
+      }));
+  });
+
+  describe('successfully initial null result...', () => {
+    beforeEach(async () => {
+      await getHookExecutionHarness(
+        useOverlayContainer,
+        [null],
+        Harness,
+        (result) => { res = result.element },
+        areDomNodesEqual
+      );
+    });
+
+    it('div#OverlayContainer in place, it should return it',
+      () => converge(() => {
+        if (res.id !== OVERLAY_CONTAINER_ID) throw new Error(`expected element to fallback to body: ${res.id}`);
+      }));
+  });
+
+  describe('refresh', () => {
+    beforeEach(async () => {
+      await getHookExecutionHarness(
+        useOverlayContainer,
+        [null],
+        Harness,
+        (result) => { res = result },
+        areDomNodesEqual
+      );
+      res.refresh();
+    });
+
+    it('div#OverlayContainer in place, it should return it',
+      () => converge(() => {
+        if (res.element.id !== OVERLAY_CONTAINER_ID) throw new Error(`expected element to fallback to body: ${res.id}`);
       }));
   });
 });
