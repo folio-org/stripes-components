@@ -35,7 +35,7 @@ const areDomNodesEqual = (current, candidate) => {
   return true;
 }
 
-describe.only('useOverlayContainer', () => {
+describe('useOverlayContainer', () => {
   const overlayElement = () => document.getElementById(OVERLAY_CONTAINER_ID);
   let res;
   beforeEach(() => {
