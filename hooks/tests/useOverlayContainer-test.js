@@ -124,7 +124,7 @@ describe('useOverlayContainer', () => {
 
     it('div#OverlayContainer in place, it should return it',
       () => converge(() => {
-        if (res !== false) throw new Error('should just return truthy value');
+        if (res.element !== false) throw new Error('should just return false value');
       }));
   });
 
