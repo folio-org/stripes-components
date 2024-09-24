@@ -4,7 +4,7 @@ import {
   it,
 } from 'mocha';
 import { converge } from '@folio/stripes-testing';
-import getHookExecutionResult from '../../tests/helpers/getHookExecutionResult';
+import { getHookExecutionHarness } from '../../tests/helpers/getHookExecutionResult';
 import useOverlayContainer from '../useOverlayContainer';
 
 import { OVERLAY_CONTAINER_ID } from '../../util/consts';
@@ -23,7 +23,7 @@ const HarnessWithout = ({ children }) => (
 );
 
 // lodash/isEqual does not work on comparing DOM nodes, so here we are....
-const domNodesEqual = (current, candidate) => {
+const areDomNodesEqual = (current, candidate) => {
   if (current?.element?.tagName !== candidate?.element?.tagName) {
     return false;
   }
@@ -44,12 +44,12 @@ describe('useOverlayContainer', () => {
 
   describe('withoutOverlay fallback to a child of root.', () => {
     beforeEach(async () => {
-      await getHookExecutionResult(
+      await getHookExecutionHarness(
         useOverlayContainer,
         [overlayElement()],
         HarnessWithout,
         (result) => { res = result.element },
-        domNodesEqual
+        areDomNodesEqual
       );
     });
 
@@ -61,12 +61,12 @@ describe('useOverlayContainer', () => {
 
   describe('successfully resolving overlay container if it exists...', () => {
     beforeEach(async () => {
-      await getHookExecutionResult(
+      await getHookExecutionHarness(
         useOverlayContainer,
         [overlayElement()],
         Harness,
         (result) => { res = result.element },
-        domNodesEqual
+        areDomNodesEqual
       );
     });
 
