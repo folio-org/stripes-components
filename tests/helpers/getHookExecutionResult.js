@@ -3,20 +3,6 @@ import isEqual from 'lodash/isEqual';
 import noop from 'lodash/noop';
 import { mountWithContext } from '../helpers';
 
-
-const objectCompare = (current, candidate) => {
-  if (current === candidate) {
-    return true;
-  }
-
-  if (typeof current === 'object' && typeof candidate === 'object') {
-    return JSON.stringify(current) === JSON.stringify(candidate);
-  }
-
-  return false;
-};
-
-
 /**
  * getHookExecutionResult
  * Test a hook by returning its result in a promise.
@@ -49,7 +35,7 @@ const getHookExecutionResult = (hook, hookArguments = []) => {
   return mountWithContext(<TestComponent />).then(() => result);
 };
 
-const useHookExecutionResult = (hook, hookParams, comparator = objectCompare) => {
+const useHookExecutionResult = (hook, hookParams, comparator = isEqual) => {
   const [result, updateResult] = useState(hook(...hookParams));
 
   const candidate = hook(...hookParams);
@@ -79,7 +65,7 @@ export const getHookExecutionHarness = (
   hookArguments = [],
   Wrapper = Fragment,
   checkEffect = noop,
-  comparator = objectCompare
+  comparator = isEqual
 ) => {
   let result = {};
   const TestComponent = () => {

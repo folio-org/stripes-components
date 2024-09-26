@@ -22,17 +22,9 @@ const HarnessWithout = ({ children }) => (
   </div>
 );
 
-// lodash/isEqual does not work on comparing DOM nodes, so here we are....
+// We need to compare the `element` field of the result to discern difference on the re-render.
 const areDomNodesEqual = (current, candidate) => {
-  if (current?.element?.tagName !== candidate?.element?.tagName) {
-    return false;
-  }
-
-  if (current?.element?.id !== candidate?.element?.id) {
-    return false;
-  }
-
-  return true;
+  return current?.element === candidate?.element;
 }
 
 describe('useOverlayContainer', () => {
