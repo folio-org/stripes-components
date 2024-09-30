@@ -19,7 +19,7 @@ const resolveElement = (ref) => {
     return el;
   }
   return ref;
-}
+};
 
 export default (ref) => {
   const [element, setElement] = useState(resolveElement(ref));
@@ -39,10 +39,10 @@ export default (ref) => {
       const el = resolveElement(ref);
       if (!el) setElement(el);
     }
-  }
+  };
 
   return {
     element,
     refresh
-  }
+  };
 };
