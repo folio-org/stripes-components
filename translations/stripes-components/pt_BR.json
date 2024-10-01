@@ -833,7 +833,7 @@
     "ErrorBoundary.defaultSubTitle": "Atualize a página para continuar.",
     "ErrorBoundary.detailsButtonLabel": "Ver detalhes do erro",
     "ErrorBoundary.defaultButtonLabel": "Atualizar a página",
-    "ErrorBoundary.copyErrorButtonAriaLabel": "Copiar erro para  o clipholder",
+    "ErrorBoundary.copyErrorButtonAriaLabel": "Copiar erro para clipholder",
     "ErrorBoundary.detailsDescription": "O seguinte ocorreu, resultando na instabilidade da página atual:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "A mensagem de erro e o rastreamento da pilha foram copiados para o seu clipholder",
     "mcl.additionalResultsLoaded": "Resultados adicionais carregados",
@@ -890,5 +890,7 @@
     "advancedSearch.match.containsAll": "Contém todos",
     "advancedSearch.match.startsWith": "Começa com",
     "advancedSearch.match.label": "Opção de correspondência",
-    "advancedSearch.match.containsAny": "Contém qualquer"
+    "advancedSearch.match.containsAny": "Contém qualquer",
+    "saveAndKeepEditing": "Salvar e continuar editando",
+    "multiSelection.dropdownTriggerLabel": "Abrir menu"
 }

@@ -1,13 +1,55 @@
 # Change history for stripes-components
 
 ## 12.2.0 IN PROGRESS
-
+* Add specific loading props to MCL to pass to Prev/Next pagination row, Refs STCOM-1305
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
 * Resolve bug with form control validation styles not rendering. Adjusted order of nested selectors. Refs STCOM-1284.
 * `<MultiSelection/>`'s overlay will use the overlay container as its boundary when the `renderToOverlay` prop is applied, as opposed to the scrollParent of the control. Refs STCOM-1282.
 * Add `isCursorAtEnd` property to `TextArea` to place the cursor at the end of the value. Refs STCOM-1289.
 * Focus the last modified query field when opening `<AdvancedSearch>`. Refs STCOM-1288.
+* Avoid deprecated `defaultProps` for functional components. Refs STCOM-1291.
+* Use user agent colors for native `<Select>` selected `<option>`s. Refs STCOM-1287.
+* Add a "Save & keep editing" translation. Refs STCOM-1296.
+* Add `dndProvided` prop to the `<MCLRenderer>` to render a placeholder for a draggable row. Refs STCOM-1297.
+* Adjust styles for links within default `<MessageBanner>`. Refs STCOM-1276.
+* Support Optimistic Locking in Tags - allow disable and show loading indicator in MultiSelect. Refs STCOM-1299.
+* Update `downshift` dependency. Refactor `<Selection>`, `<MultiSelection>`, `<AutoSuggest>` to functional components. Refs STCOM-1091.
+* Implement option grouping feature in `<Selection>`. Refs STCOM-1278.
+* Refactor `<Callout>` styles for Firefox compatibility.
+* Adjust focus styling for color contrast in main navigation. Refs STCOM-1301.
+* Wrap `<Selection>` value string in exclusive element. Apply `name` attribute to `<Selection>` control. Refs FAT-14783.
+* Correctly apply supplied `ariaLabelledby` prop in `<MultiSelection`>. Refs FAT-14783.
+* Add translation for `<MultiSelection>` dropdown trigger. Refs FAT-14783.
+* Apply correct widths for `<MultiSelectOptionsList>`. Refs STCOM-1308.
+* Pass the `isCursorAtEnd` property to the textarea props in the `SearchField` component. Refs STCOM-1307.
+* Use `isEqual` to dedupe multiSelection values list rather that `===`. Refs STCOM-1311.
+* Set `<MultiSelection>`'s popper modifiers to avoid overlap with the control when rendered within an Editable list. Refs STCOM-1309.
+* Conform `<Selection>`'s internal state when value prop changes after initial render. Refs STCOM-1312.
+* Conform `<MultiSelection>`'s internal state when the value prop changes after the initial render. Refs STCOM-1311.
+* Make `<MultiSelection>` less strict about item removal via `itemToKey` setting (`downshift`). Refs STCOM-1311.
+* Conform `<Selection>`'s internal state when dataOptions prop changes after initial render. Refs STCOM-1313.
+* Add the `showSortIndicator` property to MLC to display a sort indicator next to the sortable column names. Refs STCOM-1328.
+* Expose `aria-label` for SearchField Index `<Select>`. Refs STCOM-1329.
+* `<FilterAccordionHeader>` - move focus to accordion header after clear button is pressed. Refs STCOM-1330.
+* Remove `tabIndex="-1"` from `<Datepicker>`'s clear button, placing it in tab order. Refs STCOM-1322.
+* `<MultiSelection>` Bugfix - remove filter value after an item is selected. Refs STCOM-1324.
+* Fix visual issue with `<Selection>` where dropdown caret shifts downward when a validation message is present. Refs STCOM-1323.
+* Fix MCL Paging bug - back button being incorrectly disabled. This was due to an inaccurate rowcount/rowIndex value. Refs STCOM-1331.
+* `Datepicker` - add the `hideCalendarButton` property to hide the calendar icon button. Refs STCOM-1342.
+* Optimize rendering of 2k+ option lists in `Selection`. Refs STCOM-1340.
+* Refactor Modals away from `react-overlays`. Refs STCOM-1334.
+* Apply `inert` attribute to header and siblings of `div#OverlayContainer` when modals are open. Refs STCOM-1334.
+* Expand focus trapping of modal to the `div#OverlayContainer` so that overlay components can function within `<Modal>` using the `usePortal` prop. Refs STCOM-1334.
+* Render string for `FilterGroups` clear button. Refs STCOM-1337.
+* Add OverlayContext for Overlay-style components rendered within Modals and MCL's. Refs STCOM-1335.
+* Refactored away from `findDOMNode` in codebase for React 19 preparation. Refs STCOM-1343.
+* AdvancedSearch - added a wrapping div to ref for a HotKeys ref. Refs STCOM-1343.
+* `<MultiColumnList>` components `<CellMeasurer>` and `<RowMeasurer>` updated to use refs vs `findDOMNode`. Refs STCOM-1343.
+* `<AccordionHeaders>` are wrapped with a div for use as a HotKeys ref. Refs STCOM-1343.
+* Use whole `dataOptions` array for memoization dependency rather that just `length` property. STCOM-1346.
+* Default the scope of `<CommandList>` to `document.body`. Remove internal wrapping div. Refs STCOM-1351.
+* Remove inline styling from `<Modal>` content. Refs STCOM-1348.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)

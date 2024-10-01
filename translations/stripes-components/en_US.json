@@ -1,6 +1,7 @@
 {
     "expandAll": "Expand all",
     "collapseAll": "Collapse all",
+    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
     "goToPreviousYear": "Go to previous year",
     "goToPreviousMonth": "Go to previous month",
     "goToNextYear": "Go to next year",
@@ -890,5 +891,7 @@
     "advancedSearch.match.containsAll": "Contains all",
     "advancedSearch.match.startsWith": "Starts with",
     "advancedSearch.match.label": "Match option",
-    "advancedSearch.match.containsAny": "Contains any"
+    "advancedSearch.match.containsAny": "Contains any",
+    "saveAndKeepEditing": "Save & keep editing",
+    "multiSelection.dropdownTriggerLabel": "open menu"
 }

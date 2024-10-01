@@ -80,9 +80,29 @@ Name | type | description | default | required
 `onFilter` | function | Callback function used for custom data filtering | | false |
 `useValidStyle` | bool | if true, "success" styles will be applied to control if it contains a valid value `onBlur` (using redux-form validation.) | false |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
-`popper` | object | Used to adjust placement of options list overlay via underlying Popper component. [See `<Popper>` props](../Popper/readme.md) | | false | 
+`popper` | object | Used to adjust placement of options list overlay via underlying Popper component. [See `<Popper>` props](../Popper/readme.md) | | false |
+`usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. | |
+
 ## Labeling
 Like other form controls in stripes-components, `<Selection>` abides by standard conventions for labeling props if alternatives to `label` (visible label with the control) are required... `aria-label` and `aria-labelledby` are useful for this. See [Accessiblity for developers documentation](https://github.com/folio-org/stripes-components/blob/master/guides/AccessibilityDevPrimer.stories.mdx#labeling) for more details about which to choose.
+
+## Option grouping
+This adds group headings to the list and will indent child options. `dataOptions` can simply supply an `options` key rather than a `value` key that contains a list of child `dataOptions`. Grouped and non-grouped options can be specified simultaneously.
+
+```
+dataOptions = {[
+  { label: 'top-level foo', value: 'foo first value' },
+  { label: 'group label', options:
+    [
+      {label: 'grouped one' foo', value: 'grouped1'},
+      {label: 'grouped two' foo', value: 'grouped1'},
+      {label: 'grouped three' foo', value: 'grouped1'},
+    ]
+  },
+  { label: 'top-level after group', value: 'foo last value' },
+]}
+```
+See storybook for complete usage example.
 
 ## Usage in Redux-form
 Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.

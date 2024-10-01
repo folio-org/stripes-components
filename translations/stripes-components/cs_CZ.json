@@ -890,5 +890,7 @@
     "advancedSearch.match.containsAll": "Obsahuje vše",
     "advancedSearch.match.startsWith": "Začíná na",
     "advancedSearch.match.label": "Volby shody",
-    "advancedSearch.match.containsAny": "Obsahuje jakékoli"
+    "advancedSearch.match.containsAny": "Obsahuje jakékoli",
+    "saveAndKeepEditing": "Uložit a pokračovat v úpravách",
+    "multiSelection.dropdownTriggerLabel": "otevřít menu"
 }

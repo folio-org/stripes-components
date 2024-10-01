@@ -11,4 +11,3 @@ artifacts
 /storybook-static/
 .vscode
 .idea
-yarn.lock

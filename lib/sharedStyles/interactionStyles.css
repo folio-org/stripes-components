@@ -164,7 +164,7 @@
 .interactionStyles:focus::before {
   background: var(--color-fill-focus);
   border: 1px solid var(--color-border);
-  box-shadow: 0 0 0 3px var(--color-fill-focus);
+  box-shadow: 0 0 0 2px var(--color-focus-shadow);
   z-index: 3;
 }
 

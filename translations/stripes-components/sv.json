@@ -875,8 +875,8 @@
     "advancedSearch.emptyFirstRowError": "Enter a query in the first search box",
     "Timepicker.hoursLabel": "Hours",
     "Timepicker.minutesLabel": "Minutes",
-    "Timepicker.PeriodLabel": "AM or PM",
-    "Timepicker.SetTimeLabel": "Set time",
+    "Timepicker.PeriodLabel": "AM eller PM",
+    "Timepicker.SetTimeLabel": "Ställ in tid",
     "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
     "selection.controlLabel": "Select control",
     "Timepicker.formEnd": "End of form",
@@ -890,5 +890,7 @@
     "advancedSearch.match.containsAll": "Contains all",
     "advancedSearch.match.startsWith": "Starts with",
     "advancedSearch.match.label": "Match option",
-    "advancedSearch.match.containsAny": "Contains any"
+    "advancedSearch.match.containsAny": "Contains any",
+    "saveAndKeepEditing": "Save & keep editing",
+    "multiSelection.dropdownTriggerLabel": "open menu"
 }

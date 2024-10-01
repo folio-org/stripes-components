@@ -890,5 +890,7 @@
     "advancedSearch.match.containsAll": "包含全部",
     "advancedSearch.match.startsWith": "開始於",
     "advancedSearch.match.label": "符合選項",
-    "advancedSearch.match.containsAny": "包含任何"
+    "advancedSearch.match.containsAny": "包含任何",
+    "saveAndKeepEditing": "Save & keep editing",
+    "multiSelection.dropdownTriggerLabel": "open menu"
 }

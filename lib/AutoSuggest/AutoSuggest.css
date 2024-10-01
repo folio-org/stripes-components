@@ -26,3 +26,20 @@
   display: 'inline-block';
   position: 'relative';
 }
+
+.autoSuggestItem {
+  padding: 1rem;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  font-weight: normal;
+
+  &.cursor {
+    background-color: var(--color-fill-hover);
+  }
+
+  &.selected {
+    font-weight: bold;
+  }
+}

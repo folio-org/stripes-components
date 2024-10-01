@@ -119,6 +119,11 @@
   composes: selected from '../Selection/Selection.css';
 }
 
+.optionDisabled {
+  background-color: var(--color-fill-disabled);
+  pointer-events: none;
+}
+
 .optionCursor {
   background-color: var(--color-fill-hover);
   box-shadow: inset 0 0 0 3px var(--primary);

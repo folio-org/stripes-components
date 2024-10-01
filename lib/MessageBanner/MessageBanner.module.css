@@ -94,6 +94,25 @@
   & .dismissButton {
     color: #fff;
   }
+
+  & a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:visited {
+      color: #ccc;
+      text-decoration-color: #ccc;
+    }
+
+    &:focus {
+      color: #fff;
+
+      &::before {
+        border: 1px solid #ccc;
+        z-index: auto;
+      }
+    }
+  }
 }
 
 .type-error {

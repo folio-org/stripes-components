@@ -77,6 +77,7 @@ Name | type | Description
 placeholder | string | Adds a placeholder to the search input field
 id | string | Adds an ID to the input field
 className | string | Adds a className to the root element
+indexLabel | string | Applied as an `aria-label` to the index `<Select>`.
 indexRef | ref | Reference to search index dropdown element.
 inputClass | string | Adds a className to the input
 inputRef | ref | Reference to search query input element.

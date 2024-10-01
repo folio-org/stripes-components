@@ -50,21 +50,22 @@
 
   &.error {
     border-color: var(--error);
-    background-color: oklch(from var(--error) 90% 11% h);
+    background-color: color-mix(in oklab, var(--error) 25%, var(--bg));
   }
 
   &.success {
     border-color: var(--success);
-    background-color: oklch(from var(--success) 90% 12% h);
+    background-color: color-mix(in oklab, var(--success) 25%, var(--bg));
   }
 
   &.warning {
     border-color: var(--warn);
-    background-color: oklch(from var(--warn) 90% 9% h);
+    background-color: color-mix(in oklab, var(--warn) 20%, var(--bg));
   }
 
   &.info {
     border-color: #4c8eca;
+    background-color: var(--bg);
   }
 
   &.slide-entering {
