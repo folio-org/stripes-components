@@ -47,6 +47,10 @@
 * AdvancedSearch - added a wrapping div to ref for a HotKeys ref. Refs STCOM-1343.
 * `<MultiColumnList>` components `<CellMeasurer>` and `<RowMeasurer>` updated to use refs vs `findDOMNode`. Refs STCOM-1343.
 * `<AccordionHeaders>` are wrapped with a div for use as a HotKeys ref. Refs STCOM-1343.
+* Use whole `dataOptions` array for memoization dependency rather that just `length` property. STCOM-1346.
+* Default the scope of `<CommandList>` to `document.body`. Remove internal wrapping div. Refs STCOM-1351.
+* Remove inline styling from `<Modal>` content. Refs STCOM-1348.
+* Use `<Selection>`'s formatter for rendering the selected value within the field and prevent overflow of text. Refs STCOM-1344.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
