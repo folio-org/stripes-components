@@ -41,6 +41,15 @@
 * Refactor Modals away from `react-overlays`. Refs STCOM-1334.
 * Apply `inert` attribute to header and siblings of `div#OverlayContainer` when modals are open. Refs STCOM-1334.
 * Expand focus trapping of modal to the `div#OverlayContainer` so that overlay components can function within `<Modal>` using the `usePortal` prop. Refs STCOM-1334.
+* Render string for `FilterGroups` clear button. Refs STCOM-1337.
+* Add OverlayContext for Overlay-style components rendered within Modals and MCL's. Refs STCOM-1335.
+* Refactored away from `findDOMNode` in codebase for React 19 preparation. Refs STCOM-1343.
+* AdvancedSearch - added a wrapping div to ref for a HotKeys ref. Refs STCOM-1343.
+* `<MultiColumnList>` components `<CellMeasurer>` and `<RowMeasurer>` updated to use refs vs `findDOMNode`. Refs STCOM-1343.
+* `<AccordionHeaders>` are wrapped with a div for use as a HotKeys ref. Refs STCOM-1343.
+* Use whole `dataOptions` array for memoization dependency rather that just `length` property. STCOM-1346.
+* Default the scope of `<CommandList>` to `document.body`. Remove internal wrapping div. Refs STCOM-1351.
+* Remove inline styling from `<Modal>` content. Refs STCOM-1348.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
