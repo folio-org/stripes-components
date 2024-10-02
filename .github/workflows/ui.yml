@@ -6,7 +6,7 @@ on:
 
 jobs:
   ui:
-    uses: folio-org/.github/.github/workflows/ui.yml@v1.1
+    uses: folio-org/.github/.github/workflows/ui.yml@v1.5
     secrets: inherit
     with:
       jest-enabled: false
