@@ -49,6 +49,7 @@
 * `<AccordionHeaders>` are wrapped with a div for use as a HotKeys ref. Refs STCOM-1343.
 * Use whole `dataOptions` array for memoization dependency rather that just `length` property. STCOM-1346.
 * Default the scope of `<CommandList>` to `document.body`. Remove internal wrapping div. Refs STCOM-1351.
+* Remove inline styling from `<Modal>` content. Refs STCOM-1348.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
