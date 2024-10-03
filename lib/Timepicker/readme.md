@@ -46,7 +46,7 @@ Name | type | description | default | required
 `timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
 `timeFormat` | string | String to override default time format according to locale | | false
 `useInput` | bool | If true - Outputs the value as it is displayed in the input. | false |
-`usePortal` | bool | if true, the Timepicker will render itself to a React-Portal (the `#OverlayContainer` div) this avoids haveing the Timepicker cutoff by overflow. | false | false
+`usePortal` | bool | if true, the Timepicker will render itself to a React-Portal (the `#OverlayContainer` div) this avoids haveing the Timepicker cutoff by overflow. Given the container of this component, `usePortal` may not be required. See [portals documentation](https://folio-org.github.io/stripes-components/iframe.html?viewMode=docs&id=guides-ui-layout--docs#portals) for guidance. | false | false
 `value` | string | time to be displayed in the visible input. | | false
 
 

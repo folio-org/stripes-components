@@ -42,3 +42,22 @@ class LayoutExample extends React.Component {
 export default LayoutExample;
 
 ```
+
+## Portals
+
+Another detail of the stripes UI is that we render a special lement that 'overlay' components such as Dropdowns or Datepicker's Calendar control can render into if the controls run the risk of
+Being overlapped. This feature should **only** be used when overlapping is possible since it does involve rendering interactive elements/sending focus to other parts of the DOM.
+Each of these components implements a `usePortal` prop that will render its menu to the overlay elements. We also export a `<StripesOverlayWrapper>` that will automatically apply
+the `usePortal` behavior to nested overlay components. `<Modal>` and `<MultiColumnList>` components build in a `<StripesOverlayWrapper>` by default.
+
+Basic Usage:
+
+```
+{/* usePortal is necessary for individual components outside of a StripesOverlayWrapper */}
+<Datepicker usePortal />
+
+<StripesOverlayWrapper>
+  {/* usePortal isn't necessary here */}
+  <ListOfOverlayComponents />
+</StripesOverlayWrapper>
+```
