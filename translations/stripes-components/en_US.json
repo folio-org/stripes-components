@@ -48,7 +48,7 @@
     "metaSection.source": "Source: {source}",
     "metaSection.recordCreated": "Record created: {date} {time}",
     "metaSection.recordLastUpdated": "Record last updated: {date} {time}",
-    "selection.enterFilter": "Enter filter to load possible options",
+    "selection.enterFilter": "Enter a value to load options",
     "selection.emptyList": "List is empty",
     "selection.noMatches": "No matching options",
     "selection.filterOptionsLabel": "{label} options filter",
