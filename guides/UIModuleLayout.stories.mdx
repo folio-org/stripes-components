@@ -1,4 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
+import usePortalFalse from './static/use-portal-false.gif';
+import usePortalTrue from './static/use-portal-true.gif';
 
 <Meta title="UI Layout" />
 
@@ -46,9 +48,16 @@ export default LayoutExample;
 ## Portals
 
 Another detail of the stripes UI is that we render a special lement that 'overlay' components such as Dropdowns or Datepicker's Calendar control can render into if the controls run the risk of
-Being overlapped. This feature should **only** be used when overlapping is possible since it does involve rendering interactive elements/sending focus to other parts of the DOM.
-Each of these components implements a `usePortal` prop that will render its menu to the overlay elements. We also export a `<StripesOverlayWrapper>` that will automatically apply
+Being overlapped. This image shows an example of this problem - controls in the list are cut off by the list's wrapping element.
+
+<img style={{ border: '1px solid #AAA' }} src={usePortalFalse} alt="Problematic overlay control, cut off by the border of its container."/>
+
+Each of these overlay components implements a `usePortal` prop that will render its menu to the overlay elements. We also export a `<StripesOverlayWrapper>` that will automatically apply
 the `usePortal` behavior to nested overlay components. `<Modal>` and `<MultiColumnList>` components build in a `<StripesOverlayWrapper>` by default.
+
+<img style={{ border: '1px solid #AAA' }} src={usePortalTrue} alt="Overlay control with issue resolve via the 'usePortal' prop." />
+
+This feature should **only** be used when overlapping is possible since it does involve rendering interactive elements/sending focus to other parts of the DOM.
 
 Basic Usage:
 
