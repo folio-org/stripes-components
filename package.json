@@ -112,7 +112,7 @@
     "popper.js": "^1.14.6",
     "prop-types": "^15.5.10",
     "prop-types-extra": "^1.1.0",
-    "query-string": "^8.1.0",
+    "query-string": "^9.1.0",
     "react-highlight-words": "^0.20.0",
     "react-overlays": "^5.2.1",
     "react-quill": "^2.0.0",
