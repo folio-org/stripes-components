@@ -51,6 +51,7 @@
 * Default the scope of `<CommandList>` to `document.body`. Remove internal wrapping div. Refs STCOM-1351.
 * Remove inline styling from `<Modal>` content. Refs STCOM-1348.
 * Use `<Selection>`'s formatter for rendering the selected value within the field and prevent overflow of text. Refs STCOM-1344.
+* Export `<StripesOverlayWrapper>` that will automatically apply the `usePortal` behavior to nested overlay components. Refs STCOM-1353.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)

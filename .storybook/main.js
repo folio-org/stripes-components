@@ -15,7 +15,7 @@ const config = {
     titlePrefix: 'Components',
     files: '**/*.stories.[tj]s'
   }],
-
+  staticDirs: ['../guides/static'],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-mdx-gfm'
