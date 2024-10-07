@@ -31,7 +31,7 @@ Name | type | description | default | required
 `timeZone` | string | Overrides the time zone provided by context. | "UTC" | false
 `useFocus` | bool | if set to false, component relies solely on clicking the calendar icon to toggle appearance of calendar. | true | false
 `useInput` | bool | tells the Datepicker that it is being used under react-final-form, so it can modify its behaviour accodingly. **This is necessary when used with react-final-form** or the Datepicker will not work. | false | false
-`usePortal` | bool | if true, the Datepicker will render itself to a React-Portal (the `#OverlayContainer` div) this avoids haveing the Datepicker cutoff by overflow. Given the container of this component, `usePortal` may not be required. See [portals documentation](https://folio-org.github.io/stripes-components/iframe.html?viewMode=docs&id=guides-ui-layout--docs#portals) for guidance. | false | false
+`usePortal` | bool | if true, the Datepicker will render itself to a React-Portal (the `#OverlayContainer` div) this avoids having the Datepicker cut off by overflow. Given the container of this component, `usePortal` may not be required. See [portals documentation](https://folio-org.github.io/stripes-components/iframe.html?viewMode=docs&id=guides-ui-layout--docs#portals) for guidance. | false | false
 `value` | string | date to be displayed in the textfield. In forms, this is supplied by the initialValues prop supplied to the form | "" | false
 
 <!-- dateFormat | string | system formatting for date. [Moment.js formats](https://momentjs.com/docs/#/displaying/format/) are supported | "MM/DD/YYYY" | false-->
