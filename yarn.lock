@@ -2325,7 +2325,7 @@
     webpack-bundle-analyzer "^4.4.2"
     yargs "^17.3.1"
 
-"@folio/stripes-react-hotkeys@^3.1.5":
+"@folio/stripes-react-hotkeys@^3.1.0":
   version "3.1.10990000000033"
   resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-react-hotkeys/-/stripes-react-hotkeys-3.1.10990000000033.tgz#ca5e58a89cf9dbd1d9b5c1b7e5daf9c635289dc0"
   integrity sha512-IyMnHi0WJqdWQaNiNF/O+HtilF/OrIFdC58Ru539SnTFgfE1kMODmCAKKStfNravjGpazZrF7puJTSCP/X5sig==
