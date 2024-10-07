@@ -104,6 +104,7 @@
   "button.duplicate": "Duplicate",
   "button.new": "New",
   "exportToCsv": "Export to CSV",
+  "selection.enterFilter": "Enter a value to load options",
   "selection.emptyList": "List is empty",
   "selection.noMatches": "No matching options",
   "selection.loading": "Loading options...",
