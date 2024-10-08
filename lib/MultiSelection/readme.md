@@ -42,7 +42,7 @@ Name | type | description | default | required
 `onRemove` | func | Event handler specifically called when an item is removed from the selection. The removed item is passed to the handler. | |
 `placeholder` | string | Rendered as a placeholder for the control when no value is present. | |
 `showLoading` | bool | Should render loading indicator on the field | |
-`usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. | |
+`usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. Given the container of this component, `usePortal` may not be required. See [portals documentation](https://folio-org.github.io/stripes-components/iframe.html?viewMode=docs&id=guides-ui-layout--docs#portals) for guidance. | |
 `value` | array | Array of selected objects. | |
 `valueFormatter` | func | Render function that accepts an object with keys for the option. The function is called to display values in the selected values list. If the prop is missing, `formatter` will be used instead. | |
 `ariaLabelledBy` | string | Used for applying an accessible label if no `label` prop is provided | |

@@ -65,6 +65,7 @@ customFormatter = ({ option, searchTerm }) => {
 ## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
+`asyncFilter` | bool | Set to `true` if your `onFilter` function makes a request for updated `dataOptions` rather than filter the `dataOptions` directly on the front-end. | `false` | false
 `dataOptions` | array of objects | Array of objects with `label` and `value` keys. The labels are visible to the users in the options list, the values are not. | | &#10004;
 `id` | string | Sets the `id` html attribute on the control | |
 `inputRef` | object/func | Reference object/function for accessing the contro button DOM element. | ref | false
@@ -81,7 +82,7 @@ Name | type | description | default | required
 `useValidStyle` | bool | if true, "success" styles will be applied to control if it contains a valid value `onBlur` (using redux-form validation.) | false |
 `autoFocus` | bool | If this prop is `true`, control will automatically focus on mount | |
 `popper` | object | Used to adjust placement of options list overlay via underlying Popper component. [See `<Popper>` props](../Popper/readme.md) | | false |
-`usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. | |
+`usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. Given the container of this component, `usePortal` may not be required. See [portals documentation](https://folio-org.github.io/stripes-components/iframe.html?viewMode=docs&id=guides-ui-layout--docs#portals) for guidance. | |
 
 ## Labeling
 Like other form controls in stripes-components, `<Selection>` abides by standard conventions for labeling props if alternatives to `label` (visible label with the control) are required... `aria-label` and `aria-labelledby` are useful for this. See [Accessiblity for developers documentation](https://github.com/folio-org/stripes-components/blob/master/guides/AccessibilityDevPrimer.stories.mdx#labeling) for more details about which to choose.
@@ -104,7 +105,31 @@ dataOptions = {[
 ```
 See storybook for complete usage example.
 
-## Usage in Redux-form
+## Async Filtering
+Default functionality of `<Selection>` is client-side filtering of options, but it can set up to perform filtering via a request which would simply update the provided `dataOptions` list. Just provide the `asyncFilter` boolean prop and implement something similar to the following example for your `onFilter` function.
+
+```
+const [data, setData] = useState(hugeOptionsList);
+const [loading, setLoading] = useState(false);
+
+const handleFilter = async (filter) => {
+  setLoading(true);           // So that the component can render a loading spinner while the user waits...
+  setData([]);                // empty data so that none will render...
+  const newData = await ...   // perform request here...
+  setData(newData);           // supply the new dataOptions
+  setLoading(false);          // turn off the loading spinner...
+};
+
+<Selection
+  label="Async select"
+  dataOptions={data}
+  asyncFilter
+  onFilter={handleFilter}
+  loading={loading}
+/>
+```
+
+## Usage in React Final Form
 Redux form will provide `input` and `meta` props to the component when it is used with a redux-form `<Field>` component. The component's value and validation are supplied through these.
 ```
 <Field name="SelectionCountry" label="Country" id="countrySelect" placeholder="Select country" component={Selection} dataOptions={countriesOptions}/>
