@@ -171,7 +171,7 @@ export {
   currenciesByNumber,
   currenciesOptions
 } from './util/currencies';
-
+export { default as StripesOverlayWrapper } from './util/StripesOverlayWrapper';
 export {
   default as countries,
   countriesByCode,
