@@ -892,5 +892,7 @@
     "advancedSearch.match.label": "Opção de correspondência",
     "advancedSearch.match.containsAny": "Contém qualquer",
     "saveAndKeepEditing": "Salvar e continuar editando",
-    "multiSelection.dropdownTriggerLabel": "Abrir menu"
+    "multiSelection.dropdownTriggerLabel": "Abrir menu",
+    "filterGroups.clearFilterSetLabel": "Limpar filtros {labelText} selecionados",
+    "selection.enterFilter": "Digite um valor para carregar as opções"
 }
