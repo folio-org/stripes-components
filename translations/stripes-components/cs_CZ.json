@@ -847,7 +847,7 @@
     "shortcut.duplicateRecord": "Duplikovat záznam",
     "shortcut.editRecord": "Upravit záznam",
     "shortcut.expandAll": "Rozbalit všechny odstavce",
-    "shortcut.goToSearchFilter": "Přejděte do podokna Hledat a filtrovat",
+    "shortcut.goToSearchFilter": "Přejděte do podokna Vyhledat a filtrovat",
     "shortcut.openShortcutModal": "Otevřete modální klávesové zkratky",
     "shortcut.saveRecord": "Uložit záznam",
     "selection.loading": "Načítání možností...",
@@ -892,5 +892,7 @@
     "advancedSearch.match.label": "Volby shody",
     "advancedSearch.match.containsAny": "Obsahuje jakékoli",
     "saveAndKeepEditing": "Uložit a pokračovat v úpravách",
-    "multiSelection.dropdownTriggerLabel": "otevřít menu"
+    "multiSelection.dropdownTriggerLabel": "otevřít menu",
+    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
+    "selection.enterFilter": "Enter a value to load options"
 }

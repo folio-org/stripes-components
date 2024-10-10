@@ -892,5 +892,7 @@
     "advancedSearch.match.label": "Opcja dopasowania",
     "advancedSearch.match.containsAny": "Zawiera dowolne",
     "saveAndKeepEditing": "Save & keep editing",
-    "multiSelection.dropdownTriggerLabel": "open menu"
+    "multiSelection.dropdownTriggerLabel": "open menu",
+    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
+    "selection.enterFilter": "Enter a value to load options"
 }
