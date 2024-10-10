@@ -877,7 +877,7 @@
     "Timepicker.minutesLabel": "分鐘",
     "Timepicker.PeriodLabel": "上午或下午",
     "Timepicker.SetTimeLabel": "設定時間",
-    "Timepicker.ScreenReaderLabel": "使用鍵盤方向鍵來切換日期，{label} 格式是 {screenReaderFormat} 。按下「enter」鍵以確認。",
+    "Timepicker.ScreenReaderLabel": "{label} format is {screenReaderFormat} use down arrow to enter timepicker dialog. {screenReaderMessage}",
     "selection.controlLabel": "選擇控制",
     "Timepicker.formEnd": "表單結束",
     "Timepicker.formStart": "表單開頭",
@@ -892,5 +892,7 @@
     "advancedSearch.match.label": "符合選項",
     "advancedSearch.match.containsAny": "包含任何",
     "saveAndKeepEditing": "Save & keep editing",
-    "multiSelection.dropdownTriggerLabel": "open menu"
+    "multiSelection.dropdownTriggerLabel": "open menu",
+    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
+    "selection.enterFilter": "Enter a value to load options"
 }

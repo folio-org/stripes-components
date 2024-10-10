@@ -1,7 +1,6 @@
 {
     "expandAll": "Expand all",
     "collapseAll": "Collapse all",
-    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
     "goToPreviousYear": "Go to previous year",
     "goToPreviousMonth": "Go to previous month",
     "goToNextYear": "Go to next year",
@@ -48,7 +47,6 @@
     "metaSection.source": "Source: {source}",
     "metaSection.recordCreated": "Record created: {date} {time}",
     "metaSection.recordLastUpdated": "Record last updated: {date} {time}",
-    "selection.enterFilter": "Enter a value to load options",
     "selection.emptyList": "List is empty",
     "selection.noMatches": "No matching options",
     "selection.filterOptionsLabel": "{label} options filter",
@@ -894,5 +892,7 @@
     "advancedSearch.match.label": "Match option",
     "advancedSearch.match.containsAny": "Contains any",
     "saveAndKeepEditing": "Save & keep editing",
-    "multiSelection.dropdownTriggerLabel": "open menu"
+    "multiSelection.dropdownTriggerLabel": "open menu",
+    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
+    "selection.enterFilter": "Enter a value to load options"
 }

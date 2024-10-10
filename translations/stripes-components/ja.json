@@ -892,5 +892,7 @@
     "advancedSearch.match.label": "Match option",
     "advancedSearch.match.containsAny": "いずれかを含む",
     "saveAndKeepEditing": "保存して編集を続ける",
-    "multiSelection.dropdownTriggerLabel": "open menu"
+    "multiSelection.dropdownTriggerLabel": "open menu",
+    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
+    "selection.enterFilter": "Enter a value to load options"
 }
