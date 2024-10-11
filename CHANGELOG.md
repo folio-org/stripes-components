@@ -1,6 +1,8 @@
 # Change history for stripes-components
 
-## 12.2.0 IN PROGRESS
+## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
+
 * Add specific loading props to MCL to pass to Prev/Next pagination row, Refs STCOM-1305
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
