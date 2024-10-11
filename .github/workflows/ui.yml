@@ -7,9 +7,13 @@ on:
 jobs:
   ui:
     uses: folio-org/.github/.github/workflows/ui.yml@v1.5
+    if: github.ref_name == github.event.repository.default_branch || github.event_name != 'push' || github.ref_type == 'tag'
     secrets: inherit
     with:
       jest-enabled: false
       bigtest-enabled: true
       bigtest-test-command: xvfb-run --server-args="-screen 0 1024x768x24" yarn test $YARN_TEST_OPTIONS --karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage
       sonar-sources: ./hooks,./lib,./util
+      generate-module-descriptor: false
+      publish-module-descriptor: false
+
