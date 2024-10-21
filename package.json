@@ -89,7 +89,7 @@
     "redux-form": "^8.3.0",
     "regenerator-runtime": "^0.14.0",
     "sinon": "^17.0.0",
-    "storybook": "7.6.12",
+    "storybook": "8.3.6",
     "stylelint": "^16.2.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-junit-formatter": "^0.2.2"
