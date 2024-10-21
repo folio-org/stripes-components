@@ -17,7 +17,7 @@
     "fieldHasError": "Feld hat Fehler",
     "addressLine1": "Anschriftenzeile 1",
     "addressLine2": "Anschriftenzeile 2",
-    "stateProviceOrRegion": "Bundesland",
+    "stateProviceOrRegion": "Staat / Land / Bundesland",
     "zipOrPostalCode": "PLZ/Postleitzahl",
     "addressType": "Adresstyp",
     "city": "Stadt",
