@@ -54,6 +54,7 @@
 * Export `<StripesOverlayWrapper>` that will automatically apply the `usePortal` behavior to nested overlay components. Refs STCOM-1353.
 * Properly pass `readOnly` prop to `<RadioButton>`'s internally rendered `<Label>`. Refs STCOM-1367.
 * `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
+* Change `Repeatable field` focus behaviour. Refs STCOM-1341.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
