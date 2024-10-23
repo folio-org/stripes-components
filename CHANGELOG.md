@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 12.2.3 IN PROGRESS
+
+* Change `Repeatable field` focus behaviour. Refs STCOM-1341.
+
 ## [12.2.2](https://github.com/folio-org/stripes-components/tree/v12.2.2) (2024-10-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.1...v12.2.2)
 
