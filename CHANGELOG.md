@@ -1,6 +1,15 @@
 # Change history for stripes-components
 
-## 12.2.0 IN PROGRESS
+## 12.3.0 IN PROGRESS
+
+* `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
+* Change `Repeatable field` focus behaviour. Refs STCOM-1341.
+* Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
+* `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
+
+## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
+
 * Add specific loading props to MCL to pass to Prev/Next pagination row, Refs STCOM-1305
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
@@ -53,10 +62,6 @@
 * Use `<Selection>`'s formatter for rendering the selected value within the field and prevent overflow of text. Refs STCOM-1344.
 * Export `<StripesOverlayWrapper>` that will automatically apply the `usePortal` behavior to nested overlay components. Refs STCOM-1353.
 * Properly pass `readOnly` prop to `<RadioButton>`'s internally rendered `<Label>`. Refs STCOM-1367.
-* `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
-* Change `Repeatable field` focus behaviour. Refs STCOM-1341.
-* Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
-* `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)
