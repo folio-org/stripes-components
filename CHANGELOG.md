@@ -4,6 +4,7 @@
 
 * Change `Repeatable field` focus behaviour. Refs STCOM-1341.
 * Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
+* `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
 
 ## [12.2.2](https://github.com/folio-org/stripes-components/tree/v12.2.2) (2024-10-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.1...v12.2.2)
