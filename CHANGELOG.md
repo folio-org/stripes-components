@@ -55,6 +55,7 @@
 * Properly pass `readOnly` prop to `<RadioButton>`'s internally rendered `<Label>`. Refs STCOM-1367.
 * `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
 * Change `Repeatable field` focus behaviour. Refs STCOM-1341.
+* Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
 * `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
