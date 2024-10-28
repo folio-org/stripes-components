@@ -6,6 +6,7 @@
 * Change `Repeatable field` focus behaviour. Refs STCOM-1341.
 * Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
 * `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
+* Include Kosovo in the countries list. Refs STCOM-1354.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
