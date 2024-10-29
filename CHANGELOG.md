@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 12.2.1 IN PROGRESS
+
+* Include Kosovo in the countries list. Refs STCOM-1354.
+
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
 
