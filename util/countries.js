@@ -242,6 +242,7 @@ const countries = [
   { alpha2: 'VN', alpha3: 'VNM', numeric: '704' },
   { alpha2: 'VI', alpha3: 'VIR', numeric: '850' },
   { alpha2: 'WF', alpha3: 'WLF', numeric: '876' },
+  { alpha2: 'XK', alpha3: 'XXK', numeric: '926' },
   { alpha2: 'EH', alpha3: 'ESH', numeric: '732' },
   { alpha2: 'YE', alpha3: 'YEM', numeric: '887' },
   { alpha2: 'ZM', alpha3: 'ZMB', numeric: '894' },
