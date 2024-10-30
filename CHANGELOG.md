@@ -8,6 +8,7 @@
 * `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
 * Include Kosovo in the countries list. Refs STCOM-1354.
 * `<RepeatableField>` - switch to MutationObserver to resolve focus-management issues. Refs STCOM-1372.
+* Allow user to choose default value in `Selection` component. Fixes STCOM-1377.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
