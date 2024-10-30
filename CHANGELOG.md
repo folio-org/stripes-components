@@ -1,6 +1,17 @@
 # Change history for stripes-components
 
-## 12.2.0 IN PROGRESS
+## 12.3.0 IN PROGRESS
+
+* `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
+* Change `Repeatable field` focus behaviour. Refs STCOM-1341.
+* Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
+* `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
+* Include Kosovo in the countries list. Refs STCOM-1354.
+* `<RepeatableField>` - switch to MutationObserver to resolve focus-management issues. Refs STCOM-1372.
+
+## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
+
 * Add specific loading props to MCL to pass to Prev/Next pagination row, Refs STCOM-1305
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
