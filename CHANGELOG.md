@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 12.2.2
+## [12.2.2](https://github.com/folio-org/stripes-components/tree/v12.2.2) (2024-10-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.1...v12.2.2)
 
 * Bump `stripes-react-hotkeys` to `v3.2.0` for compatibility with `findDOMNode()` changes. STCOM-1343.
 
