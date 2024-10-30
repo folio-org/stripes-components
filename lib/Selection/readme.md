@@ -65,6 +65,7 @@ customFormatter = ({ option, searchTerm }) => {
 ## Props
 Name | type | description | default | required
 --- | --- | --- | --- | ---
+`allowSetDefaultValue` | bool | If `true`, default value can be selected from the options list
 `asyncFilter` | bool | Set to `true` if your `onFilter` function makes a request for updated `dataOptions` rather than filter the `dataOptions` directly on the front-end. | `false` | false
 `dataOptions` | array of objects | Array of objects with `label` and `value` keys. The labels are visible to the users in the options list, the values are not. | | &#10004;
 `id` | string | Sets the `id` html attribute on the control | |
