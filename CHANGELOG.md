@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 12.2.3 IN PROGRESS
+## [12.2.3](https://github.com/folio-org/stripes-components/tree/v12.2.3) (2024-10-31)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.2...v12.2.3)
 
 * Change `Repeatable field` focus behaviour. Refs STCOM-1341.
 * Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
