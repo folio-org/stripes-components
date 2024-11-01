@@ -12,6 +12,7 @@
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.1...v12.2.2)
 
 * Bump `stripes-react-hotkeys` to `v3.2.0` for compatibility with `findDOMNode()` changes. STCOM-1343.
+* Pin `currency-codes` to `v2.1.0` to avoid duplicate entries in `v2.2.0`. Refs STCOM-1379.
 
 ## [12.2.1](https://github.com/folio-org/stripes-components/tree/v12.2.1) (2024-10-30)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v12.2.1)
