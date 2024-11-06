@@ -1,5 +1,9 @@
 
 
+.selectionOuter {
+  width: 100%;
+}
+
 .selectionRoot {
   position: relative;
 }
