@@ -2,6 +2,7 @@
 
 .selectionOuter {
   width: 100%;
+  position: relative;
 }
 
 .selectionRoot {
