@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "12.2.0",
+  "version": "12.3.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -96,9 +96,9 @@
   },
   "dependencies": {
     "@csstools/postcss-global-data": "^2.1.1",
-    "@folio/stripes-react-hotkeys": "^3.1.0",
+    "@folio/stripes-react-hotkeys": "^3.2.1",
     "classnames": "^2.2.5",
-    "currency-codes": "^2.1.0",
+    "currency-codes": "2.1.0",
     "dayjs": "^1.11.10",
     "downshift": "^9.0.4",
     "flexboxgrid2": "^7.2.0",
