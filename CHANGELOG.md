@@ -10,6 +10,8 @@
 * `<RepeatableField>` - switch to MutationObserver to resolve focus-management issues. Refs STCOM-1372.
 * Bump `stripes-react-hotkeys` to `v3.2.0` for compatibility with `findDOMNode()` changes. STCOM-1343.
 * Pin `currency-codes` to `v2.1.0` to avoid duplicate entries in `v2.2.0`. Refs STCOM-1379.
+* Wrap `<Selection>` in full-width div. Refs STCOM-1332.
+* Assign `<Modal>`'s exit key handler to Modal's element rather than `document`. refs STCOM-1382.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
