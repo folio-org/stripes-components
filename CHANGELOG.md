@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 12.2.5 IN PROGRESS
+## [12.2.5](https://github.com/folio-org/stripes-components/tree/v12.2.5) (2024-11-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.4...v12.2.5)
 
 * Assign `<Modal>`'s exit key handler to Modal's element rather than `document`. refs STCOM-1382.
 
