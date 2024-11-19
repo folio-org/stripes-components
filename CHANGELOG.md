@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 12.2.6 IN PROGRESS
+## [12.2.6](https://github.com/folio-org/stripes-components/tree/v12.2.6) (2024-11-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.5...v12.2.6)
 
 * Wrap `<Card>`'s render output in `<StripesOverlayContext>` to facilitate ease with overlay components. Refs STCOM-1384.
 
