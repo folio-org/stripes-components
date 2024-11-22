@@ -2319,7 +2319,7 @@
 
 "@folio/stripes-cli@https://github.com/folio-org/stripes-cli.git#STCLI-255":
   version "3.2.0"
-  resolved "https://github.com/folio-org/stripes-cli.git#cffac1fcf0a56150b088f932b538d79a359c8461"
+  resolved "https://github.com/folio-org/stripes-cli.git#2edffe388bb224764258678292c245f8c81f6353"
   dependencies:
     "@cypress/code-coverage" "^3.13.6"
     "@folio/stripes-testing" "^3.0.0"
