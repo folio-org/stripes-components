@@ -18,7 +18,7 @@
     "storybook": "storybook dev -p 9001 -c .storybook",
     "storybook-build": "storybook build -c .storybook -o .out",
     "stylelint": "stylelint \"lib/**/*.css\"",
-    "test": "stripes test cypress",
+    "test": "stripes test cypress --cypress.install",
     "test-dev": "stripes test cypress --cypress.open"
   },
   "engines": {
