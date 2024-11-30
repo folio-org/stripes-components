@@ -894,5 +894,6 @@
     "saveAndKeepEditing": "Uložit a pokračovat v úpravách",
     "multiSelection.dropdownTriggerLabel": "otevřít menu",
     "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
-    "selection.enterFilter": "Enter a value to load options"
+    "selection.enterFilter": "Enter a value to load options",
+    "countries.XK": "Kosovo"
 }

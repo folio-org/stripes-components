@@ -894,5 +894,6 @@
     "saveAndKeepEditing": "保存并继续编辑",
     "multiSelection.dropdownTriggerLabel": "打开菜单",
     "filterGroups.clearFilterSetLabel": "清除选定的{labelText}筛选",
-    "selection.enterFilter": "Enter a value to load options"
+    "selection.enterFilter": "Enter a value to load options",
+    "countries.XK": "Kosovo"
 }
