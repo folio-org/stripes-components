@@ -829,11 +829,11 @@
     "copy": "Copy",
     "copied": "Copied",
     "ErrorBoundary.errorDetails": "Error details",
-    "ErrorBoundary.defaultTitle": "Something went wrong",
+    "ErrorBoundary.defaultTitle": "Niečo sa pokazilo",
     "ErrorBoundary.defaultSubTitle": "Refresh the page to continue.",
-    "ErrorBoundary.detailsButtonLabel": "View error details",
+    "ErrorBoundary.detailsButtonLabel": "Zobraziť podrobnosti o chybe",
     "ErrorBoundary.defaultButtonLabel": "Refresh page",
-    "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
+    "ErrorBoundary.copyErrorButtonAriaLabel": "Kopírovať chybu do schránky",
     "ErrorBoundary.detailsDescription": "The following occurred, resulting in the current page becoming unstable:",
     "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder",
     "mcl.additionalResultsLoaded": "Additional results loaded",
@@ -894,5 +894,6 @@
     "saveAndKeepEditing": "Save & keep editing",
     "multiSelection.dropdownTriggerLabel": "open menu",
     "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
-    "selection.enterFilter": "Enter a value to load options"
+    "selection.enterFilter": "Enter a value to load options",
+    "countries.XK": "Kosovo"
 }
