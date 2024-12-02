@@ -329,7 +329,7 @@
     "mcl.loadMore": "Carregue mais",
     "mcl.itemsRequestedMessage": "Solicitando mais resultados, o foco será na próxima linha quando chegarem",
     "paneMenuActionsToggleLabel": "Ações",
-    "searchFieldIndex": "Índice do campo de pesquisa",
+    "searchFieldIndex": "Índice do campo de busca",
     "metaSection.screenReaderLabel": "Atualizar informação",
     "Datepicker.monthControl": "mês",
     "Datepicker.yearControl": "ano",
@@ -894,5 +894,6 @@
     "saveAndKeepEditing": "Salvar e continuar editando",
     "multiSelection.dropdownTriggerLabel": "Abrir menu",
     "filterGroups.clearFilterSetLabel": "Limpar filtros {labelText} selecionados",
-    "selection.enterFilter": "Digite um valor para carregar as opções"
+    "selection.enterFilter": "Digite um valor para carregar as opções",
+    "countries.XK": "Kosovo"
 }
