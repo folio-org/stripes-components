@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 12.2.7 IN PROGRESS
+## [12.2.7](https://github.com/folio-org/stripes-components/tree/v12.2.7) (2024-12-02)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.6...v12.2.7)
 
 * Clear filter value after an action chosen from `MultiSelection` menu. Refs STCOM-1385.
 
