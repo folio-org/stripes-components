@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 12.2.8 IN PROGRESS
+
+* ExportCSV - fix usage within `<Modal>`s by rendering the download link to the `div#OverlayContainer`. Refs STCOM-1387.
+
 ## [12.2.7](https://github.com/folio-org/stripes-components/tree/v12.2.7) (2024-12-02)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.6...v12.2.7)
 
