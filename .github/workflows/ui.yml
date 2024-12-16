@@ -12,7 +12,7 @@ jobs:
     with:
       jest-enabled: false
       bigtest-enabled: true
-      bigtest-test-command: xvfb-run --server-args="-screen 0 1024x768x24" yarn test $YARN_TEST_OPTIONS --karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage
+      bigtest-test-command: yarn test $YARN_TEST_OPTIONS
       sonar-sources: ./hooks,./lib,./util
       generate-module-descriptor: false
       publish-module-descriptor: false
