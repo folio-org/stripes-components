@@ -15,6 +15,7 @@
 * Wrap `<Card>`'s render output in `<StripesOverlayContext>` to facilitate ease with overlay components. Refs STCOM-1384.
 * Clear filter value after an action chosen from `MultiSelection` menu. Refs STCOM-1385.
 * ExportCSV - fix usage within `<Modal>`s by rendering the download link to the `div#OverlayContainer`. Refs STCOM-1387.
+* `<MenuSection>` should default its heading/label tag to `H3` instead of `H1`. Refs STCOM-1392.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
