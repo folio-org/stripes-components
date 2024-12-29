@@ -11,3 +11,4 @@ artifacts
 /storybook-static/
 .vscode
 .idea
+/cypress/screenshots/

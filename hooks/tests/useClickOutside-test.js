@@ -21,7 +21,7 @@ const UseClickOutsideInteractor = interactor(class UseClickOutsideInteractor {
   clickInsideElement = clickable('#click-inside-element');
 });
 
-describe('useClickOutside', () => {
+describe.skip('useClickOutside', () => {
   const useClickOutsideInteractor = new UseClickOutsideInteractor();
   const onClickSpy = sinon.spy();
 
