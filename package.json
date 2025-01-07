@@ -95,7 +95,7 @@
     "stylelint-junit-formatter": "^0.2.2"
   },
   "dependencies": {
-    "@csstools/postcss-global-data": "^2.1.1",
+    "@csstools/postcss-global-data": "^3.0.0",
     "@folio/stripes-react-hotkeys": "^3.2.1",
     "classnames": "^2.2.5",
     "currency-codes": "2.1.0",
