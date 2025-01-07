@@ -17,6 +17,7 @@
 * ExportCSV - fix usage within `<Modal>`s by rendering the download link to the `div#OverlayContainer`. Refs STCOM-1387.
 * `<MenuSection>` should default its heading/label tag to `H3` instead of `H1`. Refs STCOM-1392.
 * `<Tooltip>` should allow for tooltip content to be hovered without closing the tooltip. Refs STCOM-1391.
+* `<AdvancedSearchRow>` - change `aria-label` for the input box to enter a search query and the Boolean operator dropdown. Refs STCOM-1195.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
