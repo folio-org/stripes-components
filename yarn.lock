@@ -2346,10 +2346,10 @@
     element-is-visible "^1.0.0"
     minimist "^1.2.0"
 
-"@folio/stripes-testing@^4.7.0":
-  version "4.8.10900000034395"
-  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-testing/-/stripes-testing-4.8.10900000034395.tgz#645cb7995b601d9c29095d270bfcf0091df3814e"
-  integrity sha512-5Ziwutee8e0uinHMq5aHrytY6ecC9qCFJCNJuBJx4WQbll9KMLkYPR3fF311Q1fSvyK9QMHPCKFHMblItRuQtA==
+"@folio/stripes-testing@^4.9.0":
+  version "4.9.10900000036396"
+  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-testing/-/stripes-testing-4.9.10900000036396.tgz#d439664b3bac42ce071f279934695950d81689e2"
+  integrity sha512-pEdF7uUqx+nx5/2/DWCNeH3/Pee5Xs09/EPptc0IXLKYRoos39MB1g6O+VSAxSVn/FpZyH77iy+MFlImphLIQA==
   dependencies:
     "@babel/core" "^7.19.3"
     "@babel/eslint-parser" "^7.19.1"
