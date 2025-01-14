@@ -47,7 +47,7 @@
     "@babel/plugin-proposal-numeric-separator": "^7.0.0",
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.7.4",
     "@babel/register": "^7.0.0",
     "@bigtest/interactor": "0.7.2",
