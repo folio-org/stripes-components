@@ -868,8 +868,6 @@
     "advancedSearch.boolean.not": "NIET",
     "advancedSearch.footer.search": "Zoeken",
     "advancedSearch.footer.cancel": "Annuleren",
-    "advancedSearch.boolean.label": "Operator",
-    "advancedSearch.field.label": "Zoeken naar",
     "advancedSearch.searchOptions.label": "Zoekopties",
     "advancedSearch.searchOptions.query": "Query",
     "advancedSearch.emptyFirstRowError": "Voer een query in het eerste zoekvak in",
@@ -895,5 +893,7 @@
     "multiSelection.dropdownTriggerLabel": "open menu",
     "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
     "selection.enterFilter": "Enter a value to load options",
-    "countries.XK": "Kosovo"
+    "countries.XK": "Kosovo",
+    "advancedSearch.booleanLabel": "Select Boolean operator",
+    "advancedSearch.fieldLabel": "Enter search term"
 }
