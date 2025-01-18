@@ -868,8 +868,6 @@
     "advancedSearch.boolean.not": "NE",
     "advancedSearch.footer.search": "Vyhledat",
     "advancedSearch.footer.cancel": "Zrušit",
-    "advancedSearch.boolean.label": "Operátor",
-    "advancedSearch.field.label": "Vyhledat",
     "advancedSearch.searchOptions.label": "Možnosti vyhledávání",
     "advancedSearch.searchOptions.query": "Dotaz",
     "advancedSearch.emptyFirstRowError": "Zadat dotaz do prvního vyhledávacího pole",
@@ -895,5 +893,7 @@
     "multiSelection.dropdownTriggerLabel": "otevřít menu",
     "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
     "selection.enterFilter": "Enter a value to load options",
-    "countries.XK": "Kosovo"
+    "countries.XK": "Kosovo",
+    "advancedSearch.booleanLabel": "Select Boolean operator",
+    "advancedSearch.fieldLabel": "Enter search term"
 }
