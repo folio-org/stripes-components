@@ -868,8 +868,6 @@
     "advancedSearch.boolean.not": "NOT",
     "advancedSearch.footer.search": "Search",
     "advancedSearch.footer.cancel": "Annulla",
-    "advancedSearch.boolean.label": "Operatore",
-    "advancedSearch.field.label": "Cerca",
     "advancedSearch.searchOptions.label": "Opzioni di ricerca",
     "advancedSearch.searchOptions.query": "Query",
     "advancedSearch.emptyFirstRowError": "Inserisci una query nella prima casella di ricerca",
@@ -895,5 +893,7 @@
     "multiSelection.dropdownTriggerLabel": "open menu",
     "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
     "selection.enterFilter": "Enter a value to load options",
-    "countries.XK": "Kosovo"
+    "countries.XK": "Kosovo",
+    "advancedSearch.booleanLabel": "Select Boolean operator",
+    "advancedSearch.fieldLabel": "Enter search term"
 }

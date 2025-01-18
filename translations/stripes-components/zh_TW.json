@@ -868,8 +868,6 @@
     "advancedSearch.boolean.not": "NOT",
     "advancedSearch.footer.search": "查詢",
     "advancedSearch.footer.cancel": "取消",
-    "advancedSearch.boolean.label": "運算子",
-    "advancedSearch.field.label": "查詢",
     "advancedSearch.searchOptions.label": "搜尋選項",
     "advancedSearch.searchOptions.query": "查詢",
     "advancedSearch.emptyFirstRowError": "在第一個搜尋框輸入查詢名稱",
@@ -895,5 +893,7 @@
     "multiSelection.dropdownTriggerLabel": "open menu",
     "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
     "selection.enterFilter": "請輸入一個數值來載入選項",
-    "countries.XK": "Kosovo"
+    "countries.XK": "Kosovo",
+    "advancedSearch.booleanLabel": "Select Boolean operator",
+    "advancedSearch.fieldLabel": "Enter search term"
 }
