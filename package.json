@@ -96,6 +96,7 @@
   },
   "dependencies": {
     "@csstools/postcss-global-data": "^2.1.1",
+    "@folio/stripes-final-form": "^8.2.10990000000032",
     "@folio/stripes-react-hotkeys": "^3.2.1",
     "classnames": "^2.2.5",
     "currency-codes": "2.1.0",
@@ -113,6 +114,7 @@
     "prop-types": "^15.5.10",
     "prop-types-extra": "^1.1.0",
     "query-string": "^8.1.0",
+    "react-final-form": "^6.5.9",
     "react-highlight-words": "^0.20.0",
     "react-overlays": "^5.2.1",
     "react-quill": "^2.0.0",
