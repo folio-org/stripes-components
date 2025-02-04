@@ -4,7 +4,7 @@ import { computed } from '@bigtest/interactor';
 import Harness from './Harness';
 
 import '../lib/global.css';
-import { getNextFocusable, getPreviousFocusable } from '../util/getFocusableElements';
+import { getNextFocusable, getPreviousFocusable } from '../lib/util/getFocusableElements';
 
 let $root = null;
 let $container = null;

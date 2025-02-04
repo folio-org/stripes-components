@@ -3,8 +3,8 @@ require('regenerator-runtime/runtime');
 
 // require all test files matching 'lib/**/tests/*-test'
 const requireTest = require.context('../lib/', true, /(.*?)\/tests\/(.*?)-test/);
-const requireUtilTests = require.context('../util/', true, /(.*?)\/tests\/(.*?)-test/);
-const requireHooksTests = require.context('../hooks/', true, /(.*?)\/tests\/(.*?)-test/);
+const requireUtilTests = require.context('../lib/util/', true, /(.*?)\/tests\/(.*?)-test/);
+const requireHooksTests = require.context('../lib/hooks/', true, /(.*?)\/tests\/(.*?)-test/);
 
 requireTest.keys().forEach(requireTest);
 requireUtilTests.keys().forEach(requireUtilTests);

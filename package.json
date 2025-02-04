@@ -3,13 +3,27 @@
   "version": "13.0.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
-  "repository": "folio-org/stripes-components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/folio-org/stripes-components.git"
+  },
   "sideEffects": [
     "*.css"
   ],
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
   },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "lib/*css",
+    "translations",
+    "assets",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
     "eslint": "eslint ./",
@@ -19,10 +33,8 @@
     "storybook-build": "storybook build -c .storybook -o .out",
     "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
-    "test-dev": "stripes test karma --watch"
-  },
-  "engines": {
-    "node": ">=10.0.0"
+    "test-dev": "stripes test karma --watch",
+    "prepare": "stripes transpile --files ./lib"
   },
   "stripes": {
     "type": "components",
@@ -53,7 +65,7 @@
     "@bigtest/interactor": "0.7.2",
     "@csstools/postcss-relative-color-syntax": "^2.0.7",
     "@folio/eslint-config-stripes": "^7.0.0",
-    "@folio/stripes-cli": "^3.0.0",
+    "@folio/stripes-cli": "github:folio-org/stripes-cli#STRIPES-957",
     "@folio/stripes-testing": "^4.9.0",
     "@formatjs/cli": "^6.1.3",
     "@storybook/addon-actions": "^7.6.12",
