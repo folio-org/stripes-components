@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 12.3.0 IN PROGRESS
+## 13.0.0 IN PROGRESS
 
 * `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
 * Change `Repeatable field` focus behaviour. Refs STCOM-1341.
