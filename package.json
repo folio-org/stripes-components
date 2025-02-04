@@ -51,7 +51,8 @@
     "@babel/preset-react": "^7.7.4",
     "@babel/register": "^7.0.0",
     "@bigtest/interactor": "0.7.2",
-    "@csstools/postcss-relative-color-syntax": "^2.0.7",
+    "@csstools/postcss-global-data": "^3.0.0",
+    "@csstools/postcss-relative-color-syntax": "^3.0.7",
     "@folio/eslint-config-stripes": "^7.0.0",
     "@folio/stripes-cli": "^3.0.0",
     "@folio/stripes-testing": "^4.9.0",
@@ -95,7 +96,6 @@
     "stylelint-junit-formatter": "^0.2.2"
   },
   "dependencies": {
-    "@csstools/postcss-global-data": "^2.1.1",
     "@folio/stripes-react-hotkeys": "^3.2.1",
     "classnames": "^2.2.5",
     "currency-codes": "2.1.0",
