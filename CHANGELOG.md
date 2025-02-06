@@ -1,6 +1,6 @@
 # Change history for stripes-components
 
-## 12.3.0 IN PROGRESS
+## 13.0.0 IN PROGRESS
 
 * `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
 * Change `Repeatable field` focus behaviour. Refs STCOM-1341.
@@ -14,6 +14,12 @@
 * Assign `<Modal>`'s exit key handler to Modal's element rather than `document`. refs STCOM-1382.
 * Wrap `<Card>`'s render output in `<StripesOverlayContext>` to facilitate ease with overlay components. Refs STCOM-1384.
 * Clear filter value after an action chosen from `MultiSelection` menu. Refs STCOM-1385.
+* ExportCSV - fix usage within `<Modal>`s by rendering the download link to the `div#OverlayContainer`. Refs STCOM-1387.
+* `<MenuSection>` should default its heading/label tag to `H3` instead of `H1`. Refs STCOM-1392.
+* `<Datepicker>` fix for `<Calendar>` tabIndex when changing the year. Refs STCOM-1395.
+* `<Tooltip>` should allow for tooltip content to be hovered without closing the tooltip. Refs STCOM-1391.
+* `<AdvancedSearchRow>` - change `aria-label` for the input box to enter a search query and the Boolean operator dropdown. Refs STCOM-1195.
+* *BREAKING* Update `@csstools` postcss plugins to current versions in sync with `@folio/stripes-cli`. Refs STCOM-1404.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)

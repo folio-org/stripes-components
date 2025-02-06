@@ -868,8 +868,6 @@
     "advancedSearch.boolean.not": "NOT",
     "advancedSearch.footer.search": "Rechercher",
     "advancedSearch.footer.cancel": "Annuler",
-    "advancedSearch.boolean.label": "Operator",
-    "advancedSearch.field.label": "Search for",
     "advancedSearch.searchOptions.label": "Search options",
     "advancedSearch.searchOptions.query": "Query",
     "advancedSearch.emptyFirstRowError": "Enter a query in the first search box",
@@ -885,7 +883,7 @@
     "metaSection.lastUpdated": "<b>Last updated</b>",
     "metaSection.lastUpdatedDateTime": "{date} {time}",
     "metaSection.lastUpdatedBy": "by {source}",
-    "metaSection.unknownUser": "Unknown user",
+    "metaSection.unknownUser": "Utilisateur inconnu",
     "advancedSearch.match.exactPhrase": "Exact phrase",
     "advancedSearch.match.containsAll": "Contains all",
     "advancedSearch.match.startsWith": "Starts with",
@@ -894,5 +892,8 @@
     "saveAndKeepEditing": "Save & keep editing",
     "multiSelection.dropdownTriggerLabel": "ouvrir le menu",
     "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
-    "selection.enterFilter": "Enter a value to load options"
+    "selection.enterFilter": "Enter a value to load options",
+    "countries.XK": "Kosovo",
+    "advancedSearch.booleanLabel": "Select Boolean operator",
+    "advancedSearch.fieldLabel": "Enter search term"
 }

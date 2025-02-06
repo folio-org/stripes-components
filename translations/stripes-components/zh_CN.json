@@ -868,8 +868,6 @@
     "advancedSearch.boolean.not": "非",
     "advancedSearch.footer.search": "搜索",
     "advancedSearch.footer.cancel": "取消",
-    "advancedSearch.boolean.label": "布尔算符",
-    "advancedSearch.field.label": "搜索",
     "advancedSearch.searchOptions.label": "搜索选项",
     "advancedSearch.searchOptions.query": "查询",
     "advancedSearch.emptyFirstRowError": "在第一个搜索框中输入查询",
@@ -894,5 +892,8 @@
     "saveAndKeepEditing": "保存并继续编辑",
     "multiSelection.dropdownTriggerLabel": "打开菜单",
     "filterGroups.clearFilterSetLabel": "清除选定的{labelText}筛选",
-    "selection.enterFilter": "Enter a value to load options"
+    "selection.enterFilter": "输入值以加载选项",
+    "countries.XK": "科索沃",
+    "advancedSearch.booleanLabel": "Select Boolean operator",
+    "advancedSearch.fieldLabel": "Enter search term"
 }

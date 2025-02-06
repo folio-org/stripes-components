@@ -868,8 +868,6 @@
     "advancedSearch.boolean.not": "아니다(NOT)",
     "advancedSearch.footer.search": "검색",
     "advancedSearch.footer.cancel": "취소",
-    "advancedSearch.boolean.label": "연산자",
-    "advancedSearch.field.label": "검색",
     "advancedSearch.searchOptions.label": "검색 옵션",
     "advancedSearch.searchOptions.query": "질의",
     "advancedSearch.emptyFirstRowError": "첫 번째 검색창에 검색어를 입력하세요.",
@@ -894,5 +892,8 @@
     "saveAndKeepEditing": "Save & keep editing",
     "multiSelection.dropdownTriggerLabel": "open menu",
     "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
-    "selection.enterFilter": "Enter a value to load options"
+    "selection.enterFilter": "Enter a value to load options",
+    "countries.XK": "Kosovo",
+    "advancedSearch.booleanLabel": "Select Boolean operator",
+    "advancedSearch.fieldLabel": "Enter search term"
 }
