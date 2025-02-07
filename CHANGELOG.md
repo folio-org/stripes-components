@@ -21,6 +21,7 @@
 * `<AdvancedSearchRow>` - change `aria-label` for the input box to enter a search query and the Boolean operator dropdown. Refs STCOM-1195.
 * *BREAKING* Update `@csstools` postcss plugins to current versions in sync with `@folio/stripes-cli`. Refs STCOM-1404.
 * Paneset - deduplicate panes via `id` prior to registration. Refs STCOM-1386.
+* Calendar - improved color contrast of edge month days, as per WCAG standards. Changed hover bg color of edge/month days. Increased weight of day numbers overall. Refs STCOM-1390.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
