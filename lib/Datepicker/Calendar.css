@@ -55,13 +55,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
 
     &:hover {
-      background-color: #eee;
+      background-color: var(--color-focus-shadow);
     }
 
     &.muted {
       color: var(--color-fill-disabled);
+
+      &:hover {
+        background-color: #eee;
+      }
     }
 
     &.today {
