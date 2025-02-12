@@ -28,6 +28,10 @@
 
 .root + .root {
   margin-top: var(--message-banner-stacked-margin-top);
+
+  &.marginTop0 {
+    margin-top: 0;
+  }
 }
 
 .inner {

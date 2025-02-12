@@ -85,6 +85,7 @@ className | string | Adds a custom class name for the `<MessageBanner>` | |
 contentClassName | string | Adds a custom class name for the content element inside the `<MessageBanner>` | |
 element | string, element, func | Changes the root element of the `<MessageBanner>` | | div |
 show | boolean | Control the visiblity externally. Using the show-prop will enable the `<MessageBanner>` to transition in and out. | true/false | |
+marginTop0 | boolean | Removes the default top margin | true/false | false
 
 
 The remaining props passed to `<MessageBanner>` will be spread onto the root element of the component. This component also accepts a `ref`.
