@@ -23,6 +23,7 @@
 * Paneset - deduplicate panes via `id` prior to registration. Refs STCOM-1386.
 * Calendar - improved color contrast of edge month days, as per WCAG standards. Changed hover bg color of edge/month days. Increased weight of day numbers overall. Refs STCOM-1390.
 * *BREAKING* Update `react-intl` to `^7`. Refs STCOM-1406.
+* Add marginTop0 prop to the MessageBanner component. Refs STCOM-1408.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
