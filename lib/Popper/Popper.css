@@ -1,7 +1,7 @@
 .overlay {
   z-index: 9999;
 
-  /*  popper-appied element property when the 'anchor' element is hidden
+  /*  popper-applied element property when the 'anchor' element is hidden
       or scrolled out of the view. This rule effectively hides the overlay if the anchor
       element/dropdown/control is scrolled out of the view.
       'visibility: hidden' is used instead of 'display: none' so that coordinates can still
