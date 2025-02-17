@@ -3,7 +3,10 @@
   "version": "13.0.0",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
-  "repository": "folio-org/stripes-components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/folio-org/stripes-components.git"
+  },
   "sideEffects": [
     "*.css"
   ],
