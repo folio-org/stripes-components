@@ -7,12 +7,15 @@
 
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import useRootClose from 'react-overlays/useRootClose';
+import { useOnClickOutside } from 'usehooks-ts';
+import noop from 'lodash/noop';
 
-const RootCloseWrapper = forwardRef(({ children, onRootClose, disabled }, ref) => {
-  useRootClose(ref, onRootClose, {
-    disabled
-  });
+const RootCloseWrapper = forwardRef(({ children, onRootClose = noop, disabled }, ref) => {
+  useOnClickOutside(
+    ref,
+    disabled ? noop : onRootClose,
+    'click'
+  );
 
   return children;
 });
