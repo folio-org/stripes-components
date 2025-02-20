@@ -25,6 +25,7 @@
 * *BREAKING* Update `react-intl` to `^7`. Refs STCOM-1406.
 * *BREAKING* remove deprecated props. Refs STCOM-1398.
 * Add marginTop0 prop to the MessageBanner component. Refs STCOM-1408.
+* Popper - hide overlay if popper anchor is scrolled out of the view. Refs STCOM-1386.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
