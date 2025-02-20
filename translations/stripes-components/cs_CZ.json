@@ -891,8 +891,8 @@
     "advancedSearch.match.containsAny": "Obsahuje jakékoli",
     "saveAndKeepEditing": "Uložit a pokračovat v úpravách",
     "multiSelection.dropdownTriggerLabel": "otevřít menu",
-    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
-    "selection.enterFilter": "Enter a value to load options",
+    "filterGroups.clearFilterSetLabel": "Vymazat vybrané filtry {labelText}",
+    "selection.enterFilter": "Pro načtení možností zadejte hodnotu",
     "countries.XK": "Kosovo",
     "advancedSearch.booleanLabel": "Select Boolean operator",
     "advancedSearch.fieldLabel": "Zadat hledaný výraz"
