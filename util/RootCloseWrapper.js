@@ -14,7 +14,6 @@ const RootCloseWrapper = forwardRef(({ children, onRootClose = noop, disabled },
   useOnClickOutside(
     ref,
     disabled ? noop : onRootClose,
-    'click'
   );
 
   return children;
