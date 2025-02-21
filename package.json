@@ -110,7 +110,6 @@
     "prop-types-extra": "^1.1.0",
     "query-string": "^8.1.0",
     "react-highlight-words": "^0.20.0",
-    "react-overlays": "^5.2.1",
     "react-quill": "^2.0.0",
     "react-transition-group": "^4.4.5",
     "react-virtualized-auto-sizer": "^1.0.2",
