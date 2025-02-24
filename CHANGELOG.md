@@ -28,6 +28,7 @@
 * Popper - hide overlay if popper anchor is scrolled out of the view. Refs STCOM-1386.
 * Switch `useRootClose` hook to `useOClickOutside`. Refs STCOM-1339.
 * Removed `react-overlays` dependency. Refs STCOM-1336.
+* MultiSelection - pass `dirty` and `isValid` props from the form field wrapper. Refs STCOM-1409.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
