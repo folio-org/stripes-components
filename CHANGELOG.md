@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 13.0.0 IN PROGRESS
+## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
 
 * `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
 * Change `Repeatable field` focus behaviour. Refs STCOM-1341.
