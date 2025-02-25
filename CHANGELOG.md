@@ -1,6 +1,9 @@
 # Change history for stripes-components
 
-## 13.0.0 IN PROGRESS
+## 13.1.0 IN PROGRESS
+
+## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
 
 * `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
 * Change `Repeatable field` focus behaviour. Refs STCOM-1341.
@@ -28,6 +31,51 @@
 * Popper - hide overlay if popper anchor is scrolled out of the view. Refs STCOM-1386.
 * Switch `useRootClose` hook to `useOClickOutside`. Refs STCOM-1339.
 * Removed `react-overlays` dependency. Refs STCOM-1336.
+
+## [12.2.8](https://github.com/folio-org/stripes-components/tree/v12.2.8) (2024-12-17)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.7...v12.2.8)
+
+* ExportCSV - fix usage within `<Modal>`s by rendering the download link to the `div#OverlayContainer`. Refs STCOM-1387.
+
+## [12.2.7](https://github.com/folio-org/stripes-components/tree/v12.2.7) (2024-12-02)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.6...v12.2.7)
+
+* Clear filter value after an action chosen from `MultiSelection` menu. Refs STCOM-1385.
+
+## [12.2.6](https://github.com/folio-org/stripes-components/tree/v12.2.6) (2024-11-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.5...v12.2.6)
+
+* Wrap `<Card>`'s render output in `<StripesOverlayContext>` to facilitate ease with overlay components. Refs STCOM-1384.
+
+## [12.2.5](https://github.com/folio-org/stripes-components/tree/v12.2.5) (2024-11-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.4...v12.2.5)
+
+* Assign `<Modal>`'s exit key handler to Modal's element rather than `document`. refs STCOM-1382.
+
+## [12.2.4](https://github.com/folio-org/stripes-components/tree/v12.2.4) (2024-11-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.3...v12.2.4)
+
+* Pin `currency-codes` to `v2.1.0` to avoid duplicate entries in `v2.2.0`. Refs STCOM-1379.
+* Selection should occupy the full width of its container. Refs STCOM-1332.
+
+## [12.2.3](https://github.com/folio-org/stripes-components/tree/v12.2.3) (2024-10-31)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.2...v12.2.3)
+
+* Change `Repeatable field` focus behaviour. Refs STCOM-1341.
+* Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
+* `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
+* `<RepeatableField>` - switch to MutationObserver to resolve focus-management issues. Refs STCOM-1372.
+
+## [12.2.2](https://github.com/folio-org/stripes-components/tree/v12.2.2) (2024-10-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.1...v12.2.2)
+
+* Bump `stripes-react-hotkeys` to `v3.2.0` for compatibility with `findDOMNode()` changes. STCOM-1343.
+
+## [12.2.1](https://github.com/folio-org/stripes-components/tree/v12.2.1) (2024-10-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v12.2.1)
+
+* Include Kosovo in the countries list. Refs STCOM-1354.
+* `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
 
 ## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
