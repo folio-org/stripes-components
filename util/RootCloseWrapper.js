@@ -5,14 +5,17 @@
  * It's only used for class components that does not support using the useRootClose hook.
  */
 
-import { forwardRef } from 'react';
+import { forwardRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import useRootClose from 'react-overlays/useRootClose';
+import noop from 'lodash/noop';
+import useClickOutside from '../hooks/useClickOutside';
 
-const RootCloseWrapper = forwardRef(({ children, onRootClose, disabled }, ref) => {
-  useRootClose(ref, onRootClose, {
-    disabled
-  });
+const RootCloseWrapper = forwardRef(({ children, onRootClose = noop, disabled }, ref) => {
+  const handleOutsideClick = useCallback((e, outside) => outside && onRootClose(e), [onRootClose]);
+  useClickOutside(
+    ref,
+    disabled ? noop : handleOutsideClick,
+  );
 
   return children;
 });

@@ -847,7 +847,7 @@
     "shortcut.duplicateRecord": "复制记录",
     "shortcut.editRecord": "编辑记录",
     "shortcut.expandAll": "全部展开",
-    "shortcut.goToSearchFilter": "转到“搜索和筛选”窗格",
+    "shortcut.goToSearchFilter": "转到“搜索和筛选”面板",
     "shortcut.openShortcutModal": "打开键盘快捷方式",
     "shortcut.saveRecord": "保存记录",
     "selection.loading": "正在加载选项...",
@@ -894,6 +894,6 @@
     "filterGroups.clearFilterSetLabel": "清除选定的{labelText}筛选",
     "selection.enterFilter": "输入值以加载选项",
     "countries.XK": "科索沃",
-    "advancedSearch.booleanLabel": "Select Boolean operator",
-    "advancedSearch.fieldLabel": "Enter search term"
+    "advancedSearch.booleanLabel": "选择布尔运算符",
+    "advancedSearch.fieldLabel": "输入搜索词"
 }
