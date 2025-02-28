@@ -37,7 +37,7 @@ import { AuditLogPane, NoValue } from '@folio/stripes/components';
 
 ## Props
 Name | type | description | default | required
--- |--------| --
+--- | --- | --- | --- | ---
 actionsMap | object | Maps change type value to user friendly action label | | false
 columnWidths | object | Sets custom column widths to modal window columns | | false
 fieldFormatter | object | Formats changed field value in modal content, used to format field oldValue/newValue | | false
