@@ -1,4 +1,5 @@
 /* form elements */
+export { default as AuditLogPane } from './lib/AuditLog';
 export { default as AutoSuggest } from './lib/AutoSuggest';
 export { default as Badge } from './lib/Badge';
 export { default as Button } from './lib/Button';
