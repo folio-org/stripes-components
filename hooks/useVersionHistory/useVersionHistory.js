@@ -11,7 +11,7 @@ const useVersionHistory = ({
 }) => {
   const [versions, setVersions] = useState([]);
 
-  const [isLoadedMoreVisible, setIsLoadedMoreVisible] = useState(true);
+  const [isLoadMoreVisible, setIsLoadMoreVisible] = useState(true);
 
   // cleanup when component unmounts
   useEffect(() => () => {
@@ -25,7 +25,7 @@ const useVersionHistory = ({
   }, [data]);
 
   useEffect(() => {
-    setIsLoadedMoreVisible(versions.length < totalRecords);
+    setIsLoadMoreVisible(versions.length < totalRecords);
   }, [totalRecords, versions]);
 
   const versionsToDisplay = useMemo(
@@ -35,7 +35,7 @@ const useVersionHistory = ({
 
   return {
     versions: versionsToDisplay,
-    isLoadedMoreVisible,
+    isLoadMoreVisible,
   };
 };
 
