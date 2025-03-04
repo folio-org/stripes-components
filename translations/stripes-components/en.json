@@ -51,6 +51,7 @@
   "validatingInProcess": "Validating...",
   "versionHistory.pane.header": "Version history",
   "versionHistory.pane.sub": "{count, plural, one {# version} other {# versions}}",
+  "versionHistory.pane.loadingLabel": "Loading",
   "versionHistory.card.changed": "Changed",
   "versionHistory.modal.action": "Action",
   "versionHistory.modal.field": "Field",
