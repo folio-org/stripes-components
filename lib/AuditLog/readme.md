@@ -35,14 +35,14 @@ const fieldFormatter = {
 const handleClose = () => console.log('Pane closed');
 const handleLoadMore = () => console.log('Load more clicked');
 const isLoading = false;
-const isLoadedMoreVisible = true;
+const isLoadMoreVisible = true;
 const actionsMap = { ADDED: formatMessage({ id: 'ui-inventory.versionHistory.action.added' }) };
 
 return (
   <AuditLogPane
     versions={versions}
     onClose={handleClose}
-    isLoadedMoreVisible={isLoadedMoreVisible}
+    isLoadMoreVisible={isLoadMoreVisible}
     handleLoadMore={handleLoadMore}
     isLoading={isLoading}
     fieldLabelsMap={fieldLabelsMap}
@@ -60,8 +60,8 @@ columnWidths | object | Sets custom column widths to modal window columns       
 fieldFormatter | object | Formats changed field value in modal content, used to format oldValue/newValue fields | | false
 fieldLabelsMap | object | Maps changed field name to user friendly label                                    | | false
 handleLoadMore | func | Callback fired when the "Load more" button is clicked                             | | false
-isLoadedMoreVisible | bool | Flag that indicates whether "Load more" button visible or not                     | true | false
 isLoading | bool | Flag that indicates whether data is being loaded                                  | | false
+isLoadMoreVisible | bool | Flag that indicates whether "Load more" button visible or not                     | true | false
 onClose | func | Callback fired when the pane is closed using its dismiss button                   | | false
 versions | array | An array of objects containing version change details                             | | true
 
@@ -209,3 +209,36 @@ label | string or node | The header label of the modal                          
 onClose | func           | Callback triggered when closing the modal                                | | false
 open | bool           | Indicates whether the modal is open | | true
 
+## useVersionHistory hook
+React hook for managing version history data and the "Load more" button visibility.
+Can be used together with `<AuditLogPane>` components.
+
+### Basic usage
+```js
+import { useVersionHistory } from '@folio/stripes/components';
+
+const { data, totalRecords } = useInstanceAuditDataQuery();
+
+
+export const versionsFormatter = diffArray => {
+  return diffArray
+    .filter(({ action }) => action !== 'CREATE')
+    .map(({ eventDate, eventTs, userId, eventId, diff }) => ({
+      eventDate: formatDateTime(eventDate),
+      source: getSourceLink(userId),
+      userName: getUserName(userId) || anonymousUserLabel,
+      fieldChanges: diff.fieldChanges || [],
+      eventId,
+      eventTs,
+    }));
+};
+
+const {
+  versions,
+  isLoadMoreVisible,
+} = useVersionHistory({
+  data,
+  totalRecords,
+  versionsFormatter,
+});
+```
