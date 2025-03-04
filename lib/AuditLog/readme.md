@@ -209,3 +209,36 @@ label | string or node | The header label of the modal                          
 onClose | func           | Callback triggered when closing the modal                                | | false
 open | bool           | Indicates whether the modal is open | | true
 
+## useVersionHistory hook
+React hook for managing version history data and the "Load more" button visibility.
+Can be used together with `<AuditLogPane>` components.
+
+### Basic usage
+```js
+import { useVersionHistory } from '@folio/stripes/components';
+
+const { data, totalRecords } = useInstanceAuditDataQuery();
+
+
+export const versionsFormatter = diffArray => {
+  return diffArray
+    .filter(({ action }) => action !== 'CREATE')
+    .map(({ eventDate, eventTs, userId, eventId, diff }) => ({
+      eventDate: formatDateTime(eventDate),
+      source: getSourceLink(userId),
+      userName: getUserName(userId) || anonymousUserLabel,
+      fieldChanges: diff.fieldChanges || [],
+      eventId,
+      eventTs,
+    }));
+};
+
+const {
+  versions,
+  isLoadMoreVisible,
+} = useVersionHistory({
+  data,
+  totalRecords,
+  versionsFormatter,
+});
+```
