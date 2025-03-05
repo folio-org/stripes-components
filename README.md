@@ -51,6 +51,7 @@ Component | doc | categories
 --- | --- | ---
 [`<Accordion>`](lib/Accordion) | [doc](lib/Accordion/readme.md) | structure
 [`<AdvancedSearch>`](lib/AdvancedSearch) | [doc](lib/AdvancedSearch/readme.md) | control
+[`<AuditLog>`](lib/AuditLog) | [doc](lib/AuditLog/readme.md) | data-display
 [`<AutoSuggest>`](lib/AutoSuggest) | [doc](lib/AutoSuggest/readme.md) | control
 [`<Avatar>`](lib/Avatar) | [doc](lib/Avatar/readme.md) | data-display
 [`<Badge>`](lib/Badge) | [doc](lib/Badge/readme.md) | data-display, design
