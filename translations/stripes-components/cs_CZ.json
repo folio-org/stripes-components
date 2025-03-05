@@ -894,6 +894,6 @@
     "filterGroups.clearFilterSetLabel": "Vymazat vybrané filtry {labelText}",
     "selection.enterFilter": "Pro načtení možností zadejte hodnotu",
     "countries.XK": "Kosovo",
-    "advancedSearch.booleanLabel": "Select Boolean operator",
+    "advancedSearch.booleanLabel": "Vybrat booleovský operátor",
     "advancedSearch.fieldLabel": "Zadat hledaný výraz"
 }
