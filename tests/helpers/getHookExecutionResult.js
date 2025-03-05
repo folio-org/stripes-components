@@ -17,9 +17,9 @@ import { mountWithContext } from '../helpers';
 const getHookExecutionResult = (hook, hookArguments = []) => {
   let result = {};
   const TestComponent = () => {
-    const hookResult = Array.isArray(hookArguments)
-      ? hook(...hookArguments)
-      : hook(hookArguments);
+    const hookResult = Array.isArray(hookArguments) ?
+      hook(...hookArguments) :
+      hook(hookArguments);
     switch (typeof hookResult) {
       case 'function':
       case 'string':
@@ -56,6 +56,7 @@ const useHookExecutionResult = (hook, hookParams, comparator = isEqual) => {
  * @param {*} checkEffect Function that will be called each update to result.
  * @param {*} comparator Function to compare two values - a previous value and a potential candidate -
  * for potentially re-rendering the text component/updating state.
+ * @param {*} useFunctionalChildren Hook parameters will be passed via render props from Wrapper component.
  * @returns hook's result, wrapped in a Promise, because that's what mountWithContext
  *   returns and we need to wait for the component that calls the hook to mount and
  *   render.
@@ -65,15 +66,17 @@ export const getHookExecutionHarness = (
   hookArguments = [],
   Wrapper = Fragment,
   checkEffect = noop,
-  comparator = isEqual
+  comparator = isEqual,
+  useFunctionalChildren = false,
 ) => {
   let result = {};
-  const TestComponent = () => {
+  const TestComponent = (paramsFromProps) => {
     const innerResult = useHookExecutionResult(
       hook,
-      Array.isArray(hookArguments)
-        ? hookArguments
-        : [hookArguments],
+      useFunctionalChildren ? [paramsFromProps] :
+        Array.isArray(hookArguments)
+          ? hookArguments
+          : [hookArguments],
       comparator
     );
 
@@ -88,7 +91,10 @@ export const getHookExecutionHarness = (
 
   return mountWithContext(
     <Wrapper>
-      <TestComponent />
+      { useFunctionalChildren ?
+        (props) => <TestComponent {...props} /> :
+        <TestComponent />
+      }
     </Wrapper>
   ).then(() => result);
 };
