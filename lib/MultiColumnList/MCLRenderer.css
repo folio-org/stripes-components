@@ -9,6 +9,26 @@
   &:focus {
     outline: none;
   }
+
+  .printFullContents {
+    @media print {
+      overflow: visible !important;
+
+      .mclRowContainer {
+          overflow: visible;
+      }
+
+      .mclScrollable {
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      /* hide pagination for printed pages */
+      .mclPaginationCenterContainer {
+        display: none;
+      }
+    }
+  }
 }
 
 .mclHeightSpacer {
