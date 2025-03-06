@@ -53,6 +53,7 @@
   "versionHistory.pane.sub": "{count, plural, one {# version} other {# versions}}",
   "versionHistory.pane.loadingLabel": "Loading",
   "versionHistory.card.changed": "Changed",
+  "versionHistory.card.originalVersion": "Original version",
   "versionHistory.modal.action": "Action",
   "versionHistory.modal.field": "Field",
   "versionHistory.modal.changedFrom": "Changed from",
