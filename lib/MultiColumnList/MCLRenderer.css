@@ -9,27 +9,8 @@
   &:focus {
     outline: none;
   }
-
-  .printFullContents {
-    @media print {
-      overflow: visible !important;
-
-      .mclRowContainer {
-          overflow: visible;
-      }
-
-      .mclScrollable {
-        height: auto !important;
-        overflow: visible !important;
-      }
-
-      /* hide pagination for printed pages */
-      .mclPaginationCenterContainer {
-        display: none;
-      }
-    }
-  }
 }
+
 
 .mclHeightSpacer {
   position: relative;
@@ -439,6 +420,27 @@
     box-shadow: 3px 0 4px rgba(0 0 0 / 5%);
     border-right: 1px solid var(--color-border-p2);
     border-left: 0;
+  }
+}
+
+ /* .printFullContents { */
+ @media print {
+  .mclContainer {
+    overflow: visible !important;
+  }
+
+  .mclRowContainer {
+      overflow: visible;
+  }
+
+  .mclScrollable {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* hide pagination for printed pages */
+  .mclPaginationCenterContainer {
+    display: none;
   }
 }
 
