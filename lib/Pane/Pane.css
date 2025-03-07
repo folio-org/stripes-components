@@ -22,9 +22,9 @@
 
   &:nth-last-of-type(1) {
     @media print {
-      overflow: visible;
+      overflow: visible !important;
       display: block;
-      flex: 0 0 100vw !important;
+      position: static !important;
     }
   }
 }
@@ -65,7 +65,12 @@
   }
 
   @media print {
-    overflow: visible;
+    overflow: visible !important;
+    height: auto !important;
+    position: static !important;
+
+    /* autosizer for results lists prefers *some height */
+    min-height: 1px;
   }
 }
 

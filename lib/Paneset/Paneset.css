@@ -18,7 +18,12 @@
   }
 
   @media print {
+    display: block !important;
     overflow: visible;
+    height: fit-content !important;
+
+    /* autosizer prefers containers of at least 1px */
+    min-height: 1px;
   }
 }
 
