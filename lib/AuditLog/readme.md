@@ -84,6 +84,7 @@ const versionCards = () => {
     return (
       <AuditLogCard
         key={eventId || i}
+        isCurrentVersion={i === 0}
         isOriginal={isOriginal}
         date={eventDate}
         source={source}
@@ -100,17 +101,18 @@ const versionCards = () => {
 ```
 
 ### Props
-Name | type   | description                                                                                  | default | required
---- |--------|----------------------------------------------------------------------------------------------| --- | ---
-actionsMap | object | Maps change type value to user friendly action label                                         | | false
-columnWidths | object | Sets custom column widths to modal window columns                                            | | false
-date | string | The date of the change event                                                                 | | true
-fieldChanges | array  | A list of changed fields                                                                     | | true
-fieldFormatter | object | Formats changed field value in modal content, used to format oldValue/newValue fields        | | false
-fieldLabelsMap | object | Maps changed field name to user friendly label                                               | | false
+Name | type   | description                                                                                | default | required
+--- |--------|--------------------------------------------------------------------------------------------| --- | ---
+actionsMap | object | Maps change type value to user friendly action label                                       | | false
+columnWidths | object | Sets custom column widths to modal window columns                                          | | false
+date | string | The date of the change event                                                               | | true
+fieldChanges | array  | A list of changed fields                                                                   | | true
+fieldFormatter | object | Formats changed field value in modal content, used to format oldValue/newValue fields      | | false
+fieldLabelsMap | object | Maps changed field name to user friendly label                                             | | false
+isCurrentVersion | bool | The flag that indicates that a card represents the current version  | | false
 isOriginal | bool | The flag that indicates that a card represents the original version and has no field changes | | false
-source | string or node | The source of fields changes                                                                 | | true
-userName | string | The name of the user who made the change                                                     | | true
+source | string or node | The source of fields changes                                                               | | true
+userName | string | The name of the user who made the change                                                   | | true
 
 ## AuditLogChangedFieldsList
 AuditLogChangedFieldsList renders a list of changed fields and "Changed" button within an AuditLogCard.
@@ -137,6 +139,7 @@ return (
     actionsMap={actionsMap}
     fieldChanges={fieldChanges}
     fieldLabelsMap={fieldLabelsMap}
+    isCurrentVersion={isCurrentVersion}
     onChangeButtonClick={onChangeButtonClick}
   />
 );
@@ -148,7 +151,8 @@ Name | type   | description                                                     
 actionsMap | object | Maps change type value to user friendly action label                                | | false
 fieldChanges | array  | A list of changed fields                                                            | | false
 fieldLabelsMap | object | Maps changed field name to user friendly label                                      | | false
-onChangeButtonClick | func | Callback triggered when clicking the "Changed" button                             | | false
+isCurrentVersion | bool   | The flag that indicates that a card represents the current version  | | false
+onChangeButtonClick | func   | Callback triggered when clicking the "Changed" button                             | | false
 
 ## AuditLogModal
 AuditLogModal is a modal window that opens when the "Changed" button is clicked, displaying detailed fields changes information.
@@ -194,6 +198,7 @@ return (
     onClose={() => setIsModalOpen(false)}
     fieldLabelsMap={fieldLabelsMap}
     fieldFormatter={fieldFormatter}
+    isCurrentVersion={isCurrentVersion}
     actionsMap={actionsMap}
     columnWidths={columnWidths}
   />
@@ -209,6 +214,7 @@ contentData | array          | A list of changed fields                         
 fieldLabelsMap | object         | Maps changed field name to user friendly label                                      | | false
 fieldFormatter | object         | Formats changed field value in modal content, used to format oldValue/newValue fields | | false
 label | string or node | The header label of the modal                                                       | | true
+isCurrentVersion | bool   | The flag that indicates that a card represents the current version  | | false
 onClose | func           | Callback triggered when closing the modal                                | | false
 open | bool           | Indicates whether the modal is open | | true
 
