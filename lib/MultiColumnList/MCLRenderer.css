@@ -423,14 +423,14 @@
   }
 }
 
- /* .printFullContents { */
+ /* Exposes full content of MCL's for printing. */
  @media print {
   .mclContainer {
     overflow: visible !important;
   }
 
   .mclRowContainer {
-      overflow: visible;
+    overflow: visible;
   }
 
   .mclScrollable {
