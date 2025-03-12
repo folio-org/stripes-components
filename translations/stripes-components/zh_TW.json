@@ -895,5 +895,15 @@
     "selection.enterFilter": "請輸入一個數值來載入選項",
     "countries.XK": "Kosovo",
     "advancedSearch.booleanLabel": "Select Boolean operator",
-    "advancedSearch.fieldLabel": "Enter search term"
+    "advancedSearch.fieldLabel": "Enter search term",
+    "auditLog.pane.header": "Version history",
+    "auditLog.pane.sub": "{count, plural, one {# version} other {# versions}}",
+    "auditLog.pane.loadingLabel": "Loading",
+    "auditLog.card.changed": "Changed",
+    "auditLog.card.originalVersion": "Original version",
+    "auditLog.modal.action": "Action",
+    "auditLog.modal.field": "Field",
+    "auditLog.modal.changedFrom": "Changed from",
+    "auditLog.modal.changedTo": "Changed to",
+    "auditLog.card.currentVersion": "Current version"
 }

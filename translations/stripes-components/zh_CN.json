@@ -895,5 +895,15 @@
     "selection.enterFilter": "输入值以加载选项",
     "countries.XK": "科索沃",
     "advancedSearch.booleanLabel": "选择布尔运算符",
-    "advancedSearch.fieldLabel": "输入搜索词"
+    "advancedSearch.fieldLabel": "输入搜索词",
+    "auditLog.pane.header": "Version history",
+    "auditLog.pane.sub": "{count, plural, one {# version} other {# versions}}",
+    "auditLog.pane.loadingLabel": "Loading",
+    "auditLog.card.changed": "Changed",
+    "auditLog.card.originalVersion": "Original version",
+    "auditLog.modal.action": "Action",
+    "auditLog.modal.field": "Field",
+    "auditLog.modal.changedFrom": "Changed from",
+    "auditLog.modal.changedTo": "Changed to",
+    "auditLog.card.currentVersion": "Current version"
 }
