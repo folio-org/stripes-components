@@ -1,12 +1,13 @@
 # Change history for stripes-components
 
-## IN PROGRESS
+## [13.0.1](https://github.com/folio-org/stripes-components/tree/v13.0.1) (2025-03-12)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.0...v13.0.1)
 
 * MultiSelection - pass `dirty` and `isValid` props from the form field wrapper. Refs STCOM-1409.
-
 * Introduce `<AuditLog>` component. Refs STCOM-1412.
 * `AuditLog` - Add original version card. Refs STCOM-1416.
 * `AuditLog` - Show current version for the newest card. Refs STCOM-1415.
+* `AuditLog` - add `modalFieldChanges` to display field change in card modal window, make modal large, add totalVersions. Refs STCOM-1419.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
