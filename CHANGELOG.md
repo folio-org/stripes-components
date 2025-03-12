@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## IN PROGRESS
+
+* MultiSelection - pass `dirty` and `isValid` props from the form field wrapper. Refs STCOM-1409.
+
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
 
