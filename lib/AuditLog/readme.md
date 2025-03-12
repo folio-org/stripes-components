@@ -48,22 +48,24 @@ return (
     fieldLabelsMap={fieldLabelsMap}
     fieldFormatter={fieldFormatter}
     actionsMap={actionsMap}
+    totalVersions={totalRecords}
   />
 );
 ```
 
 ## Props
-Name | type | description                                                                       | default | required
---- | --- |-----------------------------------------------------------------------------------| --- | ---
-actionsMap | object | Maps change type value to user friendly action label                              | | false
-columnWidths | object | Sets custom column widths to modal window columns                                 | | false
+Name | type   | description                                                                           | default | required
+--- |--------|---------------------------------------------------------------------------------------| --- | ---
+actionsMap | object | Maps change type value to user friendly action label                                  | | false
+columnWidths | object | Sets custom column widths to modal window columns                                     | | false
 fieldFormatter | object | Formats changed field value in modal content, used to format oldValue/newValue fields | | false
-fieldLabelsMap | object | Maps changed field name to user friendly label                                    | | false
-handleLoadMore | func | Callback fired when the "Load more" button is clicked                             | | false
-isLoading | bool | Flag that indicates whether data is being loaded                                  | | false
-isLoadMoreVisible | bool | Flag that indicates whether "Load more" button visible or not                     | true | false
-onClose | func | Callback fired when the pane is closed using its dismiss button                   | | false
-versions | array | An array of objects containing version change details                             | | true
+fieldLabelsMap | object | Maps changed field name to user friendly label                                        | | false
+handleLoadMore | func   | Callback fired when the "Load more" button is clicked                                 | | false
+isLoading | bool   | Flag that indicates whether data is being loaded                                      | | false
+isLoadMoreVisible | bool   | Flag that indicates whether "Load more" button visible or not                         | true | false
+onClose | func   | Callback fired when the pane is closed using its dismiss button                       | | false
+totalVersions | number | Total number of versions                                                              | | false
+versions | array  | An array of objects containing version change details                                 | | true
 
 ## AuditLogCard
 AuditLogCard represents a single change event within AuditLogPane.
@@ -80,6 +82,7 @@ const versionCards = () => {
     source,
     userName,
     fieldChanges,
+    modalFieldChanges,
   }, i) => {
     return (
       <AuditLogCard
@@ -94,6 +97,7 @@ const versionCards = () => {
         fieldFormatter={fieldFormatter}
         actionsMap={actionsMap}
         columnWidths={columnWidths}
+        modalFieldChanges={modalFieldChanges}
       />
     );
   });
@@ -101,18 +105,19 @@ const versionCards = () => {
 ```
 
 ### Props
-Name | type   | description                                                                                | default | required
---- |--------|--------------------------------------------------------------------------------------------| --- | ---
-actionsMap | object | Maps change type value to user friendly action label                                       | | false
-columnWidths | object | Sets custom column widths to modal window columns                                          | | false
-date | string | The date of the change event                                                               | | true
-fieldChanges | array  | A list of changed fields                                                                   | | true
-fieldFormatter | object | Formats changed field value in modal content, used to format oldValue/newValue fields      | | false
-fieldLabelsMap | object | Maps changed field name to user friendly label                                             | | false
-isCurrentVersion | bool | The flag that indicates that a card represents the current version  | | false
-isOriginal | bool | The flag that indicates that a card represents the original version and has no field changes | | false
-source | string or node | The source of fields changes                                                               | | true
-userName | string | The name of the user who made the change                                                   | | true
+Name | type           | description                                                                                  | default | required
+--- |----------------|----------------------------------------------------------------------------------------------| --- | ---
+actionsMap | object         | Maps change type value to user friendly action label                                         | | false
+columnWidths | object         | Sets custom column widths to modal window columns                                            | | false
+date | string         | The date of the change event                                                                 | | true
+fieldChanges | array          | A list of changed fields                                                                     | | true
+fieldFormatter | object         | Formats changed field value in modal content, used to format oldValue/newValue fields        | | false
+fieldLabelsMap | object         | Maps changed field name to user friendly label                                               | | false
+isCurrentVersion | bool           | The flag that indicates that a card represents the current version                           | | false
+isOriginal | bool           | The flag that indicates that a card represents the original version and has no field changes | | false
+modalFieldChanges | array          | A list of changed fields for card modal window                                               | | false
+source | string or node | The source of fields changes                                                                 | | true
+userName | string         | The name of the user who made the change                                                     | | true
 
 ## AuditLogChangedFieldsList
 AuditLogChangedFieldsList renders a list of changed fields and "Changed" button within an AuditLogCard.
