@@ -895,5 +895,15 @@
     "selection.enterFilter": "Enter a value to load options",
     "countries.XK": "Kosovo",
     "advancedSearch.booleanLabel": "Select Boolean operator",
-    "advancedSearch.fieldLabel": "Enter search term"
+    "advancedSearch.fieldLabel": "Enter search term",
+    "auditLog.pane.header": "Історія версії",
+    "auditLog.pane.sub": "{count, plural, one {# версія} few {} many {} other {# версії}}",
+    "auditLog.pane.loadingLabel": "Завантаження",
+    "auditLog.card.changed": "Змінено",
+    "auditLog.card.originalVersion": "Оригінальна версія",
+    "auditLog.modal.action": "Дія",
+    "auditLog.modal.field": "Поле",
+    "auditLog.modal.changedFrom": "Змінено з",
+    "auditLog.modal.changedTo": "Змінено на",
+    "auditLog.card.currentVersion": "Поточна версія"
 }
