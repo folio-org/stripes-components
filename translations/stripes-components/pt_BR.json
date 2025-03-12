@@ -895,5 +895,15 @@
     "selection.enterFilter": "Digite um valor para carregar as opções",
     "countries.XK": "Kosovo",
     "advancedSearch.booleanLabel": "Selecione o operador booleano",
-    "advancedSearch.fieldLabel": "Insira o termo de busca"
+    "advancedSearch.fieldLabel": "Insira o termo de busca",
+    "auditLog.pane.header": "Histórico da versão",
+    "auditLog.pane.sub": "{count, plural, one {# versão} other {# versões}}",
+    "auditLog.pane.loadingLabel": "Carregando",
+    "auditLog.card.changed": "Alterado",
+    "auditLog.card.originalVersion": "Versão original",
+    "auditLog.modal.action": "Ação",
+    "auditLog.modal.field": "Campo",
+    "auditLog.modal.changedFrom": "Alterado de",
+    "auditLog.modal.changedTo": "Alterado para",
+    "auditLog.card.currentVersion": "Versão atual"
 }

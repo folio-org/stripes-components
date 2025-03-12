@@ -895,5 +895,15 @@
     "selection.enterFilter": "Pro načtení možností zadejte hodnotu",
     "countries.XK": "Kosovo",
     "advancedSearch.booleanLabel": "Vybrat booleovský operátor",
-    "advancedSearch.fieldLabel": "Zadat hledaný výraz"
+    "advancedSearch.fieldLabel": "Zadat hledaný výraz",
+    "auditLog.pane.header": "Historie verzí",
+    "auditLog.pane.sub": "{count, plural, one {JEDNY} few {NĚKOLIK} many {MNOHO} other {OSTATNÍ}}",
+    "auditLog.pane.loadingLabel": "Načítání",
+    "auditLog.card.changed": "Změněno",
+    "auditLog.card.originalVersion": "Původní verze",
+    "auditLog.modal.action": "Akce",
+    "auditLog.modal.field": "Pole",
+    "auditLog.modal.changedFrom": "Změněno z",
+    "auditLog.modal.changedTo": "Změněno na",
+    "auditLog.card.currentVersion": "Aktuální verze"
 }
