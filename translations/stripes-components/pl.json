@@ -895,5 +895,15 @@
     "selection.enterFilter": "Enter a value to load options",
     "countries.XK": "Kosovo",
     "advancedSearch.booleanLabel": "Wybierz operator Boole'a",
-    "advancedSearch.fieldLabel": "Wprowadź termin wyszukiwania"
+    "advancedSearch.fieldLabel": "Wprowadź termin wyszukiwania",
+    "auditLog.pane.header": "Historia wersji",
+    "auditLog.pane.sub": "{count, plural, one {wersja} few {wersji} many {wersji} other {wersje}}",
+    "auditLog.pane.loadingLabel": "Ładowanie",
+    "auditLog.card.changed": "Zmieniono",
+    "auditLog.card.originalVersion": "Oryginalna wersja",
+    "auditLog.modal.action": "Akcja",
+    "auditLog.modal.field": "Pole",
+    "auditLog.modal.changedFrom": "Zmieniono z",
+    "auditLog.modal.changedTo": "Zmieniono na",
+    "auditLog.card.currentVersion": "Aktualna wersja"
 }
