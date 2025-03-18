@@ -89,7 +89,7 @@ export class DayRange {
       return this.isSame(candidate) ||
       (this.contains(candidate.start) && this.contains(candidate.end));
     } else {
-      return dayjs(candidate).isBetween(this.start, this.end);
+      return dayjs(candidate).isBetween(this.start, this.end, 'day', '[]');
     }
   };
 
