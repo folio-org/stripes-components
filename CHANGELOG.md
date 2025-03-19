@@ -7,6 +7,7 @@
 * `AuditLog` - Show current version for the newest card. Refs STCOM-1415.
 * CSS Support for printing of results list content. Refs STCOM-1417.
 * `AuditLog` - add `modalFieldChanges` to display field change in card modal window, make modal large, add totalVersions. Refs STCOM-1419.
+* Add loading indicator to `AuditLogPane` when data is initially loading. Refs STCOM-1422.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
