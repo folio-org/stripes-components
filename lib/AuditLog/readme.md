@@ -35,6 +35,7 @@ const fieldFormatter = {
 const handleClose = () => console.log('Pane closed');
 const handleLoadMore = () => console.log('Load more clicked');
 const isLoading = false;
+const isInitialLoading = false;
 const isLoadMoreVisible = true;
 const actionsMap = { ADDED: formatMessage({ id: 'ui-inventory.versionHistory.action.added' }) };
 
@@ -45,6 +46,7 @@ return (
     isLoadMoreVisible={isLoadMoreVisible}
     handleLoadMore={handleLoadMore}
     isLoading={isLoading}
+    isInitialLoading={isInitialLoading}
     fieldLabelsMap={fieldLabelsMap}
     fieldFormatter={fieldFormatter}
     actionsMap={actionsMap}
@@ -61,6 +63,7 @@ columnWidths | object | Sets custom column widths to modal window columns       
 fieldFormatter | object | Formats changed field value in modal content, used to format oldValue/newValue fields | | false
 fieldLabelsMap | object | Maps changed field name to user friendly label                                        | | false
 handleLoadMore | func   | Callback fired when the "Load more" button is clicked                                 | | false
+isInitialLoading | bool   | Flag that indicates whether data is being loaded for the first time                   | | false
 isLoading | bool   | Flag that indicates whether data is being loaded                                      | | false
 isLoadMoreVisible | bool   | Flag that indicates whether "Load more" button visible or not                         | true | false
 onClose | func   | Callback fired when the pane is closed using its dismiss button                       | | false
