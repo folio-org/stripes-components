@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 13.0.2 IN PROGRESS
+## [13.0.2](https://github.com/folio-org/stripes-components/tree/v13.0.2) (2025-03-24)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.1...v13.0.2)
 
 * Add loading indicator to `AuditLogPane` when data is initially loading. Refs STCOM-1422.
 * CSS Support for printing of results list content. Refs STCOM-1417.
