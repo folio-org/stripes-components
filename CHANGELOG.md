@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 13.0.3 IN PROGRESS
+
+* Display `Changed from - "-"` and `Changed to - "false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
+
 ## 13.1.0 IN PROGRESS
 
 * Introduce `<AuditLog>` component. Refs STCOM-1412.
