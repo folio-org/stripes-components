@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 12.2.9 IN PROGRESS
+
+* Restore onSelect support for AutoSuggest component. Refs STCOM-1426.
+
 ## [12.2.8](https://github.com/folio-org/stripes-components/tree/v12.2.8) (2024-12-17)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.7...v12.2.8)
 
