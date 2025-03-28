@@ -37,6 +37,7 @@ const handleLoadMore = () => console.log('Load more clicked');
 const isLoading = false;
 const isInitialLoading = false;
 const isLoadMoreVisible = true;
+const showSharedLabel = false;
 const actionsMap = { ADDED: formatMessage({ id: 'ui-inventory.versionHistory.action.added' }) };
 
 return (
@@ -47,6 +48,7 @@ return (
     handleLoadMore={handleLoadMore}
     isLoading={isLoading}
     isInitialLoading={isInitialLoading}
+    showSharedLabel={showSharedLabel}
     fieldLabelsMap={fieldLabelsMap}
     fieldFormatter={fieldFormatter}
     actionsMap={actionsMap}
@@ -57,18 +59,19 @@ return (
 
 ## Props
 Name | type   | description                                                                           | default | required
---- |--------|---------------------------------------------------------------------------------------| --- | ---
-actionsMap | object | Maps change type value to user friendly action label                                  | | false
-columnWidths | object | Sets custom column widths to modal window columns                                     | | false
-fieldFormatter | object | Formats changed field value in modal content, used to format oldValue/newValue fields | | false
-fieldLabelsMap | object | Maps changed field name to user friendly label                                        | | false
-handleLoadMore | func   | Callback fired when the "Load more" button is clicked                                 | | false
-isInitialLoading | bool   | Flag that indicates whether data is being loaded for the first time                   | | false
-isLoading | bool   | Flag that indicates whether data is being loaded                                      | | false
-isLoadMoreVisible | bool   | Flag that indicates whether "Load more" button visible or not                         | true | false
-onClose | func   | Callback fired when the pane is closed using its dismiss button                       | | false
-totalVersions | number | Total number of versions                                                              | | false
-versions | array  | An array of objects containing version change details                                 | | true
+--- |--------|---------------------------------------------------------------------------------------|---------| ---
+actionsMap | object | Maps change type value to user friendly action label                                  |         | false
+columnWidths | object | Sets custom column widths to modal window columns                                     |         | false
+fieldFormatter | object | Formats changed field value in modal content, used to format oldValue/newValue fields |         | false
+fieldLabelsMap | object | Maps changed field name to user friendly label                                        |         | false
+handleLoadMore | func   | Callback fired when the "Load more" button is clicked                                 |         | false
+isInitialLoading | bool   | Flag that indicates whether data is being loaded for the first time                   |         | false
+isLoading | bool   | Flag that indicates whether data is being loaded                                      |         | false
+isLoadMoreVisible | bool   | Flag that indicates whether "Load more" button visible or not                         | true    | false
+onClose | func   | Callback fired when the pane is closed using its dismiss button                       |         | false
+showSharedLabel | bool   | Flag indicating whether the original version should display "Shared" label       | false   | false
+totalVersions | number | Total number of versions                                                              |         | false
+versions | array  | An array of objects containing version change details                                 |         | true
 
 ## AuditLogCard
 AuditLogCard represents a single change event within AuditLogPane.
@@ -92,6 +95,7 @@ const versionCards = () => {
         key={eventId || i}
         isCurrentVersion={i === 0}
         isOriginal={isOriginal}
+        showSharedLabel={showSharedLabel}
         date={eventDate}
         source={source}
         userName={userName}
@@ -118,8 +122,10 @@ fieldFormatter | object         | Formats changed field value in modal content, 
 fieldLabelsMap | object         | Maps changed field name to user friendly label                                               | | false
 isCurrentVersion | bool           | The flag that indicates that a card represents the current version                           | | false
 isOriginal | bool           | The flag that indicates that a card represents the original version and has no field changes | | false
+ |            |   | | 
 modalFieldChanges | array          | A list of changed fields for card modal window                                               | | false
 source | string or node | The source of fields changes                                                                 | | true
+showSharedLabel | bool | Flag indicating whether the original version should display "Shared" label                      | | false
 userName | string         | The name of the user who made the change                                                     | | true
 
 ## AuditLogChangedFieldsList
