@@ -11,7 +11,7 @@
   "advancedSearch.match.startsWith": "Starts with",
   "advancedSearch.match.containsAny": "Contains any",
   "advancedSearch.footer.search": "Search",
-  "advancedSearch.footer.cancel": "Cancel",
+  "advancedSearch.footer.resetAll": "Reset all",
   "advancedSearch.booleanLabel": "Select Boolean operator",
   "advancedSearch.fieldLabel": "Enter search term",
   "advancedSearch.match.label": "Match option",
