@@ -55,6 +55,7 @@
   "auditLog.card.changed": "Changed",
   "auditLog.card.currentVersion": "Current version",
   "auditLog.card.originalVersion": "Original version",
+  "auditLog.card.shared": "Shared",
   "auditLog.modal.action": "Action",
   "auditLog.modal.field": "Field",
   "auditLog.modal.changedFrom": "Changed from",

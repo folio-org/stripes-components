@@ -3,6 +3,7 @@
 ## 13.0.3 IN PROGRESS
 
 * Display `Changed from - "-"` and `Changed to - "false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
+* `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
 
 ## 13.1.0 IN PROGRESS
 
