@@ -2,7 +2,7 @@
 
 ## 13.0.3 IN PROGRESS
 
-* Display `Changed from - "-"` and `Changed to - "false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
+* Display `Changed from - "true/false"` and `Changed to - "true/false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
 
 ## 13.1.0 IN PROGRESS
 
