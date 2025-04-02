@@ -2,7 +2,7 @@
 
 ## 13.0.4
 
-* Display `Changed from - "-"` and `Changed to - "false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
+* Display `Changed from - "true/false"` and `Changed to - "true/false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
 
 ## [13.0.3](https://github.com/folio-org/stripes-components/tree/v13.0.3) (2025-03-27)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.2...v13.0.3)
