@@ -2,7 +2,7 @@
 
 ## 13.0.3 IN PROGRESS
 
-* Display `Changed from - "-"` and `Changed to - "false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
+* Display `Changed from - "true/false"` and `Changed to - "true/false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
 * Restore onSelect support for AutoSuggest component. Refs STCOM-1426.
 * `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
 
