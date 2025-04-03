@@ -16,6 +16,7 @@
 * Make `dayjs.contains` include start end end dates. Refs STCOM-1421.
 * Add loading indicator to `AuditLogPane` when data is initially loading. Refs STCOM-1422.
 * `AdvancedSearch` - replace `Cancel` button with `Reset all` in modal window. Refs STCOM-1424.
+* Unify horizontal and vertical border colors of `<Pane>`s. Refs STCOM-1423.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
