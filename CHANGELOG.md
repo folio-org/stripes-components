@@ -6,6 +6,7 @@
 * Restore onSelect support for AutoSuggest component. Refs STCOM-1426.
 * `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
 * Load dayjs' LocalizedFormat plugin to leverage localized formats. Refs STCOM-1437.
+* Remove tabIndex from `<MultiColumnList>`'s empty message wrapping element. Refs STCOM-1403.
 
 ## 13.1.0 IN PROGRESS
 
