@@ -1,5 +1,12 @@
 # Change history for stripes-components
 
+## 13.0.3 IN PROGRESS
+
+* Display `Changed from - "true/false"` and `Changed to - "true/false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
+* Restore onSelect support for AutoSuggest component. Refs STCOM-1426.
+* `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
+* Load dayjs' LocalizedFormat plugin to leverage localized formats. Refs STCOM-1437.
+
 ## 13.1.0 IN PROGRESS
 
 * Introduce `<AuditLog>` component. Refs STCOM-1412.
@@ -7,6 +14,9 @@
 * `AuditLog` - Show current version for the newest card. Refs STCOM-1415.
 * CSS Support for printing of results list content. Refs STCOM-1417.
 * `AuditLog` - add `modalFieldChanges` to display field change in card modal window, make modal large, add totalVersions. Refs STCOM-1419.
+* Make `dayjs.contains` include start end end dates. Refs STCOM-1421.
+* Add loading indicator to `AuditLogPane` when data is initially loading. Refs STCOM-1422.
+* `AdvancedSearch` - replace `Cancel` button with `Reset all` in modal window. Refs STCOM-1424.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)

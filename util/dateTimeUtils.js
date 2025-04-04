@@ -13,7 +13,8 @@ import objectSupport from 'dayjs/plugin/objectSupport';
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import isBetween from 'dayjs/plugin/isBetween';
-import availableLocales from 'dayjs/locale'
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+import availableLocales from 'dayjs/locale';
 
 dayjs.extend(timezone);
 dayjs.extend(localeData);
@@ -27,6 +28,7 @@ dayjs.extend(customParseFormat);
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
+dayjs.extend(localizedFormat);
 
 // export a pre-extended dayjs for consumption.
 export { dayjs };
@@ -89,7 +91,13 @@ export class DayRange {
       return this.isSame(candidate) ||
       (this.contains(candidate.start) && this.contains(candidate.end));
     } else {
-      return dayjs(candidate).isBetween(this.start, this.end);
+      /*
+        dayjs needs some additional configuration to include start and end dates
+        when checking if a date is in range.
+        For example, without `[]`, 01/01/2025 would NOT be considered included in 01/01/2025-12/31/2025 range
+        https://day.js.org/docs/en/plugin/is-between
+      */
+      return dayjs(candidate).isBetween(this.start, this.end, 'day', '[]');
     }
   };
 
