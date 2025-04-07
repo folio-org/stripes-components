@@ -15,6 +15,7 @@
 * `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
 * Load dayjs' LocalizedFormat plugin to leverage localized formats. Refs STCOM-1437.
 * Remove tabIndex from `<MultiColumnList>`'s empty message wrapping element. Refs STCOM-1403.
+* Unify horizontal and vertical border colors of `<Pane>`s, as well as `NavListSection` heading border. Refs STCOM-1423.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
