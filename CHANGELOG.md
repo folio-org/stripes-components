@@ -1,6 +1,7 @@
 # Change history for stripes-components
 
-## 13.0.4
+## [13.0.4](https://github.com/folio-org/stripes-components/tree/v13.0.4) (2025-04-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.3...v13.0.4)
 
 * Display `Changed from - "true/false"` and `Changed to - "true/false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
 
