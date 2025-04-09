@@ -72,7 +72,6 @@ aria-live | string | Sets the `aria-live`-attribute for the root element. | off,
 autoFocusDismissButton | bool | Autofocuses the dismiss button when the `<MessageBanner>` enters the DOM. This requires that the `dismissible`-prop is set to true | | false
 type | string | Sets the style of the `<MessageBanner>` | default, error, success, warning | default
 children | node | Renders the contents of the `<MessageBanner>` | |
-dismissable | boolean | Typo of dismissible, **deprecated** | true/false | false
 dismissible | boolean | Adds a close icon and makes the `<MessageBanner>` dismissible | true/false | false
 dismissButtonAriaLabel | string | Adds an aria-label attribute for the dismiss `<IconButton>`. | | "Hide message"
 dismissButtonProps | object | Add custom props for the dismiss button. This can be useful for e.g. adding a custom class name for the internal `<IconButton>`. | | {}
@@ -85,6 +84,7 @@ className | string | Adds a custom class name for the `<MessageBanner>` | |
 contentClassName | string | Adds a custom class name for the content element inside the `<MessageBanner>` | |
 element | string, element, func | Changes the root element of the `<MessageBanner>` | | div |
 show | boolean | Control the visiblity externally. Using the show-prop will enable the `<MessageBanner>` to transition in and out. | true/false | |
+marginTop0 | boolean | Removes the default top margin | true/false | false
 
 
 The remaining props passed to `<MessageBanner>` will be spread onto the root element of the component. This component also accepts a `ref`.

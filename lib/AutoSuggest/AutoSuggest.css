@@ -15,6 +15,7 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   font-size: var(--font-size-medium);
+  pointer-events: all;
 }
 
 .textFieldDiv {

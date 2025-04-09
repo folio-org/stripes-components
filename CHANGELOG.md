@@ -1,6 +1,102 @@
 # Change history for stripes-components
 
-## 12.2.0 IN PROGRESS
+## 13.1.0 IN PROGRESS
+
+* Introduce `<AuditLog>` component. Refs STCOM-1412.
+* `AuditLog` - Add original version card. Refs STCOM-1416.
+* `AuditLog` - Show current version for the newest card. Refs STCOM-1415.
+* CSS Support for printing of results list content. Refs STCOM-1417.
+* `AuditLog` - add `modalFieldChanges` to display field change in card modal window, make modal large, add totalVersions. Refs STCOM-1419.
+* Make `dayjs.contains` include start end end dates. Refs STCOM-1421.
+* Add loading indicator to `AuditLogPane` when data is initially loading. Refs STCOM-1422.
+* `AdvancedSearch` - replace `Cancel` button with `Reset all` in modal window. Refs STCOM-1424.
+* Display `Changed from - "true/false"` and `Changed to - "true/false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
+* Restore onSelect support for AutoSuggest component. Refs STCOM-1426.
+* `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
+* Load dayjs' LocalizedFormat plugin to leverage localized formats. Refs STCOM-1437.
+* Remove tabIndex from `<MultiColumnList>`'s empty message wrapping element. Refs STCOM-1403.
+* Unify horizontal and vertical border colors of `<Pane>`s, as well as `NavListSection` heading border. Refs STCOM-1423.
+* Add 23 minority languages to the list, and add the English translations of their names. Fixes STCOM-1438.
+
+## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
+
+* `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
+* Change `Repeatable field` focus behaviour. Refs STCOM-1341.
+* Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
+* `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
+* Include Kosovo in the countries list. Refs STCOM-1354.
+* `<RepeatableField>` - switch to MutationObserver to resolve focus-management issues. Refs STCOM-1372.
+* Bump `stripes-react-hotkeys` to `v3.2.0` for compatibility with `findDOMNode()` changes. STCOM-1343.
+* Pin `currency-codes` to `v2.1.0` to avoid duplicate entries in `v2.2.0`. Refs STCOM-1379.
+* Wrap `<Selection>` in full-width div. Refs STCOM-1332.
+* Assign `<Modal>`'s exit key handler to Modal's element rather than `document`. refs STCOM-1382.
+* Wrap `<Card>`'s render output in `<StripesOverlayContext>` to facilitate ease with overlay components. Refs STCOM-1384.
+* Clear filter value after an action chosen from `MultiSelection` menu. Refs STCOM-1385.
+* ExportCSV - fix usage within `<Modal>`s by rendering the download link to the `div#OverlayContainer`. Refs STCOM-1387.
+* `<MenuSection>` should default its heading/label tag to `H3` instead of `H1`. Refs STCOM-1392.
+* `<Datepicker>` fix for `<Calendar>` tabIndex when changing the year. Refs STCOM-1395.
+* `<Tooltip>` should allow for tooltip content to be hovered without closing the tooltip. Refs STCOM-1391.
+* `<AdvancedSearchRow>` - change `aria-label` for the input box to enter a search query and the Boolean operator dropdown. Refs STCOM-1195.
+* *BREAKING* Update `@csstools` postcss plugins to current versions in sync with `@folio/stripes-cli`. Refs STCOM-1404.
+* Paneset - deduplicate panes via `id` prior to registration. Refs STCOM-1386.
+* Calendar - improved color contrast of edge month days, as per WCAG standards. Changed hover bg color of edge/month days. Increased weight of day numbers overall. Refs STCOM-1390.
+* *BREAKING* Update `react-intl` to `^7`. Refs STCOM-1406.
+* *BREAKING* remove deprecated props. Refs STCOM-1398.
+* Add marginTop0 prop to the MessageBanner component. Refs STCOM-1408.
+* Popper - hide overlay if popper anchor is scrolled out of the view. Refs STCOM-1386.
+* Switch `useRootClose` hook to `useOClickOutside`. Refs STCOM-1339.
+* Removed `react-overlays` dependency. Refs STCOM-1336.
+* MultiSelection - pass `dirty` and `isValid` props from the form field wrapper. Refs STCOM-1409.
+
+## [12.2.8](https://github.com/folio-org/stripes-components/tree/v12.2.8) (2024-12-17)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.7...v12.2.8)
+
+* ExportCSV - fix usage within `<Modal>`s by rendering the download link to the `div#OverlayContainer`. Refs STCOM-1387.
+
+## [12.2.7](https://github.com/folio-org/stripes-components/tree/v12.2.7) (2024-12-02)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.6...v12.2.7)
+
+* Clear filter value after an action chosen from `MultiSelection` menu. Refs STCOM-1385.
+
+## [12.2.6](https://github.com/folio-org/stripes-components/tree/v12.2.6) (2024-11-19)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.5...v12.2.6)
+
+* Wrap `<Card>`'s render output in `<StripesOverlayContext>` to facilitate ease with overlay components. Refs STCOM-1384.
+
+## [12.2.5](https://github.com/folio-org/stripes-components/tree/v12.2.5) (2024-11-15)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.4...v12.2.5)
+
+* Assign `<Modal>`'s exit key handler to Modal's element rather than `document`. refs STCOM-1382.
+
+## [12.2.4](https://github.com/folio-org/stripes-components/tree/v12.2.4) (2024-11-08)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.3...v12.2.4)
+
+* Pin `currency-codes` to `v2.1.0` to avoid duplicate entries in `v2.2.0`. Refs STCOM-1379.
+* Selection should occupy the full width of its container. Refs STCOM-1332.
+
+## [12.2.3](https://github.com/folio-org/stripes-components/tree/v12.2.3) (2024-10-31)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.2...v12.2.3)
+
+* Change `Repeatable field` focus behaviour. Refs STCOM-1341.
+* Fix `<Selection>` bug with option list closing when scrollbar is used. Refs STCOM-1371.
+* `<Selection>` - fix bug handling empty string options/values. Refs STCOM-1373.
+* `<RepeatableField>` - switch to MutationObserver to resolve focus-management issues. Refs STCOM-1372.
+
+## [12.2.2](https://github.com/folio-org/stripes-components/tree/v12.2.2) (2024-10-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.1...v12.2.2)
+
+* Bump `stripes-react-hotkeys` to `v3.2.0` for compatibility with `findDOMNode()` changes. STCOM-1343.
+
+## [12.2.1](https://github.com/folio-org/stripes-components/tree/v12.2.1) (2024-10-30)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v12.2.1)
+
+* Include Kosovo in the countries list. Refs STCOM-1354.
+* `TextArea` - move focus to the field after clearing the field by clicking on the `x` icon. Refs STCOM-1369.
+
+## [12.2.0](https://github.com/folio-org/stripes-components/tree/v12.2.0) (2024-10-11)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.1.0...v12.2.0)
+
 * Add specific loading props to MCL to pass to Prev/Next pagination row, Refs STCOM-1305
 * Exclude invalid additional currencies. Refs STCOM-1274.
 * Validate ref in `Paneset` before dereferencing it. Refs STCOM-1235.
@@ -50,6 +146,9 @@
 * Use whole `dataOptions` array for memoization dependency rather that just `length` property. STCOM-1346.
 * Default the scope of `<CommandList>` to `document.body`. Remove internal wrapping div. Refs STCOM-1351.
 * Remove inline styling from `<Modal>` content. Refs STCOM-1348.
+* Use `<Selection>`'s formatter for rendering the selected value within the field and prevent overflow of text. Refs STCOM-1344.
+* Export `<StripesOverlayWrapper>` that will automatically apply the `usePortal` behavior to nested overlay components. Refs STCOM-1353.
+* Properly pass `readOnly` prop to `<RadioButton>`'s internally rendered `<Label>`. Refs STCOM-1367.
 
 ## [12.1.0](https://github.com/folio-org/stripes-components/tree/v12.1.0) (2024-03-12)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.0.0...v12.1.0)

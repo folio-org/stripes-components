@@ -21,6 +21,7 @@
   animation-timing-function: ease-in;
   animation-duration: 0.1s;
   font-size: var(--font-size-small);
+  pointer-events: all;
 }
 
 .text {

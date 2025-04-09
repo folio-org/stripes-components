@@ -1,4 +1,5 @@
 /* form elements */
+export { default as AuditLogPane } from './lib/AuditLog';
 export { default as AutoSuggest } from './lib/AutoSuggest';
 export { default as Badge } from './lib/Badge';
 export { default as Button } from './lib/Button';
@@ -171,7 +172,7 @@ export {
   currenciesByNumber,
   currenciesOptions
 } from './util/currencies';
-
+export { default as StripesOverlayWrapper } from './util/StripesOverlayWrapper';
 export {
   default as countries,
   countriesByCode,
@@ -192,5 +193,6 @@ export { default as nativeChangeFieldValue } from './util/nativeChangeFieldValue
 export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
 export { default as useDateFormatter } from './hooks/useFormatDate';
 export { default as useTimeFormatter } from './hooks/useFormatTime';
+export { default as useVersionHistory } from './hooks/useVersionHistory';
 
 export { pagingTypes as MCLPagingTypes } from './lib/MultiColumnList';
