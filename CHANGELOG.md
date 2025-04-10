@@ -1,5 +1,10 @@
 # Change history for stripes-components
 
+## [13.0.5](https://github.com/folio-org/stripes-components/tree/v13.0.5) (2025-04-10)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.4...v13.0.5)
+
+* `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
+
 ## [13.0.4](https://github.com/folio-org/stripes-components/tree/v13.0.4) (2025-04-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.3...v13.0.4)
 
@@ -9,7 +14,6 @@
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.2...v13.0.3)
 
 * Restore onSelect support for AutoSuggest component. Refs STCOM-1426.
-* `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
 
 ## [13.0.2](https://github.com/folio-org/stripes-components/tree/v13.0.2) (2025-03-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.1...v13.0.2)
