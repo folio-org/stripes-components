@@ -72,7 +72,7 @@
     "karma-viewport": "^1.0.4",
     "mocha": "^10.2.0",
     "moment": "^2.29.0",
-    "postcss": "^8.4.2",
+    "postcss": "^8.5.3",
     "postcss-custom-media": "^9.0.1",
     "postcss-import": "^15.0.1",
     "postcss-loader": "^7.0.2",
