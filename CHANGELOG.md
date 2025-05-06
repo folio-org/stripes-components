@@ -1,5 +1,7 @@
 # Change history for stripes-components
-## 13.0.6 IN PROGRESS
+
+## [13.0.6](https://github.com/folio-org/stripes-components/tree/v13.0.6) (2025-05-06)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.5...v13.0.6)
 
 * Bugfix - clicking the trigger on an open `<Popover>` now closes the `<Popover>` instead of closing/reopening. Refs STCOM-1429.
 
