@@ -18,6 +18,7 @@
 * Unify horizontal and vertical border colors of `<Pane>`s, as well as `NavListSection` heading border. Refs STCOM-1423.
 * Add 23 minority languages to the list, and add the English translations of their names. Fixes STCOM-1438.
 * Bugfix - clicking the trigger on an open `<Popover>` now closes the `<Popover>` instead of closing/reopening. Refs STCOM-1429.
+* Show changes of multiple repeatable fields as 1 row in the `Card` on `Version history` pane. Fixes STCOM-1443.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
