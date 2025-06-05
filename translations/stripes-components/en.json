@@ -52,7 +52,7 @@
   "auditLog.pane.header": "Version history",
   "auditLog.pane.sub": "{count, plural, one {# version} other {# versions}}",
   "auditLog.pane.loadingLabel": "Loading",
-  "auditLog.card.changed": "<b>Changed</b>",
+  "auditLog.card.changed": "Changed",
   "auditLog.card.currentVersion": "Current version",
   "auditLog.card.originalVersion": "Original version",
   "auditLog.card.shared": "Shared",
