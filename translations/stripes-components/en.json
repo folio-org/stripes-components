@@ -53,7 +53,7 @@
   "auditLog.pane.sub": "{count, plural, one {# version} other {# versions}}",
   "auditLog.pane.loadingLabel": "Loading",
   "auditLog.card.changed": "<b>Changed</b>",
-  "auditLog.card.currentVersion": "<b><i>Current version</i></b>",
+  "auditLog.card.currentVersion": "Current version",
   "auditLog.card.originalVersion": "Original version",
   "auditLog.card.shared": "Shared",
   "auditLog.modal.action": "Action",
