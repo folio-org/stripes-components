@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 12.2.10 (IN PROGRESS)
+
+* Correctly handle empty language-codes in `formattedLanguageName()`. Refs STCOM-1451.
+
 ## [12.2.9](https://github.com/folio-org/stripes-components/tree/v12.2.9) (2025-03-27)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.8...v12.2.9)
 
