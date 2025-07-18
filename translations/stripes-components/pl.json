@@ -890,7 +890,7 @@
     "advancedSearch.match.containsAny": "Zawiera dowolne",
     "saveAndKeepEditing": "Save & keep editing",
     "multiSelection.dropdownTriggerLabel": "open menu",
-    "filterGroups.clearFilterSetLabel": "Clear selected {labelText} filters",
+    "filterGroups.clearFilterSetLabel": "Wyczyść wybrane filtry {labelText}",
     "selection.enterFilter": "Enter a value to load options",
     "countries.XK": "Kosovo",
     "advancedSearch.booleanLabel": "Wybierz operator Boole'a",
