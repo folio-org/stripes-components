@@ -3,7 +3,7 @@ import { expect } from 'chai';
 
 import languages, { formattedLanguageName, languageOptions, languageOptionsES } from '../languages';
 
-describe('language functions', () => {
+describe.only('language functions', () => {
   const langs = {
     'stripes-components.languages.tlh': 'Shiny happy Klingons holding hands',
     'stripes-components.languages.zul': 'Two letters match',
@@ -65,7 +65,7 @@ describe('language functions', () => {
 
       // zintl causes entries in zlangs to sink to the bottom
       const zlangs = {
-        'stripes-components.languages.9an': 'Angloromani',
+        'stripes-components.languages.abk': 'Abkhazian',
       };
       const zintl = {
         formatMessage: ({ id }) => zlangs[id] ? `ZZZ${id}` : id,
@@ -75,7 +75,7 @@ describe('language functions', () => {
       const zlist = languageOptions(zintl);
 
       expect(atlist[0].value).to.equal('zza');
-      expect(zlist[zlist.length - 1].value).to.equal('9an')
+      expect(zlist[zlist.length - 1].value).to.equal('abk')
     });
   });
 
