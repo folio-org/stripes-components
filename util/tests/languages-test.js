@@ -3,7 +3,7 @@ import { expect } from 'chai';
 
 import languages, { formattedLanguageName, languageOptions, languageOptionsES } from '../languages';
 
-describe.only('language functions', () => {
+describe('language functions', () => {
   const langs = {
     'stripes-components.languages.tlh': 'Shiny happy Klingons holding hands',
     'stripes-components.languages.zul': 'Two letters match',
