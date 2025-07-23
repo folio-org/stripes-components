@@ -24,7 +24,7 @@
     border-bottom-left-radius: 0;
   }
 
-  & > :not(:first-child) {
+  & > :not(:first-child), & [class^="button"] + [class^="button"] {
     margin-left: -1px;
   }
 
