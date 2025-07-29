@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## IN PROGRESS
+
+* Remove spacing from `<ButtonGroup>`. Refs STCOM-1458.
+
 ## [13.0.9](https://github.com/folio-org/stripes-components/tree/v13.0.9) (2025-12-31)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.8...v13.0.9)
 
