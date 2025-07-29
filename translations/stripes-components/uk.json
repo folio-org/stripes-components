@@ -69,7 +69,7 @@
     "passwordStrength.veryStrong": "Ваш пароль дуже надійний.",
     "passwordStrength.infoPopoverText": "Додайте цифри/символи або зробіть пароль довшим і більш непередбачуваним",
     "passwordStrength.label": "Надійність пароля:",
-    "fieldIsDisabled": "Field is disabled",
+    "fieldIsDisabled": "Поле вимкнене",
     "readonly": "Тільки для читання",
     "readMore": "Читати далі",
     "tableEmpty": "Список не містить примірників",
