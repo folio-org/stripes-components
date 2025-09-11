@@ -28,6 +28,7 @@
   "previous": "Previous",
   "next": "Next",
   "selectDay": "Choose {dayOfWeek}, {date}",
+  "ConfirmationModal.suppressMessage": "Do not show this message again",
   "dateSelected": "{date} selected",
   "Datepicker.monthControl": "month",
   "Datepicker.yearControl": "year",
