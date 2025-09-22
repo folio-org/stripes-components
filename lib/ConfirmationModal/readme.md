@@ -75,4 +75,3 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 `sessionKey` | string | Key for value in `SessionStorage` | randomized in ref |
 `checkboxLabel` | node | Label for suppression checkbox. | "Do not display this message again." |
-`confirmIfSuppressed` | bool | if `true` will execute the `onConfirm` handler if the modal is suppressed |
