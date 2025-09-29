@@ -113,7 +113,6 @@
     "react-quill": "^2.0.0",
     "react-transition-group": "^4.4.5",
     "react-virtualized-auto-sizer": "^1.0.2",
-    "rehooks-ts": "^2.5.0",
     "tai-password-strength": "^1.1.1"
   },
   "peerDependencies": {
