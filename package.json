@@ -75,7 +75,7 @@
     "postcss": "^8.4.2",
     "postcss-custom-media": "^9.0.1",
     "postcss-import": "^15.0.1",
-    "postcss-loader": "^7.0.2",
+    "postcss-loader": "^8.2.0",
     "react": "^18.2",
     "react-dom": "^18.2",
     "react-intl": "^7.1.5",
