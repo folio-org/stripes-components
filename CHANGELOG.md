@@ -24,6 +24,7 @@
 * Correctly handle empty language-codes in `formattedLanguageName()`. Refs STCOM-1451.
 * Remove spacing from `<ButtonGroup>`. Refs STCOM-1458.
 * Add `<SessionConfirmationModal>`. Refs STCOM-1460.
+* Use mapped stacktraces in `<ErrorBoundary>` when sourcemaps are present. Refs STCOM-814.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
