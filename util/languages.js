@@ -1,4 +1,4 @@
-import { find, sortBy } from 'lodash';
+import { find } from 'lodash';
 
 // This list is derived from the table provided at https://www.loc.gov/standards/iso639-2/ascii_8bits.html
 // It uses the ISO 639-2 standard. Not all language names have both a two-character and three-character
@@ -519,23 +519,50 @@ const languages = [
   { alpha3: 'zza', alpha2: '', name: 'Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki' },
 ];
 
-// Given a two- or three-character language code, return a localized langugae name string
-// @intl is really useIntl(), which can't be invoked outside a functional component
+/**
+ * formattedLanguageName
+ * return a localized string given an ISO-639-2 language code.
+ *
+ * Prefer a three-letter code to a two-letter code. If a code matches but
+ * no translation value is present in the current locale, return the `name`
+ * attribute, an English-language value, directly from the translations table.
+ *
+ * Unmatched codes will be handled as `und`, the code for "undetermined".
+ *
+ * @param {string} code three- or two-letter language code
+ * @param {object} intl return value of useIntl
+ * @returns string
+ */
 export const formattedLanguageName = (code, intl) => {
-  const language = find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
-  if (language === undefined) {
-    return intl.formatMessage({ id: 'stripes-components.languages.und' });
-  }
-  const translationId = `stripes-components.languages.${language.alpha3}`;
-  const translatedName = intl.formatMessage({ id: translationId });
+  if (code && code.trim()) {
+    const language = find(languages, entry => entry.alpha3 === code || entry.alpha2 === code);
+    if (language) {
+      const translationId = `stripes-components.languages.${language.alpha3}`;
+      const translatedName = intl.formatMessage({ id: translationId });
 
-  if (translatedName !== translationId) return translatedName;
-  // If no translation is found, use the English name from the list above
-  else return language.name;
+      // intl returns the input id if no matching translation is present.
+      // if that happens, use the `name` value from the languages table
+      // rather than the id
+      if (translatedName !== translationId) {
+        return translatedName;
+      }
+
+      return language.name;
+    }
+  }
+
+  return intl.formatMessage({ id: 'stripes-components.languages.und' });
 };
 
-// Provide an array of label/value pairs for the language list, suitable as options
-// for a <Select> component.
+/**
+ * languageOptions
+ * Return an array of label/value pairs for the language list, suitable as
+ * options for a <Select> component, sorted by label, i.e. the localized
+ * value for each language.
+ *
+ * @param {object} intl return value of useIntl
+ * @returns
+ */
 export const languageOptions = intl => {
   const options = languages.map(l => (
     {
@@ -543,9 +570,24 @@ export const languageOptions = intl => {
       value: l.alpha3,
     }
   ));
-  return sortBy(options, ['label']);
+
+  return options.sort((a, b) => a.label.localeCompare(b.label));
 };
 
+/**
+ * languageOptionsES
+ * Given an array of entries shaped like { id, totalRecords } where the id
+ * corresponds to a language code, return an array of { label, value, count }
+ * objects where:
+ * * label is the localized value of the id
+ * * value is id
+ * * count is totalRecords
+ * Entries without a totalRecords attribute are omitted.
+ *
+ * @param {object} intl return value of useIntl
+ * @param {array} langs list of entries shaped like { id, totalRecords}
+ * @returns
+ */
 export const languageOptionsES = (intl, langs = []) => {
   return langs.reduce((accum, { id, totalRecords }) => {
     if (!totalRecords) return accum;

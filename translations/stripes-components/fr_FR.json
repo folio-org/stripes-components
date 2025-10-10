@@ -885,7 +885,7 @@
     "metaSection.unknownUser": "Utilisateur inconnu",
     "advancedSearch.match.exactPhrase": "Exact phrase",
     "advancedSearch.match.containsAll": "Contains all",
-    "advancedSearch.match.startsWith": "Starts with",
+    "advancedSearch.match.startsWith": "Commence par",
     "advancedSearch.match.label": "Match option",
     "advancedSearch.match.containsAny": "Contains any",
     "saveAndKeepEditing": "Save & keep editing",
