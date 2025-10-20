@@ -4,7 +4,7 @@ name: Build and Publish Storybook
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build-storybook:
@@ -37,7 +37,7 @@ jobs:
       - name: sync storybook branch
         run: |
           git checkout storybook
-          git reset --hard origin/master
+          git reset --hard origin/main
 
       - name: Run yarn install
         run: yarn install --ignore-scripts
