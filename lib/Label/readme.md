@@ -21,6 +21,6 @@ children | node | The content of the `<Label>`
 className | string | Applies a custom class name
 htmlFor | Adds a "for"-attribute on the label-element
 id | string | Adds an ID on the label-element
-readOnly | boolean | Renders a lock-icon next to the label (indicating that the assosiated field is read-only)
-required | boolean | Renders an asterisk next to the label (indicating that the assosiated field is required)
+readOnly | boolean | Renders a lock-icon next to the label (indicating that the associated field is read-only)
+required | boolean | Renders an asterisk next to the label (indicating that the associated field is required)
 tagName | string | Change the tag name of the component. Renders a label-element as default.
