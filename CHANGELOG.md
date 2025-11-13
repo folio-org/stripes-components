@@ -26,6 +26,8 @@
 * Add `<SessionConfirmationModal>`. Refs STCOM-1460.
 * Use mapped stacktraces in `<ErrorBoundary>` when sourcemaps are present. Refs STCOM-814.
 * Add `<StripesOverlayWrapper>` to `<AccordionSet>`. Refs STCOM-1436.
+* Add `ItemToView` tracking to mouse clicks on MCL rows. Get item position from closest 'row' element. Refs STCOM-1442.
+* Provide `isLoading` prop for `<MetaSection>` components to reflect loading status. Refs STCOM-1467.
 * Expose the `dedupe` property for `<Callout>` to prevent duplicate callouts with the same message and type from being displayed.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
