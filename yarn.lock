@@ -1952,8 +1952,8 @@
     minimist "^1.2.0"
 
 "@folio/stripes-testing@^5.0.0":
-  version "5.0.10900000037098"
-  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-testing/-/stripes-testing-5.0.10900000037098.tgz#e6a974224a182a90841aa2feb6a31e0e0d41ef08"
+  version "5.1.1099000000007493"
+  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-testing/-/stripes-testing-5.1.1099000000007493.tgz#cd78f971748c0781491ac73d7c3fb990299d023d"
   integrity sha512-LU6AbQfZrt2zJi7W2s+ll+sJIWgCO3REa770lBOfxYrtTkgoupvxlVZ+JzJm5ASypAEXo1BCRyDBauuy8YZVow==
   dependencies:
     "@babel/core" "^7.19.3"
