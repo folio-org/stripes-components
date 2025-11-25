@@ -29,4 +29,4 @@ prop | description | default | required
 type | 'success', 'error', 'warning', 'info'. | 'success' |
 timeout | timeout for automatic dismissal, in milliseconds. Can be set to 0 to only allow for user-dismissal. | 6000 |
 message | String or HTML to render in the content of the callout. | | &#10004;
-dedupe | When true, prevents displaying duplicate callouts with the same message and type. | true |
+dedupe | When true, prevents displaying duplicate callouts with the same message and type. | false |
