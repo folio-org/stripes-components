@@ -30,6 +30,7 @@ Name | type | description | default | required
 `dataOptions` | array of objects | An array that represents possible objects. Default props are set up to treat objects with the shape of `{value<any>, label:<string>}`. | |
 `emptyMessage` | string | feedback message for user when options list is empty (they've entered an option filter with no results,) | 'No matching items found!' |
 `filter` | func | a custom function used to filter candidate values for search filters. It must accept two arguments: a string containing the partial value typed by the user, and an array of candidate values. If `asyncFiltering` is not being used, it should return an object with the shape of `{ renderedItems: <array> }`, where the array is a list of the candidate values that match the partial value. The returned object can also include additional properties that can be used for conditional rendering of `action`s. | The default filter (the `filterOptions` function in [`MultiSelection.js`](MultiSelection.js)) works by left-anchored regular-expression matching on the items' `label` field |
+`filterProps` | object | Configures the default filter function. If providing a custom `filter` as a prop - it will be passed as an argument to that function. | |
 `formatter` | func | Render function that accepts an object with keys for the option and the current filter string. The function is called to display values in the options dropdown and in the selected values list if `valueFormatter` prop is missing. A default `formatter` is provided. | [DefaultOptionFormatter](../Selection/DefaultOptionFormatter.js) |
 `id` | string | Sets the `id` attribute for the control. Other interior id's are generated using this string as a prefix. | |
 `inputRef` | object/func | Reference to input element | |
@@ -42,7 +43,6 @@ Name | type | description | default | required
 `onRemove` | func | Event handler specifically called when an item is removed from the selection. The removed item is passed to the handler. | |
 `placeholder` | string | Rendered as a placeholder for the control when no value is present. | |
 `showLoading` | bool | Should render loading indicator on the field | |
-`useContainsMatch` | bool | If true, filter matching will search for the filter text anywhere in the option label (contains search). If false, filter matching will only match at the beginning of the option label (starts with search). | false |
 `usePortal` | bool | If `true`, option list will render to the `div[#OverlayContainer]` element in the FOLIO UI. Given the container of this component, `usePortal` may not be required. See [portals documentation](https://folio-org.github.io/stripes-components/iframe.html?viewMode=docs&id=guides-ui-layout--docs#portals) for guidance. | |
 `value` | array | Array of selected objects. | |
 `valueFormatter` | func | Render function that accepts an object with keys for the option. The function is called to display values in the selected values list. If the prop is missing, `formatter` will be used instead. | |
