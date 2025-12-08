@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## [NEXT RELEASE]
+
+* `<MultiSelection>` - add a new `filterProps` prop to control option filtering. Refs STCOM-1473.
+
 ## [13.0.8](https://github.com/folio-org/stripes-components/tree/v13.0.8) (2025-12-08)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0.7...v13.0.8)
 
