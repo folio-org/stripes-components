@@ -1,5 +1,9 @@
 # Change history for stripes-components
 
+## 12.2.11 IN PROGRESS
+
+* Resolve `<MultiColumnList>` scrolls unexpectedly when checkbox in row is clicked. Refs STCOM-1442.
+
 ## [12.2.10](https://github.com/folio-org/stripes-components/tree/v12.2.10) (2025-07-22)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.9...v12.2.10)
 
