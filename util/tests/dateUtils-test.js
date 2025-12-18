@@ -223,7 +223,7 @@ describe('Date Utilities', () => {
     });
   });
 
-  describe('dayjsTz', () => {
+  describe.only('dayjsTz', () => {
     it('converts time to specified timezone', () => {
       const dateInUtc = '2024-06-01T12:00:00Z';
       const tzDate = dayjsTz(dateInUtc, 'America/Los_Angeles');
@@ -250,6 +250,21 @@ describe('Date Utilities', () => {
       const wrongDate = dayjs(dateInUtc); // local timezone used...
       // output is smth like '2024-06-01T07:00:00-05:00'
       expect(wrongDate.format()).to.not.equal('2024-06-01T12:00:00-07:00');
+    });
+
+    it('body of func', () => {
+      const BuildDateSentence = (dateInUtc) => {
+        const tzDate = dayjs.tz(dateInUtc);
+        return `result: ${tzDate.format()}`;
+      }
+      const dateInUtc = '2024-06-01T12:00:00Z';
+      dayjsTz.setDefault('America/Los_Angeles');
+      let res = BuildDateSentence(dateInUtc);
+      expect(res).to.equal('result: 2024-06-01T12:00:00-07:00');
+
+      dayjs.tz.setDefault();
+      res = BuildDateSentence(dateInUtc);
+      expect(res).to.not.equal('result: 2024-06-01T12:00:00-07:00');
     });
   });
 });
