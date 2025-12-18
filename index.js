@@ -156,6 +156,7 @@ export {
   getLocaleDateFormat,
   getLocalizedTimeFormatInfo,
   dayjs,
+  dayjsTz,
   DayRange,
   loadDayJSLocale,
 } from './util/dateTimeUtils';

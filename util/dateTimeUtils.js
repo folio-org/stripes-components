@@ -30,8 +30,12 @@ dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
 dayjs.extend(localizedFormat);
 
+const dayjsTz = dayjs.tz;
 // export a pre-extended dayjs for consumption.
-export { dayjs };
+export {
+  dayjs,
+  dayjsTz,
+};
 
 const DEFAULT_LOCALE = 'en-US';
 
@@ -89,7 +93,7 @@ export class DayRange {
   contains = (candidate) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
-      (this.contains(candidate.start) && this.contains(candidate.end));
+        (this.contains(candidate.start) && this.contains(candidate.end));
     } else {
       /*
         dayjs needs some additional configuration to include start and end dates
@@ -112,8 +116,8 @@ export class DayRange {
   overlaps = (candidate) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
-      this.contains(candidate.start) ||
-      this.contains(candidate.end);
+        this.contains(candidate.start) ||
+        this.contains(candidate.end);
     } else {
       throw new Error('parameter should be a DayRange instance');
     }

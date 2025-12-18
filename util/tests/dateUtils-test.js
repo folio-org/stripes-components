@@ -9,10 +9,12 @@ import {
   DayRange,
   getDayJSLocalizedFormat,
   dayjs,
+  dayjsTz,
   getCompatibleDayJSLocale,
   loadDayJSLocale
 } from '../dateTimeUtils';
 import 'dayjs/locale/de';
+import { de } from 'faker/lib/locales';
 
 
 describe('Date Utilities', () => {
@@ -218,6 +220,36 @@ describe('Date Utilities', () => {
       await converge(() => { expect(mockConsoleError.calledOnce).to.be.true });
       await converge(() => { expect(dayjs.locale()).equals('en') });
       mockConsoleError.restore();
+    });
+  });
+
+  describe('dayjsTz', () => {
+    it('converts time to specified timezone', () => {
+      const dateInUtc = '2024-06-01T12:00:00Z';
+      const tzDate = dayjsTz(dateInUtc, 'America/Los_Angeles');
+      expect(tzDate.format()).to.equal('2024-06-01T12:00:00-07:00');
+    });
+
+    it('uses setDefault', () => {
+      const dateInUtc = '2024-06-01T12:00:00Z';
+      dayjs.tz.setDefault('America/Los_Angeles');
+      const tzDate = dayjsTz(dateInUtc);
+      expect(tzDate.format()).to.equal('2024-06-01T12:00:00-07:00');
+    });
+
+    it('setDefault and strictly dayjsTz', () => {
+      const dateInUtc = '2024-06-01T12:00:00Z';
+      dayjsTz.setDefault('America/Los_Angeles');
+      const tzDate = dayjsTz(dateInUtc);
+      expect(tzDate.format()).to.equal('2024-06-01T12:00:00-07:00');
+    });
+
+    it('misuse setDefault', () => {
+      const dateInUtc = '2024-06-01T12:00:00Z';
+      dayjs.tz.setDefault('America/Los_Angeles');
+      const wrongDate = dayjs(dateInUtc); // local timezone used...
+      // output is smth like '2024-06-01T07:00:00-05:00'
+      expect(wrongDate.format()).to.not.equal('2024-06-01T12:00:00-07:00');
     });
   });
 });
