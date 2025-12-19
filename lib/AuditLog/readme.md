@@ -68,6 +68,9 @@ handleLoadMore | func   | Callback fired when the "Load more" button is clicked 
 isInitialLoading | bool   | Flag that indicates whether data is being loaded for the first time                   |         | false
 isLoading | bool   | Flag that indicates whether data is being loaded                                      |         | false
 isLoadMoreVisible | bool   | Flag that indicates whether "Load more" button visible or not                         | true    | false
+itemFormatter | func | 
+Formats changed field values of objects or arrays in modal content, used to format oldValue/newValue fields.
+Receives a field object with `name`, `value`, and `collectionName` properties and the item index. Returns a list item element. | `(field, i) => <li key={i}>{fieldFormatter?.[field.name]?.(field.value) || field.value}</li>` | false
 onClose | func   | Callback fired when the pane is closed using its dismiss button                       |         | false
 showSharedLabel | bool   | Flag indicating whether the original version should display "Shared" label       | false   | false
 totalVersions | number | Total number of versions                                                              |         | false
