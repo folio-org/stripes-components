@@ -233,7 +233,7 @@
     padding-right: 0;
   }
 
-  &[disabled] {
+  &[disabled], &[aria-disabled="true"], &.disabled {
     background-color: #ccc;
     border-color: #ccc;
     color: var(--color-text);

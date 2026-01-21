@@ -38,6 +38,16 @@
 }
 
 /**
+ * Disabled state for elements that should still be focusable.
+ */
+.interactionStyles[aria-disabled="true"],
+.interactionStyles.disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+
+/**
  * Focus/active pseudo element
  */
 .interactionStyles::before {
