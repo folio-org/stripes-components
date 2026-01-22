@@ -48,7 +48,7 @@
     "@babel/preset-react": "^7.7.4",
     "@babel/register": "^7.0.0",
     "@bigtest/interactor": "0.7.2",
-    "@csstools/postcss-global-data": "^3.0.0",
+    "@csstools/postcss-global-data": "^3.1.0",
     "@csstools/postcss-relative-color-syntax": "^3.0.7",
     "@folio/eslint-config-stripes": "^8.0.0",
     "@folio/stripes-cli": "^4.0.0",
