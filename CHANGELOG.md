@@ -30,6 +30,7 @@
 * Provide `isLoading` prop for `<MetaSection>` components to reflect loading status. Refs STCOM-1467.
 * Expose the `dedupe` property for `<Callout>` to prevent duplicate callouts with the same message and type from being displayed. Refs STCOM-1469.
 * `<MultiSelection>` - add a new `filterProps` prop to control option filtering. Refs STCOM-1473.
+* `downshift` version locked to `v19.0.13` after `v19.2.0` release. Refs STCOM-1483.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
