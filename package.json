@@ -119,7 +119,7 @@
   },
   "peerDependencies": {
     "moment": "^2.29.0",
-    "react-intl": "^6.4.4",
+    "react-intl": "^7.1.5",
     "react-redux": "^8.0.5",
     "react-router-dom": "^5.2.0"
   }
