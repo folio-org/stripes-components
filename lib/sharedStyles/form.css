@@ -46,12 +46,15 @@
   }
 
   &:disabled,
-  &.isDisabled,
-  & input:disabled {
+  &.isDisabled {
     background-color: #ebebe4;
     color: var(--color-text-disabled);
     border: 1px solid var(--color-border);
     box-shadow: none;
+  }
+
+  & input:disabled {
+    color: var(--color-text-disabled);
   }
 
   & input::placeholder {
