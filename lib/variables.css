@@ -79,6 +79,15 @@
   --text-weight: calc(var(--text-weight-basis) + ( var(--text-weight-addition-factor) * var(--text-weights-are-bolder)));
   --text-weight-headline: var(--text-weight-bold);
   --text-weight-button: var(--text-weight-bold);
+
+  /* Interaction Styles Variables */
+  --focus-dot-offset-default: var(--gutter-static-one-third);
+  --focus-dot-offset-small: calc(var(--gutter-static-one-third) * -1);
+  --focus-dot-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
+  --focus-dot-offset-large: calc(var(--gutter-static) * -1);
+  --box-offset-small: calc(var(--gutter-static-one-third) * -1);
+  --box-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
+  --box-offset-large: calc(var(--gutter-static) * -1);
 }
 
 /* Lean on min-width queries to create mobile-first CSS. */
