@@ -6,7 +6,7 @@
  * should be passed along to a child component or element.
  *
  */
-export default function separateComponentProps(props, propTypes) {
+export default function separateComponentProps(props, propTypes = {}) {
   const eProps = {};
   const cProps = {};
 
