@@ -239,7 +239,6 @@
     color: var(--color-text);
     transition: opacity ease-in-out 500ms;
     pointer-events: none;
-    opacity: 0.65;
   }
 
   &.mega {
