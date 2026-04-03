@@ -233,12 +233,13 @@
     padding-right: 0;
   }
 
-  &[disabled] {
+  &[disabled], &[aria-disabled="true"] {
     background-color: #ccc;
     border-color: #ccc;
     color: var(--color-text);
     transition: opacity ease-in-out 500ms;
     pointer-events: none;
+    opacity: 0.65;
   }
 
   &.mega {
