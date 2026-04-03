@@ -35,6 +35,7 @@
 * Fix: Prevent onClearField from being spread onto native textarea element. Refs STCOM-1486.
 * Allow `<Pane>` to receive focus when its children are non-interactive. Refs STCOM-1488.
 * Move `InteractionStyles`' CSS variables to top level `variables.css` to avoid duplication in the bundle. Refs STCOM-1490.
+* Add `aria-disabled` styling to `<Button>` - this provides a way to make 'disabled' buttons appear disabled while still being focusable/announced to screenreader users. Refs STCOM-1481.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)
