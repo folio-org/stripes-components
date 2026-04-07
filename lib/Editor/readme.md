@@ -34,6 +34,7 @@ Name | type | description | default | required
 `placeholder` | string | The default value for the empty editor. | |
 `modules` | object | An object specifying which modules are enabled, and their configuration. The editor toolbar is a commonly customized module. See the http://quilljs.com/docs/modules/ | |
 `formats` | array | An array of formats to be enabled during editing. All implemented formats are enabled by default. See http://quilljs.com/docs/formats/ for a list of availible formats. | |
+`sanitizeConfig` | object | Optional DOMPurify configuration used when sanitizing incoming `value`/`defaultValue` and outgoing `onChange` HTML. Merged with default `ADD_ATTR: ['target', 'rel']`. | |
 `inputRef` | object or func | Supplies a ref to the rendered `<Editor>` | |
 `tabIndex` | number | The order in which the editor becomes focused, among other controls in the page, during keyboard navigation. | |
 `disableEditorTab` | bool | Disable editor tab handling to improve accessibility. | true |
@@ -46,12 +47,35 @@ Name | type | description | default | required
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 `onBlur` | func | Called when the editor loses focus. It will receive the selection range it had right before losing focus. | |
-`onChange` | func | Called back with the new contents of the editor after change. | |
+`onChange` | func | Called back with sanitized HTML contents of the editor after change. | |
 `onChangeSelection` | func |  Called back with the new selected range, or null when unfocused.  | |
 `onFocus` | func | Called when the editor becomes focused. It will receive the new selection range | |
 `onKeyPress` | func | Called after a key has been pressed and released. | |
 `onKeyDown` | func | Called after a key has been pressed, but before it is released. | |
 `onKeyUp` | func | Called after a key has been released. | |
+
+## Input/Output Sanitization
+The editor sanitizes HTML with `dompurify` in both directions:
+
+- Incoming values: `value` and `defaultValue` are sanitized before being passed to the internal ReactQuill component.
+- Outgoing values: the first argument passed to `onChange` is sanitized HTML.
+
+By default, anchor attributes `target` and `rel` are allowed to support links such as:
+
+```
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Example</a>
+```
+
+You can provide additional DOMPurify options with `sanitizeConfig`:
+
+```
+<Editor
+  sanitizeConfig={{
+    ADD_TAGS: ['custom-tag'],
+    ADD_ATTR: ['data-test-id'],
+  }}
+/>
+```
 
 ## Validation Props
 Name | type | description | default | required
