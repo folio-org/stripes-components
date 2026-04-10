@@ -35,6 +35,7 @@
 * Fix: Prevent onClearField from being spread onto native textarea element. Refs STCOM-1486.
 * Allow `<Pane>` to receive focus when its children are non-interactive. Refs STCOM-1488.
 * Move `InteractionStyles`' CSS variables to top level `variables.css` to avoid duplication in the bundle. Refs STCOM-1490.
+* Add `aria-disabled` styling to `<Button>` - this provides a way to make 'disabled' buttons appear disabled while still being focusable/announced to screenreader users. Refs STCOM-1481.
 * Wrap `<Editor>`'s internals in an HTML sanitizer. Refs STCOM-1489.
 * Add `id` prop to `<Layer>` - generate id's internally for layer rendering/tracking and necessary suspension of paneset resize handles. Refs STCOM-1501.
 
