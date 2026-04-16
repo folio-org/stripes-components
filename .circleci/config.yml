@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   checkout-and-install:
     docker:
-      - image: circleci/node:10
+      - image: cimg/node:20.11
     steps:
       - checkout
       - restore_cache:
@@ -21,7 +21,7 @@ jobs:
 
   eslint:
     docker:
-      - image: circleci/node:10
+      - image: cimg/node:20.11
     steps:
       - attach_workspace:
           at: ~/
@@ -39,7 +39,7 @@ jobs:
 
   stylelint:
     docker:
-      - image: circleci/node:10
+      - image: cimg/node:20.11
     steps:
       - attach_workspace:
           at: ~/
@@ -58,7 +58,7 @@ jobs:
 
   build:
     docker:
-      - image: circleci/node:10
+      - image: cimg/node:20.11
     steps:
       - attach_workspace:
           at: ~/
@@ -70,7 +70,7 @@ jobs:
 
   test-chrome:
     docker:
-      - image: circleci/node:10-browsers
+      - image: cimg/node:20.11-browsers
     steps:
       - attach_workspace:
           at: ~/
@@ -90,7 +90,7 @@ jobs:
 
   test-firefox:
     docker:
-      - image: circleci/node:10-browsers
+      - image: cimg/node:20.11-browsers
     steps:
       - attach_workspace:
           at: ~/
@@ -109,7 +109,7 @@ jobs:
 
   test-safari:
     docker:
-      - image: circleci/node:10
+      - image: cimg/node:20.11
     steps:
       - attach_workspace:
           at: ~/
@@ -128,7 +128,7 @@ jobs:
 
   test-edge:
     docker:
-      - image: circleci/node:10
+      - image: cimg/node:20.11
     steps:
       - attach_workspace:
           at: ~/
