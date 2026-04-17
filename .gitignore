@@ -5,6 +5,7 @@ atom.cson
 .DS_Store
 yarn-error.log
 debug.log
+debug-storybook.log
 artifacts
 .npmrc
 .out

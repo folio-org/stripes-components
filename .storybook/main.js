@@ -1,14 +1,17 @@
 import customWebpack from './stcom-webpack.config.js';
 
+const stories = [
+  '../guides/**/*.mdx',
+  '../lib/**/*.readme.mdx',
+  '../lib/**/*.stories.[tj]s',
+];
+
 const config = {
   features: {
     postcss: false, // we use our own postcss setup
   },
 
-  stories: [
-    '../guides/**/*.mdx',
-    '../lib/**/*.stories.[tj]s'
-  ],
+  stories,
   staticDirs: ['../guides/static'],
   addons: [
     '@storybook/addon-docs'
