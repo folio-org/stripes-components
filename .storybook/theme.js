@@ -1,4 +1,4 @@
-import { create } from '@storybook/theming/create';
+import { create } from 'storybook/theming';
 import pkg from '../package.json';
 
 // Setting up this 'theme' renders the library version in the storybook UI.
