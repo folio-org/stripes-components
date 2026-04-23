@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import pkg from '../package.json';
-import { themes } from '@storybook/theming';
+import { themes } from 'storybook/theming';
 import IntlWrap from './IntlWrap';
 import '../lib/global.css';
 import '../lib/variables.css';
@@ -56,7 +56,7 @@ const messages = {
  * Popovers, Modals etc. mount to this element in the real system
  */
 
- class AddOverlayContainer extends Component {
+class AddOverlayContainer extends Component {
   constructor(props) {
     super(props);
     const name = 'OverlayContainer';
@@ -74,7 +74,7 @@ const messages = {
       </Fragment>
     )
   }
- }
+}
 
 const storyFnDecorator = storyFn => (
   <IntlWrap messages={messages}>
@@ -89,11 +89,8 @@ const preview = {
   parameters: {
     docs: {
       theme: Object.assign({}, themes.light, {
-       brandTitle: `FOLIO Stripes-components v${pkg.version}`,
+        brandTitle: `FOLIO Stripes-components v${pkg.version}`,
       })
-    },
-    readme: {
-      codeTheme: 'a11y-dark',
     }
   }
 }
