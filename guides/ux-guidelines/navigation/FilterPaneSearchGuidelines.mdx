@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniFilterPaneSearchExample from '../examples/MiniFilterPaneSearchExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Filter pane search" />
+
+# Filter pane search integration
+
+Filter pane search is a pane-header search pattern for narrowing results inside search-and-filter workflows.
+
+This guidance is integration-focused for module teams.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniFilterPaneSearchExample />
+</UxExampleProvider>
+
+## Structure
+
+Filter pane search replaces the pane header area with a search input and clear control.
+
+It may include a skip-to-results focus link to improve keyboard navigation.
+
+## Behavior
+
+Typing updates the search term used for filtering or querying records.
+
+Clear resets the active search quickly.
+
+When a results reference is supplied, keyboard users can jump directly to the results region.
+
+## Related
+
+- Related guideline: [UX Guidelines > Forms > Search field](?path=/docs/ux-guidelines-forms-search-field--docs)
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Related guideline: [UX Guidelines > Navigation > Dropdown](?path=/docs/ux-guidelines-navigation-dropdown--docs)
+- Component README: [Components > FilterPaneSearch > Readme](?path=/docs/components-filterpanesearch--readme)
+- Archived layout context: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/layout-types/search-filter-layout/

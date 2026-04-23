@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniAccordionCoreInfoExample from '../examples/MiniAccordionCoreInfoExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Data display/Accordion core info (context)" />
+
+# Accordion core info context
+
+Accordion core info is a record-summary section shown outside the accordion set to expose key information immediately.
+
+Modules typically compose this pattern with Headline, KeyValue, and metadata/accordion primitives.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniAccordionCoreInfoExample />
+</UxExampleProvider>
+
+## Structure
+
+Core info should appear near the top of a record pane and outside expandable accordion sections.
+
+Depending on record type, core info can include only a primary name/title or a compact set of high-value fields.
+
+## Behavior
+
+Edit and create views should preserve the same information hierarchy as view mode where possible.
+
+Core info should remain stable and scannable so users can quickly confirm record identity.
+
+## Related
+
+- Related guideline: [UX Guidelines > Data display > Headline](?path=/docs/ux-guidelines-data-display-headline--docs)
+- Related guideline: [UX Guidelines > Data display > Key value](?path=/docs/ux-guidelines-data-display-key-value--docs)
+- Related guideline: [UX Guidelines > Data display > Record metadata](?path=/docs/ux-guidelines-data-display-record-metadata--docs)
+- Related guideline: [UX Guidelines > Navigation > Accordion](?path=/docs/ux-guidelines-navigation-accordion--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/accordion-core-info/

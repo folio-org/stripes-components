@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/Select/stories/BasicUsage';
+import MiniSelectExample from '../examples/MiniSelectExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Select" />
+
+# Select component
+
+A select field allows users to select one option from a list of more than 10 items.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniSelectExample />
+</UxExampleProvider>
+
+## Structure
+
+The select field is a type of text field with a down-arrow icon on the right.
+
+Generally, it has a label that indicates the type of input associated with the field.
+
+Placeholders should be avoided.
+
+For a required select, a red asterisk should be added next to the label.
+
+For a read-only select, a lock icon should be added next to the label.
+
+## Behavior
+
+When users click on a select field, a dropdown window appears with a set of options.
+
+When users click on an option, the dropdown should disappear and the selection should be visible in the field.
+
+## Style
+
+Since the select field is a clickable element, it has multiple states. Each state is associated with a different color, providing visual feedback.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > Select](?path=/docs/components-select--docs)
+- Component README: [Components > Select > Readme](?path=/docs/components-select--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/select/

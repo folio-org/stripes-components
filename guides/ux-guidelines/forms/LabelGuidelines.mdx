@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as LabelBasicUsage } from '../../../lib/Label/stories/Label.stories';
+import MiniLabelExample from '../examples/MiniLabelExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Label" />
+
+# Label component
+
+Label identifies the meaning of a field or value and anchors form comprehension.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniLabelExample />
+</UxExampleProvider>
+
+## Structure
+
+Place labels directly adjacent to their fields using a consistent vertical rhythm.
+
+Use concise label text and avoid punctuation unless required by domain language.
+
+## Behavior
+
+Required and read-only states should be indicated consistently for all labels in a form.
+
+Label text should stay visible when validation errors are shown.
+
+## Live examples
+
+<UxExampleProvider>
+  <LabelBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Forms > Text field](?path=/docs/ux-guidelines-forms-text-field--docs)
+- Related guideline: [UX Guidelines > Forms > Error messages](?path=/docs/ux-guidelines-forms-error-messages--docs)
+- Component stories: [Components > Label](?path=/docs/components-label--docs)
+- Component README: [Components > Label > Readme](?path=/docs/components-label--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/label/

@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniExportCsvExample from '../examples/MiniExportCsvExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Actions/Export CSV" />
+
+# Export CSV component
+
+Export CSV allows users to extract visible record data for reporting, sharing, or offline analysis.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniExportCsvExample />
+</UxExampleProvider>
+
+## Structure
+
+Offer export actions where users expect dataset-level controls, such as result views and lists.
+
+Clarify which fields and records are included before export begins.
+
+## Behavior
+
+Export should preserve column order and labels users see in the interface whenever possible.
+
+When export can take time, provide feedback that the file is being generated.
+
+## Related
+
+- Related guideline: [UX Guidelines > Data display > List](?path=/docs/ux-guidelines-data-display-list--docs)
+- Related guideline: [UX Guidelines > Actions > Button](?path=/docs/ux-guidelines-actions-button--docs)
+- Component stories: [Components > ExportCsv](?path=/docs/components-exportcsv--docs)
+- Component README: [Components > ExportCsv > Readme](?path=/docs/components-exportcsv--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/export-csv/

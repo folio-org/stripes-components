@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/IconButton/stories/BasicUsage';
+import MiniIconButtonsExample from '../examples/MiniIconButtonsExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Actions/Icon button" />
+
+# Icon button component
+
+An icon button is a small clickable image that represents a command in a symbolic manner.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniIconButtonsExample />
+</UxExampleProvider>
+
+## Behavior
+
+By clicking an icon button, users perform the corresponding action.
+
+To make icon buttons easier to use, a tooltip with more information can be shown on hover.
+
+Icon button in pane header: to add actions related to controlling the pane, one or more icon buttons can be placed on the right side of the pane header.
+
+## Style
+
+By default, button icons should be grey with 62% opacity.
+
+Button icons should be provided in 14x14px PNG and as a scalable vector file for larger sizes.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > IconButton](?path=/docs/components-iconbutton--docs)
+- Component README: [Components > IconButton > Readme](?path=/docs/components-iconbutton--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/icon-button/

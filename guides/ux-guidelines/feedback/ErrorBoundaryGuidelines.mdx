@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as ErrorBoundaryBasicUsage } from '../../../lib/ErrorBoundary/stories/ErrorBoundary.stories';
+import MiniErrorBoundaryExample from '../examples/MiniErrorBoundaryExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Error boundary" />
+
+# Error boundary component
+
+Error boundary prevents a failing UI section from crashing an entire page.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniErrorBoundaryExample />
+</UxExampleProvider>
+
+## Structure
+
+Wrap high-risk or isolated view sections so failures can be contained and communicated.
+
+Error messaging should explain recovery options in plain language.
+
+## Behavior
+
+When a render error occurs inside the boundary, show fallback content and provide a clear recovery action.
+
+Use reset behavior that returns users to a safe state instead of trapping them on a broken screen.
+
+## Live examples
+
+<UxExampleProvider>
+  <ErrorBoundaryBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Feedback > Message banner](?path=/docs/ux-guidelines-feedback-message-banner--docs)
+- Related guideline: [UX Guidelines > Feedback > Modal](?path=/docs/ux-guidelines-feedback-modal--docs)
+- Component stories: [Components > ErrorBoundary](?path=/docs/components-errorboundary--docs)
+- Component README: [Components > ErrorBoundary > Readme](?path=/docs/components-errorboundary--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/error-boundary/

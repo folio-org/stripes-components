@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as FocusLinkBasicUsage } from '../../../lib/FocusLink/stories/FocusLink.stories';
+import MiniFocusLinkExample from '../examples/MiniFocusLinkExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Focus link" />
+
+# Focus link component
+
+Focus link improves keyboard navigation by letting users skip directly to meaningful targets.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniFocusLinkExample />
+</UxExampleProvider>
+
+## Structure
+
+Place focus links before long control groups, dense lists, or repeated navigation blocks.
+
+Use destination labels that describe where focus will move.
+
+## Behavior
+
+Focus links should be reachable by keyboard and activate reliably with Enter.
+
+After activation, move focus to a logical heading or next actionable control.
+
+## Live examples
+
+<UxExampleProvider>
+  <FocusLinkBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Navigation > Nav list](?path=/docs/ux-guidelines-navigation-nav-list--docs)
+- Related guideline: [UX Guidelines > Navigation > Text link](?path=/docs/ux-guidelines-navigation-text-link--docs)
+- Component stories: [Components > FocusLink](?path=/docs/components-focuslink--docs)
+- Component README: [Components > FocusLink > Readme](?path=/docs/components-focuslink--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/focus-link/

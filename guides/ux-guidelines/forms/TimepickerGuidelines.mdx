@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/Timepicker/stories/BasicUsage';
+import MiniTimepickerExample from '../examples/MiniTimepickerExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Timepicker" />
+
+# Timepicker component
+
+A timepicker allows users to pick a time from a small overlay.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniTimepickerExample />
+</UxExampleProvider>
+
+## Structure
+
+A timepicker is a text field with a clock icon on the right.
+
+While FOLIO avoids using placeholders for text fields, timepickers are an exception.
+
+The following placeholder should be displayed: `H:MM A`.
+
+For a required timepicker, a red asterisk should be added next to the label.
+
+For a read-only timepicker, a lock icon should be added next to the label and no clock icon should be displayed in the field.
+
+## Behavior
+
+When users click on the timepicker, the field becomes active and a clock overlay appears.
+
+From the overlay, users can select hours and minutes by using arrows or text fields, and they can switch between PM and AM.
+
+When a time is selected, users should click Set time to save the selection. The overlay should disappear, and the field should display the selected time and a clear X icon in addition to the clock icon.
+
+## Style
+
+Since timepickers are clickable elements, they have multiple states.
+
+Each state is associated with a different color, providing visual feedback.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > Timepicker](?path=/docs/components-timepicker--docs)
+- Component README: [Components > Timepicker > Readme](?path=/docs/components-timepicker--readme)
+- Related guideline: [UX Guidelines > Forms > Text field](?path=/docs/ux-guidelines-forms-text-field--docs)
+- Related guideline: [UX Guidelines > Forms > Repeatable field](?path=/docs/ux-guidelines-forms-repeatable-field--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/timepicker/

@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { WithDefaults as AdvancedSearchWithDefaults } from '../../../lib/AdvancedSearch/stories/AdvancedSearch.stories';
+import MiniAdvancedSearchExample from '../examples/MiniAdvancedSearchExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Advanced search" />
+
+# Advanced search component
+
+Advanced search supports precise query building when simple search is not enough.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniAdvancedSearchExample />
+</UxExampleProvider>
+
+## Structure
+
+Offer clear field options and boolean controls so users can compose complex searches without syntax knowledge.
+
+Use labels that match user vocabulary and domain concepts.
+
+## Behavior
+
+Keep basic search available alongside advanced search so users can escalate only when needed.
+
+When advanced search is dismissed, preserve or clearly reset row state according to page intent.
+
+## Live examples
+
+<UxExampleProvider>
+  <AdvancedSearchWithDefaults />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Forms > Search field](?path=/docs/ux-guidelines-forms-search-field--docs)
+- Related guideline: [UX Guidelines > Navigation > Filter pane search](?path=/docs/ux-guidelines-navigation-filter-pane-search--docs)
+- Component stories: [Components > AdvancedSearch](?path=/docs/components-advancedsearch--docs)
+- Component README: [Components > AdvancedSearch > Readme](?path=/docs/components-advancedsearch--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/advanced-search/

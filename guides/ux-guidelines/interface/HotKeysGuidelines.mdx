@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as HotKeysBasicUsage } from '../../../lib/HotKeys/stories/HotKeys.stories';
+import MiniHotKeysExample from '../examples/MiniHotKeysExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Hot keys" />
+
+# Hot keys component
+
+Hot keys provide efficient keyboard-driven actions for experienced users and high-frequency workflows.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniHotKeysExample />
+</UxExampleProvider>
+
+## Structure
+
+Define shortcuts around meaningful action names and keep mappings consistent across modules.
+
+Avoid overloading common keys where browser or assistive technology shortcuts are expected.
+
+## Behavior
+
+Shortcuts should activate only within their intended focus scope.
+
+Expose discoverability through help text or shortcut-reference surfaces for onboarding.
+
+## Live examples
+
+<UxExampleProvider>
+  <HotKeysBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Interface > Keyboard shortcuts modal](?path=/docs/ux-guidelines-interface-keyboard-shortcuts-modal--docs)
+- Related guideline: [UX Guidelines > Actions > Button](?path=/docs/ux-guidelines-actions-button--docs)
+- Component stories: [Components > HotKeys](?path=/docs/components-hotkeys--docs)
+- Component README: [Components > HotKeys > Readme](?path=/docs/components-hotkeys--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/hot-keys/

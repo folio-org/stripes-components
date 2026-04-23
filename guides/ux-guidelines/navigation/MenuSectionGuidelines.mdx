@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as MenuSectionBasicUsage } from '../../../lib/MenuSection/stories/MenuSection.stories';
+import MiniMenuSectionExample from '../examples/MiniMenuSectionExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Menu section" />
+
+# Menu section component
+
+Menu section groups related menu controls under labeled headings.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniMenuSectionExample />
+</UxExampleProvider>
+
+## Structure
+
+Use section labels to separate layout options, column controls, and actions.
+
+Keep destructive actions in a separate section at the end of the menu.
+
+## Behavior
+
+Section labels should stay visible while users navigate menu items with keyboard controls.
+
+Within each section, item order should reflect frequency and task priority.
+
+## Live examples
+
+<UxExampleProvider>
+  <MenuSectionBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Navigation > Dropdown](?path=/docs/ux-guidelines-navigation-dropdown--docs)
+- Related guideline: [UX Guidelines > Layout > Pane menu](?path=/docs/ux-guidelines-layout-pane-menu--docs)
+- Component stories: [Components > MenuSection](?path=/docs/components-menusection--docs)
+- Component README: [Components > MenuSection > Readme](?path=/docs/components-menusection--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/menu-section/

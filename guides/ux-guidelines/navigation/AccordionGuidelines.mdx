@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/Accordion/stories/BasicUsage';
+import MiniAccordionExample from '../examples/MiniAccordionExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Accordion" />
+
+# Accordion component
+
+The accordion list allows users to show and hide details from a list item.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniAccordionExample />
+</UxExampleProvider>
+
+## Structure
+
+Each accordion has content and a title with an arrow on the left allowing users to hide or show content.
+
+If needed, an accordion core information section can be added on top of a record pane accordion set.
+
+## Behavior
+
+If users do not need to see all options or information at once, using an accordion list helps avoid long pages and excessive scrolling.
+
+Clicking the accordion arrow hides or shows detailed information and moves surrounding content upward or downward.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > Accordion](?path=/docs/components-accordion--docs)
+- Component README: [Components > Accordion > Readme](?path=/docs/components-accordion--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/accordion/

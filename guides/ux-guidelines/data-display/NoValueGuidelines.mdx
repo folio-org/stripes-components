@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniNoValueExample from '../examples/MiniNoValueExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Data display/No value" />
+
+# No value component
+
+No value shows a consistent placeholder when record data is empty or unavailable.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniNoValueExample />
+</UxExampleProvider>
+
+## Usage guidance
+
+Use a single no-value treatment across metadata, summaries, and detail fields to keep scanning predictable.
+
+Prefer explicit no-value placeholders over blank space so missing data is distinguishable from rendering gaps.
+
+## Accessibility
+
+No value should expose screen-reader text that communicates the absence of data.
+
+Do not rely on punctuation-only placeholders without accessible text equivalents.
+
+## Related
+
+- Related guideline: [UX Guidelines > Data display > Key value](?path=/docs/ux-guidelines-data-display-key-value--docs)
+- Related guideline: [UX Guidelines > Data display > Record metadata](?path=/docs/ux-guidelines-data-display-record-metadata--docs)
+- Component stories: [Components > NoValue](?path=/docs/components-novalue--docs)
+- Component README: [Components > NoValue > Readme](?path=/docs/components-novalue--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/no-value/
