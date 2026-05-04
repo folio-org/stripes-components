@@ -148,8 +148,11 @@ function buildWrapper({ componentName, readmeContent, storyImportPath, storyExpo
 
   const imports = [
     "import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';",
+    // Renders README markdown text to React elements inside generated MDX docs.
     "import ReactMarkdown from 'react-markdown';",
+    // Enables GitHub-flavored markdown features (tables, strikethrough, task lists).
     "import remarkGfm from 'remark-gfm';",
+    // Allows inline HTML found in README files to be rendered in docs output.
     "import rehypeRaw from 'rehype-raw';",
   ];
 
