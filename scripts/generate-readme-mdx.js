@@ -12,10 +12,12 @@ const README_NAMES = ['README.md', 'Readme.md', 'readme.md'];
 const STORY_FILE_PATTERN = /\.stories\.(js|jsx|ts|tsx)$/;
 const AUTO_HEADER = 'AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.';
 
+// Normalize paths for Storybook/MDX imports and console output.
 function toPosix(filePath) {
   return filePath.split(path.sep).join('/');
 }
 
+// Collect top-level component directories under lib/.
 function getComponentDirs() {
   return fs
     .readdirSync(libRoot, { withFileTypes: true })
@@ -23,6 +25,7 @@ function getComponentDirs() {
     .map((entry) => path.join(libRoot, entry.name));
 }
 
+// Find a README file for a component using supported filename variants.
 function findReadme(componentDir) {
   for (const fileName of README_NAMES) {
     const fullPath = path.join(componentDir, fileName);
@@ -34,9 +37,11 @@ function findReadme(componentDir) {
   return null;
 }
 
+// Recursively find component story files used to bind generated README docs.
 function findStoryFiles(componentDir) {
   const storyFiles = [];
 
+  // Walk a component subtree and collect all CSF story files.
   function walk(currentDir) {
     for (const entry of fs.readdirSync(currentDir, { withFileTypes: true })) {
       if (entry.name === 'node_modules') continue;
@@ -58,6 +63,7 @@ function findStoryFiles(componentDir) {
   return storyFiles.sort((a, b) => a.localeCompare(b));
 }
 
+// Prefer the canonical <Component>.stories.* file when one exists.
 function getPreferredStoryFile(componentDir, componentName, storyFiles) {
   const preferred = storyFiles.find((filePath) => {
     const base = path.basename(filePath).toLowerCase();
@@ -70,6 +76,7 @@ function getPreferredStoryFile(componentDir, componentName, storyFiles) {
   return preferred || storyFiles[0] || null;
 }
 
+// Extract named story exports to support optional Story block generation.
 function getNamedStoryExports(storyFileContents) {
   const names = new Set();
 
@@ -111,6 +118,7 @@ function getNamedStoryExports(storyFileContents) {
   return [...names].filter((name) => !excluded.has(name));
 }
 
+// Derive a display heading from README content with component fallback.
 function getReadmeHeading(readmeContent, componentName) {
   const match = /^#\s+(.+)$/m.exec(readmeContent);
   if (match) {
@@ -120,11 +128,13 @@ function getReadmeHeading(readmeContent, componentName) {
   return componentName;
 }
 
+// Remove source patterns that are invalid in MDX3 before embedding markdown.
 function sanitizeReadmeContent(readmeContent) {
   // MDX3 does not support HTML comments in markdown source.
   return readmeContent.replace(/<!--[\s\S]*?-->/g, '').trim();
 }
 
+// Escape markdown so it can be safely embedded in a JavaScript template literal.
 function escapeMarkdownForJsString(markdown) {
   return markdown
     .replace(/\\/g, '\\\\')
@@ -132,6 +142,7 @@ function escapeMarkdownForJsString(markdown) {
     .replace(/\$\{/g, '\\${');
 }
 
+// Build the generated MDX wrapper that renders README markdown in Storybook docs.
 function buildWrapper({ componentName, readmeContent, storyImportPath, storyExports }) {
   const sanitizedReadme = sanitizeReadmeContent(readmeContent);
 
@@ -168,6 +179,7 @@ function buildWrapper({ componentName, readmeContent, storyImportPath, storyExpo
   return `${lines.join('\n')}\n`;
 }
 
+// Write generated content only when changed to keep diffs and checks stable.
 function writeIfChanged(filePath, content) {
   const exists = fs.existsSync(filePath);
   const current = exists ? fs.readFileSync(filePath, 'utf8') : null;
@@ -184,9 +196,11 @@ function writeIfChanged(filePath, content) {
   return { changed: true, created: !exists };
 }
 
+// Delete previously generated README wrapper files from lib/.
 function removeGeneratedWrappers() {
   const removedFiles = [];
 
+  // Walk the lib tree and remove only files marked with the auto-generated header.
   function walk(currentDir) {
     for (const entry of fs.readdirSync(currentDir, { withFileTypes: true })) {
       if (entry.name === 'node_modules') continue;
@@ -217,6 +231,7 @@ function removeGeneratedWrappers() {
   console.log(`Removed: ${removedFiles.length}`);
 }
 
+// Main CLI entrypoint: validate mode, generate wrappers, and report results.
 function run() {
   if (checkMode && cleanMode) {
     console.error('Choose either --check or --clean, not both.');
