@@ -3,6 +3,7 @@
 ## IN PROGRESS
 
 * Supply Personal Data Disclosure form. Refs STCOM-1449.
+* `Pane`/`PaneHeader` - Add `actionMenuDisabled` and `actionMenuDisabledTooltip` props for rendering a disabled action menu with an optional tooltip. Refs STCOM-1504.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 

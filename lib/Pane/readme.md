@@ -74,6 +74,8 @@ To make a pane dismissible, simply supply the `dismissible` prop and a module-le
 Name | type | description | default | required
 --- | --- | --- | --- | ---
 actionMenu | func | Activates the action menu dropdown. Expects a function that returns a component or node. | undefined |
+actionMenuDisabled | bool | Disables the action menu trigger so it cannot be opened. | false |
+actionMenuDisabledTooltip | string or node | Tooltip content shown on hover/focus while the action menu is disabled. Ignored when `actionMenuDisabled` is `false`. | undefined |
 appIcon | element | Render an app icon in the PaneHeader by passing an `<AppIcon>` from stripes-core. |  | undefined
 defaultWidth | string percentage or `"fill"` | Tells the pane the percentage of the paneset that it should occupy. A string percentage (`"25%"`) will render a pane with a width of 25% of its containing element. The string `"fill"` will cause the pane to occupy any remaining space in the paneset after percentage-sized panes are accounted for. |  | &#10004;
 centerContent | bool | Wraps the content of the pane in a centered container. This can be useful when rendering forms or preview panes where you don't want the content to take up the entire width of a potentially very wide pane. | |
