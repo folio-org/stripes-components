@@ -1,18 +1,9 @@
 /**
- * derived from public domain data from https://www.iana.org/time-zones
- * v2026b (2026-04-22), zonenow.tab
+ * These data are derived from public domain data at https://github.com/eggert/tz/,
+ * a link totally buried in the documentation at https://www.iana.org/time-zones.
+ * This list reflects the v2026b (2026-04-22) release of zonenow.tab.
  *
- * Data there is shaped like
- *   America/Chicago   Central (CST/CDT) - US & Canada; Mexico near US border
- *   America/New_York  Eastern (EST/EDT) - US & Canada
- *
- * The provenance of the data in earlier versions of this file is unclear.
- * Previously, we had data shaped like
- *   America/Chicago   Chicago (Central)
- *   America/Chicago   Chicago
- *   America/New_York  New York (Eastern)
- *   America/New_York  New York
- *
+ * There seem to be ~1-10 updates a year. Consider syncing it yearly or so.
  */
 const timezones = [
   ['Pacific/Pago_Pago', 'Midway; Samoa (SST)'],
