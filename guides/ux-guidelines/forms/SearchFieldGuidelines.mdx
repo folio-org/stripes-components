@@ -1,0 +1,51 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/SearchField/stories/BasicUsage';
+import MiniSearchFieldExample from '../examples/MiniSearchFieldExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Search field" />
+
+# Search field component
+
+A search field allows users to search for specific information.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniSearchFieldExample />
+</UxExampleProvider>
+
+## When to use it?
+
+The Search field is an ingredient of the Search and sort recipe and should only be used in this context.
+
+## Structure
+
+The default search field is similar to a text field with a search icon on the left.
+
+The searchable indexes field has a select field right above a default search field.
+
+If needed, a placeholder should be used to indicate what type of items can be searched.
+
+It should follow this format: `Search {content name}...`
+
+## Behavior
+
+When users click on a text field, the field should become active.
+
+Once users start typing, a clear icon should appear on the right side and the search icon should disappear.
+
+If users leave the field with an input, the field becomes inactive and only the input is visible.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > SearchField](?path=/docs/components-searchfield--docs)
+- Component README: [Components > SearchField > Readme](?path=/docs/components-searchfield--readme)
+- Related guideline: [UX Guidelines > Forms > Text field](?path=/docs/ux-guidelines-forms-text-field--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/search-field/

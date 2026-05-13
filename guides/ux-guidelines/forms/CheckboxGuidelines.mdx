@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/Checkbox/stories/BasicUsage';
+import MiniCheckboxExample from '../examples/MiniCheckboxExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Checkbox" />
+
+# Checkbox component
+
+A checkbox allows users to select multiple options from a set.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniCheckboxExample />
+</UxExampleProvider>
+
+## Structure
+
+A checkbox is a small square that can be checked or unchecked.
+
+It can have a label placed on the left (inline) or on top (vertical).
+
+For a required checkbox, a red asterisk should be added next to the label.
+
+For a read-only checkbox, a lock icon should be added next to the label.
+
+## Behavior
+
+Clicking on a checkbox selects the corresponding item.
+
+A checkmark appears to confirm the selection.
+
+## Style
+
+Since checkboxes are clickable elements, they have multiple states.
+
+Each state is associated with a different color, providing visual feedback to users.
+
+Checkboxes are shown as a small square with a corner radius of 25% and a 1px outline.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > Checkbox](?path=/docs/components-checkbox--docs)
+- Component README: [Components > Checkbox > Readme](?path=/docs/components-checkbox--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/checkbox/

@@ -2,8 +2,11 @@ import React, { Component, Fragment } from 'react';
 import pkg from '../package.json';
 import { themes } from 'storybook/theming';
 import IntlWrap from './IntlWrap';
+import UnstyledDocsContainer from './UnstyledDocsContainer';
+import '../lib/fonts.css';
 import '../lib/global.css';
 import '../lib/variables.css';
+import './docs-overrides.css';
 
 /**
  * React intl support
@@ -90,10 +93,11 @@ const preview = {
     options: {
       storySort: {
         method: 'alphabetical',
-        order: ['*', 'Guides', 'Components']
+        order: ['*', 'UX Guidelines', 'Guides', 'Components']
       }
     },
     docs: {
+      container: UnstyledDocsContainer,
       theme: Object.assign({}, themes.light, {
         brandTitle: `FOLIO Stripes-components v${pkg.version}`,
       })

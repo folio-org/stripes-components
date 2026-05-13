@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniPaneSubheaderExample from '../examples/MiniPaneSubheaderExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Layout/Pane subheader" />
+
+# Pane subheader component
+
+Pane subheader adds controls directly beneath a pane header without mixing them into the main content flow.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPaneSubheaderExample />
+</UxExampleProvider>
+
+## Structure
+
+Use pane subheader for context switches, segmented controls, or light filter controls that relate to pane content.
+
+Keep subheader content concise to preserve vertical space for records and lists.
+
+## Behavior
+
+Subheader controls should update only the associated pane region.
+
+Subheader state should persist while users interact with content inside the same pane.
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Related guideline: [UX Guidelines > Layout > Pane header](?path=/docs/ux-guidelines-layout-pane-header--docs)
+- Component stories: [Components > PaneSubheader](?path=/docs/components-panesubheader--docs)
+- Component README: [Components > PaneSubheader > Readme](?path=/docs/components-panesubheader--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-subheader/

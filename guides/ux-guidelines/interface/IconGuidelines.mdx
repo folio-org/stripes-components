@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Label as IconWithLabelStory } from '../../../lib/Icon/stories/Icon.stories';
+import MiniIconExample from '../examples/MiniIconExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Icon" />
+
+# Icon component
+
+Icon communicates state, action intent, or object type in a compact visual form.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniIconExample />
+</UxExampleProvider>
+
+## Structure
+
+Use icons that match established meanings so users can recognize actions quickly.
+
+When an icon carries critical meaning, pair it with a visible text label.
+
+## Behavior
+
+Interactive icons should have a clear hit area and keyboard focus treatment.
+
+Status icons should remain consistent across views so severity is predictable.
+
+## Live examples
+
+<UxExampleProvider>
+  <IconWithLabelStory />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Actions > Icon button](?path=/docs/ux-guidelines-actions-icon-button--docs)
+- Related guideline: [UX Guidelines > Interface > Badge](?path=/docs/ux-guidelines-interface-badge--docs)
+- Component stories: [Components > Icon](?path=/docs/components-icon--docs)
+- Component README: [Components > Icon > Readme](?path=/docs/components-icon--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/icon/

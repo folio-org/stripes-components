@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as KeyValueBasicUsage } from '../../../lib/KeyValue/stories/KeyValue.stories';
+import MiniKeyValueExample from '../examples/MiniKeyValueExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Data display/Key value" />
+
+# Key value component
+
+Key value structures read-only record information using a label-value pair.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniKeyValueExample />
+</UxExampleProvider>
+
+## Structure
+
+A key value contains a key (label) and a value.
+
+The key identifies the data point. The value holds the record information associated with that key.
+
+## Behavior
+
+In read-only display, key and value should be easy to scan and grouped consistently within record sections.
+
+In edit mode, key-value fields should map directly to field labels and input values.
+
+## Style
+
+Keys should be visually lighter than values so values remain the primary content focus.
+
+Keys should appear above values to preserve consistent scanning order.
+
+## Live examples
+
+<UxExampleProvider>
+  <KeyValueBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Data display > Record metadata](?path=/docs/ux-guidelines-data-display-record-metadata--docs)
+- Related guideline: [UX Guidelines > Data display > List](?path=/docs/ux-guidelines-data-display-list--docs)
+- Component stories: [Components > KeyValue](?path=/docs/components-keyvalue--docs)
+- Component README: [Components > KeyValue > Readme](?path=/docs/components-keyvalue--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/key-value/

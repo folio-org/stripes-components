@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Basic as FilterGroupsBasicUsage } from '../../../lib/FilterGroups/FilterGroups.stories';
+import MiniFilterGroupsExample from '../examples/MiniFilterGroupsExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Filter groups" />
+
+# Filter groups component
+
+Filter groups organize refinements into clear categories so users can narrow results confidently.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniFilterGroupsExample />
+</UxExampleProvider>
+
+## Structure
+
+Group filters by user mental model and keep category names short and specific.
+
+Show related options together and avoid mixing unrelated dimensions in one section.
+
+## Behavior
+
+Applying or clearing a filter should update results predictably and keep current filter state visible.
+
+If filter changes trigger data loading, preserve selection state and communicate progress clearly.
+
+## Live examples
+
+<UxExampleProvider>
+  <FilterGroupsBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Navigation > Filter pane search](?path=/docs/ux-guidelines-navigation-filter-pane-search--docs)
+- Related guideline: [UX Guidelines > Data display > List](?path=/docs/ux-guidelines-data-display-list--docs)
+- Component stories: [Components > FilterGroups](?path=/docs/components-filtergroups--docs)
+- Component README: [Components > FilterGroups > Readme](?path=/docs/components-filtergroups--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/filter-groups/

@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { LoadingSpinner, _LoadingPane, _LoadingView } from '../../../lib/Loading/stories/Loading.stories';
+import MiniLoadingExample from '../examples/MiniLoadingExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Loading" />
+
+# Loading component
+
+Loading communicates that work is in progress and results are not yet ready.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniLoadingExample />
+</UxExampleProvider>
+
+## Structure
+
+Use loading indicators in the same region where content will appear.
+
+For pane-based screens, use pane-level loading states instead of blocking unrelated areas.
+
+## Behavior
+
+Show loading indicators as soon as a request starts and remove them when data is rendered or an error state replaces loading.
+
+For long operations, keep users oriented with stable layout and avoid content jumping.
+
+## Live examples
+
+<UxExampleProvider>
+  <LoadingSpinner />
+  <_LoadingPane />
+  <_LoadingView />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Feedback > Message banner](?path=/docs/ux-guidelines-feedback-message-banner--docs)
+- Related guideline: [UX Guidelines > Feedback > Empty message](?path=/docs/ux-guidelines-feedback-empty-message--docs)
+- Component stories: [Components > Loading](?path=/docs/components-loading--docs)
+- Component README: [Components > Loading > Readme](?path=/docs/components-loading--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/loading/

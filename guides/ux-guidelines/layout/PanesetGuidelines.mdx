@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _3PanesLayer, _InitialLayouts, _OnLayout } from '../../../lib/Pane/stories/Pane.stories';
+import MiniPanesetExample from '../examples/MiniPanesetExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Layout/Paneset" />
+
+# Paneset integration
+
+Paneset is the layout manager for pane-based module screens.
+
+Use Paneset to manage pane sizing, resizing, and nested pane structures.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPanesetExample />
+</UxExampleProvider>
+
+## Structure
+
+Use Paneset as the parent container for related panes in a view.
+
+Each pane should have a stable id when you rely on persisted widths or layout transitions.
+
+When nesting panesets inside other panesets, use nested and root options intentionally to avoid layout conflicts.
+
+## Behavior
+
+Paneset tracks child pane widths and preserves user resizing across view state changes.
+
+Use initialLayouts for predictable default width sets.
+
+Use onLayout when pane visibility or app state should drive width changes dynamically.
+
+If a Paneset is rendered inside Layer, mark the layered set as root to prevent unintended ancestor sizing interactions.
+
+## Live examples
+
+<UxExampleProvider>
+  <_InitialLayouts />
+  <_OnLayout />
+  <_3PanesLayer />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Layout types](?path=/docs/ux-guidelines-layout-layout-types--docs)
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Related guideline: [UX Guidelines > Layout > Layer](?path=/docs/ux-guidelines-layout-layer--docs)
+- Component README: [Components > Paneset > Readme](?path=/docs/components-paneset--readme)
+- Archived layout context: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/layout-types/

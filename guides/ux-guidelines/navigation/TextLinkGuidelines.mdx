@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as TextLinkBasicUsage } from '../../../lib/TextLink/stories/TextLink.stories';
+import MiniTextLinkExample from '../examples/MiniTextLinkExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Text link" />
+
+# Text link component
+
+Text link provides inline navigation actions with accessible link behavior.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniTextLinkExample />
+</UxExampleProvider>
+
+## Structure
+
+Use text links for contextual navigation within body copy and metadata areas.
+
+Link text should describe destination or result rather than generic labels.
+
+## Behavior
+
+Text links should remain visually identifiable in all states, including focus and hover.
+
+External links should communicate intent and respect safe target/rel usage when opening new tabs.
+
+## Live examples
+
+<UxExampleProvider>
+  <TextLinkBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Navigation > Nav list](?path=/docs/ux-guidelines-navigation-nav-list--docs)
+- Related guideline: [UX Guidelines > Data display > List](?path=/docs/ux-guidelines-data-display-list--docs)
+- Component stories: [Components > TextLink](?path=/docs/components-textlink--docs)
+- Component README: [Components > TextLink > Readme](?path=/docs/components-textlink--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/text-link/
