@@ -90,6 +90,12 @@ const storyFnDecorator = storyFn => (
 const preview = {
   decorators: [storyFnDecorator],
   parameters: {
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['*', 'Guides', 'Components']
+      }
+    },
     docs: {
       container: UnstyledDocsContainer,
       theme: Object.assign({}, themes.light, {

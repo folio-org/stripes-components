@@ -9,6 +9,7 @@ const storybookArgs = ['dev', '-p', '9001', '-c', '.storybook', ...process.argv.
 let storybookProcess = null;
 let cleanupStarted = false;
 
+// Run a Node script with inherited stdio and return its exit code.
 function runNodeScript(args) {
   return new Promise((resolve) => {
     const child = spawn(process.execPath, args, { stdio: 'inherit' });
@@ -18,6 +19,7 @@ function runNodeScript(args) {
   });
 }
 
+// Quote shell arguments that include special characters or spaces.
 function shellQuote(arg) {
   if (/^[A-Za-z0-9_./:-]+$/.test(arg)) {
     return arg;
@@ -26,6 +28,7 @@ function shellQuote(arg) {
   return `"${arg.replace(/"/g, '\\"')}"`;
 }
 
+// Remove generated README wrappers once per process after Storybook stops.
 async function cleanupGeneratedReadmes() {
   if (cleanupStarted) return 0;
 
@@ -33,6 +36,7 @@ async function cleanupGeneratedReadmes() {
   return runNodeScript([generatorScript, '--clean']);
 }
 
+// Forward termination signals so Storybook shuts down gracefully.
 function forwardSignalToStorybook(signal) {
   if (storybookProcess && !storybookProcess.killed) {
     storybookProcess.kill(signal);
@@ -42,6 +46,7 @@ function forwardSignalToStorybook(signal) {
 process.on('SIGINT', () => forwardSignalToStorybook('SIGINT'));
 process.on('SIGTERM', () => forwardSignalToStorybook('SIGTERM'));
 
+// Main flow: generate README docs, run Storybook, then clean generated files.
 async function run() {
   const generateExitCode = await runNodeScript([generatorScript]);
   if (generateExitCode !== 0) {

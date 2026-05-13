@@ -12,3 +12,4 @@ artifacts
 /storybook-static/
 .vscode
 .idea
+/lib/*/**.mdx
