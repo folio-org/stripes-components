@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as ButtonGroupBasicUsage } from '../../../lib/ButtonGroup/stories/ButtonGroup.stories';
+import MiniButtonGroupExample from '../examples/MiniButtonGroupExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Actions/Button group" />
+
+# Button group component
+
+Button group presents related actions or view switches as an adjacent set of buttons.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniButtonGroupExample />
+</UxExampleProvider>
+
+## Structure
+
+Use a button group when actions are closely related and should be compared side by side.
+
+Keep labels short so the grouped controls remain compact and scannable.
+
+## Behavior
+
+Grouped buttons should keep consistent size and spacing across states.
+
+Use a selected/pressed state only when the group acts as a single-choice control.
+
+## Live examples
+
+<UxExampleProvider>
+  <ButtonGroupBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Actions > Button](?path=/docs/ux-guidelines-actions-button--docs)
+- Related guideline: [UX Guidelines > Navigation > Segmented control (context)](?path=/docs/ux-guidelines-navigation-segmented-control-context--docs)
+- Component stories: [Components > ButtonGroup](?path=/docs/components-buttongroup--docs)
+- Component README: [Components > ButtonGroup > Readme](?path=/docs/components-buttongroup--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/button-group/

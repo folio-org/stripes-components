@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniFormFieldExample from '../examples/MiniFormFieldExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Form field" />
+
+# Form field utility
+
+Form field standardizes form state mapping so wrapped inputs behave consistently across form engines.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniFormFieldExample />
+</UxExampleProvider>
+
+## Structure
+
+Use form field wrappers to keep input components focused on rendering and interaction concerns.
+
+Map only the validation and state signals needed for user guidance.
+
+## Behavior
+
+Validation messages should appear only after a field is touched or submitted.
+
+Keep wrapper logic predictable so fields respond consistently across modules.
+
+## Related
+
+- Related guideline: [UX Guidelines > Forms > Text field](?path=/docs/ux-guidelines-forms-text-field--docs)
+- Related guideline: [UX Guidelines > Forms > Error messages](?path=/docs/ux-guidelines-forms-error-messages--docs)
+- Component stories: [Components > FormField](?path=/docs/components-formfield--docs)
+- Component README: [Components > FormField > Readme](?path=/docs/components-formfield--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/form-field/

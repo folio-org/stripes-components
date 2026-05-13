@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as TooltipBasicUsage } from '../../../lib/Tooltip/stories/Tooltip.stories';
+import MiniTooltipExample from '../examples/MiniTooltipExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Tooltip (context)" />
+
+# Tooltip context
+
+Tooltips provide short helper text for controls that lack visible labels.
+
+Guidance here is based on local accessibility and usage practices.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniTooltipExample />
+</UxExampleProvider>
+
+## Behavior
+
+Tooltips appear on hover or focus and should disappear when focus moves away.
+
+Use short text and avoid placing critical actions inside tooltips.
+
+## Accessibility guidance
+
+Associate tooltip text with the trigger using `aria-labelledby` and `aria-describedby` as appropriate.
+
+Ensure equivalent context is available to keyboard and assistive-technology users.
+
+## Live examples
+
+<UxExampleProvider>
+  <TooltipBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Interface > Popover](?path=/docs/ux-guidelines-interface-popover--docs)
+- Related guideline: [UX Guidelines > Navigation > Info popover](?path=/docs/ux-guidelines-navigation-info-popover--docs)
+- Component stories: [Components > Tooltip](?path=/docs/components-tooltip--docs)
+- Component README: [Components > Tooltip > Readme](?path=/docs/components-tooltip--readme)

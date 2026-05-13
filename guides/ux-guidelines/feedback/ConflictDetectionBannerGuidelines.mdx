@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniConflictDetectionBannerExample from '../examples/MiniConflictDetectionBannerExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Conflict detection banner" />
+
+# Conflict detection banner component
+
+Conflict detection banner alerts users when a record changed during editing and requires reconciliation.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniConflictDetectionBannerExample />
+</UxExampleProvider>
+
+## Structure
+
+Use concise conflict language that identifies why saving failed and what recovery path is available.
+
+Include a direct link to the latest saved version when users need to compare or reload.
+
+## Behavior
+
+Move focus to the banner when a conflict is detected so keyboard and screen-reader users get immediate feedback.
+
+Keep conflict messaging visible until users resolve or exit the editing flow.
+
+## Related
+
+- Related guideline: [UX Guidelines > Feedback > Message banner](?path=/docs/ux-guidelines-feedback-message-banner--docs)
+- Related guideline: [UX Guidelines > Feedback > Error modal](?path=/docs/ux-guidelines-feedback-error-modal--docs)
+- Component stories: [Components > ConflictDetectionBanner](?path=/docs/components-conflictdetectionbanner--docs)
+- Component README: [Components > ConflictDetectionBanner > Readme](?path=/docs/components-conflictdetectionbanner--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/conflict-detection-banner/

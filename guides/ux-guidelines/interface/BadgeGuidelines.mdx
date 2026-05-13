@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as BadgeBasicUsage } from '../../../lib/Badge/stories/Badge.stories';
+import MiniBadgeExample from '../examples/MiniBadgeExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Badge" />
+
+# Badge component
+
+Badges indicate counts or status notifications in compact form.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniBadgeExample />
+</UxExampleProvider>
+
+## Style
+
+Badge color should communicate meaning consistently (for example default, primary, or danger).
+
+Badge width should adapt to label length while preserving legibility.
+
+Use short labels and avoid dense badge text.
+
+## Live examples
+
+<UxExampleProvider>
+  <BadgeBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Interface > Tooltip (context)](?path=/docs/ux-guidelines-interface-tooltip-context--docs)
+- Component stories: [Components > Badge](?path=/docs/components-badge--docs)
+- Component README: [Components > Badge > Readme](?path=/docs/components-badge--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/badge/

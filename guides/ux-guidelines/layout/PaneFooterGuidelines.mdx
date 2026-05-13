@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniPaneFooterExample from '../examples/MiniPaneFooterExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Layout/Pane footer" />
+
+# Pane footer component
+
+Pane footer presents persistent actions at the bottom of pane-based forms.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPaneFooterExample />
+</UxExampleProvider>
+
+## Structure
+
+Use start and end action areas to separate secondary actions from primary commit actions.
+
+Keep footer actions stable while pane content scrolls.
+
+## Behavior
+
+Primary actions should be visually emphasized and remain available as users complete long forms.
+
+Footer button order should stay consistent across create and edit workflows.
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Related guideline: [UX Guidelines > Actions > Button](?path=/docs/ux-guidelines-actions-button--docs)
+- Component stories: [Components > PaneFooter](?path=/docs/components-panefooter--docs)
+- Component README: [Components > PaneFooter > Readme](?path=/docs/components-panefooter--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-footer/

@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Open } from '../../../lib/Dropdown/Dropdown.stories';
+import MiniDropdownExample from '../examples/MiniDropdownExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Dropdown" />
+
+# Dropdown component
+
+A dropdown allows users to see information or choose a list item from an overlay window.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniDropdownExample />
+</UxExampleProvider>
+
+## Structure
+
+A dropdown is an overlay window that displays lists or action links.
+
+If different sections need to be shown, each section should have a label.
+
+If a dangerous action is added, it should appear in red and at the end of the list.
+
+## Behavior
+
+When users toggle a dropdown, the overlay window should appear below the element that triggers it.
+
+If users click on a dropdown item or anywhere outside the window, the dropdown should disappear.
+
+## Style
+
+Dropdowns are squares with a 1px grey outline and 4px corner radius.
+
+To make them stand out from surrounding UI, they should use a shadow.
+
+## Live examples
+
+<UxExampleProvider>
+  <Open />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > Dropdown](?path=/docs/components-dropdown--docs)
+- Component README: [Components > Dropdown > Readme](?path=/docs/components-dropdown--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/dropdown/
