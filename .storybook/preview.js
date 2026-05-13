@@ -93,7 +93,7 @@ const preview = {
     options: {
       storySort: {
         method: 'alphabetical',
-        order: ['*', 'Guides', 'Components']
+        order: ['*', 'UX Guidelines', 'Guides', 'Components']
       }
     },
     docs: {
