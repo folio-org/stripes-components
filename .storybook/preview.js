@@ -87,6 +87,12 @@ const storyFnDecorator = storyFn => (
 const preview = {
   decorators: [storyFnDecorator],
   parameters: {
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['*', 'Guides', 'Components']
+      }
+    },
     docs: {
       theme: Object.assign({}, themes.light, {
         brandTitle: `FOLIO Stripes-components v${pkg.version}`,
