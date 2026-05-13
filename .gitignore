@@ -5,9 +5,11 @@ atom.cson
 .DS_Store
 yarn-error.log
 debug.log
+debug-storybook.log
 artifacts
 .npmrc
 .out
 /storybook-static/
 .vscode
 .idea
+/lib/*/**.mdx

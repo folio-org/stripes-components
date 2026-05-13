@@ -3,6 +3,7 @@
 ## IN PROGRESS
 
 * Supply Personal Data Disclosure form. Refs STCOM-1449.
+* Re-incorporate component Readme's into storybook. Refs STCOM-1258.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
