@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniErrorLanguageExample from '../examples/MiniErrorLanguageExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Error messages" />
+
+# Error message language
+
+## Quick example
+
+<UxExampleProvider>
+	<MiniErrorLanguageExample />
+</UxExampleProvider>
+
+## Text field
+
+When a field is missing, the error message should state: Please fill this in to continue.
+
+When the input format is wrong, the error message should follow this format: `Field label must contain missing input`.
+
+For other errors, the message should be short and give clear instructions on how to fix the issue. The message should start with the field label.
+
+## Card
+
+When a card has an error, it should be displayed in error style and use the following message format: `Error: Error type + detail to fix it`.
+
+Examples of error messages for uploading files:
+
+- Error: file is too big (max 50mb)
+- Error: file format incorrect (CSV only)
+- Error: connection issue (check your internet)
+
+## Related
+
+- Related section: [Text field](?path=/docs/ux-guidelines-forms-text-field--docs)
+- Related section: [Confirmation messages](?path=/docs/ux-guidelines-actions-confirmation-messages--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/language-rules/error-message-language/

@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/MultiColumnList/stories/BasicMCL';
+import MiniMultiColumnListExample from '../examples/MiniMultiColumnListExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Data display/Multi-column list" />
+
+# Multi-column list component
+
+A multi-column list (MCL) allows users to quickly scan through data both vertically and horizontally.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniMultiColumnListExample />
+</UxExampleProvider>
+
+## Table guidance in FOLIO
+
+When a table-like layout is needed in FOLIO, Multi-column list is the primary pattern.
+
+Use MCL for dense records where users need sortable columns, scanning across fields, and responsive fallback behavior.
+
+## Structure
+
+Typically, an MCL is composed of column headers and row tiles with inline information.
+
+MCL should optimize reading comprehension by alternating row backgrounds and using a fleuron to mark the end of the list.
+
+If needed, checkboxes can be added at the left to allow users to select list items.
+
+## Behavior
+
+When MCL is used in a result pane, selecting an item should open the record pane.
+
+To indicate selection, the selected row should have a stronger background and outline treatment.
+
+When used in edit contexts, quick add/delete controls can appear at the end of rows.
+
+When panes resize, MCL can be scrolled horizontally and may adapt to card-like representations depending on layout.
+
+## Recipes
+
+Use recipe-style controls for customizing visible columns and for selecting and acting on multiple items.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > MultiColumnList](?path=/docs/components-multicolumnlist--docs)
+- Component README: [Components > MultiColumnList > Readme](?path=/docs/components-multicolumnlist--readme)
+- Related guideline: [UX Guidelines > Data display > List](?path=/docs/ux-guidelines-data-display-list--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/multi-column-list/

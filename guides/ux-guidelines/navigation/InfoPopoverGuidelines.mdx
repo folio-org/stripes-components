@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as InfoPopoverBasicUsage } from '../../../lib/InfoPopover/stories/InfoPopover.stories';
+import MiniInfoPopoverExample from '../examples/MiniInfoPopoverExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Info popover" />
+
+# Info popover component
+
+An info popover provides contextual details about a nearby element without moving users away from the current view.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniInfoPopoverExample />
+</UxExampleProvider>
+
+## Structure
+
+An info popover uses an information icon as trigger.
+
+On click, it opens a small overlay containing explanatory content and optional supporting action links.
+
+## Behavior
+
+Place the info icon next to the element it explains.
+
+Selecting the icon opens the overlay. Selecting the icon again or clicking outside closes it.
+
+Use info popovers for clarification, not for primary task actions.
+
+## Live examples
+
+<UxExampleProvider>
+  <InfoPopoverBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Navigation > Dropdown](?path=/docs/ux-guidelines-navigation-dropdown--docs)
+- Related guideline: [UX Guidelines > Data display > Key value](?path=/docs/ux-guidelines-data-display-key-value--docs)
+- Component stories: [Components > InfoPopover](?path=/docs/components-infopopover--docs)
+- Component README: [Components > InfoPopover > Readme](?path=/docs/components-infopopover--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/info-popover/

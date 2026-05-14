@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { BasicUsage as PopperBasicUsage } from '../../../lib/Popper/stories/Popper.stories';
+import MiniPopperExample from '../examples/MiniPopperExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Popper" />
+
+# Popper component
+
+Popper manages anchored overlay positioning for dropdowns, popovers, and other contextual surfaces.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPopperExample />
+</UxExampleProvider>
+
+## Structure
+
+Use a stable anchor element and attach overlays with clear spatial relation to that trigger.
+
+Choose placement rules that prioritize readability and avoid clipping.
+
+## Behavior
+
+Overlays should reposition when viewport constraints change.
+
+When overlays are interactive, clicking outside or toggling trigger state should close them predictably.
+
+## Live examples
+
+<UxExampleProvider>
+  <PopperBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Interface > Popover](?path=/docs/ux-guidelines-interface-popover--docs)
+- Related guideline: [UX Guidelines > Navigation > Dropdown](?path=/docs/ux-guidelines-navigation-dropdown--docs)
+- Component stories: [Components > Popper](?path=/docs/components-popper--docs)
+- Component README: [Components > Popper > Readme](?path=/docs/components-popper--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/popper/

@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { BasicUsage as DropdownButtonBasicUsage } from '../../../lib/DropdownButton/DropdownButton.stories';
+import MiniDropdownButtonExample from '../examples/MiniDropdownButtonExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Actions/Dropdown button" />
+
+# Dropdown button component
+
+Dropdown button is a trigger that opens a menu of related actions.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniDropdownButtonExample />
+</UxExampleProvider>
+
+## Structure
+
+Use a dropdown button when actions are related but too numerous for direct button placement.
+
+The trigger label should communicate the action category, such as Actions or More.
+
+## Behavior
+
+Selecting the trigger opens an attached menu and selecting an item performs or starts the chosen action.
+
+Menu items should be ordered by frequency and risk, with destructive actions placed last.
+
+## Live examples
+
+<UxExampleProvider>
+  <DropdownButtonBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Navigation > Dropdown](?path=/docs/ux-guidelines-navigation-dropdown--docs)
+- Related guideline: [UX Guidelines > Actions > Button](?path=/docs/ux-guidelines-actions-button--docs)
+- Component stories: [Components > DropdownButton](?path=/docs/components-dropdownbutton--docs)
+- Component README: [Components > DropdownButton > Readme](?path=/docs/components-dropdownbutton--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/dropdown-button/

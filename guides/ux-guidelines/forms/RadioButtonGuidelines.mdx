@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/RadioButton/stories/BasicUsage';
+import MiniRadioButtonExample from '../examples/MiniRadioButtonExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Radio button" />
+
+# Radio button component
+
+A radio button allows users to select one option from a set.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniRadioButtonExample />
+</UxExampleProvider>
+
+## Structure
+
+A radio button is a small circle that can be selected or unselected.
+
+It can have a label placed on the left (inline) or on top (vertical).
+
+For a required radio button, a red asterisk should be added next to the label.
+
+For a read-only radio button, a lock icon should be added next to the label.
+
+## Behavior
+
+Clicking on a radio button selects an item.
+
+A dot appears inside the radio button to confirm the selection.
+
+## Style
+
+Since radio buttons are clickable elements, they have multiple states.
+
+Each state is associated with a different color, providing visual feedback to users.
+
+Radio buttons are shown as a small circle with a 1px outline and a dot when selected.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > RadioButton](?path=/docs/components-radiobutton--docs)
+- Component README: [Components > RadioButton > Readme](?path=/docs/components-radiobutton--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/radio-button/

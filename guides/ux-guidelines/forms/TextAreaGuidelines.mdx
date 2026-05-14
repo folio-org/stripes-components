@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/TextArea/stories/BasicUsage';
+import MiniTextAreaExample from '../examples/MiniTextAreaExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Text area" />
+
+# Text area component
+
+A text area allows users to enter, read and edit text.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniTextAreaExample />
+</UxExampleProvider>
+
+## Structure
+
+The text area is a multiline text field.
+
+Generally, it has a label indicating the type of input associated with the field and an area to enter text.
+
+Placeholders should be avoided.
+
+If the field is empty, a null icon can be displayed as a visual indicator.
+
+## Behavior
+
+When users click on a text area, the field should become active.
+
+If the entered text is longer than the field, the content should remain readable and editable.
+
+## Style
+
+Since the text area is a clickable element, it has multiple states.
+
+Each state is associated with a different color, providing visual feedback to users.
+
+Text areas are shown as rectangles with a 1px outline.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > TextArea](?path=/docs/components-textarea--docs)
+- Component README: [Components > TextArea > Readme](?path=/docs/components-textarea--readme)
+- Related guideline: [UX Guidelines > Forms > Text field](?path=/docs/ux-guidelines-forms-text-field--docs)
+- Related guideline: [UX Guidelines > Forms > Search field](?path=/docs/ux-guidelines-forms-search-field--docs)
+- Archived source: https://web.archive.org/web/20191116012601mp_/https://ux.folio.org/docs/guidelines/components/text-area/

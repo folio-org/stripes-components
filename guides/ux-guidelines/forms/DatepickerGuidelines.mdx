@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/Datepicker/stories/BasicUsage';
+import MiniDatepickerExample from '../examples/MiniDatepickerExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Datepicker" />
+
+# Datepicker component
+
+A datepicker allows users to pick a date from a small overlay.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniDatepickerExample />
+</UxExampleProvider>
+
+## Structure
+
+A datepicker is a text field with a calendar icon on the right.
+
+While FOLIO generally avoids using placeholders for text fields, datepickers are an exception.
+
+The following placeholder should be displayed: YYYY-MM-DD.
+
+For a required datepicker, a red asterisk should be added next to the label.
+
+For a read-only datepicker, a lock icon should be added next to the label.
+
+## Behavior
+
+When users click on a datepicker, the field becomes active and a calendar overlay appears.
+
+When users pick a date, the calendar should disappear.
+
+The datepicker should show the selected date and a clear X icon in addition to the calendar icon.
+
+## Style
+
+Since datepickers are clickable elements, they have multiple states.
+
+Each state is associated with a different color, providing visual feedback.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > Datepicker](?path=/docs/components-datepicker--docs)
+- Component README: [Components > Datepicker > Readme](?path=/docs/components-datepicker--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/datepicker/

@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as HeadlineBasicUsage } from '../../../lib/Headline/stories/Headline.stories';
+import MiniHeadlineExample from '../examples/MiniHeadlineExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Data display/Headline" />
+
+# Headline component
+
+Headlines provide hierarchy that helps users scan pages and locate information quickly.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniHeadlineExample />
+</UxExampleProvider>
+
+## Location
+
+Use heading levels in hierarchy order from parent sections to nested sections.
+
+In pane-oriented screens, pane-level headings should remain visually prominent while nested section headings are lighter and smaller.
+
+## Typography and style
+
+Headline size and weight should reflect information priority.
+
+Use faded headline styling only for secondary context, not for primary page titles.
+
+Maintain consistent spacing around headings to preserve readable structure.
+
+## Live examples
+
+<UxExampleProvider>
+  <HeadlineBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Data display > Accordion core info (context)](?path=/docs/ux-guidelines-data-display-accordion-core-info-context--docs)
+- Related guideline: [UX Guidelines > Layout > Pane header](?path=/docs/ux-guidelines-layout-pane-header--docs)
+- Component stories: [Components > Headline](?path=/docs/components-headline--docs)
+- Component README: [Components > Headline > Readme](?path=/docs/components-headline--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/headline/

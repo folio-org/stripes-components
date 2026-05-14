@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/List/stories/BasicUsage';
+import MiniListExample from '../examples/MiniListExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Data display/List" />
+
+# List component
+
+A list allows users to quickly scan through data vertically.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniListExample />
+</UxExampleProvider>
+
+## Structure
+
+A list displays a set of items vertically with or without bullet points.
+
+To display more than one list, headlines can be used.
+
+If one list uses a headline, related lists in the same section should also use headlines.
+
+## Behavior
+
+By default, list items are sorted alphabetically.
+
+If no list items are available, display the message `No items to show`.
+
+When users select an item in a selectable list context, the background color should change to indicate selection.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > List](?path=/docs/components-list--docs)
+- Component README: [Components > List > Readme](?path=/docs/components-list--readme)
+- Related guideline: [UX Guidelines > Navigation > Dropdown](?path=/docs/ux-guidelines-navigation-dropdown--docs)
+- Related guideline: [UX Guidelines > Data display > Multi-column list](?path=/docs/ux-guidelines-data-display-multi-column-list--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/list/

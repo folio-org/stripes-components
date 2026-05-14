@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as AutoSuggestBasicUsage } from '../../../lib/AutoSuggest/stories/AutoSuggest.stories';
+import MiniAutoSuggestExample from '../examples/MiniAutoSuggestExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Autosuggest" />
+
+# Autosuggest component
+
+Autosuggest provides type-ahead suggestions based on text input.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniAutoSuggestExample />
+</UxExampleProvider>
+
+## Structure
+
+Autosuggest combines a text field with a suggestion list overlay.
+
+The suggestion list should help users confirm likely values while they type.
+
+## Behavior
+
+When users type, matching suggestions should appear.
+
+Users can select a suggestion or continue typing free text based on workflow requirements.
+
+A clear control should remove the current entry and reset the input state.
+
+## Live examples
+
+<UxExampleProvider>
+  <AutoSuggestBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Forms > Search field](?path=/docs/ux-guidelines-forms-search-field--docs)
+- Related guideline: [UX Guidelines > Forms > Text field](?path=/docs/ux-guidelines-forms-text-field--docs)
+- Related guideline: [UX Guidelines > Forms > Select](?path=/docs/ux-guidelines-forms-select--docs)
+- Component stories: [Components > AutoSuggest](?path=/docs/components-autosuggest--docs)
+- Component README: [Components > AutoSuggest > Readme](?path=/docs/components-autosuggest--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/autosuggest/

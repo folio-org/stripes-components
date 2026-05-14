@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as EditorBasicUsage } from '../../../lib/Editor/stories/Editor.stories';
+import MiniEditorExample from '../examples/MiniEditorExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Editor" />
+
+# Editor component
+
+Editor supports rich-text authoring when plain text fields do not provide enough structure.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniEditorExample />
+</UxExampleProvider>
+
+## Structure
+
+Use editor fields only where formatting meaningfully improves comprehension or workflow output.
+
+Keep labels and helper text explicit so users know what content and formatting are expected.
+
+## Behavior
+
+Treat editor value as controlled form state and preserve content during validation cycles.
+
+Keyboard users should be able to enter, navigate, and leave the editor without focus traps.
+
+## Live examples
+
+<UxExampleProvider>
+  <EditorBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Forms > Text area](?path=/docs/ux-guidelines-forms-text-area--docs)
+- Related guideline: [UX Guidelines > Forms > Form field](?path=/docs/ux-guidelines-forms-form-field--docs)
+- Component stories: [Components > Editor](?path=/docs/components-editor--docs)
+- Component README: [Components > Editor > Readme](?path=/docs/components-editor--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/editor/

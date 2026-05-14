@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="UX Guidelines/Layout/Universal header (context)" />
+
+# Universal header context
+
+The universal header is a platform-level shell component used to help users navigate across FOLIO apps.
+
+The universal header is not controlled at the individual module level, so local apps should not attempt to redesign or override its core behavior.
+
+## What it includes
+
+At a high level, the universal header includes current-app context, app launch areas, global settings actions, and profile access.
+
+Its responsive behavior changes available space and progressively collapses controls as width decreases.
+
+## Integration guidance
+
+Design and prioritize module layouts with the assumption that the universal header is always present above pane content.
+
+When naming app areas and actions, keep labels concise so they remain readable when shell space is constrained.
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Layout types](?path=/docs/ux-guidelines-layout-layout-types--docs)
+- Related guideline: [UX Guidelines > Layout > Paneset](?path=/docs/ux-guidelines-layout-paneset--docs)
+- Related guideline: [UX Guidelines > Layout > Layer](?path=/docs/ux-guidelines-layout-layer--docs)
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Related guideline: [UX Guidelines > Layout > Pane header](?path=/docs/ux-guidelines-layout-pane-header--docs)
+- Related guideline: [UX Guidelines > Layout > Pane menu](?path=/docs/ux-guidelines-layout-pane-menu--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/universal-header/

@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import ConfirmationModalExample from '../../../lib/ConfirmationModal/stories/ConfirmationModalExample';
+import MiniConfirmationModalExample from '../examples/MiniConfirmationModalExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Confirmation modal" />
+
+# Confirmation modal UX pattern
+
+A confirmation modal is a type of modal that asks users to verify whether they would like to proceed with an action.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniConfirmationModalExample />
+</UxExampleProvider>
+
+## Structure
+
+Title: states what action users are about to do. It should be short, descriptive, and start with a verb.
+
+Examples: Close the page, Change book location.
+
+Content: short text that states what happens if users proceed.
+
+Buttons: a minimum of two buttons (one primary and one default). The primary button should be on the right and the default close button should be on the left.
+
+Main rules for confirmation modal buttons:
+
+- Labels summarize what will happen on click. Use formats like `Confirm type` and `Cancel type`.
+- In cancelling confirmation modals, use labels like `Cancel type` and `Keep type`.
+- If secondary actions are needed, add default-style buttons next to the primary button.
+
+Warning modal: for dangerous operations, use a warning modal. The primary button should use danger style and a label that indicates what will happen.
+
+## Behavior
+
+When an action has been performed, the confirmation modal appears.
+
+Since modals display important information, they are not dismissable by accident. Users dismiss them by clicking close/cancel or by choosing another action.
+
+## Live examples
+
+<UxExampleProvider>
+  <ConfirmationModalExample />
+</UxExampleProvider>
+
+## Related
+
+- Related section: [Confirmation messages](?path=/docs/ux-guidelines-actions-confirmation-messages--docs)
+- Component README: [Components > ConfirmationModal > Readme](?path=/docs/components-confirmationmodal--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/ux-patterns/using-the-confirmation-modal/

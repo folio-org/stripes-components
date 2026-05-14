@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage } from '../../../lib/Pane/stories/Pane.stories';
+import MiniPaneExample from '../examples/MiniPaneExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Layout/Pane" />
+
+# Pane component
+
+A pane is a FOLIO core component that acts as a container to display information without cluttering the screen.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPaneExample />
+</UxExampleProvider>
+
+## Structure
+
+A pane is generally composed of a pane header, optional pane actions, and pane content.
+
+Pane content should remain focused on a single task or record context, while pane controls stay in the header.
+
+## Responsive layout
+
+Pane content should use a responsive grid so it can adapt as panes open and close.
+
+When screen width is wider than about 800px, panes can appear side by side.
+
+On smaller widths, only the most recent pane should remain visible to keep content readable.
+
+## Behavior
+
+When a new pane opens, it should slide in while neighboring panes resize.
+
+Back and close controls should collapse the current pane and return users to the previous context.
+
+Use pane-level primary actions for content operations such as New, Edit, or Save and close.
+
+## Live examples
+
+<UxExampleProvider>
+  <_BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Pane header](?path=/docs/ux-guidelines-layout-pane-header--docs)
+- Related guideline: [UX Guidelines > Layout > Pane menu](?path=/docs/ux-guidelines-layout-pane-menu--docs)
+- Component stories: [Components > Pane](?path=/docs/components-pane--docs)
+- Component README: [Components > Pane > Readme](?path=/docs/components-pane--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane/

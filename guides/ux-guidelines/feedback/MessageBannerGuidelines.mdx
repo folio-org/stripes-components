@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/MessageBanner/stories/BasicUsage';
+import MiniMessageBannerExample from '../examples/MiniMessageBannerExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Message banner" />
+
+# Message banner component
+
+The Message Banner is used to communicate information to the user related to an entire record, section, or group of content.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniMessageBannerExample />
+</UxExampleProvider>
+
+## Usage
+
+Use Message Banner when status information applies to a full record area instead of a temporary toast-style notification.
+
+Message content should remain concise and contextual to the section where it appears.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > MessageBanner](?path=/docs/components-messagebanner--docs)
+- Component README: [Components > MessageBanner > Readme](?path=/docs/components-messagebanner--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/message-banner-component/

@@ -1,0 +1,1007 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-04-22",
+  "notes": "Pilot wave for ux.folio.org migration. Canonical linkage policy: UX and README pages should cross-reference as related content.",
+  "items": [
+    {
+      "id": "forms-text-field",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Text field component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/text-field/",
+      "targetMdx": "guides/ux-guidelines/forms/TextFieldGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Text field",
+      "status": "drafted",
+      "relatedReadme": "lib/TextField/Readme.md"
+    },
+    {
+      "id": "forms-select",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Select component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/select/",
+      "targetMdx": "guides/ux-guidelines/forms/SelectGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Select",
+      "status": "drafted",
+      "relatedReadme": "lib/Select/readme.md"
+    },
+    {
+      "id": "forms-datepicker",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Datepicker component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/datepicker/",
+      "targetMdx": "guides/ux-guidelines/forms/DatepickerGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Datepicker",
+      "status": "drafted",
+      "relatedReadme": "lib/Datepicker/README.md"
+    },
+    {
+      "id": "forms-checkbox",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Checkbox component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/checkbox/",
+      "targetMdx": "guides/ux-guidelines/forms/CheckboxGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Checkbox",
+      "status": "drafted",
+      "relatedReadme": "lib/Checkbox/README.md"
+    },
+    {
+      "id": "forms-radio-button",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Radio button component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/radio-button/",
+      "targetMdx": "guides/ux-guidelines/forms/RadioButtonGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Radio button",
+      "status": "drafted",
+      "relatedReadme": "lib/RadioButton/README.md"
+    },
+    {
+      "id": "forms-search-field",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Search field component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/search-field/",
+      "targetMdx": "guides/ux-guidelines/forms/SearchFieldGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Search field",
+      "status": "drafted",
+      "relatedReadme": "lib/SearchField/README.md"
+    },
+    {
+      "id": "forms-autosuggest",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Autosuggest component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/autosuggest/",
+      "targetMdx": "guides/ux-guidelines/forms/AutoSuggestGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Autosuggest",
+      "status": "drafted",
+      "relatedReadme": "lib/AutoSuggest/readme.md",
+      "linkedPages": [
+        "forms-search-field",
+        "forms-text-field",
+        "forms-select"
+      ]
+    },
+    {
+      "id": "forms-text-area",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Text area component",
+      "sourceUrl": "https://web.archive.org/web/20191116012601mp_/https://ux.folio.org/docs/guidelines/components/text-area/",
+      "targetMdx": "guides/ux-guidelines/forms/TextAreaGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Text area",
+      "status": "drafted",
+      "relatedReadme": "lib/TextArea/README.md",
+      "linkedPages": [
+        "forms-text-field",
+        "forms-search-field"
+      ]
+    },
+    {
+      "id": "forms-timepicker",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Timepicker component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/timepicker/",
+      "targetMdx": "guides/ux-guidelines/forms/TimepickerGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Timepicker",
+      "status": "drafted",
+      "relatedReadme": "lib/Timepicker/README.md",
+      "linkedPages": [
+        "forms-text-field",
+        "forms-repeatable-field"
+      ]
+    },
+    {
+      "id": "forms-repeatable-field",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Repeatable field component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/repeatable-field/",
+      "targetMdx": "guides/ux-guidelines/forms/RepeatableFieldGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Repeatable field",
+      "status": "drafted",
+      "relatedReadme": "lib/RepeatableField/README.md",
+      "linkedPages": [
+        "forms-text-area",
+        "forms-timepicker"
+      ]
+    },
+    {
+      "id": "forms-error-language",
+      "topic": "Forms",
+      "type": "language-rule",
+      "title": "Error message language",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/language-rules/error-message-language/",
+      "targetMdx": "guides/ux-guidelines/forms/ErrorLanguageGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Error messages",
+      "status": "drafted",
+      "relatedReadme": ""
+    },
+    {
+      "id": "forms-label",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Label component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/label/",
+      "targetMdx": "guides/ux-guidelines/forms/LabelGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Label",
+      "status": "drafted",
+      "relatedReadme": "lib/Label/Label.readme.mdx",
+      "linkedPages": [
+        "forms-text-field",
+        "forms-error-language"
+      ]
+    },
+    {
+      "id": "forms-selection",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Selection component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/selection/",
+      "targetMdx": "guides/ux-guidelines/forms/SelectionGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Selection",
+      "status": "drafted",
+      "relatedReadme": "lib/Selection/Selection.readme.mdx",
+      "linkedPages": [
+        "forms-select",
+        "forms-search-field"
+      ]
+    },
+    {
+      "id": "forms-form-field",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Form field utility",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/form-field/",
+      "targetMdx": "guides/ux-guidelines/forms/FormFieldGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Form field",
+      "status": "drafted",
+      "relatedReadme": "lib/FormField/FormField.readme.mdx",
+      "linkedPages": [
+        "forms-text-field",
+        "forms-error-language"
+      ]
+    },
+    {
+      "id": "forms-advanced-search",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Advanced search component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/advanced-search/",
+      "targetMdx": "guides/ux-guidelines/forms/AdvancedSearchGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Advanced search",
+      "status": "drafted",
+      "relatedReadme": "lib/AdvancedSearch/AdvancedSearch.readme.mdx",
+      "linkedPages": [
+        "forms-search-field",
+        "navigation-filter-pane-search"
+      ]
+    },
+    {
+      "id": "forms-editor",
+      "topic": "Forms",
+      "type": "component",
+      "title": "Editor component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/editor/",
+      "targetMdx": "guides/ux-guidelines/forms/EditorGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Forms/Editor",
+      "status": "drafted",
+      "relatedReadme": "lib/Editor/Editor.readme.mdx",
+      "linkedPages": [
+        "forms-text-area",
+        "forms-form-field"
+      ]
+    },
+    {
+      "id": "actions-button",
+      "topic": "Actions",
+      "type": "component",
+      "title": "Button component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/button/",
+      "targetMdx": "guides/ux-guidelines/actions/ButtonGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Actions/Button",
+      "status": "drafted",
+      "relatedReadme": "lib/Button/readme.md",
+      "linkedPages": [
+        "actions-action-language"
+      ]
+    },
+    {
+      "id": "actions-action-language",
+      "topic": "Actions",
+      "type": "language-rule",
+      "title": "Action language",
+      "sourceUrl": "https://web.archive.org/web/20240811094027mp_/https://ux.folio.org/docs/guidelines/language-rules/action-language/",
+      "targetMdx": "guides/ux-guidelines/actions/ActionLanguage.mdx",
+      "storybookTitle": "UX Guidelines/Actions/Action language",
+      "status": "drafted",
+      "relatedReadme": ""
+    },
+    {
+      "id": "actions-icon-button",
+      "topic": "Actions",
+      "type": "component",
+      "title": "Icon button component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/icon-button/",
+      "targetMdx": "guides/ux-guidelines/actions/IconButtonGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Actions/Icon button",
+      "status": "drafted",
+      "relatedReadme": "lib/IconButton/readme.md"
+    },
+    {
+      "id": "actions-button-group",
+      "topic": "Actions",
+      "type": "component",
+      "title": "Button group component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/button-group/",
+      "targetMdx": "guides/ux-guidelines/actions/ButtonGroupGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Actions/Button group",
+      "status": "drafted",
+      "relatedReadme": "lib/ButtonGroup/ButtonGroup.readme.mdx",
+      "linkedPages": [
+        "actions-button",
+        "navigation-segmented-control-context"
+      ]
+    },
+    {
+      "id": "actions-dropdown-button",
+      "topic": "Actions",
+      "type": "component",
+      "title": "Dropdown button component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/dropdown-button/",
+      "targetMdx": "guides/ux-guidelines/actions/DropdownButtonGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Actions/Dropdown button",
+      "status": "drafted",
+      "relatedReadme": "lib/DropdownButton/DropdownButton.readme.mdx",
+      "linkedPages": [
+        "navigation-dropdown",
+        "actions-button"
+      ]
+    },
+    {
+      "id": "actions-confirmation-language",
+      "topic": "Actions",
+      "type": "language-rule",
+      "title": "Confirmation message language",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/language-rules/confirmation-message-language/",
+      "targetMdx": "guides/ux-guidelines/actions/ConfirmationLanguageGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Actions/Confirmation messages",
+      "status": "drafted",
+      "relatedReadme": ""
+    },
+    {
+      "id": "actions-export-csv",
+      "topic": "Actions",
+      "type": "component",
+      "title": "Export CSV component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/export-csv/",
+      "targetMdx": "guides/ux-guidelines/actions/ExportCsvGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Actions/Export CSV",
+      "status": "drafted",
+      "relatedReadme": "lib/ExportCsv/ExportCsv.readme.mdx",
+      "linkedPages": [
+        "data-display-list",
+        "actions-button"
+      ]
+    },
+    {
+      "id": "feedback-callout",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Callout component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/callout/",
+      "targetMdx": "guides/ux-guidelines/feedback/CalloutGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Callout",
+      "status": "drafted",
+      "relatedReadme": "lib/Callout/readme.md"
+    },
+    {
+      "id": "feedback-message-banner",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Message banner component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/message-banner-component/",
+      "targetMdx": "guides/ux-guidelines/feedback/MessageBannerGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Message banner",
+      "status": "drafted",
+      "relatedReadme": "lib/MessageBanner/README.md"
+    },
+    {
+      "id": "feedback-empty-message",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Empty message component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/empty-message/",
+      "targetMdx": "guides/ux-guidelines/feedback/EmptyMessageGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Empty message",
+      "status": "drafted",
+      "relatedReadme": "lib/EmptyMessage/EmptyMessage.readme.mdx",
+      "linkedPages": [
+        "feedback-message-banner",
+        "forms-search-field"
+      ]
+    },
+    {
+      "id": "feedback-loading",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Loading component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/loading/",
+      "targetMdx": "guides/ux-guidelines/feedback/LoadingGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Loading",
+      "status": "drafted",
+      "relatedReadme": "lib/Loading/Loading.readme.mdx",
+      "linkedPages": [
+        "feedback-message-banner",
+        "feedback-empty-message"
+      ]
+    },
+    {
+      "id": "feedback-error-boundary",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Error boundary component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/error-boundary/",
+      "targetMdx": "guides/ux-guidelines/feedback/ErrorBoundaryGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Error boundary",
+      "status": "drafted",
+      "relatedReadme": "lib/ErrorBoundary/ErrorBoundary.readme.mdx",
+      "linkedPages": [
+        "feedback-message-banner",
+        "feedback-modal"
+      ]
+    },
+    {
+      "id": "feedback-modal",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Modal component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/modal/",
+      "targetMdx": "guides/ux-guidelines/feedback/ModalGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Modal",
+      "status": "drafted",
+      "relatedReadme": "lib/Modal/README.md",
+      "linkedPages": [
+        "feedback-confirmation-modal-pattern"
+      ]
+    },
+    {
+      "id": "feedback-modal-footer",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Modal footer component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/modal-footer/",
+      "targetMdx": "guides/ux-guidelines/feedback/ModalFooterGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Modal footer",
+      "status": "drafted",
+      "relatedReadme": "lib/ModalFooter/ModalFooter.readme.mdx",
+      "linkedPages": [
+        "feedback-modal",
+        "actions-button"
+      ]
+    },
+    {
+      "id": "feedback-error-modal",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Error modal component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/error-modal/",
+      "targetMdx": "guides/ux-guidelines/feedback/ErrorModalGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Error modal",
+      "status": "drafted",
+      "relatedReadme": "lib/ErrorModal/ErrorModal.readme.mdx",
+      "linkedPages": [
+        "feedback-modal",
+        "feedback-error-boundary"
+      ]
+    },
+    {
+      "id": "feedback-conflict-detection-banner",
+      "topic": "Feedback",
+      "type": "component",
+      "title": "Conflict detection banner component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/conflict-detection-banner/",
+      "targetMdx": "guides/ux-guidelines/feedback/ConflictDetectionBannerGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Conflict detection banner",
+      "status": "drafted",
+      "relatedReadme": "lib/ConflictDetectionBanner/ConflictDetectionBanner.readme.mdx",
+      "linkedPages": [
+        "feedback-message-banner",
+        "feedback-error-modal"
+      ]
+    },
+    {
+      "id": "feedback-confirmation-modal-pattern",
+      "topic": "Feedback",
+      "type": "ux-pattern",
+      "title": "Confirmation modal UX pattern",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/ux-patterns/using-the-confirmation-modal/",
+      "targetMdx": "guides/ux-guidelines/feedback/ConfirmationModalPattern.mdx",
+      "storybookTitle": "UX Guidelines/Feedback/Confirmation modal",
+      "status": "drafted",
+      "relatedReadme": "lib/ConfirmationModal/README.md"
+    },
+    {
+      "id": "navigation-accordion",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Accordion component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/accordion/",
+      "targetMdx": "guides/ux-guidelines/navigation/AccordionGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Accordion",
+      "status": "drafted",
+      "relatedReadme": "lib/Accordion/README.md"
+    },
+    {
+      "id": "navigation-dropdown",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Dropdown component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/dropdown/",
+      "targetMdx": "guides/ux-guidelines/navigation/DropdownGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Dropdown",
+      "status": "drafted",
+      "relatedReadme": "lib/Dropdown/README.md"
+    },
+    {
+      "id": "navigation-info-popover",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Info popover component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/info-popover/",
+      "targetMdx": "guides/ux-guidelines/navigation/InfoPopoverGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Info popover",
+      "status": "drafted",
+      "relatedReadme": "lib/InfoPopover/readme.md",
+      "linkedPages": [
+        "navigation-dropdown",
+        "data-display-key-value"
+      ]
+    },
+    {
+      "id": "navigation-segmented-control-context",
+      "topic": "Navigation",
+      "type": "context",
+      "title": "Segmented control context",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/segment-control/",
+      "targetMdx": "guides/ux-guidelines/navigation/SegmentedControlContext.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Segmented control (context)",
+      "status": "drafted",
+      "relatedReadme": "",
+      "linkedPages": [
+        "actions-button",
+        "navigation-info-popover",
+        "layout-pane"
+      ]
+    },
+    {
+      "id": "navigation-filter-pane-search",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Filter pane search integration",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/layout-types/search-filter-layout/",
+      "targetMdx": "guides/ux-guidelines/navigation/FilterPaneSearchGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Filter pane search",
+      "status": "drafted",
+      "relatedReadme": "lib/FilterPaneSearch/readme.md",
+      "linkedPages": [
+        "forms-search-field",
+        "layout-pane",
+        "navigation-dropdown"
+      ]
+    },
+    {
+      "id": "navigation-nav-list",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Nav list component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/nav-list/",
+      "targetMdx": "guides/ux-guidelines/navigation/NavListGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Nav list",
+      "status": "drafted",
+      "relatedReadme": "lib/NavList/NavList.readme.mdx",
+      "linkedPages": [
+        "navigation-dropdown",
+        "layout-pane"
+      ]
+    },
+    {
+      "id": "navigation-menu-section",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Menu section component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/menu-section/",
+      "targetMdx": "guides/ux-guidelines/navigation/MenuSectionGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Menu section",
+      "status": "drafted",
+      "relatedReadme": "lib/MenuSection/MenuSection.readme.mdx",
+      "linkedPages": [
+        "navigation-dropdown",
+        "layout-pane-menu"
+      ]
+    },
+    {
+      "id": "navigation-text-link",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Text link component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/text-link/",
+      "targetMdx": "guides/ux-guidelines/navigation/TextLinkGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Text link",
+      "status": "drafted",
+      "relatedReadme": "lib/TextLink/TextLink.readme.mdx",
+      "linkedPages": [
+        "navigation-nav-list",
+        "data-display-list"
+      ]
+    },
+    {
+      "id": "navigation-focus-link",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Focus link component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/focus-link/",
+      "targetMdx": "guides/ux-guidelines/navigation/FocusLinkGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Focus link",
+      "status": "drafted",
+      "relatedReadme": "lib/FocusLink/FocusLink.readme.mdx",
+      "linkedPages": [
+        "navigation-nav-list",
+        "navigation-text-link"
+      ]
+    },
+    {
+      "id": "navigation-filter-groups",
+      "topic": "Navigation",
+      "type": "component",
+      "title": "Filter groups component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/filter-groups/",
+      "targetMdx": "guides/ux-guidelines/navigation/FilterGroupsGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Navigation/Filter groups",
+      "status": "drafted",
+      "relatedReadme": "lib/FilterGroups/FilterGroups.readme.mdx",
+      "linkedPages": [
+        "navigation-filter-pane-search",
+        "data-display-list"
+      ]
+    },
+    {
+      "id": "interface-popper",
+      "topic": "Interface",
+      "type": "component",
+      "title": "Popper component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/popper/",
+      "targetMdx": "guides/ux-guidelines/interface/PopperGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Popper",
+      "status": "drafted",
+      "relatedReadme": "lib/Popper/Popper.readme.mdx",
+      "linkedPages": [
+        "interface-popover",
+        "navigation-dropdown"
+      ]
+    },
+    {
+      "id": "interface-avatar",
+      "topic": "Interface",
+      "type": "component",
+      "title": "Avatar component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/avatar/",
+      "targetMdx": "guides/ux-guidelines/interface/AvatarGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Avatar",
+      "status": "drafted",
+      "relatedReadme": "lib/Avatar/readme.md",
+      "linkedPages": [
+        "layout-universal-header-context"
+      ]
+    },
+    {
+      "id": "interface-badge",
+      "topic": "Interface",
+      "type": "component",
+      "title": "Badge component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/badge/",
+      "targetMdx": "guides/ux-guidelines/interface/BadgeGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Badge",
+      "status": "drafted",
+      "relatedReadme": "lib/Badge/readme.md",
+      "linkedPages": [
+        "interface-tooltip-context"
+      ]
+    },
+    {
+      "id": "interface-icon",
+      "topic": "Interface",
+      "type": "component",
+      "title": "Icon component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/icon/",
+      "targetMdx": "guides/ux-guidelines/interface/IconGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Icon",
+      "status": "drafted",
+      "relatedReadme": "lib/Icon/Icon.readme.mdx",
+      "linkedPages": [
+        "actions-icon-button",
+        "interface-badge"
+      ]
+    },
+    {
+      "id": "interface-keyboard-shortcuts-modal",
+      "topic": "Interface",
+      "type": "component",
+      "title": "Keyboard shortcuts modal component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/keyboard-shortcuts-modal/",
+      "targetMdx": "guides/ux-guidelines/interface/KeyboardShortcutsModalGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Keyboard shortcuts modal",
+      "status": "drafted",
+      "relatedReadme": "lib/KeyboardShortcutsModal/KeyboardShortcutsModal.readme.mdx",
+      "linkedPages": [
+        "feedback-modal",
+        "navigation-text-link"
+      ]
+    },
+    {
+      "id": "interface-hot-keys",
+      "topic": "Interface",
+      "type": "component",
+      "title": "Hot keys component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/hot-keys/",
+      "targetMdx": "guides/ux-guidelines/interface/HotKeysGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Hot keys",
+      "status": "drafted",
+      "relatedReadme": "lib/HotKeys/HotKeys.readme.mdx",
+      "linkedPages": [
+        "interface-keyboard-shortcuts-modal",
+        "actions-button"
+      ]
+    },
+    {
+      "id": "interface-popover",
+      "topic": "Interface",
+      "type": "component",
+      "title": "Popover component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/popover/",
+      "targetMdx": "guides/ux-guidelines/interface/PopoverGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Popover",
+      "status": "drafted",
+      "relatedReadme": "lib/Popover/readme.md",
+      "linkedPages": [
+        "navigation-info-popover",
+        "interface-tooltip-context"
+      ]
+    },
+    {
+      "id": "interface-card-context",
+      "topic": "Interface",
+      "type": "context",
+      "title": "Card context",
+      "sourceUrl": "",
+      "targetMdx": "guides/ux-guidelines/interface/CardContext.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Card (context)",
+      "status": "drafted",
+      "relatedReadme": "lib/Card/readme.md",
+      "linkedPages": [
+        "data-display-record-metadata"
+      ]
+    },
+    {
+      "id": "interface-tooltip-context",
+      "topic": "Interface",
+      "type": "context",
+      "title": "Tooltip context",
+      "sourceUrl": "",
+      "targetMdx": "guides/ux-guidelines/interface/TooltipContext.mdx",
+      "storybookTitle": "UX Guidelines/Interface/Tooltip (context)",
+      "status": "drafted",
+      "relatedReadme": "lib/Tooltip/readme.md",
+      "linkedPages": [
+        "interface-popover",
+        "navigation-info-popover"
+      ]
+    },
+    {
+      "id": "data-display-list",
+      "topic": "Data display",
+      "type": "component",
+      "title": "List component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/list/",
+      "targetMdx": "guides/ux-guidelines/data-display/ListGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Data display/List",
+      "status": "drafted",
+      "relatedReadme": "lib/List/README.md",
+      "linkedPages": [
+        "navigation-dropdown",
+        "data-display-multi-column-list"
+      ]
+    },
+    {
+      "id": "data-display-headline",
+      "topic": "Data display",
+      "type": "component",
+      "title": "Headline component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/headline/",
+      "targetMdx": "guides/ux-guidelines/data-display/HeadlineGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Data display/Headline",
+      "status": "drafted",
+      "relatedReadme": "lib/Headline/readme.md",
+      "linkedPages": [
+        "data-display-accordion-core-info-context",
+        "layout-pane-header"
+      ]
+    },
+    {
+      "id": "data-display-multi-column-list",
+      "topic": "Data display",
+      "type": "component",
+      "title": "Multi-column list component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/multi-column-list/",
+      "targetMdx": "guides/ux-guidelines/data-display/MultiColumnListGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Data display/Multi-column list",
+      "status": "drafted",
+      "relatedReadme": "lib/MultiColumnList/README.md",
+      "linkedPages": [
+        "data-display-list"
+      ]
+    },
+    {
+      "id": "data-display-key-value",
+      "topic": "Data display",
+      "type": "component",
+      "title": "Key value component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/key-value/",
+      "targetMdx": "guides/ux-guidelines/data-display/KeyValueGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Data display/Key value",
+      "status": "drafted",
+      "relatedReadme": "lib/KeyValue/readme.md",
+      "linkedPages": [
+        "data-display-record-metadata",
+        "data-display-list"
+      ]
+    },
+    {
+      "id": "data-display-no-value",
+      "topic": "Data display",
+      "type": "component",
+      "title": "No value component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/no-value/",
+      "targetMdx": "guides/ux-guidelines/data-display/NoValueGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Data display/No value",
+      "status": "drafted",
+      "relatedReadme": "lib/NoValue/NoValue.readme.mdx",
+      "linkedPages": [
+        "data-display-key-value",
+        "data-display-record-metadata"
+      ]
+    },
+    {
+      "id": "data-display-highlighter",
+      "topic": "Data display",
+      "type": "component",
+      "title": "Highlighter component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/highlighter/",
+      "targetMdx": "guides/ux-guidelines/data-display/HighlighterGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Data display/Highlighter",
+      "status": "drafted",
+      "relatedReadme": "lib/Highlighter/Highlighter.readme.mdx",
+      "linkedPages": [
+        "forms-search-field",
+        "data-display-list"
+      ]
+    },
+    {
+      "id": "data-display-record-metadata",
+      "topic": "Data display",
+      "type": "component",
+      "title": "Record metadata component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/record-metadata/",
+      "targetMdx": "guides/ux-guidelines/data-display/RecordMetadataGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Data display/Record metadata",
+      "status": "drafted",
+      "relatedReadme": "lib/MetaSection/readme.md",
+      "linkedPages": [
+        "data-display-key-value",
+        "layout-pane"
+      ]
+    },
+    {
+      "id": "data-display-accordion-core-info-context",
+      "topic": "Data display",
+      "type": "context",
+      "title": "Accordion core info context",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/accordion-core-info/",
+      "targetMdx": "guides/ux-guidelines/data-display/AccordionCoreInfoContext.mdx",
+      "storybookTitle": "UX Guidelines/Data display/Accordion core info (context)",
+      "status": "drafted",
+      "relatedReadme": "",
+      "linkedPages": [
+        "data-display-headline",
+        "data-display-key-value",
+        "data-display-record-metadata",
+        "navigation-accordion"
+      ]
+    },
+    {
+      "id": "layout-pane",
+      "topic": "Layout",
+      "type": "component",
+      "title": "Pane component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane/",
+      "targetMdx": "guides/ux-guidelines/layout/PaneGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Pane",
+      "status": "drafted",
+      "relatedReadme": "lib/Pane/readme.md",
+      "linkedPages": [
+        "layout-pane-header",
+        "layout-pane-menu"
+      ]
+    },
+    {
+      "id": "layout-pane-header",
+      "topic": "Layout",
+      "type": "component",
+      "title": "Pane header component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-header/",
+      "targetMdx": "guides/ux-guidelines/layout/PaneHeaderGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Pane header",
+      "status": "drafted",
+      "relatedReadme": "lib/PaneHeader/readme.md",
+      "linkedPages": [
+        "layout-pane",
+        "layout-pane-menu",
+        "actions-button",
+        "actions-icon-button"
+      ]
+    },
+    {
+      "id": "layout-pane-menu",
+      "topic": "Layout",
+      "type": "component",
+      "title": "Pane menu component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-menu/",
+      "targetMdx": "guides/ux-guidelines/layout/PaneMenuGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Pane menu",
+      "status": "drafted",
+      "relatedReadme": "lib/PaneMenu/readme.md",
+      "linkedPages": [
+        "layout-pane",
+        "layout-pane-header",
+        "data-display-multi-column-list"
+      ]
+    },
+    {
+      "id": "layout-pane-footer",
+      "topic": "Layout",
+      "type": "component",
+      "title": "Pane footer component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-footer/",
+      "targetMdx": "guides/ux-guidelines/layout/PaneFooterGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Pane footer",
+      "status": "drafted",
+      "relatedReadme": "lib/PaneFooter/PaneFooter.readme.mdx",
+      "linkedPages": [
+        "layout-pane",
+        "actions-button"
+      ]
+    },
+    {
+      "id": "layout-pane-subheader",
+      "topic": "Layout",
+      "type": "component",
+      "title": "Pane subheader component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-subheader/",
+      "targetMdx": "guides/ux-guidelines/layout/PaneSubheaderGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Pane subheader",
+      "status": "drafted",
+      "relatedReadme": "lib/PaneSubheader/PaneSubheader.readme.mdx",
+      "linkedPages": [
+        "layout-pane",
+        "layout-pane-header"
+      ]
+    },
+    {
+      "id": "layout-pane-close-link",
+      "topic": "Layout",
+      "type": "component",
+      "title": "Pane close link component",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-close-link/",
+      "targetMdx": "guides/ux-guidelines/layout/PaneCloseLinkGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Pane close link",
+      "status": "drafted",
+      "relatedReadme": "lib/PaneCloseLink/PaneCloseLink.readme.mdx",
+      "linkedPages": [
+        "layout-pane",
+        "layout-pane-header"
+      ]
+    },
+    {
+      "id": "layout-paneset",
+      "topic": "Layout",
+      "type": "component",
+      "title": "Paneset integration",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/layout-types/",
+      "targetMdx": "guides/ux-guidelines/layout/PanesetGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Paneset",
+      "status": "drafted",
+      "relatedReadme": "lib/Paneset/Paneset.readme.mdx",
+      "linkedPages": [
+        "layout-types-context",
+        "layout-pane",
+        "layout-layer"
+      ]
+    },
+    {
+      "id": "layout-layer",
+      "topic": "Layout",
+      "type": "component",
+      "title": "Layer integration",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/layout-types/",
+      "targetMdx": "guides/ux-guidelines/layout/LayerGuidelines.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Layer",
+      "status": "drafted",
+      "relatedReadme": "lib/Layer/readme.md",
+      "linkedPages": [
+        "layout-types-context",
+        "layout-paneset",
+        "layout-pane"
+      ]
+    },
+    {
+      "id": "layout-types-context",
+      "topic": "Layout",
+      "type": "context",
+      "title": "Layout types context",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/layout-types/",
+      "targetMdx": "guides/ux-guidelines/layout/LayoutTypesContext.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Layout types",
+      "status": "drafted",
+      "relatedReadme": "",
+      "linkedPages": [
+        "layout-paneset",
+        "layout-layer",
+        "layout-universal-header-context",
+        "layout-pane"
+      ]
+    },
+    {
+      "id": "layout-universal-header-context",
+      "topic": "Layout",
+      "type": "context",
+      "title": "Universal header context",
+      "sourceUrl": "https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/universal-header/",
+      "targetMdx": "guides/ux-guidelines/layout/UniversalHeaderContext.mdx",
+      "storybookTitle": "UX Guidelines/Layout/Universal header (context)",
+      "status": "drafted",
+      "relatedReadme": "",
+      "linkedPages": [
+        "layout-types-context",
+        "layout-paneset",
+        "layout-layer",
+        "layout-pane",
+        "layout-pane-header",
+        "layout-pane-menu"
+      ]
+    }
+  ]
+}

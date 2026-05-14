@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniModalFooterExample from '../examples/MiniModalFooterExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Modal footer" />
+
+# Modal footer component
+
+Modal footer organizes confirmation and dismissal actions at the end of modal workflows.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniModalFooterExample />
+</UxExampleProvider>
+
+## Structure
+
+Place the primary action at the visual end of the footer and keep secondary actions adjacent.
+
+Keep labels short and action-oriented to reduce decision time.
+
+## Behavior
+
+Footer actions should stay pinned while modal content scrolls.
+
+Disable or gate primary actions only when validation or processing requires it.
+
+## Related
+
+- Related guideline: [UX Guidelines > Feedback > Modal](?path=/docs/ux-guidelines-feedback-modal--docs)
+- Related guideline: [UX Guidelines > Actions > Button](?path=/docs/ux-guidelines-actions-button--docs)
+- Component stories: [Components > ModalFooter](?path=/docs/components-modalfooter--docs)
+- Component README: [Components > ModalFooter > Readme](?path=/docs/components-modalfooter--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/modal-footer/
