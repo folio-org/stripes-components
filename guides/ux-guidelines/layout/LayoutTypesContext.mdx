@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="UX Guidelines/Layout/Layout types" />
+
+# Layout types context
+
+FOLIO app layout is built around a universal header and pane-based content regions.
+
+## Core layout approaches
+
+Search and filter layout: A search/filter pane works with result and record panes so users can refine queries and inspect records quickly.
+
+Hierarchical layout: Parent-child panes represent relationships and support progressive drill-down.
+
+Custom layout: When neither pattern fits, a module can compose a custom pane arrangement while preserving pane and accessibility conventions.
+
+## Integration guidance
+
+Use Paneset to manage pane composition, resize behavior, and state-driven width changes.
+
+Use Layer for temporary top-level flows that should open above existing panes.
+
+Treat Universal Header as shell-owned context that remains above all module content.
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Paneset](?path=/docs/ux-guidelines-layout-paneset--docs)
+- Related guideline: [UX Guidelines > Layout > Layer](?path=/docs/ux-guidelines-layout-layer--docs)
+- Related guideline: [UX Guidelines > Layout > Universal header (context)](?path=/docs/ux-guidelines-layout-universal-header-context--docs)
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/layout-types/

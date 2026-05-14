@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/TextField/stories/BasicUsage';
+import MiniTextFieldExample from '../examples/MiniTextFieldExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Text field" />
+
+# Text field component
+
+A text field allows users to enter, read and edit text.
+
+## Quick example
+
+<UxExampleProvider>
+	<MiniTextFieldExample />
+</UxExampleProvider>
+
+## Structure
+
+The text field is a single-line text input. It has an area to enter text and can have a label indicating the type of input associated with the field.
+
+For a required text field, a red asterisk should be added next to the label.
+
+For a read-only text field, a lock icon should be added next to the label.
+
+In general, text fields should avoid placeholders. If more detail is needed to avoid input errors, placeholders should be used. For instance, text fields used as filters should have placeholders indicating what content can be filtered.
+
+## Behavior
+
+When users click on a text field, the field becomes active and a clear icon appears if the field has input.
+
+If entered text is longer than the field, the font size should adjust to fit the field.
+
+If needed, a spinner can be added to show that the text field is loading.
+
+## Style
+
+Since text fields are clickable elements, they have multiple states. Each state is associated with a different color to provide visual feedback.
+
+Text fields are shown as rectangles with a 1px outline.
+
+## Live examples
+
+<UxExampleProvider>
+	<BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > TextField](?path=/docs/components-textfield--docs)
+- Component README: [Components > TextField > Readme](?path=/docs/components-textfield--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/text-field/

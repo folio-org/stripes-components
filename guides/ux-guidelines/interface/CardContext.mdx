@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as CardBasicUsage } from '../../../lib/Card/stories/Card.stories';
+import MiniCardExample from '../examples/MiniCardExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Card (context)" />
+
+# Card context
+
+Cards group related content into a bounded visual container.
+
+Guidance here is based on local component usage patterns.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniCardExample />
+</UxExampleProvider>
+
+## Structure and style
+
+Cards typically include a header and body region.
+
+Card style and border options can express state (default, positive, negative) while keeping content readable.
+
+## Usage guidance
+
+Use cards for grouped previews, repeating object forms, or linked resource summaries.
+
+Avoid nesting too many levels of cards within cards.
+
+## Live examples
+
+<UxExampleProvider>
+  <CardBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Data display > Record metadata](?path=/docs/ux-guidelines-data-display-record-metadata--docs)
+- Component stories: [Components > Card](?path=/docs/components-card--docs)
+- Component README: [Components > Card > Readme](?path=/docs/components-card--readme)

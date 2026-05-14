@@ -1,0 +1,64 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/Button/stories/general';
+import Styles from '../../../lib/Button/stories/styles';
+import MiniButtonsExample from '../examples/MiniButtonsExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Actions/Button" />
+
+# Button component
+
+A button is a clickable component that triggers an action when pressed.
+
+## Quick example
+
+<UxExampleProvider>
+	<MiniButtonsExample />
+</UxExampleProvider>
+
+## Structure
+
+A button shall only contain a short and descriptive label, stating what will happen on press and giving users confidence in selecting the right action.
+
+Go to the [Action language](?path=/docs/ux-guidelines-actions-action-language--docs) section for more information about button labels and wording.
+
+## Type of buttons
+
+Classic button: It is the most often used button. Its height also makes it a good fit for pane headers.
+
+Button with a dropdown menu: This button allows primary actions to be grouped under a menu dropdown.
+
+Maxi button: It is almost twice the size of the classic button, making it more finger friendly.
+
+Full-width button: Its width takes the pane area, making it hard to miss.
+
+## Behavior
+
+By clicking on a button, users perform the corresponding action.
+
+## Style
+
+Since a button is a clickable element, it has multiple states. Each state is associated with a different color to provide visual feedback.
+
+Buttons are shown in a rectangle format with a corner radius of 100%.
+
+## Save buttons
+
+When a new record is created and when an existing record is edited, the form should include two save buttons:
+
+- Save: a secondary button for saving work in progress without closing the form.
+- Save & close: the primary save button.
+
+## Live examples
+
+<UxExampleProvider>
+	<BasicUsage />
+	<Styles />
+</UxExampleProvider>
+
+## Related
+
+- Linked page: [Action language](?path=/docs/ux-guidelines-actions-action-language--docs)
+- Component stories: [Components > Button](?path=/docs/components-button--docs)
+- Component README: [Components > Button > Readme](?path=/docs/components-button--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/button/

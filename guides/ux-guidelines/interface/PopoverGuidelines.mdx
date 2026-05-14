@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as PopoverBasicUsage } from '../../../lib/Popover/stories/Popover.stories';
+import MiniPopoverExample from '../examples/MiniPopoverExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Popover" />
+
+# Popover component
+
+Popover reveals contextual content without blocking the current workflow.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPopoverExample />
+</UxExampleProvider>
+
+## Structure
+
+A popover has a trigger element and a small overlay anchored near that trigger.
+
+Overlay placement should adapt to available space and keep context relationship clear.
+
+## Behavior
+
+Selecting the trigger opens the overlay. Selecting again or clicking outside closes it.
+
+Popover content should be concise and contextual, not a replacement for full-page flows.
+
+## Live examples
+
+<UxExampleProvider>
+  <PopoverBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Navigation > Info popover](?path=/docs/ux-guidelines-navigation-info-popover--docs)
+- Related guideline: [UX Guidelines > Interface > Tooltip (context)](?path=/docs/ux-guidelines-interface-tooltip-context--docs)
+- Component stories: [Components > Popover](?path=/docs/components-popover--docs)
+- Component README: [Components > Popover > Readme](?path=/docs/components-popover--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/popover/

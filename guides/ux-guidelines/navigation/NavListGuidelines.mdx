@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as NavListBasicUsage } from '../../../lib/NavList/stories/NavList.stories';
+import MiniNavListExample from '../examples/MiniNavListExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Navigation/Nav list" />
+
+# Nav list component
+
+Nav list organizes section-level navigation links in a vertical stack.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniNavListExample />
+</UxExampleProvider>
+
+## Structure
+
+Group related links under a clear section label when a pane includes multiple destinations.
+
+Use concise item labels so users can scan and move quickly.
+
+## Behavior
+
+The active destination should be visually indicated and remain consistent with the current route.
+
+Nav list items should be keyboard reachable in a predictable top-to-bottom order.
+
+## Live examples
+
+<UxExampleProvider>
+  <NavListBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Navigation > Dropdown](?path=/docs/ux-guidelines-navigation-dropdown--docs)
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Component stories: [Components > NavList](?path=/docs/components-navlist--docs)
+- Component README: [Components > NavList > Readme](?path=/docs/components-navlist--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/nav-list/

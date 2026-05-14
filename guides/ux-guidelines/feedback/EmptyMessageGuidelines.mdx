@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as EmptyMessageBasicUsage } from '../../../lib/EmptyMessage/stories/EmptyMessage.stories';
+import MiniEmptyMessageExample from '../examples/MiniEmptyMessageExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Empty message" />
+
+# Empty message component
+
+Empty message communicates that no content is currently available in a result or detail region.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniEmptyMessageExample />
+</UxExampleProvider>
+
+## Structure
+
+Keep empty messages short, specific, and directly tied to the current view context.
+
+When appropriate, pair the message with a next action such as clearing filters or creating a record.
+
+## Behavior
+
+Show empty messages only when data loading has completed and no matching content is available.
+
+Do not present an empty message at the same time as an error state for the same region.
+
+## Live examples
+
+<UxExampleProvider>
+  <EmptyMessageBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Feedback > Message banner](?path=/docs/ux-guidelines-feedback-message-banner--docs)
+- Related guideline: [UX Guidelines > Forms > Search field](?path=/docs/ux-guidelines-forms-search-field--docs)
+- Component stories: [Components > EmptyMessage](?path=/docs/components-emptymessage--docs)
+- Component README: [Components > EmptyMessage > Readme](?path=/docs/components-emptymessage--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/empty-message/

@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/RepeatableField/stories/BasicUsage';
+import MiniRepeatableFieldExample from '../examples/MiniRepeatableFieldExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Repeatable field" />
+
+# Repeatable field component
+
+A repeatable field allows users to enter multiple values for the same key.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniRepeatableFieldExample />
+</UxExampleProvider>
+
+## Structure
+
+To add repeatable fields, place a button in default style with the label format `Add {Item name}`.
+
+## Behavior
+
+When users click Add for the first time, one or more fields in a row should appear.
+
+Only the first repeatable field added should have labels visible.
+
+All repeatable fields should have a trash icon on the right so they can be removed.
+
+When users click Add again, previous field layouts should be cloned below the first set.
+
+No extra labels are needed when adding additional repeatable fields.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > RepeatableField](?path=/docs/components-repeatablefield--docs)
+- Component README: [Components > RepeatableField > Readme](?path=/docs/components-repeatablefield--readme)
+- Related guideline: [UX Guidelines > Forms > Text area](?path=/docs/ux-guidelines-forms-text-area--docs)
+- Related guideline: [UX Guidelines > Forms > Timepicker](?path=/docs/ux-guidelines-forms-timepicker--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/repeatable-field/

@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniErrorModalExample from '../examples/MiniErrorModalExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Error modal" />
+
+# Error modal component
+
+Error modal interrupts the current task to communicate blocking issues and recovery actions.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniErrorModalExample />
+</UxExampleProvider>
+
+## Structure
+
+Use a direct title and concise body text that explains what failed and what to do next.
+
+Include one clear dismissal or recovery action before introducing optional secondary choices.
+
+## Behavior
+
+Show error modals only for issues that prevent the user from safely continuing in context.
+
+After dismissal, focus should return to the originating control when possible.
+
+## Related
+
+- Related guideline: [UX Guidelines > Feedback > Modal](?path=/docs/ux-guidelines-feedback-modal--docs)
+- Related guideline: [UX Guidelines > Feedback > Error boundary](?path=/docs/ux-guidelines-feedback-error-boundary--docs)
+- Component stories: [Components > ErrorModal](?path=/docs/components-errormodal--docs)
+- Component README: [Components > ErrorModal > Readme](?path=/docs/components-errormodal--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/error-modal/
