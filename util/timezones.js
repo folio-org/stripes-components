@@ -1,9 +1,20 @@
 /**
+ * timezones is an array of { value, name } objects, sorted by value. The list
+ * corresponds to officially recognized timezones, plus UTC.
+ *
  * These data are derived from public domain data at https://github.com/eggert/tz/,
  * a link totally buried in the documentation at https://www.iana.org/time-zones.
  * This list reflects the v2026b (2026-04-22) release of zonenow.tab.
  *
  * There seem to be ~1-10 updates a year. Consider syncing it yearly or so.
+ *
+ * While the { value, name } convention seems unfortunate (options like
+ * { key, value } or { name, value } seem like obvious improvements), it
+ * reflects the fact that an HTML <Select> will have <options> structured like
+ *    <option value={computer-string}>{human-string}</option>
+ * and its convenient/obvious if the `value` attribute of these entries can
+ * map directly to the `value` attribute of the `<option>`.
+ *
  */
 const timezones = [
   ['Pacific/Pago_Pago', 'Midway; Samoa (SST)'],
@@ -97,7 +108,7 @@ const timezones = [
   ['Pacific/Kiritimati', 'Kiritimati'],
   ['UTC', 'UTC'],
 ]
-  .map(entry => ({ name: entry[0], value: entry[1] }))
-  .toSorted((a, b) => a.name.localeCompare(b.name));
+  .map(entry => ({ value: entry[0], name: entry[1] }))
+  .toSorted((a, b) => a.value.localeCompare(b.value));
 
 export default timezones;
