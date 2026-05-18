@@ -887,7 +887,7 @@
     "advancedSearch.match.containsAll": "Містить всі",
     "advancedSearch.match.startsWith": "Починається з",
     "advancedSearch.match.label": "Варіант відповідності",
-    "advancedSearch.match.containsAny": "Містить будь-які",
+    "advancedSearch.match.containsAny": "Містить будь-що",
     "saveAndKeepEditing": "Зберегти та продовжити редагування",
     "multiSelection.dropdownTriggerLabel": "відкрити меню",
     "filterGroups.clearFilterSetLabel": "Очистити вибрані фільтри {labelText}",
@@ -929,5 +929,7 @@
     "languages.9su": "Уме саамі",
     "languages.9te": "Терсаамська",
     "languages.sia": "Аккала-саамська",
-    "languages.sjk": "Кемі-Саамська"
+    "languages.sjk": "Кемі-Саамська",
+    "ConfirmationModal.suppressLabel": "Do not show this message again.",
+    "ConfirmationModal.suppressMessage": "If checked, this message will be automatically confirmed for the rest of the session."
 }
