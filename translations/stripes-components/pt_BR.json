@@ -929,5 +929,7 @@
     "languages.9su": "Umesamiska",
     "languages.9te": "Tersamiska",
     "languages.sia": "Akkalasamiska",
-    "languages.sjk": "Kemisamiska"
+    "languages.sjk": "Kemisamiska",
+    "ConfirmationModal.suppressLabel": "Do not show this message again.",
+    "ConfirmationModal.suppressMessage": "If checked, this message will be automatically confirmed for the rest of the session."
 }
