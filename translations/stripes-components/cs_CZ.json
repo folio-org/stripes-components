@@ -121,7 +121,7 @@
     "countries.KY": "Kajmanské ostrovy",
     "countries.CF": "Středoafrická republika",
     "countries.TD": "Čad",
-    "countries.CL": "Chilská republika",
+    "countries.CL": "Chile",
     "countries.CN": "Čína",
     "countries.CX": "Vánoční ostrov",
     "countries.CC": "Kokosové (Keelingovy) ostrovy",
@@ -172,7 +172,7 @@
     "countries.GW": "Republika Guinea-Bissau",
     "countries.GY": "Guyana",
     "countries.HT": "Haiti",
-    "countries.HM": "Heardův ostrov a Mcdonaldovy ostrovy",
+    "countries.HM": "Heardův ostrov a McDonaldovy ostrovy",
     "countries.VA": "Svatý stolec (Vatikánský městský stát)",
     "countries.HN": "Honduras",
     "countries.HK": "Hongkong",
@@ -929,5 +929,7 @@
     "languages.9su": "Umejská sámština",
     "languages.9te": "Terská sámština",
     "languages.sia": "Akkalská sámština",
-    "languages.sjk": "Kemijská sámština"
+    "languages.sjk": "Kemijská sámština",
+    "ConfirmationModal.suppressLabel": "Do not show this message again.",
+    "ConfirmationModal.suppressMessage": "If checked, this message will be automatically confirmed for the rest of the session."
 }
