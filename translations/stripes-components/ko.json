@@ -286,7 +286,7 @@
     "countries.ES": "Spain",
     "countries.LK": "Sri Lanka",
     "countries.SD": "Sudan",
-    "countries.SR": "Suriname",
+    "countries.SR": "수리남",
     "countries.SJ": "Svalbard And Jan Mayen",
     "countries.SS": "South Sudan",
     "countries.SZ": "Swaziland",
@@ -917,7 +917,7 @@
     "languages.9gu": "Gurbeti",
     "languages.9kd": "Kelderash",
     "languages.9ke": "Kale",
-    "languages.9ki": "Kildinsamiska ",
+    "languages.9ki": "킬디르사미어",
     "languages.9kv": "Kvänska",
     "languages.9lo": "Lovari",
     "languages.9mk": "Meänkieli",
@@ -929,5 +929,7 @@
     "languages.9su": "Umesamiska",
     "languages.9te": "Tersamiska",
     "languages.sia": "Akkalasamiska",
-    "languages.sjk": "Kemisamiska"
+    "languages.sjk": "Kemisamiska",
+    "ConfirmationModal.suppressLabel": "Do not show this message again.",
+    "ConfirmationModal.suppressMessage": "If checked, this message will be automatically confirmed for the rest of the session."
 }
