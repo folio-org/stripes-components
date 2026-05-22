@@ -26,11 +26,15 @@
   }
 
   &.placeholder {
-    color: #888;
+    color: hsl(120deg 2% 34%);
+  }
 
-    & option {
-      color: #444;
-    }
+  &:disabled {
+      opacity: 1;
+
+      &.placeholder {
+        color: hsl(120deg 2% 25%);
+      }
   }
 }
 
