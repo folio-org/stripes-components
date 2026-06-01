@@ -1,6 +1,12 @@
 # Change history for stripes-components
 
+## [13.1.1](https://github.com/folio-org/stripes-components/tree/v13.1.1) (2026-06-01)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.1.0...v13.1.1)
+
+* Include recent translation updates.
+
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.0..v13.1.0)
 
 * Introduce `<AuditLog>` component. Refs STCOM-1412.
 * `AuditLog` - Add original version card. Refs STCOM-1416.

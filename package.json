@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-components",
-  "version": "13.1.0",
+  "version": "13.1.1",
   "description": "Component library for building Stripes applications.",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-components",
@@ -125,3 +125,4 @@
     "react-router-dom": "^5.2.0"
   }
 }
+
