@@ -1,7 +1,7 @@
 # Change history for stripes-components
 
-## [13.1.1](https://github.com/folio-org/stripes-components/tree/v13.1.1) (2026-06-01)
-[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.1.0...v13.1.1)
+## [13.1.2](https://github.com/folio-org/stripes-components/tree/v13.1.2) (2026-06-02)
+[Full Changelog](https://github.com/folio-org/stripes-components/compare/v13.1.0...v13.1.2)
 
 * Include recent translation updates.
 
