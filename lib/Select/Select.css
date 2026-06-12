@@ -29,17 +29,6 @@
       opacity: 1;
   }
 
-  /* &.placeholder {
-    color: hsl(120deg 2% 34%);
-  }
-
-  &:disabled {
-      opacity: 1;
-
-      &.placeholder {
-        color: hsl(120deg 2% 25%);
-      }
-  } */
   & option:not([data-placeholder="true"]) {
     color: var(--color-text);
   }
