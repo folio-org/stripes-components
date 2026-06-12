@@ -25,7 +25,11 @@
     }
   }
 
-  &.placeholder {
+  &:disabled {
+      opacity: 1;
+  }
+
+  /* &.placeholder {
     color: hsl(120deg 2% 34%);
   }
 
@@ -35,11 +39,22 @@
       &.placeholder {
         color: hsl(120deg 2% 25%);
       }
+  } */
+  & option:not([data-placeholder="true"]) {
+    color: var(--color-text);
   }
 }
 
 [dir="rtl"] .selectControl {
   padding: var(--input-vertical-padding) var(--input-horizontal-padding) var(--input-vertical-padding) var(--select-icon-width);
+}
+
+.selectControl:has(option[data-placeholder="true"]:checked){
+  color: hsl(120deg 2% 34%);
+
+  &:disabled {
+    color: hsl(120deg 2% 24%);
+  }
 }
 
 .selectWrap {
