@@ -21,7 +21,7 @@ label | string | Adds an html `<label>` tag container a string to the element. |
 id | string | HTML id attribute applied to input - will also set the HtmlFor attribute of the label. |  | false
 dataOptions | array | Array of objects for options in the shape of `{value:<string>, label: <string>, disabled:<bool>}` |  | required
 autoFocus | bool | If this prop is `true`, `<select>` will automatically focus on mount | `false` | false
-placeholder | string | Sets a disabled first option in the options list. |  | false
+placeholder | string | Sets a disabled first option in the options list. The `value` prop must be an empty string `''` in order for this to appear in the control. |  | false
 multiple | bool | Sets the multiple attribute on the select field. | false | false
 required | bool | Sets the required attribute on the select field. | false | false
 readOnly | bool | Sets the select field as read only. | false | false
