@@ -848,7 +848,7 @@
     "shortcut.editRecord": "Edytuj rekord",
     "shortcut.expandAll": "Rozwiń wszystko",
     "shortcut.goToSearchFilter": "Przejdź do okienka Wyszukaj i filtruj",
-    "shortcut.openShortcutModal": "Open keyboard shortcuts modal",
+    "shortcut.openShortcutModal": "Otwórz okno skrótów klawiaturowych",
     "shortcut.saveRecord": "Zapisz rekord",
     "selection.loading": "Loading options...",
     "shortcut.expandOrCollapse": "Rozwiń lub zwiń wszystko",
@@ -929,5 +929,7 @@
     "languages.9su": "Umesamiska",
     "languages.9te": "Tersamiska",
     "languages.sia": "Akkalasamiska",
-    "languages.sjk": "Kemisamiska"
+    "languages.sjk": "Kemisamiska",
+    "ConfirmationModal.suppressLabel": "Do not show this message again.",
+    "ConfirmationModal.suppressMessage": "If checked, this message will be automatically confirmed for the rest of the session."
 }
