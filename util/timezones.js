@@ -1,6 +1,10 @@
 /**
- * timezones is an array of { value, name } objects, sorted by value. The list
- * corresponds to officially recognized timezones, plus UTC.
+ * timezones is an array of { value, name } objects sorted by value. The list
+ * is derived from officially recognized timezones, plus UTC. Official data
+ * include a value (e.g. "America/New_York") and a label (e.g. "Eastern
+ * (EST/EDT) - US & Canada" but the labels can be verbose; hence, the value
+ * is supplied as both value and name here; the label data are never exposed.
+ * See STCOM-1472 for a detailed discussion.
  *
  * These data are derived from public domain data at https://github.com/eggert/tz/,
  * a link totally buried in the documentation at https://www.iana.org/time-zones.
@@ -108,7 +112,7 @@ const timezones = [
   ['Pacific/Kiritimati', 'Kiritimati'],
   ['UTC', 'UTC'],
 ]
-  .map(entry => ({ value: entry[0], name: entry[1] }))
+  .map(entry => ({ value: entry[0], name: entry[0] }))
   .toSorted((a, b) => a.value.localeCompare(b.value));
 
 export default timezones;

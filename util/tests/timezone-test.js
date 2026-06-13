@@ -2,7 +2,7 @@ import { it, describe } from 'mocha';
 import { expect } from 'chai';
 import timezones from '../timezones';
 
-describe.only('timezones', () => {
+describe('timezones', () => {
   it('is an array of name/value objects', () => {
     expect(Array.isArray(timezones)).to.be.true;
     timezones.forEach(entry => {
