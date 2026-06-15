@@ -6,6 +6,7 @@
 * Re-incorporate component Readme's into storybook. Refs STCOM-1258.
 * Switch from `cloneDeep` in `<Callout>` component's state updates- a fix for potential stack overflows due to cloned react component trees 😬 . Refs STCOM-1508.
 * Update placeholder text color for Select to improve contrast. Refs STCOM-1491.
+* Update timezone data. Refs STCOM-1472.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
