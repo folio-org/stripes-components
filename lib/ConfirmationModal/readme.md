@@ -65,7 +65,7 @@ const [ns] = useNameSpace();
   message="Description of the thing that needs confirming"
   onConfirm={this.handleSubmit}
   onCancel={this.hideConfirm}
-  storageKey = {`${ns}-mycomponent-confirm-modal`}
+  sessionKey = {`${ns}-mycomponent-confirm-modal`}
 />
 ```
 
