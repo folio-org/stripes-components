@@ -123,6 +123,7 @@ const actionMenu = ({ onToggle }) => (
 Name | Type | Description | Default
 --- | --- | --- | ---
 actionMenu | func | Activates the action menu dropdown. Expects a function that returns a component or node. | undefined
+actionMenuToggleProps | object | Props to pass to the action menu toggle element | |
 appIcon | element | Render an app icon in the PaneHeader by passing an `<AppIcon>` from stripes-core. |  | undefined
 className | string | Adds a custom class name for the root element | |
 dismissible | bool or "last"| If true, pane will render a close (&times;) button in its firstMenu. If "last" is supplied, the button will render in the lastMenu. | false
