@@ -7,6 +7,7 @@
 * Switch from `cloneDeep` in `<Callout>` component's state updates- a fix for potential stack overflows due to cloned react component trees 😬 . Refs STCOM-1508.
 * Update placeholder text color for Select to improve contrast. Refs STCOM-1491.
 * Update timezone data. Refs STCOM-1472.
+* bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
