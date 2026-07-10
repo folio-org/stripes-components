@@ -9,6 +9,7 @@
 * Update timezone data. Refs STCOM-1472.
 * bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
+* `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
