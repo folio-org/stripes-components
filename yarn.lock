@@ -1288,6 +1288,11 @@
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.28.6.tgz#d267a43cb1836dc4d182cce93ae75ba954ef6d2b"
   integrity sha512-05WQkdpL9COIMz4LjTxGpPNCdlpyimKppYNoJ5Di5EUObifl8t4tuLuUBBZEpoLYOmfvIWrsp9fCl0HoPRVTdA==
 
+"@babel/runtime@^7.17.8":
+  version "7.29.7"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.29.7.tgz#12022450c45a4da6d8d8287b18a4ff2ddb23f768"
+  integrity sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==
+
 "@babel/template@^7.28.6":
   version "7.28.6"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.28.6.tgz#0e7e56ecedb78aeef66ce7972b082fce76a23e57"
@@ -11334,10 +11339,10 @@ karma@^6.3.3:
     ua-parser-js "^0.7.30"
     yargs "^16.1.1"
 
-keyboardjs@~2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/keyboardjs/-/keyboardjs-2.5.1.tgz#2eb5d96bd1028e07136cd71919f607579edca716"
-  integrity sha512-mRf7MQMiFcudADEpPn3vTtl/rtFELo5MAiKA6yH4ShsFsnwwjMrVfaNt6bpYhBDeODs/T5NXwltz4+ktRQyP7A==
+keyboardjs@^2.5.1:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/keyboardjs/-/keyboardjs-2.7.0.tgz#d4f6a56d9f3f1822d7383c6d2d39b12f534ffb2c"
+  integrity sha512-3tiQuAoLM1M5Xyo/eQVaqsq9joByTRkB0Byga+0S7BYJvY4HIlfW0SofOj4a20YSAFjv0SIFU/lw+Qjp6KYHPA==
 
 keyv@^4.0.0, keyv@^4.5.3:
   version "4.5.4"
@@ -13477,6 +13482,13 @@ pluralize@^8.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
   integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
 
+polished@4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-4.2.2.tgz#2529bb7c3198945373c52e34618c8fe7b1aa84d1"
+  integrity sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==
+  dependencies:
+    "@babel/runtime" "^7.17.8"
+
 popper.js@^1.14.6:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
@@ -14155,7 +14167,7 @@ react-virtualized-auto-sizer@^1.0.2:
   resolved "https://registry.yarnpkg.com/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.26.tgz#e9470ef6a778dc4f1d5fd76305fa2d8b610c357a"
   integrity sha512-CblNyiNVw2o+hsa5/49NH2ogGxZ+t+3aweRvNSq7TVjDIlwk7ir4lencEg5HxHeSzwNarSkNkiu0qJSOXtxm5A==
 
-"react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", react@^18, react@^18.2:
+"react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", react@^18.2:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
   integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
