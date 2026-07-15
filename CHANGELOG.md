@@ -10,6 +10,7 @@
 * bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
 * `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
+* Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1525.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
