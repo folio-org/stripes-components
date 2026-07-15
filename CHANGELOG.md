@@ -11,6 +11,7 @@
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
 * `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
 * bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws.
+* Directly implement `<HotKeys>` and `<FocusTrap>` instead of importing them. Refs STCOM-1356.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
