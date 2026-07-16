@@ -105,7 +105,6 @@
     "flexboxgrid2": "^7.2.0",
     "focus-trap": "^7.5.4",
     "json2csv": "^4.2.1",
-    "keyboardjs": "^2.7.0",
     "lodash": "^4.17.4",
     "memoize-one": "^6.0.0",
     "moment-range": "^4.0.2",
@@ -117,6 +116,7 @@
     "query-string": "^8.1.0",
     "react-highlight-words": "^0.20.0",
     "react-quill": "^2.0.0",
+    "react-hotkeys-hook": "^5.0.0",
     "react-transition-group": "^4.4.5",
     "react-virtualized-auto-sizer": "^1.0.2",
     "sourcemapped-stacktrace": "^1.1.11",
@@ -130,4 +130,3 @@
     "react-router-dom": "^5.2.0"
   }
 }
-
