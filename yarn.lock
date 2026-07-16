@@ -11339,7 +11339,7 @@ karma@^6.3.3:
     ua-parser-js "^0.7.30"
     yargs "^16.1.1"
 
-keyboardjs@^2.5.1:
+keyboardjs@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/keyboardjs/-/keyboardjs-2.7.0.tgz#d4f6a56d9f3f1822d7383c6d2d39b12f534ffb2c"
   integrity sha512-3tiQuAoLM1M5Xyo/eQVaqsq9joByTRkB0Byga+0S7BYJvY4HIlfW0SofOj4a20YSAFjv0SIFU/lw+Qjp6KYHPA==
