@@ -29,9 +29,9 @@ const footer = (
 ```
 
 Note the primary button is the first element in the example above, but the
-`row-reverse` rule in this components CSS reverses the display order. While this
-may seem counterintuitive, it is not without reason: providing the primary
-element first allows the default focus-handling `<Modal>` to be very simple,
+`row-reverse` rule in this component's CSS reverses the display order. While
+this may seem counterintuitive, it is not without reason: providing the primary
+element first allows the default focus-handling in `<Modal>` to be very simple,
 focusing on the first focusable element.
 
 ### Props
