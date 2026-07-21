@@ -12,6 +12,7 @@
 * `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
 * bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-
 * Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1525.
+* Apply `nodeRef` prop to `react-transition-group` components to avoid `findDOMNode`. Refs STCOM-1531.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
