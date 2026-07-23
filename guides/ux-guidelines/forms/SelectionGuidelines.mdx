@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as SelectionBasicUsage } from '../../../lib/Selection/stories/Selection.stories';
+import MiniSelectionExample from '../examples/MiniSelectionExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Forms/Selection" />
+
+# Selection component
+
+Selection supports choosing one option from a list with inline filtering.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniSelectionExample />
+</UxExampleProvider>
+
+## Structure
+
+Use Selection when option sets are long enough that search filtering improves speed and accuracy.
+
+Option labels should be specific and distinct to reduce ambiguity when filtering.
+
+## Behavior
+
+As users type, option filtering should narrow candidates without changing the selected value until confirmation.
+
+Selection should provide clear keyboard interaction for opening, filtering, and selecting options.
+
+## Live examples
+
+<UxExampleProvider>
+  <SelectionBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Forms > Select](?path=/docs/ux-guidelines-forms-select--docs)
+- Related guideline: [UX Guidelines > Forms > Search field](?path=/docs/ux-guidelines-forms-search-field--docs)
+- Component stories: [Components > Selection](?path=/docs/components-selection--docs)
+- Component README: [Components > Selection > Readme](?path=/docs/components-selection--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/selection/

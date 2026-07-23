@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as LayerBasicUsage } from '../../../lib/Layer/stories/Layer.stories';
+import MiniLayerExample from '../examples/MiniLayerExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Layout/Layer" />
+
+# Layer integration
+
+Layer opens a pane-based full-module overlay for focused tasks such as create, edit, and detail flows.
+
+Use Layer when workflows need a temporary top-level task surface without leaving the current app context.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniLayerExample />
+</UxExampleProvider>
+
+## Structure
+
+Render Layer inside your module Paneset and control visibility through app state.
+
+Within Layer, render a Paneset marked as root so layered panes are managed independently.
+
+Provide a clear, dismissible pane header in the layered content.
+
+## Behavior
+
+Layer behaves like a dialog-level overlay and should be opened only for intentional task transitions.
+
+Set a contentLabel and manage focus on open and close for accessibility.
+
+When Layer closes, return focus to the trigger element when practical.
+
+## Live examples
+
+<UxExampleProvider>
+  <LayerBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Layout types](?path=/docs/ux-guidelines-layout-layout-types--docs)
+- Related guideline: [UX Guidelines > Layout > Paneset](?path=/docs/ux-guidelines-layout-paneset--docs)
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Component stories: [Components > Layer](?path=/docs/components-layer--docs)
+- Component README: [Components > Layer > Readme](?path=/docs/components-layer--readme)
+- Archived layout context: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/layout-types/

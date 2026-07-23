@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import ConfirmationModalExample from '../../../lib/ConfirmationModal/stories/ConfirmationModalExample';
+import MiniConfirmationModalExample from '../examples/MiniConfirmationModalExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Actions/Confirmation messages" />
+
+# Confirmation message language
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniConfirmationModalExample />
+</UxExampleProvider>
+
+## Leaving a page
+
+If users try to leave a create or edit page without saving changes, a confirmation modal should appear.
+
+Title: Close the page.
+
+Content: There are unsaved changes. If you would like to save changes, press the Keep editing button.
+
+Buttons: Close without saving and Keep editing.
+
+## Other confirmation modals
+
+For any other confirmation modal, follow these language rules:
+
+Title: states what action users are about to do. It should be short, descriptive, and start with a verb.
+
+Content: short text that states what will happen if users proceed.
+
+Buttons: at least two buttons (one primary and one default). The primary button is on the right, and the default close button is on the left.
+
+Labels summarize what will happen on click. Instead of Confirm and Cancel, use formats such as `Confirm type` and `Cancel type`.
+
+In the case of a cancelling confirmation modal, labels should follow this format: `Cancel type` and `Keep type`.
+
+## Live examples
+
+<UxExampleProvider>
+  <ConfirmationModalExample />
+</UxExampleProvider>
+
+## Related
+
+- Related section: [Confirmation modal pattern](?path=/docs/ux-guidelines-feedback-confirmation-modal--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/language-rules/confirmation-message-language/

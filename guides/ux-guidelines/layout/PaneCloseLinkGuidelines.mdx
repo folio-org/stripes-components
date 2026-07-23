@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniPaneCloseLinkExample from '../examples/MiniPaneCloseLinkExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Layout/Pane close link" />
+
+# Pane close link component
+
+Pane close link provides responsive close and back affordances for pane navigation.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPaneCloseLinkExample />
+</UxExampleProvider>
+
+## Usage guidance
+
+Use pane close link in detail panes that should collapse to a previous list or parent pane.
+
+Ensure the target route or destination preserves user context when returning.
+
+## Behavior
+
+On wider screens, close affordance should support pane dismissal patterns used in split layouts.
+
+On narrow screens, back-style behavior should help users return without losing orientation.
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Related guideline: [UX Guidelines > Layout > Pane header](?path=/docs/ux-guidelines-layout-pane-header--docs)
+- Component stories: [Components > PaneCloseLink](?path=/docs/components-panecloselink--docs)
+- Component README: [Components > PaneCloseLink > Readme](?path=/docs/components-panecloselink--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-close-link/

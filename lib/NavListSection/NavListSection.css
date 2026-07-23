@@ -4,7 +4,7 @@
   padding: 0 var(--gutter-static-two-thirds);
   display: flex;
   align-items: flex-end;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-p2);
 }
 
 .label {

@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { PaneMenu as PaneMenuStory } from '../../../lib/Pane/stories/Pane.stories';
+import MiniPaneMenuExample from '../examples/MiniPaneMenuExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Layout/Pane menu" />
+
+# Pane menu component
+
+The pane menu groups actions related to pane content and display preferences.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPaneMenuExample />
+</UxExampleProvider>
+
+## Structure
+
+A pane menu is a dropdown action list that can contain one or more sections.
+
+Use separate sections for global list actions, display preferences, or actions on selected records.
+
+Dangerous actions should appear at the end and use destructive styling.
+
+## Behavior
+
+Users open the pane menu from the pane header action control.
+
+Only pane-content actions should be included in the menu. Pane control actions belong to icon buttons.
+
+If an action is not currently available, keep the action visible but disabled and explain why when possible.
+
+## Result and record usage
+
+Result panes often combine actions and display preferences in the same menu.
+
+Record panes typically offer a concise set of actions such as duplicate, bookmark, or delete.
+
+## Live examples
+
+<UxExampleProvider>
+  <PaneMenuStory />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Related guideline: [UX Guidelines > Layout > Pane header](?path=/docs/ux-guidelines-layout-pane-header--docs)
+- Related guideline: [UX Guidelines > Data display > Multi-column list](?path=/docs/ux-guidelines-data-display-multi-column-list--docs)
+- Component stories: [Components > Pane > PaneMenu](?path=/docs/components-pane--panemenu)
+- Component README: [Components > PaneMenu > Readme](?path=/docs/components-panemenu--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-menu/

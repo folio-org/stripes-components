@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import MiniKeyboardShortcutsModalExample from '../examples/MiniKeyboardShortcutsModalExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Keyboard shortcuts modal" />
+
+# Keyboard shortcuts modal component
+
+Keyboard shortcuts modal presents available commands in one place so users can navigate and act efficiently.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniKeyboardShortcutsModalExample />
+</UxExampleProvider>
+
+## Structure
+
+Group shortcuts by user intent and keep labels action-oriented.
+
+Use platform-aware key naming so displayed commands match user expectations.
+
+## Behavior
+
+Shortcut help should be discoverable from global UI and dismissible with keyboard controls.
+
+When the modal closes, return focus to the element that opened it.
+
+## Related
+
+- Related guideline: [UX Guidelines > Feedback > Modal](?path=/docs/ux-guidelines-feedback-modal--docs)
+- Related guideline: [UX Guidelines > Navigation > Text link](?path=/docs/ux-guidelines-navigation-text-link--docs)
+- Component stories: [Components > KeyboardShortcutsModal](?path=/docs/components-keyboardshortcutsmodal--docs)
+- Component README: [Components > KeyboardShortcutsModal > Readme](?path=/docs/components-keyboardshortcutsmodal--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/keyboard-shortcuts-modal/

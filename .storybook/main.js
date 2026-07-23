@@ -1,24 +1,20 @@
-const customWebpack = require('./stcom-webpack.config.js');
+import customWebpack from './stcom-webpack.config.js';
+
+const stories = [
+  '../guides/**/*.mdx',
+  '../lib/**/*.readme.mdx',
+  '../lib/**/*.stories.[tj]s',
+];
 
 const config = {
   features: {
     postcss: false, // we use our own postcss setup
   },
 
-  stories: [{
-    directory: '../guides',
-    titlePrefix: 'Guides',
-    files: '**/*.mdx'
-  },
-  {
-    directory: '../lib',
-    titlePrefix: 'Components',
-    files: '**/*.stories.[tj]s'
-  }],
+  stories,
   staticDirs: ['../guides/static'],
   addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-mdx-gfm'
+    '@storybook/addon-docs'
   ],
 
   webpackFinal: customWebpack,

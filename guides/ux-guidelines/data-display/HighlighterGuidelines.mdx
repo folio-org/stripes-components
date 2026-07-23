@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as HighlighterBasicUsage } from '../../../lib/Highlighter/stories/Highlighter.stories';
+import MiniHighlighterExample from '../examples/MiniHighlighterExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Data display/Highlighter" />
+
+# Highlighter component
+
+Highlighter emphasizes matched terms inside existing text so users can scan search results faster.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniHighlighterExample />
+</UxExampleProvider>
+
+## Structure
+
+Highlight only the terms that come from the current query or filter context.
+
+Keep the original text order and wording unchanged so the content remains trustworthy.
+
+## Behavior
+
+Highlighted terms should update immediately as search input changes.
+
+Highlight styling should preserve contrast and remain readable for long passages.
+
+## Live examples
+
+<UxExampleProvider>
+  <HighlighterBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Forms > Search field](?path=/docs/ux-guidelines-forms-search-field--docs)
+- Related guideline: [UX Guidelines > Data display > List](?path=/docs/ux-guidelines-data-display-list--docs)
+- Component stories: [Components > Highlighter](?path=/docs/components-highlighter--docs)
+- Component README: [Components > Highlighter > Readme](?path=/docs/components-highlighter--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/highlighter/

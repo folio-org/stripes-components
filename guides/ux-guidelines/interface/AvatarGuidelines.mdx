@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { _BasicUsage as AvatarBasicUsage } from '../../../lib/Avatar/stories/Avatar.stories';
+import MiniAvatarExample from '../examples/MiniAvatarExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Interface/Avatar" />
+
+# Avatar component
+
+Avatar represents user identity in shell and account contexts.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniAvatarExample />
+</UxExampleProvider>
+
+## Location
+
+Avatar placement should be consistent in global profile and identity areas.
+
+## Style
+
+Avatars are compact circular tokens. If no image is provided, a neutral placeholder should appear.
+
+Maintain sufficient contrast between avatar border/background and surrounding UI.
+
+## Live examples
+
+<UxExampleProvider>
+  <AvatarBasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Universal header (context)](?path=/docs/ux-guidelines-layout-universal-header-context--docs)
+- Component stories: [Components > Avatar](?path=/docs/components-avatar--docs)
+- Component README: [Components > Avatar > Readme](?path=/docs/components-avatar--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/avatar/

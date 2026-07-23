@@ -5,18 +5,6 @@
 
 /* stylelint-disable no-descending-specificity  */
 
-
-
-:root {
-  --focus-dot-offset-default: var(--gutter-static-one-third);
-  --focus-dot-offset-small: calc(var(--gutter-static-one-third) * -1);
-  --focus-dot-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
-  --focus-dot-offset-large: calc(var(--gutter-static) * -1);
-  --box-offset-small: calc(var(--gutter-static-one-third) * -1);
-  --box-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
-  --box-offset-large: calc(var(--gutter-static) * -1);
-}
-
 .interactionStyles {
   position: relative;
   outline: none;
@@ -36,6 +24,16 @@
     display: none;
   }
 }
+
+/**
+ * Disabled state for elements that should still be focusable.
+ */
+.interactionStyles[aria-disabled="true"],
+.interactionStyles.disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
 
 /**
  * Focus/active pseudo element

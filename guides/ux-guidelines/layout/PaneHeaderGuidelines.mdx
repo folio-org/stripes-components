@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/PaneHeader/stories/BasicUsage';
+import MiniPaneHeaderExample from '../examples/MiniPaneHeaderExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Layout/Pane header" />
+
+# Pane header component
+
+The pane header helps users identify pane purpose, relationships, and available actions.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniPaneHeaderExample />
+</UxExampleProvider>
+
+## Structure
+
+A pane header typically includes a pane title, optional subtitle, and controls.
+
+The action menu should contain actions related to pane content.
+
+Icon buttons should be reserved for pane-level controls such as close, tags, or toggle behaviors.
+
+## Choose the right title format
+
+For result panes, title content should include the record type and optionally a count.
+
+For create or edit states, include concise context that helps users understand whether they are creating, viewing, or editing.
+
+For preview panes, include key identifying characteristics in a scannable format.
+
+## Behavior
+
+Pane header titles should clearly reflect the pane purpose and relationship to adjacent panes.
+
+When users activate the close icon, the pane should collapse and remaining panes should resize.
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Related guideline: [UX Guidelines > Layout > Pane](?path=/docs/ux-guidelines-layout-pane--docs)
+- Related guideline: [UX Guidelines > Layout > Pane menu](?path=/docs/ux-guidelines-layout-pane-menu--docs)
+- Related guideline: [UX Guidelines > Actions > Button](?path=/docs/ux-guidelines-actions-button--docs)
+- Related guideline: [UX Guidelines > Actions > Icon button](?path=/docs/ux-guidelines-actions-icon-button--docs)
+- Component stories: [Components > Pane > PaneHeader](?path=/docs/components-pane--paneheader)
+- Component README: [Components > PaneHeader > Readme](?path=/docs/components-paneheader--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/pane-header/

@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/Modal/stories/BasicUsage';
+import MiniModalExample from '../examples/MiniModalExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Modal" />
+
+# Modal component
+
+A modal is a container triggered by a user's action to provide critical information, ask users to make a decision, or support adding content.
+
+## Quick example
+
+<UxExampleProvider>
+  <MiniModalExample />
+</UxExampleProvider>
+
+## Structure
+
+A modal is a non-dismissible window with a header, content and, at least, one button to close the modal.
+
+The title should be a short, descriptive and clear statement.
+
+The content gives users information about the action they performed and what will happen if they proceed.
+
+Key information should be bold.
+
+Give a solution to users if there is an issue.
+
+Content should be short. To add information while avoiding scrolling, a More info button can be added.
+
+Since modals are not dismissible, they should always have at least one primary button in the bottom right to close the modal, usually labelled Close. If more buttons are needed, they should be in default style with the cancel action on the left.
+
+Labels should be short but descriptive.
+
+Modals should appear at the upper half of the screen and should not take more than 50% of the screen.
+
+## Behavior
+
+When a modal appears, it interrupts a user's current task to catch full attention.
+
+Users consciously dismiss a modal by clicking close or cancel, or by choosing another action.
+
+## Style
+
+Modals can have four states: default, error, success and danger.
+
+## Specific modals
+
+- [UX Guidelines > Feedback > Confirmation modal](?path=/docs/ux-guidelines-feedback-confirmation-modal--docs)
+
+## Live examples
+
+<UxExampleProvider>
+  <BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > Modal](?path=/docs/components-modal--docs)
+- Component README: [Components > Modal > Readme](?path=/docs/components-modal--readme)
+- Related guideline: [UX Guidelines > Feedback > Confirmation modal](?path=/docs/ux-guidelines-feedback-confirmation-modal--docs)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/modal/

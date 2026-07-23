@@ -13,6 +13,7 @@ import objectSupport from 'dayjs/plugin/objectSupport';
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import isBetween from 'dayjs/plugin/isBetween';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 import availableLocales from 'dayjs/locale';
 
 dayjs.extend(timezone);
@@ -27,6 +28,7 @@ dayjs.extend(customParseFormat);
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
+dayjs.extend(localizedFormat);
 
 // export a pre-extended dayjs for consumption.
 export { dayjs };

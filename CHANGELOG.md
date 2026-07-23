@@ -1,6 +1,22 @@
 # Change history for stripes-components
 
-## 13.1.0 IN PROGRESS
+## IN PROGRESS
+
+* Supply Personal Data Disclosure form. Refs STCOM-1449.
+* Re-incorporate component Readme's into storybook. Refs STCOM-1258.
+* Switch from `cloneDeep` in `<Callout>` component's state updates- a fix for potential stack overflows due to cloned react component trees 😬 . Refs STCOM-1508.
+* Update placeholder text color for Select to improve contrast. Refs STCOM-1491.
+* Update timezone data. Refs STCOM-1472.
+* bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
+* `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
+* `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
+* bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-
+* Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1525.
+* `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.
+* Apply `nodeRef` prop to `react-transition-group` components to avoid `findDOMNode`. Refs STCOM-1531.
+
+
+## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
 * Introduce `<AuditLog>` component. Refs STCOM-1412.
 * `AuditLog` - Add original version card. Refs STCOM-1416.
@@ -9,6 +25,35 @@
 * `AuditLog` - add `modalFieldChanges` to display field change in card modal window, make modal large, add totalVersions. Refs STCOM-1419.
 * Make `dayjs.contains` include start end end dates. Refs STCOM-1421.
 * Add loading indicator to `AuditLogPane` when data is initially loading. Refs STCOM-1422.
+* `AdvancedSearch` - replace `Cancel` button with `Reset all` in modal window. Refs STCOM-1424.
+* Display `Changed from - "true/false"` and `Changed to - "true/false"` values for boolean fields in AuditLogModal. Fixes STCOM-1427.
+* Restore onSelect support for AutoSuggest component. Refs STCOM-1426.
+* `AuditLog` - add `showSharedLabel` property to display "Shared" instead of "Original version" in the original card. Refs STCOM-1430.
+* Load dayjs' LocalizedFormat plugin to leverage localized formats. Refs STCOM-1437.
+* Remove tabIndex from `<MultiColumnList>`'s empty message wrapping element. Refs STCOM-1403.
+* Unify horizontal and vertical border colors of `<Pane>`s, as well as `NavListSection` heading border. Refs STCOM-1423.
+* Add 23 minority languages to the list, and add the English translations of their names. Fixes STCOM-1438.
+* Bugfix - clicking the trigger on an open `<Popover>` now closes the `<Popover>` instead of closing/reopening. Refs STCOM-1429.
+* Show changes of multiple repeatable fields as 1 row in the `Card` on `Version history` pane. Fixes STCOM-1443.
+* Increase default `maxHeight` of `<MultiSelection>` to display the entirety of 6 options. Refs STCOM-1448.
+* `<AuditLog>` - change styling of "Current version" and "Changed" labels. Refs STCOM-1450.
+* Correctly handle empty language-codes in `formattedLanguageName()`. Refs STCOM-1451.
+* Remove spacing from `<ButtonGroup>`. Refs STCOM-1458.
+* Add `<SessionConfirmationModal>`. Refs STCOM-1460.
+* Use mapped stacktraces in `<ErrorBoundary>` when sourcemaps are present. Refs STCOM-814.
+* Add `<StripesOverlayWrapper>` to `<AccordionSet>`. Refs STCOM-1436.
+* Add `ItemToView` tracking to mouse clicks on MCL rows. Get item position from closest 'row' element. Refs STCOM-1442.
+* Provide `isLoading` prop for `<MetaSection>` components to reflect loading status. Refs STCOM-1467.
+* Expose the `dedupe` property for `<Callout>` to prevent duplicate callouts with the same message and type from being displayed. Refs STCOM-1469.
+* `<MultiSelection>` - add a new `filterProps` prop to control option filtering. Refs STCOM-1473.
+* `downshift` version locked to `v19.0.13` after `v19.2.0` release. Refs STCOM-1483.
+* Dependency correction: `react-intl` bumped to v7 in STCOM-1046, but we forgot to bump the peer. Refs STCOM-1485.
+* Fix: Prevent onClearField from being spread onto native textarea element. Refs STCOM-1486.
+* Allow `<Pane>` to receive focus when its children are non-interactive. Refs STCOM-1488.
+* Move `InteractionStyles`' CSS variables to top level `variables.css` to avoid duplication in the bundle. Refs STCOM-1490.
+* Add `aria-disabled` styling to `<Button>` - this provides a way to make 'disabled' buttons appear disabled while still being focusable/announced to screenreader users. Refs STCOM-1481.
+* Wrap `<Editor>`'s internals in an HTML sanitizer. Refs STCOM-1489.
+* Add `id` prop to `<Layer>` - generate id's internally for layer rendering/tracking and necessary suspension of paneset resize handles. Refs STCOM-1501.
 
 ## [13.0.0](https://github.com/folio-org/stripes-components/tree/v13.0.0) (2025-02-24)
 [Full Changelog](https://github.com/folio-org/stripes-components/compare/v12.2.0...v13.0.0)

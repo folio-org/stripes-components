@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import BasicUsage from '../../../lib/Callout/stories/BasicUsage';
+import MiniCalloutExample from '../examples/MiniCalloutExample';
+import UxExampleProvider from '../UxExampleProvider';
+
+<Meta title="UX Guidelines/Feedback/Callout" />
+
+# Callout component
+
+A callout is a self-dismissing bar used to give users non-critical information about action status within an app or another app.
+
+## Quick example
+
+<UxExampleProvider>
+	<MiniCalloutExample />
+</UxExampleProvider>
+
+## Structure
+
+Callouts should include a success or error icon, a short message, and a close icon.
+
+The message should be short and update users on an action that has been performed. Suggested format: `Type of action: Name of content where action occurred`.
+
+## Location and size
+
+Callouts appear at the bottom-right of the screen and should take less than 50% of the screen width on desktop.
+
+## Behavior
+
+Callouts slide from the left when non-critical information needs to be shown.
+
+Information displayed in callouts should be relevant in the short term only.
+
+If users do not click the close icon, callouts should slide down automatically after a period of time: 6 seconds if there are no action links, and 10 seconds for toasts with links.
+
+Timing should stop if users hover over a callout.
+
+If several toasts are needed, they should appear stacked.
+
+## Style
+
+Callouts are rectangles with 6px corner radius and a 1px outline.
+
+Background color can be either green (success) or red (failure), providing visual feedback.
+
+## Live examples
+
+<UxExampleProvider>
+	<BasicUsage />
+</UxExampleProvider>
+
+## Related
+
+- Component stories: [Components > Callout](?path=/docs/components-callout--docs)
+- Component README: [Components > Callout > Readme](?path=/docs/components-callout--readme)
+- Archived source: https://web.archive.org/web/20240810135804mp_/https://ux.folio.org/docs/guidelines/components/callout/

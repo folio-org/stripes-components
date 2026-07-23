@@ -33,6 +33,7 @@ role | string | Adds [role-attribute](https://www.w3.org/wiki/PF/XTech/HTML5/Rol
 children | node / array of nodes | Adds child node(s) to button |
 buttonRef | string | Adds ref-attribute |
 autoFocus | bool | If this prop is `true`, component will automatically focus on mount | |
+aria-disabled | bool | Renders button with disabled styles, button remains focusable.
 
 ## Styles
 
@@ -69,6 +70,29 @@ The `link` buttonStyle is useful for adding link buttons inside the text.
 
 ```
 <Button buttonStyle="link">
-     I'm a link button 
+     I'm a link button
 </Button>
+```
+
+### `aria-disabled` disabled, but focusable
+
+Disabling a button takes it out of the accessibility tree, making the element non-focusable. For assistive technology, this is as if the button were removed entirely. 95% of the time, this happens in a situation
+when another reasonable focus-target is within proximity where focus can effectively be moved to. With the
+other 5% of cases, there's no focusable element in reasonable range. This is where using `aria-disabled=true` is
+useful, so that focus *can remain on the button itself without moving it far away from a reasonable focus order.
+
+Since the button is not formally `disabled`, it can still be triggered with a keypress. That said, click handlers will need to include
+a defensive conditional to check the `aria-disabled` attribute before executing the rest of the function, like the following example:
+
+```
+const handleClick = (event) => {
+  // Check if aria-disabled is explicitly set to "true"
+  if (event.currentTarget.getAttribute('aria-disabled') === 'true') {
+    event.preventDefault(); // Stop default browser actions
+    return;                 // Exit early to prevent custom logic execution
+  }
+
+  // Your custom click logic here...
+  console.log("Action performed!");
+};
 ```

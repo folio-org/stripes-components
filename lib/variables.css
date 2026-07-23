@@ -15,7 +15,9 @@
   --color-fill-form-element: var(--color-fill);
   --color-fill-current: rgba(0 0 0 / 62%);
   --color-fill-disabled: rgba(0 0 0 / 54%);
-  --color-fill-hover: rgba(37 118 195 / 20%);
+  --color-text-disabled: #444;
+  --color-text-placeholder: #444;
+  --color-fill-hover: rgba(1 1 2 / 2%);
   --color-fill-focus: rgba(37 118 195 / 20%);
   --color-focus-shadow:  rgba(166 212 255 / 65%);
   --color-fill-focus-current: rgb(116 173 191);
@@ -77,6 +79,15 @@
   --text-weight: calc(var(--text-weight-basis) + ( var(--text-weight-addition-factor) * var(--text-weights-are-bolder)));
   --text-weight-headline: var(--text-weight-bold);
   --text-weight-button: var(--text-weight-bold);
+
+  /* Interaction Styles Variables */
+  --focus-dot-offset-default: var(--gutter-static-one-third);
+  --focus-dot-offset-small: calc(var(--gutter-static-one-third) * -1);
+  --focus-dot-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
+  --focus-dot-offset-large: calc(var(--gutter-static) * -1);
+  --box-offset-small: calc(var(--gutter-static-one-third) * -1);
+  --box-offset-medium: calc(var(--gutter-static-two-thirds) * -1);
+  --box-offset-large: calc(var(--gutter-static) * -1);
 }
 
 /* Lean on min-width queries to create mobile-first CSS. */
