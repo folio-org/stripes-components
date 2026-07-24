@@ -24,7 +24,7 @@ Name | type | description | default | required
 `children` | node | Content for the body of the modal. | | &#10004;
 `closeOnBackgroundClick` | bool | Modal can be dismissed by clicking the background overlay. | false |
 `contentClass` | string | Apply custom CSS classes to the content element | |
-`dismissible` | bool | If true, renders a close 'X' in the starting corner of the modal. | false |
+`dismissible` | bool | If true, renders a close 'X' in the starting corner of the modal and applies focus there. This prop should only be used with information-only modals that do not provide a 'Cancel' button. | false |
 `enforceFocus` | bool | If true, automatically attempts to regain focus when its children are clicked.  | true |
 `footer` | node | Footer content of the modal. Pass a single component or multiple components wrapped in a Fragment. | |
 `id` | string | Used in the "id" attribute of the modal div. | |
