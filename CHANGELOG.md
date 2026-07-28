@@ -15,6 +15,7 @@
 * `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.
 * Apply `nodeRef` prop to `react-transition-group` components to avoid `findDOMNode`. Refs STCOM-1531.
 * Update MCL rendering to conform to axe tests. Refs STCOM-1535.
+* bugfix - `<MultiColumnList>` prev-next pagination row could be clipped by the container's `overflow: hidden` when its measured height differed from the initial 40px estimate and no unrelated re-render happened to pick up the correction. Refs to-be-added.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
