@@ -10,7 +10,7 @@ function updatePageDirection(direction) {
 
 const IntlWrap = ({ messages, children }) => {
   const [locale, updateLocale] = useState('en');
-  const [direction, updateDirection ] = useState('LTR');
+  const [direction, updateDirection] = useState('LTR');
 
   const handleDirectionChange = (e) => {
     updateDirection(e.target.value);
@@ -19,18 +19,19 @@ const IntlWrap = ({ messages, children }) => {
 
   return (
     <IntlProvider locale={locale} messages={messages['en']}>
-      <div className={css.iwControls} dir="ltr"><label className={css.iwLabel}>Locale: </label><select value={locale} onChange={e => updateLocale(e.target.value)}>
+      <div className={css.iwControls} dir="ltr"><label className={css.iwLabel}>Locale: <select value={locale} onChange={e => updateLocale(e.target.value)}>
         {
           Object.keys(messages).map(l => <option key={l}>{l}</option>)
         }
-        </select>
+      </select>
+      </label>
         <div className={css.iwFieldSet}>
           <label className={`${css.iwLegend} ${css.iwLabel}`} >Direction: </label>
-          <label><input type="radio" onChange={handleDirectionChange} name="direction" value="LTR" checked={direction === 'LTR'}/> LTR</label>
-          <label><input type="radio" onChange={handleDirectionChange} name="direction" value="RTL" checked={direction === 'RTL'}/> RTL</label>
+          <label><input type="radio" onChange={handleDirectionChange} name="direction" value="LTR" checked={direction === 'LTR'} /> LTR</label>
+          <label><input type="radio" onChange={handleDirectionChange} name="direction" value="RTL" checked={direction === 'RTL'} /> RTL</label>
         </div>
       </div>
-      { children }
+      {children}
     </IntlProvider>
   )
 }
