@@ -14,7 +14,7 @@
 * Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1525.
 * `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.
 * Apply `nodeRef` prop to `react-transition-group` components to avoid `findDOMNode`. Refs STCOM-1531.
-
+* Update MCL rendering to conform to axe tests. Refs STCOM-1535.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
