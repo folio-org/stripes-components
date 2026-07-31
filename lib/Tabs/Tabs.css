@@ -1,0 +1,42 @@
+@import '../variables.css';
+
+ul {
+    margin: 0;
+}
+
+.tabList {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.tab {
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: var(--text-weight-button);
+    font-size: var(--font-size-medium);
+    transition: background-color 0.25s, color 0.25s, opacity 0.07s;
+    border: 1px solid var(--primary);
+    border-right: 0;
+    border-bottom: 0;
+}
+.tab:last-child {
+    border-right: 1px solid var(--primary);
+}
+.tab.default {
+    background-color: transparent;
+    color: var(--primary);
+}
+.tab.primary {
+    background-color: var(--primary);
+    color: #fff;
+}
+.tab:hover {
+    opacity: 0.9;
+}
+
+.tabPanel {
+    border: 1px solid var(--primary);
+    padding: 15px;
+}
