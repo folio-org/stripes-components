@@ -89,6 +89,17 @@
   }
 }
 
+/* Applied once a closed accordion's collapse transition has fully finished (see
+ * Accordion.js), letting the browser skip layout/paint of the collapsed subtree until
+ * it's reopened. Guarded by @supports so browsers without it keep today's behavior,
+ * which already fully hides this content via max-height/overflow above.
+ */
+@supports (content-visibility: hidden) {
+  .content-wrap.cvHidden {
+    content-visibility: hidden;
+  }
+}
+
 /**
  * Content - hidden by default
  */
