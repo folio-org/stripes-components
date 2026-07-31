@@ -87,7 +87,7 @@
     "regenerator-runtime": "^0.14.0",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
-    "sinon": "^17.0.0",
+    "sinon": "^22.0.0",
     "storybook": "^10.3.5",
     "stylelint": "^16.2.0",
     "stylelint-config-standard": "^36.0.0",
