@@ -197,5 +197,6 @@ export { default as useCurrencyOptions } from './hooks/useCurrencyOptions';
 export { default as useDateFormatter } from './hooks/useFormatDate';
 export { default as useTimeFormatter } from './hooks/useFormatTime';
 export { default as useVersionHistory } from './hooks/useVersionHistory';
+export { default as useCrossTabSessionStorage } from './hooks/useCrossTabSessionStorage';
 
 export { pagingTypes as MCLPagingTypes } from './lib/MultiColumnList';
