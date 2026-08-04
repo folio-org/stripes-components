@@ -1,0 +1,84 @@
+/* Feasibility spike only - not used by MCLRenderer. See the plan doc for context:
+ * validates whether MCL's column-width system could be CSS Grid/subgrid-driven instead
+ * of JS-measurement-driven. Deliberately mirrors MCLRenderer.css's row/cell look loosely,
+ * not pixel-for-pixel, since the point is to compare layout *behavior*, not restyle MCL.
+ */
+
+.gridScrollWrapper {
+  overflow: auto;
+  max-width: 100%;
+  border: 1px solid #ccc;
+}
+
+.gridTable {
+  display: grid;
+  grid-template-columns: var(--col-template);
+  content-visibility: auto;
+}
+
+.gridHeaderRow,
+.gridBodyRow {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+
+}
+
+.gridHeaderRow {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  font-weight: bold;
+  background-color: var(--bg);
+  border-bottom: 5px solid var(--primary);
+}
+
+.gridBodyRow:nth-child(even) {
+  background-color: var(--color-fill-table-row-even);
+}
+
+.gridBodyRow:nth-child(odd) {
+  background-color: var(--color-fill-table-row-odd);
+}
+
+.gridCell {
+  line-height: var(--line-height);
+  padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* Real MCL's calculateColumnWidth3q floors every auto-sized column's width against
+ * headerWidth + a flat 30px (unconditionally, regardless of whether that column is
+ * currently sorted) - reserving space for a sort indicator that may appear after the
+ * label. Here, the header cell's own markup always includes that reserved space, so
+ * subgrid's cross-row min-content aggregation picks it up with no JS involved.
+ */
+.gridHeaderInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.gridSortIndicatorSpace {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 30px;
+}
+
+.gridCellSticky {
+  position: sticky;
+  left: 0;
+  background-color: inherit;
+  z-index: 1;
+  box-shadow: 2px 0 4px rgba(0 0 0 / 15%);
+}
+
+.gridCellStickyEnd {
+  position: sticky;
+  right: 0;
+  background-color: inherit;
+  z-index: 1;
+  box-shadow: -2px 0 4px rgba(0 0 0 / 15%);
+}
