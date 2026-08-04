@@ -117,6 +117,26 @@
     transform: translateY(0);
     transition: transform 0.15s ease-in-out 0.2s, opacity 0.15s ease-in-out;
     margin-bottom: 1rem;
+
+    &:empty {
+      height: 5px;
+      content: "";
+      background: linear-gradient(to left, var(--color-border-p2), var(--bg), var(--color-border-p2));
+      background-size: 200%;
+      margin-bottom: 0;
+      animation: sheen 2s ease infinite;
+      border-radius: 4px;
+    }
+  }
+}
+
+@keyframes sheen {
+  0% {
+    background-position: -100% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
   }
 }
 
