@@ -1,74 +1,143 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
-// useCrossTabSessionStorage(key, initialValue) => [value, setValue]
+
+// Uses session storage with a thin localStorage-backed presence registry as a means to share
+// values across tabs (like localStorage) but remove the values at closure (unlike localStorage.)
 //
-// Use-case: a `useState`-like value (e.g. "don't show this confirmation
-// again") that should be shared live across every currently-open browser
-// tab, but should behave like sessionStorage in every other respect -- a
-// brand new browser session (no tabs open beforehand) must never inherit a
-// value left over from a previous session.
+// With this implementation, the value itself never touches localStorage -
+// each tab keeps its own copy in sessionStorage (private to that tab, dies with it), and live updates
+// travel between tabs over a BroadcastChannel (in-memory, never written to
+// disk). localStorage is used only for a small, non-sensitive presence
+// registry (random tab ids + timestamps) that lets every already-open tab
+// notice, via the native `storage` event.
 //
-// sessionStorage itself can't do this: it's tab-scoped by spec, and the
-// native `storage` event never fires for sessionStorage changes across
-// tabs. So the value is actually kept in localStorage (which *does* emit
-// `storage` events cross-tab) and paired with a small "which tabs are still
-// open for this key" presence registry, so we can tell the difference
-// between "another tab is still using this value" (keep it) and "every tab
-// that ever used this value is gone" (treat it as a stale leftover and
-// discard it, same as a fresh sessionStorage key would be).
+// Multiple hook instances and/or vanilla stores in the same tab can share a
+// key (e.g. the same SessionConfirmationModal rendered twice with the same
+// sessionKey, or a hook and a vanilla store both watching "foo").
 //
-// Example 1 -- tab 2 picks up a value set in tab 1:
-//   1. Tab 1 mounts the hook for key "foo". Registry for "foo" is empty, so
-//      this is treated as a new session; tab 1 adds itself to the registry
-//      in local storage - (`{ tab1: t0 }`) and starts heartbeating that entry.
+// Refcounting keeps exactly one heartbeat/
+// channel alive per (key, tab), owned by whichever subscriber registered
+// first; every subscriber still gets its own entry in `listeners` so each
+// finds out when a `value` message arrives, whether it came from another
+// tab (via the channel) or a sibling in this same tab (via `setValue`'s
+// direct fan-out).
+//
+// Scenario 1 -- tab 2 picks up a value set in tab 1:
+//
+//   1. Tab 1 mounts the hook for key "foo". Registry for "foo" is empty;
+//      tab 1's own sessionStorage has no cached value either, so its
+//      initial value is `initialValue`. Tab 1 adds itself to the registry
+//      (`{ tab1: t0 }`), starts heartbeating that entry, opens a
+//      BroadcastChannel named after "foo", and remembers `{ tab1 }` as the
+//      set of tab ids it already knows about.
+//
 //   2. User checks "don't show again"; tab 1 calls `setValue(true)`. This
-//      writes `foo::value = true` to localStorage and updates tab 1's own
-//      React state directly (storage events don't fire in the tab that
-//      wrote them).
-//   3. User opens a second tab on the same origin. Tab 2 mounts the hook
-//      for key "foo". Its `computeInitialValue` prunes the registry, finds
-//      tab 1's entry is still fresh, and reads `foo::value` -- so tab 2's
-//      initial state is `true` without ever calling `setValue` itself. Tab
-//      2 then adds itself to the registry too (`{ tab1: t0, tab2: t1 }`).
-//   4. If tab 1 later called `setValue` again while tab 2 stayed mounted,
-//      tab 2 would pick up the change live via the `storage` event handler
-//      instead of needing to remount.
+//      writes `true` to tab 1's own sessionStorage and posts
+//      `{ type: 'value', value: true }` on the "foo" channel.
 //
-// Example 2 -- a tab crashes, so it never runs unmount/pagehide cleanup:
+//   3. User opens a second tab. Tab 2 mounts the hook for "foo": its own
+//      sessionStorage is empty, so it renders `initialValue` for now, and
+//      it writes itself into the registry (`{ tab1: t0, tab2: t1 }`).
+//      Tab 2's own write never fires a `storage` event in tab 2 itself
+//      (browsers never deliver `storage` events back to the tab that made
+//      the change) -- but it does fire one in tab 1. Tab 1's handler diffs
+//      the new registry against the `{ tab1 }` it remembered, notices
+//      `tab2` is new, and -- since it holds a value for "foo" -- proactively
+//      posts `{ type: 'value', value: true }` on the channel. Tab 2 was
+//      already listening on that channel since before it wrote the
+//      registry, so it receives the push and adopts `true` into its own
+//      React state and sessionStorage cache.
+//
+//   4. If tab 1 later calls `setValue` again while tab 2 is still mounted,
+//      tab 2 picks up the new value live via the same `{ type: 'value' }`
+//      broadcast from step 2 -- ordinary live updates and a new tab joining
+//      are handled by the exact same message.
+//
+// Scenario 2 -- a tab crashes, so it never runs unmount/pagehide cleanup:
+//
 //   1. Tab 1 is the only tab open for key "foo"; registry is `{ tab1: t0 }`,
-//      refreshed every HEARTBEAT_INTERVAL_MS. `foo::value` is `true`.
+//      refreshed every HEARTBEAT_INTERVAL_MS. Its value (`true`) exists
+//      only in tab 1's own sessionStorage -- never in localStorage.
+//
 //   2. Tab 1's browser process is killed. Nothing fires `pagehide` or the
-//      hook's unmount effect, so `{ tab1: t0 }` and `foo::value = true`
-//      are simply left behind in localStorage -- looking, to anyone else,
-//      like a tab that's still alive as of `t0`.
-//   3. Some time later (> STALE_THRESHOLD_MS after t0), a brand new tab
-//      opens and mounts the hook for "foo". `computeInitialValue` reads the
-//      registry, prunes `tab1` because `now - t0` exceeds the stale
-//      threshold, and is left with an empty registry.
-//   4. An empty registry means "no live tab is still using this value", so
-//      this new tab treats it as the start of a fresh session: it clears
-//      `foo::value` and returns `initialValue` instead of the stale `true`
-//      -- exactly as if this were a normal sessionStorage key that had
-//      never been set. It then adds itself as the new sole registry entry.
-
-//   If instead a second tab had opened *before* the stale threshold passed,
-//   pruning would still find tab 1's entry "live" (even though tab 1 is
-//   actually gone) and would incorrectly inherit `true` -- an accepted
-//   trade-off between promptness and false-negative staleness detection.
+//      hook's unmount effect, so `{ tab1: t0 }` is left behind in the
+//      registry, looking, to anyone else, like a tab that's still alive as
+//      of `t0`. There is no leftover *value* to worry about at all, since
+//      none was ever written outside of tab 1's now-gone sessionStorage.
+//
+//   3. A new tab opens before the registry entry ages out. It has no
+//      sessionStorage cache of its own, so it renders `initialValue`
+//      immediately and writes itself into the registry. That write would
+//      normally prompt whichever live tab notices it to push its value --
+//      but tab 1 no longer exists to react to anything, so nobody pushes,
+//      and the new tab simply keeps rendering `initialValue`. No stale data
+//      was ever at risk of being inherited.
+//
+//   4. Once any tab's heartbeat tick runs after `now - t0` exceeds
+//      STALE_THRESHOLD_MS, pruning drops the dead `tab1` entry from the
+//      registry, so it doesn't linger in localStorage indefinitely either.
+//
+//  ***Vanilla JS usage:
+//
+//   import { createCrossTabSessionStore } from '@folio/stripes-components';
+//
+//   const store = createCrossTabSessionStore('suppress-widget-warning', false);
+//
+//   // Read the value that's already in effect for this tab (e.g. on
+//   // startup, before deciding whether to show a warning banner).
+//   if (!store.getValue()) {
+//     showWarningBanner();
+//   }
+//
+//   // Persist + push a change to every other tab/subscriber watching this key.
+//   dismissButton.addEventListener('click', () => {
+//     store.setValue(true);
+//     hideWarningBanner();
+//   });
+//
+//   // Stay live-updated for as long as this code cares (this is also what
+//   // registers this tab's presence -- call it once and hang onto the
+//   // returned `unsubscribe`, _don't_ call `subscribe` again per update).
+//   const unsubscribe = store.subscribe((suppressed) => {
+//     if (suppressed) hideWarningBanner();
+//   });
+//
+//   // Later, when this code no longer needs to watch the key (e.g. the
+//   // widget is torn down):
+//   unsubscribe();
+//
+// ------------------------------------------------------------------------------------------------------
+//   ***React Hook usage:
+//
+//   import { useCrossTabSessionStorage } from '@folio/stripes-components';
+//
+//   const WarningBanner = () => {
+//     const [suppressed, setSuppressed] = useCrossTabSessionStorage('suppress-widget-warning', false);
+//
+//     if (suppressed) return null;
+//
+//     return (
+//       <Banner onDismiss={() => setSuppressed(true)}>
+//         Something you should know about.
+//       </Banner>
+//     );
+//   };
+//
+// `setSuppressed` also accepts an updater function, e.g.
+// `setSuppressed((prev) => !prev)`, matching `useState`'s own convention.
 
 const NAMESPACE = '@folio/stripes-components::crossTabSession::';
 const TAB_ID_KEY = `${NAMESPACE}tabId`;
 
-// A crashed/killed tab never gets to run its unmount cleanup, so presence
-// can't rely on unmount alone -- each live tab instead re-stamps its own
-// registry entry on this interval, and any entry older than the stale
-// threshold is treated as belonging to a dead tab. 3x the heartbeat gives
-// some slack for a slow tab/tick before it's wrongly declared dead.
+// Each live, non-crashed, open tab keeps itself alive via updating a timestamp at
+// HEARTBEAT_INTERVAL_MS. Each time Pruning happens, timestamps are checked against the
+// STALE_THRESHOLD_MS - 3x the Heartbeat and are pruned if they haven't been updated within that time.
 export const HEARTBEAT_INTERVAL_MS = 5000;
 export const STALE_THRESHOLD_MS = 15000;
 
 export const getValueKey = (key) => `${NAMESPACE}${key}::value`;
 export const getRegistryKey = (key) => `${NAMESPACE}${key}::registry`;
+export const getChannelName = (key) => `${NAMESPACE}${key}::channel`;
 
 let cachedTabId;
 
@@ -76,13 +145,18 @@ const createTabId = () => (
   crypto?.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`
 );
 
-// The tab's id is stashed in sessionStorage -- sessionStorage survives
-// reloads/navigation within a tab, but disappears the moment the
-// tab truly closes), so reusing it means a reloaded tab keeps its existing
-// registry entry instead of leaking a new one.
+// The tab's id is stashed in sessionStorage.
+// Storage access can throw in restrictive environments (old Safari Private Browsing, "block all site
+// data" settings) -- fall back to a fresh, in-memory-only id rather than
+// letting that exception escape into whatever called `getTabId`.
 const getTabId = () => {
-  cachedTabId ??= window.sessionStorage.getItem(TAB_ID_KEY) || createTabId();
-  window.sessionStorage.setItem(TAB_ID_KEY, cachedTabId);
+  if (cachedTabId) return cachedTabId;
+  try {
+    cachedTabId = window.sessionStorage.getItem(TAB_ID_KEY) || createTabId();
+    window.sessionStorage.setItem(TAB_ID_KEY, cachedTabId);
+  } catch (e) {
+    cachedTabId = createTabId();
+  }
   return cachedTabId;
 };
 
@@ -95,7 +169,13 @@ const readRegistry = (registryKey) => {
 };
 
 const writeRegistry = (registryKey, registry) => {
-  window.localStorage.setItem(registryKey, JSON.stringify(registry));
+  try {
+    window.localStorage.setItem(registryKey, JSON.stringify(registry));
+  } catch (_e) {
+    // Storage disabled/unavailable (quota exceeded, restrictive privacy
+    // settings) -- degrade to no persistence rather than throwing out of a
+    // heartbeat tick or a mount/unmount effect.
+  }
 };
 
 const pruneRegistry = (registry, now = Date.now()) => {
@@ -108,58 +188,65 @@ const pruneRegistry = (registry, now = Date.now()) => {
   return pruned;
 };
 
-const readValue = (valueKey, fallback) => {
+const removeFromRegistry = (key, tabId) => {
+  const registryKey = getRegistryKey(key);
+  const registry = readRegistry(registryKey);
+  delete registry[tabId];
+  const liveRegistry = pruneRegistry(registry);
+
+  // Once every tab that was using this key is gone, its presence entry is removed rather
+  // than lingering in localStorage forever.
+  if (Object.keys(liveRegistry).length === 0) {
+    try {
+      window.localStorage.removeItem(registryKey);
+    } catch (_e) {
+      // ignore -- see writeRegistry
+    }
+  } else {
+    writeRegistry(registryKey, liveRegistry);
+  }
+};
+
+// This tab's own last-known value for `key`, read synchronously on mount so
+// a reloaded tab renders correctly on the very first frame without waiting
+// on any other tab.
+const readOwnValue = (valueKey, fallback) => {
   try {
-    const raw = window.localStorage.getItem(valueKey);
+    const raw = window.sessionStorage.getItem(valueKey);
     return raw === null ? fallback : JSON.parse(raw);
   } catch (e) {
     return fallback;
   }
 };
 
-const writeValue = (valueKey, value) => {
-  window.localStorage.setItem(valueKey, JSON.stringify(value));
-};
-
-const clearValue = (valueKey) => {
-  window.localStorage.removeItem(valueKey);
-};
-
-// Called synchronously on mount (not deferred to an effect) so a component
-// never renders a stale/incorrect value even for a single frame: if pruning
-// finds no other live tab for this key, this tab is the first one, which
-// means whatever is sitting in the value key is a leftover from a session
-// that has already fully ended (e.g. a crash) -- so it's discarded here
-// rather than inherited.
-const computeInitialValue = (key, fallback) => {
-  const liveRegistry = pruneRegistry(readRegistry(getRegistryKey(key)));
-  if (Object.keys(liveRegistry).length === 0) {
-    clearValue(getValueKey(key));
-    return fallback;
+const writeOwnValue = (valueKey, value) => {
+  try {
+    window.sessionStorage.setItem(valueKey, JSON.stringify(value));
+  } catch (e) {
+    // ignore -- see writeRegistry
   }
-  return readValue(getValueKey(key), fallback);
 };
 
-// Multiple hook instances in the same tab can share a key (e.g. the same
-// SessionConfirmationModal rendered twice with the same sessionKey). They
-// must not each start their own heartbeat interval or each try to run the
-// "last tab" cleanup independently -- that would double-write the registry
-// and risk one instance clearing the value while a sibling is still
-// mounted. Refcounting keeps exactly one heartbeat/writer alive per
-// (key, tab), owned by whichever instance registered first.
 const registrations = new Map();
 
-const registerTab = (key) => {
+const getOrCreateRegistration = (key) => {
   const existing = registrations.get(key);
   if (existing) {
     existing.count += 1;
-    return;
+    return existing;
   }
 
   const registryKey = getRegistryKey(key);
+  const valueKey = getValueKey(key);
   const tabId = getTabId();
 
   const registry = pruneRegistry(readRegistry(registryKey));
+
+  // The peer ids this tab already knew about before joining -- used below to
+  // tell "a genuinely new tab just joined" apart from "a peer's routine
+  // heartbeat re-stamped its existing entry", which touches the same
+  // registry key but shouldn't trigger a broadcast.
+  const knownTabIds = new Set(Object.keys(registry));
   registry[tabId] = Date.now();
   writeRegistry(registryKey, registry);
 
@@ -172,10 +259,67 @@ const registerTab = (key) => {
     writeRegistry(registryKey, reg);
   }, HEARTBEAT_INTERVAL_MS);
 
-  registrations.set(key, { count: 1, intervalId, tabId, done: false });
+  // Older browsers/test environments without BroadcastChannel just lose
+  // live cross-tab sync -- each tab still works from its own sessionStorage
+  // cache, it just never hears about other tabs' updates.
+  const channel = typeof BroadcastChannel !== 'undefined' ? new BroadcastChannel(getChannelName(key)) : null;
+  const listeners = new Set();
+
+  if (channel) {
+    channel.onmessage = ({ data }) => {
+      if (data?.type === 'value') {
+        writeOwnValue(valueKey, data.value);
+        listeners.forEach((listener) => listener(data.value));
+      }
+    };
+  }
+
+  // Fired when other tabs change the registry.
+  // Checks for newly added keys, and if a new key is  present,
+  // broadcasts the message for the new tab to sync.
+
+  const handleRegistryStorage = (e) => {
+    if (e.key !== registryKey) return;
+
+    let latestIds;
+    try {
+      latestIds = new Set(Object.keys(JSON.parse(e.newValue) ?? {}));
+    } catch (err) {
+      return;
+    }
+
+    const hasNewPeer = [...latestIds].some((id) => id !== tabId && !knownTabIds.has(id));
+    if (hasNewPeer && channel && window.sessionStorage.getItem(valueKey) !== null) {
+      channel.postMessage({ type: 'value', value: readOwnValue(valueKey) });
+    }
+
+    knownTabIds.clear();
+    latestIds.forEach((id) => knownTabIds.add(id));
+  };
+  window.addEventListener('storage', handleRegistryStorage);
+
+  const registration = {
+    count: 1, intervalId, tabId, channel, listeners, handleRegistryStorage, done: false,
+  };
+  registrations.set(key, registration);
+
+  // The whole page is going away -- clean up immediately rather than
+  // waiting on the heartbeat to notice, regardless of how many hook
+  // instances are still "mounted" (they're all being destroyed together).
+  window.addEventListener('pagehide', () => {
+    if (registration.done) return;
+    registration.done = true;
+    clearInterval(registration.intervalId);
+    window.removeEventListener('storage', registration.handleRegistryStorage);
+    registration.channel?.close();
+    registrations.delete(key);
+    removeFromRegistry(key, registration.tabId);
+  }, { once: true });
+
+  return registration;
 };
 
-const unregisterTab = (key) => {
+const releaseRegistration = (key) => {
   const registration = registrations.get(key);
   if (!registration || registration.done) return;
 
@@ -184,81 +328,73 @@ const unregisterTab = (key) => {
   registration.done = true;
 
   clearInterval(registration.intervalId);
+  window.removeEventListener('storage', registration.handleRegistryStorage);
+  registration.channel?.close();
   registrations.delete(key);
-
-  const registryKey = getRegistryKey(key);
-  const registry = readRegistry(registryKey);
-  delete registry[registration.tabId];
-  const liveRegistry = pruneRegistry(registry);
-
-  // This is what gives the value true session semantics:
-  // once every tab that was using this key is gone,
-  // the value is removed rather than lingering in localStorage forever.
-  if (Object.keys(liveRegistry).length === 0) {
-    window.localStorage.removeItem(registryKey);
-    clearValue(getValueKey(key));
-  } else {
-    writeRegistry(registryKey, liveRegistry);
-  }
+  removeFromRegistry(key, registration.tabId);
 };
 
-// Guards against non-browser test environments, where the hook should
-// behave like plain useState with no persistence or cross-tab sync.
+// Guards against non-browser test environments, where the hook/store should
+// behave like a plain in-memory value with no persistence or cross-tab sync.
 const isBrowser = () => typeof window !== 'undefined' && window.localStorage && window.sessionStorage;
 
-const useCrossTabSessionStorage = (key, initialValue) => {
-  const browser = isBrowser();
+// The vanilla entry point. `getValue`/`setValue` work standalone; `subscribe`
+// is what actually registers this tab's presence for `key` (registry entry,
+// heartbeat, channel) -- for as long as at least one subscriber holds it --
+// so a caller that only ever calls getValue/setValue participates in the
+// synced value without holding a live presence entry for it, same as the
+// hook only registers presence for as long as it's mounted.
+
+export const createCrossTabSessionStore = (key, initialValue) => {
   const valueKey = getValueKey(key);
-  const initialValueRef = useRef(initialValue);
-  initialValueRef.current = initialValue;
 
-  const [value, setValueState] = useState(() => (
-    browser ? computeInitialValue(key, initialValue) : initialValue
-  ));
+  const getValue = () => (isBrowser() ? readOwnValue(valueKey, initialValue) : initialValue);
 
-  useEffect(() => {
-    if (!browser) return undefined;
+  // `subscribe`'s listener only fires on *future* changes -- it does not
+  // immediately invoke with the current value, so a caller wanting both an
+  // initial value and live updates should call `getValue()` once and
+  // `subscribe()` separately, same as the hook does below.
 
-    registerTab(key);
+  const setValue = (next) => {
+    if (!isBrowser()) return typeof next === 'function' ? next(initialValue) : next;
 
-    // The native `storage` event only fires in *other* tabs, never in the
-    // tab that made the write -- this is what picks up a value set by
-    // another tab and applies it to this tab's React state.
-    const handleStorage = (e) => {
-      if (e.key === valueKey) {
-        setValueState(e.newValue === null ? initialValueRef.current : JSON.parse(e.newValue));
-      }
-    };
+    const resolved = typeof next === 'function' ? next(readOwnValue(valueKey, initialValue)) : next;
+    writeOwnValue(valueKey, resolved);
 
-    // Best-effort fast path so the value doesn't linger for the full stale
-    // threshold after a normal tab close. Not relied on for correctness --
-    // a crashed tab never fires this -- the heartbeat/pruning above is the
-    // authoritative mechanism; this just makes the common case snappier.
-    // `pagehide` is used over `beforeunload` since it doesn't block the
-    // back/forward cache and fires more reliably (e.g. on mobile Safari).
-    const handlePageHide = () => unregisterTab(key);
+    const registration = registrations.get(key);
+    if (registration) {
+      registration.listeners.forEach((listener) => listener(resolved));
+      registration.channel?.postMessage({ type: 'value', value: resolved });
+    }
+    return resolved;
+  };
 
-    window.addEventListener('storage', handleStorage);
-    window.addEventListener('pagehide', handlePageHide);
+  const subscribe = (listener) => {
+    if (!isBrowser()) return () => { };
+
+    const registration = getOrCreateRegistration(key);
+    registration.listeners.add(listener);
 
     return () => {
-      window.removeEventListener('storage', handleStorage);
-      window.removeEventListener('pagehide', handlePageHide);
-      unregisterTab(key);
+      registration.listeners.delete(listener);
+      releaseRegistration(key);
     };
-  }, [browser, key, valueKey]);
+  };
 
-  const setValue = useCallback((next) => {
-    setValueState((prev) => {
-      const resolved = typeof next === 'function' ? next(prev) : next;
-      // Written directly here, not left for the storage-event handler above,
-      // because `storage` events never fire in the originating tab.
-      if (browser) {
-        writeValue(getValueKey(key), resolved);
-      }
-      return resolved;
-    });
-  }, [browser, key]);
+  return { getValue, setValue, subscribe };
+};
+
+const useCrossTabSessionStorage = (key, initialValue) => {
+  const store = useMemo(() => createCrossTabSessionStore(key, initialValue), [key]);
+  const [value, setValueState] = useState(() => store.getValue());
+
+  // `store.setValue` fans out to every same-tab subscriber for this key
+  // (including this hook's own listener registered below), so this is the
+  // only place `setValueState` needs to be wired up -- there's no need to
+  // also update it directly inside `setValue`.
+  useEffect(() => store.subscribe(setValueState), [store]);
+
+  const setValue = useCallback((next) => store.setValue(next), [store]);
 
   return [value, setValue];
 };

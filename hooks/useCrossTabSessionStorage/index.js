@@ -1,1 +1,1 @@
-export { default, getValueKey, getRegistryKey } from './useCrossTabSessionStorage';
+export { default, createCrossTabSessionStore, getValueKey, getRegistryKey, getChannelName } from './useCrossTabSessionStorage';
