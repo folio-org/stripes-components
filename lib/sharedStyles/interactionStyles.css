@@ -166,6 +166,14 @@
   z-index: 3;
 }
 
+div[class*="Selected---"] {
+  .isFocused::before,
+  .interactionStylesControl:focus > .interactionStyles::before,
+  .interactionStyles:focus::before {
+    box-shadow: 0 0 0 1px currentcolor;
+  }
+}
+
 .isFocused.hasDot::after,
 .interactionStylesControl:focus > .interactionStyles.hasDot::after,
 .interactionStyles.hasDot:focus::after {
