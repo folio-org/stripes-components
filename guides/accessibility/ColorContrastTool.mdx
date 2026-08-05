@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import UxExampleProvider from '../ux-guidelines/UxExampleProvider';
+import SwatchGrid from './color-contrast-tool/SwatchGrid';
+import ComponentExamples from './color-contrast-tool/ComponentExamples';
+
+<Meta title="Guides/Accessibility/Color Contrast Tool" />
+
+## Color contrast tool
+
+WCAG 2.0 AA requires a contrast ratio of at least 4.5:1 for normal text. This tool renders every
+single-color variable from `lib/variables.css` as a swatch. Click any swatch to use it as the
+comparison background — every other swatch's contrast ratio and PASS/FAIL badge recomputes live
+against it, so you can find combinations that meet AA before wiring them into CSS.
+
+### Color swatches
+
+<UxExampleProvider>
+  <SwatchGrid />
+</UxExampleProvider>
+
+### Component examples
+
+The same palette in use across a few real components, so choices can be sanity-checked in context.
+
+<UxExampleProvider>
+  <ComponentExamples />
+</UxExampleProvider>
