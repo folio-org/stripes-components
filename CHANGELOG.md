@@ -16,6 +16,7 @@
 * Apply `nodeRef` prop to `react-transition-group` components to avoid `findDOMNode`. Refs STCOM-1531.
 * Update MCL rendering to conform to axe tests. Refs STCOM-1535.
 * Convert MCL layout elements to a `flex-box` column. Resolves issues where pagination buttons would not show up on the first render. Refs STCOM-1536.
+* Resolve color contrast issues on selected MCL rows, IconButtons, focus styles. Refs STCOM-1541.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
