@@ -1,14 +1,15 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Button from '../../../lib/Button';
 import Icon from '../../../lib/Icon';
-import colorVariables from './colorVariables';
 import Select from '../../../lib/Select';
 
 import {
+  discoverColorVariables,
   resolveCssVarColor,
   flattenOnBackground,
   contrastRatio,
   toHex,
+  toRgbaString,
 } from './contrastUtils';
 import css from './ColorContrastTool.css';
 
@@ -29,15 +30,16 @@ export default function SwatchGrid() {
   const [filter, setFilter] = useState('all');
 
   useEffect(() => {
-    const resolved = colorVariables.map((name) => {
+    const resolved = discoverColorVariables().map((name) => {
       const rgba = resolveCssVarColor(name);
       const rgb = flattenOnBackground(rgba, WHITE);
-      return { name, rgb, hex: toHex(rgb) };
+      return { name, rgba, rgb, hex: toHex(rgb) };
     });
     setSwatches(resolved);
   }, []);
 
   const active = swatches.find((s) => s.name === activeName) || swatches[0];
+  const systemBg = swatches.find((s) => s.name === '--bg') || active;
 
   const copyToClipboard = (name) => {
     navigator.clipboard.writeText(`var(${name})`).then(() => {
@@ -69,15 +71,20 @@ export default function SwatchGrid() {
             />
           )}
           <p className={css.activeBackgroundLabel}>
-            Comparing against <strong><code>{activeName}</code></strong>
+            <strong>Comparing against <code>{activeName}</code></strong>
             {active && <span> ({active.hex})</span>}
-            <br />Use the &quot;Set as compare&quot; button on any row below to use it as the
-            comparison background, or &quot;Copy&quot; to copy its variable.
+            <br />&quot;Compare color&quot; will let you to compare every swatch against the chosen color.
+            <br />&quot;Copy&quot; to copy its variable for application in your own module's styles.
           </p>
         </div>
         <div className={css.filterRow}>
-          <label htmlFor="swatchFilter" className={css.filterLabel}>Show:</label>
-          <Select marginBottom0 id="swatchFilter" value={filter} onChange={(e) => setFilter(e.target.value)}>
+          <Select
+            marginBottom0
+            id="swatchFilter"
+            label="Show:"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+          >
             {FILTERS.map(({ value, label }) => (
               <option
                 key={value}
@@ -91,40 +98,82 @@ export default function SwatchGrid() {
       </div>
       <div className={css.swatchGridScroll}>
         <div className={css.swatchGrid}>
+          <div className={css.swatchHeaderRow}>
+            <span className={css.swatchHeaderCell}>
+              <div>Color, variable name</div>
+              <div>Chosen, row-over-chosen, row-over-system</div>
+            </span>
+            <span className={css.swatchHeaderCell}>CSS value</span>
+            <span className={css.swatchHeaderCell}>Flattened hex</span>
+            <span className={css.swatchHeaderCell}>Contrast rating</span>
+            <span className={css.swatchHeaderCell}>Actions</span>
+          </div>
           {visibleSwatches.map(({ ratio, pass, ...swatch }) => {
             const isActive = swatch.name === activeName;
+            const swatchRow = `${css.swatchRow} ${isActive ? css.swatchRowActive : ''}`;
             return (
-              <div
-                key={swatch.name}
-                className={`${css.swatchTile} ${isActive ? css.swatchTileActive : ''}`}
-              >
-                <div className={css.swatchMain}>
+              <div key={swatch.name} className={swatchRow}>
+                <span className={css.swatchRowCell}>
                   <span className={css.swatchColor}>
                     <span
-                      className={css.swatchColorHalf}
+                      className={css.swatchColorPart}
                       style={{ backgroundColor: active ? active.hex : swatch.hex }}
-                    />
-                    <span
-                      className={css.swatchColorHalf}
-                      style={{ backgroundColor: swatch.hex }}
-                    />
-                  </span>
-                  <span className={css.swatchName}>{swatch.name}</span>
-                  <span className={css.swatchHex}>{swatch.hex}</span>
-                  {ratio !== null && (
-                    <span className={`${css.swatchRatio} ${pass ? css.pass : css.fail}`}>
-                      {ratio.toFixed(2)}:1 — {pass ? 'PASS' : 'FAIL'}
+                    >
+                      <span
+                        className={css.swatchColorSample}
+                        style={{ color: toRgbaString(swatch.rgba) }}
+                      >
+                        Ag
+                      </span>
                     </span>
-                  )}
-                </div>
-                <div className={css.swatchActions}>
+                    <span className={css.swatchColorPart}>
+                      <span
+                        className={css.swatchColorPartBg}
+                        style={{ backgroundColor: active ? active.hex : swatch.hex }}
+                      />
+                      <span
+                        className={css.swatchColorPartOverlay}
+                        style={{ backgroundColor: toRgbaString(swatch.rgba) }}
+                      />
+                    </span>
+                    <span className={css.swatchColorPart}>
+                      <span
+                        className={css.swatchColorPartBg}
+                        style={{ backgroundColor: systemBg ? systemBg.hex : swatch.hex }}
+                      />
+                      <span
+                        className={css.swatchColorPartOverlay}
+                        style={{ backgroundColor: toRgbaString(swatch.rgba) }}
+                      />
+                    </span>
+                  </span>
+                </span>
+                <span className={`${css.swatchRowCell} ${css.swatchName}`}>{swatch.name}</span>
+                <span
+                  className={`${css.swatchRowCell} ${css.swatchCssValue}`}
+                  style={{ color: 'var(--color-text)' }}
+                >
+                  {toRgbaString(swatch.rgba)}
+                </span>
+                <span
+                  className={`${css.swatchRowCell} ${css.swatchFlattenedHex}`}
+                  style={{ color: 'var(--color-text)' }}
+                >
+                  {swatch.hex}
+                </span>
+                <span className={`${css.swatchRowCell}`}>
+                  <span className={`${css.swatchRowCell} ${css.swatchRatio} ${ratio !== null ? (pass ? css.pass : css.fail) : ''}`}>
+                    {ratio !== null && `${ratio.toFixed(2)}:1 — ${pass ? 'PASS' : 'FAIL'}`}
+                  </span>
+                </span>
+                <div className={`${css.swatchRowCell} ${css.swatchActions}`}>
                   <Button
                     buttonStyle="default slim"
                     disabled={isActive}
                     onClick={() => setActiveName(swatch.name)}
                     marginBottom0
                   >
-                    Set as compare
+                    Compare color
                   </Button>
                   <Button
                     buttonStyle="default slim"

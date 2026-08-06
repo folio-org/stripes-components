@@ -42,53 +42,84 @@
   flex: 0 0 auto;
 }
 
-.filterLabel {
-  font-size: 0.875rem;
-  font-weight: bold;
-}
-
 .swatchGridScroll {
   height: 500px;
   overflow-y: auto;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 0.5rem;
 }
 
 .swatchGrid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 144px 180px 160px 90px 140px minmax(190px, auto);
   gap: 0.5rem;
+  align-items: center;
 }
 
-.swatchTile {
+.swatchRow {
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: center;
+  grid-column: 1 / -1;
+  border: 2px solid transparent;
+}
+
+.swatchHeaderRow {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.swatchRowCell {
+  align-self: stretch;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.5rem 0;
   background: #fff;
 }
 
-.swatchTileActive {
+.swatchRowCell:first-child {
+  padding-left: 0.5rem;
+}
+
+.swatchRowCell:last-child {
+  padding-right: 0.5rem;
+}
+
+.swatchRowActive {
   border: 2px solid #000;
 }
 
-.swatchMain {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
 .swatchActions {
-  display: flex;
-  align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  flex: 0 0 auto;
+}
+
+.swatchHeaderCell {
+  padding: 0.5rem 0;
+  font-size: 0.6875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #666;
+}
+
+.swatchHeaderCell:first-child {
+  padding-left: 0.5rem;
+  grid-column: span 2;
+}
+
+.swatchHeaderCell:last-child {
+  padding-right: 0.5rem;
+}
+
+.swatchHeaderColorName {
+  grid-column: span 2;
 }
 
 .copiedMessage {
@@ -99,40 +130,69 @@
 
 .swatchColor {
   display: flex;
-  flex: 0 0 96px;
-  width: 96px;
+  flex: 1 1 auto;
   height: 32px;
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid rgba(0 0 0 / 20%);
 }
 
-.swatchColorHalf {
-  display: block;
-  flex: 1 1 50%;
-  height: 100%;
+.swatchColorPart {
+  position: relative;
+  flex: 1 1 0;
+}
+
+.swatchColorPartBg {
+  position: absolute;
+  inset: 0;
+}
+
+.swatchColorPartOverlay {
+  position: absolute;
+  inset: 0;
+}
+
+.swatchColorSample {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
 }
 
 .swatchName {
   font-size: 0.75rem;
   font-weight: bold;
   word-break: break-all;
-  flex: 0 0 180px;
 }
 
-.swatchHex {
+.swatchCssValue {
   font-size: 0.75rem;
-  color: #444;
-  flex: 0 0 64px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.swatchFlattenedHex {
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 .swatchRatio {
   font-size: 0.75rem;
   font-weight: bold;
-  padding: 0.125rem 0.375rem;
-  border-radius: 999px;
-  flex: 0 0 auto;
   white-space: nowrap;
+}
+
+.swatchRatio.pass,
+.swatchRatio.fail {
+  padding: 0.125rem 1rem;
+  border-radius: 999px;
 }
 
 .pass {

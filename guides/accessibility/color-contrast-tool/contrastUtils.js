@@ -36,6 +36,62 @@ export function resolveCssVarColor(varName) {
   return parseRgb(color);
 }
 
+// A sentinel unlikely to be any real theme color. Used by isResolvableColor() to detect
+// when a custom property fails to resolve to a color at all (see below).
+const SENTINEL_COLOR = 'rgb(1, 2, 3)';
+
+// Reads every `--custom-property` declared on `:root` across the document's own
+// stylesheets (e.g. lib/variables.css, once Storybook's preview.js has loaded it),
+// so the swatch grid can discover variables directly rather than hand-maintaining a
+// list that has to be kept in sync by hand. Cross-origin sheets (rare here) are
+// skipped, since reading their rules throws.
+export function readRootCustomProperties() {
+  const names = new Set();
+  Array.from(document.styleSheets).forEach((sheet) => {
+    let rules;
+    try {
+      rules = sheet.cssRules;
+    } catch {
+      return; // cross-origin stylesheet; can't introspect it
+    }
+    if (!rules) return;
+    Array.from(rules).forEach((rule) => {
+      if (rule.selectorText !== ':root' && rule.selectorText !== 'html') return;
+      Array.from(rule.style).forEach((prop) => {
+        if (prop.startsWith('--')) names.add(prop);
+      });
+    });
+  });
+  return Array.from(names);
+}
+
+// Not every custom property on :root holds a color (variables.css also has spacing,
+// font-size, and shadow tokens) — this tells them apart without hand-parsing values.
+// It applies `var(varName)` as `color` on an element whose parent's own `color` is set
+// to an implausible sentinel; if the variable is invalid for `color` (e.g. it's a length
+// or a shadow list), the property falls back to that inherited sentinel per the CSS custom
+// properties spec, so seeing the sentinel come back means "not a color".
+export function isResolvableColor(varName) {
+  const parent = document.createElement('div');
+  parent.style.position = 'absolute';
+  parent.style.visibility = 'hidden';
+  parent.style.pointerEvents = 'none';
+  parent.style.color = SENTINEL_COLOR;
+  const child = document.createElement('div');
+  child.style.color = `var(${varName})`;
+  parent.appendChild(child);
+  document.body.appendChild(parent);
+  const { color } = window.getComputedStyle(child);
+  document.body.removeChild(parent);
+  return color !== SENTINEL_COLOR;
+}
+
+// Discovers the color-valued custom properties on :root, so the swatch grid always
+// reflects whatever lib/variables.css (or an override loaded after it) currently defines.
+export function discoverColorVariables() {
+  return readRootCustomProperties().filter(isResolvableColor).sort();
+}
+
 // Blends a (possibly transparent) color over an opaque background, since several
 // variables.css values are rgba() fills meant to sit on top of another color.
 export function flattenOnBackground({ r, g, b, a = 1 }, bg) {
@@ -67,4 +123,10 @@ export function contrastRatio(rgbA, rgbB) {
 export function toHex({ r, g, b }) {
   const channel = (n) => Math.round(n).toString(16).padStart(2, '0');
   return `#${channel(r)}${channel(g)}${channel(b)}`.toLowerCase();
+}
+
+// Renders a raw (possibly translucent) color as a CSS rgba() string, so the browser can
+// composite it live over whatever sits beneath it, rather than pre-flattening it in JS.
+export function toRgbaString({ r, g, b, a = 1 }) {
+  return `rgba(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)}, ${a})`;
 }
