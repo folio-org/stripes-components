@@ -101,7 +101,7 @@ div[class*="Selected"] {
       &:not(:hover)::before {
         display: block;
         box-shadow: var(--link-box-shadow-current);
-        border: 1px solid currentColor;
+        border: 1px solid currentcolor;
         inset: -3px;
       }
     }
