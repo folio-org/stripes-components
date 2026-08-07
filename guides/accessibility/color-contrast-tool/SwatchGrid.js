@@ -7,6 +7,7 @@ import {
   discoverColorVariables,
   resolveCssVarColor,
   flattenOnBackground,
+  relativeLuminance,
   contrastRatio,
   toHex,
   toRgbaString,
@@ -23,11 +24,24 @@ const FILTERS = [
   { value: 'failing', label: 'Failing' },
 ];
 
+const SORTS = [
+  { value: 'alpha', label: 'Alpha' },
+  { value: 'luminance', label: 'Luminance' },
+  { value: 'luminance-reversed', label: 'Luminance (reversed)' },
+];
+
+const SORT_COMPARATORS = {
+  alpha: (a, b) => a.name.localeCompare(b.name),
+  luminance: (a, b) => relativeLuminance(a.rgb) - relativeLuminance(b.rgb),
+  'luminance-reversed': (a, b) => relativeLuminance(b.rgb) - relativeLuminance(a.rgb),
+};
+
 export default function SwatchGrid() {
   const [swatches, setSwatches] = useState([]);
   const [activeName, setActiveName] = useState('--bg');
   const [copiedName, setCopiedName] = useState(null);
   const [filter, setFilter] = useState('all');
+  const [sortBy, setSortBy] = useState('alpha');
 
   useEffect(() => {
     const resolved = discoverColorVariables().map((name) => {
@@ -49,16 +63,22 @@ export default function SwatchGrid() {
   };
 
   const swatchesWithRatio = useMemo(() => swatches.map((swatch) => {
-    const ratio = active ? contrastRatio(swatch.rgb, active.rgb) : null;
+    // The rating reflects what actually shows up on screen: the row's own (possibly
+    // translucent) color composited over the chosen comparison color, not the row's
+    // color pre-flattened against white.
+    const composited = active ? flattenOnBackground(swatch.rgba, active.rgb) : swatch.rgb;
+    const ratio = active ? contrastRatio(composited, active.rgb) : null;
     const pass = ratio !== null && ratio >= AA_NORMAL_TEXT;
     return { ...swatch, ratio, pass };
   }), [swatches, active]);
 
-  const visibleSwatches = swatchesWithRatio.filter((swatch) => {
-    if (filter === 'passing') return swatch.pass;
-    if (filter === 'failing') return !swatch.pass;
-    return true;
-  });
+  const visibleSwatches = useMemo(() => swatchesWithRatio
+    .filter((swatch) => {
+      if (filter === 'passing') return swatch.pass;
+      if (filter === 'failing') return !swatch.pass;
+      return true;
+    })
+    .sort(SORT_COMPARATORS[sortBy]), [swatchesWithRatio, filter, sortBy]);
 
   return (
     <div className={css.swatchTool}>
@@ -73,8 +93,8 @@ export default function SwatchGrid() {
           <p className={css.activeBackgroundLabel}>
             <strong>Comparing against <code>{activeName}</code></strong>
             {active && <span> ({active.hex})</span>}
-            <br />&quot;Compare color&quot; will let you to compare every swatch against the chosen color.
-            <br />&quot;Copy&quot; to copy its variable for application in your own module's styles.
+            <br />&quot;Compare&quot; will let you to compare every swatch against the chosen color.
+            <br />&quot;Copy&quot; to copy its variable for use in your own module's styles.
           </p>
         </div>
         <div className={css.filterRow}>
@@ -94,15 +114,29 @@ export default function SwatchGrid() {
               </option>
             ))}
           </Select>
+          <Select
+            marginBottom0
+            id="swatchSort"
+            label="Sort by:"
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+          >
+            {SORTS.map(({ value, label }) => (
+              <option
+                key={value}
+                value={value}
+              >
+                {label}
+              </option>
+            ))}
+          </Select>
         </div>
       </div>
       <div className={css.swatchGridScroll}>
         <div className={css.swatchGrid}>
           <div className={css.swatchHeaderRow}>
-            <span className={css.swatchHeaderCell}>
-              <div>Color, variable name</div>
-              <div>Chosen, row-over-chosen, row-over-system</div>
-            </span>
+            <span className={css.swatchHeaderCell}>Color, variable name</span>
+            <span className={css.swatchHeaderCell}><div>Comparison</div><div>Chosen | Over-chosen</div></span>
             <span className={css.swatchHeaderCell}>CSS value</span>
             <span className={css.swatchHeaderCell}>Flattened hex</span>
             <span className={css.swatchHeaderCell}>Contrast rating</span>
@@ -113,6 +147,19 @@ export default function SwatchGrid() {
             const swatchRow = `${css.swatchRow} ${isActive ? css.swatchRowActive : ''}`;
             return (
               <div key={swatch.name} className={swatchRow}>
+                <span className={`${css.swatchRowCell} ${css.swatchName}`}>
+                  <span className={css.swatchColorSystem}>
+                    <span
+                      className={css.swatchColorPartBg}
+                      style={{ backgroundColor: systemBg ? systemBg.hex : swatch.hex }}
+                    />
+                    <span
+                      className={css.swatchColorPartOverlay}
+                      style={{ backgroundColor: toRgbaString(swatch.rgba) }}
+                    />
+                  </span>
+                  {swatch.name}
+                </span>
                 <span className={css.swatchRowCell}>
                   <span className={css.swatchColor}>
                     <span
@@ -136,19 +183,10 @@ export default function SwatchGrid() {
                         style={{ backgroundColor: toRgbaString(swatch.rgba) }}
                       />
                     </span>
-                    <span className={css.swatchColorPart}>
-                      <span
-                        className={css.swatchColorPartBg}
-                        style={{ backgroundColor: systemBg ? systemBg.hex : swatch.hex }}
-                      />
-                      <span
-                        className={css.swatchColorPartOverlay}
-                        style={{ backgroundColor: toRgbaString(swatch.rgba) }}
-                      />
-                    </span>
                   </span>
+
                 </span>
-                <span className={`${css.swatchRowCell} ${css.swatchName}`}>{swatch.name}</span>
+
                 <span
                   className={`${css.swatchRowCell} ${css.swatchCssValue}`}
                   style={{ color: 'var(--color-text)' }}
@@ -173,7 +211,7 @@ export default function SwatchGrid() {
                     onClick={() => setActiveName(swatch.name)}
                     marginBottom0
                   >
-                    Compare color
+                    Compare
                   </Button>
                   <Button
                     buttonStyle="default slim"

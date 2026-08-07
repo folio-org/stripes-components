@@ -51,8 +51,8 @@
 
 .swatchGrid {
   display: grid;
-  grid-template-columns: 144px 180px 160px 90px 140px minmax(190px, auto);
-  gap: 0.5rem;
+  grid-template-columns: minmax(200px, auto) minmax(120px, auto) 160px 80px 140px minmax(190px, auto);
+  gap: 0.8rem;
   align-items: center;
 }
 
@@ -79,6 +79,7 @@
   align-self: stretch;
   display: flex;
   align-items: center;
+  gap: 0.25rem;
   padding: 0.5rem 0;
   background: #fff;
 }
@@ -102,7 +103,7 @@
 
 .swatchHeaderCell {
   padding: 0.5rem 0;
-  font-size: 0.6875rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -111,7 +112,6 @@
 
 .swatchHeaderCell:first-child {
   padding-left: 0.5rem;
-  grid-column: span 2;
 }
 
 .swatchHeaderCell:last-child {
@@ -130,7 +130,16 @@
 
 .swatchColor {
   display: flex;
-  flex: 1 1 auto;
+  flex: 2 1 0;
+  height: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(0 0 0 / 20%);
+}
+
+.swatchColorSystem {
+  position: relative;
+  flex: 0 0 45px;
   height: 32px;
   border-radius: 4px;
   overflow: hidden;
@@ -140,6 +149,10 @@
 .swatchColorPart {
   position: relative;
   flex: 1 1 0;
+}
+
+.swatchColorPart:not(:first-child) {
+  border-left: 1px solid rgba(0 0 0 / 20%);
 }
 
 .swatchColorPartBg {
@@ -158,7 +171,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8125rem;
   font-weight: bold;
   line-height: 1;
   pointer-events: none;
@@ -166,20 +178,16 @@
 }
 
 .swatchName {
-  font-size: 0.75rem;
   font-weight: bold;
-  word-break: break-all;
-}
+  white-space: nowrap;}
 
 .swatchCssValue {
-  font-size: 0.75rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .swatchFlattenedHex {
-  font-size: 0.75rem;
   white-space: nowrap;
 }
 
