@@ -23,10 +23,12 @@ http://localhost:3000/users?filters=active.Active&sort=Water&query=Email
 The `filters` query parameter is unaffected (since it was not included in the parameters passed in), the old `sort` value `Name` is replaced by the new value `Email`, and the new parameter `query` is added with the value `water`.
 
 ## getFocusableElements
+
   getFocusableElements.js exposes four functions to help track focus elements within a given container. They construct a "focus list" and then allow the user to sweep through it, or jump to the beginning/end of said list.
 
 
 ### getNextFocusable/getPreviousFocusable(currentElement, includeContained = true, onlyContained = false, loop = true, nullOnExit = false)
+
   These functions will return the "next" or "previous" focusable element within some scope.
 
   `currentElement` takes a HTML element, such as given by `someRef.current`, or `document.getElementById('some-id')`;.
@@ -42,4 +44,20 @@ The `filters` query parameter is unaffected (since it was not included in the pa
   For example, calling `getNextFocusable(someRef.current, true, true, false)` will return the next focusable element (what you would normally expect 'Tab' to focus on) within the scope of `someRef.current`, and `getPreviousFocusable(someRef.current, true, false, false, false)` will return the previous focusable element (what you would normally expect 'Shift + Tab' to focus on) in the entire document, with the caveat that if focus happens to already be on the first focusable element in the document it will not loop to the end, instead returning the first element in the list (the element currently focused).
 
 ### getFirstFocusable/getLastFocusable(container)
+
  These functions will return the first or last element in the "focus list" described above respectively for some `container` element, which is analogous to the `currentElement` above.
+
+### Avoiding selection for focus
+
+Components can apply the data attribute `data-focus-exclude` if they wish to be excluded for focus selection.
+
+```
+<IconButton
+  className={css.closeModal}
+  id={id && `${id}-close-button`}
+  onClick={onClose}
+  aria-label={intlLabel}
+  data-focus-exclude  {/* will be excluded from focus consideration*/}
+  icon="times"
+/>
+```

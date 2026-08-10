@@ -5,6 +5,17 @@
 * Supply Personal Data Disclosure form. Refs STCOM-1449.
 * Re-incorporate component Readme's into storybook. Refs STCOM-1258.
 * Switch from `cloneDeep` in `<Callout>` component's state updates- a fix for potential stack overflows due to cloned react component trees 😬 . Refs STCOM-1508.
+* Update placeholder text color for Select to improve contrast. Refs STCOM-1491.
+* Update timezone data. Refs STCOM-1472.
+* bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
+* `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
+* `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
+* bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-
+* Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1525.
+* `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.
+* Apply `nodeRef` prop to `react-transition-group` components to avoid `findDOMNode`. Refs STCOM-1531.
+* Update MCL rendering to conform to axe tests. Refs STCOM-1535.
+* Convert MCL layout elements to a `flex-box` column. Resolves issues where pagination buttons would not show up on the first render. Refs STCOM-1536.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
