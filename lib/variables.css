@@ -16,10 +16,12 @@
   --color-fill-current: rgba(0 0 0 / 62%);
   --color-fill-disabled: rgba(0 0 0 / 54%);
   --color-text-disabled: #444;
+  --color-fill-form-element-disabled: rgba(0 0 0 / 8%);
   --color-text-placeholder: #444;
   --color-fill-hover: rgba(37 118 195 / 20%);
   --color-fill-focus: rgba(37 118 195 / 20%);
   --color-focus-shadow:  rgba(166 212 255 / 65%);
+  --color-focus-shadow-inset: rgba(37 118 195 / 30%);
   --color-fill-focus-current: rgb(116 173 191);
   --color-fill-active: var(--primary);
   --highlighter-fill: #fc0;
