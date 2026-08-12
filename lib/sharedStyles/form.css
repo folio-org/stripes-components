@@ -30,7 +30,7 @@
   &:focus,
   &.isFocused {
     border: 1px solid var(--primary);
-    box-shadow: inset 0 0 0 2px rgba(37 118 195 / 30%);
+    box-shadow: inset 0 0 0 2px var(--color-focus-shadow-inset);
   }
 
   &.fullWidth {
@@ -47,7 +47,7 @@
 
   &:disabled,
   &.isDisabled {
-    background-color: #ebebe4;
+    background-color: var(--color-fill-form-element-disabled);
     color: var(--color-text-disabled);
     border: 1px solid var(--color-border);
     box-shadow: none;

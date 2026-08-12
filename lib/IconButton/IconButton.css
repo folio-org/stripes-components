@@ -19,6 +19,10 @@
   & + .iconButton {
     margin-left: 0.25em;
   }
+
+  &:focus {
+    color: var(--color-text);
+  }
 }
 
 .iconButton:disabled,
@@ -38,6 +42,19 @@ a.iconButton {
   pointer-events: none;
   padding: 0.25em;
 }
+
+div[class*="Selected--"] {
+  .iconButton {
+    color: color-contrast(var(--color-fill-current));
+
+    &:focus {
+      .iconButtonInner::before {
+        border-color: color-contrast(var(--color-fill-current));
+      }
+    }
+  }
+}
+
 
 /**
  * Size

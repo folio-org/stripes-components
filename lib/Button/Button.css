@@ -82,6 +82,8 @@
     }
   }
 
+
+
   /**
    * Button style primary
    */
@@ -265,6 +267,13 @@
     &.textAlignStart {
       text-align: right;
     }
+  }
+}
+
+div[class*="Selected--"] {
+  .button.default {
+    color: currentcolor;
+    border-color: currentcolor;
   }
 }
 
