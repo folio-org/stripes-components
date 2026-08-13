@@ -11,7 +11,7 @@
 }
 
 .error {
-  margin: 0 0 calc(var(--gutter) * 1.5) 0;
+  margin: 0 0 calc(var(--gutter) * 1.5);
 }
 
 .stack {
