@@ -154,22 +154,6 @@
   }
 }
 
-/* Experimental: only applied in non-virtualized (static) mode - see getRowClass in
- * MCLRenderer.js. In virtualize=true mode, MCL already unmounts off-screen rows and
- * self-measures the mounted ones synchronously, so content-visibility would be both
- * redundant and unsafe there - do not extend this class to that mode.
- * contain-intrinsic-size is a rough single-line-row placeholder (matches the default
- * minimumRowHeight prop); rows with taller/variable content will still reflow correctly
- * once revealed, but the scrollbar/scroll position may shift slightly for off-screen rows
- * taller than this estimate.
- */
-@supports (content-visibility: auto) {
-  .mclContentVisibility {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 41px;
-  }
-}
-
 .mclRowsBody {
   padding: 0 6px 3px;
 
@@ -463,12 +447,6 @@
   .mclScrollable {
     height: auto !important;
     overflow: visible !important;
-  }
-
-  /* Without this, a printed static-mode list could render blank for rows the browser
-   * had decided to skip on-screen (see .mclContentVisibility above). */
-  .mclContentVisibility {
-    content-visibility: visible !important;
   }
 
   /* hide pagination for printed pages */
