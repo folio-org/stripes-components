@@ -6,7 +6,7 @@ export default function MiniFilterPaneSearchExample() {
   const resultsRef = useRef(null);
 
   return (
-    <div>
+    <div style={{ width: '150px', height: '40px', margin: '1rem', position: 'relative' }}>
       <FilterPaneSearch
         searchFieldId="ux-filter-pane-search"
         clearSearchId="ux-filter-pane-search-clear"
