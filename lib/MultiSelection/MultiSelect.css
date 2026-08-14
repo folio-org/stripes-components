@@ -89,19 +89,6 @@
   }
 }
 
-/* Popper (see Popper.js) hides this menu while closed via the [hidden] attribute, which
- * the UA stylesheet maps to display:none. That already fully skips rendering while
- * closed, so content-visibility:hidden adds no benefit there - its value here is a
- * cheaper *re-open*: the browser can keep cached layout for this always-fully-rendered
- * option list instead of recomputing it from scratch on every display:none -> block flip.
- */
-@supports (content-visibility: hidden) {
-  .multiSelectMenu[hidden] {
-    display: block;
-    content-visibility: hidden;
-  }
-}
-
 .multiSelectOptionList {
   list-style: none;
   margin: 0;
@@ -125,21 +112,6 @@
     background: transparent;
     border-radius: var(--radius);
     z-index: -1;
-  }
-}
-
-/* renderedItems is rendered into this list in full, unvirtualized, regardless of how
- * many options there are (see MultiSelectOptionsList.js) - content-visibility:auto lets
- * the browser skip layout/paint for option rows outside the scrollable viewport instead
- * of laying out the entire list on every open/filter. contain-intrinsic-size is a rough
- * placeholder matching a single option row's typical height (Selection.css .option
- * padding + one line of text), so the scrollbar/scroll position don't jump as rows are
- * promoted/demoted while scrolling.
- */
-@supports (content-visibility: auto) {
-  .multiSelectOption {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 2.25rem;
   }
 }
 
