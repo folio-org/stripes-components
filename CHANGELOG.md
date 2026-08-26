@@ -18,6 +18,7 @@
 * Convert MCL layout elements to a `flex-box` column. Resolves issues where pagination buttons would not show up on the first render. Refs STCOM-1536.
 * Resolve color contrast issues on selected MCL rows, IconButtons, focus styles. Refs STCOM-1541.
 * Remove random, empty, attributeless div created by TransitionGroup for `<Modal>`. Refs STCOM-1543.
+* Add color variable for `color-text-active` for interactive elements in the `:active` state. Resolves Button's text disappearing when in the `:active` state. Refs STCOM-1544.
 * Bug-fix. Subsequent, post-onConfirm could call onConfirm again (`<SessionConfirmationModal>`). Refs STCOM-1545
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
