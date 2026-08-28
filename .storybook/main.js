@@ -9,6 +9,7 @@ const stories = [
 const config = {
   features: {
     postcss: false, // we use our own postcss setup
+    measure: false, // this button just presents an accessibility error :(
   },
 
   stories,

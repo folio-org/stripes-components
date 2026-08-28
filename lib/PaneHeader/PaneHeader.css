@@ -11,6 +11,7 @@
   padding: 0 var(--gutter-static);
   min-height: var(--control-min-size-touch);
   background-color: var(--color-fill);
+  outline: 0;
 
   & button {
     z-index: 2;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../../lib/Button';
-import AdvancedSearch from '../../../lib/AdvancedSearch';
+import { AdvancedSearch } from '../../../lib/AdvancedSearch';
 
 const searchOptions = [
   { id: 'keyword', label: 'Keyword', value: 'keyword' },

@@ -4,6 +4,7 @@ import PaneCloseLink from '../../../lib/PaneCloseLink';
 import PaneHeader from '../../../lib/PaneHeader';
 import PaneMenu from '../../../lib/PaneMenu';
 import Paneset from '../../../lib/Paneset';
+import { HashRouter } from 'react-router-dom';
 
 export default function MiniPaneCloseLinkExample() {
   const firstMenu = (
@@ -13,21 +14,23 @@ export default function MiniPaneCloseLinkExample() {
   );
 
   return (
-    <div style={{ margin: '-1rem' }}>
-      <Paneset>
-        <Pane
-          defaultWidth="fill"
-          renderHeader={(renderProps) => (
-            <PaneHeader
-              {...renderProps}
-              firstMenu={firstMenu}
-              paneTitle="Detail view"
-            />
-          )}
-        >
-          Pane content
-        </Pane>
-      </Paneset>
-    </div>
+    <HashRouter>
+      <div style={{ margin: '-1rem' }}>
+        <Paneset>
+          <Pane
+            defaultWidth="fill"
+            renderHeader={(renderProps) => (
+              <PaneHeader
+                {...renderProps}
+                firstMenu={firstMenu}
+                paneTitle="Detail view"
+              />
+            )}
+          >
+            Pane content
+          </Pane>
+        </Paneset>
+      </div>
+    </HashRouter>
   );
 }

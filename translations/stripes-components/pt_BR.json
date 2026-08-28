@@ -930,6 +930,6 @@
     "languages.9te": "Tersamiska",
     "languages.sia": "Akkalasamiska",
     "languages.sjk": "Kemisamiska",
-    "ConfirmationModal.suppressLabel": "Do not show this message again.",
-    "ConfirmationModal.suppressMessage": "If checked, this message will be automatically confirmed for the rest of the session."
+    "ConfirmationModal.suppressLabel": "Não mostrar esta mensagem novamente.",
+    "ConfirmationModal.suppressMessage": "Se marcada, essa mensagem será confirmada automaticamente durante o restante da sessão."
 }

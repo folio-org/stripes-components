@@ -52,7 +52,7 @@ Name | type | description | default | required
 
 ## SessionConfirmationModal
 
-Has a checkbox connected to session storage that will not display the modal if the supplied `storageKey` prop is set. The `useNamespace` hook from `stripes-core` can be used to generate a string for the key based on module hierarchy.
+Has a checkbox connected to session storage that will not display the modal if the supplied `sessionKey` prop is set. The `useNamespace` hook from `stripes-core` can be used to generate a string for the key based on module hierarchy.
 
 ```
 import { useNamespace } from '@folio/stripes/core';
@@ -65,7 +65,7 @@ const [ns] = useNameSpace();
   message="Description of the thing that needs confirming"
   onConfirm={this.handleSubmit}
   onCancel={this.hideConfirm}
-  storageKey = {`${ns}-mycomponent-confirm-modal`}
+  sessionKey = {`${ns}-mycomponent-confirm-modal`}
 />
 ```
 
