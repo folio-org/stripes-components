@@ -1,14 +1,6 @@
 .editorContainer {
-  margin: 20px auto 20px auto;
-  border-radius: 2px;
-  max-width: 600px;
-  color: #000;
-  position: relative;
-  line-height: 20px;
-  font-weight: 400;
-  text-align: left;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  flex-flow: column nowrap;
+  align-items: stretch;
 }
 
 .editorInner {
@@ -172,26 +164,6 @@
   margin: 0 4px;
 }
 
-.toolbar .toolbarItem .text {
-  display: flex;
-  line-height: 20px;
-  width: 200px;
-  vertical-align: middle;
-  font-size: 14px;
-  color: #777;
-  text-overflow: ellipsis;
-  width: 70px;
-  overflow: hidden;
-  height: 20px;
-  text-align: left;
-}
-
-.toolbar .toolbarItem .icon {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  user-select: none;
-  margin-right: 8px;
-  line-height: 16px;
-  background-size: contain;
+.toolbarIcon {
+  fill: none;
 }
