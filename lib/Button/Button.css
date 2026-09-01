@@ -80,7 +80,13 @@
     & :global .stripes__icon {
       fill: var(--primary);
     }
+
+    &[class*="interactionStyles---"]:active {
+      color: var(--color-text-active);
+    }
   }
+
+
 
   /**
    * Button style primary
@@ -265,6 +271,13 @@
     &.textAlignStart {
       text-align: right;
     }
+  }
+}
+
+div[class*="Selected--"] {
+  .button.default {
+    color: currentcolor;
+    border-color: currentcolor;
   }
 }
 

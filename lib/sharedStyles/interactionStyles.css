@@ -166,6 +166,14 @@
   z-index: 3;
 }
 
+div[class*="Selected---"] {
+  .isFocused::before,
+  .interactionStylesControl:focus > .interactionStyles::before,
+  .interactionStyles:focus::before {
+    box-shadow: 0 0 0 1px currentcolor;
+  }
+}
+
 .isFocused.hasDot::after,
 .interactionStylesControl:focus > .interactionStyles.hasDot::after,
 .interactionStyles.hasDot:focus::after {
@@ -179,8 +187,8 @@
 .isActive,
 .interactionStylesControl:active > .interactionStyles,
 .interactionStyles:active {
-  color: #fff;
-  & svg { fill: #fff; }
+  color: var(--color-text-active);
+  & svg { fill: var(--color-text-active); }
 }
 
 .isActive::before,
@@ -188,14 +196,14 @@
 .interactionStyles:active::before {
   background: var(--color-fill-active);
   border: 1px solid var(--color-border);
-  color: #fff;
+  color: var(--color-text-active);
   z-index: -1; /* keep the active style behind any text etc */
 }
 
 .interactionStyles.hasDot.isActive:active::after,
 .interactionStylesControl:active > .interactionStyles.hasDot::after,
 .interactionStyles.hasDot:active::after {
-  background-color: #fff;
+  background-color: var(--color-text-active);
   visibility: visible;
   opacity: 1;
 }
