@@ -22,6 +22,7 @@
 * Bug-fix. Subsequent, post-onConfirm could call onConfirm again (`<SessionConfirmationModal>`). Refs STCOM-1545
 * `Datepicker` correctly checks configured locale. Refs STCOM-1547.
 * Improve labels and icons positioning in `<RepeatableField>` component when some labels are not present. Refs STCOM-1548.
+* Add `.js` extension to DayJS local import. Refs STCOM-1550.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
