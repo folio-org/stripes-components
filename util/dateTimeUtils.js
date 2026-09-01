@@ -210,7 +210,7 @@ export function loadDayJSLocale(locale, cb = noop) {
       import(
         /* webpackChunkName: "dayjs-locale-[request]" */
         /* webpackExclude: /\.d\.ts$/ */
-        `dayjs/locale/${localeToLoad}`
+        `dayjs/locale/${localeToLoad}.js`
       ).then(() => {
         dayjs.locale(localeToLoad);
         cb(localeToLoad);
