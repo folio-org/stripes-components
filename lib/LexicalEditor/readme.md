@@ -184,3 +184,11 @@ They usually provide a component to render as a child of `<LexicalComposer>`. If
 When adding a formatting option - our click handlers can, depending on the plugin's implementation, dispatch a provided command or call a provided function etc.
 
 More on plugins in the [Lexical Plugins docs](https://lexical.dev/docs/react/plugins)
+
+### Other useful links
+[Editor state](https://lexical.dev/docs/concepts/editor-state)
+[Nodes](https://lexical.dev/docs/concepts/nodes)
+[Node cloning](https://lexical.dev/docs/concepts/node-cloning)
+[Selection](https://lexical.dev/docs/concepts/selection)
+[Read Mode / Edit Mode](https://lexical.dev/docs/concepts/read-only)
+[Verbum](https://github.com/ozanyurtsever/verbum) - a text editor built with Lexical. Useful for concrete code examples.
