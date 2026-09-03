@@ -10,8 +10,8 @@
 * bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
 * `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
-* bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-
-* Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1525.
+* bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-1525
+* Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1524.
 * `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.
 * Apply `nodeRef` prop to `react-transition-group` components to avoid `findDOMNode`. Refs STCOM-1531.
 * Update MCL rendering to conform to axe tests. Refs STCOM-1535.
@@ -23,6 +23,7 @@
 * `Datepicker` correctly checks configured locale. Refs STCOM-1547.
 * Improve labels and icons positioning in `<RepeatableField>` component when some labels are not present. Refs STCOM-1548.
 * Add `.js` extension to DayJS local import. Refs STCOM-1550.
+* Directly implement `<HotKeys>` and `<FocusTrap>` instead of importing them. Refs STCOM-1356.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
