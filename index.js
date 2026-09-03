@@ -37,6 +37,7 @@ export { default as TextField } from './lib/TextField';
 export { default as Timepicker } from './lib/Timepicker';
 export { default as Tooltip } from './lib/Tooltip';
 export { default as Editor } from './lib/Editor';
+export { LexicalEditor } from './lib/LexicalEditor';
 export { default as MultiSelection } from './lib/MultiSelection';
 export { default as RepeatableField } from './lib/RepeatableField';
 export { default as Popper, AVAILABLE_PLACEMENTS } from './lib/Popper';
