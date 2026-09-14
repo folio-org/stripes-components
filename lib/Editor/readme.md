@@ -1,6 +1,6 @@
 # Editor
 
-WYSIWYG HTML Editor component to wrap the react-quill (see https://github.com/zenoamaro/react-quill#the-unprivileged-editor) with label and validation controls.
+WYSIWYG HTML Editor component to wrap TipTap (see https://tiptap.dev/) with label and validation controls.
 
 
 ## Common Usage with a form framework...
@@ -28,12 +28,10 @@ Name | type | description | default | required
 --- | --- | --- | --- | ---
 `id` | string | ID to be applied to the DOM element | |
 `className` | string | Classes to be applied to the DOM element. | |
-`value` | string | Value for the editor as a controlled component. Can be a string containing HTML, a Quill Delta instance, or a plain object representing a Delta. Note that due to limitations in Quill, this is actually a semi-controlled mode, meaning that the edit is not prevented, but changing value will still replace the contents. Also note that passing a Quill Delta here, and then an HTML string, or vice-versa, will always trigger a change, regardless of whether they represent the same document. ⚠️ Do not pass the delta object from the onChange event as value, as it will cause a loop. See https://github.com/zenoamaro/react-quill#using-deltas  | |
-`defaultValue` | string |  Initial value for the editor as an uncontrolled component. Can be a string containing HTML, a Quill Delta, or a plain object representing a Delta. | |
-`readOnly` | bool | If true, the editor won't allow changing its contents. Wraps the Quill disable API. | false |
+`value` | string | Value for the editor as a controlled component. Has to be a string containing HTML. | |
+`defaultValue` | string |  Initial value for the editor as an uncontrolled component. Has to be a string containing HTML. | |
+`readOnly` | bool | If true, the editor won't allow changing its contents. Wraps the TipTap disable API. | false |
 `placeholder` | string | The default value for the empty editor. | |
-`modules` | object | An object specifying which modules are enabled, and their configuration. The editor toolbar is a commonly customized module. See the http://quilljs.com/docs/modules/ | |
-`formats` | array | An array of formats to be enabled during editing. All implemented formats are enabled by default. See http://quilljs.com/docs/formats/ for a list of availible formats. | |
 `sanitizeConfig` | object | Optional DOMPurify configuration used when sanitizing incoming `value`/`defaultValue` and outgoing `onChange` HTML. Merged with default `ADD_ATTR: ['target', 'rel']`. | |
 `inputRef` | object or func | Supplies a ref to the rendered `<Editor>` | |
 `tabIndex` | number | The order in which the editor becomes focused, among other controls in the page, during keyboard navigation. | |
@@ -57,7 +55,7 @@ Name | type | description | default | required
 ## Input/Output Sanitization
 The editor sanitizes HTML with `dompurify` in both directions:
 
-- Incoming values: `value` and `defaultValue` are sanitized before being passed to the internal ReactQuill component.
+- Incoming values: `value` and `defaultValue` are sanitized before being passed to the internal TipTap component.
 - Outgoing values: the first argument passed to `onChange` is sanitized HTML.
 
 By default, anchor attributes `target` and `rel` are allowed to support links such as:

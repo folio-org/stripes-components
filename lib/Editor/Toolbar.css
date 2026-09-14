@@ -1,0 +1,76 @@
+.toolbar {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-bottom: 0;
+}
+
+.group {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+
+  & + .group {
+    margin-inline-start: 0.375rem;
+    padding-inline-start: 0.375rem;
+    border-inline-start: 1px solid var(--color-border-p2);
+  }
+}
+
+.toolbarButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--color-icon);
+  outline: 0;
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+.isActive {
+  color: #06c;
+}
+
+.headingSelect {
+  min-width: 8rem;
+  margin-bottom: 0;
+  border: none;
+  background: transparent;
+
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.headingSelect select {
+  min-height: 1.75rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: var(--font-size-small);
+}
+
+.linkPopoverContent {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+
+.linkPopoverField {
+  margin-bottom: 0;
+}
+
+.linkPopoverField input {
+  min-width: 16rem;
+}
