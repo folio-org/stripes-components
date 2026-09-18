@@ -25,6 +25,7 @@
 * Add `.js` extension to DayJS local import. Refs STCOM-1550.
 * Directly implement `<HotKeys>` and `<FocusTrap>` instead of importing them. Refs STCOM-1356.
 * bugfix: `<Paneset>` correctly manages its resize-listeners. Refs STCOM-1553.
+* bugfix: correctly handle `zh-TW` (and all locales) in `<Timepicker>`; ditch moment for dayjs. Refs STCOM-569.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 

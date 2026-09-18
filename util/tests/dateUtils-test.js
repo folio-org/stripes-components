@@ -10,16 +10,25 @@ import {
   getDayJSLocalizedFormat,
   dayjs,
   getCompatibleDayJSLocale,
-  loadDayJSLocale
+  loadDayJSLocale,
+  formatLocalizedTime,
+  parseLocalizedTime
 } from '../dateTimeUtils';
 import 'dayjs/locale/de';
+
+// Keep this matrix aligned with stripes-core/src/loginServices.js::supportedLocales.
+const supportedLocales = [
+  'ar', 'cs-CZ', 'da-DK', 'de-DE', 'en-GB', 'en-SE', 'en-US', 'es-419', 'es-ES', 'es',
+  'fr-FR', 'he', 'hi-IN', 'hu-HU', 'it-IT', 'ja', 'ko', 'nb', 'nl', 'nn', 'pl', 'pt-BR',
+  'pt-PT', 'ru', 'sv', 'tr', 'uk', 'ur', 'zh-CN', 'zh-TW'
+];
 
 
 describe('Date Utilities', () => {
   describe('get localized format - moment fallback', () => {
     let format;
     beforeEach(async () => {
-      format = getMomentLocalizedFormat({ locale: 'de' }); // eslint-disable-line
+      format = getMomentLocalizedFormat({ locale: 'de' });
     });
 
     it('returns the long date format according to the passed locale', () => {
@@ -30,7 +39,7 @@ describe('Date Utilities', () => {
   describe('get localized format - dayJS fallback', () => {
     let format;
     beforeEach(async () => {
-      format = getDayJSLocalizedFormat({ locale: 'de' }); // eslint-disable-line
+      format = getDayJSLocalizedFormat({ locale: 'de' });
     });
 
     it('returns the long date format according to the passed locale', () => {
@@ -41,7 +50,7 @@ describe('Date Utilities', () => {
   describe('get locale date format - Germany', () => {
     let format;
     beforeEach(async () => {
-      format = getLocaleDateFormat({ intl: { locale: 'de' } }); // eslint-disable-line
+      format = getLocaleDateFormat({ intl: { locale: 'de' } });
     });
 
     it('returns the long date format according to the passed locale', () => {
@@ -52,7 +61,7 @@ describe('Date Utilities', () => {
   describe('get locale date format - Sweden', () => {
     let format;
     beforeEach(async () => {
-      format = getLocaleDateFormat({ intl: { locale: 'sv' } }); // eslint-disable-line
+      format = getLocaleDateFormat({ intl: { locale: 'sv' } });
     });
 
     it('returns the long date format according to the passed locale', () => {
@@ -63,7 +72,7 @@ describe('Date Utilities', () => {
   describe('get locale time format - Sweden', () => {
     let timeFormat;
     beforeEach(async () => {
-      timeFormat = getLocalizedTimeFormatInfo('sv'); // eslint-disable-line
+      timeFormat = getLocalizedTimeFormatInfo('sv');
     });
 
     it('returns the time format according to the passed locale', () => {
@@ -78,7 +87,7 @@ describe('Date Utilities', () => {
   describe('get locale time format - en-US', () => {
     let timeFormat;
     beforeEach(async () => {
-      timeFormat = getLocalizedTimeFormatInfo('en-US'); // eslint-disable-line
+      timeFormat = getLocalizedTimeFormatInfo('en-US');
     });
 
     it('returns the time format according to the passed locale', () => {
@@ -94,10 +103,63 @@ describe('Date Utilities', () => {
     });
   });
 
+  describe('localized time periods', () => {
+    it('parses and formats zh-TW day periods using Intl labels', () => {
+      const parsedTime = parseLocalizedTime('下午4:20', 'Ah:mm', 'zh-TW');
+
+      expect(parsedTime.isValid()).to.equal(true);
+      expect(parsedTime.hour()).to.equal(16);
+      expect(formatLocalizedTime(parsedTime, 'zh-TW', 'Ah:mm')).to.equal('下午4:20');
+    });
+
+    it('parses zh-TW morning values independently of DayJS locale data', () => {
+      const parsedTime = parseLocalizedTime('上午4:20', 'Ah:mm', 'zh-TW');
+
+      expect(parsedTime.isValid()).to.equal(true);
+      expect(parsedTime.hour()).to.equal(4);
+    });
+
+    it('accepts a 24-hour numeric value with a localized day period', () => {
+      const parsedTime = parseLocalizedTime('下午22:40', 'Ah:mm', 'zh-TW');
+
+      expect(parsedTime.isValid()).to.equal(true);
+      expect(parsedTime.hour()).to.equal(22);
+      expect(parsedTime.minute()).to.equal(40);
+    });
+
+    it('preserves a 24-hour numeric value when the format uses HH', () => {
+      const parsedTime = parseLocalizedTime('下午20:28', 'A HH:mm', 'zh-TW');
+
+      expect(parsedTime.isValid()).to.equal(true);
+      expect(parsedTime.hour()).to.equal(20);
+      expect(parsedTime.minute()).to.equal(28);
+    });
+
+    supportedLocales.forEach(locale => {
+      it(`parses before-noon and after-noon values for ${locale}`, () => {
+        const timeFormat = getLocaleDateFormat({
+          intl: { locale },
+          config: { hour: 'numeric', minute: '2-digit' }
+        });
+        const beforeNoon = formatLocalizedTime(dayjs().hour(9).minute(28), locale, timeFormat);
+        const afterNoon = formatLocalizedTime(dayjs().hour(20).minute(28), locale, timeFormat);
+        const parsedBeforeNoon = parseLocalizedTime(beforeNoon, timeFormat, locale);
+        const parsedAfterNoon = parseLocalizedTime(afterNoon, timeFormat, locale);
+
+        expect(parsedBeforeNoon.isValid()).to.equal(true);
+        expect(parsedBeforeNoon.hour()).to.equal(9);
+        expect(parsedAfterNoon.isValid()).to.equal(true);
+        expect(parsedAfterNoon.hour()).to.equal(20);
+        expect(formatLocalizedTime(parsedBeforeNoon, locale, timeFormat)).to.equal(beforeNoon);
+        expect(formatLocalizedTime(parsedAfterNoon, locale, timeFormat)).to.equal(afterNoon);
+      });
+    });
+  });
+
   describe('get locale time format - ko', () => {
     let timeFormat;
     beforeEach(async () => {
-      timeFormat = getLocalizedTimeFormatInfo('ko'); // eslint-disable-line
+      timeFormat = getLocalizedTimeFormatInfo('ko');
     });
 
     it('returns the time format according to the passed locale', () => {
@@ -180,7 +242,7 @@ describe('Date Utilities', () => {
   });
 
   describe('loadDayJSLocale', () => {
-    let localeCB = sinon.spy();
+    const localeCB = sinon.spy();
     beforeEach(() => {
       localeCB.resetHistory();
     });
