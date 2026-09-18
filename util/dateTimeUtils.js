@@ -240,9 +240,8 @@ export function loadDayJSLocale(locale, cb = noop) {
  * @param {Object} settings.intl - the intl object from context
  * @param {config} settings.config - sets the options for IntlDateTimeFormat. See
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options
- * @returns {String} - something similar to 'YYYY-MM-DD' or 'MM/DD/YYYY' that you could provide to a date-parsing library.
+ * @returns {String} - something like YYYY-MM-DD or MM/DD/YYYY that you could provide to a date-parsing library.
  */
-
 export const getLocaleDateFormat = ({ intl, config }) => {
   const tempDate = new Date('Thu May 14 2020 14:39:25 GMT-0500');
   let format = '';
@@ -284,7 +283,7 @@ export const getLocaleDateFormat = ({ intl, config }) => {
           // An ICU 72 update places a unicode character \u202f (non-breaking space) before day period (am/pm).
           // This can make for differences that are imperceptible to humans, but automated tests know!
           // the \u202f character is best detected via its charCode... 8239
-          if (p.value.charCodeAt(0) === 8239) {
+          if (p.value.codePointAt(0) === 8239) {
             format += ' ';
           } else {
             format += p.value;
@@ -300,6 +299,191 @@ export const getLocaleDateFormat = ({ intl, config }) => {
   }
 
   return format;
+};
+
+/**
+ * Return the day-period labels used by Intl and the hours represented by each
+ * label. This keeps time parsing and formatting independent of DayJS locale
+ * data, which can use different day-period boundaries than Intl.
+ *
+ * @param {string} locale
+ * @returns {Array<{ value: string, hours: number[] }>}
+ */
+export const getLocalizedTimePeriodInfo = (locale) => {
+  const formatter = new Intl.DateTimeFormat(locale, { hour: 'numeric' });
+  const periods = [];
+
+  for (let hour = 0; hour < 24; hour += 1) {
+    const parts = formatter.formatToParts(new Date(2022, 3, 10, hour));
+    const period = parts.find(part => part.type === 'dayPeriod')?.value;
+
+    if (period) {
+      const existingPeriod = periods.find(item => item.value === period);
+      if (existingPeriod) {
+        existingPeriod.hours.push(hour);
+      } else {
+        periods.push({ value: period, hours: [hour] });
+      }
+    }
+  }
+
+  return periods;
+};
+
+const normalizeLocalizedDigits = (value, locale) => {
+  if (typeof value !== 'string') return value;
+
+  const localizedDigits = new Map();
+  for (let digit = 0; digit < 10; digit += 1) {
+    localizedDigits.set(
+      new Intl.NumberFormat(locale, { useGrouping: false }).format(digit),
+      `${digit}`
+    );
+  }
+
+  return [...value].map(character => localizedDigits.get(character) || character).join('');
+};
+
+/**
+ * Parse a localized time string into a DayJS value using strict parsing.
+ *
+ * If a format contains the `A` day-period token, the day-period label and
+ * localized digits are resolved with `Intl` for the supplied locale rather
+ * than with DayJS locale data. Multiple formats may be supplied when parsing
+ * a time without a day period; they are tried in order. If no format matches,
+ * an invalid DayJS value is returned.
+ *
+ * @example
+ * // Sample input:
+ * const parsed = parseLocalizedTime('下午4:20', 'Ah:mm', 'zh-TW');
+ * // Sample output:
+ * parsed.format('HH:mm'); // '16:20'
+ *
+ * @param {string} value - The localized time string to parse.
+ * @param {string|string[]} timeFormats - One or more strict DayJS time
+ * formats, such as `h:mm A` or `Ah:mm`.
+ * @param {string} [locale='en-US'] - The BCP 47 locale used to resolve
+ * localized digits and day-period labels.
+ * @returns {DayJS} A parsed DayJS value, or an invalid value when parsing
+ * fails.
+ */
+export const parseLocalizedTime = (value, timeFormats, locale = DEFAULT_LOCALE) => {
+  const formats = Array.isArray(timeFormats) ? timeFormats : [timeFormats];
+  const meridiemFormat = formats.find(format => format?.includes('A'));
+
+  if (!meridiemFormat) {
+    const parsed = formats
+      .map(format => dayjs(value, format, true))
+      .find(candidate => candidate.isValid());
+    return parsed || dayjs(Number.NaN);
+  }
+
+  const periods = getLocalizedTimePeriodInfo(locale);
+  let normalizedValue = normalizeLocalizedDigits(value, locale);
+  let period = periods
+    .slice()
+    .sort((a, b) => b.value.length - a.value.length)
+    .find(item => normalizedValue.includes(item.value));
+
+  // Preserve Timepicker's existing convenience of accepting a trailing A/P
+  // when the locale uses the conventional AM/PM labels.
+  if (!period) {
+    const abbreviatedPeriod = normalizedValue.match(/(^|\s)([AP])(?=\s|$)/i);
+    if (abbreviatedPeriod) {
+      const periodValue = `${abbreviatedPeriod[2].toUpperCase()}M`;
+      period = periods.find(item => item.value.toUpperCase() === periodValue);
+      if (period) {
+        normalizedValue = normalizedValue.replace(abbreviatedPeriod[0], `${abbreviatedPeriod[1]}${period.value}`);
+      }
+    }
+  }
+
+  if (!period) return dayjs(Number.NaN);
+
+  const numericValue = normalizedValue.replace(period.value, '').trim();
+  const numericFormat = meridiemFormat.replace('A', '').trim();
+  const uses24HourFormat = /H/.test(numericFormat);
+  let numericTime = dayjs(numericValue, numericFormat, true);
+  let hour;
+  let minute;
+
+  if (numericTime.isValid()) {
+    hour = Number(numericTime.format('H'));
+    minute = Number(numericTime.format('m'));
+
+    if (uses24HourFormat) {
+      if (!period.hours.includes(hour)) return dayjs(Number.NaN);
+      return numericTime.second(0).millisecond(0);
+    }
+  } else {
+    // Some callers provide a 24-hour numeric value together with a localized
+    // day period, e.g. "下午22:40". Accept that representation when the
+    // period agrees with the supplied hour, while retaining strict parsing for
+    // ordinary 12-hour values.
+    const twentyFourHourFormat = numericFormat.replace(/h{1,2}/, token => (token.length === 2 ? 'HH' : 'H'));
+    numericTime = dayjs(numericValue, twentyFourHourFormat, true);
+    if (!numericTime.isValid()) return dayjs(Number.NaN);
+
+    hour = Number(numericTime.format('H'));
+    if (!period.hours.includes(hour)) return dayjs(Number.NaN);
+    return numericTime.second(0).millisecond(0);
+  }
+
+  const matchingHours = period.hours.filter(periodHour => (periodHour % 12 || 12) === hour);
+
+  if (!matchingHours.length) return dayjs(Number.NaN);
+
+  return dayjs()
+    .hour(matchingHours[0])
+    .minute(minute)
+    .second(0)
+    .millisecond(0);
+};
+
+/**
+ * Format a DayJS value using the localized day-period labels supplied by Intl.
+ * Numeric formatting remains controlled by the supplied DayJS format.
+ *
+ * @param {DayJS} value
+ * @param {string} locale
+ * @param {string} timeFormat
+ * @returns {string}
+ */
+export const formatLocalizedTime = (value, locale, timeFormat) => {
+  if (!value?.isValid() || !timeFormat.includes('A')) return value.format(timeFormat);
+
+  const period = getLocalizedTimePeriodInfo(locale)
+    .find(item => item.hours.includes(value.hour()))?.value;
+
+  if (!period) return value.format(timeFormat);
+
+  const periodPlaceholder = '__localizedDayPeriod__';
+  const format = timeFormat.replace('A', `[${periodPlaceholder}]`);
+  return value.format(format).replace(periodPlaceholder, period);
+};
+
+/**
+ * Return the localized day-period label for a 24-hour clock hour.
+ *
+ * @param {number} hour
+ * @param {string} locale
+ * @returns {string|undefined}
+ */
+export const getLocalizedTimePeriod = (hour, locale) => getLocalizedTimePeriodInfo(locale)
+  .find(item => item.hours.includes(hour))?.value;
+
+/**
+ * Convert a localized day-period and 12-hour value to a 24-hour value.
+ *
+ * @param {string|number} hour
+ * @param {string} period
+ * @param {string} locale
+ * @returns {number|undefined}
+ */
+export const getHourForLocalizedPeriod = (hour, period, locale) => {
+  const numericHour = Number.parseInt(hour, 10);
+  const periodInfo = getLocalizedTimePeriodInfo(locale).find(item => item.value === period);
+  return periodInfo?.hours.find(periodHour => (periodHour % 12 || 12) === numericHour);
 };
 
 /**
@@ -368,7 +552,7 @@ export function getLocalizedTimeFormatInfo(locale) {
             // An ICU 72 update places a unicode character \u202f (non-breaking space) before day period (am/pm).
             // This can make for differences that are imperceptible to humans, but automated tests know!
             // the \u202f character is best detected via its charCode... 8239
-            if (adjustedValue.charCodeAt(0) === 8239) {
+            if (adjustedValue.codePointAt(0) === 8239) {
               adjustedValue = ' ';
             }
             timeFormat += adjustedValue;
