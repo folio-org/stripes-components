@@ -4,36 +4,29 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 # Form submission
 
-Browsers submit a `<form>` when the user presses <kbd>Enter</kbd> while any of the form's internal text inputs are focused. Keyboard and screen reader users rely on it, and removing it without a good reason breaks a convention people bring with them from every other form on the web.
+Browsers implicitly submit a `<form>` when the user presses <kbd>Enter</kbd> while any of the form's internal text inputs are focused. Keyboard and screen reader users rely on it, and removing it without a good reason breaks a convention people bring with them from every other form on the web.
 
 ## When submit-on-Enter is expected
 
-For short forms — a single field, or a small handful of closely related fields — Enter-to-submit is the expected behavior, not an accident to guard against.
+For short forms — a single field, or a small handful of closely related fields — Enter-to-submit is the expected behavior.
 
 - **Search fields**: pressing Enter in a search box should run the search.
 - **Short forms (Ex: Login)**: there's nothing to lose by submitting early, so intercepting Enter here only adds friction.
 
 ## When premature submission is a problem
 
-On longer forms with multiple fields, sections, or unsaved repeatable rows, submitting because a user pressed Enter in an unrelated field can be a real annoyance: validation fires before the user is done, focus jumps away, or a record saves before it's ready. This is the case worth being careful about — but the fix is almost never "swallow Enter everywhere." It's usually one of the two gotchas below.
+On longer forms with multiple fields, sections, or unsaved repeatable rows, submitting because a user pressed Enter in an unrelated field can be a real annoyance: validation fires before the user is done, focus jumps away, or a record saves before it's ready. This is the case worth being careful about — but the fix is never "intercept Enter everywhere." It's usually one of the two cases below.
 
-## Accessibility gotchas
+## Exception cases
 
-### Buttons default to `type="submit"`
+Custom, complex components can render their own action buttons inside of a form — add/remove controls, inline row actions, icon buttons. These can require the user to press enter in order to confirm selected values. Pressing <kbd>Enter</kbd> to commit values or take another action with a section of a form feels natural.
 
-An HTML `<button>` with no explicit `type` defaults to `type="submit"`. Any button inside a `<form>` that isn't meant to submit — Add, Remove, Cancel, a toggle — will submit the form both on click and when it's focused and the user presses Enter, unless it's explicitly marked `type="button"`. The `<Button>` component defaults its `type` prop to "button" for this very reason.
+### The button `type` attribute
 
-[RepeatableField](/lib/RepeatableField/RepeatableField.js) sets this explicitly on its Add button for exactly this reason:
+An HTML `<button>` with no explicit `type` defaults to `type="submit"`. Inside a form, that means any button that isn't meant to submit — an Add or Remove control on a repeatable field, a cancel action, a toggle — will submit the form both when clicked and when it's focused and the user presses <kbd>Enter</kbd>, unless it's explicitly marked `type="button"`.
 
-```jsx
-<Button
-  ...
-  type="button"
-  ...
->
-```
+This is why the `<Button>` component defaults its `type` prop to `"button"`, and why [RepeatableField](/lib/RepeatableField/RepeatableField.js) sets `type="button"` explicitly on its Add button rather than relying on that default alone.
 
-Any custom component that renders its own action buttons inside a form — remove/add controls, inline row actions, icon buttons — should do the same. Don't rely on layout or styling to communicate "this isn't a submit button"; the `type` attribute is what the browser and assistive tech actually check.
 
 ### Enter inside an open overlay should act on the overlay, not the form
 
