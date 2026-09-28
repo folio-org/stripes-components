@@ -333,12 +333,10 @@ export const getLocalizedTimePeriodInfo = (locale) => {
 const normalizeLocalizedDigits = (value, locale) => {
   if (typeof value !== 'string') return value;
 
+  const digitFormatter = new Intl.NumberFormat(locale, { useGrouping: false });
   const localizedDigits = new Map();
   for (let digit = 0; digit < 10; digit += 1) {
-    localizedDigits.set(
-      new Intl.NumberFormat(locale, { useGrouping: false }).format(digit),
-      `${digit}`
-    );
+    localizedDigits.set(digitFormatter.format(digit), `${digit}`);
   }
 
   return [...value].map(character => localizedDigits.get(character) || character).join('');
@@ -403,32 +401,30 @@ export const parseLocalizedTime = (value, timeFormats, locale = DEFAULT_LOCALE) 
   const numericValue = normalizedValue.replace(period.value, '').trim();
   const numericFormat = meridiemFormat.replace('A', '').trim();
   const uses24HourFormat = /H/.test(numericFormat);
-  let numericTime = dayjs(numericValue, numericFormat, true);
-  let hour;
-  let minute;
+  const numericTime = dayjs(numericValue, numericFormat, true);
 
-  if (numericTime.isValid()) {
-    hour = Number(numericTime.format('H'));
-    minute = Number(numericTime.format('m'));
+  const resolveAgainstPeriod = (time) => {
+    const hour = Number(time.format('H'));
+    if (!period.hours.includes(hour)) return dayjs(Number.NaN);
+    return time.second(0).millisecond(0);
+  };
 
-    if (uses24HourFormat) {
-      if (!period.hours.includes(hour)) return dayjs(Number.NaN);
-      return numericTime.second(0).millisecond(0);
-    }
-  } else {
+  if (uses24HourFormat) {
+    return numericTime.isValid() ? resolveAgainstPeriod(numericTime) : dayjs(Number.NaN);
+  }
+
+  if (!numericTime.isValid()) {
     // Some callers provide a 24-hour numeric value together with a localized
     // day period, e.g. "下午22:40". Accept that representation when the
     // period agrees with the supplied hour, while retaining strict parsing for
     // ordinary 12-hour values.
     const twentyFourHourFormat = numericFormat.replace(/h{1,2}/, token => (token.length === 2 ? 'HH' : 'H'));
-    numericTime = dayjs(numericValue, twentyFourHourFormat, true);
-    if (!numericTime.isValid()) return dayjs(Number.NaN);
-
-    hour = Number(numericTime.format('H'));
-    if (!period.hours.includes(hour)) return dayjs(Number.NaN);
-    return numericTime.second(0).millisecond(0);
+    const twentyFourHourTime = dayjs(numericValue, twentyFourHourFormat, true);
+    return twentyFourHourTime.isValid() ? resolveAgainstPeriod(twentyFourHourTime) : dayjs(Number.NaN);
   }
 
+  const hour = Number(numericTime.format('H'));
+  const minute = Number(numericTime.format('m'));
   const matchingHours = period.hours.filter(periodHour => (periodHour % 12 || 12) === hour);
 
   if (!matchingHours.length) return dayjs(Number.NaN);
