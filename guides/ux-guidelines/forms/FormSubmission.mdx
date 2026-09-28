@@ -4,14 +4,14 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 # Form submission
 
-Browsers submit a `<form>` when the user presses <kbd>Enter</kbd> while any of the form's internal inputs are focused. Keyboard and screen reader users rely on it, and removing it without a good reason breaks a convention people bring with them from every other form on the web.
+Browsers submit a `<form>` when the user presses <kbd>Enter</kbd> while any of the form's internal text inputs are focused. Keyboard and screen reader users rely on it, and removing it without a good reason breaks a convention people bring with them from every other form on the web.
 
 ## When submit-on-Enter is expected
 
 For short forms — a single field, or a small handful of closely related fields — Enter-to-submit is the expected behavior, not an accident to guard against.
 
-- **Search fields**: pressing Enter in a search box should run the search. This is the whole point of the field, and users expect it.
-- **Login and other one-or-two-field forms**: there's nothing to lose by submitting early, so intercepting Enter here only adds friction.
+- **Search fields**: pressing Enter in a search box should run the search.
+- **Short forms (Ex: Login)**: there's nothing to lose by submitting early, so intercepting Enter here only adds friction.
 
 ## When premature submission is a problem
 
@@ -21,7 +21,7 @@ On longer forms with multiple fields, sections, or unsaved repeatable rows, subm
 
 ### Buttons default to `type="submit"`
 
-An HTML `<button>` with no explicit `type` defaults to `type="submit"`. Any button inside a `<form>` that isn't meant to submit — Add, Remove, Cancel, a toggle — will submit the form both on click and when it's focused and the user presses Enter, unless it's explicitly marked `type="button"`.
+An HTML `<button>` with no explicit `type` defaults to `type="submit"`. Any button inside a `<form>` that isn't meant to submit — Add, Remove, Cancel, a toggle — will submit the form both on click and when it's focused and the user presses Enter, unless it's explicitly marked `type="button"`. The `<Button>` component defaults its `type` prop to "button" for this very reason.
 
 [RepeatableField](/lib/RepeatableField/RepeatableField.js) sets this explicitly on its Add button for exactly this reason:
 
