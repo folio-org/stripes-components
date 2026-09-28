@@ -39,6 +39,14 @@ const DEFAULT_LOCALE = 'en-US';
 export class DayRange {
   /**
      * Create a DayRange.
+     *
+     * @example
+     * // Sample input:
+     * const range = new DayRange('2022-01-01', '2022-01-05');
+     * // Sample output:
+     * range.start.format('YYYY-MM-DD'); // '2022-01-01'
+     * range.end.format('YYYY-MM-DD'); // '2022-01-05'
+     *
      * @param {DayJS|dateString} start - the start value.
      * @param {DayJS|dateString} end - the end value.
      */
@@ -50,6 +58,12 @@ export class DayRange {
 
   /**
    * returns an array of contained dayjs day objects.
+   *
+   * @example
+   * // Sample input:
+   * const range = new DayRange('2022-01-01', '2022-01-03');
+   * // Sample output:
+   * range.asDayJSArray().map(d => d.format('YYYY-MM-DD')); // ['2022-01-01', '2022-01-02']
    *
    * @method
    * @name DayRange#asDayJSArray
@@ -68,6 +82,13 @@ export class DayRange {
   /**
    * equality check.
    *
+   * @example
+   * // Sample input:
+   * const a = new DayRange('2022-01-01', '2022-01-05');
+   * const b = new DayRange('2022-01-01', '2022-01-05');
+   * // Sample output:
+   * a.isSame(b); // true
+   *
    * @method
    * @name DayRange#isSame
    * @param { DayRange }
@@ -81,6 +102,12 @@ export class DayRange {
    * returns true if candidate is fully within or equal to the range. Can be used with single dayjs objects
    * or date strings as well.
    *
+   * @example
+   * // Sample input:
+   * const range = new DayRange('2022-01-01', '2022-01-10');
+   * // Sample output:
+   * range.contains('2022-01-05'); // true
+   *
    * @method
    * @name DayRange#contains
    * @param { DayRange|Dayjs }
@@ -89,7 +116,7 @@ export class DayRange {
   contains = (candidate) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
-      (this.contains(candidate.start) && this.contains(candidate.end));
+        (this.contains(candidate.start) && this.contains(candidate.end));
     } else {
       /*
         dayjs needs some additional configuration to include start and end dates
@@ -104,6 +131,13 @@ export class DayRange {
   /**
    * returns true if candidate start or end is within the range, or if candidate is equal to the range.
    *
+   * @example
+   * // Sample input:
+   * const range = new DayRange('2022-01-01', '2022-01-10');
+   * const candidate = new DayRange('2022-01-05', '2022-01-20');
+   * // Sample output:
+   * range.overlaps(candidate); // true
+   *
    * @method
    * @name DayRange#overlaps
    * @param { DayRange|Dayjs }
@@ -112,8 +146,8 @@ export class DayRange {
   overlaps = (candidate) => {
     if (candidate instanceof DayRange) {
       return this.isSame(candidate) ||
-      this.contains(candidate.start) ||
-      this.contains(candidate.end);
+        this.contains(candidate.start) ||
+        this.contains(candidate.end);
     } else {
       throw new Error('parameter should be a DayRange instance');
     }
@@ -123,6 +157,12 @@ export class DayRange {
 /**
  * Since Moment is still in use, we can keep this for sake of easing the transition.
  * @deprecated
+ *
+ * @example
+ * // Sample input:
+ * getMomentLocalizedFormat({ locale: 'en-US' });
+ * // Sample output:
+ * // 'MM/DD/YYYY'
  *
  * @export
  * @param {*} intl
@@ -138,6 +178,12 @@ export function getMomentLocalizedFormat(intl) {
  * getDayJSLocalizedFormat
  * Fallback function in case getLocaleDateFormat is unable to perform.
  *
+ * @example
+ * // Sample input:
+ * getDayJSLocalizedFormat({ locale: 'en-US' });
+ * // Sample output:
+ * // 'MM/DD/YYYY'
+ *
  * @export
  * @param {*} intl
  * @returns {String}
@@ -147,27 +193,38 @@ export const getDayJSLocalizedFormat = (intl) => {
   return dayjs.localeData().longDateFormat('L');
 };
 
-/** dateCanBeParsed
+/**
+ * dateCanBeParsed
  *  Due to some differentiating behavior between passing a single formats vs an array of formats to Dayjs.utc,
  *  we're implementing this utility function...
  *  We can probably remove this once https://github.com/iamkun/dayjs/pull/1914 is merged...
+ *
+ * @example
+ * // Sample input:
+ * dateCanBeParsed('2022-07-20', ['YYYY-MM-DD', 'MM/DD/YYYY']);
+ * // Sample output:
+ * // { isValid: true, validFormat: 'YYYY-MM-DD' }
  *
  * @export
  * @param {String} value - the date string to be validated.
  * @param {Array.<String>} formats - an array of formats to attempt parsing the value with. The first to
  *  parse successfully will be returned as the validFormat.
  * @returns {String}
-*/
+ */
 export const dateCanBeParsed = (value, formats) => ({
   isValid: formats.some((f) => dayjs.utc(value, f).isValid()),
   validFormat: formats[formats.findIndex((f) => dayjs(value, f, true).isValid())]
 });
 
-
-
 /**
  * getCompatibleDayJSLocale -
  * Function that returns an existing DayJS locale. Returns undefined if the static locale does not exist.
+ *
+ * @example
+ * // Sample input:
+ * getCompatibleDayJSLocale('en-SE', 'en');
+ * // Sample output:
+ * // 'en-SE'
  *
  * @param {String} locale  - locale string ex : 'en-SE'
  * @param {String} parentLocale - 2 character language of the locale...ex parentLocale of
@@ -197,8 +254,15 @@ export const getCompatibleDayJSLocale = (locale, parentLanguage) => {
 /**
  * loadDayJSLocale
  * dynamically loads a DayJS locale and sets the global DayJS locale.
+ *
+ * @example
+ * // Sample input:
+ * loadDayJSLocale('fr', (loadedLocale) => console.log(loadedLocale));
+ * // Sample output:
+ * // 'fr' (logged once the locale is loaded and dayjs.locale('fr') has been set)
+ *
  * @param {string} locale
- * */
+ */
 export function loadDayJSLocale(locale, cb = noop) {
   const parentLocale = locale.split('-')[0];
   // Locale loading setup for DayJS
@@ -235,6 +299,12 @@ export function loadDayJSLocale(locale, cb = noop) {
  * Returns a localized format.
  * Format will be a string similar to YYYY.MM.DD - something that can be
  * passed to moment/dayjs for parsing/formatting purposes.
+ * @example
+ * // Sample input:
+ * getLocaleDateFormat({ intl: { locale: 'en-US' } });
+ * // Sample output:
+ * // 'MM/DD/YYYY'
+ *
  * @export
  * @param {Object} settings -
  * @param {Object} settings.intl - the intl object from context
@@ -306,6 +376,15 @@ export const getLocaleDateFormat = ({ intl, config }) => {
  * label. This keeps time parsing and formatting independent of DayJS locale
  * data, which can use different day-period boundaries than Intl.
  *
+ * @example
+ * // Sample input:
+ * getLocalizedTimePeriodInfo('en-US');
+ * // Sample output:
+ * // [
+ * //   { value: 'AM', hours: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] },
+ * //   { value: 'PM', hours: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] },
+ * // ]
+ *
  * @param {string} locale
  * @returns {Array<{ value: string, hours: number[] }>}
  */
@@ -330,6 +409,20 @@ export const getLocalizedTimePeriodInfo = (locale) => {
   return periods;
 };
 
+/**
+ * Convert the localized digits within a string to their ASCII (0-9) equivalents,
+ * using the digit representations produced by Intl for the given locale.
+ *
+ * @example
+ * // Sample input:
+ * normalizeLocalizedDigits('٤:٢٠', 'ar');
+ * // Sample output:
+ * // '4:20'
+ *
+ * @param {string} value - the string potentially containing localized digits.
+ * @param {string} locale - the BCP 47 locale used to resolve localized digits.
+ * @returns {string} the value with any localized digits replaced by ASCII digits.
+ */
 const normalizeLocalizedDigits = (value, locale) => {
   if (typeof value !== 'string') return value;
 
@@ -357,13 +450,19 @@ const normalizeLocalizedDigits = (value, locale) => {
  * // Sample output:
  * parsed.format('HH:mm'); // '16:20'
  *
+ * // Garbage input:
+ * const parsed = parseLocalizedTime('invalid', 'Ah:mm', 'en-US');
+ * // Garbage output:
+ * parsed.format('HH:mm'); // 'Invalid Date'
+ *
+ *
  * @param {string} value - The localized time string to parse.
  * @param {string|string[]} timeFormats - One or more strict DayJS time
  * formats, such as `h:mm A` or `Ah:mm`.
  * @param {string} [locale='en-US'] - The BCP 47 locale used to resolve
  * localized digits and day-period labels.
  * @returns {DayJS} A parsed DayJS value, or an invalid value when parsing
- * fails.
+ * fails
  */
 export const parseLocalizedTime = (value, timeFormats, locale = DEFAULT_LOCALE) => {
   const formats = Array.isArray(timeFormats) ? timeFormats : [timeFormats];
@@ -440,6 +539,12 @@ export const parseLocalizedTime = (value, timeFormats, locale = DEFAULT_LOCALE) 
  * Format a DayJS value using the localized day-period labels supplied by Intl.
  * Numeric formatting remains controlled by the supplied DayJS format.
  *
+ * @example
+ * // Sample input:
+ * formatLocalizedTime(dayjs('2022-04-10T16:20:00'), 'zh-TW', 'h:mm A');
+ * // Sample output:
+ * // '4:20 下午'
+ *
  * @param {DayJS} value
  * @param {string} locale
  * @param {string} timeFormat
@@ -461,6 +566,12 @@ export const formatLocalizedTime = (value, locale, timeFormat) => {
 /**
  * Return the localized day-period label for a 24-hour clock hour.
  *
+ * @example
+ * // Sample input:
+ * getLocalizedTimePeriod(16, 'en-US');
+ * // Sample output:
+ * // 'PM'
+ *
  * @param {number} hour
  * @param {string} locale
  * @returns {string|undefined}
@@ -470,6 +581,12 @@ export const getLocalizedTimePeriod = (hour, locale) => getLocalizedTimePeriodIn
 
 /**
  * Convert a localized day-period and 12-hour value to a 24-hour value.
+ *
+ * @example
+ * // Sample input:
+ * getHourForLocalizedPeriod(4, 'PM', 'en-US');
+ * // Sample output:
+ * // 16
  *
  * @param {string|number} hour
  * @param {string} period
@@ -577,17 +694,25 @@ export function getLocalizedTimeFormatInfo(locale) {
   };
 }
 
-/** Parses time without DST.
+/**
+ * removeDST
+ * Parses time without DST.
  * DST moves time forward an hour - so +1 to the utc offset - but thankfully, it's not in use for majority ranges.
  * given 2 static sample dates that are far enough apart, you'd get one that wasn't
  * in DST if it's observed in your locale.
  * so we can use the non-DST date to avoid off-by-1-hour time issues.
  *
+ * @example
+ * // Sample input:
+ * removeDST('2022-07-20T14:30:00', 'HH:mm');
+ * // Sample output:
+ * // '14:30'
+ *
  * @export
  * @param {String} dateTime
  * @param {String} timeFormat
  * @returns {String}
-*/
+ */
 export function removeDST(dateTime, timeFormat) {
   const julDate = '2022-07-20';
   const janDate = '2022-01-01';
@@ -602,6 +727,12 @@ export function removeDST(dateTime, timeFormat) {
 
 /**
  * Version of removeDST using DayJS
+ *
+ * @example
+ * // Sample input:
+ * removeDSTDayJS('2022-07-20T14:30:00', 'HH:mm');
+ * // Sample output:
+ * // '14:30'
  *
  * @export
  * @param {String} dateTime
