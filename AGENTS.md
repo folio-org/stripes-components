@@ -16,7 +16,6 @@ yarn eslint                    # eslint only
 yarn stylelint                 # stylelint on lib/**/*.css only
 yarn storybook                 # run Storybook locally (dev mode, port 9001)
 yarn storybook-build           # build static Storybook to .out
-yarn docgen                    # regenerate docs/reactdoc.json via react-docgen
 ```
 
 There is no single-test CLI flag baked into `package.json` — `stripes test karma` (from `@folio/stripes-cli`) runs the whole suite via Karma/webpack. To focus on one test while iterating, use Mocha's `it.only`/`describe.only` in the test file itself, or watch mode (`yarn test-dev`) and rely on `it.only`.
