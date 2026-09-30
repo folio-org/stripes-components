@@ -81,7 +81,8 @@ Name | type | description | default | required
 `dirty` | bool | Mark 'true' when value has changes. | |
 `error` | node | Error string to display after textfield in case of validation error. | |
 `valid` | bool | Applies success validation style to `<Editor>` | |
-`validStylesEnabled` | bool | When set to false, `<Editor>` will not display validation styles. | `false` |
+`validationEnabled` | bool | When set to false, `<Editor>` will not display validation styles. | `true` |
+`validStylesEnabled` | bool | When set to false, `<Editor>` will not display validation styles for valid values. | `false` |
 `warning` | node | Validation warning. Renders node below `<Editor>` with warning styling. | |
 
 ## Style Props
