@@ -5,24 +5,16 @@ import {
   beforeEach,
   afterEach,
 } from 'mocha';
-import {
-  interactor,
-  clickable,
-} from '@bigtest/interactor';
+import { Button, HTML } from '@folio/stripes-testing';
 import sinon from 'sinon';
 import { expect } from 'chai';
 import { mountWithContext } from '../../tests/helpers';
 
 import useClickOutside from '../useClickOutside';
 
-const UseClickOutsideInteractor = interactor(class UseClickOutsideInteractor {
-  static defaultScope = '#test-component';
-  clickOutsideElement = clickable('#click-outside-element');
-  clickInsideElement = clickable('#click-inside-element');
-});
-
 describe('useClickOutside', () => {
-  const useClickOutsideInteractor = new UseClickOutsideInteractor();
+  const clickOutsideElement = HTML({ id: 'click-outside-element' });
+  const clickInsideElement = Button({ id: 'click-inside-element' });
   const onClickSpy = sinon.spy();
 
   const TestComponent = ({ onClick }) => {
@@ -62,7 +54,7 @@ describe('useClickOutside', () => {
 
   describe('when clicking outside element', () => {
     beforeEach(async () => {
-      await useClickOutsideInteractor.clickOutsideElement();
+      await clickOutsideElement.click();
     });
 
     it('should call onClick', () => {
@@ -72,7 +64,7 @@ describe('useClickOutside', () => {
 
   describe('when clicking inside element', () => {
     beforeEach(async () => {
-      await useClickOutsideInteractor.clickInsideElement();
+      await clickInsideElement.click();
     });
 
     it('should not call onClick', () => {
@@ -82,7 +74,7 @@ describe('useClickOutside', () => {
 
   describe('when other click handler removes click target from DOM', () => {
     beforeEach(async () => {
-      await useClickOutsideInteractor.clickInsideElement();
+      await clickInsideElement.click();
     });
 
     it('should still give correct results', () => {

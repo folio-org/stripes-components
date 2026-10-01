@@ -3,39 +3,40 @@ import { describe, beforeEach, it } from 'mocha';
 import { expect } from 'chai';
 
 import FocusableHarness from './FocusableHarness/FocusableHarness';
-import FocusableInteractor from './FocusableHarness/FocusableInteractor';
 import { getNextFocusable, getPreviousFocusable } from '../getFocusableElements';
 import { mount } from '../../tests/helpers';
 
 describe('getFocusableElements', () => {
-  const focal = new FocusableInteractor();
+  const buttons = () => [...document.querySelectorAll('button')];
+  const container = () => document.getElementById('container');
+
   beforeEach(async () => {
     await mount(<FocusableHarness />);
   });
 
   it('renders', () => {
-    expect(focal.buttons().length).to.equal(6);
+    expect(buttons().length).to.equal(6);
   });
 
   describe('getNextFocusable', () => {
     it('with no parameters, it gets the first focusable element in the document', () => {
-      expect(getNextFocusable().id).to.equal(focal.buttons(0).$root.id);
+      expect(getNextFocusable().id).to.equal(buttons()[0].id);
     });
 
     it('gets the next focusable element', () => {
-      expect(getNextFocusable(focal.buttons(0).$root).id).to.equal(focal.buttons(1).$root.id);
+      expect(getNextFocusable(buttons()[0]).id).to.equal(buttons()[1].id);
     });
 
     it('gets the next focusable within a container', () => {
-      expect(getNextFocusable(focal.container.$root, true, true).id).to.equal(focal.buttons(2).$root.id);
+      expect(getNextFocusable(container(), true, true).id).to.equal(buttons()[2].id);
     });
 
     it('gets the next focusable excluding container contents', () => {
-      expect(getNextFocusable(focal.container.$root, false).id).to.equal(focal.buttons(4).$root.id);
+      expect(getNextFocusable(container(), false).id).to.equal(buttons()[4].id);
     });
 
     it('loops to the beginning of the document', () => {
-      expect(getNextFocusable(focal.buttons(4).$root).id).to.equal(focal.buttons(0).$root.id);
+      expect(getNextFocusable(buttons()[4]).id).to.equal(buttons()[0].id);
     });
 
     it('returns null if no querySelectorAll method is available', () => {
@@ -43,25 +44,25 @@ describe('getFocusableElements', () => {
     });
 
     it('returns same element if looping is false and last element provided', () => {
-      expect(getNextFocusable(focal.buttons(4).$root, true, false, false).id).to.equal(focal.buttons(4).$root.id);
+      expect(getNextFocusable(buttons()[4], true, false, false).id).to.equal(buttons()[4].id);
     });
   });
 
   describe('getPreviousFocusable', () => {
     it('gets the previous focusable element', () => {
-      expect(getPreviousFocusable(focal.buttons(1).$root).id).to.equal(focal.buttons(0).$root.id);
+      expect(getPreviousFocusable(buttons()[1]).id).to.equal(buttons()[0].id);
     });
 
     it('gets the previous focusable within a container', () => {
-      expect(getPreviousFocusable(focal.container.$root, true, true).id).to.equal(focal.buttons(3).$root.id);
+      expect(getPreviousFocusable(container(), true, true).id).to.equal(buttons()[3].id);
     });
 
     it('gets the previous focusable excluding container contents', () => {
-      expect(getPreviousFocusable(focal.container.$root, false).id).to.equal(focal.buttons(1).$root.id);
+      expect(getPreviousFocusable(container(), false).id).to.equal(buttons()[1].id);
     });
 
     it('loops to the end of the document', () => {
-      expect(getPreviousFocusable(focal.buttons(0).$root).id).to.equal(focal.buttons(4).$root.id);
+      expect(getPreviousFocusable(buttons()[0]).id).to.equal(buttons()[4].id);
     });
 
     it('returns null if no querySelectorAll method is available', () => {
@@ -69,7 +70,7 @@ describe('getFocusableElements', () => {
     });
 
     it('returns same element if looping is false and first element provided', () => {
-      expect(getPreviousFocusable(focal.buttons(0).$root, true, false, false).id).to.equal(focal.buttons(0).$root.id);
+      expect(getPreviousFocusable(buttons()[0], true, false, false).id).to.equal(buttons()[0].id);
     });
   });
 });
