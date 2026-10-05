@@ -26,6 +26,10 @@
 * Directly implement `<HotKeys>` and `<FocusTrap>` instead of importing them. Refs STCOM-1356.
 * bugfix: `<Paneset>` correctly manages its resize-listeners. Refs STCOM-1553.
 * Hotkeys should not execute shortcut handler if altgraph (diacritics) are detected. Refs STCOM-1557.
+* bugfix: correctly handle `zh-TW` (and all locales) in `<Timepicker>`; ditch moment for dayjs. Refs STCOM-569.
+* Add "bell" icon to the collection. Refs STCOM-1555.
+* Document form submission behavior (Enter key behavior). Refs STCOM-1542.
+* `<Popover>` - `autoFocusContent` prop to control focus on component mount. Refs STCOM-1559.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
