@@ -29,6 +29,7 @@
 * Add "bell" icon to the collection. Refs STCOM-1555.
 * Document form submission behavior (Enter key behavior). Refs STCOM-1542.
 * `<Popover>` - `autoFocusContent` prop to control focus on component mount. Refs STCOM-1559.
+* `<Editor>` - replace React-Quill with TipTap editor. Refs STCOM-1553.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
