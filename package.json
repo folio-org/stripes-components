@@ -22,8 +22,9 @@
     "prestorybook-build": "yarn docs:readme:generate",
     "storybook-build": "storybook build -c .storybook -o .out",
     "stylelint": "stylelint \"lib/**/*.css\"",
-    "test": "stripes test karma",
-    "test-dev": "stripes test karma --watch"
+    "test": "node playwright/run.js",
+    "test-dev": "node playwright/run.js --headed",
+    "test:karma": "stripes test karma"
   },
   "stripes": {
     "type": "components",
@@ -68,9 +69,13 @@
     "core-js": "^3.6.1",
     "eslint": "^8.31.0",
     "faker": "^4.1.0",
+    "istanbul-lib-coverage": "^3.2.2",
+    "istanbul-lib-report": "^3.0.1",
+    "istanbul-reports": "^3.1.7",
     "karma-viewport": "^1.0.4",
     "mocha": "^10.2.0",
     "moment": "^2.29.0",
+    "playwright": "^1.63.0",
     "postcss": "^8.4.2",
     "postcss-custom-media": "^9.0.1",
     "postcss-import": "^15.0.1",
@@ -127,4 +132,3 @@
     "react-router-dom": "^5.2.0"
   }
 }
-
