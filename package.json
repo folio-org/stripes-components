@@ -55,7 +55,7 @@
     "@csstools/postcss-global-data": "^3.0.0",
     "@csstools/postcss-relative-color-syntax": "^3.0.7",
     "@folio/eslint-config-stripes": "^8.0.0",
-    "@folio/stripes-cli": "github.com/folio-org/stripes-cli#karma-to-playwright",
+    "@folio/stripes-cli": "^5.0.0",
     "@folio/stripes-testing": "^5.1.0",
     "@storybook/addon-docs": "^10.3.5",
     "@storybook/react-webpack5": "^10.3.5",
