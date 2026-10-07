@@ -61,3 +61,15 @@ Components can apply the data attribute `data-focus-exclude` if they wish to be 
   icon="times"
 />
 ```
+## sanitizeHtml(html, config)
+
+Sanitizes HTML (for example markup from a backend response) with DOMPurify before it is rendered. By default only formatting tags, anchors and images are kept; interactive elements (`form`, `input`, `button`, `select`, `textarea`, ...), `script`, `style`, `iframe`, `svg`, `math`, event-handler attributes (`on*`), `style`/`srcset` attributes, `data-*` attributes and `javascript:`/`data:` URLs are removed. Links with `target` get `rel="noopener noreferrer"`. Non-string input is returned unchanged.
+
+```
+import { sanitizeHtml, defaultSanitizeConfig } from '@folio/stripes/components';
+
+sanitizeHtml(html);
+sanitizeHtml(html, { ADD_TAGS: ['mark'] });
+```
+
+The optional second argument is a DOMPurify config layered over `defaultSanitizeConfig` (also exported). Array options (`ALLOWED_TAGS`, `ADD_TAGS`, `ADD_ATTR`, ...) are merged with the defaults. The forbidden tag/attribute lists can be extended but never reduced, so an override cannot re-enable forbidden elements or attributes.
