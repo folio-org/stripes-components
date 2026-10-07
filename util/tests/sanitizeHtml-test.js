@@ -39,6 +39,19 @@ describe('sanitizeHtml', () => {
     });
   });
 
+  describe('tables', () => {
+    it('keeps table structure and span/scope attributes', () => {
+      const html = '<table><thead><tr><th scope="col">h</th></tr></thead><tbody><tr><td colspan="2" rowspan="1">c</td></tr></tbody></table>';
+      expect(sanitizeHtml(html)).to.equal(html);
+    });
+
+    it('still strips handlers and unsafe styles inside tables', () => {
+      const out = sanitizeHtml('<table onclick="x()"><tr><td style="position: fixed; color: red" onmouseover="x()">c</td></tr></table>');
+      expect(out).to.not.match(/onclick|onmouseover|position/);
+      expect(out).to.include('color: red');
+    });
+  });
+
   describe('style attribute', () => {
     it('keeps allowlisted properties with safe values', () => {
       const html = '<span style="color: rgb(230, 0, 0); background-color: #ff0">t</span>';

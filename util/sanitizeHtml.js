@@ -33,9 +33,13 @@ export const defaultSanitizeConfig = Object.freeze({
   ALLOWED_TAGS: [
     'a', 'img', 'p', 'br', 'div', 'span', 'strong', 'b', 'em', 'i', 'u', 's', 'strike',
     'sub', 'sup', 'blockquote', 'pre', 'code', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-    'ul', 'ol', 'li',
+    'ul', 'ol', 'li', 'hr',
+    'table', 'caption', 'colgroup', 'col', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td',
   ],
-  ALLOWED_ATTR: ['href', 'target', 'rel', 'class', 'style', 'src', 'alt', 'width', 'height'],
+  ALLOWED_ATTR: [
+    'href', 'target', 'rel', 'class', 'style', 'src', 'alt', 'width', 'height',
+    'colspan', 'rowspan', 'scope', 'align', 'valign',
+  ],
   FORBID_TAGS: FORBIDDEN_TAGS,
   FORBID_ATTR: FORBIDDEN_ATTRS,
   ALLOW_DATA_ATTR: false,
