@@ -10,9 +10,19 @@ const FORBIDDEN_TAGS = [
 
 // DOMPurify already drops `on*` handlers. They're listed along with a hook (below) for defense in depth.
 const FORBIDDEN_ATTRS = [
-  'style', 'srcset', 'formaction',
+  'srcset', 'formaction',
   'onerror', 'onload', 'onclick', 'onmouseover', 'onfocus',
 ];
+
+// Inline styles are kept, but only these properties survive (see sanitizeStyle).
+const ALLOWED_STYLE_PROPERTIES = [
+  'color', 'background-color', 'font-family', 'font-size', 'font-style', 'font-weight',
+  'text-align', 'text-decoration', 'text-indent', 'line-height', 'direction',
+];
+// Plain values only: words, numbers, units, colors, rgb()/hsl() and quoted font names.
+// No url(), escapes, comments, slashes, colons, `@` or angle brackets.
+const SAFE_STYLE_VALUE = /^[\w\s#%.,()'"+-]*$/;
+const UNSAFE_STYLE_FUNCTION = /(?:url|expression|image-set|element|attr|var)\s*\(/i;
 
 // Only web, mail and phone links, relative URLs and raster image data URIs.
 // Notably excludes `javascript:`, `vbscript:` and `data:text/html`.
@@ -25,7 +35,7 @@ export const defaultSanitizeConfig = Object.freeze({
     'sub', 'sup', 'blockquote', 'pre', 'code', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
     'ul', 'ol', 'li',
   ],
-  ALLOWED_ATTR: ['href', 'target', 'rel', 'class', 'src', 'alt', 'width', 'height'],
+  ALLOWED_ATTR: ['href', 'target', 'rel', 'class', 'style', 'src', 'alt', 'width', 'height'],
   FORBID_TAGS: FORBIDDEN_TAGS,
   FORBID_ATTR: FORBIDDEN_ATTRS,
   ALLOW_DATA_ATTR: false,
@@ -54,6 +64,30 @@ const mergeConfig = (config = {}) => {
   return merged;
 };
 
+// Reduce a style attribute to allowlisted properties with safe values. Returns '' if nothing remains.
+const sanitizeStyle = (style) => String(style)
+  .split(';')
+  .map(declaration => {
+    const index = declaration.indexOf(':');
+    if (index < 1) return null;
+
+    const property = declaration.slice(0, index).trim().toLowerCase();
+    const value = declaration.slice(index + 1).trim().replace(/\s*!important$/i, '');
+
+    if (!ALLOWED_STYLE_PROPERTIES.includes(property) ||
+      !value ||
+      !SAFE_STYLE_VALUE.test(value) ||
+      UNSAFE_STYLE_FUNCTION.test(value)) {
+      return null;
+    }
+
+    return `${property}: ${value}`;
+  })
+  .filter(Boolean)
+  .join('; ');
+
+const normalizeStyle = (style) => String(style).replace(/\s*([:;])\s*/g, '$1').replace(/;$/, '').trim().toLowerCase();
+
 let purifier;
 // set by hooks when they alter markup without DOMPurify recording a removal.
 let hookModified = false;
@@ -70,6 +104,20 @@ const getPurifier = () => {
 
     if (name.startsWith('on')) {
       data.keepAttr = false;
+      return;
+    }
+
+    if (name === 'style') {
+      const cleaned = sanitizeStyle(data.attrValue);
+
+      if (!cleaned) {
+        data.keepAttr = false;
+      } else if (normalizeStyle(cleaned) !== normalizeStyle(data.attrValue)) {
+        // only rewritten when declarations were actually removed; formatting-only differences
+        // (spacing, trailing semicolon) keep the original so editor content isn't churned.
+        data.attrValue = cleaned;
+        hookModified = true;
+      }
       return;
     }
 

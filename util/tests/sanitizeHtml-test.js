@@ -28,14 +28,41 @@ describe('sanitizeHtml', () => {
   });
 
   describe('attributes', () => {
-    it('strips event handlers and style from allowed tags', () => {
-      const out = sanitizeHtml('<p onmouseover="x()" style="color:red">t</p><a href="https://a.b" onclick="x()">l</a>');
-      expect(out).to.not.match(/onmouseover|onclick|style/);
+    it('strips event handlers from allowed tags', () => {
+      const out = sanitizeHtml('<p onmouseover="x()">t</p><a href="https://a.b" onclick="x()">l</a>');
+      expect(out).to.not.match(/onmouseover|onclick/);
       expect(out).to.include('href="https://a.b"');
     });
 
     it('drops data-* attributes', () => {
       expect(sanitizeHtml('<p data-x="1">t</p>')).to.equal('<p>t</p>');
+    });
+  });
+
+  describe('style attribute', () => {
+    it('keeps allowlisted properties with safe values', () => {
+      const html = '<span style="color: rgb(230, 0, 0); background-color: #ff0">t</span>';
+      expect(sanitizeHtml(html)).to.equal(html);
+    });
+
+    it('drops disallowed properties but keeps the rest', () => {
+      const out = sanitizeHtml('<p style="color: red; position: fixed; top: 0">t</p>');
+      expect(out).to.equal('<p style="color: red">t</p>');
+    });
+
+    it('drops url(), expression() and escaped values', () => {
+      expect(sanitizeHtml('<p style="color: red; background-color: url(https://x.test/a.png)">t</p>')).to.equal('<p style="color: red">t</p>');
+      expect(sanitizeHtml('<p style="color: expression(alert(1))">t</p>')).to.equal('<p>t</p>');
+      expect(sanitizeHtml('<p style="color: \\72 ed">t</p>')).to.equal('<p>t</p>');
+      expect(sanitizeHtml('<p style="font-family: x; color: red/*">t</p>')).to.equal('<p style="font-family: x">t</p>');
+    });
+
+    it('removes the attribute when nothing safe remains', () => {
+      expect(sanitizeHtml('<p style="position: absolute">t</p>')).to.equal('<p>t</p>');
+    });
+
+    it('can still be forbidden by a consumer', () => {
+      expect(sanitizeHtml('<p style="color: red">t</p>', { FORBID_ATTR: ['style'] })).to.equal('<p>t</p>');
     });
   });
 
@@ -97,8 +124,8 @@ describe('sanitizeHtml', () => {
     });
 
     it('cannot re-enable forbidden attributes', () => {
-      const out = sanitizeHtml('<p style="color:red">t</p>', { ADD_ATTR: ['style'], FORBID_ATTR: [] });
-      expect(out).to.not.include('style');
+      const out = sanitizeHtml('<p srcset="x">t</p>', { ADD_ATTR: ['srcset'], FORBID_ATTR: [] });
+      expect(out).to.not.include('srcset');
     });
   });
 });

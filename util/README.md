@@ -63,7 +63,7 @@ Components can apply the data attribute `data-focus-exclude` if they wish to be 
 ```
 ## sanitizeHtml(html, config)
 
-Sanitizes HTML (for example markup from a backend response) with DOMPurify before it is rendered. By default only formatting tags, anchors and images are kept; interactive elements (`form`, `input`, `button`, `select`, `textarea`, ...), `script`, `style`, `iframe`, `svg`, `math`, event-handler attributes (`on*`), `style`/`srcset` attributes, `data-*` attributes and `javascript:`/`data:` URLs are removed. Links with `target` get `rel="noopener noreferrer"`. Non-string input is returned unchanged.
+Sanitizes HTML (for example markup from a backend response) with DOMPurify before it is rendered. By default only formatting tags, anchors and images are kept; interactive elements (`form`, `input`, `button`, `select`, `textarea`, ...), `script`, `style`, `iframe`, `svg`, `math`, event-handler attributes (`on*`), `srcset` attributes, `data-*` attributes and `javascript:`/`data:` URLs are removed. The `style` attribute is kept but reduced to a small allowlist of presentational properties (colors, fonts, text alignment, etc.) with plain values; anything with `url()`, `expression()`, escapes or other properties is dropped. Links with `target` get `rel="noopener noreferrer"`. Non-string input is returned unchanged.
 
 ```
 import { sanitizeHtml, defaultSanitizeConfig } from '@folio/stripes/components';
