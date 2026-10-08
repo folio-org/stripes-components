@@ -15,19 +15,20 @@ const FORBIDDEN_ATTRS = [
 ];
 
 // Inline styles are kept, but only these properties survive (see sanitizeStyle).
-const ALLOWED_STYLE_PROPERTIES = [
+const ALLOWED_STYLE_PROPERTIES = new Set([
   'color', 'background-color', 'font-family', 'font-size', 'font-style', 'font-weight',
   'text-align', 'text-decoration', 'text-indent', 'line-height', 'direction',
-];
+]);
 // Plain values only: words, numbers, units, colors, rgb()/hsl() and quoted font names.
 // No url(), escapes, comments, slashes, colons, `@` or angle brackets.
 const SAFE_STYLE_VALUE = /^[\w\s#%.,()'"+-]*$/;
 const UNSAFE_STYLE_FUNCTION = /(?:url|expression|image-set|element|attr|var)\s*\(/i;
 
-// Only web, mail and phone links, relative URLs and raster image data URIs.
-// Notably excludes `javascript:`, `vbscript:` and `data:text/html`.
-const ALLOWED_URI_REGEXP = /^(?:(?:https?|mailto|tel):|data:image\/(?:png|jpe?g|gif|webp)[;,]|[^a-z]|[a-z+.-]+(?:[^a-z+.\-:]|$))/i;
 const SAFE_DATA_IMAGE = /^data:image\/(?:png|jpe?g|gif|webp)[;,]/i;
+
+// Only web, mail and phone links, raster image data URIs, and relative URLs (no ':' before the
+// first '/', '?' or '#'). Notably excludes `javascript:`, `vbscript:` and `data:text/html`.
+const ALLOWED_URI_REGEXP = /^(?:(?:https?|mailto|tel):|data:image\/(?:png|jpe?g|gif|webp)[;,]|[^:]*(?:[/?#]|$))/i;
 
 export const defaultSanitizeConfig = Object.freeze({
   ALLOWED_TAGS: [
@@ -78,7 +79,7 @@ const sanitizeStyle = (style) => String(style)
     const property = declaration.slice(0, index).trim().toLowerCase();
     const value = declaration.slice(index + 1).trim().replace(/\s*!important$/i, '');
 
-    if (!ALLOWED_STYLE_PROPERTIES.includes(property) ||
+    if (!ALLOWED_STYLE_PROPERTIES.has(property) ||
       !value ||
       !SAFE_STYLE_VALUE.test(value) ||
       UNSAFE_STYLE_FUNCTION.test(value)) {
