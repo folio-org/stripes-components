@@ -15,13 +15,11 @@
     "docs:readme:clean": "node ./scripts/generate-readme-mdx.js --clean",
     "docs:readme:generate": "node ./scripts/generate-readme-mdx.js",
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "eslint": "eslint ./",
     "formatjs-compile": "stripes translate compile",
-    "lint": "eslint ./ && stylelint \"lib/**/*.css\"",
+    "lint": "stripes-lint .",
     "storybook": "node ./scripts/run-storybook-dev.js",
     "prestorybook-build": "yarn docs:readme:generate",
     "storybook-build": "storybook build -c .storybook -o .out",
-    "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
     "test-dev": "stripes test karma --watch"
   },
@@ -54,7 +52,7 @@
     "@bigtest/interactor": "0.7.2",
     "@csstools/postcss-global-data": "^3.0.0",
     "@csstools/postcss-relative-color-syntax": "^3.0.7",
-    "@folio/eslint-config-stripes": "^8.0.0",
+    "@folio/eslint-config-stripes": "^10.0.0",
     "@folio/stripes-cli": "^4.0.0",
     "@folio/stripes-testing": "^5.1.0",
     "@storybook/addon-docs": "^10.3.5",
@@ -66,7 +64,6 @@
     "babel-plugin-remove-jsx-attributes": "^0.0.2",
     "chai": "^4.1.2",
     "core-js": "^3.6.1",
-    "eslint": "^8.31.0",
     "faker": "^4.1.0",
     "karma-viewport": "^1.0.4",
     "mocha": "^10.2.0",
@@ -88,10 +85,7 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "sinon": "^17.0.0",
-    "storybook": "^10.3.5",
-    "stylelint": "^16.2.0",
-    "stylelint-config-standard": "^36.0.0",
-    "stylelint-junit-formatter": "^0.2.2"
+    "storybook": "^10.3.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
