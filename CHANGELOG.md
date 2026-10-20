@@ -10,6 +10,7 @@
 * bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
 * `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
+* Add reusable `sanitizeHtml` utility and `defaultSanitizeConfig` with a strict DOMPurify allowlist (no interactive elements other than anchors, no event handlers, restricted URLs). `<Editor>` now uses it.
 * bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-1525
 * Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1524.
 * `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.

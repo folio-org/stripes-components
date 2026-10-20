@@ -161,6 +161,7 @@ export {
 } from './util/dateTimeUtils';
 export { default as RootCloseWrapper } from './util/RootCloseWrapper';
 export { default as omitProps } from './util/omitProps';
+export { sanitizeHtml, defaultSanitizeConfig } from './util/sanitizeHtml';
 export {
   getNextFocusable,
   getPreviousFocusable,
