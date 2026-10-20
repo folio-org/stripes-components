@@ -28,7 +28,7 @@ const SAFE_DATA_IMAGE = /^data:image\/(?:png|jpe?g|gif|webp)[;,]/i;
 
 // Only web, mail and phone links, raster image data URIs, and relative URLs (no ':' before the
 // first '/', '?' or '#'). Notably excludes `javascript:`, `vbscript:` and `data:text/html`.
-const ALLOWED_URI_REGEXP = /^(?:(?:https?|mailto|tel):|data:image\/(?:png|jpe?g|gif|webp)[;,]|[^:]*(?:[/?#]|$))/i;
+const ALLOWED_URI_REGEXP = /^(?:(?:https?|mailto|tel):|data:image\/(?:png|jpe?g|gif|webp)[;,]|[^:/?#]*(?:[/?#]|$))/i;
 
 export const defaultSanitizeConfig = Object.freeze({
   ALLOWED_TAGS: [
@@ -77,7 +77,8 @@ const sanitizeStyle = (style) => String(style)
     if (index < 1) return null;
 
     const property = declaration.slice(0, index).trim().toLowerCase();
-    const value = declaration.slice(index + 1).trim().replace(/\s*!important$/i, '');
+    // no leading `\s*` in the regex: it would retry from every space in a long whitespace run.
+    const value = declaration.slice(index + 1).trim().replace(/!important$/i, '').trimEnd();
 
     if (!ALLOWED_STYLE_PROPERTIES.has(property) ||
       !value ||
@@ -91,7 +92,14 @@ const sanitizeStyle = (style) => String(style)
   .filter(Boolean)
   .join('; ');
 
-const normalizeStyle = (style) => String(style).replace(/\s*([:;])\s*/g, '$1').replace(/;$/, '').trim().toLowerCase();
+// Canonical form for comparing styles: no whitespace around ':' or ';', no empty declarations, lowercase.
+// Split/trim instead of a regex keeps this linear on whitespace-heavy input.
+const normalizeStyle = (style) => String(style)
+  .toLowerCase()
+  .split(';')
+  .map(declaration => declaration.split(':').map(part => part.trim()).join(':'))
+  .filter(Boolean)
+  .join(';');
 
 let purifier;
 // set by hooks when they alter markup without DOMPurify recording a removal.
