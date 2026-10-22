@@ -80,6 +80,10 @@
     & :global .stripes__icon {
       fill: var(--primary);
     }
+
+    &[class*="interactionStyles---"]:active {
+      color: var(--color-text-active);
+    }
   }
 
 

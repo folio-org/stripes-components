@@ -56,7 +56,7 @@
     "@csstools/postcss-relative-color-syntax": "^3.0.7",
     "@folio/eslint-config-stripes": "^8.0.0",
     "@folio/stripes-cli": "^4.0.0",
-    "@folio/stripes-testing": "^5.0.0",
+    "@folio/stripes-testing": "^5.1.0",
     "@storybook/addon-docs": "^10.3.5",
     "@storybook/react-webpack5": "^10.3.5",
     "@svgr/webpack": "^8.1.0",
@@ -94,7 +94,6 @@
     "stylelint-junit-formatter": "^0.2.2"
   },
   "dependencies": {
-    "@folio/stripes-react-hotkeys": "^3.2.1",
     "classnames": "^2.2.5",
     "currency-codes": "2.1.0",
     "dayjs": "^1.11.10",
@@ -103,6 +102,7 @@
     "flexboxgrid2": "^7.2.0",
     "focus-trap": "^7.5.4",
     "json2csv": "^4.2.1",
+    "keyboardjs": "^2.7.0",
     "lodash": "^4.17.4",
     "memoize-one": "^6.0.0",
     "moment-range": "^4.0.2",
@@ -113,11 +113,15 @@
     "prop-types-extra": "^1.1.0",
     "query-string": "^8.1.0",
     "react-highlight-words": "^0.20.0",
-    "react-quill": "^2.0.0",
     "react-transition-group": "^4.4.5",
     "react-virtualized-auto-sizer": "^1.0.2",
     "sourcemapped-stacktrace": "^1.1.11",
     "tai-password-strength": "^1.1.1",
+    "@tiptap/core": "^3.31.3",
+    "@tiptap/extension-text-align": "^3.31.3",
+    "@tiptap/extensions": "^3.31.3",
+    "@tiptap/react": "^3.31.3",
+    "@tiptap/starter-kit": "^3.31.3",
     "usehooks-ts": "^3.1.1"
   },
   "peerDependencies": {
@@ -127,3 +131,4 @@
     "react-router-dom": "^5.2.0"
   }
 }
+

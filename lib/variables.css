@@ -1,5 +1,6 @@
 :root {
   --color-text: #000;
+  --color-text-active: #fff;
   --color-text-p2: rgba(0 0 0 / 62%);
   --color-border-form: rgba(0 0 0 / 42%);
   --color-border: color-mix(in oklch, currentcolor 50%, transparent);

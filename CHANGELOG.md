@@ -10,13 +10,29 @@
 * bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
 * `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
-* bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-
-* Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1525.
+* Add reusable `sanitizeHtml` utility and `defaultSanitizeConfig` with a strict DOMPurify allowlist (no interactive elements other than anchors, no event handlers, restricted URLs). `<Editor>` now uses it.
+* bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-1525
+* Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1524.
 * `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.
 * Apply `nodeRef` prop to `react-transition-group` components to avoid `findDOMNode`. Refs STCOM-1531.
 * Update MCL rendering to conform to axe tests. Refs STCOM-1535.
 * Convert MCL layout elements to a `flex-box` column. Resolves issues where pagination buttons would not show up on the first render. Refs STCOM-1536.
 * Resolve color contrast issues on selected MCL rows, IconButtons, focus styles. Refs STCOM-1541.
+* Remove random, empty, attributeless div created by TransitionGroup for `<Modal>`. Refs STCOM-1543.
+* Add color variable for `color-text-active` for interactive elements in the `:active` state. Resolves Button's text disappearing when in the `:active` state. Refs STCOM-1544.
+* Bug-fix. Subsequent, post-onConfirm could call onConfirm again (`<SessionConfirmationModal>`). Refs STCOM-1545
+* `Datepicker` correctly checks configured locale. Refs STCOM-1547.
+* Improve labels and icons positioning in `<RepeatableField>` component when some labels are not present. Refs STCOM-1548.
+* Add `.js` extension to DayJS local import. Refs STCOM-1550.
+* Directly implement `<HotKeys>` and `<FocusTrap>` instead of importing them. Refs STCOM-1356.
+* bugfix: `<Paneset>` correctly manages its resize-listeners. Refs STCOM-1553.
+* Hotkeys should not execute shortcut handler if altgraph (diacritics) are detected. Refs STCOM-1557.
+* bugfix: correctly handle `zh-TW` (and all locales) in `<Timepicker>`; ditch moment for dayjs. Refs STCOM-569.
+* Add "bell" icon to the collection. Refs STCOM-1555.
+* Document form submission behavior (Enter key behavior). Refs STCOM-1542.
+* `<Popover>` - `autoFocusContent` prop to control focus on component mount. Refs STCOM-1559.
+* `<Editor>` - replace React-Quill with TipTap editor. Refs STCOM-1553.
+* bugfix: `filters2cql` keeps filter values that contain a period (`release.5.1` no longer becomes `5`). Refs STCOM-1558.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
