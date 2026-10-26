@@ -67,8 +67,12 @@
   font-size: var(--font-size-medium);
 }
 
-.modalContent {
+/* zero-specificity to allow for overrides */
+:where(.modalContent) {
   padding: var(--gutter-static);
+}
+
+.modalContent {
   flex: 1 2 auto;
   overflow: auto;
   width: 100%;
