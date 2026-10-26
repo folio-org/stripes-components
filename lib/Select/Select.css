@@ -39,10 +39,10 @@
 }
 
 .selectControl:has(option[data-placeholder="true"]:checked){
-  color: hsl(120deg 2% 34%);
+  color: var(--color-text-placeholder);
 
   &:disabled {
-    color: hsl(120deg 2% 24%);
+    color: var(--color-text-disabled);
   }
 }
 

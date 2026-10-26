@@ -4,7 +4,7 @@
 * Default styling
 */
 :root {
-  --link-color-hover: #23385a;
+  --link-color-hover: #c5d8f7;
 }
 
 .button {
@@ -240,8 +240,8 @@
   }
 
   &[disabled], &[aria-disabled="true"] {
-    background-color: #ccc;
-    border-color: #ccc;
+    background-color: #555;
+    border-color: #555;
     color: var(--color-text);
     transition: opacity ease-in-out 500ms;
     pointer-events: none;

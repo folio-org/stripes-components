@@ -63,7 +63,7 @@
   border-radius: 999px;
   display: block;
   z-index: 2;
-  background-color: rgb(0 0 0);
+  background-color: var(--color-text);
 }
 
 /* Focus dot start */

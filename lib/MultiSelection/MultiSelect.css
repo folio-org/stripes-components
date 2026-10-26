@@ -71,7 +71,7 @@
 }
 
 .multiSelectLabel {
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 2px;
 }
 
@@ -79,8 +79,8 @@
   composes: selectionListRoot from '../Selection/Selection.css';
   margin-top: 4px;
   padding: 4px;
-  background-color: #fff;
-  border: 1px solid rgba(0 0 0 / 20%);
+  background-color: var(--bg);
+  border: 1px solid var(--color-border);
   pointer-events: all;
 
   &.untethered {
@@ -151,7 +151,7 @@
 }
 
 .mobileBackdrop {
-  background-color: rgba(0 0 0 / 20%);
+  background-color: rgba(0 0 0 / 50%);
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -170,7 +170,7 @@
   margin: 2px;
   display: inline-block;
   border: 1px solid var(--color-border);
-  background-color: #efefef;
+  background-color: var(--color-fill-table-row-odd);
 }
 
 .valueChipGroup { /* container for remove button and label */
@@ -181,11 +181,11 @@
 
   &.valueChipSelected {
     background-color: var(--primary);
-    color: #fff;
+    color: var(--color-text-active);
     border-color: #00c;
 
     & svg {
-      fill: #fff;
+      fill: var(--color-text-active);
     }
   }
 }

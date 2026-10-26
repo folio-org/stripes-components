@@ -21,7 +21,7 @@
   }
 
   &:active {
-    border-color: #fff;
+    border-color: var(--bg);
   }
 }
 

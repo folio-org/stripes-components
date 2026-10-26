@@ -28,7 +28,7 @@
   }
 
   &:active {
-    color: #fff;
+    color: var(--bg);
   }
 
   &.striped:nth-child(odd):not(.isActive) {
@@ -36,18 +36,18 @@
   }
 
   &.isActive {
-    color: #fff;
+    color: var(--bg);
     background-color: var(--color-fill-current);
 
     /* Make sure child elements has
     white text color when item is active */
     & * {
-      color: #fff;
+      color: var(--bg);
     }
 
     /* Custom universal interaction styling */
     &::after {
-      background-color: #fff;
+      background-color: var(--bg);
     }
   }
 }

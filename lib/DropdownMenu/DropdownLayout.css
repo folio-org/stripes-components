@@ -3,7 +3,7 @@
 .dropdownHeader {
   padding: 0 1rem;
   height: 44px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-border);
   font-weight: var(--text-weight-bold);
   display: flex;
   align-items: center;
@@ -25,11 +25,11 @@
   padding: 1rem;
 
   & + .dropdownColumn {
-    border-left: 1px solid #ccc;
+    border-left: 1px solid var(--color-border);
   }
 
   &.secondary {
-    background-color: rgba(0 0 0 / 3%);
+    background-color: rgba(255 255 255 / 5%);
   }
 
   &.fill {

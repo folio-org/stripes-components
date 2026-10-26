@@ -29,7 +29,7 @@
 .selectWrap {
   position: relative;
   border-width: 0 1px 0 0;
-  border-color: #dfdfdf;
+  border-color: var(--color-border);
   border-style: solid;
 }
 
@@ -57,7 +57,7 @@
 
   &:hover {
     & .clearIcon {
-      fill: #666;
+      fill: var(--color-text-p2);
     }
   }
 }

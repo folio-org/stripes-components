@@ -29,7 +29,7 @@
   width: 45vw;
   position: relative;
   pointer-events: all;
-  background-color: #fff;
+  background-color: var(--bg);
   padding: var(--gutter-static);
   opacity: 0;
   transition: left 0.4s, right 0.4s, opacity 0.4s;

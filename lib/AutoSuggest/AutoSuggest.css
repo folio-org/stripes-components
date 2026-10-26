@@ -10,7 +10,7 @@
   overflow: hidden;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: var(--bg);
   background-clip: padding-box;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -33,7 +33,7 @@
   cursor: default;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--bg);
   font-weight: normal;
 
   &.cursor {

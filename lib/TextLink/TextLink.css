@@ -6,11 +6,11 @@
 
 :root {
   --link-color-default: var(--color-link);
-  --link-border-color-default: #d7dfeb;
-  --link-color-hover: #23385a;
+  --link-border-color-default: #3a4a66;
+  --link-color-hover: #c5d8f7;
   --link-color-active: var(--color-text);
   --link-color-visited: var(--color-link-visited);
-  --link-border-color-focus: #3b5f9a;
+  --link-border-color-focus: #8ab4f8;
   --link-box-shadow-focus: 0 0 0 3px var(--color-fill-focus);
   --link-box-shadow-current: 0 0 0 1px currentcolor;
 }
@@ -71,7 +71,7 @@
     /* Activates focus outline */
     &:not(:hover)::before {
       display: block;
-      border: 1px solid #000;
+      border: 1px solid var(--color-text);
       inset: -3px;
   }
   }

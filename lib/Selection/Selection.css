@@ -11,15 +11,15 @@
 
 .selectionListRoot {
   z-index: 9999;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--bg);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow);
   pointer-events: all;
 }
 
 .selectionListStatus {
   padding: 4px 8px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .selectionList {
@@ -109,7 +109,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: rgba(0 0 0 / 20%);
+  background-color: rgba(0 0 0 / 50%);
   padding-top: 48px;
   align-items: flex-start;
   pointer-events: all;
@@ -131,7 +131,7 @@
 
   &.selected {
     background: var(--color-fill-current);
-    color: #fff;
+    color: var(--bg);
     transition: all 0.2s;
 
     &:hover {

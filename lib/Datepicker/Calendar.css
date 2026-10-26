@@ -7,9 +7,9 @@
 
 .calendar {
   position: relative;
-  background: #fff;
+  background: var(--bg);
   border-radius: var(--radius);
-  border: 1px solid #bcbcbc;
+  border: 1px solid var(--color-border);
   padding: var(--gutter-static);
   box-shadow: var(--shadow);
   z-index: 9999;
@@ -39,12 +39,12 @@
     background: none;
 
     &:focus {
-      outline: #000 solid 2px;
+      outline: var(--color-text) solid 2px;
     }
   }
 
   & .dayLabel {
-    color: #333;
+    color: var(--color-text);
     text-decoration: none;
     text-align: center;
     margin: 4px;
@@ -65,7 +65,7 @@
       color: var(--color-fill-disabled);
 
       &:hover {
-        background-color: #eee;
+        background-color: var(--color-fill-table-row-odd);
       }
     }
 
@@ -75,13 +75,13 @@
 
     &.excluded {
       color: var(--color-text-p2) !important;
-      background: #dedede;
+      background: var(--color-fill-hover);
       cursor: default;
       pointer-events: none;
     }
 
     &.selected {
-      background: #106c9e !important;
+      background: var(--primary) !important;
       color: #fff;
       transition: all 0.2s;
 
@@ -105,12 +105,12 @@
   background: none;
   border: 0;
   text-align: center;
-  color: #333;
+  color: var(--color-text);
   border-radius: var(--radius);
   padding: 0.25rem 0;
 
   &:hover {
-    background: #eee;
+    background: var(--color-fill-table-row-odd);
   }
 }
 

@@ -78,7 +78,7 @@
   height: var(--radio-button-size);
   border: 1px solid var(--color-border-form);
   border-radius: 999px;
-  background: #fff;
+  background: var(--bg);
   flex-shrink: 0;
   top: 1px;
 }
@@ -87,7 +87,7 @@
   content: '';
   width: 6px;
   height: 6px;
-  background-color: #000;
+  background-color: var(--color-text);
   position: absolute;
   top: 2px;
   left: 2px;
@@ -150,12 +150,12 @@
 }
 
 .inputHidden:checked + .pseudoButton {
-  background-color: #fff;
+  background-color: var(--bg);
 
   &::after {
     opacity: 1;
     transform: scale(1);
-    background-color: #000;
+    background-color: var(--color-text);
   }
 }
 

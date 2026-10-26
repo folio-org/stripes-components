@@ -141,14 +141,14 @@
  */
 
 .input:checked + .checkboxIcon {
-  background-color: #000;
+  background-color: var(--color-text);
 
   & svg {
     opacity: 1;
   }
 
   & svg path {
-    stroke: #fff;
+    stroke: var(--bg);
   }
 }
 

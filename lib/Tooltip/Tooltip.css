@@ -9,8 +9,8 @@
   justify-content: center;
   flex-direction: column;
   min-height: 36px;
-  background-color: rgba(0 0 0 / 85%);
-  color: #fff;
+  background-color: rgba(255 255 255 / 90%);
+  color: #000;
   margin: var(--gutter-static-one-third);
   border-radius: 4px;
   padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);

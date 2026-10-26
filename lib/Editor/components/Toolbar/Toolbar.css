@@ -39,7 +39,7 @@
 }
 
 .isActive {
-  color: #06c;
+  color: var(--color-link);
 }
 
 .headingSelect {

@@ -10,7 +10,7 @@
   display: block;
   font-weight: bold;
   margin-bottom: 4px;
-  color: #666;
+  color: var(--color-text-p2);
 }
 
 .listItem {

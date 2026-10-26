@@ -33,12 +33,12 @@ legend.groupLabel {
 
 .groupError {
   composes: groupFeedback;
-  color: #900;
+  color: var(--error);
   font-weight: 700;
 }
 
 .groupWarning {
   composes: groupFeedback;
-  color: #e27c3e;
+  color: var(--warn);
   font-weight: 700;
 }
