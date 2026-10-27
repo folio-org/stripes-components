@@ -1,5 +1,5 @@
 // component providing both a switch for locale and a toggle switch for rtl.
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { IntlProvider } from 'react-intl';
 import css from './IntlWrap.css';
 
