@@ -1,0 +1,204 @@
+.gridContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  min-width: 0;
+  border-bottom: 1px solid var(--color-border-p2);
+}
+
+/* fill the parent's height so the rows scroll and the paging row stays at the bottom */
+.gridContainerAutosize {
+  height: 100%;
+}
+
+/* only the rows scroll; the paging row stays pinned beneath them */
+.gridScrollWrapper {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+.gridPaging {
+  flex: 0 0 auto;
+}
+
+.gridTable {
+  display: grid;
+
+  /* grow past the scroll wrapper when the columns are wider than it (horizontal scroll),
+   * but still fill it when they're narrower so the last column can stretch. */
+  width: max-content;
+  min-width: 100%;
+  grid-template-columns: var(--col-template);
+  content-visibility: auto;
+}
+
+.gridHeaderRow,
+.gridBodyRow {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+
+}
+
+.gridHeaderRow {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  font-weight: bold;
+  background-color: var(--bg);
+  border-bottom: 5px solid var(--primary);
+}
+
+.gridBodyRow:nth-child(even) {
+  background-color: var(--color-fill-table-row-even);
+}
+
+.gridBodyRow:nth-child(odd) {
+  background-color: var(--color-fill-table-row-odd);
+}
+
+/* hover/focus/active treatment shared with the other interactive components */
+.gridInteractive {
+  composes: interactionStyles noPointer hasDot focusDotPositionStart from "../sharedStyles/interactionStyles.css";
+}
+
+.gridClickableRow {
+  cursor: pointer;
+  outline: none;
+}
+
+.gridBodyRow:focus-within {
+  z-index: 2;
+}
+
+/* Selected (active) row. Doubled class beats the odd/even striping above; sticky cells inherit the background. */
+.gridBodyRow.gridSelected {
+  color: #fff;
+  background-color: var(--color-fill-current);
+
+  &::after {
+    background-color: #fff;
+  }
+
+  & a {
+    color: var(--color-link-current);
+  }
+}
+
+.gridCell {
+  line-height: var(--line-height);
+  padding: var(--gutter-static-one-third) var(--gutter-static-two-thirds);
+  overflow: hidden;
+  min-width: 0;
+  border-right: 1px solid var(--color-border-p2);
+  display: flex;
+  align-items: center;
+
+  .headerCell, &:nth-last-child(1) {
+    border-right: 0;
+  }
+}
+
+.gridHeaderRow .gridCell {
+  border-right: 0;
+}
+
+.gridHeaderInner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.gridHeaderContent {
+  flex: 0 0 auto;
+}
+
+.gridSortIndicatorSpace {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 30px;
+  height: var(--gutter-static);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gridAscending {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20class%3D%22stripes__icon%22%20d%3D%22M7%202.9l5.77%206.92-1.54%201.28L7%206.02%202.77%2011.1%201.23%209.82%207%202.9z%22/%3E%3C/svg%3E');
+}
+
+.gridDescending {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20class%3D%22stripes__icon%22%20d%3D%22M7%2011.1L1.23%204.18%202.77%202.9%207%207.98l4.23-5.08%201.54%201.28L7%2011.1z%22/%3E%3C/svg%3E');
+}
+
+/* unsorted-but-sortable: a muted up/down pair */
+.gridSortable {
+  height: 18px;
+  background-image:
+    url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20fill%3D%22%23888%22%20class%3D%22stripes__icon%22%20d%3D%22M7%202.9l5.77%206.92-1.54%201.28L7%206.02%202.77%2011.1%201.23%209.82%207%202.9z%22/%3E%3C/svg%3E'),
+    url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20fill%3D%22%23888%22%20class%3D%22stripes__icon%22%20d%3D%22M7%2011.1L1.23%204.18%202.77%202.9%207%207.98l4.23-5.08%201.54%201.28L7%2011.1z%22/%3E%3C/svg%3E');
+  background-position: center top, center 8px;
+  background-size: 10px;
+}
+
+.gridHeaderClickable {
+  cursor: pointer;
+}
+
+.gridHeaderSorted .gridHeaderContent {
+  text-decoration: underline;
+}
+
+.gridHeaderButton {
+  width: 100%;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.gridHeaderRow .gridCell:focus-within {
+  box-shadow: inset 0 -6px 0 0 var(--primary);
+}
+
+.gridEmptyMessage {
+  padding: 1rem;
+}
+
+.gridContentLoadingRow {
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 20px;
+  bottom: 18px;
+  pointer-events: none;
+}
+
+.gridContentLoading {
+  display: flex;
+  place-content: center center;
+  height: 1.5rem;
+  width: 3rem;
+  padding: 0.25rem 0.5rem 0 0;
+  background-color: rgba(255 255 255 / 50%);
+}
+
+.gridCellSticky {
+  position: sticky;
+  left: 0;
+  background-color: inherit;
+  z-index: 1;
+  box-shadow: 2px 0 4px rgba(0 0 0 / 15%);
+}
+
+.gridCellStickyEnd {
+  position: sticky;
+  right: 0;
+  background-color: inherit;
+  z-index: 1;
+  box-shadow: -2px 0 4px rgba(0 0 0 / 15%);
+}
