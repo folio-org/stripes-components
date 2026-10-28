@@ -34,6 +34,7 @@
 * `<Popover>` - `autoFocusContent` prop to control focus on component mount. Refs STCOM-1559.
 * `<Editor>` - replace React-Quill with TipTap editor. Refs STCOM-1553.
 * bugfix: `filters2cql` keeps filter values that contain a period (`release.5.1` no longer becomes `5`). Refs STCOM-1558.
+* Switch storybook run/build to use esbuild. Remove babel from dependencies. Refs STCOM-1575.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
