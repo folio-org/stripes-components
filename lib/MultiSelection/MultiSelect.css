@@ -103,16 +103,6 @@
 
 .multiSelectOption {
   composes: option from '../Selection/Selection.css';
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: transparent;
-    border-radius: var(--radius);
-    z-index: -1;
-  }
 }
 
 .optionSelected {
@@ -125,8 +115,7 @@
 }
 
 .optionCursor {
-  background-color: var(--color-fill-hover);
-  box-shadow: inset 0 0 0 3px var(--primary);
+  composes: cursor from '../Selection/Selection.css';
 }
 
 .multiSelectError {
