@@ -9,7 +9,9 @@
 * Update timezone data. Refs STCOM-1472.
 * bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
+* `<Modal>` - lower specificity of default content padding so `contentClass` overrides apply regardless of stylesheet order.
 * `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
+* Add reusable `sanitizeHtml` utility and `defaultSanitizeConfig` with a strict DOMPurify allowlist (no interactive elements other than anchors, no event handlers, restricted URLs). `<Editor>` now uses it.
 * bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-1525
 * Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1524.
 * `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.
@@ -32,6 +34,7 @@
 * `<Popover>` - `autoFocusContent` prop to control focus on component mount. Refs STCOM-1559.
 * `<Editor>` - replace React-Quill with TipTap editor. Refs STCOM-1553.
 * bugfix: `filters2cql` keeps filter values that contain a period (`release.5.1` no longer becomes `5`). Refs STCOM-1558.
+* Switch storybook run/build to use esbuild. Remove babel from dependencies. Refs STCOM-1575.
 * Remove abandoned interactors; convert remaing BTOG tests to leverage `@folio/stripes-testing` interactors. Refs STCOM-1560, STCOM-862.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)

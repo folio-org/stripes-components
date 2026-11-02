@@ -327,10 +327,11 @@ export const getLocaleDateFormat = ({ intl, config }) => {
     const formatted = intlFormatter.formatToParts(tempDate);
 
     // pull the localized format from the array of formatted parts.
-
+    let hasDayPeriod = false;
     formatted.forEach((p) => {
       switch (p.type) {
         case 'dayPeriod':
+          hasDayPeriod = true;
           format += 'A';
           format = format.replace('H', 'h');
           break;
@@ -338,7 +339,7 @@ export const getLocaleDateFormat = ({ intl, config }) => {
           format += 'mm';
           break;
         case 'hour':
-          format += 'H';
+          format += hasDayPeriod ? 'h' : 'H';
           break;
         case 'month':
           format += 'MM';
