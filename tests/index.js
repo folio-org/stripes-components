@@ -11,7 +11,7 @@ requireUtilTests.keys().forEach(requireUtilTests);
 requireHooksTests.keys().forEach(requireHooksTests);
 
 // require all source files in lib for code coverage (except Pluggable)
-const componentsContext = require.context('../lib/', true, /^(?!.*(stories|examples)).*\.js$/);
+const componentsContext = require.context('../lib/', true, /^(?!.*(stories|examples|\/tests\/)).*\.js$/);
 componentsContext.keys().filter(key => {
   return !key.includes('Pluggable');
 }).forEach(componentsContext);
