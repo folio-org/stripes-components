@@ -35,6 +35,8 @@
 * `<Editor>` - replace React-Quill with TipTap editor. Refs STCOM-1553.
 * bugfix: `filters2cql` keeps filter values that contain a period (`release.5.1` no longer becomes `5`). Refs STCOM-1558.
 * Switch storybook run/build to use esbuild. Remove babel from dependencies. Refs STCOM-1575.
+* `<Selection>` - send focus back to component control when the user navigates out of the overlay using the 'tab' key. Refs STCOM-1514.
+* Add border to `<Selection>`, `<MultiSelection>` focus indicator for options list. Refs STCOM-1515.
 * Remove abandoned interactors; convert remaing BTOG tests to leverage `@folio/stripes-testing` interactors. Refs STCOM-1560, STCOM-862.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
