@@ -34,6 +34,7 @@
 * `<Popover>` - `autoFocusContent` prop to control focus on component mount. Refs STCOM-1559.
 * `<Editor>` - replace React-Quill with TipTap editor. Refs STCOM-1553.
 * bugfix: `filters2cql` keeps filter values that contain a period (`release.5.1` no longer becomes `5`). Refs STCOM-1558.
+* A11y - remove extra tab stop and move attributes from the wrapping element of `<MultiSelection>`. Refs STCOM-1517.
 * Switch storybook run/build to use esbuild. Remove babel from dependencies. Refs STCOM-1575.
 * `<Selection>` - send focus back to component control when the user navigates out of the overlay using the 'tab' key. Refs STCOM-1514.
 * Add border to `<Selection>`, `<MultiSelection>` focus indicator for options list. Refs STCOM-1515.
