@@ -1764,7 +1764,7 @@
     webpack-bundle-analyzer "^4.4.2"
     yargs "^17.3.1"
 
-"@folio/stripes-testing@^5.1.0":
+"@folio/stripes-testing@^5.1.1":
   version "5.1.1099000000017378"
   resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-testing/-/stripes-testing-5.1.1099000000017378.tgz#d1e62e1189d6ad17085fcfae6b1b01202a94819e"
   integrity sha512-f7zC8MbJoXajy3ZlYVFh8yQkocjvbROAzaTngMAXQJzjV1QXkfRYM66uypi1/rU9eqa2EKbFd02djv1sg5Oiew==
