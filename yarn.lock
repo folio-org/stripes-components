@@ -2008,10 +2008,10 @@
     element-is-visible "^1.0.0"
     minimist "^1.2.0"
 
-"@folio/stripes-testing@^5.1.0":
-  version "5.1.1099000000017335"
-  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-testing/-/stripes-testing-5.1.1099000000017335.tgz#b6bf9fa11db0aeb3cbb33bfcb01b38cd892fd378"
-  integrity sha512-TqPAkS5CCqScVvv0dKD7VhneuLhXykHFKQBiIwcr6Dp91dVxql7brFdtQdytDf0ZcLAh3LrZtk/hcmc9QOnGAg==
+"@folio/stripes-testing@^5.1.1":
+  version "5.1.1099000000017378"
+  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-testing/-/stripes-testing-5.1.1099000000017378.tgz#d1e62e1189d6ad17085fcfae6b1b01202a94819e"
+  integrity sha512-f7zC8MbJoXajy3ZlYVFh8yQkocjvbROAzaTngMAXQJzjV1QXkfRYM66uypi1/rU9eqa2EKbFd02djv1sg5Oiew==
   dependencies:
     "@babel/core" "^7.19.3"
     "@babel/preset-env" "^7.25.4"
