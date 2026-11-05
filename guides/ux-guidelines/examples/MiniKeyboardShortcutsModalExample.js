@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Button from '../../../lib/Button';
 import KeyboardShortcutsModal from '../../../lib/KeyboardShortcutsModal';
 
 const commands = [
@@ -7,10 +8,17 @@ const commands = [
 ];
 
 export default function MiniKeyboardShortcutsModalExample() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <KeyboardShortcutsModal
-      allCommands={commands}
-      onClose={() => { }}
-    />
+    <div>
+      <Button buttonStyle="primary" onClick={() => setOpen(true)}>Open modal</Button>
+      {open && (
+        <KeyboardShortcutsModal
+          allCommands={commands}
+          onClose={() => setOpen(false)}
+        />
+      )}
+    </div>
   );
 }

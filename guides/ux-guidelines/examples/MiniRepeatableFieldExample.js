@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Label from '../../../lib/Label';
 import RepeatableField from '../../../lib/RepeatableField';
 import TextField from '../../../lib/TextField';
 
@@ -17,12 +18,17 @@ export default function MiniRepeatableFieldExample() {
     <RepeatableField
       id="mini-repeatable-field"
       legend="Contributors"
-      emptyMessage="No contributors yet."
       addLabel="Add contributor"
       fields={fields}
       onAdd={handleAdd}
       onRemove={handleRemove}
-      renderField={() => <TextField label="Contributor" name="contributor" />}
+      hasRemoveButtonMargin={false}
+      renderField={() => (
+        <TextField
+          aria-labelledby="mini-contributor-label"
+          name="contributor"
+        />
+      )}
     />
   );
 }
