@@ -20,8 +20,9 @@
     "storybook": "node ./scripts/run-storybook-dev.js",
     "prestorybook-build": "yarn docs:readme:generate",
     "storybook-build": "storybook build -c .storybook -o .out",
-    "test": "stripes test karma",
-    "test-dev": "stripes test karma --watch"
+    "stylelint": "stylelint \"lib/**/*.css\"",
+    "test": "stripes test browser",
+    "test-dev": "stripes test browser --watch --headed"
   },
   "stripes": {
     "type": "components",
@@ -40,7 +41,7 @@
     "@csstools/postcss-global-data": "^3.0.0",
     "@csstools/postcss-relative-color-syntax": "^3.0.7",
     "@folio/eslint-config-stripes": "^10.0.0",
-    "@folio/stripes-cli": "^6.0.0",
+    "@folio/stripes-cli": "folio-org/stripes-cli#karma-to-playwright",
     "@folio/stripes-testing": "^5.1.1",
     "@storybook/addon-docs": "^10.3.5",
     "@storybook/react-webpack5": "^10.3.5",
@@ -51,7 +52,6 @@
     "esbuild": "^0.27.2",
     "esbuild-loader": "^4.4.2",
     "faker": "^4.1.0",
-    "karma-viewport": "^1.0.4",
     "mocha": "^10.2.0",
     "moment": "^2.29.0",
     "postcss": "^8.4.2",
