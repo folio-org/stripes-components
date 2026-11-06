@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { computed } from '@bigtest/interactor';
 import Harness from './Harness';
 
 import '../lib/global.css';
@@ -60,15 +59,6 @@ export function mountWithContext(component, translations, locale) {
 
 export function selectorFromClassnameString(str) {
   return str.replace(/\s/, '.');
-}
-
-export function computedStyle(selector, styleProperty) {
-  return computed( function () { // eslint-disable-line
-    if (styleProperty) {
-      return getComputedStyle(this.$(selector))[styleProperty];
-    }
-    return getComputedStyle(this.$(selector));
-  });
 }
 
 export function focusNext(current) {

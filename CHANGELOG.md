@@ -9,7 +9,9 @@
 * Update timezone data. Refs STCOM-1472.
 * bugfix - `<SessionConfirmationModal>` shouldn't call its `onConfirm` prop every render. Refs STCOM-1512.
 * `<Pane>` - add a new `actionMenuToggleProps` prop. Refs STCOM-1513.
+* `<Modal>` - lower specificity of default content padding so `contentClass` overrides apply regardless of stylesheet order.
 * `<Pane>` - remove focus outline from `<PaneHeader>`. Refs STCOM-1523.
+* Add reusable `sanitizeHtml` utility and `defaultSanitizeConfig` with a strict DOMPurify allowlist (no interactive elements other than anchors, no event handlers, restricted URLs). `<Editor>` now uses it.
 * bugfix - `<Selection>` - Escape regex metacharacters when filtering, so filtering by `*` (or other special characters) no longer throws. Refs STCOM-1525
 * Fix flaky test with virtualized `<MultiColumnList>`. Refs STCOM-1524.
 * `<Modal>` no longer focuses the close 'X' on initial open. Refs STCOM-1529.
@@ -25,6 +27,19 @@
 * Add `.js` extension to DayJS local import. Refs STCOM-1550.
 * Directly implement `<HotKeys>` and `<FocusTrap>` instead of importing them. Refs STCOM-1356.
 * bugfix: `<Paneset>` correctly manages its resize-listeners. Refs STCOM-1553.
+* Hotkeys should not execute shortcut handler if altgraph (diacritics) are detected. Refs STCOM-1557.
+* bugfix: correctly handle `zh-TW` (and all locales) in `<Timepicker>`; ditch moment for dayjs. Refs STCOM-569.
+* Add "bell" icon to the collection. Refs STCOM-1555.
+* Document form submission behavior (Enter key behavior). Refs STCOM-1542.
+* `<Popover>` - `autoFocusContent` prop to control focus on component mount. Refs STCOM-1559.
+* `<Editor>` - replace React-Quill with TipTap editor. Refs STCOM-1553.
+* bugfix: `filters2cql` keeps filter values that contain a period (`release.5.1` no longer becomes `5`). Refs STCOM-1558.
+* A11y - remove extra tab stop and move attributes from the wrapping element of `<MultiSelection>`. Refs STCOM-1517.
+* Switch storybook run/build to use esbuild. Remove babel from dependencies. Refs STCOM-1575.
+* `<Selection>` - send focus back to component control when the user navigates out of the overlay using the 'tab' key. Refs STCOM-1514.
+* Add border to `<Selection>`, `<MultiSelection>` focus indicator for options list. Refs STCOM-1515.
+* Remove abandoned interactors; convert remaing BTOG tests to leverage `@folio/stripes-testing` interactors. Refs STCOM-1560, STCOM-862.
+* Convert from `eslint` v7 to `oxlint` v1 via `@folio/eslint-config-stripes` v10. Refs STCOM-1556.
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 

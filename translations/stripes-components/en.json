@@ -931,5 +931,22 @@
   "ErrorBoundary.defaultButtonLabel": "Refresh page",
   "ErrorBoundary.copyErrorButtonAriaLabel": "Copy error to clipholder",
   "ErrorBoundary.detailsDescription": "The following occurred, resulting in the current page becoming unstable:",
-  "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder"
+  "ErrorBoundary.errorCopiedScreenReaderMessage": "The error message and stack trace was copied to your clipholder",
+  "editor.toolbar.bold": "Bold",
+  "editor.toolbar.italic": "Italic",
+  "editor.toolbar.underline": "Underline",
+  "editor.toolbar.heading": "Text style",
+  "editor.toolbar.heading.paragraph": "Paragraph",
+  "editor.toolbar.heading.heading1": "Heading 1",
+  "editor.toolbar.heading.heading2": "Heading 2",
+  "editor.toolbar.heading.heading3": "Heading 3",
+  "editor.toolbar.alignLeft": "Align left",
+  "editor.toolbar.alignCenter": "Align center",
+  "editor.toolbar.alignRight": "Align right",
+  "editor.toolbar.bulletList": "Bullet list",
+  "editor.toolbar.orderedList": "Ordered list",
+  "editor.toolbar.link": "Insert link",
+  "editor.toolbar.link.url": "Link URL",
+  "editor.toolbar.link.apply": "Apply",
+  "editor.toolbar.link.remove": "Remove link"
 }
