@@ -1714,7 +1714,7 @@
 
 "@folio/stripes-cli@folio-org/stripes-cli#karma-to-playwright":
   version "6.0.0"
-  resolved "https://codeload.github.com/folio-org/stripes-cli/tar.gz/08447336f33ef75e8344ee5d77fd4ec20b618a8b"
+  resolved "https://codeload.github.com/folio-org/stripes-cli/tar.gz/d130932342a15a52b5fdcc24f3884b51791be49e"
   dependencies:
     "@folio/stripes-webpack" "^8.0.0"
     "@formatjs/cli" "^6.1.3"
