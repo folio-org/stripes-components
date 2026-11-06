@@ -22,8 +22,8 @@
     "prestorybook-build": "yarn docs:readme:generate",
     "storybook-build": "storybook build -c .storybook -o .out",
     "stylelint": "stylelint \"lib/**/*.css\"",
-    "test": "stripes test playwright",
-    "test-dev": "stripes test playwright --watch --headed"
+    "test": "stripes test browser",
+    "test-dev": "stripes test browser --watch --headed"
   },
   "stripes": {
     "type": "components",
