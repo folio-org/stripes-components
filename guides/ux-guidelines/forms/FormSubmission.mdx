@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="UX Guidelines/Forms/Form submission" />
+
+# Form submission
+
+Browsers implicitly submit a `<form>` when the user presses <kbd>Enter</kbd> while any of the form's internal text inputs are focused. Keyboard and screen reader users rely on it, and removing it without a good reason breaks a convention people bring with them from every other form on the web.
+
+## When submit-on-Enter is expected
+
+For short forms — a single field, or a small handful of closely related fields — Enter-to-submit is the expected behavior.
+
+- **Search fields**: pressing Enter in a search box should run the search.
+- **Short forms (Ex: Login)**: there's nothing to lose by submitting early, so intercepting Enter here only adds friction.
+
+## When premature submission is a problem
+
+On longer forms with multiple fields, sections, or unsaved repeatable rows, submitting because a user pressed Enter in an unrelated field can be a real annoyance: validation fires before the user is done, focus jumps away, or a record saves before it's ready. This is the case worth being careful about — but the fix is never "intercept Enter everywhere." It's usually one of the two cases below.
+
+## Exception cases
+
+Custom, complex components can render their own action buttons inside of a form — add/remove controls, inline row actions, icon buttons. These can require the user to press enter in order to confirm selected values. Pressing <kbd>Enter</kbd> to commit values or take another action with a section of a form feels natural.
+
+### The button `type` attribute
+
+An HTML `<button>` with no explicit `type` defaults to `type="submit"`. Inside a form, that means any button that isn't meant to submit — an Add or Remove control on a repeatable field, a cancel action, a toggle — will submit the form both when clicked and when it's focused and the user presses <kbd>Enter</kbd>, unless it's explicitly marked `type="button"`.
+
+This is why the `<Button>` component defaults its `type` prop to `"button"`, and why [RepeatableField](/lib/RepeatableField/RepeatableField.js) sets `type="button"` explicitly on its Add button rather than relying on that default alone.
+
+
+### Enter inside an open overlay should act on the overlay, not the form
+
+When a component owns a popup with its own focus (a calendar grid, a listbox, a combobox menu), Enter pressed while focus is inside that popup should perform the popup's action — select the date, choose the option — rather than bubbling up and submitting the underlying form. From the user's point of view they're operating a small, self-contained widget, and losing focus to a form submission mid-interaction is disorienting.
+
+[Datepicker](/lib/Datepicker/Calendar.js)'s calendar grid does this: while the popup is open, Enter on a focused day calls `preventDefault()` and `stopPropagation()` and selects that date instead of letting the keypress reach the form.
+
+The same reasoning applies to a multi-line [TextArea](/lib/TextArea): Enter inserts a newline rather than submitting, which is native `<textarea>` behavior and shouldn't be fought either.
+
+The common thread in both exceptions: the interception is scoped to a specific control with its own well-defined action (a button, a focused calendar cell, a textarea), not a blanket keydown handler slapped on the whole form. If you can't point to a specific widget-level action that Enter should trigger instead, don't intercept it — let the browser submit the form.
+
+## Recommendations
+
+- Default to letting Enter submit the form. It's expected, and screen reader users depend on it matching their mental model of how forms work.
+- Give every non-submitting button in a form an explicit `type="button"`.
+- Only intercept Enter within a component that owns focus for a specific action (an open calendar, a listbox, a menu), and scope the handler to that component, not the form.
+- Don't add a form-wide `onKeyDown` that blocks Enter "just in case." It's a common way to accidentally break submission for every field that didn't need the protection.
+
+## Related
+
+- Component README: [Components > RepeatableField > Readme](?path=/docs/components-repeatablefield--readme)
+- Component README: [Components > Datepicker > Readme](?path=/docs/components-datepicker--readme)
+- Related guideline: [UX Guidelines > Forms > Repeatable field](?path=/docs/ux-guidelines-forms-repeatable-field--docs)
+- Related guideline: [UX Guidelines > Forms > Datepicker](?path=/docs/ux-guidelines-forms-datepicker--docs)
+- Related guideline: [UX Guidelines > Forms > Search field](?path=/docs/ux-guidelines-forms-search-field--docs)
+- Related guideline: [UX Guidelines > Forms > Text area](?path=/docs/ux-guidelines-forms-text-area--docs)
+- Related guideline: [UX Guidelines > Forms > Form field](?path=/docs/ux-guidelines-forms-form-field--docs)

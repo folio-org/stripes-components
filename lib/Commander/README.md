@@ -25,6 +25,10 @@ property | type | description
 `handler` | function | Callback that executes when the shortcut is pressed.
 ## Cross-platform keys
 The `shortcut` property of command objects can account for the platform-specific modifiers via the `mod` substring. This will use the `command` key on MacOS and the `ctrl` key on other OS's.
+
+## Altgraph handling
+Non-US keyboards have an 'altGraph' key for typing diacritics. It's commonly assigned as specifically the right 'alt' key (vs the left alt key). If Commander/HasCommand/Hotkeys detects that an 'altGraph' modifier is being used, it will bail out of execution and not execute an attached handler, allowing users to comfortably enter diacritics into text inputs.
+
 ## Example
 ### Step 1: base configuration.
 Default commands can be kept in an exterior file for tidiness and re-use of the configuration.
