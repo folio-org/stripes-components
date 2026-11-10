@@ -16,10 +16,11 @@
     "docs:readme:generate": "node ./scripts/generate-readme-mdx.js",
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
     "formatjs-compile": "stripes translate compile",
-    "lint": "stripes-lint .",
+    "lint": "stripes-lint . && stylelint \"lib/**/*.css\"",
     "storybook": "node ./scripts/run-storybook-dev.js",
     "prestorybook-build": "yarn docs:readme:generate",
     "storybook-build": "storybook build -c .storybook -o .out",
+    "stylelint": "stylelint \"lib/**/*.css\"",
     "test": "stripes test karma",
     "test-dev": "stripes test karma --watch"
   },
@@ -71,9 +72,17 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "sinon": "^17.0.0",
-    "storybook": "^10.3.5"
+    "storybook": "^10.3.5",
+    "stylelint": "^18.0.0",
+    "stylelint-config-standard": "^41.0.0",
+    "stylelint-junit-formatter": "^0.2.2"
   },
   "dependencies": {
+    "@tiptap/core": "^3.31.3",
+    "@tiptap/extension-text-align": "^3.31.3",
+    "@tiptap/extensions": "^3.31.3",
+    "@tiptap/react": "^3.31.3",
+    "@tiptap/starter-kit": "^3.31.3",
     "classnames": "^2.2.5",
     "currency-codes": "2.1.0",
     "dayjs": "^1.11.10",
@@ -97,11 +106,6 @@
     "react-virtualized-auto-sizer": "^1.0.2",
     "sourcemapped-stacktrace": "^1.1.11",
     "tai-password-strength": "^1.1.1",
-    "@tiptap/core": "^3.31.3",
-    "@tiptap/extension-text-align": "^3.31.3",
-    "@tiptap/extensions": "^3.31.3",
-    "@tiptap/react": "^3.31.3",
-    "@tiptap/starter-kit": "^3.31.3",
     "usehooks-ts": "^3.1.1"
   },
   "peerDependencies": {
