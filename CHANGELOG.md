@@ -40,8 +40,9 @@
 * Add border to `<Selection>`, `<MultiSelection>` focus indicator for options list. Refs STCOM-1515.
 * Remove abandoned interactors; convert remaing BTOG tests to leverage `@folio/stripes-testing` interactors. Refs STCOM-1560, STCOM-862.
 * Convert from `eslint` v7 to `oxlint` v1 via `@folio/eslint-config-stripes` v10. Refs STCOM-1556.
-* Paneset - prevent Pane layouts from being cached if measurement is prevented (measurements could be NaN). Dynamic pane width should account for static widths if the container has a width of 0 at the time of measurement. Refs STCOM-1578.
 * Remove tab stop from MCL's outer element. Refs STCOM-1516.
+* Paneset - prevent Pane layouts from being cached if measurement is prevented (measurements could be NaN). Dynamic pane width should account for static widths if the container has a width of 0 at the time of measurement. Refs STCOM-1578.
+
 
 ## [13.1.0](https://github.com/folio-org/stripes-components/tree/v13.1.0) (2026-04-14)
 
