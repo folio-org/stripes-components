@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Label from '../../../lib/Label';
 import RepeatableField from '../../../lib/RepeatableField';
 import TextField from '../../../lib/TextField';
+import { Row, Col } from '../../../lib/LayoutGrid';
 
 export default function MiniRepeatableFieldExample() {
   const [fields, setFields] = useState([]);
@@ -23,11 +24,31 @@ export default function MiniRepeatableFieldExample() {
       onAdd={handleAdd}
       onRemove={handleRemove}
       hasRemoveButtonMargin={false}
-      renderField={() => (
-        <TextField
-          aria-labelledby="mini-contributor-label"
-          name="contributor"
-        />
+      headLabels={(
+        <Row>
+          <Col xs={6}>
+            <Label id="mini-contributor-first-name-label">First name</Label>
+          </Col>
+          <Col xs={6}>
+            <Label id="mini-contributor-last-name-label">Last name</Label>
+          </Col>
+        </Row>
+      )}
+      renderField={(field, index) => (
+        <Row>
+          <Col xs={6}>
+            <TextField
+              aria-labelledby="mini-contributor-first-name-label"
+              name={`contributors[${index}].firstName`}
+            />
+          </Col>
+          <Col xs={6}>
+            <TextField
+              aria-labelledby="mini-contributor-last-name-label"
+              name={`contributors[${index}].lastName`}
+            />
+          </Col>
+        </Row>
       )}
     />
   );

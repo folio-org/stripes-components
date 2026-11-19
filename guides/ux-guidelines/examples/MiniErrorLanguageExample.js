@@ -7,7 +7,8 @@ export default function MiniErrorLanguageExample() {
   return (
     <div style={{ maxWidth: 320 }}>
       <TextField
-        label="Last name *"
+        label="Last name"
+        required
         value={value}
         onChange={(e) => setValue(e.target.value)}
         error="Please fill this in to continue."
